@@ -8,7 +8,7 @@ files.to.read = list.files(path = "rawdata/xls_to_add", pattern="xlsx")
 
 # Read each file and write it to csv
 lapply(files.to.read, function(f) {
-  df = read.xlsx(xlsxFile = paste("rawdata/xlss/",f, sep = ""), sheet=1)
+  df = read.xlsx(xlsxFile = paste("rawdata/xls_to_add/",f, sep = ""), sheet=1)
   write.csv(df, paste("rawdata/", gsub("xlsx", "csv", f), sep = ""), row.names=FALSE)
 })
 
