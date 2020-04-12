@@ -1,0 +1,87 @@
+---
+title: "Summary"
+author: "I. Bartomeus"
+date: "4/12/2020"
+output: rmarkdown::github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Iberian Bee Database.
+
+```{r include=FALSE}
+data <- read.csv("data/data_clean.csv")
+colnames(data)
+```
+
+The Iberian Bee Database contains `r nrow(data)` entries of bee occurrences over the peninsula and nearby islands. We have at least one record of `r length(unique(data$Genus_species))` species out of the 1100? species known to ocurr in the area. Here we present a summary of the data base:
+
+## Where are the records? 
+
+```{r echo=FALSE}
+#map
+library(rgdal)
+library(rgeos)
+library(raster)
+library(maptools)
+library(ggplot2)
+ES <- getData("GADM", country = "ES", level = 0)
+ES_proj <- spTransform(ES, CRS("+proj=utm +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0 "))
+ES_diss <- gUnaryUnion(ES_proj)
+ES.Df <- fortify(ES_diss, region = "ID_0")
+
+
+plotmap <- ggplot(data = data, aes(x = Longitude, y = Latitude)) +  # plot the data
+           #geom_polygon(data = ES.Df, aes(x = long, y = lat, group = group),            # plot Spain
+           #             color = "black", fill = "gray82") + coord_fixed() +    # coord_fixed() ensures that one unit on the x-axis is the same length as one unit on the y-axis
+           geom_point(color = "dodgerblue4", size = 2, shape = ".") +                   # graphical parameters for points
+           stat_density2d(aes(x = Longitude,                           # create the density layer based on where the points are
+                              y = Latitude,  fill = ..level.., alpha = ..level..),   # colour and transparency depend on density
+           geom = "polygon", colour = "grey95",size=0.3) +            # graphical parameters for the density layer
+           scale_fill_gradient(low = "yellow", high = "red") +                 # set colour palette for density layer
+           scale_alpha(range = c(.25, .5), guide = FALSE) +                    # set transparency for the density layer 
+           theme(axis.title.x=element_blank(), axis.text.x=element_blank(),  # don't display x and y axes labels, titles and tickmarks 
+           axis.ticks.x=element_blank(),axis.title.y=element_blank(),   
+           axis.text.y=element_blank(), axis.ticks.y=element_blank(),
+           #text=element_text(size=18),legend.position = c(.9, .15),       # size of text and position of the legend
+           panel.grid.major = element_blank(),                            # eliminates grid lines from background
+           panel.background = element_blank())                            # set white background
+
+# now plot, it takes a while!
+plotmap
+```
+
+## Which are the most reported species?   
+
+Here we show the top-20 incidence (number of times apearing) per species excluding _Apis mellifera_
+
+```{r echo=FALSE}
+#barplot of top 10 species
+default <- par()$mar
+par(mar = c(10.1, 4.1, 4.1, 2.1))
+barplot(head(sort(table(data$Genus_species), decreasing = TRUE),20), las = 2, cex.names = 0.6)
+par(mar = default)
+```
+
+## Who make this posible?
+
+This is a large collaborative effort lead by... Those are the main contributors.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+#table of
+#Name	
+#Contact	
+#Number of records as main dataholder	
+#Number of records as co-dataholder
+#email?? Maually :(
+default <- par()$mar
+par(mar = c(10.1, 4.1, 4.1, 2.1))
+barplot(head(sort(table(data$Authors.to.give.credit), decreasing = TRUE),20), las = 2)
+par(mar = default)
+#Can be done prettier.
+```
+
