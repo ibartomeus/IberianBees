@@ -5,37 +5,49 @@ head(data)
 
 #1) cleaning----
 #Check Genus, Subgenus, Species, Subspecies and maybe add family.----
-#some species have Genus... locate them.
-#strip spaces
+#strip start and end spaces
+data$Genus <- trimws(data$Genus)
+data$Species <- trimws(data$Species)
 #Remove species = sp or NA
-#Move ?? and "or" to comments.
-#move _(Pyrosmia) or _(Zonandrena) to subgenus.
+unique(data$Species)
+data <- subset(data, !Species %in% c("sp.", "sp.1", "sp.2", "sp.3", "sp.4", "sp.5", "sp.6",
+                                    "sp.7", ""))
+data <- data[-which(is.na(data$Species) == TRUE),] 
+#Move ?? and "_or_" " o  to $flag.
+#TO DO
 #Ideally we can have a list of Iberian bees and check against it. Asl Thomas?
 data$Genus_species <- paste(data$Genus, data$Species)
-sort(unique(data$Genus_species)) #935! #move to summary
+sort(unique(data$Genus_species)) #679! #move to summary
 
 #Check Country Province Locality----
-levels(data$Country) <- c("Spain", "Portugal", "Spain") #bad solution as is sensitive to data updates with extra levels
-levels(data$Province)[7] <- "Illes Balears" #Balears can be merged
+#bad solution as is sensitive to data updates with extra levels
+levels(data$Country) <- c("Spain", "Portugal", "Spain") 
+levels(data$Province) #Need to fix several
 levels(data$Locality) #some " " at the end of the string can be striped, 
-#Not done for now.
+#Not done for now. use trimws
 
 #Check Latitude Longitude Coordinate.precision----
 max(data$Latitude, na.rm = TRUE) < 44.15
-min(data$Latitude, na.rm = TRUE) > 35.67 #fuck, suena a error lat x long
-max(data$Longitude, na.rm = TRUE) < 4.76 #fuck, suena a error lat x long
+min(data$Latitude, na.rm = TRUE) > 35.67 
+#unique(data[which(data$Latitude < 35.67),"Authors.to.give.credit"]) #Martínez-Núñez C., Rey P.J.
+max(data$Longitude, na.rm = TRUE) < 4.76 
+#unique(data[which(data$Longitude > 4.76), "Authors.to.give.credit"]) #idem.
 min(data$Longitude, na.rm = TRUE) > -10.13
+#CHECK BELOW AND MAKE IT SAFER
 levels(data$Coordinate.precision) <- c("<100m","<10km","<10m","<1km","<2km",      
                                        "<2km","<3km","<4km","<5km","<5km",      
-                                       "<100m","<3km","GPS","<1km") #bad solution as is sensitive to data updates with extra levels
+                                       "<100m","100m", "100m", "<3km",
+                                       "false", "GPS", "GPS", "GPS", "true") #bad solution as is sensitive to data updates with extra levels
+#Check false and true, probably coming from Gbif/iNat
 
 #Check Year Month Day Start.date End.date -----
-summary(data$Year)
-summary(data$Month) #fix months!
-summary(data$Day)
+summary(data$Year) #Fuck! NOt fixing it now.
+data$Year <- as.numeric(as.character(data$Year)) #NOT CORRECT; BUT TO ALLOW PLOTTING
+summary(data$Month) #fix months! + #Idem as year :(
+summary(data$Day) #Idem as year :(
 
-unique(data$Start.date) #some excel bad converted...
-unique(data$End.date) #idem
+unique(data$Start.date) 
+unique(data$End.date) 
 #Se puede calculat mean day's y months cuando estos son NA?
 
 #Check Collector, Determined.by-----
@@ -47,6 +59,7 @@ unique(data$Determined.by) #similar here, as iNat...
 #Here we can have a list of Trusted Taxonomists?
 
 #Check Female Male Worker Not.specified-----
+#Fuck, male and female factors!! Why!!
 Total <- data$Male + data$Female + data$Worker + data$Not.specified
 summary(Total) #Total = 0 imply Not.specified shouls = 1.
 #convert NA's to zero.
@@ -76,14 +89,6 @@ unique(data$Notes.and.queries)
 #species in the see (ignore for now?)
 #Remove duplicates.
 #Trusted column?
-
-#3) Create summaries and maps (maybe in a separated .Rmd)
-#Name	
-#Contact	
-#Number of records as main dataholder	
-#Number of records as co-dataholder
-#email?? Maually :(
-
 
 #Write new file-----
 write.table(x = data, file = "data/data_clean.csv", 

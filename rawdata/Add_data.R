@@ -30,6 +30,14 @@ newdat <- newdat[,c(1,25,2:12,26,27,13:24)]
 cbind(colnames(newdat) , colnames(data)) #can be merged
 summary(newdat)
 newdat$Authors.to.give.credit <- "Ana Montero-Castaño, Montserrat Vilà"
+newdat$Genus <- as.character(newdat$Genus)
+temp <- unlist(gregexpr(pattern = "_(", fixed = TRUE, text = newdat$Genus))
+for(i in which(temp > 0)){
+  newdat$Subgenus[i] <- substr(newdat$Genus[i], start = temp[i]+2, 
+                                   stop = nchar(newdat$Genus[i])-1)
+  newdat$Genus[i] <- substr(newdat$Genus[i], start = 1, 
+                            stop = temp[i]-1)
+}
 #newdat$Reference..doi. several doi's listed "," and "and" separated. Fix later?
 #questions flowers species with Genus_spcies -> accepted, easy to change in bulk. 
 write.table(x = newdat, file = "data/data.csv", 
@@ -63,6 +71,15 @@ colnames(newdat)[10] <- "precision" #just to see them both in two lines
 #quick way to compare colnames
 cbind(colnames(newdat), colnames(data)) #can be merged
 summary(newdat)
+#species contains genus.
+newdat$Species <- as.character(newdat$Species)
+newdat$Species <- trimws(newdat$Species) 
+temp <- unlist(gregexpr(pattern = " ", fixed = TRUE, text = newdat$Species))
+length(temp) == length(newdat$Species)
+for(i in which(temp > 0)){
+  newdat$Species[i] <- substr(newdat$Species[i], start = temp[i]+1, 
+                               stop = nchar(newdat$Species[i]))
+}
 #question: España and Spain both used. Fix in bulk.
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
@@ -151,6 +168,10 @@ cbind(colnames(newdat), colnames(data)) #can be merged
 summary(newdat)
 newdat[131,4] <- NA
 newdat$Authors.to.give.credit <- "Martínez-Núñez C., Rey P.J."
+#Lat and Long mixed I think
+temp <- newdat$Latitude
+newdat$Latitude <- newdat$Longitude
+newdat$Longitude <- temp
 #write
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
@@ -218,7 +239,9 @@ size <- size + nrow(newdat)
 
 #Add data SERIDA ----
 newdat <- read.csv(file = "rawdata/SERIDA.csv")
+nrow(newdat)
 colnames(newdat)
+#Better move queri2 to determiner. TO DO!
 newdat$Notes.and.queries <- paste(newdat$Notes.and.queries, 
                                   newdat$Notes.and.queries..2., sep = ";")
 unique(newdat$Notes.and.queries)
@@ -250,8 +273,9 @@ newdat <- newdat[,c(1,27,2:26)]
 #quick way to compare colnames
 cbind(colnames(newdat), colnames(data)) #can be merged
 summary(newdat)
+newdat$Latitude <- as.character(newdat$Latitude)
 newdat$Latitude[61] <- 37.39836111111111
-newdat$Latitude <- as.numeric(as.character(newdat$Latitude))
+newdat$Latitude <- as.numeric(newdat$Latitude)
 #write
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
@@ -290,34 +314,50 @@ head(newdat)
 newdat$Genus <- substr(newdat$species, 
                        start = 1,
                        stop = unlist(gregexpr(pattern = " ", newdat$species))-1)
-newdat$species <- substr(newdat$species, 
+newdat$Species <- substr(newdat$species, 
                          start = unlist(gregexpr(pattern = " ", newdat$species))+1,
                          stop = nchar(as.character(newdat$species)))  
 newdat$Collector <- newdat$recordedBy
+newdat$Determined.by <- newdat$identifiedBy
 levels(newdat$sex)
+newdat$Subspecies <- newdat$subspecies
 newdat$Female <- ifelse(newdat$sex %in% c("FEMALE", "female", "queen"), 1, 0)
 newdat$Male <- ifelse(newdat$sex %in% c("MALE", "male"), 1, 0)
 newdat$Worker <- ifelse(newdat$sex %in% c("worker"), 1, 0)
 newdat$Not.specified <- ifelse(is.na(newdat$sex) | newdat$sex == "males_and_females", 1, 0)
 colnames(data)
 newdat$Subgenus <- NA
-newdat$Country <- NA
-newdat$Province <- NA
-newdat$Locality <- NA
-newdat$Coordinate.precision <- NA
+newdat$Province <- newdat$stateProvince
+newdat$Locality <- newdat$locality
+newdat$Coordinate.precision <- newdat$coordinatePrecision
 newdat$Start.date <- NA
 newdat$End.date <- NA
-newdat$Reference.doi <- NA
 newdat$Flowers.visited <- NA
-newdat$Local_ID <- NA
-newdat$Authors.to.give.credit <- NA
-newdat$Any.other.additional.data <- "Gbif or iNaturalist data"
 newdat$Notes.and.queries <- NA
+newdat$Latitude <- newdat$decimalLatitude
+newdat$Longitude <- newdat$decimalLongitude
+newdat$Year <- newdat$year
+newdat$Month <- newdat$month
+newdat$Day <- newdat$day
 #reorder
 colnames(data)
 colnames(newdat)
-newdat <- newdat[,c(12,18,1,11,19:21,2,3,22,5:7,23,24,8,9,14:17,25:30)]
+tail(newdat)
+newdat <- newdat[,c("Genus","Subgenus","Species","Subspecies",
+                    "Country","Province","Locality",
+                    "Latitude","Longitude","Coordinate.precision",
+                    "Year","Month","Day","Start.date","End.date",
+                    "Collector","Determined.by","Female","Male","Worker","Not.specified",
+                    "Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit",
+                    "Any.other.additional.data","Notes.and.queries")]
+summary(newdat)
 cbind(colnames(newdat), colnames(data)) #can be merged
+unique(newdat$Locality)
+newdat$Locality <- gsub('"', "", newdat$Locality, fixed = TRUE)
+newdat$Locality <- gsub('-', "", newdat$Locality, fixed = TRUE)
+newdat$Locality <- gsub('\\', "", newdat$Locality, fixed = TRUE)
+#newdat$Locality <- gsub('', "", newdat$Locality, fixed = TRUE)
+#Some of the above was causing a loooot of trubles.
 #write
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
@@ -327,3 +367,5 @@ size <- size + nrow(newdat)
 #test size matches----
 data <- read.csv("data/data.csv")
 nrow(data) == size 
+
+
