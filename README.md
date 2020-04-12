@@ -7,29 +7,31 @@ This is an in progress repo to document Iberian Bees.
 
 # Process:
 
+0- Use Fetch_data.R to update data from interent (e.g. Gbif)
 1- Add excels in local to "/rawdata/xls_to_add/" with the data in the first sheet.  
 2- Run "rawdata/preprocessing.R"" to convert those to csv.  
 3- Add new csv's manually using "/rawdata/Add_data.R".  
-4- Use "datascript.R" to clean data and create summaries.
-4- Commit and push. Automatic tests will be done on data/data.csv.  
+4- Use "datascript.R" to clean data.  
+5- Update Summary.Rmd to see nice sumaries.  
+6- Commit and push. Automatic tests will be done (in the future).   
 
 # To Do:
 
+  [x] Download data from Gbif
   [x] preprocess data contributed by coauthors 
   [x] read from rawdata, clean and append files to data, manually? Yes.  
-  [ ] Add a trusted column to data: if(collector %in% ) or Check by Thomas and create two datastets.    
-  [ ] create summary (to readme also?)  
   [ ] Implement tests...  e.g. remove duplicates.
-  [ ] What with data cleaning? e.g. Thomas checks Data?  Scripted?  
+  [ ] create summary (to readme also?)  
+  [ ] Think what with manual data cleaning? e.g. Thomas checks Data?  Scripted?
   [ ] Make a nice map
   
 # Datasets to add
 
-  [ ] Contributors via xls in "/rawdata"  
-  [ ] Thomas Wood et al.  [talk to Thomas First]
-  [ ] Gbif + iNaturalist in ... [easy]
+  [ ] Contributors via xls in "/rawdata" [missing: Curro, Cap de creus, ...]   
+  [ ] Thomas Wood et al.  [talk to Thomas First]  
+  [ ] Gbif + iNaturalist in ... [easy]  
   [ ] Historical papers  [talk Cristina and MA]
-  [ ] Museo ciencias Naturales  [Cristina]
+  [ ] Museo ciencias Naturales  [Cristina]  
   [ ]   
 
 
