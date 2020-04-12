@@ -61,7 +61,8 @@ dat <-  data.frame(scientificName = NA, decimalLatitude = NA,
                   decimalLongitude = NA, scientificName = NA,
                   family = NA, genus = NA, species = NA,
                   year = NA, month = NA, day = NA, recordedBy = NA,
-                  identifiedBy = NA, sex = NA)
+                  identifiedBy = NA, sex = NA, stateProvince = NA,
+                  locality = NA, coordinatePrecision = NA)
 for(i in c(apidae_key, andrenidae_key,
            halictidae_key, colletidae_key,
            megachilidae_key, 
@@ -76,13 +77,15 @@ for(i in c(apidae_key, andrenidae_key,
                                 'decimalLongitude', 'scientificName',
                                 'family','genus', 'species',
                                 'year', 'month', 'day', 'recordedBy',
-                                'identifiedBy', 'sex'))
+                                'identifiedBy', 'sex', 'stateProvince', 
+                                'locality', 'coordinatePrecision'))
   if(length(temp$PT) == 1){
     temp$PT <- data.frame(scientificName = NA, decimalLatitude = NA,
                           decimalLongitude = NA, scientificName = NA,
                           family = NA, genus = NA, species = NA,
                           year = NA, month = NA, day = NA, recordedBy = NA,
-                          identifiedBy = NA, sex = NA)
+                          identifiedBy = NA, sex = NA,  stateProvince = NA,
+                          locality = NA, coordinatePrecision = NA)
   }
   if(is.null(temp$ES$sex)){
     temp$ES$sex <- NA
@@ -90,16 +93,30 @@ for(i in c(apidae_key, andrenidae_key,
   if(is.null(temp$PT$sex)){
     temp$PT$sex <- NA
   }
+  if(is.null(temp$PT$coordinatePrecision)){
+    temp$PT$coordinatePrecision <- NA
+  }
+  if(is.null(temp$ES$coordinatePrecision)){
+    temp$ES$coordinatePrecision <- NA
+  }
+  if(is.null(temp$ES$stateProvince)){
+    temp$ES$stateProvince <- NA
+  }
+  if(is.null(temp$PT$stateProvince)){
+    temp$PT$stateProvince <- NA
+  }
   temp$ES <- temp$ES[,c('scientificName','decimalLatitude',
                         'decimalLongitude', 'scientificName',
                         'family','genus', 'species',
                         'year', 'month', 'day', 'recordedBy',
-                        'identifiedBy', 'sex')]
+                        'identifiedBy', 'sex',  'stateProvince', 
+                        'locality', 'coordinatePrecision')]
   temp$PT <- temp$PT[,c('scientificName','decimalLatitude',
                         'decimalLongitude', 'scientificName',
                         'family','genus', 'species',
                         'year', 'month', 'day', 'recordedBy',
-                        'identifiedBy', 'sex')]
+                        'identifiedBy', 'sex',  'stateProvince', 
+                        'locality', 'coordinatePrecision')]
   dat <- rbind(dat, as.data.frame(temp$ES), as.data.frame(temp$PT))
 }
 dat <- dat[-1,]
@@ -126,7 +143,7 @@ length(megachilidae$scientific_name) #710
 length(melittidae$scientific_name) #33
 
 inat <- rbind(apidae, andrenidae, halictidae, colletidae, megachilidae)
-unique(inat$scientific_name) #need to clean data
+unique(inat$scientific_name) #need to clean data, a couple subsp.
 head(inat)
 
 #Other sources----
@@ -137,38 +154,41 @@ head(inat)
 colnames(dat)
 head(dat)
 head(inat)
-colnames(inat) <- c("species"                  ,"datetime"                        
-                    ,"description"                     ,"place_guess"                     
-                    ,"decimalLatitude"                        , "decimalLongitude"                       
-                    ,"tag_list"                        ,  "common_name"                     
+colnames(inat) <- c("species"                           ,"datetime"                        
+                    ,"description"                      ,"locality"                     
+                    ,"decimalLatitude"                  ,"decimalLongitude"                       
+                    ,"tag_list"                         ,"common_name"                     
                     ,"url"                              ,"image_url"                       
                     ,"user_login"                       ,"id"                              
                     ,"species_guess"                    ,"iconic_taxon_name"               
                     ,"taxon_id"                         ,"id_please"                       
-                    , "num_identification_agreements"   , "num_identification_disagreements"
-                    , "observed_on_string"              , "observed_on"                     
-                    , "time_observed_at"                , "time_zone"                       
-                    , "positional_accuracy"             , "private_place_guess"             
-                    , "geoprivacy"                      , "coordinates_obscured"            
-                    , "positioning_method"              , "positioning_device"              
-                    , "out_of_range"                    , "user_id"                         
-                    , "created_at"                      , "updated_at"                      
-                    , "quality_grade"                   , "license"                         
-                    , "sound_url"                       , "oauth_application_id"            
-                    , "captive_cultivated")
+                    ,"num_identification_agreements"   , "num_identification_disagreements"
+                    ,"observed_on_string"              , "observed_on"                     
+                    ,"time_observed_at"                , "time_zone"                       
+                    ,"positional_accuracy"             , "private_place_guess"             
+                    ,"geoprivacy"                      , "coordinates_obscured"            
+                    ,"coordinatePrecision"              , "positioning_device"              
+                    ,"out_of_range"                    , "user_id"                         
+                    ,"created_at"                      , "updated_at"                      
+                    ,"quality_grade"                   , "license"                         
+                    ,"sound_url"                       , "oauth_application_id"            
+                    ,"captive_cultivated")
 inat$family <- NA
 inat$sex <- NA
 inat$recordedBy  <- inat$user_login
 inat$identifiedBy <- inat$user_login
+inat$stateProvince <- NA
 date <- as.POSIXlt(strptime(inat$observed_on, "%Y-%m-%d")) #convert to date class
 inat$day <- date$mday #extract the day only
 inat$month <- date$mon+1 #extract the day only
 inat$year <- date$year + 1900 #extract the day only
 
 d <- rbind(dat[,c("species", "decimalLatitude",  "decimalLongitude", "family",
-                  "year", "month",  "day", "recordedBy", "identifiedBy", "sex")], 
+                  "year", "month",  "day", "recordedBy", "identifiedBy", "sex",
+                  "stateProvince", "locality", "coordinatePrecision")], 
            inat[, c("species", "decimalLatitude",  "decimalLongitude", "family",
-                    "year", "month",  "day", "recordedBy", "identifiedBy", "sex")])
+                    "year", "month",  "day", "recordedBy", "identifiedBy", "sex",
+                    "stateProvince", "locality", "coordinatePrecision")])
 
 #Clean and merge Gbig and inat----
 #species in canary islands
@@ -179,7 +199,7 @@ d2 <- subset(d, decimalLatitude > 35.8 & decimalLatitude < 43.88 &
 d3 <- d2[which(is.na(d2$species) == FALSE),]
 unique(d3$species) #600
 d4 <- d3[grep(" ", d3$species, fixed = TRUE, value = FALSE),]
-unique(d4$species) #522 sp ... not bad...
+unique(d4$species) #522 sp ... not bad...some subspecies...
 
 #Load and merge Beefun----
 
@@ -211,16 +231,36 @@ beefun$decimalLatitude <- beefun$latitude
 beefun$decimalLongitude <- beefun$longitude
 beefun$family <- beefun$family
 beefun$year <- 2015
-beefun$month <- NA
+beefun$month <- NA #this can be added...
 beefun$day <- NA
 beefun$recordedBy <- "Curro Molina"
 beefun$identifiedBy <- "Oscar Aguado"
 beefun$sex <- beefun$Pollinator_sex
+beefun$stateProvince <- "Huelva"
+beefun$locality <- beefun$Site_ID            
+beefun$coordinatePrecision <- "gps"
+#Add
+beefun$Reference.doi <- "http://doi.org/10.5281/zenodo.3364037"
+beefun$Local_ID <- beefun$Pollinator_id
+beefun$Authors.to.give.credit <- "I. Bartomeus, C. Molina"
+beefun$Any.other.additional.data <- NA
+beefun$Country <- "Spain"
+#Add
+d4$Reference.doi <- NA
+d4$Local_ID <- NA
+d4$Authors.to.give.credit <- NA
+d4$Any.other.additional.data <- "Gbif/iNat"
+d4$Country <- NA
 
 head(beefun)
+colnames(d4)
+colnames(beefun)
 d5 <- rbind(d4, 
             beefun[, c("species", "decimalLatitude",  "decimalLongitude", "family",
-                       "year", "month",  "day", "recordedBy", "identifiedBy", "sex")])
+                       "year", "month",  "day", "recordedBy", "identifiedBy", "sex",
+                       "stateProvince", "locality", "coordinatePrecision",
+                       "Reference.doi", "Local_ID", "Authors.to.give.credit",
+                       "Any.other.additional.data", "Country")])
 
 unique(d5$species) #543 #some subspecies!!
 d5$subspecies <- NA  
@@ -231,7 +271,7 @@ for(i in 1:length(d5$species)){
     d5$species[i] <- substr(d5$species[i], start = 1, stop = temp[2]-1)
   }
 }
-dim(d5) #9032 occurrences...
+dim(d5) #9041 occurrences...
 
 #export
 write.csv(d5, file = "data/idata.csv")
