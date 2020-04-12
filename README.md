@@ -3,7 +3,7 @@
 
 # IberianBees
 
-This is an in progress repo to document Iberian Bees.   
+This is an in progress repo to document Iberian Bees. You can see a summary of the data [here][https://github.com/ibartomeus/IberianBees/blob/master/Summary.md]  
 
 # Process:
 
@@ -18,18 +18,18 @@ This is an in progress repo to document Iberian Bees.
 # To Do:
 
   [x] Download data from Gbif
-  [x] preprocess data contributed by coauthors 
-  [x] read from rawdata, clean and append files to data, manually? Yes.  
-  [ ] Implement tests...  e.g. remove duplicates.
-  [ ] create summary (to readme also?)  
+  [x] preprocess data contributed by coauthors
+  [x] read from rawdata, clean and append files to data (But re-check) 
+  [o] Implement tests...  e.g. remove duplicates.
+  [o] create summary (to readme also?)  
   [ ] Think what with manual data cleaning? e.g. Thomas checks Data?  Scripted?
-  [ ] Make a nice map
-  
+
 # Datasets to add
 
-  [ ] Contributors via xls in "/rawdata" [missing: Curro, Cap de creus, ...]   
+  [ ] species list  (Talk Thomas)
+  [x] Contributors via xls in "/rawdata" [missing: Curro, Cap de creus, ...]   
   [ ] Thomas Wood et al.  [talk to Thomas First]  
-  [ ] Gbif + iNaturalist in ... [easy]  
+  [x] Gbif + iNaturalist in Fetch_data.R  
   [ ] Historical papers  [talk Cristina and MA]
   [ ] Museo ciencias Naturales  [Cristina]  
   [ ]   
