@@ -283,6 +283,47 @@ size <- size + nrow(newdat)
 #strat with a simpier one
 
 
+#Add data internet----
+newdat <- read.csv(file = "data/idata.csv")[,-1]
+head(newdat)
+#split genus species
+newdat$Genus <- substr(newdat$species, 
+                       start = 1,
+                       stop = unlist(gregexpr(pattern = " ", newdat$species))-1)
+newdat$species <- substr(newdat$species, 
+                         start = unlist(gregexpr(pattern = " ", newdat$species))+1,
+                         stop = nchar(as.character(newdat$species)))  
+newdat$Collector <- newdat$recordedBy
+levels(newdat$sex)
+newdat$Female <- ifelse(newdat$sex %in% c("FEMALE", "female", "queen"), 1, 0)
+newdat$Male <- ifelse(newdat$sex %in% c("MALE", "male"), 1, 0)
+newdat$Worker <- ifelse(newdat$sex %in% c("worker"), 1, 0)
+newdat$Not.specified <- ifelse(is.na(newdat$sex) | newdat$sex == "males_and_females", 1, 0)
+colnames(data)
+newdat$Subgenus <- NA
+newdat$Country <- NA
+newdat$Province <- NA
+newdat$Locality <- NA
+newdat$Coordinate.precision <- NA
+newdat$Start.date <- NA
+newdat$End.date <- NA
+newdat$Reference.doi <- NA
+newdat$Flowers.visited <- NA
+newdat$Local_ID <- NA
+newdat$Authors.to.give.credit <- NA
+newdat$Any.other.additional.data <- "Gbif or iNaturalist data"
+newdat$Notes.and.queries <- NA
+#reorder
+colnames(data)
+colnames(newdat)
+newdat <- newdat[,c(12,18,1,11,19:21,2,3,22,5:7,23,24,8,9,14:17,25:30)]
+cbind(colnames(newdat), colnames(data)) #can be merged
+#write
+write.table(x = newdat, file = "data/data.csv", 
+            quote = TRUE, sep = ",", col.names = FALSE,
+            row.names = FALSE, append = TRUE)
+size <- size + nrow(newdat)
+
 #test size matches----
 data <- read.csv("data/data.csv")
 nrow(data) == size 
