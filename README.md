@@ -3,7 +3,7 @@
 
 # IberianBees
 
-This is an in progress repo to document Iberian Bees. You can see a summary of the data [here](https://github.com/ibartomeus/IberianBees/blob/master/Summary.md)    
+This is an in progress repo to document Iberian Bees Database (v.0.2.0). You can see a summary of the data [here](https://github.com/ibartomeus/IberianBees/blob/master/Summary.md)      
 
 # How to use this repo  
 
