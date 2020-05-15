@@ -1,0 +1,332 @@
+flag;checked;synonym_names;questionable;accepted_name;accepted_subspecies;Notes
+Afranthidium schultessii;Afranthidium schulthessii;NA;NA;Afranthidium schulthessii;;
+Amegilla candens;NA;NA;NA;Amegilla fasciata;;It is likely that actually Amegilla andresi is also a synonym of A. fasciata (P. Rasmont pers comm), but this is not published so we do not change it for now
+Amegilla canifrons;NA;NA;NA;Remove;;Canarian species
+Amegilla savignyi;NA;NA;NA;Amegilla magnilabris;;If Amgeilla savigyni is distinct, it is probably a North African species only
+Amegilla talaris;NA;NA;NA;Amegilla albigena;talaris;The status of A. tallaris is not clear, it may be distinct but for now should be considered a subspecies of A. albigena
+Ammobates major;NA;NA;NA;Ammobates muticus;;
+Andrena aegyptiaca;NA;NA;NA;Remove;;Canarian species: Andrena aegyptiaca cannabina
+Andrena alfkenella o nana;NA;NA; o ;Remove;;alfkenella or nana - identification uncertain, delete record
+Andrena candida;NA;NA;NA;Remove;;Not an Iberian species - delete
+Andrena carantonica;NA;NA;NA;Andrena scotica;;Great taxonomic confusion over this species, currently collate records under the single name scotica. This group needs to be revised in Iberia
+Andrena carbonaria;NA;NA;NA;Andrena pilipes;;
+Andrena chalcogastra;NA;NA;NA;Remove;;Canarian species
+Andrena clarkella;NA;NA;NA;Andrena clarkella;;This species would be new for the Iberian peninsula - possible misidentification? I would be very interested to see this specimen
+Andrena curtula;Andrena urdula;NA;NA;Andrena spreta;;Great taxonomic confusion over this species, currently collate records under the single name spreta. This taxon needs to be revised
+Andrena damara;Andrena avara;NA;NA;Andrena clarkella;;Canarian species
+Andrena distinguenda;NA;NA;NA;Andrena nitidula;;True distinguenda does not occur in Iberia - records almost certaintly refer to nitidula
+Andrena espanola;NA;NA;NA;Andrena truncatilabris;espanola;The status of espanola is not completely clear, keep as subspecies of truncatilabris for now
+Andrena florea???;NA;NA;???;Remove;;Consider deleting because of the '???' indicating uncertainty over the identification
+Andrena floricola;NA;NA;NA;Andrena floricola;;
+Andrena fulvata;NA;NA;NA;Remove;;This species is currently unknown from the Iberian peninsula, probably a misidentification, I need to see the specimen
+Andrena gelriae;NA;NA;NA;Andrena gredana;;Andrena gelriae s.l. material from Iberia is referrable to A. gredana, revision in progress
+Andrena hillana;NA;NA;NA;Remove;;Canarian species
+Andrena induta;NA;NA;NA;Remove;;Not an Iberian species - delete
+Andrena isis;Andrena mitis;NA;NA;Remove;;Canarian species: Andrena isis canaria
+Andrena leptopyga???;NA;NA;???;Remove;;Consider deleting because of the '???' indicating uncertainty over the identification
+Andrena lineolata;NA;NA;NA;Remove;;Canarian species
+Andrena macrocephala;NA;Andrena nigripes;NA;Remove;;Not an Iberian species - delete
+Andrena maderensis;NA;NA;NA;Remove;;Madeiran species
+Andrena mediovittata;NA;NA;NA;Remove;;Canarian species: Andrena mediovittata arvensis
+Andrena nigroaenaea;Andrena nigroaenea;NA;NA;Andrena nigroaenea;;
+Andrena nuptialis;Andrena nuptualis;NA;NA;Andrena nuptialis;;
+Andrena ovatula_agg;NA;NA;_agg;Andrena ovatula;aggregate;Multiple species present in Iberia, aggregate required
+Andrena ovulata;NA;NA;NA;Andrena ovatula;;
+Andrena pilipes_agg;NA;NA;_agg;Andrena pilipes;;
+Andrena proxima;NA;NA;NA;Andrena ampla;;Only one member of the proxima-group is present in Iberia, Andrena ampla
+Andrena proxima_agg;NA;NA;_agg;Andrena ampla;;Only one member of the proxima-group is present in Iberia, Andrena ampla
+Andrena rhyssonota;Andrena rhyssonata;NA;NA;Andrena rhyssonata;;
+Andrena sagittaria;NA;NA;NA;Remove;;Canarian species
+Andrena savignyi;NA;NA;NA;Remove;;Canarian species
+Andrena scotica?;Andrena scotica;NA;?;Remove;;Delete - user uncertainty
+Andrena sinuata;NA;NA;NA;Remove;;The Canarian Andrena damara and Andrena sagittaria were split out from Andrena sinuata which is North African. Check the specific island to get the species identity
+Andrena spolata;Andrena polita;NA;NA;Remove;;Canarian species
+Andrena squalida;NA;Andrena villipes;NA;Andrena villipes;;
+Andrena subopaca;NA;NA;NA;Andrena subopaca;;
+Andrena thomsonii;Andrena thomsoni;NA;NA;Andrena thomsoni;;
+Andrena vachali;NA;NA;NA;Remove;;Canarian species
+Andrena vaga;NA;NA;NA;Remove;;Not confirmed from Spain
+Andrena wollastoni;NA;NA;NA;Remove;;Canarian species
+Anthidium caturigense;NA;NA;NA;Rhodanthidium caturigense;;
+Anthidium eximium;NA;NA;NA;Pseudoanthidium eximium;;
+Anthidium ferrugineum;NA;NA;NA;Icteranthidium ferrugineum;;
+Anthidium florentium;Anthidium florentinum;NA;NA;Anthidium florentinum;;
+Anthidium fuscatum;NA;NA;NA;Remove;;No idea!
+Anthidium grohmanni;NA;NA;NA;Icteranthidium grohmanni;;
+Anthidium laterale;NA;NA;NA;Icteranthidium laterale;;
+Anthidium laticeps;NA;NA;NA;Trachusa laticeps;;
+Anthidium lituratum;NA;Pseudoanthidium scapulare;NA;Pseudoanthidium nanum;aggregate;This group of Pseudoanthidium is highly confused and undergoing revision at the moment, best to include as P. nanum aggregate
+Anthidium reticulatum;NA;NA;NA;Pseudoanthidium reticulatum;;
+Anthidium schultessii;NA;NA;NA;Afranthidium schulthessii;;
+Anthidium schulthessi;NA;NA;NA;Afranthidium schulthessii;;
+Anthidium septemdentatum;NA;NA;NA;Rhodanthidium septemdentatum;;
+Anthidium siculum;NA;NA;NA;Rhodanthidium siculum;;
+Anthidium sticticum;NA;NA;NA;Rhodanthidium sticticum;;
+Anthidium strigatum;NA;NA;NA;Anthidiellum strigatum;;
+Anthocopa anceyi;NA;Hoplosmia anceyi;NA;Osmia anceyi;;
+Anthocopa bidentata;NA;Hoplosmia bidentata;NA;Remove;;Not present in Iberia - greatly confused with Osmia anceyi and Osmia ligurica
+Anthocopa bisulca;NA;NA;NA;Hoplitis bisulca;;
+Anthocopa cristatitla;NA;NA;NA;Hoplitis cristatula;;
+Anthocopa ligurica;NA;Hoplosmia ligurica;NA;Osmia ligurica;;
+Anthocopa ononidis;NA;NA;NA;Osmia tergestensis;;
+Anthocopa papaveris;NA;NA;NA;Hoplitis papaveris;;
+Anthophora acervorum;NA;NA;NA;Anthophora plumipes;;
+Anthophora alluaudi;NA;NA;NA;Remove;;Canarian species
+Anthophora biciliata;NA;NA;NA;Anthophora affinis;;
+Anthophora dispar?;Anthophora dispar;NA;?;Remove;;Delete - user uncertainty
+Anthophora erschowi;NA;NA;NA;Remove;;Not known from Iberia
+Anthophora nigrilabris;NA;NA;NA;Remove;;Maybe referring to Eucera nigrilabris? Would need to ask the author
+Anthophora orotavae;NA;NA;NA;Remove;;Canarian species
+Anthophora pubescens;NA;NA;NA;Anthophora pubescens;;
+Anthophora pulverosa;NA;NA;NA;Remove;;Canarian species
+Anthophora purpuraria;NA;NA;NA;Remove;;Canarian species
+Anthophora quadricolor;NA;NA;NA;Anthophora gallica;;True quadricolor is a North African species
+Anthophora rutilans;NA;NA;NA;Remove;;Not confirmed from Spain
+Anthophora salviae;NA;NA;NA;Anthophora crinipes;;
+Anthophora senescens;Anthophora canescens;NA;NA;Anthophora senescens;;Certainly distinct from Anthophora canescens
+Anthophora subterranea;NA;Anthophorini;NA;Anthophora canescens;;
+Anthophora testaceipes;NA;NA;NA;Remove;;No idea!
+Anthophora thomsoni;NA;NA;NA;Anthophora atriceps;;
+Apis henshawi;NA;NA;NA;Remove;;No idea!
+Apis manicatum;NA;NA;NA;Remove;;Probably Anthidium manicatum, but this must be from a really old paper
+Apis melifera;Apis mellifera;NA;NA;Apis mellifera;;
+Apis villosa;NA;NA;NA;Remove;;No idea!
+Bombus cerdanyensis;NA;NA;NA;Remove;;No idea!
+Bombus cornutus;NA;NA;NA;Remove;;Osmia cornuta?
+Bombus inexspectatus;Bombus inexpectatus;NA;NA;Bombus inexpectatus;;
+Bombus laponicus;NA;NA;NA;Remove;;Not in Iberia
+Bombus maxillosus;NA;NA;NA;Bombus barbutellus;;
+Bombus mocsaryi;NA;NA;NA;Bombus laesus;;New synonymy
+Bombus pascuroum;Bombus pascuorum;NA;NA;Bombus pascuorum;;
+Bombus pauloensis;NA;NA;NA;Remove;;No idea!
+Bombus reinigiellus;NA;NA;NA;Bombus hortorum;;New synonymy, will be published this year
+Ceratina albosticta;NA;NA;NA;Remove;;Not in Iberia, confused with Ceratina cyanea
+Ceratina centriventis;NA;NA;NA;Remove;;No idea!
+Ceratina cucurbitula;Ceratina cucurbitina;NA;NA;Ceratina cucurbitina;;
+Chalicodoma albonotata;NA;NA;NA;Megachile albonotata;;
+Chalicodoma ericetorum;NA;NA;NA;Megachile ericetorum;;
+Chalicodoma parietina;NA;NA;NA;Megachile parietina;;
+Chalicodoma pyrenaica;NA;NA;NA;Megachile pyrenaica;;
+Chalicodoma sicula;NA;NA;NA;Megachile sicula;;
+Chelostoma campanulorum;Chelostoma campanularum;NA;NA;Chelostoma campanularum;;
+Chelostoma florisomnis;Chelostoma florisomne;NA;NA;Chelostoma florisomne;;
+Chelostoma lucens;NA;NA;NA;Remove;;Not in Iberia, eastern species
+Coelioxys acanthura;Coelioxys acanthurus;NA;NA;Coelioxys acanthurus;;
+Coelioxys afra;Coelioxys afer;NA;NA;Coelioxys afer;;
+Coelioxys allocoelioxys;NA;NA;NA;Remove;;Just reported at subgeneric level, delete
+Coelioxys aurolimbata;Coelioxys atrolimbata;NA;NA;Coelioxys aurolimbatus;;
+Coelioxys conoidea;Coelioxys conoideus;NA;NA;Coelioxys conoideus;;
+Coelioxys echinata;Coelioxys echinatus;NA;NA;Coelioxys echinatus;;
+Coelioxys elongata;Coelioxys elongatus;NA;NA;Coelioxys elongatus;;
+Coelioxys haemorrhous;Coelioxys haemorrhoa;NA;NA;Coelioxys haemorrhoa;;
+Coelioxys haemorroa;Coelioxys haemorrhoa;NA;NA;Coelioxys haemorrhoa;;
+Coelioxys obtusa;Coelioxys obtusus;NA;NA;Coelioxys obtusus;;
+Coelioxys rufocaudata;NA;NA;NA;Coelioxys echinatus;;
+Colletes caspicus;NA;NA;NA;Remove;;Not in Iberia
+Colletes cunicularius;Colletes cunicularis;NA;NA;Colletes cunicularis;;
+Colletes hylaeiformis;Colletes hylaeformis;NA;NA;Colletes hylaeformis;;
+Colletes ibericus;NA;NA;NA;Colletes pulchellus;;
+Colletes jankowskyi;NA;NA;NA;Remove;;No idea!
+Colletes succintus;Colletes succinctus;NA;NA;Colletes succinctus;;
+Creightonella albisecta;NA;NA;NA;Megachile albisecta;;
+Dasypoda altercator;NA;Dasypoda hirtipes;NA;Dasypoda hirtipes;;
+Dasypoda sinuata;NA;NA;NA;Remove;;Canarian species
+Dioxys cincta;Dioxys cinctus;NA;NA;Dioxys cinctus;;
+Dioxys moesta;Dioxys moestus;NA;NA;Dioxys moestus;;
+Dioxys rotundata;NA;NA;NA;Dioxys moestus;;
+Dufourea fortunata;NA;NA;NA;Remove;;Canarian species
+Epeolus flavociliatus;NA;NA;NA;Remove;;Canarian species
+Epeolus julliani;NA;NA;NA;Epeolus transitorius;;julliani is the junior synonym
+Eucera algira;NA;NA;NA;Eucera algira;;
+Eucera atroalba;NA;NA;NA;Eucera brachycera;;
+Eucera bolivari;NA;Eucera decolorata;NA;Eucera decolorata;;
+Eucera cinerea;NA;NA;NA;Eucera cineraria;;
+Eucera doursana;NA;NA;NA;Remove;;No idea!
+Eucera elongata;Eucera elongatula;NA;NA;Eucera elongatula;;
+Eucera fallax;NA;Eucera syriaca;NA;Remove;;No idea!
+Eucera gracilipes;NA;NA;NA;Eucera gracilipes;;Canarian species
+Eucera graeca;Eucera graja;NA;NA;Eucera graja;;
+Eucera grandis;NA;NA;NA;Eucera rufa;;
+Eucera grisea;NA;Eucera eucnemidea;NA;Eucera eucnemidea;;
+Eucera helvola;NA;NA;NA;Remove;;Not in Iberia, eastern species
+Eucera hispanica?;NA;NA;?;Remove;;Delete - user uncertainty
+Eucera nitidiventris;NA;NA;NA;Eucera proxima;;
+Eucera obliberata;Eucera obliterata;NA;NA;Eucera obliterata;;
+Eucera pulveracea;NA;NA;NA;Remove;;No idea!
+Eucera sogdiana;NA;NA;NA;Remove;;Not in Iberia, eastern species
+Eucera trivittata;NA;Eucera seminuda;NA;Remove;;syn Eucera seminuda, not in Iberia, eastern species
+Eucera tuberculata;NA;NA;NA;Eucera nigrescens;;
+Eucera vidua;NA;NA;NA;Remove;;North African species
+Flavipanurgus ibericus_agg;NA;NA;_agg;Flavipanurgus ibericus;aggregate;This is necessary since the former concept of ibericus contains F. ibericus s.s. and F. kastiliensis
+Flavipanurgus venustus;NA;NA;NA;Flavipanurgus venustus;;
+Halictus allratus;NA;NA;NA;Remove;;No idea!
+Halictus balearicus;NA;NA;NA;Halictus balearicus;;
+Halictus cephalicus;NA;NA;NA;Remove;;Not in Iberia, eastern species
+Halictus compressus;NA;NA;NA;Remove;;Part of a complicated group, true compressus is not in Iberia, could be listed as Halictus crenicornis aggregate
+Halictus concinnus;NA;NA;NA;Remove;;Canarian species
+Halictus kassleri;Halictus kessleri;NA;NA;Halictus kessleri;;
+Halictus petrefactus;NA;NA;NA;Remove;;No idea!
+Halictus quadricinctus;Halictus quadricintus;NA;NA;Halictus quadricintus;;
+Halictus sedalonius;Halictus seladonius;NA;NA;Halictus seladonius;;
+Halictus seladonia-smaragdulus;NA;NA;NA;Remove;;Delete - user uncertainty
+Halictus tetrazonius;NA;NA;NA;Remove;;Historic confusion, H. tetrazonius is not in Iberia
+Halictus tripartitus;NA;NA;NA;Remove;;No idea!
+Heriades crenulata;Heriades crenulatus;NA;NA;Heriades crenulatus;;
+Heriades rubicolus;Heriades rubicola;NA;NA;Heriades rubicola;;
+Hoplitis anceyi;NA;NA;NA;Osmia anceyi;;
+Hoplitis andrenoides;NA;Osmia andrenoides;NA;Osmia andrenoides;;
+Hoplitis crenidata;Hoplitis crenulata;NA;NA;Remove;;No idea!
+Hoplitis leucomelaena;Hoplitis leucomelana;NA;NA;Hoplitis leucomelana;;
+Hoplitis ligurica;NA;NA;NA;Osmia ligurica;;
+Hoplitis mucida;NA;NA;NA;Hoplitis stecki;;Raised to full species status, true mucida is in North Africa and the Middle East
+Hoplitis paestrans;Hoplitis praestans;NA;NA;Hoplitis praestans;;
+Hoplitis rufohirta;NA;NA;NA;Osmia rufohirta;;
+Hoplitis scutellaris;NA;NA;NA;Osmia scutellaris;;
+Hoplitis spinolae;NA;NA;NA;Hoplitis adunca;;
+Hoplosmia anceyi;NA;NA;NA;Osmia anceyi;;
+Hoplosmia fallax;NA;NA;NA;Osmia fallax;;
+Hoplosmia ligurica;NA;NA;NA;Osmia ligurica;;
+Hylaeus adriaticus;NA;NA;NA;Remove;;Not in Iberia
+Hylaeus difformis;Hylaeus diffiformis;NA;NA;Hylaeus diffiformis;;
+Hylaeus diplonymus;NA;NA;NA;Remove;;No idea!
+Hylaeus imparalis;Hylaeus imparilis;NA;NA;Hylaeus imparilis;;
+Hylaeus nigrita;Hylaeus nigritus;NA;NA;Hylaeus nigritus;;
+Hylaeus spilotus;NA;NA;NA;Remove;;Great taxonomic confusion over this group of species. Very hard to assign a correct name to this, and the group needs a thorough revision
+Lasioglossum aegyptiellum;NA;NA;NA;Remove;;Not in Iberia, eastern species
+Lasioglossum albomaculatum;NA;NA;NA;Remove;;No idea!
+Lasioglossum arctifrons;NA;NA;NA;Remove;;Canarian species
+Lasioglossum castilianum;Lasioglossum castillianum;NA;NA;Lasioglossum castillianum;;
+Lasioglossum chalcodes;NA;NA;NA;Remove;;Canarian species
+Lasioglossum clypeare;NA;NA;NA;Lasioglossum clypeare;;
+Lasioglossum convexiusculum;NA;NA;NA;Lasioglossum convexiusculum;;
+Lasioglossum gemmeus;NA;NA;NA;Halictus gemmeus;;
+Lasioglossum immaculatum;Lasioglossum bimaculatum;NA;NA;Remove;;Maybe but hard to be sure, there are a lot of Lasioglossum names
+Lasioglossum laetum;NA;NA;NA;Remove;;Canarian species
+Lasioglossum lativentre/sexnotatum/laterale;NA;NA;/;Remove;;Delete - user uncertainty
+Lasioglossum leucoleucozonium/immunitum;NA;NA;/;Remove;;Delete - user uncertainty
+Lasioglossum malachurum/mediterraneum;NA;NA;/;Remove;;Delete - user uncertainty
+Lasioglossum marginellum;NA;NA;NA;Remove;;Not confirmed from Spain
+Lasioglossum phoenicurum;NA;NA;NA;Lasioglossum phoenicurum;;Canarian species
+Lasioglossum planulum;NA;NA;NA;Lasioglossum transitorium;planulum;
+Lasioglossum quadrinotatulus;Lasioglossum quadrinotatulum;NA;NA;Lasioglossum quadrinotatulum;;
+Lasioglossum semilucens???;NA;NA;???;Remove;;Delete - user uncertainty
+Lasioglossum sexnotatum?;Lasioglossum sexnotatum;NA;?;Lasioglossum sexnotatum;;
+Lasioglossum sextrigatum;Lasioglossum sexstrigatum;NA;NA;Lasioglossum sexstrigatum;;
+Lasioglossum sphecodimorphum;Lasioglossum sphecidomorphum;NA;NA;Lasioglossum sphecidomorphum;;
+Lasioglossum subhirtum???;NA;NA;???;Remove;;Delete - user uncertainty
+Lasioglossum villosum;Lasioglossum villosulum;NA;NA;Lasioglossum villosulum;;
+Lasioglossum viride;NA;NA;NA;Remove;;Canarian species
+Megachile albohirta;NA;NA;NA;Remove;;Canarian bee, taxonomically challenging, currently do not consider
+Megachile argentala;NA;NA;NA;Remove;;Old name (Megachile argentata) referring to what are currently referred to as M. pilidens and M. leachella. Very difficult to assign a correct name to this
+Megachile argentata;NA;NA;NA;Remove;;Old name (Megachile argentata) referring to what are currently referred to as M. pilidens and M. leachella. Very difficult to assign a correct name to this
+Megachile atratula;NA;NA;NA;Megachile pusilla;;Junior synonym
+Megachile baetica;NA;NA;NA;Megachile parietina;;Probably just a colour form of M. parietina
+Megachile canescens;NA;NA;NA;Remove;;Canarian species
+Megachile concinna;NA;NA;NA;Megachile pusilla;;Junior synonym
+Megachile dorsalis;NA;NA;NA;Megachile leachella;;
+Megachile melanogastra;Megachile melanogaster;NA;NA;Remove;;Probably, but hard to say for certain
+Megachile mendica;NA;NA;NA;Remove;;No idea!
+Megachile picicornis;NA;NA;NA;Megachile picicornis;;
+Megachile schmiedeknechti;NA;NA;NA;Remove;;Not recorded from the Iberian peninsula
+Megachile sculpturalis;NA;NA;NA;Megachile sculpturalis;;Invasive Asian species, I had forgotten that this was now present in Spain
+Melecta canariensis;NA;NA;NA;Remove;;Canarian species
+Melecta caroli;NA;NA;NA;Remove;;Canarian species
+Melecta curvispina;NA;NA;NA;Remove;;Canarian species
+Melecta funeraria;NA;NA;NA;Remove;;Not present in the Iberian peninsula
+Melecta prophanta;NA;NA;NA;Remove;;Canarian species
+Melissodes bimaculatus;NA;NA;NA;Remove;;North American species!
+Melitta aegyptiaca;Melecta aegyptiaca;NA;NA;Remove;;Canarian species
+Melitta kastliliensis;Melitta kastiliensis;NA;NA;Melitta kastiliensis;;
+Melitta schmiedeknechti;NA;Melitta schmiedeknechtii;NA;Remove;;Canarian species
+Melitturga cauadata;Melitturga caudata;NA;NA;Melitturga caudata;;
+Nomada argentata;NA;NA;NA;Remove;;Not present in the Iberian peninsula
+Nomada maculicornis???;NA;NA;???;Remove;;Delete - user uncertainty
+Nomada succinta;Nomada succincta;NA;NA;Nomada succincta;;
+Nomia armata;Nomada armata;NA;NA;Remove;;Possible, but need to ask the author, not safe to make this assumption
+Nomiapis bispinosa_agg;NA;NA;_agg;Pseudapis bispinosa;aggregate;There are two species in this group, we do need an aggregate
+Nomiapis diversipes;NA;NA;NA;Pseudapis diversipes;;
+Nomiapis femoralis;NA;NA;NA;Pseudapis femoralis;;
+Nomiapis valga;NA;NA;NA;Pseudapis valga;;
+Nomioides deceptor;NA;NA;NA;Remove;;Canarian species
+Nomioides fortunatus;NA;NA;NA;Remove;;Canarian species
+Nomioides variegata;NA;NA;NA;Ceylalictus variegatus;;
+Osmia adunca;NA;NA;NA;Hoplitis adunca;;
+Osmia ancey;Osmia anceyi;NA;NA;Osmia anceyi;;
+Osmia cerinthidis;NA;NA;NA;Remove;;
+Osmia claviventris;NA;NA;NA;Hoplitis claviventris;;
+Osmia cyanthoxantha;Osmia cyanoxantha;NA;NA;Osmia cyanoxantha;;
+Osmia fulviventris;NA;Osmia niveata;NA;Osmia niveata;;
+Osmia neoregaena;NA;NA;NA;Osmia cornuta;;
+Osmia papaveris;NA;NA;NA;Hoplitis papaveris;;
+Osmia ravouxi;NA;NA;NA;Hoplitis ravouxi;;
+Osmia robusta;NA;NA;NA;Remove;;Hoplitis robusta, not present in the Iberian peninsula
+Osmia rufa;NA;NA;NA;Osmia bicornis;;
+Osmia rufa/aurulenta;NA;NA;/;Remove;;Delete - user uncertainty
+Osmia rufa/aurulenta-alike;NA;NA;NA;Remove;;Delete - user uncertainty
+Osmia subimcans;Osmia submicans;NA;NA;Osmia submicans;;
+Panurginus brullei;NA;NA;NA;Remove;;True brullei is on the Canaries only!!! If used in an Iberian context it is albopilosus
+Panurginus canescens;Panurgus canescens;NA;NA;Panurgus canescens;;
+Panurgus arctos;NA;Panurgus cephalotes;NA;Panurgus cephalotes;;
+Panurgus canarius;NA;NA;NA;Remove;;Canarian species
+Panurgus dargius/cephalotes;NA;NA;/;Remove;;Delete - user uncertainty
+Panurgus dentatus;NA;NA;NA;Remove;;Could be a mis-spelling of Panurgus dentipes
+Panurgus intermedius;NA;NA;NA;Remove;;Not present in the Iberian peninsula
+Panurgus maroccanus;NA;NA;NA;Remove;;Not present in the Iberian peninsula
+Panurgus merceti;NA;Flavipanurgus merceti;NA;Flavipanurgus merceti;;
+Panurgus pici;NA;NA;NA;Panurgus pici;;
+Pseudapis monstrosa;NA;NA;NA;Remove;;Not present in Iberia - misidentification
+Pseudapis unidentata;NA;NA;NA;Remove;;No idea!
+Pseudoanthidium lituratum;NA;Pseudoanthidium scapulare;NA;Pseudoanthidium nanum;aggregate;This group of Pseudoanthidium is highly confused and undergoing revision at the moment, best to include as P. nanum aggregate
+Pseudoanthidium melanorum;Pseudoanthidium melanurum;NA;NA;Pseudoanthidium melanurum;;
+Pseudoanthidium stigmaticorne;NA;NA;NA;Pseudoanthidium nanum;aggregate;
+Psithyrus barbutellus;NA;NA;NA;Bombus barbutellus;;
+Psithyrus bohemicus;NA;NA;NA;Bombus bohemicus;;
+Psithyrus campestris;NA;NA;NA;Bombus campestris;;
+Psithyrus maxillosus;NA;NA;NA;Bombus barbutellus;;Now synonymous with barbutellus
+Psithyrus norvegicus;NA;NA;NA;Bombus norvegicus;;
+Psithyrus rupestris;NA;NA;NA;Bombus rupestris;;
+Psithyrus silvestris;NA;NA;NA;Bombus sylvestris;;
+Psithyrus vestalis;NA;NA;NA;Bombus vestalis;;
+Rhodanthidium septendentatum;Rhodanthidium septemdentatum;NA;NA;Rhodanthidium septemdentatum;;
+Sphecodes crassanus???;NA;NA;???;Remove;;Delete - user uncertainty
+Sphecodes ferruginatus_or_croaticus;NA;NA;_or_;Remove;;Delete - user uncertainty
+Sphecodes longulus???;NA;NA;???;Remove;;Delete - user uncertainty
+Sphecodes punticeps;Sphecodes puncticeps;NA;NA;Sphecodes puncticeps;;
+Sphecodes spinulosus_or_ferruginatus;NA;NA;_or_;Remove;;Delete - user uncertainty
+Sphecodes subovalis;NA;NA;NA;Sphecodes rufiventris;;
+Tetralonia acutangula;NA;Tetraloniella fulvescens;NA;Eucera fulvescens;;All Tetralonia/Tetraloniella now Eucera (Tetralonia) species
+Tetralonia alternans;NA;NA;NA;Eucera alternans;;
+Tetralonia antigae;NA;Tetraloniella strigata;NA;Eucera strigata;;
+Tetralonia asensioi;NA;NA;NA;Remove;;No idea!
+Tetralonia atroalba;NA;NA;NA;Eucera brachycera;;
+Tetralonia berlandi;NA;NA;NA;Eucera rufa;;
+Tetralonia dentata;NA;NA;NA;Eucera dentata;;
+Tetralonia dufouri;NA;NA;NA;Remove;;No idea!
+Tetralonia fulvescens;NA;NA;NA;Eucera fulvescens;;
+Tetralonia graja;NA;NA;NA;Eucera graja;;
+Tetralonia iberica;NA;NA;NA;Eucera iberica;;
+Tetralonia malvae;NA;NA;NA;Eucera malvae;;
+Tetralonia nana;NA;NA;NA;Eucera nana;;
+Tetralonia ruficornis;NA;NA;NA;Eucera ruficornis;;
+Tetralonia salicariae;NA;Tetraloniella salicariae;NA;Eucera salicariae;;
+Tetralonia tricincta;NA;Eucera tricincta;NA;Eucera tricincta;;
+Tetraloniella cinctella;NA;NA;NA;Eucera cinctella;;
+Tetraloniella dentata;NA;NA;NA;Eucera dentata;;
+Tetraloniella fulvescens;NA;NA;NA;Eucera fulvescens;;
+Tetraloniella graja;NA;NA;NA;Eucera graja;;
+Tetraloniella iberica;NA;NA;NA;Eucera iberica;;
+Tetraloniella nana;NA;NA;NA;Eucera nana;;
+Tetraloniella ruficornis;NA;NA;NA;Eucera ruficornis;;
+Tetraloniella salicariae;NA;NA;NA;Eucera salicariae;;
+Tetraloniella strigata;NA;NA;NA;Eucera strigata;;
+Thyreus hellenicus;NA;NA;NA;Remove;;I don't understand this taxon - not listed by Ortiz-Sanchez, no-body really understands Thyreus at all, very difficult bees
+Thyreus ramosellus;NA;NA;NA;Remove;;East Mediterranean - delete
+Trachusa atlantica;NA;NA;NA;Trachusa laeviventris;;
+Trachusa laeviventre;Trachusa laeviventris;NA;NA;Trachusa laeviventris;;
+Xylocopa pubescens;NA;NA;NA;Remove;;Currently not know from Iberia - North African species
+Xylocopa uclesiensis;NA;NA;NA;Xylocopa iris;;
+Xylocopa violaceae;Xylocopa violacea;NA;NA;Xylocopa violacea;;
+Heliophila bimaculata;NA;NA;NA;NA;NA;NA
+Seladonia gemmella;NA;NA;NA;NA;NA;NA
+Seladonia submediterranea;NA;NA;NA;NA;NA;NA
+Synhalonia hungarica;NA;NA;NA;NA;NA;NA
