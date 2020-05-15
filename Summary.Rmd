@@ -1,6 +1,6 @@
 ---
-title: "Summary"
-author: I. Bartomeus et al. 
+title: "Summary of the Iberian Bees Database"
+author: I. Bartomeus, T. Wood, L. Carvalheiro et al.
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: rmarkdown::github_document
 editor_options: 
@@ -11,14 +11,14 @@ editor_options:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Iberian Bee Database.
-
 ```{r include=FALSE}
 data <- read.csv("data/data_clean.csv")
+master <- read.csv("data/Iberian_species_masterlist.csv", sep = ";", stringsAsFactors = FALSE)
 colnames(data)
+colnames(master)
 ```
 
-The Iberian Bee Database contains `r nrow(data)` entries of bee occurrences over the peninsula and nearby islands. We have at least one record of `r length(unique(data$Genus_species))` species out of the 1100? species known to occurr in the area. Here we present a summary of the data base:
+The Iberian Bee Database contains `r nrow(data)` entries of bee occurrences over the peninsula and nearby islands. We have at least one record of `r length(unique(data$accepted_name))` species out of the `r nrow(master)` species known to occurr in the area. Here we present a summary of the database:
 
 ## Where are the records? 
 
@@ -34,8 +34,8 @@ plotmap <- ggplot(data = data, aes(x = Longitude, y = Latitude)) +  # plot the d
            geom_polygon(data = ESPTmap, aes(x = long, y = lat, group = group),            # plot Spain
                         color = "black", fill = "white") + coord_fixed() +    # coord_fixed() ensures that one unit on the x-axis is the same length as one unit on the y-axis
            geom_point(color = "dodgerblue4", size = 2, shape = ".") +                   # graphical parameters for points
-           stat_density2d(aes(x = Longitude,                           # create the density layer based on where the points are
-                              y = Latitude,  fill = ..level.., alpha = ..level..),   # colour and transparency depend on density
+           stat_density2d(aes(x = jitter(Longitude),                           # create the density layer based on where the points are
+                              y = jitter(Latitude),  fill = ..level.., alpha = ..level..),   # colour and transparency depend on density
            geom = "polygon", colour = "grey95",size=0.3) +            # graphical parameters for the density layer
            scale_fill_gradient(low = "yellow", high = "red") +                 # set colour palette for density layer
            scale_alpha(range = c(.25, .5), guide = FALSE) +                    # set transparency for the density layer 
@@ -51,32 +51,30 @@ plotmap
 
 ## Which are the most reported species?   
 
-Here we show the top-20 incidence (number of times apearing) per species excluding _Apis mellifera_
+Here we show the top-20 most abundant species excluding _Apis mellifera_.
 
 ```{r echo=FALSE}
 #barplot of top 10 species
-data2 <- subset(data, Genus_species != "Apis mellifera")
+data2 <- subset(data, accepted_name != "Apis mellifera")
 default <- par()$mar
 par(mar = c(10.1, 4.1, 4.1, 2.1))
-barplot(head(sort(table(data2$Genus_species), decreasing = TRUE),20), las = 2, cex.names = 0.7)
+barplot(head(sort(table(data2$accepted_name), decreasing = TRUE),20), las = 2, cex.names = 0.7)
 par(mar = default)
 ```
 
 ## When are we recording more bees?
 
-
 ```{r echo=FALSE, warning=FALSE}
 hist(data2$Year, main = "Most records are recorded since year 2000", 
      las = 1, xlab = "Year")
 #Fix when month is fixed!
-hist(as.numeric(as.character(data2$Month)), main = "Most records are recorded in May",
-     las = 1, xlab = "Month")
+hist(data2$Month, main = "Most records are recorded in April",
+     las = 1, xlab = "Month", breaks = 12)
 ```
-
 
 ## Who make this posible?
 
-This is a large collaborative effort lead by I. Bartomeus, L. Carvalheiro and T. Woods, but it would not be possible without the contribution of thousends of researchers. Those are the main contributors (this can be prettier and more data is in the pipeline)
+This is a large collaborative effort lead by I. Bartomeus, L. Carvalheiro and T. Woods, but it would not be possible without the contribution of thousends of researchers. Those are the main contributors (this can be prettier and more data is in the pipeline).
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 #table of
