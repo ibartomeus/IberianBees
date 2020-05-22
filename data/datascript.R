@@ -4,9 +4,9 @@
 data <- read.csv("data/data.csv", stringsAsFactors = FALSE)
 head(data)
 
-master <- read.csv("data/Iberian_species_masterlist.csv", sep = ";", stringsAsFactors = FALSE)
+master <- read.csv("data/Iberian_species_masterlist.csv", stringsAsFactors = FALSE)
 head(master)
-nrow(master) #1041 species!
+nrow(master) #1055 species!
 unique(master$Genus) #57 generos
 
 manual <- read.csv("data/manual_checks.csv", sep = ";", stringsAsFactors = FALSE, 
@@ -22,6 +22,7 @@ data$Subgenus <- trimws(data$Subgenus)
 genus <- unique(master$Genus)
 mis <- data$Genus[which(!data$Genus %in% genus)]
 mismatches <- unique(mis)
+mismatches
 #mispellings:fuzzy matching
 fixed <- c()
 #agrep is too lax, and I can't make it to work, adist is better
@@ -46,21 +47,17 @@ for(i in which(temp > 0)){
                             stop = temp[i]-1)
 }
 #recover subgenus listed as genus
-temp <- unique(data[,1:2]) #issue, here we may be missing a lot of subgenus.
+head(master)
+temp <- unique(master[,2:3]) #issue, here we may be missing a lot of subgenus.
 replace <- temp[which(temp$Subgenus %in% mismatches[-1]),]
 tesaurus2 <- merge(tesaurus, replace, by.x = "mismatches", by.y = "Subgenus", all.x = TRUE)
 tesaurus2$fixed <- ifelse(is.na(tesaurus2$Genus) == FALSE, tesaurus2$Genus, tesaurus2$fixed)
 tesaurus2$subgenus <- ifelse(is.na(tesaurus2$Genus) == FALSE, tesaurus2$mismatches, tesaurus2$subgenus)
 tesaurus2
+#check
+data[which(data$Genus %in% c("Elis", "Hylaeus?")),] 
+tesaurus2[which(tesaurus2$mismatches == "Elis"),"fixed"] <- NA
 #Quite good.
-#need to rescue
-#Nomia
-#Nomiapis 
-#Psithyrus
-#Tetraloniella
-#Tetralonia
-#Melissodes
-#fiaxable with a better subgenus tesaurus
 
 #Remove non matching genus
 head(data)
@@ -73,25 +70,16 @@ data2$subgenus <- NULL
 #check again after the fixes
 mis <- data2$Genus[which(!data2$Genus %in% genus)]
 mismatches <- unique(mis) #CHECK with Thomas
+mismatches #
 #exclude synonims that need to be fixed
-mm <- mismatches[which(!mismatches %in% c("Nomia", 
-                         "Nomiapis", 
-                         "Psithyrus",
+mm <- mismatches[-which(mismatches %in% c(master$Subgenus, "Nomia", 
                          "Tetraloniella",
-                         "Tetralonia",
-                         "Melissodes",
-                         "Chalicodoma", 
-                         "Anthocopa",
-                         "Creightonella",
-                         "Hoplosmia", 
-                         "Heliophila",
-                         "Seladonia",
-                         "Synhalonia"))]
-#fiaxable with a better subgenus tesaurus
+                         "Melissodes", "Haetosmia"))]
 #write.csv(mm, "genus_removed.csv")
 data2$rm <- rep(NA, nrow(data2))
 data2$rm[which(data2$Genus %in% mm)] <- "Remove"
 data3 <- data2
+head(data3)
 
 #Go with species----
 data3$Species <- trimws(data3$Species)
@@ -100,6 +88,7 @@ unique(data3$Species)
 #overwrite data #Non identifies species are removed directly.
 data <- subset(data3, !Species %in% c("sp.", "sp.1", "sp.2", "sp.3", "sp.4", "sp.5", "sp.6",
                                     "sp.7", "", "sp1", "sp2"))
+#IF NO NA, the next line will fail.
 data <- data[-which(is.na(data$Species) == TRUE),] 
 unique(data$Species)
 #Move ?? and "_or_" "o" , "_agg" , "s.l.", "/" to $flag.
@@ -150,6 +139,7 @@ to_check <- to_check[,c("flag", "checked",
 #write.table(unique(to_check), "data/manual_checks.csv", append = TRUE, quote = FALSE, sep = ";", row.names = FALSE, col.names = FALSE)
 #Now, when the csv is manually fixed, next time those names will be fixed too.
 #quite elegant.
+#NOTE: Three species to fix.
 
 #unify names
 summary(as.factor(data2$accepted_name))
@@ -172,11 +162,14 @@ head(data)
 tail(data)
 unique(data$accepted_name)
 unique(data[which(data$Genus_species != data$accepted_name),
-     c("Genus", "Species", "Genus_species", "accepted_name")])
+     c("Genus", "Species", "Genus_species", "accepted_name", "rm")])
 #recheck after fixes
-missed <- data$accepted_name[which(!data$accepted_name %in% master$Genus_species & is.na(data2$rm))]
+missed <- data$accepted_name[which(!data$accepted_name %in% master$Genus_species & is.na(data$rm))]
 unique(missed)
-#FLAG TO THOMAS TO SEE IF THEY SHOULD BE INCLUDED IN MASTER OR NOT
+unique(data[which(!data$accepted_name %in% master$Genus_species),c(29:31)])
+unique(data[which(!data$accepted_name %in% master$Genus_species & is.na(data$rm)),c(29:31)])
+
+#Good!
 colnames(data)[30] <- "original_species"
 
 unique(data$Subspecies)
@@ -186,9 +179,10 @@ data$Subspecies <- gsub("ssp.", "", data$Subspecies, fixed = TRUE)
 data$Subspecies <- gsub("spp.", "", data$Subspecies, fixed = TRUE)
 data$Subspecies <- trimws(data$Subspecies)
 unique(data$Subspecies)
+#Check
+unique(data[which(!data$accepted_name %in% master$Genus_species & is.na(data$rm)),c(29:31)])
 
 #Check Country Province Locality----
-#bad solution as is sensitive to data updates with extra levels
 unique(data$Country) 
 data$Country <- ifelse(data$Country %in% c("España", "SPAIN"), "Spain", data$Country)
 unique(data$Country) 
@@ -215,8 +209,11 @@ removed <- subset(data, Latitude > 44.15 | Latitude < 35.67 |
 str(removed) #1600 records... 
 #ADD THOSE TO REMOVED
 removed[,5:6] #Most Canary Islands, Azores and melilla. A few can be traced down, but now is unpractical.
-data$rm <- ifelse(data$Latitude > 44.15 | data$Latitude < 35.67 | 
-                    data$Longitude > 4.76 | data$Longitude < -10.13, "Remove", data$rm)
+data$rm <- ifelse(is.na(data$Latitude), data$rm, 
+                   ifelse(data$Latitude > 44.15 | data$Latitude < 35.67 | 
+                    data$Longitude > 4.76 | data$Longitude < -10.13, "Remove", data$rm))
+colnames(data)
+unique(data[which(!data$accepted_name %in% master$Genus_species & is.na(data$rm)),c(7:9,29:31)])
 
 unique(data$Coordinate.precision) 
 data$Coordinate.precision <- ifelse(data$Coordinate.precision %in% c("uncert. < than 1km"),
@@ -234,7 +231,7 @@ data$Coordinate.precision <- ifelse(data$Coordinate.precision %in% c("3 km"),
                                     "<3km", data$Coordinate.precision)
 data$Coordinate.precision <- ifelse(data$Coordinate.precision %in% c("<5Km"),
                                     "<5km", data$Coordinate.precision)
-data$Coordinate.precision <- ifelse(data$Coordinate.precision %in% c("0.01"),
+data$Coordinate.precision <- ifelse(data$Coordinate.precision %in% c("0.01", "0.001"),
                                     "<10m", data$Coordinate.precision)
 data$Coordinate.precision <- ifelse(data$Coordinate.precision %in% c("","true", "false"),
                                     NA, data$Coordinate.precision)
@@ -292,6 +289,7 @@ data$Day <- ifelse(data$Day %in% c(""),
                    NA, data$Day)
 unique(data$Day) 
 data$Day <- as.numeric(data$Day)
+summary(data$Day) 
 
 unique(data$Start.date) 
 unique(data$End.date) 
@@ -348,6 +346,8 @@ data <- data[order(data$accepted_name),]
 head(data)
 
 data_f <- subset(data, !rm %in% c("Remove"), select = -rm)
+unique(data_f$accepted_name)
+unique(data[which(!data$accepted_name %in% master$Genus_species),c(29:31)])
 removed <- subset(data, rm == "Remove")
 dim(data_f)
 dim(removed)
@@ -364,16 +364,13 @@ write.table(x = removed, file = "data/removed.csv",
             quote = TRUE, sep = ",",
             row.names = FALSE)
 
-
+#NEED TO ADD TAXONOMY TO FINAL DATA (easy)
 
 #Old Notes:----
 #Make automatic tests for this things.
 #flowers species with Genus_spcies -> change in bulk.
-#questions: Bombus has two forms "Bombus" and "Bombus " #run a white space eraser in bulk.
 #questions: flowers species visited list more than one flower, comma separated. Fix Later
-#question: España and Spain both used. Fix in bulk.
 #newdat$Reference..doi. several doi's listed "," and "and" separated. Fix later? What to do with dois?
-#remove all NA rows
 #remove duplicates?
 #create column of trusted / untrusted.
 #summaries -> how to separate authors? 
