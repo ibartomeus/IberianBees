@@ -313,6 +313,7 @@ data$Not.specified[which(is.na(data$Not.specified))] <- 0
 Total <- data$Male + data$Female + data$Worker + data$Not.specified
 summary(Total) #Total = 0 imply Not.specified should = 1.
 data$Not.specified <- ifelse(data$Not.specified > 0, data$Not.specified, 1)
+#FIX! CHECK THIS AS WE ARE INFLATING CAPTURES: USE TOTAL!!
 #Add total column?
 
 #Check Reference.doi, Flowers.visited, Local_ID, Authors.to.give.credit----

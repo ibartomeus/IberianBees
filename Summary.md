@@ -1,7 +1,7 @@
 Summary of the Iberian Bees Database
 ================
 I. Bartomeus, T. Wood, L. Carvalheiro, C. Molina, et al. -
-22 May, 2020
+24 May, 2020
 
 The Iberian Bee Database contains 65117 entries of bee occurrences over
 the peninsula and nearby islands. We have at least one record of 932
@@ -18,18 +18,21 @@ Here we present a summary of the database:
 
 We have records all over the peninsula, but higer concentrations are
 marked in red.
-![](Summary_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+
+![](Summary_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 ## Which are the most reported species?
 
 Here we show the top-20 most abundant species excluding *Apis
 mellifera*.
 
-![](Summary_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](Summary_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ## When are we recording more bees?
 
-![](Summary_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->![](Summary_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
+![](Summary_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+
+![](Summary_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 ## Who make this posible?
 
