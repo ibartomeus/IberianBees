@@ -2,8 +2,8 @@
 title: "Summary of the Iberian Bees Database"
 author: I. Bartomeus, T. Wood, L. Carvalheiro, C. Molina, et al. - 
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-#output: pdf_document
-output: github_document
+output: pdf_document
+#output: github_document
 editor_options: 
   chunk_output_type: console
 ---
@@ -33,9 +33,9 @@ Here we present a summary of the database:
 
 ## Where are the records? 
 
-We have records all over the peninsula, but higer concentrations are marked in red.  
+We have records all over the peninsula, but higer concentrations are marked in yellow.  
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 #map
 library(rgdal)
 library(ggplot2)
@@ -59,6 +59,51 @@ plotmap <- ggplot(data = data, aes(x = Longitude, y = Latitude)) +  # plot the d
            panel.background = element_blank())                            # set white background
 # now plot, it takes a while!
 plotmap
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+#code courtesi of Paco Rodriguez.
+library(sf)
+library(raster)
+library(rasterVis)
+
+crs.geo <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+crs.laea <- "+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs"
+
+dat <- subset(data, !is.na(Latitude))
+datos.sf <- st_as_sf(dat,
+                     coords = c("Longitude", "Latitude"),
+                     crs = crs.geo)
+
+datos.laea <- st_transform(datos.sf,
+                           crs = crs.laea)
+
+ras <- raster(datos.laea, resolution = 10000)
+
+ras.counts <- rasterize(datos.laea[, "accepted_name"], ras,
+               field = "accepted_name", fun = "count")
+str(datos.laea)
+datos.laea$total <- datos.laea$Male + datos.laea$Female + datos.laea$Worker + datos.laea$Not.specified 
+ras.counts2 <- rasterize(datos.laea[, "total"], ras,
+               field = "total", fun = "sum")
+ras2 <- raster(datos.laea, resolution = 30000)
+ras.richness <- rasterize(datos.laea[, "accepted_name"], ras2,
+               field = "accepted_name", fun = function(x, ...)
+                 {length(unique(na.omit(x)))} )
+library(vegan)
+ras.chao <- rasterize(datos.laea[, "accepted_name"], ras2,
+               field = "accepted_name", fun = function(x, ...)
+                 {estimateR(t(as.matrix(x = table(x), nrow = 1, ncol = x)))[2,1]} ) #2 chao, 4 ACE #TO THIS WELL, We nees to recover abundances.
+
+#levelplot(log(ras.counts+1), margin = FALSE, scales = list(draw = FALSE),
+ #         par.settings = viridisTheme())
+levelplot(log(ras.counts2+1), margin = FALSE, scales = list(draw = FALSE),
+          par.settings = viridisTheme())
+#levelplot(log(ras.richness+1), margin = FALSE, scales = list(draw = FALSE),
+ #         par.settings = viridisTheme())
+#levelplot(ras.chao, margin = FALSE, scales = list(draw = FALSE),
+ #         par.settings = viridisTheme())
+
 ```
 
 ## Which are the most reported species?   
