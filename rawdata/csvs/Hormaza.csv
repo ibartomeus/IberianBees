@@ -1,0 +1,48 @@
+"Genus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision.(e.g..Collection.place.within.<XX.radius.of.the.provided.coordinate..For.example:.<10m;.<100m;.<1km;.<10km)","Year","Month","day","Start.date","End.Date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.(doi)","Flowers.visited","Collection.Location_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries"
+"Hoplitis","adunca",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Osmia","bicornis",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Osmia","caerulescens ",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Osmia ","latreillei ","iberoafricana ","Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Osmia ","leaiana ",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"&lt;1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Osmia ","submicans ","canaria ","Spain","Malaga","Algarrobo",36759,-4.04,"&lt;1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Anthophora","plumipes",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Apis","mellifera",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Andrena","agilissima",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Andrena","ferrugineicrus",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Andrena","suerinensis",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"&lt;1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Andrena","cyanomicans",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"&lt;1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Andrena","haemorrhoa",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Andrena","ovatula",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Andrena","abrupta",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Andrena","congruens",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Andrena","asperrima",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"&lt;1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Andrena ","flavipes",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"&lt;1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Andrena ","bimaculata",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Andrena","binominata",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Andrena","pilipes",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Micrandrena","sp.",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Melitturga","caudata",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"&lt;1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Panurgus","cephalotes",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"&lt;1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Panurgus","dargius",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Bombus ","terrestris","terrestris",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Bombus ","hortorum",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Ceratina","chalcites",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Ceratina ","cucurbitina",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"&lt;1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Ceratina","cyanea",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"&lt;1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Xylocopa","iris",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Xylocopa","valga",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Xylocopa","vilolacea",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Eucera","nigrilabris",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Eucera","nigrescens",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"&lt;1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Amegilla","albigena",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"&lt;1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Rhodanthidium","septendentatum",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Rhodanthidium","sticticum",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Stelis","murina",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Coelioxys","afra",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Chelostoma","edentulum",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"&lt;1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Thyreus","ramosus",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"&lt;1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Melecta","luctuosa",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Megascolia","maculata","flavifrons","Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Scolia","hirta",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"<1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+"Polistes","dominula",NA,"Spain","Malaga","Algarrobo",36759,-4.04,"&lt;1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
+NA,NA,NA,"Spain","Malaga","Algarrobo",36759,-4.04,"&lt;1km",2018,4,NA,NA,NA,"O. Aguado","O. Aguado",NA,NA,NA,NA,NA,NA,NA,"O. Aguado, J.I. Hormaza, M.L. Alcaraz. V. Ferrero",NA,NA
