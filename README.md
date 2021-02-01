@@ -7,9 +7,9 @@ This is an in progress repo to document Iberian Bees Database (v.0.2.0). You can
 
 # How to use this repo  
 
-- If you want to use clean data go to: `data/data_clean.csv`. If you spot any error, please fill an [issue](https://github.com/ibartomeus/IberianBees/issues) and indicate the uid of the record to fix. If you plan to clean this data further (e.g. dates, localities), lat @ibartomeus know to avoid duplicating efforts.
+- If you want to use clean data go to: `data/data_clean.csv`. If you spot any error, please fill an [issue](https://github.com/ibartomeus/IberianBees/issues) and indicate the uid of the record to fix. If you plan to clean this data further (e.g. dates, localities), let @ibartomeus know to avoid duplicating efforts.
 
-- If you want to fix non recognized species (*blink, blink* -> Thomas), the only data that can be manually altered is `data/manual_checks.csv`. We can move this file via email, and that way you don't need to get into git. If yo want to see details on removed specimens, check `data/removed.csv`. If you wish to correct any of those, fill an issue [issue](https://github.com/ibartomeus/IberianBees/issues) and indicate the uid of the record to fix. 
+- If you want to fix non recognized species (*blink, blink* -> Thomas), the only data that can be manually altered is `data/manual_checks.csv`. We can move this file via email, and that way you don't need to get into git. If you want to see details on removed specimens, check `data/removed.csv`. If you wish to correct any of those, fill an issue [issue](https://github.com/ibartomeus/IberianBees/issues) and indicate the uid of the record to fix. 
 
 - If you are curious on the process keep reading.
 
@@ -32,7 +32,7 @@ This is an in progress repo to document Iberian Bees Database (v.0.2.0). You can
   [x] Implement tests... (datascript.R)   
   [x] create summary.
   [o] Think what to do with manual data cleaning? Aim to keep it reproducible in datascript.R   
-  [ ] Create metadata (in EML?)  
+  [o] Create metadata (in EML?)  
   [ ] Add more data (see below)  
   [ ] Write a paper explaining scope, methodology, potential uses.  
 
@@ -43,7 +43,7 @@ This is an in progress repo to document Iberian Bees Database (v.0.2.0). You can
   [x] Thomas Wood et al. data (Check data from Ian Cross)  
   [x] Gbif + iNaturalist in Fetch_data.R    
   [o] Historical papers  [MA] (more to come, including Asensio)  
-  [ ] Museo ciencias Naturales  [Cristina]   
+  [ ] Museo ciencias Naturales  [Piluca]   
   [ ] Other datasets: Felix Torres, Leopoldo Castro, Obeso[x], Aguado, Piluca, ...    
 
 

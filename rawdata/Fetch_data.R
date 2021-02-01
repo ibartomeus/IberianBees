@@ -15,47 +15,47 @@ melittidae_key <- name_backbone(name="Melittidae", rank = "family")$usageKey
 
 occ_count(taxonKey= apidae_key, 
           georeferenced=TRUE, 
-          country=spain_code) #2679
+          country=spain_code) #4343
 occ_count(taxonKey= andrenidae_key, 
           georeferenced=TRUE, 
-          country=spain_code) #722
+          country=spain_code) #897
 occ_count(taxonKey= halictidae_key, 
           georeferenced=TRUE, 
-          country=spain_code) #958
+          country=spain_code) #1153
 occ_count(taxonKey= colletidae_key, 
           georeferenced=TRUE, 
-          country=spain_code) #597
+          country=spain_code) #691
 occ_count(taxonKey= megachilidae_key, 
           georeferenced=TRUE, 
-          country=spain_code) #1623
+          country=spain_code) #1914
 occ_count(taxonKey= stenotritidae_key, 
           georeferenced=TRUE, 
           country=spain_code) #0 (expected)
 occ_count(taxonKey= melittidae_key, 
           georeferenced=TRUE, 
-          country=spain_code) #178
+          country=spain_code) #203
 
 occ_count(taxonKey= apidae_key, 
           georeferenced=TRUE, 
-          country=portugal_code) #1286
+          country=portugal_code) #2828
 occ_count(taxonKey= andrenidae_key, 
           georeferenced=TRUE, 
-          country=portugal_code) #133
+          country=portugal_code) #258
 occ_count(taxonKey= halictidae_key, 
           georeferenced=TRUE, 
-          country=portugal_code) #329
+          country=portugal_code) #454
 occ_count(taxonKey= colletidae_key, 
           georeferenced=TRUE, 
-          country=portugal_code) #139
+          country=portugal_code) #158
 occ_count(taxonKey= megachilidae_key, 
           georeferenced=TRUE, 
-          country=portugal_code) #238
+          country=portugal_code) #387
 occ_count(taxonKey= stenotritidae_key, 
           georeferenced=TRUE, 
           country=portugal_code) #0 (expected)
 occ_count(taxonKey= melittidae_key, 
           georeferenced=TRUE, 
-          country=portugal_code) #10
+          country=portugal_code) #14
 #fetch data
 dat <-  data.frame(scientificName = NA, decimalLatitude = NA,
                   decimalLongitude = NA, scientificName = NA,
@@ -122,7 +122,7 @@ for(i in c(apidae_key, andrenidae_key,
 dat <- dat[-1,]
 head(dat)
 tail(dat)
-dim(dat) #8889
+dim(dat) #13289
 
 #iNaturalist----
 #library(devtools)
@@ -135,12 +135,12 @@ halictidae <- get_inat_obs(taxon_name = "Halictidae", geo = TRUE, maxresults = 9
 colletidae <- get_inat_obs(taxon_name = "Colletidae", geo = TRUE, maxresults = 9999 , bounds = bounds)
 megachilidae <- get_inat_obs(taxon_name = "Megachilidae", geo = TRUE, maxresults = 9999 , bounds = bounds)
 melittidae <- get_inat_obs(taxon_name = "Melittidae", geo = TRUE, maxresults = 9999 , bounds = bounds)
-length(apidae$scientific_name) #3938
-length(andrenidae$scientific_name) #590 (most genus only)
-length(halictidae$scientific_name) #609
-length(colletidae$scientific_name) #112
-length(megachilidae$scientific_name) #710
-length(melittidae$scientific_name) #33
+length(apidae$scientific_name) #7258
+length(andrenidae$scientific_name) #884 (most genus only)
+length(halictidae$scientific_name) #1152
+length(colletidae$scientific_name) #238
+length(megachilidae$scientific_name) #1262
+length(melittidae$scientific_name) #62
 
 inat <- rbind(apidae, andrenidae, halictidae, colletidae, megachilidae)
 unique(inat$scientific_name) #need to clean data, a couple subsp.
@@ -154,25 +154,11 @@ head(inat)
 colnames(dat)
 head(dat)
 head(inat)
-colnames(inat) <- c("species"                           ,"datetime"                        
-                    ,"description"                      ,"locality"                     
-                    ,"decimalLatitude"                  ,"decimalLongitude"                       
-                    ,"tag_list"                         ,"common_name"                     
-                    ,"url"                              ,"image_url"                       
-                    ,"user_login"                       ,"id"                              
-                    ,"species_guess"                    ,"iconic_taxon_name"               
-                    ,"taxon_id"                         ,"id_please"                       
-                    ,"num_identification_agreements"   , "num_identification_disagreements"
-                    ,"observed_on_string"              , "observed_on"                     
-                    ,"time_observed_at"                , "time_zone"                       
-                    ,"positional_accuracy"             , "private_place_guess"             
-                    ,"geoprivacy"                      , "coordinates_obscured"            
-                    ,"coordinatePrecision"              , "positioning_device"              
-                    ,"out_of_range"                    , "user_id"                         
-                    ,"created_at"                      , "updated_at"                      
-                    ,"quality_grade"                   , "license"                         
-                    ,"sound_url"                       , "oauth_application_id"            
-                    ,"captive_cultivated")
+colnames(inat)[which(colnames(inat) == "scientific_name")] <- "species"
+colnames(inat)[which(colnames(inat) == "latitude")] <- "decimalLatitude"
+colnames(inat)[which(colnames(inat) == "longitude")] <- "decimalLongitude"
+colnames(inat)[which(colnames(inat) == "place_guess")] <- "locality"
+colnames(inat)[which(colnames(inat) == "positional_accuracy")] <- "coordinatePrecision"
 inat$family <- NA
 inat$sex <- NA
 inat$recordedBy  <- inat$user_login
@@ -197,9 +183,9 @@ d2 <- subset(d, decimalLatitude > 35.8 & decimalLatitude < 43.88 &
 #species in the see (ignore for now?)
 #species with only genus (Gbif, done using species column)
 d3 <- d2[which(is.na(d2$species) == FALSE),]
-unique(d3$species) #600
+unique(d3$species) #681
 d4 <- d3[grep(" ", d3$species, fixed = TRUE, value = FALSE),]
-unique(d4$species) #522 sp ... not bad...some subspecies...
+unique(d4$species) #591 sp ... not bad...some subspecies...
 
 #Load and merge Beefun----
 
@@ -271,7 +257,7 @@ for(i in 1:length(d5$species)){
     d5$species[i] <- substr(d5$species[i], start = 1, stop = temp[2]-1)
   }
 }
-dim(d5) #9041 occurrences...
+dim(d5) #15026 occurrences...
 
 #export
 write.csv(d5, file = "data/idata.csv")

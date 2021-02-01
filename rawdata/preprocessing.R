@@ -7,16 +7,16 @@ library(filesstrings)
 files.to.read = list.files(path = "rawdata/xls_to_add", pattern="xlsx")
 
 # Read each file and write it to csv
-lapply(files.to.read[-1], function(f) {
+lapply(files.to.read, function(f) {
   df = read.xlsx(xlsxFile = paste("rawdata/xls_to_add/",f, sep = ""), sheet=1, detectDates = TRUE)
-  write.csv(df, paste("rawdata/", gsub("xlsx", "csv", f), sep = ""), row.names=FALSE)
+  write.csv(df, paste("rawdata/csvs/", gsub("xlsx", "csv", f), sep = ""), row.names=FALSE)
 })
 
 #Note, some (e.g. Serida, BAC fail when reading dates...). Use [-x] in this cases above.
 # And load them with this
-#lapply(files.to.read[1], function(f) {
+#lapply(files.to.read[-x], function(f) {
 #  df = read.xlsx(xlsxFile = paste("rawdata/xls_to_add/",f, sep = ""), sheet=1)
-#  write.csv(df, paste("rawdata/", gsub("xlsx", "csv", f), sep = ""), row.names=FALSE)
+#  write.csv(df, paste("rawdata/csvs/", gsub("xlsx", "csv", f), sep = ""), row.names=FALSE)
 #})
 
 #move xls's

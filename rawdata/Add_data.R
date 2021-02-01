@@ -19,7 +19,7 @@ write.csv(data, "data/data.csv", row.names = FALSE)
 #head(data)
 
 #Add data Montero----
-newdat <- read.csv(file = "rawdata/AnaMontero.csv")
+newdat <- read.csv(file = "rawdata/csvs/AnaMontero.csv")
 #old template, subgenus, start and end date missing.
 newdat$Subgenus <- NA
 newdat$Start.date <- NA
@@ -49,7 +49,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- nrow(data) + nrow(newdat)
 
 #Add data BAC ----
-newdat <- read.csv(file = "rawdata/BAC.csv")
+newdat <- read.csv(file = "rawdata/csvs/BAC.csv")
 colnames(newdat)
 #old template, subgenus, start and end date missing.
 newdat$Subgenus <- NA
@@ -69,7 +69,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data Castro ----
-newdat <- read.csv(file = "rawdata/Castro_FLOWERLAB.csv")
+newdat <- read.csv(file = "rawdata/csvs/Castro_FLOWERLAB.csv")
 colnames(newdat)[10] <- "precision" #just to see them both in two lines
 #quick way to compare colnames
 newdat$uid <- paste("Castro", 1:nrow(newdat), sep = "")
@@ -91,7 +91,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data IMEDEA ----
-newdat <- read.csv(file = "rawdata/IMEDEA_MALLORCA.csv")
+newdat <- read.csv(file = "rawdata/csvs/IMEDEA_MALLORCA.csv")
 colnames(newdat)[9] <- "precision" #just to see them both in two lines
 colnames(newdat)
 #old template, subgenus, start and end date missing.
@@ -114,7 +114,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data JV ----
-newdat <- read.csv(file = "rawdata/JV.csv")
+newdat <- read.csv(file = "rawdata/csvs/JV.csv")
 colnames(newdat)[9] <- "precision" #just to see them both in two lines
 colnames(newdat)
 #old template, subgenus, start and end date missing.
@@ -142,7 +142,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data LaraRomero ----
-newdat <- read.csv(file = "rawdata/LaraRomero.csv")
+newdat <- read.csv(file = "rawdata/csvs/LaraRomero.csv")
 colnames(newdat)
 #old template, subgenus, start and end date missing.
 newdat$Subgenus <- NA
@@ -162,7 +162,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data MartinezNunez ----
-newdat <- read.csv(file = "rawdata/MartinezNunez.csv")
+newdat <- read.csv(file = "rawdata/csvs/MartinezNunez.csv")
 colnames(newdat)
 #old template, subgenus, start and end date missing.
 newdat$Subgenus <- NA
@@ -187,7 +187,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data MFM ----
-newdat <- read.csv(file = "rawdata/MFM_JL.csv")
+newdat <- read.csv(file = "rawdata/csvs/MFM_JL.csv")
 colnames(newdat)
 #old template, subgenus, start and end date missing.
 newdat$Subgenus <- NA
@@ -206,7 +206,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data Nunez ----
-newdat <- read.csv(file = "rawdata/Nunez.csv")
+newdat <- read.csv(file = "rawdata/csvs/Nunez.csv")
 colnames(newdat)
 #old template, subgenus, start and end date missing.
 newdat$Subgenus <- NA
@@ -225,7 +225,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data Heleno ----
-newdat <- read.csv(file = "rawdata/Ruben_heleno.csv")
+newdat <- read.csv(file = "rawdata/csvs/Ruben_heleno.csv")
 colnames(newdat)
 colnames(newdat)[9] <- "precision" #just to see them both in two lines
 #subgenus missing.
@@ -249,7 +249,7 @@ size <- size + nrow(newdat)
 
 
 #Add data SERIDA ----
-newdat <- read.csv(file = "rawdata/SERIDA.csv")
+newdat <- read.csv(file = "rawdata/csvs/SERIDA.csv")
 nrow(newdat)
 colnames(newdat)
 #Move queri2 to determiner.
@@ -276,7 +276,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data Ferrero----
-newdat <- read.csv(file = "rawdata/VFerrero.csv")
+newdat <- read.csv(file = "rawdata/csvs/VFerrero.csv")
 colnames(newdat)
 colnames(newdat)[9] <- "precision"
 #subgenus missing.
@@ -297,7 +297,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data Cavalho----
-newdat <- read.csv(file = "rawdata/Carvalho_pool.csv")
+newdat <- read.csv(file = "rawdata/csvs/Carvalho_pool.csv")
 colnames(newdat)
 colnames(newdat)[10] <- "precision"
 #quick way to compare colnames
@@ -316,7 +316,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data vanapicanco-----
-newdat <- read.csv(file = "rawdata/vanapicanco.csv")
+newdat <- read.csv(file = "rawdata/csvs/vanapicanco.csv")
 colnames(newdat)
 colnames(newdat)[9] <- "precision"
 #subgenus missing.
@@ -343,7 +343,7 @@ size <- size + nrow(newdat)
 
 
 #Add data Magrach-----
-newdat <- read.csv(file = "rawdata/Magrach.csv")
+newdat <- read.csv(file = "rawdata/csvs/Magrach.csv")
 #not formated, so let's start here
 summary(newdat)
 newdat$Subspecies <- NA
@@ -423,7 +423,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add historical data (Collado)----
-newdat <- read.csv(file = "rawdata/Collado1.csv")
+newdat <- read.csv(file = "rawdata/csvs/Collado1.csv")
 #not formated, so let's start here
 summary(newdat)
 colnames(newdat)
@@ -514,7 +514,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)  
 
 #Add data Wood----
-newdat <- read.csv(file = "rawdata/Wood_combined.csv")
+newdat <- read.csv(file = "rawdata/csvs/Wood_combined.csv")
 colnames(newdat)
 summary(newdat)
 unique(newdat$Species)

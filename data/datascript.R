@@ -1,7 +1,7 @@
 #This script takes data.csv and make a sanity check and updates metadata
 
 #load data, checklist and manual checks.
-data <- read.csv("data/data.csv", stringsAsFactors = FALSE)
+data <- read.csv("data/data.csv", stringsAsFactors = FALSE) #gerenated in rawdata/Add_data.R
 head(data)
 
 master <- read.csv("data/Iberian_species_masterlist.csv", stringsAsFactors = FALSE)
@@ -321,7 +321,7 @@ unique(data$Reference.doi)
 #In the future we can test format AND retrieve paper info in another table
 #This one is fuck up: 10.1111/1365-2745.13334 in excel.
 #Also: DOI 10.1007/s11258-013-0247-1
-#For anna montero, maybe selet just one doi?
+#For anna montero, maybe select just one doi?
 unique(data$Flowers.visited)
 #remove "" <- NA
 #Gsub "_" " ".
