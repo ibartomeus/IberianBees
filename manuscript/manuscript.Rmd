@@ -1,5 +1,5 @@
 ---
-title: "| Base de datos de abejas Ibéricas \n| Iberian Bees dataset\n"
+title: "| Base de datos de abejas Ibéricas \n| Iberian Bees database\n"
   
 author: Ignasi Bartomeus^1^, Luisa Carvalheiro^2^, Thomas Woods^3^, and a lot of coauthors^4^
   
@@ -31,28 +31,24 @@ install_github("Pakillo/rmdTemplates")
 > Autor para correspondencia: I. Bartomeus [nacho.bartomeus@gmail.com]
 
 
-
-
-
 # Resumen
 
-> **Título en español**. En el resumen debe constar el propósito del artículo, una síntesis de la metodología utilizada y de los resultados más relevantes obtenidos y sus implicaciones. El resumen debe tener una extensión máxima de 250 palabras, incluyendo, en la primera línea, el título del artículo. Es obligatorio la presentación de un resumen en inglés además del resumen en castellano. Letra Arial 10 y espaciado de 1 línea. Las comunicaciones breves tendrán igualmente un resumen en castellano y en inglés pero la extensión del mismo será de 150 palabras máximo. Únicamente están exentos de aportar resumen las contribuciones enviadas a las secciones de Resúmenes de tesis, Notas y Reseñas bibliográficas.
+> **Base de datos de abejas Ibéricas**. Las abejas son un grupo diverso con más de 1000 espcies en la Península Ibérica. Recientemente han recibido especial atención debido a su importante papel como proveedores de servicios ecosistémicos, y su aparente sensibilidad a los cambios ambientales rápidos inducidos por el hombre, que pueden estar propiciando el declive de algunas de sus poblaciones. Sin embargo, apenas sabemos cual es la distribución de muchas espcies en España. Aquí presentamos un esfuerzo colaborativo para agrupar y curar una base de datos de ocurrencias que permita responder questions sobre su distribución, preferencia de habitats, phenologia, o tendencias historicas. En total hemos acumulado XXXX registros, de XXX espcies diferentes recolectados entre 19XX y 2020. Más de X% de estos registros tienen información asociada como la localidad y fecha de captura, y el X% tiene datos extra como las especies de planta donde se recolecto. Esta base de datos es el punto de partida para conocer y conservar mejor la biodiversidad de abejas en la Península Ibérica y Islas Baleares. [max 250w]()
 
 
 # Abstract
 
-> **Title in English**. En el resumen debe constar el propósito del artículo, una síntesis de la metodología utilizada y de los resultados más relevantes obtenidos y sus implicaciones. El resumen debe tener una extensión máxima de 250 palabras, incluyendo, en la primera línea, el título del artículo. Es obligatorio la presentación de un resumen en inglés además del resumen en castellano. Letra Arial 10 y espaciado de 1 línea. Las comunicaciones breves tendrán igualmente un resumen en castellano y en inglés pero la extensión del mismo será de 150 palabras máximo. Únicamente están exentos de aportar resumen las contribuciones enviadas a las secciones de Resúmenes de tesis, Notas y Reseñas bibliográficas.
+> **Iberian Bees database**. TBtranslated
 
 
 # Palabras clave
 
-> palabra1; palabra2; palabra3; palabra4 
+> Biodiversidad; Apoidea; Polinizadores; Fenología 
 
 
 # Keywords
 
-> keyword1; keyword2; keyword3; keyword4
-
+> Biodiversity; Apoidea; Pollinators; Phenology
 
 
 ```{r knitcitations, echo=FALSE, cache = FALSE}
@@ -62,80 +58,21 @@ cite_options(citation_format = "pandoc")
 ```
 
 
-
 # Introducción 
 
-Esta es una plantilla para escribir artículos en formato Rmarkdown para la revista [Ecosistemas](www.revistaecosistemas.net). Para saber más sobre Rmarkdown, visite http://rmarkdown.rstudio.com. Para ver un ejemplo de manuscrito escrito íntegramente en Rmarkdown, visite https://github.com/ecoinfAEET/Reproducibilidad/blob/master/Repro_ms.Rmd.
+Refs: @Yan2011; @Sutherland2011 (+bibtext)
 
-Hay varias formas de citar bibliografía (véase http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html). Una de ellas requiere simplemente adjuntar un fichero BibTex con todas las referencias, y citar cada una de ellas usando su 'CitationKey' [e.g. @Yan2011; @Sutherland2011]. También pueden utilizarse paquetes como [knitcitations](https://cran.r-project.org/web/packages/knitcitations/index.html) o [RefManageR](https://cran.r-project.org/web/packages/RefManageR/index.html) para obtener automáticamente la información bibliográfica de internet. Por ejemplo, para citar un artículo es tan fácil como escribir su DOI `r citep("10.1016/j.tree.2006.03.016")` o incluso solo algunas palabras claves `r citep("Ricklefs 2008 American Naturalist")`. Estos artículos aparecerán automágicamente en la lista de referencias citadas. 
+# Material y métodos  
 
+Utilizamos R `r citep(citation())` y Rmarkdown `r citep(list(citation("knitr"), citation("rmarkdown")))` para todos nuestros análisis. 
 
- 
-
-# Métodos
-
-## Área de estudio
-
-Nuestro estudio tuvo lugar en un bosque dominado por *Quercus suber* y *Laurus nobilis*.
-
-
-## Análisis de datos
-
-```{r read_data, eval = FALSE, echo = FALSE}
-dataset <- read.csv("mydata.csv")
-```
-
-Ajustamos un modelo lineal:
-
-$$
-y_{i} = \alpha + \beta*x_{i} 
-$$
-
-```{r model, echo = FALSE, eval = FALSE}
-model <- lm(y ~ x)
-```
-
-Utilizamos R `r citep(citation())` y Rmarkdown `r citep(list(citation("knitr"), citation("rmarkdown")))` para todos nuestros análisis. Para ajustar los modelos mixtos utilizamos `lme4` `r citep(citation("lme4"))`.
-
-
-
-
-# Resultados
-
-Esta sección está dividida en subsecciones.
-
-
-## Subsección 1
-
-Los árboles de la parcela A fueron más altos que en la parcela B (altura media: `r mean(25, 31, 28)` vs `r mean(13, 19, 16)` m). Y muchos más resultados que se actualizan dinámicamente.
-
-
-## Subsección 2
-
-Texto.
-
-
-## Subsección 3
-
-Texto.
-
-
-
-# Discusión
-
-Texto.
-
-
+# Registro y disponibilidad de datos  
 
 # Conclusiones
 
-Texto.
-
+#Contribución de los autores
 
 # Agradecimientos
-
-Agradecimientos.
-
 
 
 
