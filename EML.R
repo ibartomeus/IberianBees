@@ -3,6 +3,28 @@
 #install.packages("EML")
 library(EML)
 
+#schema
+# - eml
+#   - dataset
+#   - creator
+#   - title
+#   - publisher
+#   - pubDate
+#   - keywords
+#   - abstract 
+#   - intellectualRights
+#   - contact
+#   - methods
+#   - coverage
+#     - geographicCoverage
+#     - temporalCoverage
+#     - taxonomicCoverage
+#   - dataTable
+#     - entityName
+#     - entityDescription
+#     - physical
+#     - attributeList
+
 #minimal example
 au <- list(individualName = list(givenName = "Ignasi", surName = "Bartomeus"))
 IBD_eml <- list(dataset = list(
