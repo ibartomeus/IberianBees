@@ -157,7 +157,7 @@ for(i in which(temp > 0)){
                                stop = nchar(data$accepted_name[i]))
   data$Genus[i] <- substr(data$accepted_name[i], start = 1, 
                             stop = temp[i]-1)
-}
+} #FAILED; CHECK
 head(data)
 tail(data)
 unique(data$accepted_name)
@@ -205,7 +205,7 @@ min(data$Longitude, na.rm = TRUE) > -10.13
 #bound
 #outs
 removed <- subset(data, Latitude > 44.15 | Latitude < 35.67 | 
-         Longitude > 4.76 | Longitude < -10.13)
+         Longitude > 4.76 | Longitude < -10.13) #PROBBALY NOT WORKING
 str(removed) #1600 records... 
 #ADD THOSE TO REMOVED
 removed[,5:6] #Most Canary Islands, Azores and melilla. A few can be traced down, but now is unpractical.
