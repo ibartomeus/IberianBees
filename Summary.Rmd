@@ -33,7 +33,7 @@ Here we present a summary of the database:
 
 ## Where are the records? 
 
-We have records all over the peninsula, but higer concentrations are marked in yellow.  
+We have records all over the peninsula, but higer concentrations are marked in yellow. The scale is the logarithm of the number of occurrences.  
 
 ```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 #map
@@ -62,7 +62,7 @@ plotmap
 ```
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
-#code courtesi of Paco Rodriguez.
+#code courtesy of Paco Rodriguez.
 library(sf)
 library(raster)
 library(rasterVis)
@@ -70,7 +70,7 @@ library(rasterVis)
 crs.geo <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
 crs.laea <- "+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs"
 
-dat <- subset(data, !is.na(Latitude))
+dat <- subset(data, !is.na(Latitude) & !is.na(Longitude))
 datos.sf <- st_as_sf(dat,
                      coords = c("Longitude", "Latitude"),
                      crs = crs.geo)
@@ -82,7 +82,7 @@ ras <- raster(datos.laea, resolution = 10000)
 
 ras.counts <- rasterize(datos.laea[, "accepted_name"], ras,
                field = "accepted_name", fun = "count")
-str(datos.laea)
+#str(datos.laea)
 datos.laea$total <- datos.laea$Male + datos.laea$Female + datos.laea$Worker + datos.laea$Not.specified 
 ras.counts2 <- rasterize(datos.laea[, "total"], ras,
                field = "total", fun = "sum")
@@ -93,7 +93,7 @@ ras.richness <- rasterize(datos.laea[, "accepted_name"], ras2,
 library(vegan)
 ras.chao <- rasterize(datos.laea[, "accepted_name"], ras2,
                field = "accepted_name", fun = function(x, ...)
-                 {estimateR(t(as.matrix(x = table(x), nrow = 1, ncol = x)))[2,1]} ) #2 chao, 4 ACE #TO THIS WELL, We nees to recover abundances.
+                 {estimateR(t(as.matrix(x = table(x), nrow = 1, ncol = x)))[2,1]} ) #2 chao, 4 ACE #TO DO THIS WELL, we need to recover abundances.
 
 #levelplot(log(ras.counts+1), margin = FALSE, scales = list(draw = FALSE),
  #         par.settings = viridisTheme())
@@ -135,9 +135,9 @@ hist(data2$Month, main = "Most records are recorded in April",
 
 ## Who make this posible?
 
-This is a large collaborative effort lead by I. Bartomeus, L. Carvalheiro and T. Woods, but it would not be possible without the contribution of thousends of researchers. Those are the main contributors, but more contributors will be joining soon!
+This is a large collaborative effort lead by I. Bartomeus, L. Carvalheiro and T. Woods, but it would not be possible without the contribution of thousends of researchers. Full list of contributors will be available soon.
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 #table of
 #Name	
 #Contact	
@@ -259,5 +259,5 @@ auth <- c(
 unique(auth)
 ```
 
-The list of co-authors is not exhaustive, and we did not carefully checked contributor names yet. Contact nacho.bartomeus@gmail.com if you want to contribute.
+Contact nacho.bartomeus@gmail.com if you want to contribute.
 
