@@ -26,9 +26,9 @@ install_github("Pakillo/rmdTemplates")
 ```
 
 ```{r include=FALSE}
-data <- read.csv("data/data_clean.csv", stringsAsFactors = FALSE)
-master <- read.csv("data/Iberian_species_masterlist.csv", stringsAsFactors = FALSE)
-removed <- read.csv("data/removed.csv", stringsAsFactors = FALSE)
+data <- read.csv("../data/data_clean.csv", stringsAsFactors = FALSE)
+master <- read.csv("../data/Iberian_species_masterlist.csv", stringsAsFactors = FALSE)
+removed <- read.csv("../data/removed.csv", stringsAsFactors = FALSE)
 master$accepted_name <- paste(master$Genus, master$Species, sep = " ")
 geo <- length(which(!is.na(data$Latitude) & !is.na(data$Longitude)))
 flw <- length(which(!is.na(data$Flowers.visited)))
@@ -88,7 +88,7 @@ Here we compile an Iberian Bee Database of occurrence records by integrating dig
 
 *Museos*: Hemos digitalizado el X% de los espcimenes depositados en el MNCN, sobretodo los generos X, Y , Z, para los cuales se ha revisado la identificación taxonomica. THOMAS TO ADD MUSEUMS. En el futuro esta previsto continuar con la digitalización del MNCN y añadir el museo de bcn.
 
-*Proyectos de investigación*: Hemos contactado los principales investigadores en ecología de la polinización de España y Portugal, asi como anunciado en las principales listas de distribución tematicas para recoger datos sobre ocurrencia de abejas en la Peninsula Iberica. Se recogieron `r unique(data$Authors.to.give.credit)-2` estudios con datos ya digitalizados. En el futuro se seguiran añadiendo nuevas contribuciones, asi como se rescatarán datos ya publicados en formatos de dificil extracción como PDF.
+*Proyectos de investigación*: Hemos contactado los principales investigadores en ecología de la polinización de España y Portugal, asi como anunciado en las principales listas de distribución tematicas para recoger datos sobre ocurrencia de abejas en la Peninsula Iberica. Se recogieron `r length(unique(data$Authors.to.give.credit))-2` estudios con datos ya digitalizados. En el futuro se seguiran añadiendo nuevas contribuciones, asi como se rescatarán datos ya publicados en formatos de dificil extracción como PDF.
 
 *Repositorios de internet*: Usando paquetes programaticos de R (@bartomeus, @ropensciINat, @ropensciGbif) descargamos a todos los datos de Gbif (www.) y INaturalist (www.) de ocurrencias de abejas en la peninsula Iberica a fecha X-XX-2021. Estos datos pueden ser actualizados en nuevas versiones automaticamente.
 
@@ -134,7 +134,7 @@ write.bibtex(file="knitcitations.bib")
 
 ```{r Tabla1, results='asis', echo=FALSE, cache=FALSE}
 library("knitr")
-metadata <- read.csv("data/metadata/attributes.csv")
+metadata <- read.csv("../data/metadata/attributes.csv")
 kable(metadata)
 ```
 
@@ -158,29 +158,73 @@ kable(metadata)
 
 ###### FIGURA 1
 
-```{r Fig1, echo=FALSE, fig.cap="Figura 1. Esto es un ejemplo.", cache=FALSE}
-x <- rnorm(100)
-y <- jitter(x, 1000)
-plot(x, y)
+```{r Fig1, echo=FALSE, fig.cap="Figura 1. Esto es un ejemplo.", message=FALSE, warning=FALSE, cache=FALSE}
+#barplot of top 10 species
+data2 <- subset(data, accepted_name != "Apis mellifera")
+default <- par()$mar
+par(mar = c(10.1, 4.1, 4.1, 2.1))
+barplot(head(sort(table(data2$accepted_name), decreasing = TRUE),20), las = 2, cex.names = 0.7)
+#barplot(tail(sort(table(data2$accepted_name), decreasing = TRUE),20), las = 2, cex.names = 0.7)
+par(mar = default)
 ```
 
 
 
 ###### FIGURA 2
 
-```{r Fig2, echo=FALSE, fig.cap="Figura 2. Segundo ejemplo", cache=FALSE}
-a <- sort(rnorm(100))
-b <- c(rep("Group Small", 35), rep("Group Big", 65))
-boxplot(a ~ b)
+```{r Fig2, echo=FALSE, fig.cap="Figura 2. Segundo ejemplo", message=FALSE, warning=FALSE, cache=FALSE}
+#code courtesy of Paco Rodriguez.
+library(sf)
+library(raster)
+library(rasterVis)
+
+crs.geo <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+crs.laea <- "+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs"
+
+dat <- subset(data, !is.na(Latitude) & !is.na(Longitude))
+datos.sf <- st_as_sf(dat,
+                     coords = c("Longitude", "Latitude"),
+                     crs = crs.geo)
+
+datos.laea <- st_transform(datos.sf,
+                           crs = crs.laea)
+
+ras <- raster(datos.laea, resolution = 10000)
+
+ras.counts <- rasterize(datos.laea[, "accepted_name"], ras,
+               field = "accepted_name", fun = "count")
+#str(datos.laea)
+datos.laea$total <- datos.laea$Male + datos.laea$Female + datos.laea$Worker + datos.laea$Not.specified 
+ras.counts2 <- rasterize(datos.laea[, "total"], ras,
+               field = "total", fun = "sum")
+ras2 <- raster(datos.laea, resolution = 30000)
+ras.richness <- rasterize(datos.laea[, "accepted_name"], ras2,
+               field = "accepted_name", fun = function(x, ...)
+                 {length(unique(na.omit(x)))} )
+library(vegan)
+ras.chao <- rasterize(datos.laea[, "accepted_name"], ras2,
+               field = "accepted_name", fun = function(x, ...)
+                 {estimateR(t(as.matrix(x = table(x), nrow = 1, ncol = x)))[2,1]} ) #2 chao, 4 ACE #TO DO THIS WELL, we need to recover abundances.
+
+#levelplot(log(ras.counts+1), margin = FALSE, scales = list(draw = FALSE),
+ #         par.settings = viridisTheme())
+levelplot(log(ras.counts2+1), margin = FALSE, scales = list(draw = FALSE),
+          par.settings = viridisTheme())
+#levelplot(log(ras.richness+1), margin = FALSE, scales = list(draw = FALSE),
+ #         par.settings = viridisTheme())
+#levelplot(ras.chao, margin = FALSE, scales = list(draw = FALSE),
+ #         par.settings = viridisTheme())
 ```
 
 
 ###### FIGURA 3
 
-```{r Fig2, echo=FALSE, fig.cap="Figura 2. Segundo ejemplo", cache=FALSE}
-a <- sort(rnorm(100))
-b <- c(rep("Group Small", 35), rep("Group Big", 65))
-boxplot(a ~ b)
+```{r Fig3, echo=FALSE, fig.cap="Figura 2. Segundo ejemplo", message=FALSE, warning=FALSE, cache=FALSE}
+par(mfrow = c(1,2))
+hist(data2$Year, main = "Most records are recorded since year 2000", 
+     las = 1, xlab = "Year")
+hist(data2$Month, main = "Most records are recorded in April",
+     las = 1, xlab = "Month", breaks = 12)
 ```
 
 
