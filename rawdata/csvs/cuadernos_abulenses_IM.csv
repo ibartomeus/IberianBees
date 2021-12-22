@@ -1,0 +1,535 @@
+﻿Family;Subfamily;Genus;Species;Subspecies;Locality;altitud;UTM;Day;Month;Year;Individuals;Sex;dataFrom;comments;region
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Barco de Avila;1040;30TTK8670;19;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Nomadinae;Ammobates;Ammobates punctatus;NA;Pasarón de la Vera;620;30TTK5937;18;8;1986;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Villafranca de la Sierra;1300;30TUK1185;25;6;1986;3;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus subauratus;NA;Villafranca de la Sierra;1300;30TUK1185;25;6;1986;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Andreninae;Andrena;Andrena aeneiventris;NA;Piedrahita;1350;30TUK0382;25;6;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Andreninae;Andrena;Andrena aeneiventris;NA;San Esteban del Valle;890;30TUK3160;22;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Andreninae;Andrena;Andrena aeneiventris;NA;San Miguel de Corneja;1050;30TUK0684;25;6;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Andreninae;Andrena;Andrena flavipes;NA;Burgohondo;840;30TUK4875;23;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Andreninae;Andrena;Andrena flavipes;NA;Navalosa;1300;30TUK3674;23;7;1987;3;female;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Andreninae;Andrena;Andrena flavipes;NA;San Miguel de Corneja;1050;30TUK0684;25;6;1987;4;female;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Andreninae;Andrena;Andrena morio;lugubris;Burgohondo;840;30TUK4875;23;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Andreninae;Andrena;Andrena nitida;NA;Navacepedilla de Corneja;1250;30TUK1485;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Andreninae;Andrena;Andrena nitida;NA;Piedrahita;1350;30TUK0382;13;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Andreninae;Andrena;Andrena variabilis;NA;Piedrahita;1350;30TUK0382;2;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Parnurginae;Panurgus;Panurgus calcaratus;NA;La Herguijuela;1580;30TUK0874;18;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Parnurginae;Panurgus;Panurgus calcaratus;NA;Piedrahita;1350;30TUK0382;13;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Parnurginae;Panurgus;Panurgus calcaratus;NA;San Esteban del Valle;890;30TUK3160;22;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Parnurginae;Panurgus;Panurgus cephalotes;NA;La Herguijuela;1580;30TUK0874;18;8;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Parnurginae;Panurgus;Panurgus cephalotes;NA;La Herguijuela;1580;30TUK0874;18;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Parnurginae;Panurgus;Panurgus perezi;NA;La Aldehuela;110;30TTK9576;19;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Parnurginae;Panurgus;Panurgus perezi;NA;San Esteban del Valle;890;30TUK3160;22;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Parnurginae;Panurgus;Panurgus perezi;NA;San Miguel de Corneja;1050;30TUK0684;25;6;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Parnurginae;Panurgus;Panurgus perezi;NA;San Miguel de Corneja;1050;30TUK0684;25;6;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Amegilla;Amegilla albigena;NA;El Hornillo;800;30TUK2157;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Amegilla;Amegilla albigena;NA;La Aldehuela;110;30TTK9576;19;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Amegilla;Amegilla magnilabris;NA;Villatoro;1400;30TUK2192;21;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina chalybea;NA;Bohoyo;1200;30TTK9265;4;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina chalybea;NA;El Hornillo;800;30TUK2157;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina chalybea;NA;San Miguel de Corneja;1050;30TUK0684;25;6;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;El Hornillo;800;30TUK2157;24;7;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Hoyocasero;1280;30TUK3274;20;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Mombeltrán;630;30TUK2858;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Navacepedilla de Corneja;1250;30TUK1485;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Navalosa;1300;30TUK3674;23;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Piedrahita;1350;30TUK0382;12;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Pradosegar;1200;30TUK2694;20;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;San Miguel de Corneja;1050;30TUK0684;25;6;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Villafranca de la Sierra;1300;30TUK1185;25;6;1987;3;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Villafranca de la Sierra;1300;30TUK1185;25;6;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Villatoro;1400;30TUK2192;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cyanea;NA;Bohoyo;1200;30TTK9265;4;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cyanea;NA;Bohoyo;1200;30TTK9265;10;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cyanea;NA;El Hornillo;800;30TUK2157;24;7;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cyanea;NA;Navacepedilla de Corneja;1250;30TUK1485;21;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cyanea;NA;Piedrahita;1350;30TUK0382;12;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina dentiventris;NA;El Hornillo;800;30TUK2157;21;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina dentiventris;NA;Gavilanes;680;30TUK4362;22;7;1987;4;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina dentiventris;NA;Navacepedilla de Corneja;1250;30TUK1485;21;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina dentiventris;NA;San Esteban del Valle;890;30TUK3160;22;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina dentiventris;NA;San Esteban del Valle;890;30TUK3160;22;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina nigrolabiata;NA;Gavilanes;680;30TUK4362;22;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Melectinae;Epeolus;Epeolus variegatus;NA;La Aldehuela;110;30TTK9576;19;8;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Melectinae;Epeolus;Epeolus variegatus;NA;Mengamuñoz;1350;30TUK3085;20;8;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Heliophila;Heliophila bimaculata;NA;El Hornillo;800;30TUK2157;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Heliophila;Heliophila bimaculata;NA;Hoyocasero;1280;30TUK3274;20;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Heliophila;Heliophila bimaculata;NA;Mengamuñoz;1350;30TUK3085;20;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Heliophila;Heliophila bimaculata;NA;Piedrahita;1350;30TUK0382;4;8;1987;4;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Heliophila;Heliophila bimaculata;NA;Piedrahita;1350;30TUK0382;4;8;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Heliophila;Heliophila bimaculata;NA;Venta del Obispo;1300;30TUK2873;23;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia fulvescens;NA;Burgohondo;840;30TUK4875;23;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia fulvescens;NA;San Miguel de Corneja;1050;30TUK0684;25;6;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia iberica;NA;Barco de Avila;1040;30TTK8670;19;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia iberica;NA;Barco de Avila;1040;30TTK8670;19;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia iberica;NA;Blacha;1160;30TUK3292;20;8;1987;3;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia iberica;NA;La Aldehuela;110;30TTK9576;19;8;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia iberica;NA;La Aldehuela;110;30TTK9576;19;8;1987;3;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia ruficornis;NA;San Miguel de Corneja;1050;30TUK0684;25;6;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Melectinae;Thyreus;Thyreus ramosus;NA;El Hornillo;800;30TUK2157;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Melectinae;Thyreus;Thyreus ramosus;NA;Gavilanes;680;30TUK4362;22;6;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Melectinae;Thyreus;Thyreus ramosus;NA;Mombeltrán;630;30TUK2858;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Xylocopa;Xylocopa uclesiensis;NA;La Aldehuela;110;30TTK9576;19;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes albescens;NA;Hoyocasero;1280;30TUK3274;20;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes albescens;NA;La Herguijuela;1580;30TUK0874;18;8;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes albescens;NA;La Lastra del Cano;1430;30TTK9670;19;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes albescens;NA;Pto. De la Peña Negra;1909;30TUK0577;4;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes albescens;NA;Pto. De Menga;1566;30TUK2982;21;8;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes albescens;NA;Villatoro;1400;30TUK2192;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes fodiens;hispanicus;Cepeda de la Mora;510;30TUK2680;25;7;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes fodiens;hispanicus;Hoyocasero;1280;30TUK3274;20;8;1987;5;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes fodiens;hispanicus;Hoyos del Espino;1300;30TUK1569;18;8;1987;5;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes fodiens;hispanicus;La Herguijuela;1580;30TUK0874;18;8;1987;6;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes fodiens;hispanicus;La Lastra del Cano;1430;30TTK9670;19;8;1987;3;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes fodiens;hispanicus;Narros del Puerto;1200;30TUK3190;21;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes fodiens;hispanicus;Navamediana;1190;30TTK9565;4;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes fodiens;hispanicus;Piedrahita;1350;30TUK0382;4;8;1987;5;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes fodiens;hispanicus;Pto. De la Peña Negra;1909;30TUK0577;4;8;1987;3;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes fodiens;hispanicus;Pto. De Mijares;1570;30TUK4666;22;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes fodiens;hispanicus;Villatoro;1400;30TUK2192;21;7;1987;3;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Burgohondo;840;30TUK4875;23;7;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Burgohondo;840;30TUK4875;23;7;1987;4;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Gavilanes;680;30TUK4362;22;7;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Gavilanes;680;30TUK4362;22;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;La Aldehuela;110;30TTK9576;19;8;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;La Lastra del Cano;1430;30TTK9670;19;8;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;La Lastra del Cano;1430;30TTK9670;19;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Mengamuñoz;1350;30TUK3085;20;8;1987;5;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Mombeltrán;630;30TUK2858;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Navalosa;1300;30TUK3674;23;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Navalsauz;1370;30TUK2676;20;8;1987;3;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Navalsauz;1370;30TUK2676;20;8;1987;6;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Piedrahita;1350;30TUK0382;12;8;1987;6;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Piedrahita;1350;30TUK0382;12;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Piedrahita;1350;30TUK0382;23;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Pradosegar;1200;30TUK2694;20;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Pradosegar;1200;30TUK2694;20;8;1987;3;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes marginatus;NA;Navamediana;1190;30TTK9565;4;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes succinctus;NA;La Herguijuela;1580;30TUK0874;18;8;1987;4;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes succinctus;NA;Pradosegar;1200;30TUK2694;20;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus absolutus;NA;Pto. De la Peña Negra;1909;30TUK0577;4;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus angustatus;NA;El Hornillo;800;30TUK2157;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus angustatus;NA;Pto. De Pedro Bernardo;1250;30TUK3756;22;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus annularis;NA;La Aldehuela;110;30TTK9576;19;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus clypearis;NA;Piedrahita;1350;30TUK0382;12;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus communis;NA;Hoyocasero;1280;30TUK3274;20;8;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus difformis;hispanicus;Villafranca de la Sierra;1300;30TUK1185;25;6;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus euryscapus;NA;El Hornillo;800;30TUK2157;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus euryscapus;NA;Gavilanes;680;30TUK4362;22;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus euryscapus;NA;La Aldehuela;110;30TTK9576;19;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus euryscapus;NA;San Esteban del Valle;890;30TUK3160;22;7;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus gibbus;NA;Mengamuñoz;1350;30TUK3085;20;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus gibbus;NA;Villatoro;1400;30TUK2192;11;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus hyalinatus;aragonensis;Piedrahita;1350;30TUK0382;12;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus imparilis;NA;Burgohondo;840;30TUK4875;23;7;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus imparilis;NA;Burgohondo;840;30TUK4875;23;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus imparilis;NA;Hoyocasero;1280;30TUK3274;20;8;1987;3;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus imparilis;NA;La Lastra del Cano;1430;30TTK9670;19;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus imparilis;NA;Mombeltrán;630;30TUK2858;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus imparilis;NA;Piedrahita;1350;30TUK0382;25;6;1987;1;male;Gayubo et al 1990;year 19867;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus imparilis;NA;Piedrahita;1350;30TUK0382;25;6;1987;1;female;Gayubo et al 1990;year 19867;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus imparilis;NA;Piedrahita;1350;30TUK0382;12;3;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus imparilis;NA;San Esteban del Valle;890;30TUK3160;22;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus imparilis;NA;San Miguel de Corneja;1050;30TUK0684;25;6;1987;3;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus pictipes;NA;Navacepedilla de Corneja;1250;30TUK1485;21;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus pictipes;NA;Navacepedilla de Corneja;1250;30TUK1485;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus sinuatus;NA;Piedrahita;1350;30TUK0382;12;8;1987;3;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus variegatus;NA;Gavilanes;680;30TUK4362;22;7;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus variegatus;NA;La Aldehuela;110;30TTK9576;19;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus variegatus;NA;La Aldehuela;110;30TTK9576;19;8;1987;3;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus variegatus;NA;La Lastra del Cano;1430;30TTK9670;19;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus variegatus;NA;Mengamuñoz;1350;30TUK3085;20;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus variegatus;NA;Mengamuñoz;1350;30TUK3085;20;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus variegatus;NA;Piedrahita;1350;30TUK0382;25;6;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus variegatus;NA;Piedrahita;1350;30TUK0382;12;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus variegatus;NA;San Esteban del Valle;890;30TUK3160;22;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus variegatus;NA;San Esteban del Valle;890;30TUK3160;22;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus maculatus;NA;Hoyos del Espino;1300;30TUK1569;18;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus maculatus;NA;Navacepedilla de Corneja;1250;30TUK1485;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;Arenas de San Pedro;530;30TUK2253;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;El Hornillo;800;30TUK2157;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;Hoyocasero;1280;30TUK3274;20;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;La Aldehuela;110;30TTK9576;19;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;La Herguijuela;1580;30TUK0874;18;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;Mengamuñoz;1350;30TUK3085;20;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;Mengamuñoz;1350;30TUK3085;20;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;Mombeltrán;630;30TUK2858;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;Piedrahita;1350;30TUK0382;4;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;Pto. Del Pico;1352;30TUK2966;23;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;San Miguel de Corneja;1050;30TUK0684;25;6;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus rubicundus;NA;Piedrahita;1350;30TUK0382;4;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus scabiosae;NA;Bohoyo;1200;30TTK9265;19;8;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus scabiosae;NA;Cabezas Altas;1300;30TTK8465;25;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus scabiosae;NA;El Hornillo;800;30TUK2157;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus scabiosae;NA;El Hornillo;800;30TUK2157;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus scabiosae;NA;Hoyocasero;1280;30TUK3274;20;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus scabiosae;NA;Piedrahita;1350;30TUK0382;12;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus sexcinctus;NA;Navacepedilla de Corneja;1250;30TUK1485;21;7;1987;3;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus smaragdulus;NA;Cuevas del Valle;900;30TUK2962;21;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus smaragdulus;NA;El Hornillo;800;30TUK2157;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus smaragdulus;NA;Hoyocasero;1280;30TUK3274;20;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus smaragdulus;NA;Hoyocasero;1280;30TUK3274;20;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus smaragdulus;NA;La Aldehuela;110;30TTK9576;19;8;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus smaragdulus;NA;Navalsauz;1370;30TUK2676;20;8;1987;3;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus smaragdulus;NA;Navamediana;1190;30TTK9565;4;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus smaragdulus;NA;Pto. De Pedro Bernardo;1250;30TUK3756;22;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus smaragdulus;NA;San Esteban del Valle;890;30TUK3160;22;7;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus subauratus;NA;El Hornillo;800;30TUK2157;24;8;1987;3;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus subauratus;NA;La Aldehuela;110;30TTK9576;19;8;1987;3;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus subauratus;NA;Narros del Puerto;1200;30TUK3190;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus subauratus;NA;Navalosa;1300;30TUK3674;23;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus subauratus;NA;Villatoro;1400;30TUK2192;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus tridivisus;NA;Mengamuñoz;1350;30TUK3085;20;8;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus tridivisus;NA;Navacepedilla de Corneja;1250;30TUK1485;21;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus tridivisus;NA;Piedrahita;1350;30TUK0382;4;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum costulatum;NA;Bohoyo;1200;30TTK9265;10;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum costulatum;NA;Hoyocasero;1280;30TUK3274;20;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum costulatum;NA;Navacepedilla de Corneja;1250;30TUK1485;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum costulatum;NA;Piedrahita;1350;30TUK0382;4;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum costulatum;NA;Piedrahita;1350;30TUK0382;12;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum costulatum;NA;Piedrahita;1350;30TUK0382;13;8;1987;1;NA;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum costulatum;NA;Sierra (Hoyos del Espino);1900;30TUK1060;18;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum interruptum;NA;Mombeltrán;630;30TUK2858;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum interruptum;NA;Nava del Barco;1220;30TTK8463;10;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum leucozonium;NA;El Hornillo;800;30TUK2157;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum leucozonium;NA;Pradosegar;1200;30TUK2694;20;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum malachurum;NA;Piedrahita;1350;30TUK0382;12;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum malachurum;NA;Villafranca de la Sierra;1300;30TUK1185;25;6;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum malachurum;NA;Villatoro;1400;30TUK2192;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum morio;NA;Pto. De la Peña Negra;1909;30TUK0577;4;8;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum nitidiusculum;NA;Burgohondo;840;30TUK4875;23;7;1987;4;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum nitidiusculum;NA;Piedrahita;1350;30TUK0382;4;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum pauperatum;NA;Narros del Puerto;1200;30TUK3190;21;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum pauperatum;NA;Piedrahita;1350;30TUK0382;25;6;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum pauperatum;NA;San Esteban del Valle;890;30TUK3160;22;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum smeathmanellum;NA;Sierra (Hoyos del Espino);1900;30TUK1060;18;8;1987;1; m;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Nomioides;Nomioides minutissimus;NA;Burgohondo;840;30TUK4875;23;7;1987;8;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Nomioides;Nomioides minutissimus;NA;Burgohondo;840;30TUK4875;23;7;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Nomioides;Nomioides minutissimus;NA;Gavilanes;680;30TUK4362;22;7;1987;6;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Nomioides;Nomioides minutissimus;NA;Gavilanes;680;30TUK4362;22;7;1987;7;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Nomioides;Nomioides minutissimus;NA;Pto. De Serranillos;1575;30TUK3463;23;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Nomiinae;Pseudapis;Pseudapis diversipes;NA;El Hornillo;800;30TUK2157;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Nomiinae;Pseudapis;Pseudapis diversipes;NA;Gavilanes;680;30TUK4362;22;6;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Nomiinae;Pseudapis;Pseudapis diversipes;NA;San Esteban del Valle;890;30TUK3160;22;7;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Nomiinae;Pseudapis;Pseudapis diversipes;NA;San Esteban del Valle;890;30TUK3160;22;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Nomiinae;Pseudapis;Pseudapis unidentata;NA;El Hornillo;800;30TUK2157;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Nomiinae;Pseudapis;Pseudapis unidentata;NA;El Hornillo;800;30TUK2157;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Nomiinae;Pseudapis;Pseudapis unidentata;NA;Gavilanes;680;30TUK4362;22;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Nomiinae;Pseudapis;Pseudapis unidentata;NA;Gavilanes;680;30TUK4362;22;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Nomiinae;Pseudapis;Pseudapis unidentata;NA;Mombeltrán;630;30TUK2858;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Nomiinae;Pseudapis;Pseudapis unidentata;NA;San Esteban del Valle;890;30TUK3160;22;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Sphecodes;Sphecodes divisus;NA;Hoyocasero;1280;30TUK3274;20;8;1987;7;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Sphecodes;Sphecopes albilabris;NA;Gavilanes;680;30TUK4362;22;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Sphecodes;Sphecodes alternatus;NA;San Esteban del Valle;890;30TUK3160;22;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Sphecodes;Sphecodes alternatus;NA;Sierra (Hoyos del Espino);1900;30TUK1060;18;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium florentinum;NA;El Hornillo;800;30TUK2157;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium florentinum;NA;El Hornillo;800;30TUK2157;24;7;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium florentinum;NA;Mombeltrán;630;30TUK2858;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium florentinum;NA;Mombeltrán;630;30TUK2858;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium florentinum;NA;Villatoro;1400;30TUK2192;21;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium manicatum;NA;Piedrahita;1350;30TUK0382;12;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium oblongatum;NA;El Hornillo;800;30TUK2157;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium oblongatum;NA;Mombeltrán;630;30TUK2858;24;7;1987;3;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium oblongatum;NA;Mombeltrán;630;30TUK2858;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium oblongatum;NA;Pto. Del Pico;1352;30TUK2966;23;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium punctatum;NA;Navacepedilla de Corneja;1250;30TUK1485;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium taeniatum;NA;La Aldehuela;110;30TTK9576;19;8;1987;3;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium taeniatum;NA;La Aldehuela;110;30TTK9576;19;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium taeniatum;NA;Navalsauz;1370;30TUK2676;20;8;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium variegatum;NA;El Hornillo;800;30TUK2157;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Anthocopa;Anthocopa anceyi;NA;Hoyos del Espino;1300;30TUK1569;18;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Anthocopa;Anthocopa bisulca;NA;Hoyocasero;1280;30TUK3274;20;8;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Anthocopa;Anthocopa cristata;NA;San Miguel de Corneja;1050;30TUK0684;25;6;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Anthocopa;Anthocopa ligurica;NA;La Herguijuela;1580;30TUK0874;18;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Chalidocoma;Chalidocoma ericetorum;NA;El Hornillo;800;30TUK2157;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Chalidocoma;Chalidocoma ericetorum;NA;La Lastra del Cano;1430;30TTK9670;19;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Chalidocoma;Chalidocoma ericetorum;NA;Navarrevisca;1380;30TUK3970;22;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Chalidocoma;Chalidocoma pyrenaica;NA;Hoyocasero;1280;30TUK3274;29;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Coelioxys;Coelioxys afra;NA;El Hornillo;800;30TUK2157;24;7;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Coelioxys;Coelioxys afra;NA;El Hornillo;800;30TUK2157;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Coelioxys;Coelioxys afra;NA;Hoyocasero;1280;30TUK3274;20;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Coelioxys;Coelioxys afra;NA;Navalsauz;1370;30TUK2676;20;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Coelioxys;Coelioxys rufocaudata;NA;La Lastra del Cano;1430;30TTK9670;19;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Coelioxys;Coelioxys rufocaudata;NA;Narros del Puerto;1200;30TUK3190;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Coelioxys;Coelioxys rufocaudata;NA;Piedrahita;1350;30TUK0382;4;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Coelioxys;Coelioxys rufocaudata;NA;Villatoro;1400;30TUK2192;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Dioxys;Dioxys tridentata;NA;Villafranca de la Sierra;1300;30TUK1185;25;6;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades crenulatus;NA;Bohoyo;1200;30TTK9265;4;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades crenulatus;NA;El Hornillo;800;30TUK2157;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades crenulatus;NA;Hoyocasero;1280;30TUK3274;20;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades crenulatus;NA;Mombeltrán;630;30TUK2858;24;7;1987;4;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades crenulatus;NA;Mombeltrán;630;30TUK2858;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades truncorum;NA;Hoyocasero;1280;30TUK3274;20;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades truncorum;NA;Navarrevisca;1380;30TUK3970;22;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades truncorum;NA;Navarrevisca;1380;30TUK3970;22;7;1987;3;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades truncorum;NA;Piedrahita;1350;30TUK0382;12;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades truncorum;NA;Villatoro;1400;30TUK2192;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Hoplitis;Hoplitis adunca;NA;Cuevas del Valle;900;30TUK2962;21;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Hoplitis;Hoplitis crenulata;NA;Cuevas del Valle;900;30TUK2962;21;7;1987;3;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Hoplitis;Hoplitis crenulata;NA;La Aldehuela;110;30TTK9576;19;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Hoplitis;Hoplitis crenulata;NA;Villatoro;1400;30TUK2192;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Hoplitis;Hoplitis leucomelana;NA;Bohoyo;1200;30TTK9265;10;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Hoplitis;Hoplitis leucomelana;NA;El Hornillo;800;30TUK2157;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Hoplitis;Hoplitis leucomelana;NA;Navacepedilla de Corneja;1250;30TUK1485;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Hoplitis;Hoplitis leucomelana;NA;Piedrahita;1350;30TUK0382;12;8;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Hoplitis;Hoplitis leucomelana;NA;Pradosegar;1200;30TUK2694;20;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Hoplitis;Hoplitis leucomelana;NA;Villatoro;1400;30TUK2192;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Hoplitis;Hoplitis tridentata;NA;El Hornillo;800;30TUK2157;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Icteranthidium;Icteranthidium grohmanni;NA;Gavilanes;680;30TUK4362;22;7;1987;4;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Icteranthidium;Icteranthidium grohmanni;NA;Mombeltrán;630;30TUK2858;24;7;1987;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Lithurginae;Lithurgus;Lithurgus chrysurus;NA;Bohoyo;1200;30TTK9265;4;8;1987;3;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Lithurginae;Lithurgus;Lithurgus chrysurus;NA;Gavilanes;680;30TUK4362;22;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachile apicalis;NA;Bohoyo;1200;30TTK9265;4;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachile apicalis;NA;El Hornillo;800;30TUK2157;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachile apicalis;NA;Pto. De Pedro Bernardo;1250;30TUK3756;22;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachile maritima;NA;Pradosegar;1200;30TUK2694;20;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachile pilidens;NA;El Hornillo;800;30TUK2157;24;7;1987;4;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachile pilidens;NA;Guisando;860;30TUK1854;24;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachile pilidens;NA;Hoyocasero;1280;30TUK3274;20;8;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachile pilidens;NA;Mengamuñoz;1350;30TUK3085;20;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachile pilidens;NA;Piedrahita;1350;30TUK0382;4;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachile pilidens;NA;Piedrahita;1350;30TUK0382;12;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachiles rotundata;NA;Burgohondo;840;30TUK4875;23;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachiles rotundata;NA;El Hornillo;800;30TUK2157;24;7;1987;4;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachiles rotundata;NA;Mombeltrán;630;30TUK2858;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachiles rotundata;NA;Navamediana;1190;30TTK9565;4;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachiles rotundata;NA;Piedrahita;1350;30TUK0382;12;8;1987;3;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Osmia;Osmia latreillei;NA;Mombeltrán;630;30TUK2858;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Osmia;Osmia latreillei;NA;Piedrahita;1350;30TUK0382;12;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Osmia;Osmia latreillei;NA;San Esteban del Valle;890;30TUK3160;22;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Osmia;Osmia niveocincta;NA;Pto. Del Pico;1352;30TUK2966;23;7;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Osmiinae;Osmia;Osmia signata;NA;La Aldehuela;110;30TTK9576;19;8;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Stelis;Stelis punctulatissima;NA;Bohoyo;1200;30TTK9265;4;8;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Stelis;Stelis punctulatissima;NA;Cuevas del Valle;900;30TUK2962;21;7;1987;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Stelis;Stelis punctulatissima;NA;Mombeltrán;630;30TUK2858;24;7;1987;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Stelis;Stelis punctulatissima;NA;Mombeltrán;630;30TUK2858;24;7;1987;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Andreninae;Andrena;Andrena nitida;limata;La Herguijuela;1580;30TUK0874;25;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Parnurginae;Panurgus;Panurgus cephalotes;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Parnurginae;Panurgus;Panurgus perezi;NA;Cabezas Altas;1300;30TTK8465;25;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Andrenidae;Parnurginae;Panurgus;Panurgus perezi;NA;Guijo de Santa Bárbara;920;30TTK7448;19;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Amegilla;Amegilla albigena;NA;Villanueva de la Vera;430;30TTK9044;20;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Amegilla;Amegilla quadrifasciata;NA;"Villanueva de la Vera (Urb. ""La Solana"")";400;30TTK9044;20;7;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina callosa;NA;La Solana de Avila;1170;30TTK7866;25;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina chalybea;NA;Candeleda (Monasterio de Chilla);700;30TUK0551;20;8;1988;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina chalybea;NA;Navacepedilla de Corneja;1250;30TUK1485;24;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Candeleda (Monasterio de Chilla);700;30TUK0551;20;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Cuacos de Yuste (Monasterio);780;30TTK6744;19;8;1988;3;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Garganta la Olla;550;30TTK6343;19;7;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Guijo de Santa Bárbara;920;30TTK7448;19;7;1988;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Jerte;600;30TTK6656;18;8;1988;5;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;La Solana de Avila;1170;30TTK7866;25;8;1988;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Navaescurial;1200;30TUK0782;17;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Navalacruz;1170;30TUK3678;26;7;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Navalguijo;1210;30TTK8659;24;8;1988;3;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Pasarón de la Vera;620;30TTK5937;17;8;1988;6;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Santiago del Collado;1160;30TUK0078;18;8;1988;3;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cucurbitina;NA;Villanueva de la Vera;430;30TTK9044;20;8;1988;6;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cyanea;NA;Navamediana (La Hoya);1700;30TTK9963;26;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cyanea;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina cyanea;NA;Villanueva de la Vera;430;30TTK9044;20;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina dentiventris;NA;Cabezas Altas;1300;30TTK8465;25;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina dentiventris;NA;Candeleda (Monasterio de Chilla);700;30TUK0551;20;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina dentiventris;NA;Candeleda (Monasterio de Chilla);700;30TUK0551;20;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina dentiventris;NA;Cuacos de Yuste (Monasterio);780;30TTK6744;19;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina dentiventris;NA;Cuacos de Yuste (Monasterio);780;30TTK6744;19;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina dentiventris;NA;Guijo de Santa Bárbara;920;30TTK7448;19;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina dentiventris;NA;Guijo de Santa Bárbara;920;30TTK7448;19;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina dentiventris;NA;La Solana de Avila;1170;30TTK7866;25;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina dentiventris;NA;Piornal;1040;30TTK5744;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina dentiventris;NA;Piornal;1040;30TTK5744;18;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina dentiventris;NA;Tormellas;1120;30TTK8764;25;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina dentiventris;NA;Villanueva de la Vera;430;30TTK9044;20;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Ceratina;Ceratina mocsaryi;NA;Piornal;1040;30TTK5744;18;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Melectinae;Epeolus;Epeolus variegatus;NA;Guijo de Santa Bárbara;920;30TTK7448;19;8;1988;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Melectinae;Epeolus;Epeolus variegatus;NA;Mengamuñoz;1350;30TUK3085;24;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Melectinae;Epeolus;Epeolus variegatus;NA;San Lorenzo de Tormes;1080;30TTK8279;25;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Heliophila;Heliophila bimaculata;NA;Madrigal de la Vera;300;30TTK9846;20;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Heliophila;Heliophila bimaculata;NA;Navadijos;1520;30TUK2376;26;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Heliophila;Heliophila bimaculata;NA;Navalguijo;1210;30TTK8659;24;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Heliophila;Heliophila bimaculata;NA;Navamediana (La Hoya);1700;30TTK9963;26;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Heliophila;Heliophila bimaculata;NA;Navamediana (La Hoya);1700;30TTK9963;26;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Heliophila;Heliophila bimaculata;NA;Villanueva de la Vera;430;30TTK9044;20;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Nomadinae;Pasites;Pasites maculatus;NA;Guijo de Santa Bárbara;920;30TTK7448;19;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia iberica;NA;Candeleda (Monasterio de Chilla);700;30TUK0551;20;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia iberica;NA;Guijo de Santa Bárbara;920;30TTK7448;19;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia iberica;NA;Madrigal de la Vera;300;30TTK9846;20;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia iberica;NA;Madrigal de la Vera;300;30TTK9846;20;8;1988;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia iberica;NA;Pasarón de la Vera;620;30TTK5937;18;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia iberica;NA;Pasarón de la Vera;620;30TTK5937;18;8;1988;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia iberica;NA;Santiago del Collado;1160;30TUK0078;18;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia iberica;NA;Villanueva de la Vera;430;30TTK9044;20;7;1988;7;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia iberica;NA;Villanueva de la Vera;430;30TTK9044;20;7;1988;12;female;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Anthophorinae;Tetralonia;Tetralonia salicariae;NA;Pasarón de la Vera;620;30TTK5937;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Melectinae;Thyreus;Thyreus ramosus;NA;Pasarón de la Vera;620;30TTK5937;18;7;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Anthophoridae;Xylocopinae;Xylocopa;Xylocopa violacea;NA;Madrigal de la Vera;300;30TTK9846;20;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes albescens;NA;Navadijos;1520;30TUK2376;26;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes albescens;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes fodiens;hispanicus;La Herguijuela (Ermita del Soto);1570;30TUK0874;25;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes fodiens;hispanicus;Navacepedilla de Corneja;1250;30TUK1485;24;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes fodiens;hispanicus;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes fodiens;hispanicus;San Lorenzo de Tormes;1080;30TTK8279;25;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes fodiens;hispanicus;Santiago del Collado;1160;30TUK0078;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;La Herguijuela (Ermita del Soto);1570;30TUK0874;25;8;1988;5;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;La Herguijuela (Ermita del Soto);1570;30TUK0874;25;8;1988;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Mengamuñoz;1350;30TUK3085;24;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Navalsauz;1370;30TUK2676;25;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Navalsauz;1370;30TUK2676;25;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Pto. De Villatoro;1399;30TUK1489;24;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes marginatus;NA;La Herguijuela (Ermita del Soto);1570;30TUK0874;25;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes marginatus;NA;Santiago del Collado;1160;30TUK0078;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes succinctus;NA;Retuerta;1060;30TTK8167;18;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes succinctus;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus absolutus;NA;Navamediana (La Hoya);1700;30TTK9963;26;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus brevicornis;NA;Guijo de Santa Bárbara;920;30TTK7448;19;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus communis;NA;Candeleda (Monasterio de Chilla);700;30TUK0551;20;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus euryscapus;NA;Guijo de Santa Bárbara;920;30TTK7448;19;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus euryscapus;NA;San Lorenzo de Tormes;1080;30TTK8279;25;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus gibbus;NA;Candeleda (Monasterio de Chilla);700;30TUK0551;20;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus gibbus;NA;Cuacos de Yuste (Monasterio);780;30TTK6744;19;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus gibbus;NA;Navamediana;1190;30TTK9565;26;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus gibbus;NA;Piornal;1040;30TTK5744;18;8;1988;12;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus pictipes;NA;Guijo de Santa Bárbara;920;30TTK7448;19;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus variegatus;NA;Guijo de Santa Bárbara;920;30TTK7448;19;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus variegatus;NA;La Aldehuela;110;30TTK9576;25;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus variegatus;NA;La Aldehuela;110;30TTK9576;25;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus variegatus;NA;Mengamuñoz;1350;30TUK3085;24;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus variegatus;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus crenicornis;NA;Jerte;600;30TTK6656;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus crenicornis;NA;La Aldehuela;110;30TTK9576;25;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus crenicornis;NA;La Herguijuela (Ermita del Soto);1570;30TUK0874;25;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus crenicornis;NA;Pto. De Tornavacas;1275;30TTK7159;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus crenicornis;NA;San Lorenzo de Tormes;1080;30TTK8279;25;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus maculatus;NA;Jerte;600;30TTK6656;21;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus maculatus;NA;La Aldehuela;110;30TTK9576;10;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus maculatus;NA;"Villanueva de la Vera (Urb. ""La Solana"")";400;30TTK9044;20;8;1988;4;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus pollinosus;NA;Madrigal de la Vera;300;30TTK9846;20;8;1988;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;La Herguijuela;1580;30TUK0874;25;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;Navacepedilla de Corneja;1250;30TUK1485;24;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;Navalguijo;1210;30TTK8659;24;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;Navalguijo;1210;30TTK8659;24;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;Navamediana (La Hoya);1700;30TTK9963;26;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;Navamediana (La Hoya);1700;30TTK9963;26;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;Navarredonda de Gredos;1550;30TUK1970;26;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;Navarredonda de Gredos;1550;30TUK1970;26;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;Pto. De Villatoro;1399;30TUK1489;24;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus quadricinctus;NA;Santiago del Collado;1160;30TUK0078;18;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus rubicundus;NA;Navalguijo (La Nava);2150;30TTK8156;24;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus rubicundus;NA;Navamediana (La Hoya);1700;30TTK9963;26;8;1988;3;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus rubicundus;NA;Navarredonda de Gredos;1550;30TUK1970;26;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus scabiosae;NA;La Solana de Avila;1170;30TTK7866;25;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus scabiosae;NA;Navacepedilla de Corneja;1250;30TUK1485;24;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus scabiosae;NA;Navalguijo;1210;30TTK8659;24;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus scabiosae;NA;Navalguijo;1210;30TTK8659;24;8;1988;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus scabiosae;NA;Piornal;1040;30TTK5744;18;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus scabiosae;NA;Pto. De Tornavacas;1275;30TTK7159;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus scabiosae;NA;Pto. De Villatoro;1399;30TUK1489;24;8;1988;3;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus scabiosae;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus scabiosae;NA;Santiago del Collado;1160;30TUK0078;18;8;1988;3;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus sexcinctus;NA;Navamediana (La Hoya);1700;30TTK9963;26;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus smaragdulus;NA;Guijo de Santa Bárbara;920;30TTK7448;19;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus smaragdulus;NA;Navalguijo;1210;30TTK8659;24;8;1988;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus smaragdulus;NA;Pto. De Tornavacas;1275;30TTK7159;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus smaragdulus;NA;Pto. De Tornavacas;1275;30TTK7159;18;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus smaragdulus;NA;Villanueva de la Vera;430;30TTK9044;20;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus subauratus;NA;Candeleda (Monasterio de Chilla);700;30TUK0551;20;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus subauratus;NA;Candeleda (Monasterio de Chilla);700;30TUK0551;20;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus subauratus;NA;Guijo de Santa Bárbara;920;30TTK7448;18;8;1988;8;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus subauratus;NA;Jerte;600;30TTK6656;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus subauratus;NA;Jerte;600;30TTK6656;18;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus subauratus;NA;La Aldehuela;110;30TTK9576;25;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus subauratus;NA;La Aldehuela;110;30TTK9576;25;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus subauratus;NA;La Solana de Avila;1170;30TTK7866;25;8;1988;5;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus subauratus;NA;San Lorenzo de Tormes;1080;30TTK8279;25;8;1988;6;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus subauratus;NA;Villanueva de la Vera;430;30TTK9044;20;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Halictus;Halictus tridivisus;NA;Pto. De Tornavacas;1275;30TTK7159;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum atrovirens;NA;Navamediana;1190;30TTK9565;26;8;1988;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum costulatum;NA;Guijo de Santa Bárbara;920;30TTK7448;19;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum costulatum;NA;Navalguijo;1210;30TTK8659;24;8;1988;3;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum costulatum;NA;Navalsauz;1370;30TUK2676;25;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum costulatum;NA;Navamediana (La Hoya);1700;30TTK9963;26;8;1988;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum costulatum;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum costulatum;NA;San Lorenzo de Tormes;1080;30TTK8279;25;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum interruptum;NA;Navalsauz;1370;30TUK2676;26;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum interruptum;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum leucozonium;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum malachurum;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum malachurum;NA;San Lorenzo de Tormes;1080;30TTK8279;25;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum malachurum;NA;Santiago del Collado;1160;30TUK0078;18;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum morio;NA;Navalguijo (La Nava);2150;30TTK8156;24;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum morio;NA;Navamediana (La Hoya);1700;30TTK9963;26;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum morio;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum nigripes;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum nitidiusculum;NA;Navarredonda de Gredos;1550;30TUK1970;26;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum nitidiusculum;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;5;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum pauperatum;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;7;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum smeathmanellum;NA;Navalacruz;1170;30TUK3678;26;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum smeathmanellum;NA;Navamediana (La Hoya);1700;30TTK9963;26;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum villosulum;NA;Madrigal de la Vera;300;30TTK9846;20;8;1988;10;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Lasioglossum;Lasioglossum villosulum;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Nomioides;Nomioides fallax;NA;Jerte;600;30TTK6656;18;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Nomioides;Nomioides minutissimus;NA;Jerte;600;30TTK6656;18;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Nomioides;Nomioides minutissimus;NA;Navalguijo;1210;30TTK8659;24;8;1988;4;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Nomioides;Nomioides minutissimus;NA;Navalguijo;1210;30TTK8659;24;8;1988;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Nomiinae;Pseudapis;Pseudapis diversipes;NA;Jerte;600;30TTK6656;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Nomiinae;Pseudapis;Pseudapis diversipes;NA;Madrigal de la Vera;300;30TTK9846;20;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Nomiinae;Pseudapis;Pseudapis diversipes;NA;Villanueva de la Vera;430;30TTK9044;20;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Nomiinae;Pseudapis;Pseudapis unidentata;NA;Guisando;860;30TUK1854;24;7;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Nomiinae;Pseudapis;Pseudapis unidentata;NA;Navalguijo (La Nava);2150;30TTK8156;24;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Sphecodes;Sphecodes alternatus;NA;Navamediana (La Hoya);1700;30TTK9963;26;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Sphecodes;Sphecodes monilicornis;NA;Jerte;600;30TTK6656;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Sphecodes;Sphecopes albilabris;NA;Navamediana (La Hoya);1700;30TTK9963;26;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Halictidae;Halictinae;Sphecodes;Sphecodes monilicornis;NA;San Lorenzo de Tormes;1080;30TTK8279;25;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium florentinum;NA;Jerte;600;30TTK6656;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium florentinum;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium manicatum;NA;Guijo de Santa Bárbara;920;30TTK7448;19;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium oblongatum;NA;Candeleda (Monasterio de Chilla);700;30TUK0551;20;8;1988;2;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium oblongatum;NA;Candeleda (Monasterio de Chilla);700;30TUK0551;20;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium oblongatum;NA;Garganta la Olla;550;30TTK6343;19;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium oblongatum;NA;Jerte;600;30TTK6656;18;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium oblongatum;NA;Pasarón de la Vera;620;30TTK5937;18;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium oblongatum;NA;Poyales del Hoyo;530;30TUK1549;20;8;1988;4;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium oblongatum;NA;Poyales del Hoyo;530;30TUK1549;20;8;1988;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium oblongatum;NA;Santiago del Collado;1160;30TUK0078;18;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium oblongatum;NA;Villanueva de la Vera;430;30TTK9044;20;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades crenulatus;NA;Guijo de Santa Bárbara;920;30TTK7448;19;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades crenulatus;NA;Piedrahita;1350;30TUK0382;12;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades crenulatus;NA;Pto. De Tornavacas;1275;30TTK7159;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades crenulatus;NA;Villanueva de la Vera;430;30TTK9044;20;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades crenulatus;NA;Villanueva de la Vera;430;30TTK9044;20;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades rubicola;NA;Madrigal de la Vera;300;30TTK9846;20;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades rubicola;NA;Madrigal de la Vera;300;30TTK9846;20;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades rubicola;NA;Poyales del Hoyo;530;30TUK1549;20;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades rubicola;NA;"Villanueva de la Vera (Urb. ""La Solana"")";400;30TTK9044;20;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades truncorum;NA;Cabezas Altas;1300;30TTK8465;25;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades truncorum;NA;Cabezas Altas;1300;30TTK8465;25;8;1988;4;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades truncorum;NA;Guijo de Santa Bárbara;920;30TTK7448;19;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades truncorum;NA;Navalacruz;1170;30TUK3678;26;8;1988;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades truncorum;NA;Poyales del Hoyo;530;30TUK1549;20;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades truncorum;NA;Pto. De Tornavacas;1275;30TTK7159;18;8;1988;3;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades truncorum;NA;Retuerta;1060;30TTK8167;18;8;1988;4;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades truncorum;NA;Retuerta;1060;30TTK8167;18;8;1988;6;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades truncorum;NA;Santiago del Collado;1160;30TUK0078;18;8;1988;3;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Heriades;Heriades truncorum;NA;Tormellas;1120;30TTK8764;25;8;1988;3;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachile pilidens;NA;Navalguijo (La Nava);2150;30TTK8156;24;8;1988;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachile pilidens;NA;Poyales del Hoyo;530;30TUK1549;20;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachiles rotundata;NA;Cuacos de Yuste (Monasterio);780;30TTK6744;19;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachiles rotundata;NA;Garganta la Olla;550;30TTK6343;19;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachiles rotundata;NA;La Aldehuela;110;30TTK9576;10;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachiles rotundata;NA;Pasarón de la Vera;620;30TTK5937;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachiles rotundata;NA;Poyales del Hoyo;530;30TUK1549;20;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachiles rotundata;NA;San Lorenzo de Tormes;1080;30TTK8279;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachiles rotundata;NA;Santiago del Collado;1160;30TUK0078;18;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Pseudoanthidium;Pseudoanthidium lituratum;NA;La Solana de Avila;1170;30TTK7866;25;8;1988;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Reanthidium;Reanthidium nigricolle;NA;Guijo de Santa Bárbara;920;30TTK7448;19;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Stelis;Stelis signata;NA;"Villanueva de la Vera (Urb. ""La Solana"")";400;30TTK9044;20;8;1988;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Colletes;Colletes hylaeiformis;NA;Santa Maria de los Caballeros;1050;30TTK9274;NA;NA;NA;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Colletidae;Colletinae;Hylaeus;Hylaeus gibbus;NA;Navamediana (La Hoya);1700;30TTK9963;NA;NA;NA;2;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium florentinum;NA;Pasarón de la Vera;620;30TTK5937;NA;NA;NA;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium florentinum;NA;Pasarón de la Vera;620;30TTK5937;NA;NA;NA;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium oblongatum;NA;Guijo de Santa Bárbara;920;30TTK7448;NA;NA;NA;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium oblongatum;NA;Guijo de Santa Bárbara;920;30TTK7448;NA;NA;NA;1;female;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Anthidium;Anthidium oblongatum;NA;Navalguijo (La Nava);2150;30TTK8156;NA;NA;NA;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachiles rotundata;NA;Guijo de Santa Bárbara;920;30TTK7448;NA;NA;NA;1;male;Gayubo et al 1990;NA;Sierra de Gredos
+Megachilidae;Megachilinae;Megachile;Megachiles rotundata;NA;Guijo de Santa Bárbara;920;30TTK7448;NA;NA;NA;1;female;Gayubo et al 1990;NA;Sierra de Gredos
