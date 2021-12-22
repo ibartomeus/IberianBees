@@ -16,17 +16,25 @@ This is an in progress repository to document the Iberian Bees Database (v.0.3.0
 
 # Process:
 
-1- Use "rawdata/Fetch_data.R" to update data from interent (e.g. Gbif, iNaturalist)   
+1- Use "rawdata/Fetch_data.R" to update data from interent (e.g. Gbif, iNaturalist).
+
 2- Add new excels with data locally to "/rawdata/xls_to_add/" with the data in the first sheet.  
+
 3- Run "rawdata/preprocessing.R" to convert those to csv and upload them to github.  
-3.3- I modified manually some csvs because of non ASCII characters, and other annoying stuff. Sorry for the non-reproducible part.  
-4- Add new csv's programatically using "/rawdata/Add_data.R".  
+3.1- I modified manually some csvs because of non ASCII characters, and other annoying stuff. Sorry for the non-reproducible part.
+
+4- Add new csv's programatically using "/rawdata/Add_data.R".
+
 5- Use "data/datascript.R" to generate "data/clean_data.csv".  
-5.5- To fix species names I am using the workflow in "data/datascript.R" along with "data/manual_checks.csv", which can be edited to add synonims, etc...  
+5.1- To fix species names I am using the workflow in "data/datascript.R" along with "data/manual_checks.csv", which can be edited to add synonims, etc...  
+
 6- Knit Summary.Rmd to see updated nice summaries.  
-7- Commit and push. Automatic tests may be done (in the future). Manually release a version on major updates.   
-8- Metadata in EML is generated in Metadata_generator.R and can be consulted in "data/metadata"    
-9- The manuscript is written in folder /manuscript
+
+7- Commit and push. Automatic tests may be done (in the future). Manually release a version on major updates.
+
+8- Metadata in EML is generated in Metadata_generator.R and can be consulted in "data/metadata".
+
+9- The manuscript is written in folder /manuscript.
 
 # IberianBees (version en español)
 
@@ -40,21 +48,19 @@ Este es un repositorio en curso para documentar la Base de Datos de Abejas Ibér
 
 - Más información de como estos datos son procesados es mostrada a continuación.
 
-# Procesamiento:
+# Procesado:
 
 1- Usar "rawdata/Fetch_data.R" para actualizar datos desde internet (e.g. Gbif, iNaturalist).
 
 2- Añadir nuevos excels localmente a "/rawdata/xls_to_add/" con los datos ubicados en la primera hoja.  
 
 3- Correr script "rawdata/preprocessing.R" para convertir estos a csv y subirlos a github. 
-
-3.3- Algunos csv han tenido que ser modificados manualmente debido a la presencia de caracteres no ASCII y otros elementos que dificultaban su procesamiento. Disculpad por este apartado no reproducible.
+3.1- Algunos csv han tenido que ser modificados manualmente debido a la presencia de caracteres no ASCII y otros elementos que dificultaban su procesamiento. Disculpad por este apartado no reproducible.
 
 4- Añadir csv's de manera programática usando "/rawdata/Add_data.R". 
 
 5- Usar "data/datascript.R" para generar "data/clean_data.csv".  
-
-5.5- Los nombres de las especies han sido arreglados con "data/datascript.R" junto con "data/manual_checks.csv", estos pueden ser editados para evitar sinónimos o cualquier otra incorrección.
+5.1- Los nombres de las especies han sido arreglados con "data/datascript.R" junto con "data/manual_checks.csv", estos pueden ser editados para evitar sinónimos o cualquier otra incorrección.
 
 6- Knit Summary.Rmd para ver un resumen actualizado.
 
