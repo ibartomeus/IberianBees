@@ -1,5 +1,7 @@
 [![License](https://licensebuttons.net/l/by/4.0/80x15.png)](https://raw.githubusercontent.com/ibartomeus/IberianBees/master/LICENSE)
 
+*ver version en español más abajo*  
+
 # IberianBees
 
 This is an in progress repo to document Iberian Bees Database (v.0.3.0). You can see a summary of the data [here](https://github.com/ibartomeus/IberianBees/blob/master/Summary.md)      
@@ -17,10 +19,10 @@ This is an in progress repo to document Iberian Bees Database (v.0.3.0). You can
 1-   Use "rawdata/Fetch_data.R" to update data from interent (e.g. Gbif, iNaturalist)   
 2-   Add new excels with data locally to "/rawdata/xls_to_add/" with the data in the first sheet.  
 3-   Run "rawdata/preprocessing.R" to convert those to csv and upload them to github.  
-3.3- I modified mannually some csvs because of non ASCII characters, and other annoying stuff. Sorry.  
+3.3- I modified manually some csvs because of non ASCII characters, and other annoying stuff. Sorry for the non-reproducible part.  
 4-   Add new csv's programatically using "/rawdata/Add_data.R".  
 5-   Use "data/datascript.R" to generate "data/clean_data.csv".  
-5.5- To fix species names I am using the workflow in "data/datascript.R" along with "data/manual_checks.csv", which can be edited for synonims, etc...  
+5.5- To fix species names I am using the workflow in "data/datascript.R" along with "data/manual_checks.csv", which can be edited to add synonims, etc...  
 6-   Knit Summary.Rmd to see updated nice summaries.  
 7-   Commit and push. Automatic tests may be done (in the future). Manually release a version on major updates.   
 8-   Metadata in EML is generated in Metadata_generator.R and can be consulted in "data/metadata"    
@@ -54,5 +56,3 @@ This is an in progress repo to document Iberian Bees Database (v.0.3.0). You can
 
 
 
-----------------------
-We used this awesome [Template](https://github.com/weecology/livedat) designed to assist in setting up a repository for regularly-updated data. Read [thier PLOS Biology paper](https://doi.org/10.1371/journal.pbio.3000125) for more details. Instructions for creating an updating data workflow can be found at the companion website: [UpdatingData.org](https://www.updatingdata.org/).
