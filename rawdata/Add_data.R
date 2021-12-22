@@ -13,13 +13,14 @@ colnames(data) <- c("Genus","Subgenus","Species","Subspecies",
 head(data)
 write.csv(data, "data/data.csv", row.names = FALSE)
 
-#read data.csv for comaprisions
+#read data.csv for comparisons
 #data <- read.csv("data/data.csv")
 #colnames(data)
 #head(data)
 
 #set up----
 #Load functions NOW is manually done from cleaner repo
+library(cleanR)
 check <- define_template(data, NA)
 
 #Add data Montero----
@@ -41,7 +42,7 @@ temp <- extract_pieces(newdat$Genus, subgenus = TRUE)
 newdat$Subgenus <- temp$piece1
 newdat <- add_uid(newdat = newdat, "AM")
 #newdat$Reference..doi. several doi's listed "," and "and" separated. Fix later?
-#questions flowers species with Genus_spcies -> accepted, easy to change in bulk. 
+#questions flowers species with Genus_species -> accepted, easy to change in bulk. 
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
             row.names = FALSE, append = TRUE)
@@ -427,6 +428,7 @@ size <- size + nrow(newdat)
 
 
 #Add data Obeso----
+#I start using cleanR package
 #help_template()
 newdat <- read.csv(file = 'rawdata/csvs/Obeso.csv')
 compare_variables(check, newdat)
@@ -444,7 +446,7 @@ newdat$Authors.to.give.credit <- "EF Ploquin, JM Herrera, JR Obeso"
 #help_geo()
 #help_species()
 newdat <- drop_variables(check, newdat) #reorder and drop variables
-summary(newdat) #longitude check
+summary(newdat)  
 newdat <- add_uid(newdat = newdat, 'JRO')
 write.table(x = newdat, file = 'data/data.csv', quote = TRUE, sep = ',', col.names = FALSE, row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
@@ -596,7 +598,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add Abejas Sur 2011 y 2012 C Ornosa -------
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Abejas Sur 2011 y 2012 C Ornosa_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/Abejas Sur 2011 y 2012 C Ornosa_IM_R.csv', sep = ";")
 compare_variables(check, newdat)
 (temp <- extract_date(newdat$Date, format_ = "%d-%m-%Y"))
 newdat$Day <- temp$day
@@ -606,6 +608,7 @@ newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
 newdat <- add_uid(newdat = newdat, 'COs')
+newdat$Authors.to.give.credit <- "C. Ornosa"
 write.table(x = newdat, file = 'data/data.csv', quote = TRUE, sep = ',', col.names = FALSE, row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
@@ -622,7 +625,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add Rhodanthidium  C Ornosa   -----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Rhodanthidium  C Ornosa_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/Rhodanthidium  C Ornosa_IM_R.csv', sep = ";")
 compare_variables(check, newdat)
 (temp <- extract_date(newdat$Date, "%d-%m-%Y"))
 newdat$Day <- temp$day
@@ -641,7 +644,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add Muestreos abejas 2018 C Ornosa -----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Muestreos abejas 2018 C Ornosa_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/Muestreos abejas 2018 C Ornosa_IM_R.csv', sep = ";")
 compare_variables(check, newdat)
 (temp <- extract_date(newdat$Date, "%d-%m-%Y"))
 newdat$Day <- temp$day
@@ -658,12 +661,21 @@ write.table(x = newdat, file = 'data/data.csv', quote = TRUE, sep = ',', col.nam
 size <- size + nrow(newdat) #keep track of expected length
 
 
-# REDO Add Megachilidae 2004-2008 Ortiz-Torres-Ornosa #GPS MESSED UP---- 
+# Add Megachilidae 2004-2008 Ortiz-Torres-Ornosa---- 
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Megachilidae 2004-2008 Ortiz-Torres-Ornosa_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/Megachilidae 2004-2008 Ortiz-Torres-Ornosa_IM_R.csv', sep = ";")
 compare_variables(check, newdat)
+help_species()
+temp <- strsplit(x = as.character(newdat$UTM), split = ' ') 
+lat <- c()
+long <- c()
+for (i in 1:length(newdat$UTM)){
+  lat[i] <- temp[[i]][1] #for first split
+  long[i] <- temp[[i]][2] #for second split
+  } 
 help_geo()
-mgrs::mgrs_to_latlng(as.character(newdat$UTM))
+newdat$Latitude <- parzer::parse_lat(lat)
+newdat$Longitude <- parzer::parse_lon(long)
 newdat$Authors.to.give.credit <- "Ortiz, Ornosa, Torres"
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
@@ -675,7 +687,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add Abejas varios anos hasta 2012 C Ornosa-----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Abejas varios anos hasta 2012 C Ornosa_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/Abejas varios anos hasta 2012 C Ornosa_IM_R.csv', sep = ";")
 compare_variables(check, newdat)
 help_geo()
 newdat$Latitude <- parzer::parse_lat(as.character(newdat$GPS))
@@ -703,15 +715,12 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add Bombus_UCM_Biobombus ----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Bombus_UCM_Biobombus_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/Bombus_UCM_Biobombus_IM_R.csv', sep = ";")
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 help_geo()
-temp <- mgrs::mgrs_to_latlng(as.character(newdat$GPS..N.)[104:105])
-newdat$Latitude[104:105] <- temp$lat
-newdat$Longitude[104:105] <- temp$lng
-newdat$Latitude[-c(104:105)] <- parzer::parse_lat(as.character(newdat$GPS..N.)[-c(104:105)]) 
-newdat$Longitude[-c(104:105)] <- parzer::parse_lat(as.character(newdat$GPS..E.)[-c(104:105)])
+newdat$Latitude <- parzer::parse_lat(as.character(newdat$GPS..N.)) 
+newdat$Longitude <- parzer::parse_lon(as.character(newdat$GPS..E.))
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
 newdat <- add_uid(newdat = newdat, 'test')
@@ -721,9 +730,8 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add Megachilidae Salamanca Félix Torres (C. Ornosa)----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Megachilidae Salamanca Félix Torres (C. Ornosa)_IM.csv', sep =";")
+newdat <- read.csv(file = 'rawdata/csvs/Megachilidae Salamanca Félix Torres (C. Ornosa)_IM_R.csv', sep =";")
 compare_variables(check, newdat)
-Date
 (temp <- extract_date(newdat$Date, "%d-%m-%Y"))
 newdat$Day <- temp$day
 newdat$Month <- temp$month
@@ -827,7 +835,7 @@ newdat$Month <- as.character(newdat$Month)
 newdat$Month <- ifelse(as.character(newdat$Month) == "", as.character(temp$month), newdat$Month)
 newdat$Year <- as.character(newdat$Year)
 newdat$Year <- ifelse(newdat$Year == "", temp$year, newdat$Year)
-#HERE WE CAN ENHANCE YEARS!!
+#HERE WE CAN ENHANCE YEARS!! (to do someday)
 temp <- extract_pieces(newdat$GenSp, species = TRUE)
 head(temp)
 newdat$Genus <- temp$piece2  
@@ -845,7 +853,15 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add Vicente Martínez-López----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/database_iberian_bees_v3_VML_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/database_iberian_bees_v3_VML.csv')
+compare_variables(check, newdat)
+colnames(newdat)[which(colnames(newdat) == "Coordinate.precision..e.g..GPS...10km.")] <- "Coordinate.precision"
+colnames(newdat)[which(colnames(newdat) == "month")] <- "Month"
+colnames(newdat)[which(colnames(newdat) == "day")] <- "Day"
+colnames(newdat)[which(colnames(newdat) == "End.Date")] <- "End.date"
+colnames(newdat)[which(colnames(newdat) == "Determiner")] <- "Determined.by"
+colnames(newdat)[which(colnames(newdat) == "Reference..doi.")] <- "Reference.doi"
+colnames(newdat)[which(colnames(newdat) == "Collection.Location_ID")] <- "Local_ID"
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
@@ -939,13 +955,14 @@ newdat <- add_uid(newdat = newdat, 'G')
 write.table(x = newdat, file = 'data/data.csv', quote = TRUE, sep = ',', col.names = FALSE, row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-#Add BanosPicon  #Latlong imposibles? ---- 
+#Add BanosPicon ---- 
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/BanosPicon etal database_iberian_bees_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/BanosPicon_database_iberian_bees.csv')
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+#NO CONSIGO ENTENDER COMO ESTAN LAS COORDENADAS!! 
 newdat$Latitude <- NA
 newdat$Longitude <- NA
 newdat <- add_uid(newdat = newdat, 'BP')
@@ -954,7 +971,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add CapCreus.csv----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/CapCreusId_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/CapCreusId_IM_R.csv', sep = ";")
 compare_variables(check, newdat)
 head(newdat)
 colnames(newdat)[which(colnames(newdat) == 'Site')] <- 'Locality' #Rename variables if needed
@@ -984,17 +1001,22 @@ newdat <- add_uid(newdat = newdat, 'AM2.')
 write.table(x = newdat, file = 'data/data.csv', quote = TRUE, sep = ',', col.names = FALSE, row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-#WARNING Add Megachilidae 2009 Ortiz-Torres-Ornosa #Lat-Long cruzadas ---- 
+#Add Megachilidae 2009 Ortiz-Torres-Ornosa ---- 
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Megachilidae 2009 Ortiz-Torres-Ornosa_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/Megachilidae 2009 Ortiz-Torres-Ornosa_IM_R.csv', sep = ";")
 compare_variables(check, newdat)
 help_geo()
-mgrs::mgrs_to_latlng(as.character(newdat$UTM)[!is.na(newdat$UTM)][-c(172:183)])
-# SE PUEDEN RECUPERAR DESPUES DE QUE LO MIRE IVAN
+temp <- mgrs::mgrs_to_latlng(as.character(newdat$UTM)[!is.na(newdat$UTM)][-c(40,51,52)]) #40, 51, 52 fail
+newdat$Latitude <- NA
+newdat$Latitude[!is.na(newdat$UTM)][-c(40,51,52)] <- temp$lat
+newdat$Longitude <- NA
+newdat$Longitude[!is.na(newdat$UTM)][-c(40,51,52)] <- temp$lng
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
-#FEMALE TO FIX!
+newdat$Female <- as.character(newdat$Female)
+newdat$Worker[which(newdat$Female == " obrera")] <- 1
+newdat$Female[which(newdat$Female == " obrera")] <- 0
 newdat$Authors.to.give.credit <- "Ortiz, Torres, Ornosa"
 newdat <- add_uid(newdat = newdat, 'OTO2.')
 write.table(x = newdat, file = 'data/data.csv', quote = TRUE, sep = ',', col.names = FALSE, row.names = FALSE, append = TRUE)
@@ -1002,13 +1024,13 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add historical data (Collado)----
 help_template()
-newdat <- read.csv(file = "rawdata/csvs/Ocurrencias_Espana_Collado_IM.csv", sep = ";")
+newdat <- read.csv(file = "rawdata/csvs/Ocurrencias_Espana_Collado_IM_R.csv", sep = ";")
 compare_variables(check, newdat)
 colnames(newdat)[which(colnames(newdat) == 'Local_id')] <- 'Local_ID' #Rename variables if needed"
 colnames(newdat)[which(colnames(newdat) == 'collector')] <- 'Collector' #Rename variables if needed"
 colnames(newdat)[which(colnames(newdat) == 'taxonomist')] <- 'Determined.by' #Rename variables if needed"
-colnames(newdat)[which(colnames(newdat) == 'm_plant_species')] <- 'Flowers.visited' #CHECK ALSO GENUS?!
-colnames(newdat)[which(colnames(newdat) == 'Location')] <- 'Locality' #CHECK ALSO GENUS?!
+colnames(newdat)[which(colnames(newdat) == 'm_plant_species')] <- 'Flowers.visited' 
+colnames(newdat)[which(colnames(newdat) == 'Location')] <- 'Locality' 
 #UTM We can recover some UTM's from here!
 #Long / lat not in numeric :( 
 unique(newdat$Latitude)
@@ -1024,42 +1046,43 @@ newdat$Longitude[which(newdat$Longitude %in% c(""))] <- NA
 newdat$Longitude[which(newdat$Longitude %in% c("42.55, -0.55"))] <- -0.55
 newdat$Latitude <- as.numeric(as.character(newdat$Latitude))
 newdat$Longitude <- as.numeric(as.character(newdat$Longitude))
+#Probably can be re-checked.
 unique(newdat$Sex)
-unique(newdat$Individuals)
-newdat$Individuals[which(newdat$Individuals %in% c("", "M", "F"))] <- 1
+unique(newdat$Individuals) 
 newdat$Male <- ifelse(newdat$Sex %in% c("M"), newdat$Individuals, 0)
 newdat$Female <- ifelse(newdat$Sex %in% c("F", "Q"), newdat$Individuals, 0)
 newdat$Worker <- ifelse(newdat$Sex %in% c("W"), newdat$Individuals, 0)
 newdat$Not.specified <- ifelse(!newdat$Sex %in% c("W", "F", "Q", "M"), newdat$Individuals, 0)
 compare_variables(check, newdat)
-colnames(newdat)[which(colnames(newdat) == 'Published.by')] <- 'Authors.to.give.credit' #CHECK ALSO GENUS?!
+colnames(newdat)[which(colnames(newdat) == 'Published.by')] <- 'Authors.to.give.credit' 
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+#NOTE: some impossible lat longs may be recoverable. Also in Year. 
 (temp <- extract_pieces(newdat$Species, species = TRUE))
-#Subspecies also needs cleaning!! OJO
+newdat$Species <- temp$piece1
+#Subspecies also needs cleaning!
 #subsepecies
 temp <- strsplit(x = as.character(newdat$Subspecies), split = " ")
-length(temp) == length(newdat$subspecies)
+length(temp) == length(newdat$Subspecies)
 newdat$Subspecies <- as.character(newdat$Subspecies)
 newdat$Subspecies[which(newdat$Subspecies == "")] <- NA
 for (i in which(!is.na(newdat$Subspecies))){
   newdat$Subspecies[i] <- temp[[i]][3]
 }
 head(newdat)
-newdat$Species <- temp$piece1
 newdat$Authors.to.give.credit <- "Compiled by MA Collado"
 newdat <- add_uid(newdat = newdat, 'Lit')
+summary(newdat)
 write.table(x = newdat, file = 'data/data.csv', quote = TRUE, sep = ',', col.names = FALSE, row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
 #Add MNCN-Apoidea-PAlvarez-MParis-----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/MNCN-Apoidea-PAlvarez-MParisfechas_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/MNCN-Apoidea-PAlvarez-MParisfechas_IM_R.csv', sep = ";")
 compare_variables(check, newdat)
-#When extra columns appear suspect something went wrong... CHECK OTHER DATASETS
 newdat$Local_ID <- paste(newdat$Id, newdat$CodigoColeccion, newdat$nNoCatalogo, sep = "_")
-#unique(newdat$UTM) #cajon de sastre
+#unique(newdat$UTM) #poca cosa
 unique(newdat$Sex) #miedito el descontrol que hay
 newdat$Female <- ifelse(newdat$Sex %in% c("hembra", "Hembra"), 1, 0)
 newdat$Male <- ifelse(newdat$Sex %in% c("macho", "Macho"), 1, 0)
@@ -1067,26 +1090,35 @@ newdat$Worker <- ifelse(newdat$Sex %in% c("obrera"), 1, 0)
 newdat$Not.specified <- ifelse(!newdat$Sex %in% c("obrera", "macho", "Macho", "hembra", "Hembra"), 1, 0)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
-#Year, month and day not numeric CHECK!!! WARNING e.g. Day = España
-unique(newdat$Month)
-newdat$Day <- as.numeric(newdat$Day)
-newdat$Month <- as.numeric(newdat$Month)
-newdat$Year <- as.numeric(newdat$Year)
-summary(newdat)
-unique(newdat$Genus) #NA?
-newdat[which(is.na(newdat$Genus)),]
+summary(newdat) 
+unique(newdat$Month) #THIS CAN BE DEPURATED e.g. month 18
 newdat$Authors.to.give.credit <- "compiled by P. Alvarez and M. Paris"
 newdat <- add_uid(newdat = newdat, 'MNCN')
 write.table(x = newdat, file = 'data/data.csv', quote = TRUE, sep = ',', col.names = FALSE, row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
 
-#Colletes Iberia MK 2020-10-11ADD_ONLY_ES_IM.csv
-#To Be Done
-
+#Colletes Iberia MK 2020-10-11ADD_ONLY_ES_IM.csv----
+#help_template()
+newdat <- read.csv(file = 'rawdata/csvs/Colletes Iberia MK 2020-10-11ADD_ONLY_ES_IM.csv', sep = ";")
+compare_variables(check, newdat)
+colnames(newdat)[which(colnames(newdat) == 'Coll....source')] <- 'Authors.to.give.credit' #Rename variables if needed
+newdat$Genus <- "Colletes"
+newdat <- add_missing_variables(check, newdat)
+unique(newdat$Country)
+newdat <- subset(newdat, Country == "SPAIN") #PT already in T. Wood compilation according to Luisa. Check?
+help_geo()
+newdat$Latitude <- parzer::parse_lat(as.character(newdat$Latitude))
+newdat$Longitude <- parzer::parse_lon(as.character(newdat$Longitude))
+newdat <- drop_variables(check, newdat) #reorder and drop variables
+summary(newdat)
+newdat <- add_uid(newdat = newdat, 'MK')
+write.table(x = newdat, file = 'data/data.csv', quote = TRUE, sep = ',', col.names = FALSE, row.names = FALSE, append = TRUE)
+size <- size + nrow(newdat) #keep track of expected length
 
 #Add data Wood----
-newdat <- read.csv(file = "rawdata/csvs/Wood_combined.csv")
+#DONE OLD STYLE without cleanR
+newdat <- read.csv(file = "rawdata/csvs/Wood_combined_IM_R_FIN.csv", sep = ";")
 colnames(newdat)
 summary(newdat)
 unique(newdat$Species)
@@ -1132,27 +1164,27 @@ levels(newdat$Start.date)[1001:2000] #4/5/1983,
 levels(newdat$Start.date)[2001:2800] #4/5/1983, + some errors
 levels(newdat$Year.uncertainty) #move to notes?
 newdat$Notes.and.queries <-newdat$Year.uncertainty 
-levels(newdat$End.date.publication.date)[1:1000] 
-levels(newdat$End.date.publication.date)[1001:2000] 
-levels(newdat$End.date.publication.date)[2001:3000] 
-levels(newdat$End.date.publication.date)[3001:4000] 
-levels(newdat$End.date.publication.date)[4001:5000] 
-levels(newdat$End.date.publication.date)[5001:6000] 
-levels(newdat$End.date.publication.date)[6001:7000] 
-levels(newdat$End.date.publication.date)[7001:7500] 
+levels(newdat$End.date.original)[1:1000] 
+levels(newdat$End.date.original)[1001:2000] 
+levels(newdat$End.date.original)[2001:3000] #Unitil here the End.date column is fixed manually...
+levels(newdat$End.date.original)[3001:4000] 
+levels(newdat$End.date.original)[4001:5000] 
+levels(newdat$End.date.original)[5001:6000] 
+levels(newdat$End.date.original)[6001:7000] 
+levels(newdat$End.date.original)[7001:7500] 
 #Festival: 12/31/1935, 12 - VI - 1970, 12 VIII 1968, 12 Febr. 1965
 # 1-vii-1960, 18800614, 
 #estrategia, separar los que tengan /, los que tengan letras, 
 #los que sean solo numeros, etc...
-newdat$End.date.publication.date <- as.character(newdat$End.date.publication.date)
-numeric <- grep(pattern = "^[0-9]*$", x = newdat$End.date.publication.date)
+newdat$End.date.original <- as.character(newdat$End.date.original)
+numeric <- grep(pattern = "^[0-9]*$", x = newdat$End.date.original)
 for(i in numeric){
-  temp_year <- substr(newdat$End.date.publication.date[i], start = 1,stop = 4)
-  temp_month <- substr(newdat$End.date.publication.date[i], start = 5,stop = 6)
-  temp_day <- substr(newdat$End.date.publication.date[i], start = 7,stop = 8)
-  newdat$End.date.publication.date[i] <- paste(temp_month, temp_day, temp_year, sep = "/")
+  temp_year <- substr(newdat$End.date.original[i], start = 1,stop = 4)
+  temp_month <- substr(newdat$End.date.original[i], start = 5,stop = 6)
+  temp_day <- substr(newdat$End.date.original[i], start = 7,stop = 8)
+  newdat$End.date.original[i] <- paste(temp_month, temp_day, temp_year, sep = "/")
 }
-newdat$End.date.publication.date[numeric] #good, I recovered some...
+newdat$End.date.original[numeric] #good, I recovered some...
 temp <- as.POSIXlt(as.character(newdat$Start.date), format = "%m/%d/%Y") #extract month and day
 newdat$month <- format(temp,"%m")
 newdat$day <- format(temp,"%d")
@@ -1184,16 +1216,16 @@ newdat <- newdat[,c("Genus",
                     "Species",
                     "Subspecies",
                     "Country",
-                    "Province..1936.",
+                    "Province",
                     "Locality",
                     "Latitude",
                     "Longitude",
-                    "Coordinate.precision..e.g..GPS..uncert....10km.",
+                    "Coordinate.precision",
                     "Year",
                     "month",
                     "day",
                     "Start.date",
-                    "End.date.publication.date",
+                    "End.date.original",
                     "Collector",
                     "Determiner",
                     "Female",
@@ -1284,7 +1316,7 @@ size <- size + nrow(newdat)
 data <- read.csv("data/data.csv") #Open in OpenOffice and substitute " by nothing. FIX!
 #to fix:
 #OTO2.194
-#Collado, todo movido
+#Collado, todo movido #fixed now? Creo que sí.
 #Wood_etal27211
 #Wood_etal27532
 #MNCN3223
