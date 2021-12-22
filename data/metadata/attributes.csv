@@ -1,0 +1,29 @@
+fileName,variableName,description,unitText
+data_clean.csv,Genus,Genus,Categorical
+data_clean.csv,Subgenus,Subgenus,Categorical
+data_clean.csv,Species,Species,Categorical
+data_clean.csv,Subspecies,Subspecies,Categorical
+data_clean.csv,Country,Country of collection,Categorical
+data_clean.csv,Province,Province of collection,Categorical
+data_clean.csv,Locality,Locality as provided by original collectors,Text
+data_clean.csv,Latitude,Latitude,Decimal degrees
+data_clean.csv,Longitude,Longitude,Decimal degrees
+data_clean.csv,Coordinate.precision,Precision at which the coordinates are provided,Categorical
+data_clean.csv,Year,Year of collection,Year
+data_clean.csv,Month,Month of collection,Month
+data_clean.csv,Day,Day of collection,Day
+data_clean.csv,Start.date,Free text regarding earlier posible date of collection,Text
+data_clean.csv,End.date,Free text regarding later posible date of collection,Text
+data_clean.csv,Collector,Name of the collector,Categorical
+data_clean.csv,Determined.by,Name of the person who identified the specimen,Categorical
+data_clean.csv,Female,Number of females recorded (including queens in social spcies),number of records
+data_clean.csv,Male,Number of males recorded,number of records
+data_clean.csv,Worker,Number of workers recorded (for social species),number of records
+data_clean.csv,Not.specified,Number of specimens recorded without sex identification,number of records
+data_clean.csv,Reference.doi,"If the data is publiched, the DOI of the papers where it appears",Text
+data_clean.csv,Flowers.visited,Free text including the flowers that the specimen was visiting,Text
+data_clean.csv,Local_ID,Unique identification in the local collection,id
+data_clean.csv,Authors.to.give.credit,Authors providing the original dataset,Text
+data_clean.csv,Any.other.additional.data,Free text to note any other additional data,Text
+data_clean.csv,Notes.and.queries,Free text to note any other notes or queries,Text
+data_clean.csv,uid,Unique identification in IBD.,id
