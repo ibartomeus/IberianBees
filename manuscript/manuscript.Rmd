@@ -135,7 +135,7 @@ write.bibtex(file="knitcitations.bib")
 ```{r Tabla1, results='asis', echo=FALSE, cache=FALSE}
 library("knitr")
 metadata <- read.csv("../data/metadata/attributes.csv")
-kable(metadata)
+kable(metadata[,-1])
 ```
 
 
