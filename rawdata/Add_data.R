@@ -24,7 +24,7 @@ library(cleanR)
 check <- define_template(data, NA)
 
 #Add data Montero----
-newdat <- read.csv(file = "rawdata/csvs/AnaMontero.csv")
+newdat <- read.csv(file = "rawdata/csvs/3_Montero_etal.csv")
 #old template, subgenus, start and end date missing.
 
 compare_variables(check, newdat)
@@ -51,7 +51,7 @@ size <- nrow(newdat) #because is the first one!
 
 #The following items are done before the functions were up and running.
 #Add data BAC ----
-newdat <- read.csv(file = "rawdata/csvs/BAC.csv")
+newdat <- read.csv(file = "rawdata/csvs/4_Arroyo-Correa.csv")
 colnames(newdat)
 #old template, subgenus, start and end date missing.
 newdat$Subgenus <- NA
@@ -71,7 +71,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data Castro ----
-newdat <- read.csv(file = "rawdata/csvs/Castro_FLOWERLAB.csv")
+newdat <- read.csv(file = "rawdata/csvs/18_Castro_etal.csv")
 colnames(newdat)[10] <- "precision" #just to see them both in two lines
 #quick way to compare colnames
 head(newdat)
@@ -94,7 +94,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data IMEDEA ----
-newdat <- read.csv(file = "rawdata/csvs/IMEDEA_MALLORCA.csv")
+newdat <- read.csv(file = "rawdata/csvs/30_Lazaro_etal.csv")
 colnames(newdat)[9] <- "precision" #just to see them both in two lines
 colnames(newdat)
 #old template, subgenus, start and end date missing.
@@ -117,7 +117,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data JV ----
-newdat <- read.csv(file = "rawdata/csvs/JV.csv")
+newdat <- read.csv(file = "rawdata/csvs/32_Valverde.csv")
 colnames(newdat)[9] <- "precision" #just to see them both in two lines
 colnames(newdat)
 #old template, subgenus, start and end date missing.
@@ -146,7 +146,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data LaraRomero ----
-newdat <- read.csv(file = "rawdata/csvs/LaraRomero.csv")
+newdat <- read.csv(file = "rawdata/csvs/33_Lara-Romero_etal.csv")
 colnames(newdat)
 #old template, subgenus, start and end date missing.
 newdat$Subgenus <- NA
@@ -166,7 +166,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data MartinezNunez ----
-newdat <- read.csv(file = "rawdata/csvs/MartinezNunez.csv")
+newdat <- read.csv(file = "rawdata/csvs/36_Nunez.csv")
 colnames(newdat)
 #old template, subgenus, start and end date missing.
 newdat$Subgenus <- NA
@@ -191,7 +191,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data MFM ----
-newdat <- read.csv(file = "rawdata/csvs/MFM_JL.csv")
+newdat <- read.csv(file = "rawdata/csvs/42_Ornosa_etal.csv")
 colnames(newdat)
 #old template, subgenus, start and end date missing.
 newdat$Subgenus <- NA
@@ -210,7 +210,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data Nunez ----
-newdat <- read.csv(file = "rawdata/csvs/Nunez.csv")
+newdat <- read.csv(file = "rawdata/csvs/45_Nunez.csv")
 colnames(newdat)
 #old template, subgenus, start and end date missing.
 newdat$Subgenus <- NA
@@ -229,7 +229,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data Heleno ----
-newdat <- read.csv(file = "rawdata/csvs/Ruben_heleno.csv")
+newdat <- read.csv(file = "rawdata/csvs/50_Heleno_etal.csv")
 colnames(newdat)
 colnames(newdat)[9] <- "precision" #just to see them both in two lines
 #subgenus missing.
@@ -253,7 +253,7 @@ size <- size + nrow(newdat)
 
 
 #Add data SERIDA ----
-newdat <- read.csv(file = "rawdata/csvs/SERIDA.csv")
+newdat <- read.csv(file = "rawdata/csvs/51_Minarro.csv")
 nrow(newdat)
 colnames(newdat)
 #Move queri2 to determiner.
@@ -280,7 +280,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data Ferrero----
-newdat <- read.csv(file = "rawdata/csvs/VFerrero.csv")
+newdat <- read.csv(file = "rawdata/csvs/53_Ferrero.csv")
 colnames(newdat)
 colnames(newdat)[9] <- "precision"
 #subgenus missing.
@@ -301,7 +301,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data Cavalho----
-newdat <- read.csv(file = "rawdata/csvs/Carvalho_pool.csv")
+newdat <- read.csv(file = "rawdata/csvs/16_Carvalho.csv")
 colnames(newdat)
 colnames(newdat)[10] <- "precision"
 #quick way to compare colnames
@@ -320,7 +320,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 #Add data vanapicanco-----
-newdat <- read.csv(file = "rawdata/csvs/vanapicanco.csv")
+newdat <- read.csv(file = "rawdata/csvs/52_Picanco.csv")
 colnames(newdat)
 colnames(newdat)[9] <- "precision"
 #subgenus missing.
@@ -347,7 +347,7 @@ size <- size + nrow(newdat)
 
 
 #Add data Magrach-----
-newdat <- read.csv(file = "rawdata/csvs/Magrach.csv")
+newdat <- read.csv(file = "rawdata/csvs/35_Magrach.csv")
 #not formated, so let's start here
 summary(newdat)
 newdat$Subspecies <- NA
@@ -430,7 +430,7 @@ size <- size + nrow(newdat)
 #Add data Obeso----
 #I start using cleanR package
 #help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Obeso.csv')
+newdat <- read.csv(file = 'rawdata/csvs/46_Obeso.csv')
 compare_variables(check, newdat)
 colnames(newdat)[which(colnames(newdat) == 'species')] <- 'Species' #Rename variables if needed
 colnames(newdat)[which(colnames(newdat) == 'subspecies')] <- 'Subspecies' #Rename variables if needed
@@ -453,7 +453,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add Costa ----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/database_iberian_bees_JCosta_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/23_Costa.csv', sep = ";")
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 #extract_pieces()
@@ -468,7 +468,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add Luis Miguel de Pablos.csv------
 help_template()
-newdat <- read.csv('rawdata/csvs/Luis Miguel de Pablos database_iberian_bees_v3_IM.csv', sep = ";")
+newdat <- read.csv('rawdata/csvs/34_dePablos.csv', sep = ";")
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 #extract_pieces()
@@ -483,7 +483,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add Bombus 2019 y 2020 C Ornosa -----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Bombus 2019 y 2020 C Ornosa_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/9_Ornosa.csv', sep = ";")
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 #extract_pieces()
@@ -502,7 +502,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add A.Nunez ----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/database_iberian_bees_A.Nunez_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/22_Nunez.csv', sep = ";")
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
@@ -514,7 +514,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add Moreira-gonçalves-----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/BM-database_iberian_bees_v3_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/6_Moreira.csv', sep = ";")
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
@@ -525,7 +525,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add Bombus 2016 C Ornosa -----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Bombus 2016 C Ornosa_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/7_Ornosa.csv', sep = ";")
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 help_geo()
@@ -544,7 +544,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Bombus terrestris varios años Ornosa----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Bombus terrestris varios años C Ornosa_IM.csv', sep=";")
+newdat <- read.csv(file = 'rawdata/csvs/10_Ornosa_etal.csv', sep=";")
 compare_variables(check, newdat)
 (temp <- extract_date(newdat$Date, "%d-%m-%Y"))
 newdat$Day <- temp$day
@@ -560,7 +560,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add Hormaza -----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Hormaza_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/29_Hormaza_etal.csv', sep = ";")
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
@@ -571,7 +571,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add Donana Stuart Roberts----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Donana_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/28_Roberts.csv', sep = ";")
 compare_variables(check, newdat)
 colnames(newdat)[which(colnames(newdat) == 'Determiner')] <- 'Determined.by' #Rename variables if needed
 colnames(newdat)[which(colnames(newdat) == 'Males')] <- 'Male' #Rename variables if needed
@@ -598,7 +598,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add Abejas Sur 2011 y 2012 C Ornosa -------
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Abejas Sur 2011 y 2012 C Ornosa_IM_R.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/1_Ornosa_etal.csv', sep = ";")
 compare_variables(check, newdat)
 (temp <- extract_date(newdat$Date, format_ = "%d-%m-%Y"))
 newdat$Day <- temp$day
@@ -614,7 +614,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add Trillo -----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/database_iberian_bees_v3_ATrillo_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/25_Trillo.csv', sep = ";")
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
@@ -625,7 +625,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add Rhodanthidium  C Ornosa   -----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Rhodanthidium  C Ornosa_IM_R.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/49_Ornosa_etal.csv', sep = ";")
 compare_variables(check, newdat)
 (temp <- extract_date(newdat$Date, "%d-%m-%Y"))
 newdat$Day <- temp$day
@@ -644,7 +644,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add Muestreos abejas 2018 C Ornosa -----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Muestreos abejas 2018 C Ornosa_IM_R.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/44_Ornosa.csv', sep = ";")
 compare_variables(check, newdat)
 (temp <- extract_date(newdat$Date, "%d-%m-%Y"))
 newdat$Day <- temp$day
@@ -663,7 +663,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add Megachilidae 2004-2008 Ortiz-Torres-Ornosa---- 
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Megachilidae 2004-2008 Ortiz-Torres-Ornosa_IM_R.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/37_Ortiz_etal.csv', sep = ";")
 compare_variables(check, newdat)
 help_species()
 temp <- strsplit(x = as.character(newdat$UTM), split = ' ') 
@@ -687,7 +687,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add Abejas varios anos hasta 2012 C Ornosa-----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Abejas varios anos hasta 2012 C Ornosa_IM_R.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/2_Ornosa_etal.csv', sep = ";")
 compare_variables(check, newdat)
 help_geo()
 newdat$Latitude <- parzer::parse_lat(as.character(newdat$GPS))
@@ -703,7 +703,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add Joan Díaz-Calafat----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/JDC_database_iberian_bees_v3_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/31_Diaz-Calafat.csv', sep = ";")
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
@@ -715,7 +715,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add Bombus_UCM_Biobombus ----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Bombus_UCM_Biobombus_IM_R.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/11_Ornosa_etal.csv', sep = ";")
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 help_geo()
@@ -730,7 +730,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add Megachilidae Salamanca Félix Torres (C. Ornosa)----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Megachilidae Salamanca Félix Torres (C. Ornosa)_IM_R.csv', sep =";")
+newdat <- read.csv(file = 'rawdata/csvs/41_Torres.csv', sep =";")
 compare_variables(check, newdat)
 (temp <- extract_date(newdat$Date, "%d-%m-%Y"))
 newdat$Day <- temp$day
@@ -749,7 +749,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add C.Azpiazu----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/database_iberian_bees. C.Azpiazu_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/27_Azpiazu_etal.csv', sep = ";")
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
@@ -761,7 +761,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add Bombus 2017 C Ornosa----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Bombus 2017 C Ornosa_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/8_Ornosa.csv', sep = ";")
 compare_variables(check, newdat)
 help_geo()
 newdat$Latitude <- parzer::parse_lat(as.character(newdat$GPS..N.))
@@ -776,7 +776,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 # Add RamonCasimiroSoriguer----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/RamonCasimiroSoriguer_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/48_Casimiro-Soriguer_etal.csv', sep = ";")
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
@@ -788,7 +788,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add Megachilidae 2010-2012 Ortiz-Torres-Ornosa----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Megachilidae 2010-2012 Ortiz-Torres-Ornosa_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/39_Ortiz_etal.csv', sep = ";")
 compare_variables(check, newdat)
 (temp <- extract_date(newdat$Date, "%d-%m-%Y"))
 newdat$Day <- temp$day
@@ -808,7 +808,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add Megachilidae Rubus C Ornosa----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Megachilidae Rubus C Ornosa_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/40_Gonzalez.csv', sep = ";")
 compare_variables(check, newdat)
 (temp <- extract_date(newdat$Date, "%d-%m-%Y"))
 newdat$Day <- temp$day
@@ -824,7 +824,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add Brassicaceae x Hymenoptera----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Brassicaceae x Hymenoptera_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/13_Gomez.csv', sep = ";")
 head(newdat)
 compare_variables(check, newdat)
 colnames(newdat)[which(colnames(newdat) == 'Plant_species')] <- 'Flowers.visited' #Rename variables if needed
@@ -853,7 +853,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add Vicente Martínez-López----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/database_iberian_bees_v3_VML.csv')
+newdat <- read.csv(file = 'rawdata/csvs/26_Ornosa_etal.csv')
 compare_variables(check, newdat)
 colnames(newdat)[which(colnames(newdat) == "Coordinate.precision..e.g..GPS...10km.")] <- "Coordinate.precision"
 colnames(newdat)[which(colnames(newdat) == "month")] <- "Month"
@@ -879,7 +879,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add Andreia Penado, Mário Boieiro, Carla Rego e Renata Santos----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Data_project2gether_varios_part2_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/21_Boieiro_etal.csv', sep = ";")
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
@@ -897,7 +897,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add Bombus_UMU_BIOBOMBUS----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Bombus_UMU_BIOBOMBUS_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/12_Ornosa_etal.csv', sep = ";")
 compare_variables(check, newdat)
 (temp <- extract_date(newdat$Date, "%Y-%m-%d"))
 newdat$Day <- temp$day
@@ -918,7 +918,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add Bumblebee_data_climate_Marshall_et_al_2020-----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Bumblebee_data_climate_Marshall_et_al_2020_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/14_Marshall.csv', sep = ";")
 compare_variables(check, newdat)
 head(newdat)
 levels(newdat$Visitor)[11] <- "Bombus terrestris"
@@ -935,7 +935,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add cuadernos_abulenses----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/cuadernos_abulenses_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/20_Gayubo.csv', sep = ";")
 compare_variables(check, newdat)
 head(newdat)
 help_geo()
@@ -957,7 +957,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add BanosPicon ---- 
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/BanosPicon_database_iberian_bees.csv')
+newdat <- read.csv(file = 'rawdata/csvs/5_Banos-Picon_etal.csv')
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
@@ -971,7 +971,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add CapCreus.csv----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/CapCreusId_IM_R.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/15_Bartomeus_etal.csv', sep = ";")
 compare_variables(check, newdat)
 head(newdat)
 colnames(newdat)[which(colnames(newdat) == 'Site')] <- 'Locality' #Rename variables if needed
@@ -992,7 +992,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add AinhoaM----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/database_iberian_bees_v3_AinhoaM_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/24_Magrach.csv', sep = ";")
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
@@ -1003,7 +1003,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add Megachilidae 2009 Ortiz-Torres-Ornosa ---- 
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Megachilidae 2009 Ortiz-Torres-Ornosa_IM_R.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/38_Ortiz_etal.csv', sep = ";")
 compare_variables(check, newdat)
 help_geo()
 temp <- mgrs::mgrs_to_latlng(as.character(newdat$UTM)[!is.na(newdat$UTM)][-c(40,51,52)]) #40, 51, 52 fail
@@ -1024,7 +1024,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add historical data (Collado)----
 help_template()
-newdat <- read.csv(file = "rawdata/csvs/Ocurrencias_Espana_Collado_IM_R.csv", sep = ";")
+newdat <- read.csv(file = "rawdata/csvs/47_Collado_etal.csv", sep = ";")
 compare_variables(check, newdat)
 colnames(newdat)[which(colnames(newdat) == 'Local_id')] <- 'Local_ID' #Rename variables if needed"
 colnames(newdat)[which(colnames(newdat) == 'collector')] <- 'Collector' #Rename variables if needed"
@@ -1079,7 +1079,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add MNCN-Apoidea-PAlvarez-MParis-----
 help_template()
-newdat <- read.csv(file = 'rawdata/csvs/MNCN-Apoidea-PAlvarez-MParisfechas_IM_R.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/43_Alvarez_etal.csv', sep = ";")
 compare_variables(check, newdat)
 newdat$Local_ID <- paste(newdat$Id, newdat$CodigoColeccion, newdat$nNoCatalogo, sep = "_")
 #unique(newdat$UTM) #poca cosa
@@ -1100,7 +1100,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Colletes Iberia MK 2020-10-11ADD_ONLY_ES_IM.csv----
 #help_template()
-newdat <- read.csv(file = 'rawdata/csvs/Colletes Iberia MK 2020-10-11ADD_ONLY_ES_IM.csv', sep = ";")
+newdat <- read.csv(file = 'rawdata/csvs/19_Kuhlmann_etal.csv', sep = ";")
 compare_variables(check, newdat)
 colnames(newdat)[which(colnames(newdat) == 'Coll....source')] <- 'Authors.to.give.credit' #Rename variables if needed
 newdat$Genus <- "Colletes"
@@ -1118,7 +1118,7 @@ size <- size + nrow(newdat) #keep track of expected length
 
 #Add data Wood----
 #DONE OLD STYLE without cleanR
-newdat <- read.csv(file = "rawdata/csvs/Wood_combined_IM_R_FIN.csv", sep = ";")
+newdat <- read.csv(file = "rawdata/csvs/54_Wood_etal.csv", sep = ";")
 colnames(newdat)
 summary(newdat)
 unique(newdat$Species)
