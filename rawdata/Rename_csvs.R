@@ -8,7 +8,7 @@
 #are more authors involved
 
 #Read all files
-file_names_old <- list.files("./rawdata/csvs")              # Get current file names
+file_names_old <- list.files("./rawdata/csvs")  
 #write.csv(file_names_old, "Rename_csv.csv") #Save file names to add
 #names manually, this needs a proper search in the dataset and check
 #who is the main contributor of the dataset, that is, 
