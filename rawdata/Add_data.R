@@ -1,7 +1,7 @@
 #####################################################################################
 
 #In this script the different unprocessed csvs from rawdata/csvs/
-#are edited accordingly a default template and joined together
+#are edited to match a default template and joined together
 
 #####################################################################################
 #First create TEMPLATE to Add new data.
@@ -46,8 +46,23 @@ newdat$Year <- temp$year
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+
+#Remove row with all NA's (just one) Has a 0 in the female column
+#so cannot delete it easily by row
+newdat <- newdat[-59,] #not elegant but is the easiest
+#add identifier
 newdat <- add_uid(newdat = newdat, '1_Ornosa_')
 newdat$Authors.to.give.credit <- "C. Ornosa"
+#Add two missing provinces
+newdat$Province[newdat$Locality==
+"Jaén. Sierra de Cazorla. Nacimiento del Guadalquivir"] <-"Jaén"
+newdat$Province[newdat$Locality==
+"Imlil"] <-"Al Haouz"
+
+#Rename this cell to just the locality
+newdat$Locality <- gsub("Jaén. Sierra de Cazorla. Nacimiento del Guadalquivir", 
+"Sierra de Cazorla. Nacimiento del Guadalquivir", newdat$Locality)
+
 write.table(x = newdat, file = 'data/data.csv', quote = TRUE, sep = ',', 
 col.names = FALSE, row.names = FALSE, append = TRUE)
 size <- nrow(newdat) #because is the first one!
