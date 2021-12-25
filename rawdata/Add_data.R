@@ -65,6 +65,13 @@ newdat$Province[newdat$Locality==
 newdat$Locality <- gsub("Jaén. Sierra de Cazorla. Nacimiento del Guadalquivir", 
 "Sierra de Cazorla. Nacimiento del Guadalquivir", newdat$Locality)
 
+#Rewrite countries in English
+levels(factor(newdat$Country))
+newdat$Country <- gsub("España", 
+"Spain", newdat$Country, fixed=T)
+newdat$Country <- gsub("Marruecos", 
+"Morocco", newdat$Country, fixed=T)
+
 #Fix collect. names. 
 levels(factor(newdat$Collector)) 
 # IML to IM Liberal
@@ -115,6 +122,14 @@ newdat$Country[newdat$Province=="Segovia"] <- "España"
 newdat$Country[newdat$Province=="Jaén"] <- "España"
 newdat$Country[newdat$Province=="Zaragoza"] <- "España"
 #seems ok now
+#Rename countries in English
+levels(factor(newdat$Country))
+newdat$Country <- gsub("España", 
+"Spain", newdat$Country, fixed = TRUE) 
+newdat$Country <- gsub("Marruecos", 
+"Morocco", newdat$Country, fixed = TRUE) 
+newdat$Country <- gsub("Francia", 
+"France", newdat$Country)
 
 #Fix provinces (just the Spanish ones for now)
 newdat$Province[newdat$Locality=="Moratalla"] <- "Murcia"
@@ -229,6 +244,11 @@ newdat$Flowers.visited <- gsub("_", " ", newdat$Flowers.visited)
 
 #Fix author name IML to IM Liberal
 newdat$Collector <- gsub("IML", "IM Liberal", newdat$Collector)
+
+#Convert DOI to link
+levels(factor(newdat$Reference.doi))
+newdat$Reference.doi <- paste0("https://doi.org/",newdat$Reference.doi)
+#Both work
 
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
