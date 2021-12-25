@@ -384,6 +384,11 @@ newdat$Year <- temp$year
 newdat$Month <- temp$month
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+
+#Rename country
+newdat$Country <- gsub("España", "Spain",newdat$Country, fixed=T)
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '7_Ornosa_')
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE, 
