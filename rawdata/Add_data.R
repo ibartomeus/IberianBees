@@ -447,8 +447,13 @@ newdat$Month <- temp$month
 newdat$Year <- temp$year
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+
+newdat$Province[newdat$Locality=="Picos de Europa"] <- "Asturias"
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '9_Ornosa_')
-newdat$Authors.to.give.credit <- "Concepción Ornosa"
+newdat$Authors.to.give.credit <- "C. Ornosa"
+
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE, 
     row.names = FALSE, append = TRUE)
