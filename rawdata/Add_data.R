@@ -402,13 +402,30 @@ help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/8_Ornosa.csv', sep = ";")
 compare_variables(check, newdat)
 help_geo()
+
+#Fix coordinate before converting, it's giving an error
+newdat$GPS..E. <- gsub('4º27310"', '4º27´310"', newdat$GPS..E.)
 newdat$Latitude <- parzer::parse_lat(as.character(newdat$GPS..N.))
 newdat$Longitude <- parzer::parse_lon(as.character(newdat$GPS..E.))
+
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
 newdat$Authors.to.give.credit <- "C. Ornosa"
+
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+
+# Rename country
+newdat$Country <- gsub("España", "Spain", newdat$Country)
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '8_Ornosa_')
+
+#Erase empty genus and cell with Ácaros del 17_103 on genus
+newdat <- newdat[!is.na(newdat$Genus),]
+newdat <- newdat[newdat$Genus!="Ácaros del 17_103",]
+
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE, 
     row.names = FALSE, append = TRUE)
