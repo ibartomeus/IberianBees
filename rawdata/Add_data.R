@@ -156,7 +156,7 @@ month_d <- as.data.frame(format(as.Date(newdat$Start.date, format="%d-%m-%Y"),"%
 colnames(month_d) <- "m" #New colname for simplicity
 #Add leading 0 to month column before merging
 newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
-month_d$Month <- newdat$Month #Add new column (the month one from newdat)
+month_d$Month <- newdat$month #Add new column (the month one from newdat)
 
 #Workaround to fill missing years (needs Tydiverse)
 month_d_1 <- data.frame(t(month_d)) %>% 
@@ -248,7 +248,7 @@ newdat$Collector <- gsub("IML", "IM Liberal", newdat$Collector)
 #Convert DOI to link
 levels(factor(newdat$Reference.doi))
 newdat$Reference.doi <- paste0("https://doi.org/",newdat$Reference.doi)
-#Both work
+#Both links work
 
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
@@ -273,8 +273,24 @@ newdat <- newdat[,c(1,25,2:12,26,27,13:24,28)]
 #quick way to compare colnames
 cbind(colnames(newdat) , colnames(data)) #can be merged
 summary(newdat)
-#questions: flowers species visited list more than one flower, comma separated. Fix Later 
-#questions: Bombus has two forms "Bombus" and "Bombus " #run a white space eraser in bulk.
+
+compare_variables(check, newdat)
+#Rename cols to match template
+names(newdat)[names(newdat) == 'month'] <- 'Month'
+names(newdat)[names(newdat) == 'day'] <- 'Day'
+names(newdat)[names(newdat) == 
+'Coordinate.precision..e.g..GPS...10km.'] <- 'Coordinate.precision'
+#Add missing vars
+newdat <- add_missing_variables(check, newdat)
+newdat <- drop_variables(check, newdat) #reorder and drop variables
+
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+
+#Erase space of genus column
+levels(factor(newdat$Genus))
+newdat$Genus <- trimws(newdat$Genus, "r") #Erase trailing white space
+
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
             row.names = FALSE, append = TRUE)
