@@ -30,6 +30,8 @@ check <- define_template(data, NA)
 #Load library mgrs
 #install.packages("remotes") #Install remotes if not installed
 #remotes::install_gitlab("hrbrmstr/mgrs") #there are other alternatives in the repo for installation
+library(dplyr)
+library(tidyr) 
 
 #####################################################################################
 #ADD DATA NOW
@@ -63,6 +65,24 @@ newdat$Province[newdat$Locality==
 newdat$Locality <- gsub("Jaén. Sierra de Cazorla. Nacimiento del Guadalquivir", 
 "Sierra de Cazorla. Nacimiento del Guadalquivir", newdat$Locality)
 
+#Fix collect. names. 
+levels(factor(newdat$Collector)) 
+# IML to IM Liberal
+newdat$Collector <- gsub("IML", 
+"I.M. Liberal", newdat$Collector)
+#JL Blanco to J.L. Blanco
+newdat$Collector <- gsub("JL Blanco", 
+"J.L. Blanco", newdat$Collector)
+#P Vargas to P. Vargas
+newdat$Collector <- gsub("P Vargas", 
+"P. Vargas", newdat$Collector)
+
+#Fix identificator names. 
+levels(factor(newdat$Determined.by))
+#Replace front slash by a comma and a space
+newdat$Determined.by <- gsub("JL Blanco/C. Ornosa", 
+"JL Blanco, C. Ornosa", newdat$Determined.by)
+
 write.table(x = newdat, file = 'data/data.csv', quote = TRUE, sep = ',', 
 col.names = FALSE, row.names = FALSE, append = TRUE)
 size <- nrow(newdat) #because is the first one!
@@ -80,7 +100,82 @@ newdat$Authors.to.give.credit <- "C.Ornosa"
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+
+#Exclude rows that are NA in genus (full rows NA'S except some values)
+newdat <- newdat[!is.na(newdat$Genus),]
+
+#Fix countries (I do it in this way so we do not require any packages)
+newdat$Country[newdat$Province=="Granada"] <- "España"
+newdat$Country[newdat$Province=="Huesca"] <- "España"
+newdat$Country[newdat$Province=="Gerona"] <- "España"
+newdat$Country[newdat$Province=="Lérida"] <- "España"
+newdat$Country[newdat$Province=="Pontevedra"] <- "España"
+newdat$Country[newdat$Province=="Madrid"] <- "España"
+newdat$Country[newdat$Province=="Segovia"] <- "España"
+newdat$Country[newdat$Province=="Jaén"] <- "España"
+newdat$Country[newdat$Province=="Zaragoza"] <- "España"
+#seems ok now
+
+#Fix provinces (just the Spanish ones for now)
+newdat$Province[newdat$Locality=="Moratalla"] <- "Murcia"
+
+#Fix now dates, some years missing that can be filled from start and end date
+#Extract year from strat.date column, store it another dataframe
+year_d <- as.data.frame(format(as.Date(newdat$Start.date, format="%d-%m-%Y"),"%Y"))
+colnames(year_d) <- "y" #New colname for simplicity
+year_d$Year <- newdat$Year #Add new column (the year one from newdat)
+#Workaround to fill missing years (needs Tydiverse)
+year_d_1 <- data.frame(t(year_d)) %>% 
+  fill(., names(.)) %>%
+  t() %>% as.data.frame()
+#Works well, add now the column back to the dataframe
+newdat$Year <- year_d_1$Year
+#Check levels, fix "   6", its year 2008
+levels(factor(newdat$Year))
+newdat$Year <- gsub("   6", 
+"2008", newdat$Year)
+
+#Now this process can be repeated by month
+#Extract month from start.date column, store it another dataframe
+month_d <- as.data.frame(format(as.Date(newdat$Start.date, format="%d-%m-%Y"),"%m"))
+colnames(month_d) <- "m" #New colname for simplicity
+#Add leading 0 to month column before merging
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+month_d$Month <- newdat$Month #Add new column (the month one from newdat)
+
+#Workaround to fill missing years (needs Tydiverse)
+month_d_1 <- data.frame(t(month_d)) %>% 
+  fill(., names(.)) %>%
+  t() %>% as.data.frame()
+#Works well, add now the column back to the dataframe
+newdat$Month <- month_d_1$Month
+
+#Check collector levels
+levels(factor(newdat$Collector)) #they are a bit chaotic
+#Lets unify a bit
+newdat$Collector <- gsub("C. Onosa", 
+"C. Ornosa", newdat$Collector)
+newdat$Collector <- gsub("A. Glez.-Posada", 
+"A. Glez-Posada", newdat$Collector)
+newdat$Collector <- gsub("Pablo Vargas", 
+"P. Vargas", newdat$Collector)
+newdat$Collector <- gsub("P. Vargas (de M. Luceño)", 
+"P. Vargas", newdat$Collector, fixed = TRUE) #because of the ñ, fixed=T
+#Now looks a bit better
+
+#Check detetermined.by levels
+levels(factor(newdat$Determined.by)) 
+newdat$Determined.by <- gsub("C. Onosa", 
+                         "C. Ornosa", newdat$Determined.by)
+
+#Add space to  credit author
+levels(factor(newdat$Authors.to.give.credit))
+newdat$Authors.to.give.credit <- gsub("C.Ornosa", 
+"C. Ornosa", newdat$Authors.to.give.credit)
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '2_Ornosa_')
+
 write.table(x = newdat, file = 'data/data.csv', quote = TRUE, sep = ',', 
 col.names = FALSE, row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
@@ -125,8 +220,15 @@ temp <- extract_pieces(newdat$Genus, subgenus = TRUE)
 newdat$Subgenus <- temp$piece1
 newdat <- add_uid(newdat = newdat, "3_Montero_")
 
+#Fix Genus
+levels(factor(newdat$Genus)) #Erase everything after underscore
+newdat$Genus <- gsub("\\_.*","",newdat$Genus) #Correct now
+
 #Flowers visited, delete underscore, Genus_species to Genus species
 newdat$Flowers.visited <- gsub("_", " ", newdat$Flowers.visited)
+
+#Fix author name IML to IM Liberal
+newdat$Collector <- gsub("IML", "IM Liberal", newdat$Collector)
 
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
