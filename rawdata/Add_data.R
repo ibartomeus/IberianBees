@@ -902,6 +902,16 @@ newdat$Longitude <- gsub("°", "", newdat$Longitude)
 newdat$Latitude <- as.numeric(newdat$Latitude)
 newdat$Longitude <- as.numeric(newdat$Longitude)
 newdat <- add_uid(newdat = newdat, '21_Boieiro_etal_')
+
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
+
+#Change separator to keep consistency
+newdat$Collector <- gsub("\\ e", ",", newdat$Collector)
+newdat$Determined.by <- gsub("\\ e", ",", newdat$Determined.by)
+newdat$Authors.to.give.credit <- gsub("\\ e", ",", newdat$Authors.to.give.credit)
+
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE, 
     row.names = FALSE, append = TRUE)
