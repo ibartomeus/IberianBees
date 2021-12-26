@@ -468,12 +468,21 @@ compare_variables(check, newdat)
 (temp <- extract_date(newdat$Date, "%d-%m-%Y"))
 newdat$Day <- temp$day
 newdat$Year <- temp$year
-newdat$Month <- temp$monthDate
+newdat$Month <- temp$month
 newdat$Authors.to.give.credit <- "C. Ornosa"
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+
+#Rename country
+newdat$Country <- gsub("España", "Spain", newdat$Country)
+
+#This dataset has - in some cells instead of NA
+newdat[newdat=="-"] <- NA
+
+#add unique identifier
 newdat <- add_uid(newdat = newdat, '10_Ornosa_etal_')
+
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE, 
     row.names = FALSE, append = TRUE)
