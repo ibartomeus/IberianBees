@@ -769,8 +769,16 @@ for(i in which(temp > 0)){
                                stop = nchar(newdat$Species[i]))
 }
 
+#Rename country
+newdat$Country <- gsub("España", "Spain", newdat$Country)
 
-#question: España and Spain both used. Fix in bulk.
+#Rename Collector
+levels(factor(newdat$Collector))
+newdat$Collector <- gsub("H.Gaspar", "H. Gaspar", newdat$Collector)
+newdat$Collector <- gsub("H. Gaspar & P.Ferreira", 
+"H. Gaspar, P.Ferreira", newdat$Collector)
+
+
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
             row.names = FALSE, append = TRUE)
