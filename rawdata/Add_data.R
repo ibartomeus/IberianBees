@@ -638,7 +638,20 @@ colnames(newdat)[which(colnames(newdat) == 'Plant')] <- 'Flowers.visited' #Renam
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+
+#Add country name by coordinates 
+#I have checked by coordinates that all points belong to France
+#Here is the code, not added for simplicity
+#https://stackoverflow.com/questions/14334970/convert-latitude-and-longitude-coordinates-to-country-name-in-r
+newdat$Country <- "France"
+
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '14_Marshall_')
+
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE, 
     row.names = FALSE, append = TRUE)
