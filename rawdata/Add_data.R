@@ -671,12 +671,34 @@ unique(newdat$Sex)
 newdat$Male <- ifelse(newdat$Sex == "male", 1, 0)
 newdat$Female <- ifelse(newdat$Sex %in% c("female", "queen"), 1, 0)
 newdat$Worker <- ifelse(newdat$Sex == "worker", 1, 0)
-#DOI and LAT LONG CAN BE ADDED
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
 newdat$Authors.to.give.credit <- "I. Bartomeus"
+
+#Add DOI
+newdat$Reference.doi <- "https://doi.org/10.1007/s00442-007-0946-1"
+#LAT LONG CAN BE ADDED!
+
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '15_Bartomeus_etal_')
+
+#Fixed levels Determined.by
+levels(factor(newdat$Determined.by))
+newdat$Determined.by <- gsub("l.O. Aguado", 
+"L.O. Aguado", newdat$Determined.by)
+newdat$Determined.by <- gsub("C.Molina", 
+"C. Molina", newdat$Determined.by)
+newdat$Determined.by <- gsub("F.J.Ortiz", 
+"F.J. Ortiz", newdat$Determined.by)
+newdat$Determined.by <- gsub("L.Castro", 
+"L. Castro", newdat$Determined.by)
+newdat$Determined.by[newdat$Determined.by==""] <- "I. Bartomeus"
+
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE, 
     row.names = FALSE, append = TRUE)
