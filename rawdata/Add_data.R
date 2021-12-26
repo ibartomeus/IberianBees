@@ -747,9 +747,8 @@ size <- size + nrow(newdat)
 
 #####################################################################################
 # 17_Carvalho
-
-#Not added!!!!
-
+#newdat <- read.csv(file = "rawdata/csvs/17_Carvalho.csv")
+#Is the same as 16_Carvalho, no need to add it
 #####################################################################################
 # 18_Castro_etal
 
