@@ -549,7 +549,23 @@ newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
 newdat$Authors.to.give.credit <- "C. Ornosa"
+
+#Rename country
+newdat$Country <- gsub("España", "Spain", newdat$Country)
+
+#Change separator of forward slash to comma
+levels(factor(newdat$Determined.by))
+newdat$Determined.by <- gsub("\\/", ", ", newdat$Determined.by)
+#Upper case all intial letters
+newdat$Determined.by <- stringr::str_to_title(newdat$Determined.by)
+newdat$Locality <- stringr::str_to_title(newdat$Locality)
+
+#Delete leading space
+newdat$Determined.by <- trimws(newdat$Determined.by, "l")
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '12_Ornosa_etal_')
+
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE, 
     row.names = FALSE, append = TRUE)
