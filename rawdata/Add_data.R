@@ -586,7 +586,15 @@ newdat$Month <- as.character(newdat$Month)
 newdat$Month <- ifelse(as.character(newdat$Month) == "", as.character(temp$month), newdat$Month)
 newdat$Year <- as.character(newdat$Year)
 newdat$Year <- ifelse(newdat$Year == "", temp$year, newdat$Year)
-#HERE WE CAN ENHANCE YEARS!! (to do someday)
+
+#Fix some years
+levels(factor(newdat$Year))
+newdat$Year[newdat$Year=="Iberideae"] <- NA
+#Some have two dates on them...
+#Maybe just show one of them? 
+#Just showing the fisrt one for now
+newdat$Year <- sub("-.*", "", newdat$Year)
+
 temp <- extract_pieces(newdat$GenSp, species = TRUE)
 head(temp)
 newdat$Genus <- temp$piece2  
@@ -596,8 +604,19 @@ newdat$Subspecies <-ifelse(!is.na(temp$piece2), temp$piece1, temp$to_split)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
-newdat$Authors.to.give.credit <- "compiled by JM Gomez"
+
+#Add country, all records seem that are from Spain
+newdat$Country <- "Spain"
+
+#Substitute underscore by space
+newdat$Flowers.visited <- gsub("\\_", " ", newdat$Flowers.visited)
+
+#Credit
+newdat$Authors.to.give.credit <- "Compiled by J.M. Gomez"
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '13_Gomez_')
+
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE,
     row.names = FALSE, append = TRUE)
