@@ -1283,7 +1283,21 @@ for (i in 1:length(newdat$day)){
   newdat$day[i] <- round(mean(temp),0)  
 }
 
+#Check variables
 compare_variables(check, newdat)
+#Rename cols
+colnames(newdat)[which(colnames(newdat) == 'precision')] <- 'Coordinate.precision' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'day')] <- 'Day' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'End.Date')] <- 'End.date' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'Reference..doi.')] <- 'Reference.doi' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'Collection.Location_ID')] <- 'Local_ID' #Rename variables if needed
+
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
+
+#Standardize separator
+newdat$Determined.by <- gsub("\\ /", ",", newdat$Determined.by)
 
 #write
 write.table(x = newdat, file = "data/data.csv", 
