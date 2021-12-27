@@ -1528,10 +1528,42 @@ for (i in 1:length(newdat$UTM)){
 help_geo()
 newdat$Latitude <- parzer::parse_lat(lat)
 newdat$Longitude <- parzer::parse_lon(long)
-newdat$Authors.to.give.credit <- "Ortiz, Ornosa, Torres"
+newdat$Authors.to.give.credit <- "J. Ortiz, C. Ornosa, F. Torres"
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+
+#Rename country
+newdat$Country <- gsub("España", "Spain", newdat$Country)
+#Delete extra spaces
+newdat$Locality <- gsub("El Raso.   Agoncillo" , 
+"El Raso. Agoncillo" , newdat$Locality)
+newdat$Locality <- gsub("Hayedo.       Ventosa" , 
+"Hayedo. Ventosa" , newdat$Locality)
+newdat$Locality <- gsub("La Tejera.    San Asensio" , 
+"La Tejera. San Asensio" , newdat$Locality)
+newdat$Locality <- gsub("Las Arenillas.    San Asensio" , 
+"Las Arenillas. San Asensio" , newdat$Locality)
+newdat$Locality <- gsub("Ribarrey.       Cenicero" , 
+"Ribarrey. Cenicero" , newdat$Locality)
+
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
+
+#Delete extra spaces
+newdat$Collector <- gsub("J.  Bosch"  , 
+"J. Bosch"  , newdat$Collector)
+#Fix this level
+newdat$Collector <- gsub("673"  , 
+NA  , newdat$Collector)
+#Rename levels
+newdat$Determined.by <- gsub("Bosch/ Ornosa"  , 
+"J. Bosch, C. Ornosa"  , newdat$Determined.by)
+newdat$Determined.by <- gsub("Torres/Ornosa"  , 
+"Torres, Ornosa"  , newdat$Determined.by)
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '37_Ortiz_etal_')
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE, 
