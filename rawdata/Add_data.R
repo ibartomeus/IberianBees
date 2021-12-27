@@ -1044,7 +1044,7 @@ write.table(x = newdat, file = 'data/data.csv',
 size <- size + nrow(newdat) #keep track of expected length
 
 ##################################################################################### 
-# 26_Ornosa_etal.csv (Old file name Vicente Martínez-López, maybe rename to Martinez?)
+# 26_Ornosa_etal (Old file name Vicente Martínez-López, maybe rename to Martinez?)
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/26_Ornosa_etal.csv')
@@ -1091,7 +1091,25 @@ compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
+
+#Standardize separation in names
+newdat$Determined.by <- gsub("J.Ortiz", 
+"J. Ortiz", newdat$Determined.by)
+
+#Convert to link format
+newdat$Reference.doi <- paste0("https://doi.org/",
+newdat$Reference.doi)
+#Ugly but works, convert now "https://doi.org/NA" back to NA
+newdat$Reference.doi <- gsub("https://doi.org/NA" , NA, newdat$Reference.doi)
+#DOI works fine
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '27_Azpiazu_etal_')
+
 write.table(x = newdat, file = 'data/data.csv', 
             quote = TRUE, sep = ',', col.names = FALSE, 
             row.names = FALSE, append = TRUE)
