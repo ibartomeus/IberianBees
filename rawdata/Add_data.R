@@ -1140,7 +1140,13 @@ newdat$Authors.to.give.credit <- "Stuart Roberts"
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+
+#Rename country
+newdat$Country <- gsub("SPAIN", "Spain", newdat$Country)
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '28_Roberts_')
+
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE, 
     row.names = FALSE, append = TRUE)
