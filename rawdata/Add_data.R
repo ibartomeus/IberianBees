@@ -1347,7 +1347,17 @@ newdat <- add_missing_variables(check, newdat)
 #help_species()
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+
+#Convert months to numbers
+newdat$Month <- match(newdat$Month, month.name)
+
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
+
+#Add unique identificator
 newdat <- add_uid(newdat = newdat, '34_dePablos_')
+
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE, 
     row.names = FALSE, append = TRUE)
