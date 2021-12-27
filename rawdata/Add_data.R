@@ -1002,7 +1002,14 @@ compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '24_Magrach_')
+
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE, 
     row.names = FALSE, append = TRUE)
