@@ -1282,6 +1282,9 @@ for (i in 1:length(newdat$day)){
   newdat$End.Date[i] <- paste(max(temp),newdat$Month[i],newdat$Year[i], sep = "-")
   newdat$day[i] <- round(mean(temp),0)  
 }
+
+compare_variables(check, newdat)
+
 #write
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
