@@ -972,7 +972,23 @@ newdat <- add_missing_variables(check, newdat)
 #help_species()
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+
+#Convert moth to number
+newdat$Month <- gsub("Agosto", "08", newdat$Month)
+newdat$Month <- gsub("Marzo", "03", newdat$Month)
+#Add leading 0 to month
+newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
+
+#Convert to link format
+newdat$Reference.doi <- paste0("https://doi.org/",
+newdat$Reference.doi)
+#Ugly but works, convert now "https://doi.org/NA" back to NA
+newdat$Reference.doi <- gsub("https://doi.org/NA" , NA, newdat$Reference.doi)
+#Both links work fine
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '23_Costa_')
+
 write.table(x = newdat, file = 'data/data.csv', quote = TRUE, 
             sep = ',', col.names = FALSE, row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
