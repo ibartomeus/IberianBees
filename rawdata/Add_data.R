@@ -926,7 +926,35 @@ compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
+
+#Gsub, add space between name and surname
+levels(factor(newdat$Collector))
+newdat$Collector <- gsub("A.Núñez", 
+"A. Núñez", newdat$Collector)
+newdat$Collector <- gsub("D.Luna" , 
+"D. Luna", newdat$Collector)
+newdat$Collector <- gsub("M.Miñarro" , 
+"M. Miñarro", newdat$Collector)
+newdat$Collector <- gsub("R.Martínez" , 
+"R. Martínez", newdat$Collector)
+levels(factor(newdat$Determined.by))
+newdat$Determined.by <- gsub("A.Núñez", 
+"A. Núñez", newdat$Determined.by)
+newdat$Determined.by <- gsub("C.Molina", 
+"C. Molina", newdat$Determined.by)
+newdat$Determined.by <- gsub("O.Aguado", 
+"O. Aguado", newdat$Determined.by)
+
+#Authors to give credit
+newdat$Authors.to.give.credit <- "A. Núñez"
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '22_Nunez_')
+
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE, 
     row.names = FALSE, append = TRUE)
