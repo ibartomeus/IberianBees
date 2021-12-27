@@ -1647,7 +1647,25 @@ newdat$Latitude[!is.na(newdat$UTM)] <- temp$lat
 newdat$Longitude[!is.na(newdat$UTM)] <- temp$lng
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
-newdat$Authors.to.give.credit <- "Ortiz, Torres, Ornosa"
+newdat$Authors.to.give.credit <- "J. Ortiz, F. Torres, C. Ornosa"
+
+#Rename countries
+newdat$Country <- gsub("España", "Spain", newdat$Country)
+newdat$Country <- gsub("Francia", "France", newdat$Country)
+#Trailing space province
+newdat$Province <- trimws(newdat$Province, "r")
+newdat$Locality <- trimws(newdat$Locality, "r")
+
+#Standardize collectors
+newdat$Collector <- gsub("A. Glez.-Posada", "A. Glez-Posada", newdat$Collector)
+newdat$Collector <- gsub("A. López /C. Ornosa", "A. López, C. Ornosa", newdat$Collector)
+#Standardize determined.by
+newdat$Determined.by <- gsub("J  Ortiz", "J. Ortiz", newdat$Determined.by)
+newdat$Determined.by <- gsub("J. Ortiz/C. Ornosa", "J. Ortiz, C. Ornosa", newdat$Determined.by)
+newdat$Determined.by <- gsub("F Torres", "F. Torres", newdat$Determined.by)
+newdat$Determined.by[newdat$Determined.by==" "] <- NA
+levels(factor(newdat$Determined.by))
+
 newdat <- add_uid(newdat = newdat, '39_Ortiz_etal_')
 write.table(x = newdat, file = 'data/data.csv',
     quote = TRUE, sep = ',', col.names = FALSE, 
@@ -1668,7 +1686,13 @@ newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
 newdat$Authors.to.give.credit <- "C. Ornosa"
+
+#Rename country
+newdat$Country <- gsub("España", "Spain", newdat$Country)
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '40_Gonzalez_')
+
 write.table(x = newdat, file = 'data/data.csv',
     quote = TRUE, sep = ',', col.names = FALSE, 
     row.names = FALSE, append = TRUE)
