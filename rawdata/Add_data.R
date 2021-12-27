@@ -1439,6 +1439,29 @@ newdat <- newdat[,c("pollinator_genus",
                     "uid")]
 #quick way to compare colnames
 cbind(colnames(newdat), colnames(data)) #can be merged
+
+#Check colnames and rename
+compare_variables(check, newdat)
+colnames(newdat)[which(colnames(newdat) == 'pollinator_genus')] <- 'Genus' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'pollinator_species')] <- 'Species' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'country')] <- 'Country' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'site_id')] <- 'Locality' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'latitude')] <- 'Latitude' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'longitude')] <- 'Longitude' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'year')] <- 'Year' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'month')] <- 'Month' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'day')] <- 'Day' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'Startday')] <- 'Start.date' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'Endday')] <- 'End.date' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'Endday')] <- 'End.date' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'Det')] <- 'Determined.by' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'Plant_sp')] <- 'Flowers.visited' #Rename variables if needed
+newdat <- drop_variables(check, newdat) #reorder and drop variables
+
+#Fix dot
+newdat$Collector <- gsub("Juan. P. Gonzalez-Varo", "Juan P. Gonzalez-Varo",
+newdat$Collector)
+
 #write
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
