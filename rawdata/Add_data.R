@@ -1489,6 +1489,22 @@ newdat$Authors.to.give.credit <- "Martínez-Núñez C., Rey P.J."
 temp <- newdat$Latitude
 newdat$Latitude <- newdat$Longitude
 newdat$Longitude <- temp
+
+compare_variables(check, newdat)
+#Rename variables
+colnames(newdat)[which(colnames(newdat) == 'Coordinate.precision..e.g..GPS...10km.')] <- 'Coordinate.precision' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'month')] <- 'Month' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'day')] <- 'Day' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'Reference..doi.')] <- 'Reference.doi' #Rename variables if needed
+
+#Rename as others
+newdat$Collector <- gsub("Martínez-Núñez C.",
+"C. Martínez-Núñez", newdat$Collector)
+newdat$Determined.by <- gsub("Martínez-Núñez C.",
+"C. Martínez-Núñez", newdat$Determined.by)
+newdat$Authors.to.give.credit <- gsub("Martínez-Núñez C., Rey P.J.",
+"C. Martínez-Núñez, P.J. Rey", newdat$Authors.to.give.credit)
+
 #write
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
