@@ -1066,7 +1066,17 @@ newdat$Latitude <- gsub("°", "", newdat$Latitude)
 newdat$Longitude <- gsub("°", "", newdat$Longitude)
 newdat$Latitude <- as.numeric(newdat$Latitude)
 newdat$Longitude <- as.numeric(newdat$Longitude)
+
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
+
+#Change separator
+newdat$Determined.by <- gsub("\\ y", ",", newdat$Determined.by)
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '26_Ornosa_etal_')
+
 write.table(x = newdat, file = 'data/data.csv', 
       quote = TRUE, sep = ',', col.names = FALSE,
       row.names = FALSE, append = TRUE)
