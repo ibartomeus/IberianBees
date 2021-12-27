@@ -1205,6 +1205,32 @@ newdat <- newdat[,c(1:24,32,29:31)]
 #quick way to compare colnames
 cbind(colnames(newdat), colnames(data)) #can be merged
 summary(newdat)
+
+#Compare variables and rename if necessary
+compare_variables(check, newdat)
+colnames(newdat)[which(colnames(newdat) == 'day')] <- 'Day' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'End.Date')] <- 'End.date' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'Reference..doi.')] <- 'Reference.doi' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'precision')] <- 'Coordinate.precision' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'Collection.Location_ID')] <- 'Local_ID' #Rename variables if needed
+colnames(newdat)[which(colnames(newdat) == 'Authors.to.give.credit0')] <- 'Authors.to.give.credit' #Rename variables if needed
+
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
+
+#Convert to link format
+newdat$Reference.doi <- paste0("https://doi.org/",
+newdat$Reference.doi)
+#Ugly but works, convert now "https://doi.org/NA" back to NA
+newdat$Reference.doi <- gsub("https://doi.org/NA" , NA, newdat$Reference.doi)
+#DOI works fine
+
+#Rename
+levels(factor(newdat$Collector))
+newdat$Collector <- gsub("M. A. González-Estévez (M. A. G. Estvz)",
+"M. A. González-Estévez",newdat$Collector, fixed=T)
+
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
             row.names = FALSE, append = TRUE)
