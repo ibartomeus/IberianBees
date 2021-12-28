@@ -2012,7 +2012,40 @@ colnames(newdat)[which(colnames(newdat) == 'collector')] <- 'Collector' #Rename 
 colnames(newdat)[which(colnames(newdat) == 'taxonomist')] <- 'Determined.by' #Rename variables if needed"
 colnames(newdat)[which(colnames(newdat) == 'm_plant_species')] <- 'Flowers.visited' 
 colnames(newdat)[which(colnames(newdat) == 'Location')] <- 'Locality' 
-#UTM We can recover some UTM's from here!
+
+#Recover some more coordinates
+#There are two types mgrs and utm
+#mgrs seems straightforward
+temp <- mgrs::mgrs_to_latlng(as.character(newdat$UTM))
+#Now lets fill the missing values in lat/lon with these values
+lat_d <- as.data.frame(temp$lat)
+lon_d <- as.data.frame(temp$lng)
+colnames(lat_d) <- "l" #New colname for simplicity
+colnames(lon_d) <- "l" #New colname for simplicity
+#store cols
+lat_d$lat <- newdat$Latitude
+lon_d$lon <- newdat$Longitude
+#Workaround to fill missing lat  and lon (needs Tydiverse)
+lat_d_1 <- data.frame(t(lat_d)) %>% 
+  fill(., names(.)) %>%
+  t() %>% as.data.frame()
+
+lon_d_1 <- data.frame(t(lon_d)) %>% 
+  fill(., names(.)) %>%
+  t() %>% as.data.frame()
+#Takes a bit of time
+#Works well, add now the column back to the dataframe
+newdat$Latitude <- lat_d_1$lat 
+newdat$Longitude <- lon_d_1$lon 
+
+#check now how to work with the UTM ones
+library(stringr)
+library(dplyr)
+levels(factor(newdat$UTM))
+temp <- newdat %>%filter(str_detect(UTM, 
+c("29S ","29T ", "30T ", "31S ", "31T ")))
+#Just 3 records to fill... Doesn't worth the effort
+
 #Long / lat not in numeric :( 
 unique(newdat$Latitude)
 newdat$Latitude <- as.character(newdat$Latitude)
@@ -2027,7 +2060,17 @@ newdat$Longitude[which(newdat$Longitude %in% c(""))] <- NA
 newdat$Longitude[which(newdat$Longitude %in% c("42.55, -0.55"))] <- -0.55
 newdat$Latitude <- as.numeric(as.character(newdat$Latitude))
 newdat$Longitude <- as.numeric(as.character(newdat$Longitude))
-#Probably can be re-checked.
+
+#Fix some impossible coordinates manually
+newdat$Latitude[newdat$Latitude==41745.00000] <- 41.745 #Rabano de aliste
+newdat$Latitude[newdat$Latitude==43517.00000] <- 43.517 #mondigo
+newdat$Longitude[newdat$Longitude==-7133.0000000] <- -7.133 #mondigo
+newdat$Latitude[newdat$Latitude==41499.00000] <- 41.499 #Teyà
+newdat$Longitude[newdat$Longitude==2324.0000000] <- 2.324 
+newdat$Latitude[newdat$Latitude==41393.00000] <- 41.393 
+newdat$Latitude[newdat$Latitude==40568.00000] <- 40.568 
+newdat$Longitude[newdat$Longitude==-5385.000000] <- -5.385 #Fuentelapeña
+
 unique(newdat$Sex)
 unique(newdat$Individuals) 
 newdat$Male <- ifelse(newdat$Sex %in% c("M"), newdat$Individuals, 0)
@@ -2052,9 +2095,93 @@ for (i in which(!is.na(newdat$Subspecies))){
   newdat$Subspecies[i] <- temp[[i]][3]
 }
 head(newdat)
-newdat$Authors.to.give.credit <- "Compiled by MA Collado"
+newdat$Authors.to.give.credit <- "Compiled by M.A. Collado"
 newdat <- add_uid(newdat = newdat, '47_Collado_etal_')
 summary(newdat)
+
+#Check levels
+levels(factor(newdat$Province))
+newdat$Province[newdat$Locality=="Espluga de Francoli"]<- "Tarragona"
+newdat$Province[newdat$Locality=="Castellón de la Plana"]<- "Castellón"
+newdat$Province[newdat$Locality=="Las Sabinas"]<- "Granada"
+newdat$Province[newdat$Locality=="Borreguiles"]<- "Granada"
+newdat$Province[newdat$Locality=="Valle Niza"]<- "Malaga"
+newdat$Province[newdat$Locality=="Granada"]<- "Granada"
+newdat$Province[newdat$Locality=="Toledo"]<- "Toledo"
+newdat$Province[newdat$Locality=="Jimena"]<- "Jaén"
+newdat$Province[newdat$Locality=="25km SW.Cartagena"]<- "Murcia"
+#Check levels
+levels(factor(newdat$Locality))
+#Trying to have a unique level per locality
+newdat$Locality[newdat$Locality=="Alcalá de henares"]<- "Alcalá de Henares"
+newdat$Locality[newdat$Locality=="Alcuescar"]<- "Alcuéscar"
+newdat$Locality[newdat$Locality=="Baides"]<- "Baídes"
+newdat$Locality[newdat$Locality=="Baleña"]<- "Baleñá"
+newdat$Locality[newdat$Locality=="Balsain"]<- "Balsaín"
+newdat$Locality[newdat$Locality=="Balsain"]<- "Balsaín"
+newdat$Locality[newdat$Locality=="Barbasto"]<- "Barbastro"
+newdat$Locality[newdat$Locality=="Caldas de Maravella"]<- "Caldas de Malavella"
+newdat$Locality[newdat$Locality=="Caldas de Montbouy"]<- "Caldas de Montbui"
+newdat$Locality[newdat$Locality=="Caldas de Montbuy"]<- "Caldas de Montbui"
+newdat$Locality[newdat$Locality=="Casas de D. Pedro."]<- "Casas de D. Pedro"
+newdat$Locality[newdat$Locality=="Castelldefels"]<- "Castelldeféls"
+newdat$Locality[newdat$Locality=="Cazorla"]<- "Sierra de Cazorla"
+newdat$Locality[newdat$Locality=="Cazorla (Sa Cazorla)"]<- "Sierra de Cazorla"
+newdat$Locality[newdat$Locality=="Colmenar viejo"]<- "Colmenar Viejo"
+newdat$Locality[newdat$Locality=="Doñana"]<- "Parque Nacional de Doñana"
+newdat$Locality[newdat$Locality=="Doñana National Park"]<- "Parque Nacional de Doñana"
+newdat$Locality[newdat$Locality=="Estany de Mont cortes"]<- "Estany de Montcortès"
+newdat$Locality[newdat$Locality=="Estany de Montcortes"]<- "Estany de Montcortès"
+newdat$Locality[newdat$Locality=="Forníllos de Fermoselle"] <- "Fornillos de Fermoselle"
+newdat$Locality[newdat$Locality=="Fuenterrabia"] <- "Fuenterrabía"
+newdat$Locality[newdat$Locality=="Gerona"] <- "Girona"
+newdat$Locality[newdat$Locality=="Gosol"] <- "Gósol"
+newdat$Locality[newdat$Locality=="Hoya de la Guija"] <- "Hoyo de la Guija"
+newdat$Locality[newdat$Locality=="La garganta"] <- "La Garganta"
+newdat$Locality[newdat$Locality=="La garriga"] <- "La Garriga"
+newdat$Locality[newdat$Locality=="Los molinos"] <- "Los Molinos"
+newdat$Locality[newdat$Locality=="Los Moblinos"] <- "Los Molinos"
+newdat$Locality[newdat$Locality=="Martolell"] <- "Martorell"
+newdat$Locality[newdat$Locality=="Nuevo Batzan"] <- "Nuevo Batzán"
+newdat$Locality[newdat$Locality=="Nuevo Baztan"] <- "Nuevo Batzán"
+newdat$Locality[newdat$Locality=="Ormaitztegui"] <- "Ormaiztegi"
+newdat$Locality[newdat$Locality=="Ormaíztegui"] <- "Ormaiztegi"
+newdat$Locality[newdat$Locality=="Ormáiztegui"] <- "Ormaiztegi"
+newdat$Locality[newdat$Locality=="Alcañices"] <- "Alcañices"
+newdat$Locality[newdat$Locality=="Almacellas"] <- "Almacelles"
+newdat$Locality[newdat$Locality=="Andavías"] <- "Andavías"
+newdat$Locality[newdat$Locality=="Bobadilla del campo"] <- "Bobadilla del Campo"
+newdat$Locality[newdat$Locality=="Bronchelas"] <- "Bronchales"
+newdat$Locality[newdat$Locality=="Cabanas"] <- "Cabañas"
+newdat$Locality[newdat$Locality=="Centellas"] <- "Centelles"
+newdat$Locality[newdat$Locality=="Cerro colgado"] <- "Cerro Colgado"
+newdat$Locality[newdat$Locality=="Yanguas de E[resma]"] <- "Yanguas de Eresma"
+newdat$Locality[newdat$Locality=="Zaldivar"] <- "Zaldívar"
+newdat$Locality[newdat$Locality=="Valdastilla"] <- "Valdastillas"
+newdat$Locality[newdat$Locality=="Uña"] <- "Uña de Quintana" 
+newdat$Locality[newdat$Locality=="Tabascan"] <- "Tabascán" 
+newdat$Locality[newdat$Locality=="Soller"] <- "Sóller" 
+newdat$Locality[newdat$Locality=="Sierra palomera"] <- "Sierra Palomera" 
+newdat$Locality[newdat$Locality=="Sierra nevada"] <- "Sierra Nevada"  
+newdat$Locality[newdat$Locality=="Sierra del Cadi"] <- "Sierra del Cadí"  
+newdat$Locality[newdat$Locality=="Sierra de V iejas" ] <- "Sierra de Viejas"  
+newdat$Locality[newdat$Locality=="Selva de Zurita" ] <- "Selva de Zuriza"  
+newdat$Locality[newdat$Locality=="Santa Creu de Olorde" ] <- "Santa Cruz de Olorde"  
+newdat$Locality[newdat$Locality=="Sant Joan de Abadesses" ] <- "Sant Joan de les Abadeses"  
+newdat$Locality[newdat$Locality=="San Lorenzo de Morumys" ] <- "San Lorenzo de Morunys"  
+newdat$Locality[newdat$Locality=="San Llorent del Munt" ] <- "San Llorent del Mont"  
+newdat$Locality[newdat$Locality=="San Llorent de Mont" ] <- "San Llorent del Mont"  
+newdat$Locality[newdat$Locality=="San Julian de la Cabrera" ] <- "San Julián de la Cabrera" 
+newdat$Locality[newdat$Locality=="San Juán de la Peña"  ] <- "San Juan de la Peña"
+newdat$Locality[newdat$Locality=="Rosinos de Vidríales"  ] <- "Rosinos de Vidrialea"
+newdat$Locality[newdat$Locality=="Puebla de D. Fabriques"  ] <- "Puebla de Don Fadrique"
+newdat$Locality[newdat$Locality=="Puebla de D. Fadrique"  ] <- "Puebla de Don Fadrique"
+#Can be better but good for now...
+levels(factor(newdat$Latitude))
+
+
+
+
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE,
     row.names = FALSE, append = TRUE)
