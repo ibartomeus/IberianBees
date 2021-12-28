@@ -1909,7 +1909,19 @@ newdat$Longitude <- parzer::parse_lon(as.character(newdat$GPS..E.))
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+
+#Rename country
+newdat$Country <- gsub("España", "Spain", newdat$Country)
+
+#Change separator in collector column
+newdat$Collector <- gsub("\\/", ", ", newdat$Collector)
+
+#Add author to give credit
+newdat$Authors.to.give.credit <- "C. Ornosa"
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '44_Ornosa_')
+
 write.table(x = newdat, file = 'data/data.csv', quote = TRUE, sep = ',', col.names = FALSE, row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
