@@ -1981,14 +1981,21 @@ colnames(newdat)[which(colnames(newdat) == 'longitude')] <- 'Longitude' #Rename 
 newdat <- add_missing_variables(check, newdat)
 newdat$Country <- "Spain"
 newdat$Not.specified <- 1
-newdat$Reference.doi <- "10.1007/s00442-013-2731-7"
-newdat$Authors.to.give.credit <- "EF Ploquin, JM Herrera, JR Obeso"
+newdat$Reference.doi <- "https://doi.org/10.1007/s00442-013-2731-7"
+newdat$Authors.to.give.credit <- "E.F. Ploquin, J.M. Herrera, J.R. Obeso"
 #extract_pieces()
 #help_geo()
 #help_species()
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)  
+
+#Check levels
+levels(factor(newdat$Subspecies))
+newdat$Subspecies[newdat$Subspecies==""] <- NA
+
+#add unique identifier
 newdat <- add_uid(newdat = newdat, '46_Obeso_')
+
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE,
     row.names = FALSE, append = TRUE)
