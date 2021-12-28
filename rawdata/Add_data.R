@@ -1940,6 +1940,27 @@ newdat <- newdat[,c(1,25,2:12,26,27,13:24,28)]#reorder
 #quick way to compare colnames
 cbind(colnames(newdat), colnames(data)) #can be merged
 summary(newdat)
+
+#Rename variables
+compare_variables(check, newdat)
+colnames(newdat)[which(colnames(newdat)=="month")] <- "Month"
+colnames(newdat)[which(colnames(newdat)=="day")] <- "Day"
+colnames(newdat)[which(colnames(newdat)=="Reference..doi.")] <- "Reference.doi"
+colnames(newdat)[which(colnames(newdat)=="Coordinate.precision..e.g..GPS...10km.")] <- "Coordinate.precision"
+newdat <- drop_variables(check, newdat) #reorder and drop variables
+
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
+
+#Add space after dot in collector and determined.by
+levels(factor(newdat$Collector))
+newdat$Collector <- gsub("\\.", ". ", newdat$Collector)
+newdat$Determined.by <- gsub("\\.", ". ", newdat$Determined.by)
+
+#Add author to give credit
+newdat$Authors.to.give.credit <- "A. Núñez"
+
 #write
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
