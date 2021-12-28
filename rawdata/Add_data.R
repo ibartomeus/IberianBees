@@ -1714,7 +1714,24 @@ newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
 newdat$Authors.to.give.credit <- "Felix Torres"
 newdat$Year <- ifelse(newdat$Year < 1000, newdat$Year +1900, newdat$Year)
+
+#Drop cells with NA in genus
+newdat <- newdat[!is.na(newdat$Genus),]
+#Rename country
+newdat$Country <- "Spain"
+newdat$Country[newdat$Province=="Portugal"] <- "Portugal"
+#Fill missing province
+newdat$Province[newdat$Locality=="Piquera de San Esteban"] <- "Soria"
+
+#Fix space in collector
+newdat$Collector <- gsub("F.Torres", "F. Torres", newdat$Collector)
+#Fix space in determined by
+newdat$Determined.by <- gsub("F.Torres", "F. Torres", newdat$Determined.by)
+newdat$Determined.by <- gsub("Torres/Ornosa", "F. Torres, C. Ornosa", newdat$Determined.by)
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '41_Torres_')
+
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE, 
     row.names = FALSE, append = TRUE)
