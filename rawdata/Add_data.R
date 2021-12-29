@@ -2345,6 +2345,46 @@ newdat$Longitude[which(!is.na(newdat$UTM))][-c(8,12,13)] <- temp$lng
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+
+#Delete row with NA in genus
+newdat <- newdat[!is.na(newdat$Genus),]
+
+#Add country to some missing values
+newdat$Country <- "Spain"
+
+#Add missing provinces
+newdat$Province[newdat$Locality=="La Pleta  Garraf"] <- "Barcelona"
+newdat$Province[newdat$Locality=="Valencia"] <- "Valencia"
+newdat$Province[newdat$Locality=="Cuenca"] <- "Cuenca"
+newdat$Province[newdat$Locality=="Mallorca"] <- "Baleares"
+newdat$Province[newdat$Locality=="Coll d´en Rebassa"] <- "Baleares"
+newdat$Province[newdat$Locality=="Puerto Santa María"] <- "Cádiz"
+newdat$Province[newdat$Locality=="Jerez"] <- "Cádiz"
+newdat$Province[newdat$Locality=="Cartagena"] <- "Cádiz"
+newdat$Province[newdat$Locality=="Esporlas"] <- "Baleares"
+newdat$Province[newdat$Locality=="Esporlas"] <- "Baleares"
+
+#Fix spacing in some levels
+levels(factor(newdat$Collector))
+newdat$Collector <- gsub("\\.", ". ", newdat$Collector)
+newdat$Collector <- gsub("F. J. Haering", "F.J. Haering", newdat$Collector)
+newdat$Collector <- gsub("M. A. Barón", "M.A. Barón", newdat$Collector)
+newdat$Collector <- gsub("M. J. Sanz", "M.J. Sanz", newdat$Collector)
+newdat$Collector <- gsub("S. V. Peris", "S.V. Peris", newdat$Collector)
+
+#Fixed determined.by levels
+levels(factor(newdat$Determined.by))
+newdat$Determined.by <- gsub("A.Compte", "A. Compte", newdat$Determined.by)
+newdat$Determined.by <- gsub("C Ornosa", "C. Ornosa", newdat$Determined.by)
+newdat$Determined.by <- gsub("C.Ornosa", "C. Ornosa", newdat$Determined.by)
+newdat$Determined.by <- gsub("C.P-Iñigo", "C.P. Iñigo", newdat$Determined.by)
+newdat$Determined.by <- gsub("Domínguez, Serranoy Montagud", "Domínguez, Serrano, Montagud", newdat$Determined.by)
+newdat$Determined.by <- gsub("E.Mingo", "E. Mingo", newdat$Determined.by)
+newdat$Determined.by <- gsub("J. A. González", "J.A. González", newdat$Determined.by)
+
+#C.Ornosa to credits?
+newdat$Authors.to.give.credit <- "C. Ornosa"
+
 newdat <- add_uid(newdat = newdat, '49_Ornosa_etal_')
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE, 
@@ -2370,6 +2410,9 @@ newdat$Latitude <- 40.205835
 newdat$Longitude <- -8.421204
 newdat$Start.date <- NA
 newdat$End.Date <- NA
+
+
+
 #write
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
