@@ -2292,6 +2292,10 @@ newdat$Reference.doi[grepl("https://doi.org/10.11646/", newdat$Reference.doi,ign
 newdat$Reference.doi[grepl("ISSN: 1134-61", newdat$Reference.doi,ignore.case=F)] <- "ISSN: 1134-6108"
 #All dois work now
 
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
+
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE,
     row.names = FALSE, append = TRUE)
@@ -2306,7 +2310,19 @@ compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
+
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
+
+#Add flower visited is on additional info
+newdat$Flowers.visited <- "Erophaca baetica"
+#Set notes now to NA
+newdat$Any.other.additional.data <- NA
+
+#Add unique identifier
 newdat <- add_uid(newdat = newdat, '48_Casimiro-Soriguer_etal_')
+
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE, 
     row.names = FALSE, append = TRUE)
