@@ -2329,7 +2329,7 @@ write.table(x = newdat, file = 'data/data.csv',
 size <- size + nrow(newdat) #keep track of expected length
 
 ##################################################################################### 
-# 49_Ornosa_etal.csv
+# 49_Ornosa_etal
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/49_Ornosa_etal.csv', sep = ";")
@@ -2395,6 +2395,7 @@ size <- size + nrow(newdat) #keep track of expected length
 # 50_Heleno_etal
 
 newdat <- read.csv(file = "rawdata/csvs/50_Heleno_etal.csv")
+
 colnames(newdat)
 colnames(newdat)[9] <- "precision" #just to see them both in two lines
 #subgenus missing.
@@ -2411,7 +2412,20 @@ newdat$Longitude <- -8.421204
 newdat$Start.date <- NA
 newdat$End.Date <- NA
 
+#Compare vars
+compare_variables(check, newdat)
+#Rename columns
+colnames(newdat)[which(colnames(newdat)=="precision")] <- "Coordinate.precision"
+colnames(newdat)[which(colnames(newdat)=="day")] <- "Day"
+colnames(newdat)[which(colnames(newdat)=="Reference..doi.")] <- "Reference.doi"
+colnames(newdat)[which(colnames(newdat)=="Collection.Location_ID")] <- "Local_ID"
+colnames(newdat)[which(colnames(newdat)=="End.Date")] <- "End.date"
 
+newdat <- drop_variables(check, newdat) #reorder and drop variables
+
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
 
 #write
 write.table(x = newdat, file = "data/data.csv", 
