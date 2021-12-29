@@ -2506,6 +2506,43 @@ newdat <- newdat[,c(1,27,2:26,28)]
 #quick way to compare colnames
 cbind(colnames(newdat), colnames(data)) #can be merged
 summary(newdat)
+
+#Compare vars
+compare_variables(check, newdat)
+#Rename cols
+colnames(newdat)[which(colnames(newdat)=="precision")] <- "Coordinate.precision"
+colnames(newdat)[which(colnames(newdat)=="day")] <- "Day"
+colnames(newdat)[which(colnames(newdat)=="End.Date")] <- "End.date"
+colnames(newdat)[which(colnames(newdat)=="Reference..doi.")] <- "Reference.doi"
+colnames(newdat)[which(colnames(newdat)=="Collection.Location_ID")] <- "Local_ID"
+colnames(newdat)[which(colnames(newdat)=="Any.other.additional.data..Habitat.type.")] <- "Any.other.additional.data"
+
+#Drop variables and reorder
+newdat <- drop_variables(check, newdat)
+
+#Add leading 0 to month
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
+
+#Change day format to d-m-y
+newdat$Start.date <- as.Date(newdat$Start.date)
+newdat$Start.date <-format(newdat$Start.date, "%d-%m-%Y")
+newdat$End.date <- as.Date(newdat$End.date)
+newdat$End.date <-format(newdat$End.date, "%d-%m-%Y")
+
+#Change separator in determined.by
+newdat$Determined.by <- gsub("Ana Picanço/Paulo A. V. Borges", "Ana Picanço, Paulo A.V. Borges", newdat$Determined.by)
+
+#Select a unique doi (Criteria:the oldest one) 
+#Also one of them has excel error of scrolling down
+levels(factor(newdat$Reference.doi))
+#Both are from 2017, just keep one
+newdat$Reference.doi <- "https://doi.org/10.1111/icad.12216"
+
+#Authors to give credit, change separator
+levels(factor(newdat$Authors.to.give.credit))
+newdat$Authors.to.give.credit <- gsub("Ana Picanço; Paulo A. V.Borges", "Ana Picanço, Paulo A. V.Borges", newdat$Authors.to.give.credit)
+
 #write
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
