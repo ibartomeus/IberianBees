@@ -2566,6 +2566,41 @@ summary(newdat)
 newdat$Latitude <- as.character(newdat$Latitude)
 newdat$Latitude[61] <- 37.39836111111111
 newdat$Latitude <- as.numeric(newdat$Latitude)
+
+#Compare vars
+compare_variables(check, newdat)
+#Rename vars
+colnames(newdat)[which(colnames(newdat)=="precision")] <- "Coordinate.precision"
+colnames(newdat)[which(colnames(newdat)=="day")] <- "Day"
+colnames(newdat)[which(colnames(newdat)=="End.Date")] <- "End.date"
+colnames(newdat)[which(colnames(newdat)=="Reference..doi.")] <- "Reference.doi"
+colnames(newdat)[which(colnames(newdat)=="Collection.Location_ID")] <- "Local_ID"
+#Drop vars and reorder
+newdat <- drop_variables(check, newdat)
+
+#Clean genus with NA
+newdat <- newdat[!is.na(newdat$Genus),]
+
+#Reoganize month names
+newdat$Start.date[newdat$Month=="April/May"] <- "01-04-2007"
+newdat$End.date[newdat$Month=="April/May"] <- "31-05-2007"
+newdat$Month[newdat$Month=="April/May"] <- NA
+newdat$Start.date[newdat$Month=="Feb/March" & newdat$Year=="2006"] <- "01-02-2006"
+newdat$End.date[newdat$Month=="Feb/March" & newdat$Year=="2006"] <- "31-03-2006"
+newdat$Month[newdat$Month=="Feb/March" & newdat$Year=="2012"] <- NA
+newdat$Start.date[newdat$Month=="Feb/March" & newdat$Year=="2012"] <- "01-02-2012"
+newdat$End.date[newdat$Month=="Feb/March" & newdat$Year=="2012"] <- "31-03-2012"
+newdat$Month[newdat$Month=="Feb/March" & newdat$Year=="2012"] <- NA
+newdat$Start.date[newdat$Month=="May/June"] <- "01-05-2008"
+newdat$End.date[newdat$Month=="May/June"] <- "30-05-2008"
+newdat$Month[newdat$Month=="May/June"] <- NA
+#Now convert month names to numbers
+newdat$Month <- match(newdat$Month, month.name)
+newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+
+#Fix one level in Flowers.visited
+newdat$Flowers.visited <- gsub("Brassica oleracea Brassicaceae III", "Brassica oleracea", newdat$Flowers.visited)
+
 #write
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
