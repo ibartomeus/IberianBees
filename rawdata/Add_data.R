@@ -2044,7 +2044,18 @@ library(dplyr)
 levels(factor(newdat$UTM))
 temp <- newdat %>%filter(str_detect(UTM, 
 c("29S ","29T ", "30T ", "31S ", "31T ")))
-#Just 3 records to fill... Doesn't worth the effort
+#Just 2 records to fill... 
+#I do it manually by record
+#30T 	4656952 308856
+#31T 4684106 431397
+c_1 <- mgrs::utm_to_latlng(29, "N", 308856, 4656952)
+c_2 <- mgrs::utm_to_latlng(29, "N", 431397, 4684106)
+#Coordinate utm 1
+newdat$Latitude[newdat$UTM=="30T 	4656952 308856"] <- c_1[1]
+newdat$Longitude[newdat$UTM=="30T 	4656952 308856"] <- c_1[2]
+#Coordinate utm 2
+newdat$Latitude[newdat$UTM=="31T 4684106 431397"] <- c_2[1]
+newdat$Longitude[newdat$UTM=="31T 4684106 431397"] <- c_2[2]
 
 #Long / lat not in numeric :( 
 unique(newdat$Latitude)
@@ -2071,6 +2082,16 @@ newdat$Latitude[newdat$Latitude==41393.00000] <- 41.393
 newdat$Latitude[newdat$Latitude==40568.00000] <- 40.568 
 newdat$Longitude[newdat$Longitude==-5385.000000] <- -5.385 #Fuentelapeña
 
+#Still two coordenates seem incorrect
+#[1] "6.4550575"  (lagos)      "9.9949634" (huesca)
+#Fix manually
+levels(factor(newdat$Latitude))
+newdat$Latitude[newdat$Latitude=="6.4550575"] <- "37.1028"
+newdat$Longitude[newdat$Latitude=="37.1028"] <- "-8.67422"
+newdat$Latitude[newdat$Latitude=="9.9949634"] <- "42.6287"
+newdat$Longitude[newdat$Latitude=="42.6287"] <- "-0.1127"
+#Now looks good to me
+
 unique(newdat$Sex)
 unique(newdat$Individuals) 
 newdat$Male <- ifelse(newdat$Sex %in% c("M"), newdat$Individuals, 0)
@@ -2082,7 +2103,6 @@ colnames(newdat)[which(colnames(newdat) == 'Published.by')] <- 'Authors.to.give.
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
-#NOTE: some impossible lat longs may be recoverable. Also in Year. 
 (temp <- extract_pieces(newdat$Species, species = TRUE))
 newdat$Species <- temp$piece1
 #Subspecies also needs cleaning!
@@ -2101,18 +2121,35 @@ summary(newdat)
 
 #Check levels
 levels(factor(newdat$Province))
+newdat$Province[which(newdat$Province %in% c(""))] <- NA
+newdat$Province[which(newdat$Province %in% c(" "))] <- NA
+
 newdat$Province[newdat$Locality=="Espluga de Francoli"]<- "Tarragona"
 newdat$Province[newdat$Locality=="Castellón de la Plana"]<- "Castellón"
 newdat$Province[newdat$Locality=="Las Sabinas"]<- "Granada"
 newdat$Province[newdat$Locality=="Borreguiles"]<- "Granada"
 newdat$Province[newdat$Locality=="Valle Niza"]<- "Malaga"
-newdat$Province[newdat$Locality=="Granada"]<- "Granada"
-newdat$Province[newdat$Locality=="Toledo"]<- "Toledo"
 newdat$Province[newdat$Locality=="Jimena"]<- "Jaén"
 newdat$Province[newdat$Locality=="25km SW.Cartagena"]<- "Murcia"
+newdat$Province[newdat$Province=="Avila"]<- "Ávila"
+newdat$Province[newdat$Province=="Alava"]<- "Álava"
+newdat$Province[newdat$Province=="A Coruña"]<- "La Coruña"
+newdat$Province[newdat$Province=="Guipuzcua"]<- "Guipúzcoa"
+newdat$Province[newdat$Province=="Guipuzcoa"]<- "Guipúzcoa"
+newdat$Province[newdat$Province=="Guipúzcua"]<- "Guipúzcoa"
+newdat$Province[newdat$Province=="Girona"]<- "Gerona"
+newdat$Province[newdat$Province=="CÓRDOBA"]<- "Córdoba"
+newdat$Province[newdat$Province=="Lleida"]<- "Lérida"
+newdat$Province[newdat$Province=="Lerida"]<- "Lérida"
+newdat$Province[newdat$Province=="Provincia de Huesca"]<- "Huesca"
+newdat$Province[newdat$Province=="Gran canaria"]<- "Gran Canaria"
+
 #Check levels
+options(max.print=500)
 levels(factor(newdat$Locality))
-#Trying to have a unique level per locality
+newdat$Locality[which(newdat$Locality %in% c(""))] <- NA
+
+newdat$Locality[newdat$Locality=="A Coruña"]<- "La Coruña"
 newdat$Locality[newdat$Locality=="Alcalá de henares"]<- "Alcalá de Henares"
 newdat$Locality[newdat$Locality=="Alcuescar"]<- "Alcuéscar"
 newdat$Locality[newdat$Locality=="Baides"]<- "Baídes"
@@ -2177,10 +2214,83 @@ newdat$Locality[newdat$Locality=="Rosinos de Vidríales"  ] <- "Rosinos de Vidr
 newdat$Locality[newdat$Locality=="Puebla de D. Fabriques"  ] <- "Puebla de Don Fadrique"
 newdat$Locality[newdat$Locality=="Puebla de D. Fadrique"  ] <- "Puebla de Don Fadrique"
 #Can be better but good for now...
-levels(factor(newdat$Latitude))
 
+#Now collector
+levels(factor(newdat$Collector))
+newdat$Collector[which(newdat$Collector %in% c(""))] <- NA
+newdat$Collector[which(newdat$Collector %in% c("A. G. Velázquez"))] <- "A.G. Velázquez"
+newdat$Collector[which(newdat$Collector %in% c("A. W. Ebmer"))] <- "A.W. Ebmer"
+newdat$Collector[which(newdat$Collector %in% c("ANDRÉ"))] <- "André"
+newdat$Collector[which(newdat$Collector %in% c("Castro, L."))] <- "L. Castro"
+newdat$Collector[which(newdat$Collector %in% c("Castro, L., Herrera, C."))] <- "L. Castro, C. Herrera"
+newdat$Collector[which(newdat$Collector %in% c("F. J. Ortiz-Sánchez"))] <- "F.J. Ortiz-Sánchez"
+newdat$Collector[which(newdat$Collector %in% c("Gª Mercet"))] <- "G. Mercet"
+newdat$Collector[which(newdat$Collector %in% c("García Mercet"))] <- "G. Mercet"
+newdat$Collector[which(newdat$Collector %in% c("Herrera, C.t"))] <- "C. Herrera"
+newdat$Collector[which(newdat$Collector %in% c("J. A. Acosta"))] <- "J.A. Acosta"
+newdat$Collector[which(newdat$Collector %in% c("J. A. González"))] <- "J.A. González"
+newdat$Collector[which(newdat$Collector %in% c("J. R. Obeso"))] <- "J.R. Obeso"
+newdat$Collector[which(newdat$Collector %in% c("Jimenez, A."))] <- "A. Jimenez"
+newdat$Collector[which(newdat$Collector %in% c("K. M. Guichard"))] <- "K.M. Guichard"
+newdat$Collector[which(newdat$Collector %in% c("Madero, A."))] <- "A. Madero"
+newdat$Collector[which(newdat$Collector %in% c("Nieves & Rey"))] <- "Nieves y Rey"
+newdat$Collector[which(newdat$Collector %in% c("Ortiz-Sànchez, F.J."))] <- "F.J. Ortiz-Sánchez"
+newdat$Collector[which(newdat$Collector %in% c("P. De la Rúa"))] <- "P. de la Rúa"
+newdat$Collector[which(newdat$Collector %in% c("PÉREZ"))] <- "Pérez"
+newdat$Collector[which(newdat$Collector %in% c("Pérez, F.J."))] <- "F.J. Pérez"
+newdat$Collector[which(newdat$Collector %in% c("Rey del Castillo, C., Nieves-Aldrey, J.L."))] <- "C. Rey del Castillo, J.L. Nieves-Aldrey"
+newdat$Collector[which(newdat$Collector %in% c("S. F-Gayubo"))] <- "S.F. Gayubo"
+newdat$Collector[which(newdat$Collector %in% c("S. F. Gayubo"))] <- "S.F. Gayubo"
+newdat$Collector[which(newdat$Collector %in% c("S. V. Peris"))] <- "S.V. Peris"
+newdat$Collector[which(newdat$Collector %in% c("SCHMIEDEKN"))] <- "Schmiedekn"
+newdat$Collector[which(newdat$Collector %in% c("Tinaut, A."))] <- "A. Tinaut"
+newdat$Collector[which(newdat$Collector %in% c("V. Monsterrat"))] <- "V. Montserrat"
+newdat$Collector[which(newdat$Collector %in% c("VACHAL"))] <- "Vachal"
+newdat$Collector[which(newdat$Collector %in% c("C. Heras y S.F. Gayubo"))] <- "C. Heras, S.F. Gayubo"
+newdat$Collector[which(newdat$Collector %in% c("Barranco, P."))] <- "P. Barranco"
+newdat$Collector[which(newdat$Collector %in% c("Baena, M."))] <- "M. Baena"
+newdat$Collector[which(newdat$Collector %in% c("Asensio & Parker"))] <- "Asensio, Parker"
+newdat$Collector[which(newdat$Collector %in% c("´CE"))] <- "CE"
 
+#Now determined by column
+levels(factor(newdat$Determined.by))
+newdat$Determined.by[which(newdat$Determined.by %in% c(""))] <- NA
+newdat$Determined.by[which(newdat$Determined.by %in% c("Asensio, E."))] <- "E. Asensio"
+newdat$Determined.by[which(newdat$Determined.by %in% c("Báez, J., Bowden, J."))] <- "J. Báez, J. Bowden"
+newdat$Determined.by[which(newdat$Determined.by %in% c("C. Ornosa & M.D. Martínez"))] <- "C. Ornosa, M.D. Martínez"
+newdat$Determined.by[which(newdat$Determined.by %in% c("C. Ornosa, F. Torres & F. J. Ortiz-Sánchez"))] <- "C. Ornosa, F. Torres, F.J. Ortiz-Sánchez"
+newdat$Determined.by[which(newdat$Determined.by %in% c("Cobos, A."))] <- "A. Cobos"
+newdat$Determined.by[which(newdat$Determined.by %in% c("Dathe, H. H., Kuhlmann, M."))] <- "H.H. Dathe, M. Kuhlmann"
+newdat$Determined.by[grepl("Exp. In", newdat$Determined.by, ignore.case=FALSE)] <- "Expedición del Instituto Español de Entomología"
+newdat$Determined.by[which(newdat$Determined.by %in% c("F. J. Ortiz-Sánchez"))] <- "F.J. Ortiz-Sánchez"
+newdat$Determined.by[which(newdat$Determined.by %in% c("García Valera"))] <- "García Varela"
+newdat$Determined.by[which(newdat$Determined.by %in% c("García y Varela"))] <- "García Varela"
+newdat$Determined.by[which(newdat$Determined.by %in% c("Gayubo, S. F."))] <- "S.F. Gayubo"
+newdat$Determined.by[which(newdat$Determined.by %in% c("Gil-Collado"))] <- "Gil Collado"
+newdat$Determined.by[which(newdat$Determined.by %in% c("Gusenleitner, F."))] <- "F. Gusenleitner"
+newdat$Determined.by[which(newdat$Determined.by %in% c("Herrera, C. M., Amat, C. M."))] <- "C.M. Herrera, C.M. Amat"
+newdat$Determined.by[which(newdat$Determined.by %in% c("J. R. Obeso"))] <- "J.R. Obeso"
+newdat$Determined.by[which(newdat$Determined.by %in% c("Marcos, M. A."))] <- "M.A. Marcos"
+newdat$Determined.by[which(newdat$Determined.by %in% c("O Contreras"))] <- "O. Contreras"
+newdat$Determined.by[which(newdat$Determined.by %in% c("Sag. y Nov."))] <- "Sagarra y Novellas"
+newdat$Determined.by[which(newdat$Determined.by %in% c("Vives, A., Yela, J. L."))] <- "A. Vives, J.L. Yela"
+newdat$Determined.by[which(newdat$Determined.by %in% c("Vila de Paz"))] <- "Vila de la Paz"
+newdat$Determined.by[which(newdat$Determined.by %in% c("Martorell y Peña"))] <- "Martorell, Peña"
+newdat$Determined.by[grepl("Esp. Inst. Esp. Ent.", newdat$Determined.by, ignore.case=FALSE)] <- "Expedición del Instituto Español de Entomología"
+#Seems ok 
 
+#Last column to edit Reference.doi
+#There are few errors here too
+levels(factor(newdat$Reference.doi))
+newdat$Reference.doi[which(newdat$Reference.doi %in% c(""))] <- NA
+#I have open this paper already, check for duplicate data?
+newdat$Reference.doi[which(newdat$Reference.doi %in% c("10.1111/jeb.12609"))] <- "https://doi.org/10.1111/jeb.12609"
+newdat$Reference.doi[grepl("10.14201/gredos", newdat$Reference.doi,ignore.case=F)] <- "https://doi.org/10.14201/gredos.135710"
+newdat$Reference.doi[which(newdat$Reference.doi %in% c("10.2307/2260469"))] <- "https://doi.org/10.2307/2260469"
+newdat$Reference.doi[grepl("10.3989/graellsia.2009", newdat$Reference.doi,ignore.case=F)] <- "https://doi.org/10.3989/graellsia.2009.v65.i2.145"
+newdat$Reference.doi[grepl("https://doi.org/10.11646/", newdat$Reference.doi,ignore.case=F)] <- "https://doi.org/10.11646/zootaxa.4237.1.3"
+newdat$Reference.doi[grepl("ISSN: 1134-61", newdat$Reference.doi,ignore.case=F)] <- "ISSN: 1134-6108"
+#All dois work now
 
 write.table(x = newdat, file = 'data/data.csv', 
     quote = TRUE, sep = ',', col.names = FALSE,
