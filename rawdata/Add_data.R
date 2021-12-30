@@ -3018,6 +3018,8 @@ newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Malaga, Velez 
 newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Malaga, Torre del Mar"] <- "Málaga"
 newdat$Province[newdat$Province=="Vieja"] <- "Soria"
 newdat$Province[newdat$Province=="South-East Spain, dept. MÃ laga"] <- "Málaga"
+newdat$Province[newdat$Locality=="(Huesca) Toria, 1000 m."] <- "Huesca"
+
 #Organize Portugal by districts (equivalent of provinces in Spain?)
 #This is going to take ages and portugal is small, maybe something to do in the future
 #I tried a bit...
@@ -3090,6 +3092,64 @@ levels(factor(newdat$Province))
 #Check localities
 levels(factor(newdat$Locality))
 #Do a bit of cleaning (not something crazy)
+newdat$Locality[newdat$Locality==" "] <- NA
+newdat$Locality[newdat$Locality==""] <- NA
+newdat$Locality[newdat$Locality=="@"] <- NA
+newdat$Locality[newdat$Locality=="@@"] <- NA
+newdat$Locality <- gsub("\\- Andalucia, ", "", newdat$Locality)
+newdat$Locality[newdat$Locality=="#NAME?"] <- NA
+newdat$Locality[newdat$Locality=="#NOM?"] <- NA
+#newdat$Locality[newdat$Locality=="5 km  O v. ALHAURIN EL GRANDE"] <- "5 km  O V. Alhaurin el Grande"
+#newdat$Locality[newdat$Locality=="ABADIA"] <- "Abadia"
+#newdat$Locality[newdat$Locality=="ABANILLA"] <- "Abanilla"
+#newdat$Locality[newdat$Locality=="ABEJAR"] <- "Abejar"
+#newdat$Locality[newdat$Locality=="ADEMUZ"] <- "Ademuz"
+#newdat$Locality[newdat$Locality=="ADOBES"] <- "Adobes"
+#newdat$Locality[newdat$Locality=="ADRADAS"] <- "Adradas"
+#newdat$Locality[newdat$Locality=="ADRADOS"] <- "Adrados"
+#newdat$Locality[newdat$Locality=="AGHIOS PAULOS"] <- "Aghios Paulos"
+#newdat$Locality[newdat$Locality=="AGUA GARCIA"] <- "Agua Garcia"
+#newdat$Locality[newdat$Locality=="AGUAS TUERTAS"] <- "Aguas Tuertas"
+#newdat$Locality[newdat$Locality=="AIELO DE MALFERIT"] <- "Aielo de Malferit"
+#newdat$Locality[newdat$Locality=="AIGUES TORTES"] <- "Aigues Tortes"
+#newdat$Locality[newdat$Locality=="ALARO"] <- "Alaro"
+#newdat$Locality[newdat$Locality=="ALBACETE"] <- "Albacete"
+#newdat$Locality[newdat$Locality=="ALBACETE, ALCARAZ"] <- "Albacete, Alcaraz"
+#newdat$Locality[newdat$Locality=="ALBALATE DE CINCA"] <- "Albalate de Cinca"
+#newdat$Locality[newdat$Locality=="ALBANA"] <- "Albana"
+#newdat$Locality[newdat$Locality=="ALBARRACIN"] <- "Albarracin"
+#newdat$Locality[newdat$Locality=="ALBATERA"] <- "Albatera"
+#newdat$Locality[newdat$Locality=="ALBERGUE"] <- "Albergue"
+#newdat$Locality[newdat$Locality=="ALBERIQUE"] <- "Alberique"
+#newdat$Locality[newdat$Locality=="ALBOREA"] <- "Alborea"
+#newdat$Locality[newdat$Locality=="ALBUFEIRA"] <- "Albufeira"
+#newdat$Locality[newdat$Locality=="ALBUNOL"] <- "Albuñol"
+#newdat$Locality[newdat$Locality=="ALCALA DE HENARES"] <- "Alcala de Henares"
+#newdat$Locality[newdat$Locality=="ALCALA DEL JUCAR"] <- "Alcala del Jucar"
+#newdat$Locality[newdat$Locality=="ALCANICES"] <- "Alcanices"
+#newdat$Locality[newdat$Locality=="ALCANIZ"] <- "Alcaniz"
+#newdat$Locality[newdat$Locality=="ALCARAZ"] <- "Alcaraz"
+#newdat$Locality[newdat$Locality=="ALCARRAS"] <- "Alcarras"
+#newdat$Locality[newdat$Locality=="ALCARRAZ"] <- "Alcarraz"
+#newdat$Locality[newdat$Locality=="ALCAZAREN"] <- "Alcazaren"
+#newdat$Locality[newdat$Locality=="ALCIRA"] <- "Alcira"
+#newdat$Locality[newdat$Locality=="ALCOVER"] <- "Alcover"
+#newdat$Locality[newdat$Locality=="ALDEIA DAS ACOTEIAS"] <- "Aldeia das Acoteias"
+#newdat$Locality[newdat$Locality=="ALEDO"] <- "Aledo"
+#newdat$Locality[newdat$Locality=="ALFAMBRA"] <- "Alfambra"
+#newdat$Locality[newdat$Locality=="ALFANTEGA"] <- "Alfantega"
+#newdat$Locality[newdat$Locality=="ALFAZ DEL PI"] <- "Alfaz del Pi"
+#newdat$Locality[newdat$Locality=="ALFRAGEDE"] <- "Alfragede"
+#newdat$Locality[newdat$Locality=="ALGARROBO"] <- "Algarrobo"
+#newdat$Locality[newdat$Locality=="ALGECIRAS"] <- "Algeciras"
+#newdat$Locality[newdat$Locality=="ALGECIRAS"] <- "Algeciras"
+
+#This is going to be 4ever too so lets make string to title
+#And check if its not too bad
+newdat$Locality <- stringr::str_to_title(newdat$Locality)
+newdat$Locality <- gsub("\\ De", " de", newdat$Locality)
+newdat$Locality <- gsub("\\ Do", " do", newdat$Locality)
+
 
 #write
 write.table(x = newdat, file = "data/data.csv", 
