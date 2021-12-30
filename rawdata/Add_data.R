@@ -2737,10 +2737,30 @@ newdat <- newdat[,c("Genus",
 cbind(colnames(newdat), colnames(data)) #can be merged
 #trouble
 unique(newdat$Locality)
+
+#Keep working from here
+
 newdat$Locality[12]
 gsub("[^[:alnum:]]", "_", newdat$Locality[12])
 newdat$Locality <- as.character(newdat$Locality)
 newdat$Locality <- gsub("[^[:alnum:]]", "", newdat$Locality)
+
+#Compare vars
+compare_variables(check, newdat)
+#Rename some columns
+colnames(newdat)[which(colnames(newdat)=="month")] <- "Month"
+colnames(newdat)[which(colnames(newdat)=="day")] <- "Day"
+colnames(newdat)[which(colnames(newdat)=="End.date.original")] <- "End.date"
+colnames(newdat)[which(colnames(newdat)=="Determiner")] <- "Determined.by"
+colnames(newdat)[which(colnames(newdat)=="refbib")] <- "Reference.doi"
+colnames(newdat)[which(colnames(newdat)=="Code")] <- "Local_ID"
+
+#Check levels
+levels(factor(newdat$Country))
+#Rename countries
+newdat$Country <- gsub("SPAIN", "Spain", newdat$Country)
+newdat$Country[which(newdat$Country %in% c(""))] <- NA
+
 #write
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
