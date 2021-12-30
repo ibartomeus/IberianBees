@@ -1,9 +1,10 @@
-#####################################################################################
+#####################################################################################--
 
 #In this script the different unprocessed csvs from rawdata/csvs/
 #are edited to match a default template and joined together
 
-#####################################################################################
+#####################################################################################--
+#Set up----
 #First create TEMPLATE to Add new data.
 #Create an empty data file. 
 data <- matrix(ncol = 28, nrow = 1)
@@ -22,7 +23,6 @@ data <- read.csv("data/data.csv",stringsAsFactors=TRUE)
 #colnames(data)
 #head(data)
 
-#set up----
 #Load functions NOW is manually done from cleaner repo
 library(cleanR)
 check <- define_template(data, NA)
@@ -33,10 +33,10 @@ check <- define_template(data, NA)
 library(dplyr)
 library(tidyr) 
 
-#####################################################################################
+#####################################################################################--
 #ADD DATA NOW
-#####################################################################################
-# 1_Ornosa_etal
+#####################################################################################--
+# 1_Ornosa_etal ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/1_Ornosa_etal.csv', sep = ";")
@@ -94,8 +94,8 @@ write.table(x = newdat, file = 'data/data.csv', quote = TRUE, sep = ',',
 col.names = FALSE, row.names = FALSE, append = TRUE)
 size <- nrow(newdat) #because is the first one!
 
-#####################################################################################
-# 2_Ornosa_etal
+#####################################################################################---
+# 2_Ornosa_etal ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/2_Ornosa_etal.csv', sep = ";")
@@ -195,8 +195,8 @@ write.table(x = newdat, file = 'data/data.csv', quote = TRUE, sep = ',',
 col.names = FALSE, row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-#####################################################################################
-# 3_Montero_etal
+#####################################################################################---
+# 3_Montero_etal ----
 
 newdat <- read.csv(file = "rawdata/csvs/3_Montero_etal.csv")
 #old template, subgenus, start and end date missing.
@@ -242,9 +242,6 @@ newdat$Genus <- gsub("\\_.*","",newdat$Genus) #Correct now
 #Flowers visited, delete underscore, Genus_species to Genus species
 newdat$Flowers.visited <- gsub("_", " ", newdat$Flowers.visited)
 
-#Fix author name IML to IM Liberal
-newdat$Collector <- gsub("IML", "IM Liberal", newdat$Collector)
-
 #Convert DOI to link
 levels(factor(newdat$Reference.doi))
 newdat$Reference.doi <- paste0("https://doi.org/",newdat$Reference.doi)
@@ -256,11 +253,10 @@ write.table(x = newdat, file = "data/data.csv",
 #keep track of expected length
 size <- size + nrow(newdat)
 
-#####################################################################################
-# 4_Arroyo-Correa
+#####################################################################################---
+# 4_Arroyo-Correa ----
 
 #The following items are done before the functions were up and running.
-#Add data BAC ----
 newdat <- read.csv(file = "rawdata/csvs/4_Arroyo-Correa.csv")
 colnames(newdat)
 #old template, subgenus, start and end date missing.
@@ -296,8 +292,8 @@ write.table(x = newdat, file = "data/data.csv",
             row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat)
 
-#####################################################################################
-# 5_Banos-Picon_etal
+#####################################################################################---
+# 5_Banos-Picon_etal ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/5_Banos-Picon_etal.csv')
@@ -343,8 +339,8 @@ write.table(x = newdat, file = 'data/data.csv',
   row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-#####################################################################################
-# 6_Moreira
+#####################################################################################---
+# 6_Moreira ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/6_Moreira.csv', sep = ";")
@@ -368,8 +364,8 @@ write.table(x = newdat, file = 'data/data.csv',
   row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-#####################################################################################
-# 7_Ornosa
+#####################################################################################---
+# 7_Ornosa ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/7_Ornosa.csv', sep = ";")
@@ -395,8 +391,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-#####################################################################################
-# 8_Ornosa
+#####################################################################################---
+# 8_Ornosa ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/8_Ornosa.csv', sep = ";")
@@ -431,8 +427,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-#####################################################################################
-# 9_Ornosa
+#####################################################################################---
+# 9_Ornosa ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/9_Ornosa.csv', sep = ";")
@@ -459,8 +455,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-#####################################################################################
-# 10_Ornosa_etal
+#####################################################################################---
+# 10_Ornosa_etal ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/10_Ornosa_etal.csv', sep=";")
@@ -488,8 +484,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-#####################################################################################
-# 11_Ornosa_etal
+#####################################################################################---
+# 11_Ornosa_etal ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/11_Ornosa_etal.csv', sep = ";")
@@ -530,8 +526,8 @@ write.table(x = newdat, file = 'data/data.csv',
       row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-#####################################################################################
-# 12_Ornosa_etal
+#####################################################################################---
+# 12_Ornosa_etal ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/12_Ornosa_etal.csv', sep = ";")
@@ -571,8 +567,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-#####################################################################################
-# 13_Gomez
+#####################################################################################---
+# 13_Gomez ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/13_Gomez.csv', sep = ";")
@@ -622,8 +618,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-#####################################################################################
-#14_Marshall
+#####################################################################################---
+#14_Marshall ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/14_Marshall.csv', sep = ";")
@@ -657,8 +653,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-#####################################################################################
-# 15_Bartomeus_etal
+#####################################################################################---
+# 15_Bartomeus_etal ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/15_Bartomeus_etal.csv', sep = ";")
@@ -707,8 +703,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-#####################################################################################
-# 16_Carvalho
+#####################################################################################---
+# 16_Carvalho ----
 
 newdat <- read.csv(file = "rawdata/csvs/16_Carvalho.csv")
 
@@ -745,12 +741,12 @@ write.table(x = newdat, file = "data/data.csv",
             row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat)
 
-#####################################################################################
-# 17_Carvalho
+#####################################################################################---
+# 17_Carvalho ----
 #newdat <- read.csv(file = "rawdata/csvs/17_Carvalho.csv")
 #Is the same as 16_Carvalho, no need to add it
-#####################################################################################
-# 18_Castro_etal
+#####################################################################################---
+# 18_Castro_etal ----
 
 newdat <- read.csv(file = "rawdata/csvs/18_Castro_etal.csv")
 colnames(newdat)[10] <- "precision" #just to see them both in two lines
@@ -783,8 +779,8 @@ write.table(x = newdat, file = "data/data.csv",
             row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat)
 
-#####################################################################################
-# 19_Kuhlmann_etal
+#####################################################################################---
+# 19_Kuhlmann_etal ----
 
 #help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/19_Kuhlmann_etal.csv', sep = ";")
@@ -852,8 +848,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-#####################################################################################
-# 20_Gayubo
+#####################################################################################---
+# 20_Gayubo ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/20_Gayubo.csv', sep = ";")
@@ -886,8 +882,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 21_Boieiro_etal
+#####################################################################################---
+# 21_Boieiro_etal ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/21_Boieiro_etal.csv', sep = ";")
@@ -917,8 +913,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 22_Nunez
+#####################################################################################---
+# 22_Nunez ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/22_Nunez.csv', sep = ";")
@@ -960,8 +956,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 23_Costa
+#####################################################################################---
+# 23_Costa ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/23_Costa.csv', sep = ";")
@@ -993,8 +989,8 @@ write.table(x = newdat, file = 'data/data.csv', quote = TRUE,
             sep = ',', col.names = FALSE, row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-#24_Magrach
+#####################################################################################---
+#24_Magrach ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/24_Magrach.csv', sep = ";")
@@ -1015,8 +1011,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 25_Trillo
+#####################################################################################---
+# 25_Trillo ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/25_Trillo.csv', sep = ";")
@@ -1043,8 +1039,9 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 26_Ornosa_etal (Old file name Vicente Martínez-López, maybe rename to Martinez?)
+#####################################################################################---
+# 26_Ornosa_etal ----
+#(Old file name Vicente Martínez-López, maybe rename to Martinez?) 
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/26_Ornosa_etal.csv')
@@ -1082,8 +1079,8 @@ write.table(x = newdat, file = 'data/data.csv',
       row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 27_Azpiazu_etal
+#####################################################################################---
+# 27_Azpiazu_etal ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/27_Azpiazu_etal.csv', sep = ";")
@@ -1115,8 +1112,8 @@ write.table(x = newdat, file = 'data/data.csv',
             row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 28_Roberts.csv
+#####################################################################################---
+# 28_Roberts.csv ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/28_Roberts.csv', sep = ";")
@@ -1152,8 +1149,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 29_Hormaza_etal
+#####################################################################################---
+# 29_Hormaza_etal  ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/29_Hormaza_etal.csv', sep = ";")
@@ -1185,8 +1182,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 30_Lazaro_etal
+#####################################################################################---
+# 30_Lazaro_etal  ----
 
 newdat <- read.csv(file = "rawdata/csvs/30_Lazaro_etal.csv")
 colnames(newdat)[9] <- "precision" #just to see them both in two lines
@@ -1235,8 +1232,8 @@ write.table(x = newdat, file = "data/data.csv",
             quote = TRUE, sep = ",", col.names = FALSE,
             row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat)
-##################################################################################### 
-# 31_Diaz-Calafat
+#####################################################################################---
+# 31_Diaz-Calafat  ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/31_Diaz-Calafat.csv', sep = ";")
@@ -1257,8 +1254,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 32_Valverde
+#####################################################################################---
+# 32_Valverde  ----
 
 newdat <- read.csv(file = "rawdata/csvs/32_Valverde.csv")
 colnames(newdat)[9] <- "precision" #just to see them both in two lines
@@ -1305,8 +1302,8 @@ write.table(x = newdat, file = "data/data.csv",
             row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat)
 
-##################################################################################### 
-# 33_Lara-Romero_etal
+#####################################################################################---
+# 33_Lara-Romero_etal  ----
 
 newdat <- read.csv(file = "rawdata/csvs/33_Lara-Romero_etal.csv")
 colnames(newdat)
@@ -1335,8 +1332,8 @@ write.table(x = newdat, file = "data/data.csv",
             row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat)
 
-##################################################################################### 
-# 34_dePablos
+#####################################################################################---
+# 34_dePablos  ----
 
 help_structure()
 newdat <- read.csv('rawdata/csvs/34_dePablos.csv', sep = ";")
@@ -1363,8 +1360,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 35_Magrach
+#####################################################################################---
+# 35_Magrach  ----
 
 newdat <- read.csv(file = "rawdata/csvs/35_Magrach.csv")
 #not formated, so let's start here
@@ -1468,8 +1465,8 @@ write.table(x = newdat, file = "data/data.csv",
             row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat)
 
-##################################################################################### 
-# 36_Nunez
+#####################################################################################---
+# 36_Nunez  ----
 
 newdat <- read.csv(file = "rawdata/csvs/36_Nunez.csv")
 colnames(newdat)
@@ -1511,8 +1508,8 @@ write.table(x = newdat, file = "data/data.csv",
             row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat)
 
-##################################################################################### 
-# 37_Ortiz_etal
+#####################################################################################---
+# 37_Ortiz_etal  ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/37_Ortiz_etal.csv', sep = ";")
@@ -1570,8 +1567,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 38_Ortiz_etal
+#####################################################################################---
+# 38_Ortiz_etal  ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/38_Ortiz_etal.csv', sep = ";")
@@ -1630,8 +1627,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 39_Ortiz_etal
+#####################################################################################---
+# 39_Ortiz_etal  ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/39_Ortiz_etal.csv', sep = ";")
@@ -1672,8 +1669,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 40_Gonzalez
+#####################################################################################---
+# 40_Gonzalez  ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/40_Gonzalez.csv', sep = ";")
@@ -1698,8 +1695,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 41_Torres
+#####################################################################################---
+# 41_Torres  ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/41_Torres.csv', sep =";")
@@ -1737,8 +1734,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 42_Ornosa_etal
+#####################################################################################---
+# 42_Ornosa_etal  ----
 
 newdat <- read.csv(file = "rawdata/csvs/42_Ornosa_etal.csv")
 colnames(newdat)
@@ -1782,8 +1779,8 @@ write.table(x = newdat, file = "data/data.csv",
             row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat)
 
-##################################################################################### 
-# 43_Alvarez_etal
+#####################################################################################---
+# 43_Alvarez_etal  ----
  
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/43_Alvarez_etal.csv', sep = ";")
@@ -1893,8 +1890,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 44_Ornosa
+#####################################################################################---
+# 44_Ornosa  ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/44_Ornosa.csv', sep = ";")
@@ -1925,8 +1922,8 @@ newdat <- add_uid(newdat = newdat, '44_Ornosa_')
 write.table(x = newdat, file = 'data/data.csv', quote = TRUE, sep = ',', col.names = FALSE, row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 45_Nunez
+#####################################################################################---
+# 45_Nunez  ----
 
 newdat <- read.csv(file = "rawdata/csvs/45_Nunez.csv")
 colnames(newdat)
@@ -1967,8 +1964,8 @@ write.table(x = newdat, file = "data/data.csv",
             row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat)
 
-##################################################################################### 
-# 46_Obeso
+#####################################################################################---
+# 46_Obeso  ----
 
 #help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/46_Obeso.csv')
@@ -2001,8 +1998,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 47_Collado_etal
+#####################################################################################---
+# 47_Collado_etal  ----
 
 help_structure()
 newdat <- read.csv(file = "rawdata/csvs/47_Collado_etal.csv", sep = ";")
@@ -2301,8 +2298,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 48_Casimiro-Soriguer_etal
+#####################################################################################---
+# 48_Casimiro-Soriguer_etal  ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/48_Casimiro-Soriguer_etal.csv', sep = ";")
@@ -2328,8 +2325,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 49_Ornosa_etal
+#####################################################################################---
+# 49_Ornosa_etal  ----
 
 help_structure()
 newdat <- read.csv(file = 'rawdata/csvs/49_Ornosa_etal.csv', sep = ";")
@@ -2391,8 +2388,8 @@ write.table(x = newdat, file = 'data/data.csv',
     row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat) #keep track of expected length
 
-##################################################################################### 
-# 50_Heleno_etal
+#####################################################################################---
+# 50_Heleno_etal  ----
 
 newdat <- read.csv(file = "rawdata/csvs/50_Heleno_etal.csv")
 
@@ -2432,8 +2429,9 @@ write.table(x = newdat, file = "data/data.csv",
             quote = TRUE, sep = ",", col.names = FALSE,
             row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat)
-##################################################################################### 
-# 51_Minarro
+
+#####################################################################################---
+# 51_Minarro  ----
 
 newdat <- read.csv(file = "rawdata/csvs/51_Minarro.csv")
 nrow(newdat)
@@ -2484,8 +2482,8 @@ write.table(x = newdat, file = "data/data.csv",
             row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat)
 
-##################################################################################### 
-# 52_Picanco
+#####################################################################################---
+# 52_Picanco  ----
 
 newdat <- read.csv(file = "rawdata/csvs/52_Picanco.csv")
 colnames(newdat)
@@ -2549,8 +2547,8 @@ write.table(x = newdat, file = "data/data.csv",
             row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat)
 
-##################################################################################### 
-# 53_Ferrero
+#####################################################################################---
+# 53_Ferrero  ----
 
 newdat <- read.csv(file = "rawdata/csvs/53_Ferrero.csv")
 colnames(newdat)
@@ -2607,8 +2605,8 @@ write.table(x = newdat, file = "data/data.csv",
             row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat)
 
-##################################################################################### 
-# 54_Wood_etal
+#####################################################################################---
+# 54_Wood_etal  ----
 
 #DONE OLD STYLE without cleanR
 newdat <- read.csv(file = "rawdata/csvs/54_Wood_etal.csv", sep = ";")
@@ -2740,10 +2738,10 @@ unique(newdat$Locality)
 
 #Keep working from here
 
-newdat$Locality[12]
-gsub("[^[:alnum:]]", "_", newdat$Locality[12])
-newdat$Locality <- as.character(newdat$Locality)
-newdat$Locality <- gsub("[^[:alnum:]]", "", newdat$Locality)
+#newdat$Locality[12]
+#gsub("[^[:alnum:]]", "_", newdat$Locality[12])
+#newdat$Locality <- as.character(newdat$Locality)
+#newdat$Locality <- gsub("[^[:alnum:]]", "", newdat$Locality)
 
 #Compare vars
 compare_variables(check, newdat)
@@ -2761,14 +2759,346 @@ levels(factor(newdat$Country))
 newdat$Country <- gsub("SPAIN", "Spain", newdat$Country)
 newdat$Country[which(newdat$Country %in% c(""))] <- NA
 
+#Rename provinces
+newdat$Province[which(newdat$Province %in% c(""))] <- NA
+newdat$Province[newdat$Province=="(Alic.)"] <- "Alicante"
+newdat$Province[newdat$Province=="(Alic)"] <- "Alicante"
+newdat$Province[newdat$Province=="(Ciudad-Real)"] <- "Ciudad Real"
+newdat$Province[newdat$Province=="(Gran)"] <- "Granada"
+newdat$Province[newdat$Province=="(Gren)"] <- "Granada"
+newdat$Province[newdat$Province=="(Jaen)"] <- "Jaén"
+newdat$Province[newdat$Province=="(Leon)"] <- "León"
+newdat$Province[newdat$Province=="(N.)"] <- "Navarra"
+newdat$Province[newdat$Province=="(Navarra)"] <- "Navarra"
+newdat$Province[newdat$Province=="(SraDE GREDOS)"] <- "Ávila"
+newdat$Province[newdat$Province=="(Viscaya)"] <- "Vizcaya"
+newdat$Province[newdat$Province=="(Zaragosa)"] <- "Zaragoza"
+newdat$Province[newdat$Province=="Alava"] <- "Álava"
+newdat$Province[newdat$Province=="Ã\u0081lava"] <- "Álava"
+newdat$Province[newdat$Province=="Algarva"] <- "Algarve"
+newdat$Province[newdat$Province=="Algeciras, achterland van"] <- "Algeciras"
+newdat$Province[newdat$Province=="Algeciras, province"] <- "Algeciras"
+newdat$Province[newdat$Province=="Almeria"] <- "Almería"
+newdat$Province[newdat$Province=="Andalucia"] <- "Andalucía"
+newdat$Province[newdat$Province=="Andalusia"] <- "Andalucía"
+newdat$Province[newdat$Province=="AragÃ³n, Huesca"] <- "Huesca"
+newdat$Province[newdat$Province=="Aragon, Huesca"] <- "Huesca"
+newdat$Province[newdat$Province=="Aragon, Teruel"] <- "Huesca"
+newdat$Province[newdat$Province=="AZORÃ\u0089S Santa Maria"] <- "Isla Santa María (Azores)"
+newdat$Province[newdat$Province=="Azoren, SÃ£o Miguel"] <- "Isla Sao Miguel (Azores)"
+newdat$Province[newdat$Province=="Baleares, Menorca"] <- "Islas Baleares"
+newdat$Province[newdat$Province=="Balearic Islands"] <- "Islas Baleares"
+newdat$Province[newdat$Province=="Basses PyrÃ©nÃ©es"] <- "Huesca"
+newdat$Province[newdat$Province=="Biscay"] <- "Vizcaya"
+newdat$Province[newdat$Province=="Biskaje"] <- "Vizcaya"
+newdat$Province[newdat$Province=="Burgos, Central Spain"] <- "Burgos"
+newdat$Province[newdat$Province=="CÃ¡ceres"] <- "Cáceres"
+newdat$Province[newdat$Province=="CÃ¡diz"] <- "Cádiz"
+newdat$Province[newdat$Province=="Caceres"] <- "Cáceres"
+newdat$Province[newdat$Province=="CadÃ­s"] <- "Cádiz"
+newdat$Province[newdat$Province=="Cadia"] <- "Cádiz"
+newdat$Province[newdat$Province=="Cadis"] <- "Cádiz"
+newdat$Province[newdat$Province=="Cadiz"] <- "Cádiz"
+newdat$Province[newdat$Province=="Canary Islands"] <- "Islas Canarias"
+newdat$Province[newdat$Province=="capana.LeÃ³n"] <- "Zamora"
+newdat$Province[newdat$Province=="Castile-la-Mancha"] <- "Castilla-La Mancha"
+newdat$Province[newdat$Province=="CastiliÃ«-La Mancha"] <- "Castilla-La Mancha"
+newdat$Province[newdat$Province=="Castilien"] <- "Cuenca"
+newdat$Province[newdat$Province=="Castilla i LeÃ³n"] <- "Castilla y León"
+newdat$Province[newdat$Province=="Castilla i Leon"] <- "Castilla y León"
+newdat$Province[newdat$Province=="Castilla la Mancha"] <- "Castilla-La Mancha"
+newdat$Province[newdat$Province=="Castilla-Leon"] <- "Castilla y León"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="Prades"] <- "Tarragona"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="10 km N of Lerida (Lleida)"] <- "Lérida"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="10 km E of Lerida (Lleida)"] <- "Lérida"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="Lerida"] <- "Lérida"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="Canet de mar"] <- "Barcelona"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="Martinet, 20 km SE of Andorra, Pyrenees (East)"] <- "Lérida"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="Martinet20kmSEofAndorraPyreneesEast"] <- "Lérida"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="Cerbi, 36 km NW of Andorra Esterri, 1600-2000 m"] <- "Lérida"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="18 km SW of Tortosa, Puertos de Beseit (Ports de Tortosa-Beseit)"] <- "Tarragona"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="Parc Natural del Garraf"] <- "Barcelona"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="Mont-roig del Camp, 8 km W of Cambrils"] <- "Tarragona"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="Barcelona"] <- "Barcelona"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="Pineda de Mar"] <- "Barcelona"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="S. Pere de Vilamajor"] <- "Barcelona"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="Gerona"] <- "Gerona"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="Malgrat de Mar"] <- "Barcelona"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="Monserrat"] <- "Barcelona"
+newdat$Province[newdat$Province=="Catalonia" & newdat$Locality=="Anglesola"] <- "Lérida"
+newdat$Province[newdat$Province=="Catalonia, Barcelona" & newdat$Locality=="Monserrat"] <- "Barcelona"
+newdat$Province[newdat$Province=="Catalonia, Barcelona" & newdat$Locality=="Monte Serrato"] <- "Barcelona"
+newdat$Province[newdat$Province=="Catalonia, Barcelona" & newdat$Locality=="Montserrat"] <- "Barcelona"
+newdat$Province[newdat$Locality=="Catalonia, Palamos"] <- "Gerona"
+newdat$Province[newdat$Locality=="Catalonia, 40 km N Tortosa, riv. Ebre"] <- "Tarragona"
+newdat$Province[newdat$Locality=="Catalonia, Lleida env."] <- "Lérida"
+newdat$Province[newdat$Locality=="Catalonia - 8 km W of Cambrils, Mont-Roig del Camp"] <- "Tarragona"
+newdat$Province[newdat$Province=="CataluÃ±a, Sierra del Cadi"] <- "Lérida"
+newdat$Province[newdat$Province=="Cataluna"] <- "Gerona"
+newdat$Province[newdat$Province=="Catalunia"] <- "Barcelona"
+newdat$Province[newdat$Province=="Catalunia, Barcelona"] <- "Barcelona"
+newdat$Province[newdat$Province=="Centr., Castile-La Mancha"] <- "Castilla-La Mancha"
+newdat$Province[newdat$Province=="Centr., Cuenca"] <- "Cuenca"
+newdat$Province[newdat$Province=="Centr., Montes Universales"] <- "Teruel"
+newdat$Province[newdat$Province=="Centr., Seg."] <- "Segovia"
+newdat$Province[newdat$Province=="Central Spain [Aragon]"] <- "Aragón"
+newdat$Province[newdat$Province=="Central Spain [Cuenca]"] <- "Cuenca"
+newdat$Province[newdat$Province=="Central Spain, Burgos"] <- "Burgos"
+newdat$Province[newdat$Province=="Central Spain, Madrid"] <- "Madrid"
+newdat$Province[newdat$Province=="Central Spain, Soria"] <- "Soria"
+newdat$Province[newdat$Province=="Central Spain, Toledo"] <- "Toledo"
+newdat$Province[newdat$Province=="Central-Spain, Toledo"] <- "Toledo"
+newdat$Country[newdat$Province=="charente maritime"] <- "France"
+newdat$Province[newdat$Province=="charente maritime"] <- "Charente maritime"
+newdat$Province[newdat$Province=="Coruna"] <- "La Coruña"
+newdat$Province[newdat$Province=="Cuenca, Castilien"] <- "Cuenca"
+newdat$Province[newdat$Province=="E. Spain, prov. MÃ¡laga"] <- "Málaga"
+newdat$Province[newdat$Province=="East Spain" & newdat$Locality=="Altea, 10 km N of Benidorm"] <- "Alicante"
+newdat$Province[newdat$Province=="East Spain" & newdat$Locality=="Altea"] <- "Alicante"
+newdat$Province[newdat$Province=="East Spain" & newdat$Locality=="Ferrandet, near Calpe"] <- "Alicante"
+newdat$Province[newdat$Province=="East Spain, Albacete"] <- "Albacete"
+newdat$Province[newdat$Province=="East Spain, Alicante"] <- "Alicante"
+newdat$Province[newdat$Province=="East Spain, Tarragona"] <- "Tarragona"
+newdat$Province[newdat$Province=="Extramadura" & newdat$Locality=="HervÃ¡s"] <- "Cáceres"
+newdat$Province[newdat$Province=="Extramadura" & newdat$Locality=="HervÃ¡s"] <- "Cáceres"
+newdat$Province[newdat$Province=="Fuertaventura"] <- "Islas Canarias"
+newdat$Province[newdat$Province=="Fuertaventura, Canarias"] <- "Islas Canarias"
+newdat$Province[newdat$Province=="Fuerteventura"] <- "Islas Canarias"
+newdat$Province[newdat$Province=="Fuerto-ventura"] <- "Islas Canarias"
+newdat$Province[newdat$Province=="G. v. Biscaje"] <- "Guipúzcoa"
+newdat$Province[newdat$Province=="Galicia, Pontevedra"] <- "Pontevedra"
+newdat$Province[newdat$Province=="Gipuzkoa"] <- "Guipúzcoa"
+newdat$Province[newdat$Province=="Gran Canaria"] <- "Islas Canarias"
+newdat$Province[newdat$Province=="Granada, Sierra Nevada"] <- "Granada"
+newdat$Province[newdat$Province=="Avila"] <- "Ávila"
+newdat$Province[newdat$Province=="Al."] <- "Alicante"
+newdat$Province[newdat$Province=="Aragon"] <- "Aragón"
+newdat$Province[newdat$Province=="Aragon, Centr."] <- "Aragón"
+newdat$Province[newdat$Province=="Aragon, Hispania Centr."] <- "Aragón"
+newdat$Province[newdat$Province=="Centr." & newdat$Locality=="Tragacete"] <- "Cuenca"
+newdat$Province[newdat$Province=="GiupÃºzcoa"] <- "Guipúzcoa"
+newdat$Province[newdat$Province=="GuipÃºzcoa"] <- "Guipúzcoa"
+newdat$Province[newdat$Province=="GuipÃºzcoa / Basque Country"] <- "Guipúzcoa"
+newdat$Province[newdat$Province=="Guipuzcoa"] <- "Guipúzcoa"
+newdat$Province[newdat$Province=="Hisp. centr."] <- "Teruel"
+newdat$Province[newdat$Province=="Hisp. centr."] <- "Teruel"
+newdat$Province[newdat$Province=="Hispania Centr." & newdat$Locality=="C. Encantada, Cuenca"] <- "Cuenca"
+newdat$Province[newdat$Province=="Hispania Centr." & newdat$Locality=="Cercedilla Dehesas"] <- "Madrid"
+newdat$Province[newdat$Province=="Hispania Centr." & newdat$Locality=="Tragacete-Huelamos"] <- "Cuenca"
+newdat$Province[newdat$Province=="Hispania Centr." & newdat$Locality=="Tragacete-Huelamo"] <- "Cuenca"
+newdat$Province[newdat$Province=="Hispania Centr., Cuenca"] <- "Cuenca"
+newdat$Province[newdat$Province=="Hispania Centr., Sierra de Albarracin"] <- "Teruel"
+newdat$Province[newdat$Province=="Hispania Central" & newdat$Locality=="Tragacete-Huelamo"] <- "Cuenca"
+newdat$Province[newdat$Province=="Hispania Central" & newdat$Locality=="Albarracin"] <- "Teruel"
+newdat$Province[newdat$Province=="Hispania Central" & newdat$Locality=="Tragacete"] <- "Cuenca"
+newdat$Province[newdat$Province=="Hispania Central" & newdat$Locality=="Sierra de Albarracin"] <- "Teruel"
+newdat$Province[newdat$Province=="Hispania Central" & newdat$Locality=="Cercedilla Dehesas"] <- "Madrid"
+newdat$Province[newdat$Province=="Hispania Central" & newdat$Locality=="Tragacete, Huelamo"] <- "Cuenca"
+newdat$Province[newdat$Province=="Hispania Central" & newdat$Locality=="Pto. de Navacerrada"] <- "Madrid"
+newdat$Province[newdat$Province=="Hispania Central" & newdat$Locality=="Puerto de Navacerrada"] <- "Madrid"
+newdat$Province[newdat$Province=="Guad."] <- "Guadalajara"
+newdat$Province[newdat$Province=="Hispania Central, Aragon"] <- "Aragón"
+newdat$Province[newdat$Province=="Hispania Central, Cuenca"] <- "Cuenca"
+newdat$Province[newdat$Province=="Hispania Central, Segovia"] <- "Segovia"
+newdat$Province[newdat$Province=="Hispania Central, Sierra de Guadarrama"] <- "Madrid"
+newdat$Province[newdat$Province=="Hispania Central, Teruel"] <- "Teruel"
+newdat$Province[newdat$Province=="IBIZA (Bal.)"] <- "Islas Baleares"
+newdat$Province[newdat$Province=="Is. Baleares MALLORCA"] <- "Islas Baleares"
+newdat$Province[newdat$Province=="Is.Baleares"] <- "Islas Baleares"
+newdat$Province[newdat$Province=="Islas Baleares, Mallorca"] <- "Islas Baleares (Mallorca)"
+newdat$Province[newdat$Province=="Islas Canarias, La Palma"] <- "Islas Canarias (La Palma)"
+newdat$Province[newdat$Province=="Islas Canarias, Tenerife"] <- "Islas Canarias (Tenerife)"
+newdat$Province[newdat$Province=="JaÃ©n"] <- "Jaén"
+newdat$Province[newdat$Province=="Jaen"] <- "Jaén"
+newdat$Province[newdat$Province=="La Coruna"] <- "Jaén"
+newdat$Province[newdat$Province=="La Palma"] <- "Islas Canarias (La Palma)"
+newdat$Province[newdat$Province=="LeÃ³n"] <- "León"
+newdat$Province[newdat$Province=="LeÃ³n, Montes de LeÃ³n"] <- "León"
+newdat$Province[newdat$Province=="Leon"] <- "León"
+newdat$Province[newdat$Province=="Lerida"] <- "Lérida"
+newdat$Province[newdat$Province=="LlanÃ§Ã "] <- "Gerona"
+newdat$Province[newdat$Province=="MÃ¡laga"] <- "Málaga"
+newdat$Province[newdat$Province=="Malaga"] <- "Málaga"
+newdat$Province[newdat$Province=="Mallorca"] <- "Islas Baleares (Mallorca)"
+newdat$Province[newdat$Province=="Mallorca, East"] <- "Islas Baleares (Mallorca)"
+newdat$Province[newdat$Province=="Merida"] <- "Mérida"
+newdat$Province[newdat$Province=="Minorca"] <- "Islas Baleares (Menorca)"
+newdat$Province[newdat$Province=="Montes de LÃ©on"] <- "Montes de León"
+newdat$Province[newdat$Province=="Murcia, province"] <- "Murcia"
+newdat$Province[newdat$Province=="N. Spain"] <- "Navarra"
+newdat$Province[newdat$Province=="Nav."] <- "Navarra"
+newdat$Province[newdat$Province=="Navarra, South Spain"] <- "Navarra"
+newdat$Province[newdat$Province=="near MÃ laga"] <- "Málaga"
+newdat$Province[newdat$Province=="Nordost"] <- "Barcelona"
+newdat$Province[newdat$Province=="North Spain, prov. Burgos"] <- "Burgos"
+newdat$Province[newdat$Province=="North Spain, prov. Navarra"] <- "Navarra"
+newdat$Province[newdat$Province=="North West Spain" & newdat$Locality=="Viscaya, kust bij Somorrostro (tussen Bilbao en Castro Urdiales)"] <- "Vizcaya"
+newdat$Province[newdat$Province=="North West Spain" & newdat$Locality=="Villajuan, S.W. of Villagarcia (Pontevedra)"] <- "Pontevedra"
+newdat$Province[newdat$Province=="North West Spain, Coruna"] <- "La Coruña"
+newdat$Province[newdat$Province=="North-East Spain" & newdat$Locality=="La Garriga"] <- "Barcelona"
+newdat$Province[newdat$Province=="North-East Spain" & newdat$Locality=="Collsacabra"] <- "Barcelona"
+newdat$Province[newdat$Province=="North-West Spain" & newdat$Locality=="Caldas de Reyes"] <- "Pontevedra"
+newdat$Province[newdat$Province=="North-West Spain" & newdat$Locality=="Boiro, 3 km South-East of"] <- "La Coruña"
+newdat$Province[newdat$Province=="North-West Spain" & newdat$Locality=="Boiro, 2 km. S.E. of"] <- "La Coruña"
+newdat$Province[newdat$Province=="North-West Spain" & newdat$Locality=="Callas de Reyes"] <- "Pontevedra"
+newdat$Province[newdat$Province=="North-West Spain, Pontevedra"] <- "Pontevedra"
+newdat$Province[newdat$Province=="prov. Almeria"] <- "Almería"
+newdat$Province[newdat$Province=="prov. Murcia"] <- "Murcia"
+newdat$Province[newdat$Province=="prov. Navarra"] <- "Navarra"
+newdat$Province[newdat$Province=="Provence"] <- "Barcelona"
+newdat$Province[newdat$Province=="Province Burgos"] <- "Burgos"
+newdat$Province[newdat$Province=="Province Murcia"] <- "Murcia"
+newdat$Province[newdat$Province=="PyrÃ©nÃ©es Espagnol" & newdat$Locality=="Panticosa"] <- "Huesca"
+newdat$Province[newdat$Province=="PyreneeÃ«n" & newdat$Locality=="Salau"] <- "Tarragona"
+newdat$Province[newdat$Province=="PyreneeÃ«n" & newdat$Locality=="Alos de Isile"] <- "Lérida"
+newdat$Province[newdat$Province=="PyreneeÃ«n, noordhelling" & newdat$Locality=="Col du Somport"] <- "Huesca"
+newdat$Province[newdat$Province=="PyreneeÃ«n, noordhelling" & newdat$Locality=="Col de Somport Noord Helling PyreneeÃ«n"] <- "Huesca"
+newdat$Province[newdat$Province=="PyreneeÃ«n, noordhelling"] <- "Ávila"
+newdat$Province[newdat$Province=="S. E. Spain, prov. Murcia"] <- "Murcia"
+newdat$Province[newdat$Province=="Sierra"] <- "Jaén"
+newdat$Province[newdat$Province=="Sierra de Gredos"] <- "Ávila"
+newdat$Province[newdat$Province=="Sierra de Guadarama"] <- "Madrid"
+newdat$Province[newdat$Province=="Sierra de Guadarrama"] <- "Madrid"
+newdat$Province[newdat$Province=="Sierra Nevada"] <- "Granada"
+newdat$Province[newdat$Province=="Sierra Nevada, Granada"] <- "Granada"
+newdat$Province[newdat$Province=="South Spain, Alicante"] <- "Alicante"
+newdat$Province[newdat$Province=="South Spain, Cadiz"] <- "Cádiz"
+newdat$Province[newdat$Province=="South Spain, MÃ¡laga"] <- "Málaga"
+newdat$Province[newdat$Province=="South Spain, Navarra"] <- "Navarra"
+newdat$Province[newdat$Province=="South Spain, prov. MÃ¡laga"] <- "Málaga"
+newdat$Province[newdat$Province=="South-East Spain, dept. MÃ laga"] <- "Málaga"
+newdat$Province[newdat$Province=="South-Spain, Malaga near"] <- "Málaga"
+newdat$Province[newdat$Province=="South-West Spain, prov. Cadiz"] <- "Cádiz"
+newdat$Province[newdat$Province=="South-West Spain, prov. Sevilla"] <- "Sevilla"
+newdat$Province[newdat$Province=="Southeast Spain, MÃ£laga"] <- "Málaga"
+newdat$Province[newdat$Province=="Southern Spain, Alicante"] <- "Alicante"
+newdat$Province[newdat$Province=="Southern Spain, Granada"] <- "Granada"
+newdat$Province[newdat$Province=="Southern Spain, Malaga, Sierra Bermeja"] <- "Málaga"
+newdat$Province[newdat$Province=="Southern Spain, prov. CadÃ­z"] <- "Cádiz"
+newdat$Province[newdat$Province=="Southern Spain, Teruel"] <- "Teruel"
+newdat$Province[newdat$Province=="Spanische Pyrenaeen"] <- "Gerona"
+newdat$Province[newdat$Province=="near MÃ laga"] <- "Málaga"
+newdat$Province[newdat$Province=="S. de Gredos"] <- "Ávila"
+newdat$Province[newdat$Province=="South-East Spain, dept. MÃ laga"] <- "Málaga"
+newdat$Province[newdat$Province=="Tarrazona"] <- "Tarragona"
+newdat$Province[newdat$Province=="Ternel"] <- "Teruel"
+newdat$Province[newdat$Province=="Teruel, Hautes PyrÃ©nÃ©Ã©s"] <- "Teruel"
+newdat$Province[newdat$Province=="Val de Ordesa"] <- "Huesca"
+newdat$Province[newdat$Province=="Valentia"] <- "Valencia"
+newdat$Province[newdat$Province=="Vizcaya, northwestern part of Spain"] <- "Vizcaya"
+newdat$Province[newdat$Province=="West Mallorca"] <- "Islas Baleares (Mallorca)"
+newdat$Province[newdat$Province=="West Spain, Badajoz"] <- "Badajoz"
+newdat$Province[newdat$Province=="West Spain, prov. Caseres"] <- "Cáceres"
+newdat$Province[newdat$Province=="West-Spain, prov. Caceres"] <- "Cáceres"
+newdat$Province[newdat$Province=="Za"] <- "Zaragoza"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Gerez"] <- "Cádiz"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Villaricios"] <- "Almería"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Ronda"] <- "Málaga"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Granada, Sierra de Almijara, 19 km N of Almunecar, 945 m"] <- "Granada"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Benidorm"] <- "Alicante"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Estepona"] <- "Málaga"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Granada, Pantano de Cubillas"] <- "Granada"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Torremolinos (nr Malaga)"] <- "Málaga"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Malaga"] <- "Málaga"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="50 km N of Granada"] <- "Granada"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="AlmuÃ±Ã©car, Granada"] <- "Granada"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Almeria, Mojacar"] <- "Almería"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Alicante, Denia"] <- "Alicante"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Cadiz, Castellar de la Frontera"] <- "Cádiz"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Malaga, Arriate"] <- "Málaga"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Malaga, 5 km S Ronda"] <- "Málaga"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Malaga, Benalmadena"] <- "Málaga"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Malaga, 5 km E Alhaurin el Grande"] <- "Málaga"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Malaga, Torre del Mar"] <- "Málaga"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Malaga, Rincon de la Victoria"] <- "Málaga"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Malaga, San Julian"] <- "Málaga"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Malaga, El Chorro"] <- "Málaga"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Malaga, San Julian, 8 km SW of Malaga"] <- "Málaga"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Malaga, Velez Malaga"] <- "Málaga"
+newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Malaga, Torre del Mar"] <- "Málaga"
+newdat$Province[newdat$Province=="Vieja"] <- "Soria"
+newdat$Province[newdat$Province=="South-East Spain, dept. MÃ laga"] <- "Málaga"
+#Organize Portugal by districts (equivalent of provinces in Spain?)
+#This is going to take ages and portugal is small, maybe something to do in the future
+#I tried a bit...
+#newdat$Province[newdat$Province=="(Minles-Portugal)"] <- "Porto"
+#newdat$Province[newdat$Province=="Algarve"] <- "Faro"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Estremoz"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Elvas"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Évora"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Mitra, Évora"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Castelo de Vide"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Castelo de Vide"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Almendras"] <- "Guarda"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Ribeira de Valverde"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Almendres"] <- "Guarda"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Álamo"] <- "Guarda"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Castelo do Vide"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Vila Nova de São Bento"] <- "Beja"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Évora, Ribeira de Valverde "] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Montemor-o-novo"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Almandres"] <- "Guarda"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Serra Monfurado"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Serra do Monfurado"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Vila Visçosa"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Vila Visçosa"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Alandroal"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="BORBA"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Marvão, Castelo"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Portalegre"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Reguengo, Portalegre"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Montargil, Portalegre"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Montargil, Ponte de Sor, Portalegre"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Flor de Rosa"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Ponte de Sor"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Montemor-o-Novo"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Foros de Vale de Figueria, Montemor-o-novo"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Portalegre, Vaiamonte"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Vaiamonte, near Portalegre"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Vaiamonte"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Foros de Mora, Mora, Évora"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Évora, Mora"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Coruche, Couço"] <- "Santarém"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Mora, near Évora"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Albufeira de Montagil"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Barragem de Montargil, Portalegre"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Portalegre, Ribeira de Nisa"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Marvão, Santo Maria de Marvão, Portalegre"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Mértola, Alcaria river, Beja"] <- "Beja"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Evora, Mora, Cabecao, Gameiro"] <- "Beja"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Barrancos"] <- "Beja"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Evora, Mora, Cabeção"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Evora, Mora, Cabeção, Gameiro"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Montemor-o-Novo, Foros de Vale de Figeira"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Evora, Montemor-o-Novo,Foros de Vale da Figueira M2"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Evora, Montemor-o-Novo,Foros de Vale da Figueira A1"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Evora, Montemor-o-Novo,Foros de Vale da Figueira M1"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Evora, Montemor-o-Novo,Foros de Vale da Figueira M2 "] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Evora, Montemor-o-Novo,Foros de Vale da Figueira A1 "] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Evora, Montemor-o-Novo,Foros de Vale da Figueira dam "] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Evora, Montemor-o-Novo,Foros de Vale da Figueira "] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Evora, Montemor-o-Novo,Foros de Vale da Figueira A2"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Portalegre, PN Serra São Mamede"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Portalegre, PN Serra São Mamede, Barretos"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Portalegre, PN Serra São Mamede, Castelo de Vide"] <- "Portalegre"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Cerros, near to Restaurante Herdade do Esporão"] <- "Évora"
+#newdat$Province[newdat$Province=="Alto Alentejo" & newdat$Locality=="Foros de Vale Figueira, Montemor-o-Novo"] <- "Évora"
+
+#They look better now but still more work can be done here
+levels(factor(newdat$Province))
+
+#Check localities
+levels(factor(newdat$Locality))
+#Do a bit of cleaning (not something crazy)
+
 #write
 write.table(x = newdat, file = "data/data.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
             row.names = FALSE, append = TRUE)
 size <- size + nrow(newdat)
 
-##################################################################################### 
-#Add data internet----
+#####################################################################################---
+#Add data internet ----
 
 newdat <- read.csv(file = "data/idata.csv")[,-1]
 head(newdat)
@@ -2828,7 +3158,7 @@ write.table(x = newdat, file = "data/data.csv",
 size <- size + nrow(newdat)
 
 
-##################################################################################### 
+#####################################################################################---
 #test size matches----
 data <- read.csv("data/data.csv") #Open in OpenOffice and substitute " by nothing. FIX!
 #to fix:
