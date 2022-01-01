@@ -3111,6 +3111,10 @@ newdat$Locality <- gsub("\\ El", " el", newdat$Locality)
 newdat$Locality <- gsub("\\ La", " la", newdat$Locality)
 newdat$Locality <- gsub("\\ Los", " los", newdat$Locality)
 
+#Delete leading and trailing spaces
+newdat$Locality <- trimws(newdat$Locality, "l")
+newdat$Locality <- trimws(newdat$Locality, "r")
+
 newdat$Locality[newdat$Locality=="Barcelona, Provincia de"] <- NA
 newdat$Locality[newdat$Locality=="Córdoba, Provincia de"] <- NA
 newdat$Locality[newdat$Locality=="- 23 Km S Cadiz,Chiclana de la Frontera"] <- "23 km S Cádiz, Chiclana de la Frontera"
@@ -3239,9 +3243,221 @@ newdat$Locality[newdat$Locality=="Andalusia: See Andalucía"] <- "Andalucía"
 newdat$Locality[newdat$Locality=="Arandade Duero"] <- "Aranda de Duero"
 newdat$Locality[newdat$Locality=="Arantzazu / 20567 Arantzazu, Gipuzkoa, Spain"] <- "Aránzazu"
 newdat$Locality[newdat$Locality=="Arantzazu"] <- "Aránzazu"
+newdat$Locality[newdat$Locality=="Arcos de la Frontera, Andalucía Prov."] <- "Arcos de la Frontera"
+newdat$Locality[newdat$Locality=="Arenys, Riera de"] <- "Riera de Arenys"
+newdat$Locality[newdat$Locality=="Artesa de Serge"] <- "Artesa de Segre"
+newdat$Province[newdat$Locality=="Asturias: See Oviedo, Provincia de"] <- "Oviedo"
+newdat$Locality[newdat$Locality=="Asturias: See Oviedo, Provincia de"] <- NA
+newdat$Locality[newdat$Locality=="3km N.ojén"] <- "3 km N Ojén"
+newdat$Locality[newdat$Locality=="ÃGueda"] <- "Águeda"
+newdat$Locality[newdat$Locality=="Albac, Alcaraz"] <- "Albacete, Alcaraz"
+newdat$Locality[newdat$Locality=="Albace, Alcaraz"] <- "Albacete, Alcaraz"
+newdat$Locality[newdat$Locality=="Aldea del Rio Bij Guarramã¡N"] <- "Aldea los Ríos (Guarromán)"
+newdat$Locality[newdat$Locality=="Aldea del Rio Bij Guarramã¡N 400 M"] <- "Aldea los Ríos (Guarromán)"
+newdat$Locality[newdat$Locality=="Alg?"] <- NA
+newdat$Locality[newdat$Locality=="Alg@"] <- NA
+newdat$Locality[newdat$Locality=="Amã©Lie Les Bains Montbolo 500-700m"] <- "Amélie les Bains-Montbolo"
+newdat$Locality[newdat$Locality=="Ameira (?Aldeia)"] <- "Ameira (Aldeia)"
+newdat$Locality[newdat$Locality=="Ba´?¢Os de Benasque"] <- "Baños de Benasque"
+newdat$Locality[newdat$Locality=="Baleares"] <- "Islas Baleares"
+newdat$Locality[newdat$Locality=="Baléares, Iles: See Baleares, Islas"] <- "Islas Baleares"
+newdat$Locality[newdat$Locality=="Baleares, Islas [Spanish]; Balearic Islands [Conve"] <- "Islas Baleares"
+newdat$Locality[newdat$Locality=="Balearic Islands: See Baleares, Islas"] <- "Islas Baleares"
+newdat$Province[newdat$Locality=="Islas Baleares"] <- "Islas Baleares"
+newdat$Locality[newdat$Locality=="Islas Baleares"] <- NA
+newdat$Locality[newdat$Locality=="Banolas"] <- "Bañolas"
+newdat$Locality[newdat$Locality=="Banos"] <- "Baños"
+newdat$Locality[newdat$Locality=="Banos de Montemayor"] <- "Baños de Montemayor"
+newdat$Locality[newdat$Locality=="Banos de Panticosa"] <- "Baños de Panticosa"
+newdat$Locality[newdat$Locality=="Barranco de la Verruga;G´?¢Rgal; Sierra de los Fi	1780	19910920	Ortiz, F	Gbif,2015	Ku"] <- "Barranco de la Verruga"
+newdat$Locality[newdat$Locality=="Barranco de la Verruga;G´?¢Rgal; Sierra de los Fi	1780	19910920	Ortiz, F	Gbif,2015	Ku"]  <- "Benalmádena"
+newdat$Locality[newdat$Locality=="Benalmadena"]  <- "Benalmádena"
+newdat$Locality[newdat$Locality=="Benasque, Valle de"]  <- "Valle de Benasque"
+newdat$Locality[newdat$Locality=="Beniarda, 44 Km Ne of Alicante"]  <- "Beniarda (near Alicante)"
+newdat$Locality[newdat$Locality=="Beniarda"]  <- "Beniarda (near Alicante)"
+newdat$Locality[newdat$Locality=="Betlem, Es Cal??"]  <- "Betlem-Es Caló"
+newdat$Locality[newdat$Locality=="Beznar"]  <- "Béznar"
+newdat$Locality[newdat$Locality=="Bï¿½Znar"]  <- "Béznar"
+newdat$Locality[newdat$Locality=="Bilbao, Ondarroa"]  <- "Ondarroa"
+newdat$Locality[newdat$Locality=="Binies"]  <- "Biniés"
+newdat$Province[newdat$Locality=="Boiro, 2 Km. S.e. of"]  <- "La Coruña"
+newdat$Locality[newdat$Locality=="Boiro, 2 Km. S.e. of"]  <- "Boiro"
+newdat$Province[newdat$Locality=="Boiro, 3 Km South-East of"]  <- "La Coruña"
+newdat$Locality[newdat$Locality=="Boiro, 3 Km South-East of"]  <- "Boiro"
+newdat$Province[newdat$Locality=="Burgos S MillãN de Juarros"]  <- "Burgos"
+newdat$Locality[newdat$Locality=="Burgos S MillãN de Juarros"]  <- "San Millán de Juarros"
+newdat$Locality[newdat$Locality=="Burgos S MillãN de Juarros"]  <- "San Millán de Juarros"
+newdat$Province[newdat$Locality=="Ca??Ada de la Estrella"]  <- "Valencia"
+newdat$Province[newdat$Locality=="Ca??Ada de la Estrella"]  <- "Olocau"
+newdat$Province[newdat$Locality=="Cádiz [Spanish]; Cadiz [Conventional]"]  <- "Cádiz"
+newdat$Locality[newdat$Locality=="Cádiz [Spanish]; Cadiz [Conventional]"]  <- NA
+newdat$Province[newdat$Locality=="Cádiz"]  <- "Cádiz"
+newdat$Locality[newdat$Locality=="Cádiz"]  <- NA
+newdat$Province[newdat$Locality=="Cadiz"]  <- "Cádiz"
+newdat$Locality[newdat$Locality=="Cadiz"]  <- NA
+newdat$Province[newdat$Locality=="Cadix"]  <- "Cádiz"
+newdat$Locality[newdat$Locality=="Cadix"]  <- NA
+newdat$Locality[newdat$Locality=="?Wis"]  <- NA
+newdat$Province[newdat$Locality=="@Ambel"]  <- "Zaragoza"
+newdat$Locality[newdat$Locality=="@Ambel"]  <- "Ambel"
+newdat$Province[newdat$Locality=="Cadaquã©S"]  <- "Gerona"
+newdat$Locality[newdat$Locality=="Cadaquã©S"]  <- "Cadaqués"
+newdat$Locality[newdat$Locality=="Cadaques"]  <- "Cadaqués"
+newdat$Locality[newdat$Locality=="Cahas, 42â°52'50\" N-2 4420 W of Paris"]  <- "Cahas (W of Paris)"
+newdat$Locality[newdat$Locality=="Camprodã³N"]  <- "Camprodón"
+newdat$Locality[newdat$Locality=="Camprodã³N"]  <- "Camprodón"
+newdat$Locality[newdat$Locality=="Camprodon"]  <- "Camprodón"
+newdat$Locality[newdat$Locality=="Can Pastilla, Palma de Majorca"]  <- "Can Pastilla, Palma de Mallorca"
+newdat$Locality[newdat$Locality=="Canary Islands: See Canarias, Islas"]  <- NA
+newdat$Locality[newdat$Locality=="Candelario, Sierra de"]  <- "Sierra de Candelario"
+newdat$Locality[newdat$Locality=="Canet de Mar"]  <- "Cañet de Mar"
+newdat$Locality[newdat$Locality=="Canet de Mar."]  <- "Cañet de Mar"
+newdat$Locality[newdat$Locality=="Canete"]  <- "Cañete"
+newdat$Locality[newdat$Locality=="Cartaya En Gibraleã³N, Tussen"]  <- "Cartaya (Huelva)"
+newdat$Locality[newdat$Locality=="Cazorla, Sierra de"]  <- "Sierra de Cazorla"
+newdat$Locality[newdat$Locality=="Cazorla"]  <- "Sierra de Cazorla"
+newdat$Province[newdat$Locality=="Chiclana: See Chiclana de la Frontera"]  <- "Cádiz"
+newdat$Locality[newdat$Locality=="Chiclana: See Chiclana de la Frontera"]  <- "Chiclana de la Frontera"
+newdat$Locality[newdat$Locality=="Cohceicã¢O de Tavira"]  <- "Tavira (Portugal)"
+newdat$Locality[newdat$Locality=="Col de Sollã©R"]  <- "Coll de Sóller" 
+newdat$Locality[newdat$Locality=="Col Du Pourtalet, 42â°49' 20\"N 2 43 40 W of Paris"]  <- "Col Du Pourtalet" 
+newdat$Locality[newdat$Locality=="Corona, Monte"]  <- "Monte Corona" 
+newdat$Locality[newdat$Locality=="Europa, Picos de"]  <- "Picos de Europa" 
+newdat$Province[newdat$Locality=="Fr´?¢As de Albarrac´?¢N"]  <- "Teruel" 
+newdat$Locality[newdat$Locality=="Fr´?¢As de Albarrac´?¢N"]  <- "Frías de Albarracín" 
+newdat$Locality[newdat$Locality=="Fuengirola, lage Crucif [?]"]  <- "Fuengirola" 
+newdat$Province[newdat$Locality=="Fuentidueï¿½A, 66 Km N of Segovia"]  <- "Segovia" 
+newdat$Locality[newdat$Locality=="Fuentidueï¿½A, 66 Km N of Segovia"]  <- "Fuentidueña" 
+newdat$Locality[newdat$Locality=="Gador, Sierra"]  <- "Sierra de Gádor" 
+newdat$Locality[newdat$Locality=="Gador, Sierra de"]  <- "Sierra de Gádor" 
+newdat$Locality[newdat$Locality=="Gata, Cabo de"]  <- "Cabo de Gata" 
+newdat$Locality[newdat$Locality=="Gijã³N"]  <- "Gijón" 
+newdat$Locality[newdat$Locality=="Gijon"]  <- "Gijón" 
+newdat$Locality[newdat$Locality=="Gra@, Sierra Nevada"]  <- "Sierra Nevada" 
+newdat$Province[newdat$Locality=="Granada, Provincia de"]  <- "Granada" 
+newdat$Locality[newdat$Locality=="Granada, Provincia de"]  <- NA 
+newdat$Locality[newdat$Locality=="Gredos, Sierra de"]  <- "Sierra de Gredos" 
+newdat$Locality[newdat$Locality=="Gredos: See Gredos, Sierra de"]  <- "Sierra de Gredos" 
+newdat$Locality[newdat$Locality=="Gumiel de Hizan"]  <- "Gumiel de Hizán" 
+newdat$Locality[newdat$Locality=="Hierro [Spanish]; Ferro [Conventional]"]  <- "El Hierro" 
+newdat$Locality[newdat$Locality=="Jerte"]  <- "Valle del Jerte" 
+newdat$Locality[newdat$Locality=="Jerte, Cã¡Ceres"]  <- "Valle del Jerte" 
+newdat$Locality[newdat$Locality=="La Gomera, Isla de"]  <- "La Gomera" 
+newdat$Locality[newdat$Locality=="La Gomera, Isla de la"]  <- "La Gomera" 
+newdat$Province[newdat$Locality=="Logroño, Provincia de"]  <- "Logroño" 
+newdat$Locality[newdat$Locality=="Maci´?¢N, V´?¢Lez-Blanco"]  <- "Vélez-Blanco" 
+newdat$Locality[newdat$Locality=="Mahã³N"]  <- "Mahón" 
+newdat$Locality[newdat$Locality=="Mahon"]  <- "Mahón" 
+newdat$Locality[newdat$Locality=="Majorca Island: See Mallorca, Isla de"]  <- "Isla de Mallorca" 
+newdat$Locality[newdat$Locality=="Malaga"]  <- "Málaga" 
+newdat$Locality[newdat$Locality=="Mallorca, Isla de"]  <- "Isla de Mallorca" 
+newdat$Locality[newdat$Locality=="Mallorca, Isla de [Spanish]; Majorca Island [Conve"]  <- "Isla de Mallorca" 
+newdat$Locality[newdat$Locality=="Marisma 10 Km. N.v Sanlãºear de Barrameda"]  <- "Marisma, 10 km N Sanlucar de Barrameda" 
+newdat$Locality[newdat$Locality=="Marisma, 10 Km. N. V Sanlucar de Barrameda"]  <- "Marisma, 10 km N Sanlucar de Barrameda" 
+newdat$Locality[newdat$Locality=="Navacerrada, Puerto de"]  <- "Puerto de Navacerrada" 
+newdat$Locality[newdat$Locality=="Pina [Pina de Ebro]"]  <- "Pina de Ebro" 
+newdat$Locality[newdat$Locality=="Pina: See Pina de Ebro"]  <- "Pina de Ebro" 
+newdat$Locality[newdat$Locality=="Pinet,Salinas del"]  <- "Salinas del Pinet" 
+newdat$Locality[newdat$Locality=="Playa Blanca / lanzarote"]  <- "Playa Blanca (Lanzarote)" 
+newdat$Locality[newdat$Locality=="Playa Blanca"]  <- "Playa Blanca (Lanzarote)" 
+newdat$Locality[newdat$Locality=="Pol?¡Gono Alqueria de la Mina"]  <- "Polígono Alquería de la Mina" 
+newdat$Locality[newdat$Locality=="Pol?¡Gono Alqueria de la Mina"]  <- "Polígono Alquería de la Mina" 
+newdat$Locality[newdat$Locality=="Ponta do Castelo, N 37º04'28\" W 08º17'25\""]  <- "Ponta do Castelo" 
+newdat$Province[newdat$Locality=="Pontevedra, Provincia de"]  <- "Pontevedra" 
+newdat$Province[newdat$Locality=="Pontevedra, Provincia de"]  <- NA 
+newdat$Locality[newdat$Locality=="Pozo Alcã³N, Rio Turrillo"]  <- "Pozo Alcón, Río Turrillo" 
+newdat$Locality[newdat$Locality=="Puebla de don Fabrique"]  <- "Puebla de don Fadrique" 
+newdat$Locality[newdat$Locality=="Puentecillas, Río de las"]  <- "Río de las Puentecillas" 
+newdat$Locality[newdat$Locality=="Puerto de Sollã©R"]  <- "Puerto de Sóller" 
+newdat$Locality[newdat$Locality=="Puerto de Soller"]  <- "Puerto de Sóller" 
+newdat$Locality[newdat$Locality=="Pyrenees [Conventional, *****Cci]; Pirineos [Spain"]  <- "Pirineos (Pyrenees)" 
+newdat$Locality[newdat$Locality=="Quarteira, Trafal, N 37º03'56\" W 08º04'26\""]  <- "Trafal (Quarteira)" 
+newdat$Locality[newdat$Locality=="R?¡O Arriba"]  <- "Río Arriba" 
+newdat$Locality[newdat$Locality=="4R?¡O Regajo"]  <- "Río Regajo" 
+newdat$Locality[newdat$Locality=="Ramalhosa"]  <- "Ramallosa (Bayona)" 
+newdat$Locality[newdat$Locality=="Ramallosa"]  <- "Ramallosa (Bayona)" 
+newdat$Locality[newdat$Locality=="Rasmalho, N 37º13'10\" W 08º32'46\""]  <- "Rasmalho" 
+newdat$Locality[newdat$Locality=="Rincon de la Victoria"]  <- "Rincón de la Victoria" 
+newdat$Locality[newdat$Locality=="Rincon de la Victoria"]  <- "Rincón de la Victoria" 
+newdat$Locality[grepl("San Juan de la Rambla; Monta", newdat$Locality)] <- "San Juan de la Rambla, Montaña negra"
+newdat$Locality[grepl("San Juan de la Rambla; Riscos", newdat$Locality)] <- "San Juan de la Rambla, Riscos de la Fortaleza"
+newdat$Locality[newdat$Locality=="Santander, Playa Cã³Breces"]  <- "Playa de Cóbreces" 
+newdat$Province[newdat$Locality=="Santander, Provincia de"]  <- "Santander" 
+newdat$Province[newdat$Locality=="Santander, Provincia de"]  <- NA 
+newdat$Locality[newdat$Locality=="Santillana del Mar: See Santillana"]  <- "Santillana del Mar"
+newdat$Locality[newdat$Locality=="Sepulveda"]  <- "Sepúlveda"
+newdat$Locality[newdat$Locality=="Zumaya G V Biscaje"]  <- "Zumaya"
+newdat$Locality[newdat$Locality=="Zarauz, Ensenada de"]  <- "Ensenada de Zarauz"
+newdat$Province[newdat$Locality=="Zaragoza, Provincia de"]  <- "Zaragoza"
+newdat$Locality[newdat$Locality=="Zaragoza, Provincia de"]  <- NA
+newdat$Locality[newdat$Locality=="Zaragoza, Alag??N"]  <- "Alagón (Zaragoza)"
+newdat$Province[newdat$Locality=="Zamora, Provincia de"]  <- "Zaragoza"
+newdat$Locality[newdat$Locality=="Zamora, Provincia de"]  <- NA
+newdat$Province[newdat$Locality=="Zamora"]  <- "Zamora"
+newdat$Locality[newdat$Locality=="Zamora"]  <- NA
+newdat$Province[newdat$Locality=="Vizcaya, Provincia de"]  <- "Vizcaya"
+newdat$Locality[newdat$Locality=="Vizcaya, Provincia de"]  <- NA
+newdat$Locality[newdat$Locality=="Viscaya, Kust Bij Somorrostro (Tussen Bilbao En Castro Urdiales)"]  <- "San Juan de Musques"
+newdat$Locality[newdat$Locality=="Villaviciosa, Apeadero de"]  <- "Apeadero de Villaviciosa"
+newdat$Locality[newdat$Locality=="Villarta de S.juan"]  <- "Villarta de San Juan"
+newdat$Locality[newdat$Locality=="Villar, Arroyo del"]  <- "Arroyo del Villar"
+newdat$Locality[newdat$Locality=="Villanueva: See Villanueva del Rey"]  <- "Villanueva del Rey"
+newdat$Locality[newdat$Locality=="Villanueva de Valdueza, In de Montes de Leã³N"]  <- "Villanueva de Valdueza"
+newdat$Locality[newdat$Locality=="Villanueva de Valdueza, In de Monte de Leã³N"]  <- "Villanueva de Valdueza"
+newdat$Locality[newdat$Locality=="Villajuan, S.w. of Villagarcia (Pontevedra)"]  <- "Villajuan South West of Villagarcia"
+newdat$Locality[newdat$Locality=="Villajoyosa/Vila Joi"]  <- "Villajoyosa"
+newdat$Locality[newdat$Locality=="Villaflor: See Vilaflor"]  <- "Villaflor"
+newdat$Locality[newdat$Locality=="Velilla, Almu´?¢´?¢Car"]  <- "Velilla (Almuñecar)"
+newdat$Locality[newdat$Locality=="Veleze Mã Lã Ga 7 Km. N."]  <- "Vélez-Málaga"
+newdat$Locality[newdat$Locality=="Velez, 7 km N Málaga"]  <- "Vélez-Málaga"
+newdat$Locality[newdat$Locality=="Velez Malaga"]  <- "Vélez-Málaga"
+newdat$Locality[newdat$Locality=="Velez Mã¡Laga, 7km N.a"]  <- "Vélez-Málaga"
+newdat$Locality[newdat$Locality=="Velez Mã¡Laga, 7km N"]  <- "Vélez-Málaga"
+newdat$Locality[newdat$Locality=="Velez Mã¡Laga, 7 Km N"]  <- "Vélez-Málaga"
+newdat$Locality[newdat$Locality=="Velez Mã Lã Ga 7 Km N"]  <- "Vélez-Málaga"
+newdat$Province[newdat$Locality=="Valladolid, Provincia de"]  <- "Valladolid"
+newdat$Locality[newdat$Locality=="Valladolid, Provincia de"]  <- NA
+newdat$Province[newdat$Locality=="Valladolid"]  <- "Valladolid"
+newdat$Locality[newdat$Locality=="Valladolid"]  <- NA
+newdat$Locality[newdat$Locality=="Torre de Peã±Afiel"]  <- "Torre de Peñafiel"
+newdat$Locality[newdat$Locality=="Tornavacas, Puerto de"]  <- "Puerto de Tornavacas"
+newdat$Province[newdat$Locality=="Toledo, Toledo"]  <- "Toledo"
+newdat$Locality[newdat$Locality=="Toledo, Toledo"]  <- NA
+newdat$Province[newdat$Locality=="Toledo, Provincia de"]  <- "Toledo"
+newdat$Locality[newdat$Locality=="Toledo, Provincia de"]  <- NA
+newdat$Province[newdat$Locality=="Toledo"]  <- "Toledo"
+newdat$Locality[newdat$Locality=="Toledo"]  <- NA
+newdat$Locality[newdat$Locality=="Tirajana, Barranco de"]  <- "Barranco de Tiranaja"
+newdat$Locality[newdat$Locality=="Tibidabo, Monte del"]  <- "Tibidabo"
+newdat$Locality[newdat$Locality=="Tibidabo, Barcelona"]  <- "Tibidabo"
+newdat$Locality[newdat$Locality=="Teyde, Pico de: See Teide, Pico de"]  <- "Teide (Tenerife)"
+newdat$Locality[newdat$Locality=="Teyde, Pico de"]  <- "Teide (Tenerife)"
+newdat$Province[newdat$Locality=="Teruel, Provincia de"]  <- "Teide (Tenerife)"
+newdat$Locality[newdat$Locality=="Teruel, Provincia de"]  <- NA
+newdat$Province[newdat$Locality=="Teruel"]  <- "Teruel"
+newdat$Locality[newdat$Locality=="Teruel"]  <- NA
+newdat$Locality[newdat$Locality=="Teide, Pico de"]  <- "Teide (Tenerife)"
+newdat$Province[newdat$Locality=="Tarragona"]  <- "Tarragona"
+newdat$Locality[newdat$Locality=="Tarragona"]  <- NA
+newdat$Locality[newdat$Locality=="Spain: See Spain, Kingdom of"]  <- NA
+newdat$Locality[newdat$Locality=="Spain"]  <- NA
+newdat$Province[newdat$Locality=="Soria"]  <- "Soria"
+newdat$Locality[newdat$Locality=="Soria"]  <- NA
+newdat$Province[newdat$Locality=="Sierra"]  <- "Granada"
+newdat$Locality[newdat$Locality=="Sierra"]  <- NA
+newdat$Locality[newdat$Locality=="Sier"]  <- NA
+newdat$Province[newdat$Locality=="Sevilla, Provincia de"]  <- "Sevilla"
+newdat$Locality[newdat$Locality=="Sevilla, Provincia de"]  <- NA
+newdat$Province[newdat$Locality=="Sevilla"]  <- "Sevilla"
+newdat$Locality[newdat$Locality=="Sevilla"]  <- NA
+newdat$Province[newdat$Locality=="Segovia"]  <- "Segovia"
+newdat$Locality[newdat$Locality=="Segovia"]  <- NA
 
+#Dataframe to check unique cases of localities
+#l <- as.data.frame(unique(newdat$Locality))
+#It looks better now
+#More work can be done here but now is a bit better
 
-l <- as.data.frame(unique(newdat$Locality))
 
 
 #write
