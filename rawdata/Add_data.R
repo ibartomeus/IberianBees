@@ -3115,6 +3115,9 @@ newdat$Locality <- gsub("\\ Los", " los", newdat$Locality)
 newdat$Locality <- trimws(newdat$Locality, "l")
 newdat$Locality <- trimws(newdat$Locality, "r")
 
+
+#Fix big mistakes
+#Generally all related with accents and special characters
 newdat$Locality[newdat$Locality=="Barcelona, Provincia de"] <- NA
 newdat$Locality[newdat$Locality=="Córdoba, Provincia de"] <- NA
 newdat$Locality[newdat$Locality=="- 23 Km S Cadiz,Chiclana de la Frontera"] <- "23 km S Cádiz, Chiclana de la Frontera"
@@ -3458,7 +3461,22 @@ newdat$Locality[newdat$Locality=="Segovia"]  <- NA
 #It looks better now
 #More work can be done here but now is a bit better
 
+#Quick scroll of coordinates, they seem ok at first glance
+#d <- as.data.frame(levels(factor(newdat$Latitude)))
+#d <- as.data.frame(levels(factor(newdat$Longitude)))
+#One Longitude val. to fix
+newdat$Longitude[newdat$Longitude=="-4006"] <- "-4.006"
 
+#Years also look good
+#levels(factor(newdat$Year))
+#Months look good too
+#levels(factor(newdat$Month))
+#Days also look fine
+#levels(factor(newdat$Day))
+
+#Check
+dat <-as.data.frame(levels(factor(newdat$End.date)))
+colnames(newdat)
 
 #write
 write.table(x = newdat, file = "data/data.csv", 
