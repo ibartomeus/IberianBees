@@ -3459,7 +3459,7 @@ newdat$Locality[newdat$Locality=="Segovia"]  <- NA
 #Dataframe to check unique cases of localities
 #l <- as.data.frame(unique(newdat$Locality))
 #It looks better now
-#More work can be done here but now is a bit better
+#More work can be done here 
 
 #Quick scroll of coordinates, they seem ok at first glance
 #d <- as.data.frame(levels(factor(newdat$Latitude)))
@@ -3475,8 +3475,17 @@ newdat$Longitude[newdat$Longitude=="-4006"] <- "-4.006"
 #levels(factor(newdat$Day))
 
 #Check
-dat <-as.data.frame(levels(factor(newdat$End.date)))
-colnames(newdat)
+#Fixing one NA with space in start date
+newdat$Start.date[newdat$Start.date==" NA"] <- NA
+
+#Some dates seem wrong, the "all to 1900s" in start date and then
+#their End.date too (they are from 2010 or more ans seems they are from 1970's)
+#Converting to NA for now
+#First the end date ones
+newdat$End.date[newdat$Start.date=="all to 1900s"] <- NA
+#Now the start date ones
+newdat$Start.date[newdat$Start.date=="all to 1900s"] <- NA
+
 
 #write
 write.table(x = newdat, file = "data/data.csv", 
