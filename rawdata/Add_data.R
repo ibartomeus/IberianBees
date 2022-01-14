@@ -3486,6 +3486,28 @@ newdat$End.date[newdat$Start.date=="all to 1900s"] <- NA
 #Now the start date ones
 newdat$Start.date[newdat$Start.date=="all to 1900s"] <- NA
 
+newdat$Start.date[newdat$Start.date=="3/00/1957"] <- "3/01/1957"
+newdat$Start.date[newdat$Start.date=="5/00/1927"] <- "5/01/1927"
+
+
+
+#Keep working from here 
+
+#Change to day/month/year
+s_date <- as.data.frame(unique(newdat$Start.date))
+colnames(s_date) <- "s"
+
+library(anytime)  
+#This library is awesome and can stand 
+#leading zeros and without zeros
+s_date$s <- anydate(s_date$s)
+#Now is in YEAR/MONTH/DAY
+#Convert to standard format of the database
+
+d <- as.Date(s_date$s,format = "%y/%d/%m")
+betterDates <- format(d, "%d/%m/%Y")
+
+
 
 #write
 write.table(x = newdat, file = "data/data.csv", 
