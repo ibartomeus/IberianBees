@@ -2697,7 +2697,9 @@ unique(newdat$Identification.notes.and.queries)
 newdat$Notes.and.queries <- ifelse(is.na(newdat$Notes.and.queries), 
                                    newdat$Identification.notes.and.queries, 
                                    paste(newdat$Notes.and.queries, newdat$Identification.notes.and.queries, sep = "; "))
-newdat$uid <- paste("54_Wood_etal_", 1:nrow(newdat), sep = "")
+
+newdat$uid <- NA
+  
 #unique(newdat$MONS) #ignore                                          
 #unique(newdat$Authors) #empty
 #unique(newdat$Pollen.collected) #cool, ignore for us.                               
@@ -2746,6 +2748,11 @@ unique(newdat$Locality)
 
 #Compare vars
 compare_variables(check, newdat)
+
+#Delete empty genus
+newdat <- newdat[!is.na(newdat$Genus),]
+
+
 #Rename some columns
 colnames(newdat)[which(colnames(newdat)=="month")] <- "Month"
 colnames(newdat)[which(colnames(newdat)=="day")] <- "Day"
@@ -3489,23 +3496,519 @@ newdat$Start.date[newdat$Start.date=="all to 1900s"] <- NA
 newdat$Start.date[newdat$Start.date=="3/00/1957"] <- "3/01/1957"
 newdat$Start.date[newdat$Start.date=="5/00/1927"] <- "5/01/1927"
 
-
-
-#Keep working from here 
-
-#Change to day/month/year
-s_date <- as.data.frame(unique(newdat$Start.date))
-colnames(s_date) <- "s"
-
+#Convert Start.date to day/month/year
 library(anytime)  
 #This library is awesome and can stand 
 #leading zeros and without zeros
-s_date$s <- anydate(s_date$s)
+newdat$Start.date <- anydate(newdat$Start.date)
 #Now is in YEAR/MONTH/DAY
 #Convert to standard format of the database
+newdat$Start.date <- as.Date(newdat$Start.date,format = "%y/%d/%m")
+newdat$Start.date<- format(newdat$Start.date, "%d/%m/%Y")
 
-d <- as.Date(s_date$s,format = "%y/%d/%m")
-betterDates <- format(d, "%d/%m/%Y")
+
+
+#Now fix levels
+d <- as.data.frame(levels(factor(newdat$End.date))) #check levels
+#This needs quite a bit of work
+#Wrong dates with just the date in the reference field will be assigned
+#that year
+
+#The ref is Lindberg H. (1933)
+newdat$Year[newdat$End.date=="____0408"] <- "1933"
+newdat$End.date[newdat$End.date=="____0408"] <- NA
+#No date for these ones
+newdat$End.date[newdat$End.date=="____0623"] <- NA
+newdat$End.date[newdat$End.date=="____0627"] <- NA
+# //0 and Ornosa Gallego, 1984
+newdat$Year[newdat$End.date=="//0" & 
+newdat$Reference.doi=="Ornosa Gallego, 1984"] <- "1984"
+newdat$End.date[newdat$End.date=="//0" & 
+newdat$Reference.doi=="Ornosa Gallego, 1984"] <- NA
+# //0 and Warncke,1983
+newdat$Year[newdat$End.date=="//0" & 
+newdat$Reference.doi=="Warncke,1983"] <- "1983"
+newdat$End.date[newdat$End.date=="//0" & 
+newdat$Reference.doi=="Warncke,1983"] <- NA
+# //0 and RASMONT 1988
+newdat$Year[newdat$End.date=="//0" & 
+newdat$Reference.doi=="RASMONT 1988"] <- "1988"
+newdat$End.date[newdat$End.date=="//0" & 
+newdat$Reference.doi=="RASMONT 1988"] <- NA
+# //0 and Ornosa, UICN
+newdat$End.date[newdat$End.date=="//0" & 
+newdat$Reference.doi=="Ornosa, UICN"] <- NA
+# //0 and Reinig 1939
+newdat$Year[newdat$End.date=="//0" & 
+newdat$Reference.doi=="Reinig 1939"] <- "1939"
+newdat$End.date[newdat$End.date=="//0" & 
+newdat$Reference.doi=="Reinig 1939"] <- NA
+# //0 and TKALCU 1962
+newdat$Year[newdat$End.date=="//0" & 
+newdat$Reference.doi=="TKALCU 1962"] <- "1962"
+newdat$End.date[newdat$End.date=="//0" & 
+newdat$Reference.doi=="TKALCU 1962"] <- NA
+# //0 and Lieftinck,1980
+newdat$Year[newdat$End.date=="//0" & 
+newdat$Reference.doi=="Lieftinck,1980"] <- "1980"
+newdat$End.date[newdat$End.date=="//0" & 
+newdat$Reference.doi=="Lieftinck,1980"] <- NA
+# //0 and Lieftinck,1968 
+newdat$Year[newdat$End.date=="//0" & 
+newdat$Reference.doi=="Lieftinck,1968 "] <- "1968"
+newdat$End.date[newdat$End.date=="//0" & 
+newdat$Reference.doi=="Lieftinck,1968 "] <- NA
+# //0 and Ornosa, 1991
+newdat$Year[newdat$End.date=="//0" & 
+newdat$Reference.doi=="Ornosa, 1991"] <- "1991"
+newdat$End.date[newdat$End.date=="//0" & 
+newdat$Reference.doi=="Ornosa, 1991"] <- NA
+# //0 and ""
+newdat$End.date[newdat$End.date=="//0" & 
+newdat$Reference.doi==""] <- NA
+# //0 and "GBIF,2015"
+newdat$Year[newdat$End.date=="//0" & 
+newdat$Reference.doi=="GBIF,2015"] <- "2015"
+newdat$End.date[newdat$End.date=="//0" & 
+newdat$Reference.doi=="GBIF,2015"] <- NA
+# // and "PEREZ 1902"
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="PEREZ 1902"] <- 1902
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="PEREZ 1902"] <- NA
+# // and "GBIF,2015"
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="GBIF,2015"] <- 2015
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="GBIF,2015"] <- NA
+# // and ROBERTI,FRILLI 1965
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="ROBERTI,FRILLI 1965"] <- 1965
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="ROBERTI,FRILLI 1965"] <- NA
+# // and COCKERELL 1925
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="COCKERELL 1925"] <- 1925
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="COCKERELL 1925"] <- NA
+# // and ROBERTI & AL. 1965
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="ROBERTI & AL. 1965"] <- 1965
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="ROBERTI & AL. 1965"] <- NA
+# // and DUSMET 1908
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="DUSMET 1908"] <- 1908
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="DUSMET 1908"] <- NA
+# // and ALFKEN 1927
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="ALFKEN 1927"] <- 1927
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="ALFKEN 1927"] <- NA
+# // and FRIESE 1896
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="FRIESE 1896"] <- 1896
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="FRIESE 1896"] <- NA
+# // and RASMONT 1988
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="RASMONT 1988"] <- 1988
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="RASMONT 1988"] <- NA
+# // and TKALCU 1962
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="TKALCU 1962"] <- 1962
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="TKALCU 1962"] <- NA
+# // and ""
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi==" "] <- NA
+# // and DUSMET 1935
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="DUSMET 1935"] <- 1935
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="DUSMET 1935"] <- NA
+# // and QUILIS-PEREZ 1927
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="QUILIS-PEREZ 1927"] <- 1927
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="QUILIS-PEREZ 1927"] <- NA
+# // and DALY 1983
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="DALY 1983"] <- 1983
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="DALY 1983"] <- NA
+# // and DUSMET Y ALONSO 1923
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="DUSMET Y ALONSO 1923"] <- 1983
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="DUSMET Y ALONSO 1923"] <- NA
+# // and Ebmer 1984
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1984"] <- 1984
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1984"] <- NA
+# // and SAUNDERS 1901
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="SAUNDERS 1901"] <- 1901
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="SAUNDERS 1901"] <- NA
+# // and Ebmer 1993
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1993"] <- 1993
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1993"] <- NA
+# // and Ebmer 1989
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1989"] <- 1989
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1989"] <- NA
+# // and SAUNDERS 1901
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="SAUNDERS 1901"] <- 1901
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="SAUNDERS 1901"] <- NA
+# // and Ebmer 1999
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1999"] <- 1999
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1999"] <- NA
+# // and DINIZ 1961
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="DINIZ 1961"] <- 1961
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="DINIZ 1961"] <- NA
+# // and Blüthgen 1937
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Blüthgen 1937"] <- 1937
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Blüthgen 1937"] <- NA
+# // and Blüthgen 1924
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Blüthgen 1924"] <- 1924
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Blüthgen 1924"] <- NA
+# // and Saunders 1904
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Saunders 1904"] <- 1904
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Saunders 1904"] <- NA
+# // and BLUTHGEN 1924
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="BLUTHGEN 1924"] <- 1924
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="BLUTHGEN 1924"] <- NA
+# // and Ebmer 1979
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1979"] <- 1979
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1979"] <- NA
+# // and Blüthgen 1936
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Blüthgen 1936"] <- 1936
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Blüthgen 1936"] <- NA
+# // and D. Baldock MS
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="D. Baldock MS"] <- NA
+# // and BLUT 1923
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="BLUT 1923"] <- 1923
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="BLUT 1923"] <- NA
+# // and BLUTGEN 1924
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="BLUTGEN 1924"] <- 1924
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="BLUTGEN 1924"] <- NA
+# // and Blüthgen 1936
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Blüthgen 1936"] <- 1936
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Blüthgen 1936"] <- NA
+# // and Baldock list vs 2016
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Baldock list vs 2016"] <- 2016
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Baldock list vs 2016"] <- NA
+# // and EBMER 1976
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="EBMER 1976"] <- 1976
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="EBMER 1976"] <- NA
+# // and Ebmer 1985
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1985"] <- 1985
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1985"] <- NA
+# // and CAVRO 1950
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="CAVRO 1950"] <- 1950
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="CAVRO 1950"] <- NA
+# // and Ebmer 1976
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1976"] <- 1976
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1976"] <- NA
+# // and BLUTHGEN
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="BLUTHGEN "] <- NA
+# // and Ebmer 1988
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1988"] <- 1988
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1988"] <- NA
+# // and Bluthgen 1924
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Bluthgen 1924"] <- 1924
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Bluthgen 1924"] <- NA
+# // and Ebmer 1988
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1988"] <- 1988
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1988"] <- NA
+# // and Saundrs 1954
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Saundrs 1954"] <- 1954
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Saundrs 1954"] <- NA
+# // and SCHULZ 1906
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="SCHULZ 1906"] <- 1906
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="SCHULZ 1906"] <- NA
+# // and Ebmer 1975
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1975"] <- 1975
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1975"] <- NA
+# // and BLUT 1924
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="BLUT 1924"] <- 1924
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="BLUT 1924"] <- NA
+# // and Ebmer 1987:343
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1987:343"] <- 1987
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1987:343"] <- NA
+# // and Ebmer 1987
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1987"] <- 1987
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1987"] <- NA
+# // and Blüthgen 1923
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Blüthgen 1923"] <- 1923
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Blüthgen 1923"] <- NA
+# // and Warncke 1975
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Warncke 1975"] <- 1975
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Warncke 1975"] <- NA
+# // and Ebmer 2014
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 2014"] <- 2014
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 2014"] <- NA
+# // and Ebmer in Westrich
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer in Westrich"] <- NA
+# // and Ebmer in Westrich
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="BLUTHGEN 1935"] <- 1935
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="BLUTHGEN 1935"] <- NA
+# // and Blüthgen 1935
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Blüthgen 1935"] <- 1935
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Blüthgen 1935"] <- NA
+# // and EOBELLI 1905
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="EOBELLI 1905"] <- 1905
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="EOBELLI 1905"] <- NA
+# // and Ortiz & Pauly 2016
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ortiz & Pauly 2016"] <- 2016
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ortiz & Pauly 2016"] <- NA
+# // and Blüthgen 1924: 378
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Blüthgen 1924: 378"] <- 1924
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Blüthgen 1924: 378"] <- NA
+# // and EBMER 1972
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="EBMER 1972"] <- 1972
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="EBMER 1972"] <- NA
+# // and Ortiz et Pauly 2016
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ortiz et Pauly 2016"] <- 2016
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ortiz et Pauly 2016"] <- NA
+# // and Ebmer 2000:417.
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 2000:417."] <- 2000
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 2000:417."] <- NA
+# // and EOBELLI 1905
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="EOBELLI 1905"] <- 1905
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="EOBELLI 1905"] <- NA
+# // and BLUTHEN 1924
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="BLUTHEN 1924"] <- 1924
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="BLUTHEN 1924"] <- NA
+# // and Ebmer 1973
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1973"] <- 1973
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1973"] <- NA
+# // and Ebmer 2000
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 2000"] <- 2000
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 2000"] <- NA
+# // and Ebmer 1972
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1972"] <- 1972
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1972"] <- NA
+# // and Ebmer 2000
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 2000"] <- 2000
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 2000"] <- NA
+# // and Ebmer 1997
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1997"] <- 1997
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1997"] <- NA
+# // and Ebmer 1995
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1995"] <- 1995
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1995"] <- NA
+# // and BLTHGEN 1924
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="BLTHGEN 1924"] <- 1924
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="BLTHGEN 1924"] <- NA
+# // and BLUTHGEN 1944
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="BLUTHGEN 1944"] <- 1944
+newdat$End.date[newdat$End.date=="//" & 
+ newdat$Reference.doi=="BLUTHGEN 1944"] <- NA
+# // and PEREZ 1895
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="PEREZ 1895"] <- 1895
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="PEREZ 1895"] <- NA
+# // and Ebmer 1986
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1986"] <- 1986
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1986"] <- NA
+# // and Cockerell 1922
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Cockerell 1922"] <- 1922
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Cockerell 1922"] <- NA
+# // and LIEFTINCK 1969
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="LIEFTINCK 1969"] <- 1969
+newdat$End.date[newdat$End.date=="//" & 
+ newdat$Reference.doi=="LIEFTINCK 1969"] <- NA
+# // and Ebmer 1986
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1986"] <- 1986
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 1986"] <- NA
+# // and DUSMET 1905
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="DUSMET 1905"] <- 1905
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="DUSMET 1905"] <- NA
+# // and LIEFTINCK 
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="LIEFTINCK "] <- NA
+# // and Warncke 1973
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Warncke 1973"] <- 1973
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Warncke 1973"] <- NA
+# // and Ebmer 2005:329
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 2005:329"] <- 2005
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Ebmer 2005:329"] <- NA
+# // and Warncke 1976
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Warncke 1976"] <- 1976
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Warncke 1976"] <- NA
+# // and Lieftinck,1968 
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="Lieftinck,1968 "] <- 1968
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="Lieftinck,1968 "] <- NA
+# // and PEREZ 1905
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="PEREZ 1905"] <- 1905
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="PEREZ 1905"] <- NA
+# // and DUSMET, J. 1923
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="DUSMET, J. 1923"] <- 1923
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="DUSMET, J. 1923"] <- NA
+# // and PEREZ, J. 1901
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="PEREZ, J. 1901"] <- 1901
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="PEREZ, J. 1901"] <- NA
+# // and DUSMET 1915
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="DUSMET 1915"] <- 1915
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="DUSMET 1915"] <- NA
+# // and DUSMET 1923
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="DUSMET 1923"] <- 1923
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="DUSMET 1923"] <- NA
+# // and STRAND 1915
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="STRAND 1915"] <- 1915
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="STRAND 1915"] <- NA
+# // and LINDBERG 1933
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="LINDBERG 1933"] <- 1933
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="LINDBERG 1933"] <- NA
+# // and DUSMET 1927
+newdat$Year[newdat$End.date=="//" & 
+newdat$Reference.doi=="DUSMET 1927"] <- 1927
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi=="DUSMET 1927"] <- NA
+
+# Keep working from here!
+
+
+
+
+
+newdat$uid <- paste("54_Wood_etal_", 1:nrow(newdat), sep = "")
 
 
 
