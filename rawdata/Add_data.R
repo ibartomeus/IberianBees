@@ -4001,8 +4001,172 @@ newdat$Year[newdat$End.date=="//" &
 newdat$Reference.doi=="DUSMET 1927"] <- 1927
 newdat$End.date[newdat$End.date=="//" & 
 newdat$Reference.doi=="DUSMET 1927"] <- NA
+# // and ""
+newdat$End.date[newdat$End.date=="//" & 
+newdat$Reference.doi==""] <- NA
+# //189 and ""
+newdat$End.date[newdat$End.date=="//189" & 
+newdat$Reference.doi==""] <- NA
+# //1896 and ""
+newdat$End.date[newdat$End.date=="//1896" & 
+newdat$Reference.doi==""] <- NA
+# //1899 and ""
+newdat$End.date[newdat$End.date=="//1899" & 
+newdat$Reference.doi==""] <- NA
+# //1905 and ""
+newdat$End.date[newdat$End.date=="//1905" & 
+newdat$Reference.doi==""] <- NA
+# //1958 and ""
+newdat$End.date[newdat$End.date=="//1958" & 
+newdat$Reference.doi==""] <- NA
+# //500 and ""
+newdat$End.date[newdat$End.date=="//500" & 
+newdat$Reference.doi==" "] <- NA
+# //520 and Warncke,1983
+newdat$Year[newdat$End.date=="//520" & 
+newdat$Reference.doi=="Warncke,1983"] <- 1983
+newdat$End.date[newdat$End.date=="//520" & 
+newdat$Reference.doi=="Warncke,1983"] <- NA
+# //600" and ""
+newdat$End.date[newdat$End.date=="//600" & 
+newdat$Reference.doi==" "] <- NA
+# //623 and ""
+newdat$End.date[newdat$End.date=="//623" & 
+newdat$Reference.doi==""] <- NA
+# //7 and ""
+newdat$End.date[newdat$End.date=="//7" & 
+newdat$Reference.doi==""] <- NA
+# // and Warncke,1983
+newdat$Year[newdat$End.date=="//715" & 
+newdat$Reference.doi=="Warncke,1983"] <- 1983
+newdat$End.date[newdat$End.date=="//715" & 
+newdat$Reference.doi=="Warncke,1983"] <- NA
+# //715and PEREZ 1905
+newdat$Year[newdat$End.date=="//715" & 
+newdat$Reference.doi=="PEREZ 1905"] <- 1905
+newdat$End.date[newdat$End.date=="//715" & 
+newdat$Reference.doi=="PEREZ 1905"] <- NA
+# //716 and Warncke,1983
+newdat$Year[newdat$End.date=="//716" & 
+newdat$Reference.doi=="Warncke,1983"] <- 1983
+newdat$End.date[newdat$End.date=="//716" & 
+newdat$Reference.doi=="Warncke,1983"] <- NA
+# //717 and ""
+newdat$End.date[newdat$End.date=="//717" & 
+newdat$Reference.doi==" "] <- NA
+# //723 and DALY 1983
+newdat$Year[newdat$End.date=="//723" & 
+newdat$Reference.doi=="DALY 1983"] <- 1983
+newdat$End.date[newdat$End.date=="//723" & 
+newdat$Reference.doi=="DALY 1983"] <- NA
+# //724 and ""
+newdat$End.date[newdat$End.date=="//724" & 
+newdat$Reference.doi==" "] <- NA
+# //823 and ""
+newdat$End.date[newdat$End.date=="//823" & 
+newdat$Reference.doi==" "] <- NA
+# 00/0/1989
+newdat$Year[newdat$End.date=="00/0/1989"] <- "1989"
+newdat$End.date[newdat$End.date=="00/0/1989"] <- NA
 
-# Keep working from here!
+# 00/00/1853
+newdat$Year[newdat$End.date=="00/00/1853"] <- "1853"
+newdat$End.date[newdat$End.date=="00/00/1853"] <- NA
+
+# 00/00/1890
+newdat$Year[newdat$End.date=="00/00/1890"] <- "1890"
+newdat$End.date[newdat$End.date=="00/00/1890"] <- NA
+
+#Maybe better to lose some dates 
+#instead of being here all my life
+newdat$End.date[grepl("00/00", newdat$End.date)] <- NA
+newdat$End.date[grepl("00/", newdat$End.date)] <- NA
+newdat$End.date[grepl("/00", newdat$End.date)] <- NA
+
+# 1 - VIII - 1968
+newdat$End.date[newdat$End.date=="1 - VIII - 1968"] <- "01/08/1968"
+# 1 IX 1969
+newdat$End.date[newdat$End.date=="1 IX 1969"] <- "01/09/1969"
+# 1 IX 1969
+newdat$End.date[newdat$End.date=="1 June 1967"] <- "01/06/1967"
+# 1 VII 1960
+newdat$End.date[newdat$End.date=="1 VII 1960"] <- "01/07/1960"
+# 1-11.4 1985
+newdat$End.date[newdat$End.date=="1-11.4.1985"] <- NA
+newdat$Start.date[newdat$Start.date=="01/04/1985"] <- NA
+# 1-15 - 7 - 1953
+newdat$End.date[newdat$End.date=="1-15 - 7 - 1953"] <- NA
+newdat$Start.date[newdat$Start.date=="01/07/1953"] <- NA
+# 1-15 - 7 1953
+newdat$End.date[newdat$End.date=="1-15 - 7 1953"] <- NA
+newdat$Start.date[newdat$Start.date=="01/07/1953"] <- NA
+# 1-11.4 1985
+newdat$End.date[newdat$End.date=="1-11.4 1985"] <- NA
+newdat$Start.date[newdat$Start.date=="01/04/1985"] <- NA
+# 1-15-7-1953
+newdat$End.date[newdat$End.date=="1-15-7-1953"] <- NA
+newdat$Start.date[newdat$Start.date=="01/07/1953"] <- NA
+# 1-24 VI 1954
+newdat$End.date[newdat$End.date=="1-24 VI 1954"] <- NA
+newdat$Start.date[newdat$Start.date=="01/06/1954"] <- NA
+# 1-7-7@
+newdat$End.date[newdat$End.date=="1-7-7@"] <- NA
+# 1-mrt-23
+newdat$End.date[newdat$End.date=="1-mrt-23"] <- NA
+# 1-V-1960
+newdat$End.date[newdat$End.date=="1-V-1960"] <- "01/05/1960"
+# 1-vi-1962
+newdat$End.date[newdat$End.date=="1-vi-1962"] <- "01/06/1962"
+# 1-vi-1970
+newdat$End.date[newdat$End.date=="1-vi-1970"] <- "01/06/1970"
+# 1-VII-19
+newdat$End.date[newdat$End.date=="1-VII-19"] <- NA
+# 1-VII-1960
+newdat$End.date[newdat$End.date=="1-VII-1960"] <- "01/07/1960"
+# 1-vii-1960
+newdat$End.date[newdat$End.date=="1-vii-1960"] <- "01/07/1960"
+# 1-VII-1968
+newdat$End.date[newdat$End.date=="1-VII-1968"] <- "01/07/1968"
+# 1-VIII-1952
+newdat$End.date[newdat$End.date=="1-VIII-1952"] <- "01/08/1952"
+# 1-viii-1968
+newdat$End.date[newdat$End.date=="1-viii-1968"] <- "01/08/1968"
+# 1-viii-1968
+newdat$End.date[newdat$End.date=="1-viii-1968"] <- "01/08/1968"
+# 1.-11.4.1985
+newdat$End.date[newdat$End.date=="1.-11.4.1985"] <- NA
+newdat$Start.date[newdat$Start.date=="1.-11.4.1985"] <- NA
+# 1.IX.1969
+newdat$End.date[newdat$End.date=="1.IX.1969"] <- "01/09/1969"
+# 1.V.1993
+newdat$End.date[newdat$End.date=="1.V.1993"] <- "01/05/1993"
+# 1.vi.1970
+newdat$End.date[newdat$End.date=="1.vi.1970"] <- "01/06/1970"
+# 1.VIII.1970
+newdat$End.date[newdat$End.date=="1.VIII.1970"] <- "01/08/1970"
+# 1/10-4/10-1977
+newdat$End.date[newdat$End.date=="1/10-4/10-1977"] <- NA
+newdat$Start.date[newdat$Start.date=="01/10/1977"] <- NA
+
+newdat$End.date <- gsub("-", "/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- gsub(".", "/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- gsub(" ", "/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/V/", "/05/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/v/", "/05/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/VI/", "/06/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/VII/", "/07/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/vi/", "/07/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/VIII/", "/08/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/viii/", "/08/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/iv/", "/04/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/IV/", "/04/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/IX/", "/09/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/ix/", "/09/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/X/", "/10/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/x/", "/10/", newdat$End.date,fixed = TRUE)
+
+
+d <- as.data.frame(levels(factor(newdat$End.date))) #check levels
 
 
 
