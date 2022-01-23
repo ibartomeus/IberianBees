@@ -3514,6 +3514,11 @@ d <- as.data.frame(levels(factor(newdat$End.date))) #check levels
 #Wrong dates with just the date in the reference field will be assigned
 #that year
 
+#Important some are day/month and others month/day which
+#makes me think that this info may be not very reliable
+#and just yeat would be th accurate field
+
+
 #The ref is Lindberg H. (1933)
 newdat$Year[newdat$End.date=="____0408"] <- "1933"
 newdat$End.date[newdat$End.date=="____0408"] <- NA
@@ -4164,12 +4169,144 @@ newdat$End.date <- sub("/IX/", "/09/", newdat$End.date,fixed = TRUE)
 newdat$End.date <- sub("/ix/", "/09/", newdat$End.date,fixed = TRUE)
 newdat$End.date <- sub("/X/", "/10/", newdat$End.date,fixed = TRUE)
 newdat$End.date <- sub("/x/", "/10/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/III/", "/03/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/iii/", "/03/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/Aug/", "/08/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/Feb/", "/02/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/June/", "/06/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/May/", "/05/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/Jul/", "/07/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/Febr/", "/02/", newdat$End.date,fixed = TRUE)
+
+
+# ////////
+newdat$End.date[newdat$End.date=="////////"] <- NA
+newdat$End.date[newdat$End.date=="////////"] <- NA
+
+#10/08/924
+newdat$End.date[newdat$End.date=="10/08/924"] <- NA
+#10/5/1974/
+newdat$End.date[newdat$End.date=="10/5/1974/"] <- "10/5/1974"
+#11/06/37
+newdat$End.date[newdat$End.date=="11/06/37"] <- "11/06/1937"
+#11/07/84
+newdat$End.date[newdat$End.date=="11/07/84"] <- "11/07/1984"
+#12///06///1970
+newdat$End.date[newdat$End.date=="12///06///1970"] <- "12/06/1970"
+#12///07///1972
+newdat$End.date[newdat$End.date=="12///07///1972"] <- "12/07/1972"
+#12/07/924
+newdat$End.date[newdat$End.date=="12/07/924"] <- "12/07/1924"
+#12/08/924
+newdat$End.date[newdat$End.date=="12/08/924"] <- "12/08/1924"
+#12/15/05/1960
+newdat$End.date[newdat$End.date=="12/15/05/1960"] <- NA
+#12/15/V1960
+newdat$End.date[newdat$End.date=="12/15/V1960"] <- "12/15/1960"
+#10/07/60
+newdat$End.date[newdat$End.date=="10/07/60"] <- "10/07/1960"
+#11/11/05/49
+newdat$End.date[newdat$End.date=="11/11/05/49"] <- NA
+#13/9/'67
+newdat$End.date[newdat$End.date=="13/9/'67"] <- NA
+#14/05/58
+newdat$End.date[newdat$End.date=="14/05/58"] <- NA
+#14/15/V1959
+newdat$End.date[newdat$End.date=="14/15/V1959"] <- NA
+#14/May
+newdat$Day[newdat$End.date=="14/May"] <- "14"
+newdat$Month[newdat$End.date=="14/May"] <- "05"
+newdat$End.date[newdat$End.date=="14/May"] <- NA
+#11/22//6/1951
+newdat$End.date[newdat$End.date=="11/22//6/1951"] <- NA
+#15//08/1968
+newdat$End.date[newdat$End.date=="15//08/1968"] <- "08/15/1968"
+#15/04/87
+newdat$End.date[newdat$End.date=="15/04/87"] <- "04/15/1987"
+#25/5/@
+newdat$End.date[newdat$End.date=="25/5/@"] <- NA
+#25/06/1985/ERROR
+newdat$End.date[newdat$End.date=="25/06/1985/ERROR"] <- "06/25/1985"
+#25/05/58
+newdat$End.date[newdat$End.date=="25/05/58"] <- "05/25/1958"
+#24/vii/1969
+newdat$End.date[newdat$End.date=="24/vii/1969"] <-NA
+#24/May
+newdat$Day[newdat$End.date=="24/May"] <- "24"
+newdat$Month[newdat$End.date=="24/May"] <- "05"
+newdat$End.date[newdat$End.date=="24/May"] <- NA
+#24/Jun/81
+newdat$End.date[newdat$End.date=="24/06/1981"] <-NA
+#24/7/69
+newdat$End.date[newdat$End.date=="24/7/69"] <-"07/24/1969"
+#15//08/1968
+newdat$End.date[newdat$End.date=="15//08/1968"] <-"08/15/1968"
+#15/04/87
+newdat$End.date[newdat$End.date=="15/04/87"] <-"04/15/1987"
+#15/5/'67
+newdat$End.date[newdat$End.date=="15/5/'67"] <-NA
+#15/6/19/
+newdat$End.date[newdat$End.date=="15/6/19/"] <-NA
+#15/Jul
+newdat$End.date[newdat$End.date=="15/Jul"] <-NA
+#15/V
+newdat$End.date[newdat$End.date=="15/V"] <-NA
+#15/vii/1970
+newdat$End.date[newdat$End.date=="15/vii/1970"] <-NA
+#16/03/70
+newdat$End.date[newdat$End.date=="16/03/70"] <- "03/16/1970"
+#16/05/58
+newdat$End.date[newdat$End.date=="16/05/58"] <-NA
+#16/V
+newdat$End.date[newdat$End.date=="16/V"] <-NA
+#17/04/87
+newdat$End.date[newdat$End.date=="17/04/87"] <- "04/17/1987"
+#17/05/47
+newdat$End.date[newdat$End.date=="17/05/47"] <- "05/17/1947"
+#17/7/86
+newdat$End.date[newdat$End.date=="17/7/86"] <- "07/17/1986"
+#17/7/90
+newdat$End.date[newdat$End.date=="17/7/90"] <- "07/17/1990"
+#17/V
+newdat$End.date[newdat$End.date=="17/V"] <- NA
+#18/04/08
+newdat$End.date[newdat$End.date=="18/04/08"] <- "04/18/1908"
+#18/05/58
+newdat$End.date[newdat$End.date=="18/05/58"] <- "05/18/1958"
+#18/4
+newdat$End.date[newdat$End.date=="18/4"] <- "04/18/1908"
+#18/4/08
+newdat$End.date[newdat$End.date=="18/4/08"] <- "04/18/1908"
+#18/8/'78
+newdat$End.date[newdat$End.date=="18/8/\'78"] <- "08/18/1978"
+#18/8/78
+newdat$End.date[newdat$End.date=="18/8/78"] <- "18/08/1978"
+#18/MÃ¤rz/24
+newdat$End.date[newdat$End.date=="18/MÃ¤rz/24"] <- "03/18/1924"
+#18/V
+newdat$End.date[newdat$End.date=="18/V"] <- NA
+#18/vii/1950
+newdat$End.date[newdat$End.date=="18/vii/1950"] <- "07/18/1950"
+#18/vii/1950
+newdat$End.date[newdat$End.date=="189?"] <- NA
+#Some more dates could be recovered
+
+
+
+
+
+
+
+is.na(newdat$End.date) <- nchar(newdat$End.date) - nchar(gsub("/", "", newdat$End.date, fixed = TRUE)) > 2
 
 
 d <- as.data.frame(levels(factor(newdat$End.date))) #check levels
 
 
 
+
+f <- levels(factor(as.Date(newdat$End.date, format = "%m/%d/%Y")))
+f <- as.data.frame(f)
 
 
 newdat$uid <- paste("54_Wood_etal_", 1:nrow(newdat), sep = "")
