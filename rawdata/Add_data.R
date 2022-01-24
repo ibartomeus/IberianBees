@@ -4160,6 +4160,7 @@ newdat$End.date <- sub("/V/", "/05/", newdat$End.date,fixed = TRUE)
 newdat$End.date <- sub("/v/", "/05/", newdat$End.date,fixed = TRUE)
 newdat$End.date <- sub("/VI/", "/06/", newdat$End.date,fixed = TRUE)
 newdat$End.date <- sub("/VII/", "/07/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/vii/", "/07/", newdat$End.date,fixed = TRUE)
 newdat$End.date <- sub("/vi/", "/07/", newdat$End.date,fixed = TRUE)
 newdat$End.date <- sub("/VIII/", "/08/", newdat$End.date,fixed = TRUE)
 newdat$End.date <- sub("/viii/", "/08/", newdat$End.date,fixed = TRUE)
@@ -4177,6 +4178,7 @@ newdat$End.date <- sub("/June/", "/06/", newdat$End.date,fixed = TRUE)
 newdat$End.date <- sub("/May/", "/05/", newdat$End.date,fixed = TRUE)
 newdat$End.date <- sub("/Jul/", "/07/", newdat$End.date,fixed = TRUE)
 newdat$End.date <- sub("/Febr/", "/02/", newdat$End.date,fixed = TRUE)
+newdat$End.date <- sub("/July/", "/07/", newdat$End.date,fixed = TRUE)
 
 
 # ////////
@@ -4280,7 +4282,7 @@ newdat$End.date[newdat$End.date=="18/4/08"] <- "04/18/1908"
 #18/8/'78
 newdat$End.date[newdat$End.date=="18/8/\'78"] <- "08/18/1978"
 #18/8/78
-newdat$End.date[newdat$End.date=="18/8/78"] <- "18/08/1978"
+newdat$End.date[newdat$End.date=="18/8/78"] <- "08/18/1978"
 #18/MÃ¤rz/24
 newdat$End.date[newdat$End.date=="18/MÃ¤rz/24"] <- "03/18/1924"
 #18/V
@@ -4289,24 +4291,655 @@ newdat$End.date[newdat$End.date=="18/V"] <- NA
 newdat$End.date[newdat$End.date=="18/vii/1950"] <- "07/18/1950"
 #18/vii/1950
 newdat$End.date[newdat$End.date=="189?"] <- NA
-#Some more dates could be recovered
+#19/8/'52
+newdat$End.date[newdat$End.date=="19/8/'52"] <- "08/19/1952"
+#2/05/08
+newdat$End.date[newdat$End.date=="2/05/08"] <- "02/05/1908"
+#2/05/58
+newdat$End.date[newdat$End.date=="2/05/08"] <- "02/05/1908"
+#2/9/79
+newdat$End.date[newdat$End.date=="2/9/79"] <- "02/09/1979"
 
+#The following dates are day/month/year
+#This could be for more but these are the only ones above 12 that are
+#outstanding out from the others
 
+#20/03/1980
+newdat$End.date[newdat$End.date=="20/03/1980"] <- "03/20/1980"
+#20/04/1984
+newdat$End.date[newdat$End.date=="20/04/1984"] <- "04/20/1984"
+#20/05/1960
+newdat$End.date[newdat$End.date=="20/05/1960"] <- "05/20/1960"
+#20/06/1955
+newdat$End.date[newdat$End.date=="20/06/1955"] <- "06/20/1955"
+#20/06/1961
+newdat$End.date[newdat$End.date=="20/06/1961"] <- "06/20/1961"
+#20/06/1967
+newdat$End.date[newdat$End.date=="20/06/1967"] <- "06/20/1967"
+#20/06/2016
+newdat$End.date[newdat$End.date=="20/06/2016"] <- "06/20/2016"
+#20/07/1972
+newdat$End.date[newdat$End.date=="20/07/1972"] <- "07/20/1972"
+#20/08/1966
+newdat$End.date[newdat$End.date=="20/08/1966"] <- "08/20/1966"
+#20/21/mei
+newdat$End.date[newdat$End.date=="20/21/mei"] <- NA
+#20/6/1978
+newdat$End.date[newdat$End.date=="20/6/1978"] <- "06/20/1978"
+#20/7/1988
+newdat$End.date[newdat$End.date=="20/7/1988"] <- "07/20/1988"
+#20/7/86
+newdat$End.date[newdat$End.date=="20/7/86"] <- "07/20/1986"
+#21/03/1968
+newdat$End.date[newdat$End.date=="21/03/1968"] <- "03/21/1968"
+#21/03/1980
+newdat$End.date[newdat$End.date=="21/03/1980"] <- "03/21/1980"
+#21/05/1955
+newdat$End.date[newdat$End.date=="21/05/1955"] <- "05/21/1955"
+#21/05/1958
+newdat$End.date[newdat$End.date=="21/05/1958"] <- "05/21/1958"
+#21/05/1959
+newdat$End.date[newdat$End.date=="21/05/1959"] <- "05/21/1959"
+#21/06/07
+newdat$End.date[newdat$End.date=="21/06/07"] <- "06/21/1907"
+#21/06/1961
+newdat$End.date[newdat$End.date=="21/06/1961"] <- "06/21/1961"
+#21/06/2016
+newdat$End.date[newdat$End.date=="21/06/2016"] <- "06/21/2016"
+#21/07/1950
+newdat$End.date[newdat$End.date=="21/07/1950"] <- "07/21/1950"
+#21/07/1953
+newdat$End.date[newdat$End.date=="21/07/1953"] <- "07/21/1953"
+#21/07/1970
+newdat$End.date[newdat$End.date=="21/07/1970"] <- "07/21/1970"
+#21/07/1972
+newdat$End.date[newdat$End.date=="21/07/1972"] <- "07/21/1972"
+#21/07/1984
+newdat$End.date[newdat$End.date=="21/07/1984"] <- "07/21/1984"
+#21/08/1969
+newdat$End.date[newdat$End.date=="21/08/1969"] <- "08/21/1969"
+#21/09/1973
+newdat$End.date[newdat$End.date=="21/09/1973"] <- "09/21/1973"
+#21/09/1975
+newdat$End.date[newdat$End.date=="21/09/1975"] <- "09/21/1975"
+#21/6/1890
+newdat$End.date[newdat$End.date=="21/6/1890"] <- "06/21/1890"
+#21/6/52
+newdat$End.date[newdat$End.date=="21/6/52"] <- "06/21/1952"
+#21/7/'52
+newdat$End.date[newdat$End.date=="21/7/'52"] <- "07/21/1952"
+#21/8/1978
+newdat$End.date[newdat$End.date=="21/8/1978"] <- "08/21/1978"
+#21/8/78
+newdat$End.date[newdat$End.date=="21/8/78"] <- "08/21/1978"
+#22/03/1947
+newdat$End.date[newdat$End.date=="22/03/1947"] <- "03/22/1947"
+#22/04/08
+newdat$End.date[newdat$End.date=="22/04/08"] <- "04/22/1908"
+#22/04/1878
+newdat$End.date[newdat$End.date=="22/04/1878"] <- "04/22/1878"
+#22/04/1947
+newdat$End.date[newdat$End.date=="22/04/1947"] <- "04/22/1947"
+#22/04/1978
+newdat$End.date[newdat$End.date=="22/04/1978"] <- "04/22/1978"
+#22/04/1982
+newdat$End.date[newdat$End.date=="22/04/1982"] <- "04/22/1982"
+#22/04/2016
+newdat$End.date[newdat$End.date=="22/04/2016"] <- "04/22/2016"
+#22/05/1960
+newdat$End.date[newdat$End.date=="22/05/1960"] <- "05/22/1960"
+#22/05/1967
+newdat$End.date[newdat$End.date=="22/05/1967"] <- "05/22/1967"
+#22/06/1961
+newdat$End.date[newdat$End.date=="22/06/1961"] <- "06/22/1961"
+#22/06/1977
+newdat$End.date[newdat$End.date=="22/06/1977"] <- "06/22/1977"
+#22/07/1950
+newdat$End.date[newdat$End.date=="22/07/1950"] <- "06/22/1950"
+#22/07/1953
+newdat$End.date[newdat$End.date=="22/07/1953"] <- "07/22/1953"
+#22/07/1969
+newdat$End.date[newdat$End.date=="22/07/1969"] <- "07/22/1969"
+#22/07/1970
+newdat$End.date[newdat$End.date=="22/07/1970"] <- "07/22/1970"
+#22/07/1984
+newdat$End.date[newdat$End.date=="22/07/1984"] <- "07/22/1984"
+#22/08/1969
+newdat$End.date[newdat$End.date=="22/08/1969"] <- "08/22/1969"
+#22/09/1952
+newdat$End.date[newdat$End.date=="22/09/1952"] <- "09/22/1952"
+#22/09/1963
+newdat$End.date[newdat$End.date=="22/09/1963"] <- "09/22/1963"
+#22/5/1913
+newdat$End.date[newdat$End.date=="22/5/1913"] <- "05/22/1913"
+#22/5/1958
+newdat$End.date[newdat$End.date=="22/5/1958"] <- "05/22/1958"
+#22/7/82
+newdat$End.date[newdat$End.date=="22/7/82"] <- "07/22/1982"
+#22/8/'84
+newdat$End.date[newdat$End.date=="22/8/'84"] <- "08/22/1984"
+#23/03/1980
+newdat$End.date[newdat$End.date=="23/03/1980"] <- "03/23/1980"
+#23/03/1986
+newdat$End.date[newdat$End.date=="23/03/1986"] <- "03/23/1986"
+#23/04/1894
+newdat$End.date[newdat$End.date=="23/04/1894"] <- "04/23/1894"
+#23/04/1947
+newdat$End.date[newdat$End.date=="23/04/1947"] <- "04/23/1947"
+#23/04/1994
+newdat$End.date[newdat$End.date=="23/04/1994"] <- "04/23/1994"
+#23/05/1959
+newdat$End.date[newdat$End.date=="23/05/1959"] <- "05/23/1959"
+#23/06/1958
+newdat$End.date[newdat$End.date=="23/06/1958"] <- "06/23/1958"
+#23/06/1961
+newdat$End.date[newdat$End.date=="23/06/1961"] <- "06/23/1961"
+#23/07/1969
+newdat$End.date[newdat$End.date=="23/07/1969"] <- "07/23/1969"
+#23/08/1966
+newdat$End.date[newdat$End.date=="23/08/1966"] <- "08/23/1966"
+#23/08/1969
+newdat$End.date[newdat$End.date=="23/08/1969"] <- "08/23/1969"
+#23/09/1963
+newdat$End.date[newdat$End.date=="23/09/1963"] <- "09/23/1963"
+#23/25/mei
+newdat$End.date[newdat$End.date=="23/25/mei"] <- NA
+#23/8/'78
+newdat$End.date[newdat$End.date=="23/8/'78"] <- "08/23/1978"
+#23/8/1978
+newdat$End.date[newdat$End.date=="23/8/1978"] <- "08/23/1978"
+#24/03/1980
+newdat$End.date[newdat$End.date=="24/03/1980"] <- "03/24/1980"
+#24/03/1986
+newdat$End.date[newdat$End.date=="24/03/1986"] <- "03/24/1986"
+#24/04/1982
+newdat$End.date[newdat$End.date=="24/04/1982"] <- "04/24/1982"
+#24/04/1993
+newdat$End.date[newdat$End.date=="24/04/1982"] <- "04/24/1982"
+#24/04/1994
+newdat$End.date[newdat$End.date=="24/04/1994"] <- "04/24/1994"
+#24/04/87
+newdat$End.date[newdat$End.date=="24/04/87"] <- "04/24/1987"
+#24/05/1950
+newdat$End.date[newdat$End.date=="24/05/1950"] <- "05/24/1950"
+#24/05/1953
+newdat$End.date[newdat$End.date=="24/05/1953"] <- "05/24/1953"
+#24/05/1960
+newdat$End.date[newdat$End.date=="24/05/1960"] <- "05/24/1960"
+#24/05/58
+newdat$End.date[newdat$End.date=="24/05/1958"] <- "05/24/1958"
+#24/06/1977
+newdat$End.date[newdat$End.date=="24/06/1977"] <- "06/24/1977"
+#24/07/1924
+newdat$End.date[newdat$End.date=="24/07/1924"] <- "07/24/1924"
+#24/07/1969
+newdat$End.date[newdat$End.date=="24/07/1969"] <- "07/24/1969"
+#24/07/1970
+newdat$End.date[newdat$End.date=="24/07/1970"] <- "07/24/1970"
+#24/08/18
+newdat$End.date[newdat$End.date=="24/08/18"] <- "08/24/1918"
+#24/08/1966
+newdat$End.date[newdat$End.date=="24/08/1966"] <- "08/24/1966"
+#24/08/1969
+newdat$End.date[newdat$End.date=="24/08/1969"] <- "08/24/1969"
+#24/09/1963
+newdat$End.date[newdat$End.date=="24/09/1963"] <- "09/24/1963"
+#24/5/1953
+newdat$End.date[newdat$End.date=="24/5/1953"] <- "05/24/1953"
+#24/7/1956
+newdat$End.date[newdat$End.date=="24/7/1956"] <- "07/24/1956"
+#24/Jun/81
+newdat$End.date[newdat$End.date=="24/Jun/81"] <- "06/24/1981"
+#25/03/1947
+newdat$End.date[newdat$End.date=="25/03/1947"] <- "03/25/1947"
+#25/03/1967
+newdat$End.date[newdat$End.date=="25/03/1967"] <- "03/25/1967"
+#25/03/1980
+newdat$End.date[newdat$End.date=="25/03/1980"] <- "03/25/1980"
+#25/03/1986
+newdat$End.date[newdat$End.date=="25/03/1986"] <- "03/25/1986"
+#25/04/1947
+newdat$End.date[newdat$End.date=="25/04/1947"] <- "04/25/1947"
+#25/04/1971
+newdat$End.date[newdat$End.date=="25/04/1971"] <- "04/25/1971"
+#25/05/2016
+newdat$End.date[newdat$End.date=="25/04/2016"] <- "04/25/2016"
+#25/06/1961
+newdat$End.date[newdat$End.date=="25/06/1961"] <- "06/25/1961"
+#25/07/1970
+newdat$End.date[newdat$End.date=="25/07/1970"] <- "07/25/1970"
+#25/07/1978
+newdat$End.date[newdat$End.date=="25/07/1978"] <- "07/25/1978"
+#25/08/1966
+newdat$End.date[newdat$End.date=="25/08/1966"] <- "08/25/1966"
+#25/4/78
+newdat$End.date[newdat$End.date=="25/4/78"] <- "04/25/1978"
+#25/5/1975
+newdat$End.date[newdat$End.date=="25/5/1975"] <- "04/25/1975"
+#25/5/1998
+newdat$End.date[newdat$End.date=="25/5/1998"] <- "05/25/1998"
+#26/03/1980
+newdat$End.date[newdat$End.date=="26/03/1980"] <- "03/26/1980"
+#26/03/1986
+newdat$End.date[newdat$End.date=="26/03/1986"] <- "03/26/1986"
+#26/03/87
+newdat$End.date[newdat$End.date=="26/03/87"] <- "03/26/1987"
+#26/05/1958
+newdat$End.date[newdat$End.date=="26/05/1958"] <- "05/26/1958"
+#26/05/1960
+newdat$End.date[newdat$End.date=="26/05/1960"] <- "05/26/1960"
+#26/06/1977
+newdat$End.date[newdat$End.date=="26/06/1977"] <- "06/26/1977"
+#26/08/1966
+newdat$End.date[newdat$End.date=="26/08/1966"] <- "08/26/1966"
+#26/08/1969
+newdat$End.date[newdat$End.date=="26/08/1969"] <- "08/26/1969"
+#26/08/84
+newdat$End.date[newdat$End.date=="26/08/84"] <- "08/26/1984"
+#26/09/1952
+newdat$End.date[newdat$End.date=="26/09/1952"] <- "09/26/1952"
+#26/09/1963
+newdat$End.date[newdat$End.date=="26/09/1963"] <- "09/26/1963"
+#26/09/1973
+newdat$End.date[newdat$End.date=="26/09/1973"] <- "09/26/1973"
+#26/5/1975
+newdat$End.date[newdat$End.date=="26/5/1975"] <- "04/26/1975"
+#26/8/''78
+newdat$End.date[newdat$End.date=="26/8/''78"] <- "08/26/1978"
+#27/04/1978
+newdat$End.date[newdat$End.date=="27/04/1978"] <- "04/27/1978"
+#27/04/1993
+newdat$End.date[newdat$End.date=="27/04/1993"] <- "04/27/1993"
+#27/05/1959
+newdat$End.date[newdat$End.date=="27/05/1959"] <- "05/27/1959"
+#27/05/1962
+newdat$End.date[newdat$End.date=="27/05/1962"] <- "05/27/1962"
+#27/06/1967
+newdat$End.date[newdat$End.date=="27/06/1967"] <- "06/27/1967"
+#27/07/1968
+newdat$End.date[newdat$End.date=="27/07/1968"] <- "07/27/1968"
+#27/07/1978
+newdat$End.date[newdat$End.date=="27/07/1978"] <- "07/27/1978"
+#27/07/1984
+newdat$End.date[newdat$End.date=="27/07/1984"] <- "07/27/1984"
+#27/08/1968
+newdat$End.date[newdat$End.date=="27/08/1968"] <- "08/27/1968"
+#27/09/1952
+newdat$End.date[newdat$End.date=="27/09/1952"] <- "09/27/1952"
+#27/5/1975
+newdat$End.date[newdat$End.date=="27/5/1975"] <- "05/27/1975"
 
+#27/8/1978
+newdat$End.date[newdat$End.date=="27/8/1978"] <- "08/27/1978"
+#28/03/1968
+newdat$End.date[newdat$End.date=="28/03/1968"] <- "03/28/1968"
+#28/03/1986
+newdat$End.date[newdat$End.date=="28/03/1986"] <- "03/28/1986"
+#28/04/08
+newdat$End.date[newdat$End.date=="28/04/08"] <- "04/28/1908"
+#28/05/1959
+newdat$End.date[newdat$End.date=="28/05/1959"] <- "05/28/1959"
+#28/05/1960
+newdat$End.date[newdat$End.date=="28/05/1960"] <- "05/28/1960"
+#28/07/1924
+newdat$End.date[newdat$End.date=="28/07/1924"] <- "07/28/1924"
+#28/07/1967
+newdat$End.date[newdat$End.date=="28/07/1967"] <- "07/28/1967"
+#28/07/1968
+newdat$End.date[newdat$End.date=="28/07/1968"] <- "07/28/1968"
+#28/07/1970
+newdat$End.date[newdat$End.date=="28/07/1970"] <- "07/28/1970"
+#28/07/1984
+newdat$End.date[newdat$End.date=="28/07/1984"] <- "07/28/1984"
+#28/07/24
+newdat$End.date[newdat$End.date=="28/07/24"] <- "07/28/1924"
+#28/08/1970
+newdat$End.date[newdat$End.date=="28/08/1970"] <- "08/28/1970"
+#28/5/1983
+newdat$End.date[newdat$End.date=="28/5/1983"] <- "05/28/1983"
+#28/7/1950
+newdat$End.date[newdat$End.date=="28/7/1950"] <- "07/28/1950"
+#28/8/'78
+newdat$End.date[newdat$End.date=="28/8/'78"] <- "08/28/1978"
+#28/8/1978
+newdat$End.date[newdat$End.date=="28/8/1978"] <- "08/28/1978"
+#28/8/48
+newdat$End.date[newdat$End.date=="28/8/48"] <- "08/28/1948"
+#29/04/1960
+newdat$End.date[newdat$End.date=="29/04/1960"] <- "04/29/1960"
+#29/04/1993
+newdat$End.date[newdat$End.date=="29/04/1993"] <- "04/29/1993"
+#29/04/2016
+newdat$End.date[newdat$End.date=="29/04/2016"] <- "04/25/2016"
+#29/05/1962
+newdat$End.date[newdat$End.date=="29/05/1962"] <- "05/29/1962"
+#29/05/1967
+newdat$End.date[newdat$End.date=="29/05/1967"] <- "05/29/1967"
+#29/05/1998
+newdat$End.date[newdat$End.date=="29/05/1998"] <- "05/29/1998"
+#29/06/1970
+newdat$End.date[newdat$End.date=="29/06/1970"] <- "06/29/1970"
+#29/07/1924
+newdat$End.date[newdat$End.date=="29/07/1924"] <- "07/29/1924"
+#29/07/1929
+newdat$End.date[newdat$End.date=="29/07/1929"] <- "07/29/1929"
+#29/07/1960
+newdat$End.date[newdat$End.date=="29/07/1960"] <- "07/29/1960"
+#29/07/1968
+newdat$End.date[newdat$End.date=="29/07/1968"] <- "07/29/1968"
+#29/07/1978
+newdat$End.date[newdat$End.date=="29/07/1978"] <- "07/29/1978"
+#29/07/29
+newdat$End.date[newdat$End.date=="29/07/29"] <- "07/29/1929"
+#29/08/33
+newdat$End.date[newdat$End.date=="29/08/33"] <- "08/25/1933"
+#29/7/1950
+newdat$End.date[newdat$End.date=="29/7/1950"] <- "07/29/1950"
+#Apr//1927
+newdat$End.date[newdat$End.date=="Apr//1927"] <- NA
+#Apr//1928
+newdat$End.date[newdat$End.date=="Apr//1928"] <- NA
+#Aug//25
+newdat$End.date[newdat$End.date=="Aug//25"] <- NA
+#Augt//25
+newdat$End.date[newdat$End.date=="Augt//25"] <- NA
+#ca,20/5/24
+newdat$End.date[newdat$End.date=="ca,20/5/24"] <- NA
+#febr//1923
+newdat$End.date[newdat$End.date=="febr//1923"] <- NA
+#I/07/'68
+newdat$End.date[newdat$End.date=="I/07/'68"] <- NA
+#IV//08
+newdat$End.date[newdat$End.date=="IV//08"] <- NA
+#Juli//25
+newdat$End.date[newdat$End.date=="Juli//25"] <- NA
+#V//02
+newdat$End.date[newdat$End.date=="V//02"] <- NA
+#V//04
+newdat$End.date[newdat$End.date=="V//04"] <- NA
+#13/05/1960
+newdat$End.date[newdat$End.date=="13/05/1960"] <- "05/13/1960"
+#13/06/1961
+newdat$End.date[newdat$End.date=="13/06/1961"] <- "06/13/1961"
+#13/08/1968
+newdat$End.date[newdat$End.date=="13/08/1968"] <- "08/13/1968"
+#13/08/1969
+newdat$End.date[newdat$End.date=="13/08/1969"] <- "08/13/1969"
+#13/09/1960
+newdat$End.date[newdat$End.date=="13/09/1960"] <- "09/13/1960"
+#13/3/1987
+newdat$End.date[newdat$End.date=="13/3/1987"] <- "03/13/1987"
+#13/6/1978
+newdat$End.date[newdat$End.date=="13/6/1978"] <- "06/13/1978"
+#14/03/1947
+newdat$End.date[newdat$End.date=="14/03/1947"] <- "03/14/1947"
+#14/04/1972
+newdat$End.date[newdat$End.date=="14/04/1972"] <- "04/14/1972"
+#14/04/1982
+newdat$End.date[newdat$End.date=="14/04/1982"] <- "04/14/1982"
+#14/05/1967
+newdat$End.date[newdat$End.date=="14/05/1967"] <- "05/14/1967"
+#14/06/1955
+newdat$End.date[newdat$End.date=="14/06/1955"] <- "06/14/1955"
+#14/06/1961
+newdat$End.date[newdat$End.date=="14/06/1961"] <- "06/14/1961"
+#14/06/1967
+newdat$End.date[newdat$End.date=="14/06/1967"] <- "06/14/1967"
+#14/07/1953
+newdat$End.date[newdat$End.date=="14/07/1953"] <- "07/14/1953"
+#14/07/1963
+newdat$End.date[newdat$End.date=="14/07/1963"] <- "07/14/1963"
+#14/08/1968
+newdat$End.date[newdat$End.date=="14/08/1968"] <- "08/14/1968"
+#14/10/1952
+newdat$End.date[newdat$End.date=="14/10/1952"] <- "10/14/1952"
+#14/5/1967
+newdat$End.date[newdat$End.date=="14/5/1967"] <-  "05/14/1967"
+#14/6/1981
+newdat$End.date[newdat$End.date=="14/6/1981"] <- "06/14/1981"
+#15/03/1986
+newdat$End.date[newdat$End.date=="15/03/1986"] <- "03/15/1986"
+#15/04/1982
+newdat$End.date[newdat$End.date=="15/04/1982"] <- "04/15/1982"
+#15/05/1967
+newdat$End.date[newdat$End.date=="15/05/1967"] <- "05/15/1967"
+#15/06/1961
+newdat$End.date[newdat$End.date=="15/06/1961"] <- "06/15/1961"
+#15/06/1969
+newdat$End.date[newdat$End.date=="15/06/1969"] <- "06/15/1969"
+#15/07/1953
+newdat$End.date[newdat$End.date=="15/07/1953"] <- "07/15/1953"
+#15/07/1970
+newdat$End.date[newdat$End.date=="15/07/1970"] <- "07/15/1970"
+#15/08/1968
+newdat$End.date[newdat$End.date=="15/08/1968"] <- "08/15/1968"
+#15/09/1952
+newdat$End.date[newdat$End.date=="15/09/1952"] <- "09/15/1952"
+#15/5/1967
+newdat$End.date[newdat$End.date=="15/5/1967"] <- "05/15/1967"
+#15/6/1978
+newdat$End.date[newdat$End.date=="15/6/1978"] <- "06/15/1978"
+#16/03/1986
+newdat$End.date[newdat$End.date=="16/03/1986"] <- "03/16/1986"
+#16/04/1978
+newdat$End.date[newdat$End.date=="16/04/1978"] <- "04/16/1978"
+#16/04/1982
+newdat$End.date[newdat$End.date=="16/04/1982"] <- "04/16/1982"
+#16/05/1958
+newdat$End.date[newdat$End.date=="16/05/1958"] <- "05/16/1958"
+#16/05/1959
+newdat$End.date[newdat$End.date=="16/05/1959"] <- "05/16/1959"
+#16/05/2016
+newdat$End.date[newdat$End.date=="16/05/2016"] <- "05/16/2016"
+#16/06/1961
+newdat$End.date[newdat$End.date=="16/06/1961"] <- "06/16/2016"
+#16/06/2016
+newdat$End.date[newdat$End.date=="16/06/2016"] <- "06/16/2016"
+#16/08/1969
+newdat$End.date[newdat$End.date=="16/08/1969"] <- "08/16/1969"
+#16/09/1952
+newdat$End.date[newdat$End.date=="16/09/1952"] <- "09/16/1952"
+#16/5/1958
+newdat$End.date[newdat$End.date=="16/5/1958"] <- "05/16/1958"
+#16/8/924
+newdat$End.date[newdat$End.date=="16/8/924"] <- "08/16/1924"
+#17/03/1947
+newdat$End.date[newdat$End.date=="17/03/1947"] <- "03/17/1947"
+#17/03/1980
+newdat$End.date[newdat$End.date=="17/03/1980"] <- "03/17/1980"
+#17/03/1986
+newdat$End.date[newdat$End.date=="17/03/1986"] <- "03/17/1986"
+#17/04/1978
+newdat$End.date[newdat$End.date=="17/04/1978"] <- "04/17/1978"
+#17/04/1982
+newdat$End.date[newdat$End.date=="17/04/1982"] <- "04/17/1982"
+#17/04/1983
+newdat$End.date[newdat$End.date=="17/04/1983"] <- "04/17/1983"
+#17/05/1958
+newdat$End.date[newdat$End.date=="17/05/1958"] <- "05/17/1958"
+#17/05/1960
+newdat$End.date[newdat$End.date=="17/05/1960"] <- "05/17/1960"
+#17/05/1969
+newdat$End.date[newdat$End.date=="17/05/1969"] <- "05/17/1969"
+#17/06/1961
+newdat$End.date[newdat$End.date=="17/06/1961"] <-  "06/17/1961"
+#17/06/1983
+newdat$End.date[newdat$End.date=="17/06/1983"] <- "06/17/1983"
+#17/06/2016
+newdat$End.date[newdat$End.date=="17/06/2016"] <- "06/17/2016"
+#17/07/1970
+newdat$End.date[newdat$End.date=="17/07/1970"] <- "07/17/1970"
+#17/08/1968
+newdat$End.date[newdat$End.date=="17/08/1968"] <- "08/17/1968"
+#17/08/1969
+newdat$End.date[newdat$End.date=="17/08/1969"] <- "08/17/1969"
+#17/09/1963
+newdat$End.date[newdat$End.date=="17/09/1963"] <- "09/17/1963"
+#17/09/1973
+newdat$End.date[newdat$End.date=="17/09/1973"] <- "09/17/1973"
+#17/5/1958
+newdat$End.date[newdat$End.date=="17/5/1958"] <- "05/17/1958"
+#18/03/1968
+newdat$End.date[newdat$End.date=="18/03/1968"] <- "03/18/1968"
+#18/03/1980
+newdat$End.date[newdat$End.date=="18/03/1980"] <- "03/18/1980"
+#18/03/1986
+newdat$End.date[newdat$End.date=="18/03/1986"] <- "03/18/1986"
+#18/04/1983
+newdat$End.date[newdat$End.date=="18/04/1983"] <- "04/18/1983"
+#18/04/1984
+newdat$End.date[newdat$End.date=="18/04/1984"] <- "04/18/1984"
+#18/05/1958
+newdat$End.date[newdat$End.date=="18/05/1958"] <- "05/18/1958"
+#18/06/1955
+newdat$End.date[newdat$End.date=="18/06/1955"] <- "06/18/1955"
+#18/07/1950
+newdat$End.date[newdat$End.date=="18/07/1950"] <- "07/18/1950"
+#18/09/1963
+newdat$End.date[newdat$End.date=="18/09/1963"] <- "09/18/1963"
+#18/10/1952
+newdat$End.date[newdat$End.date=="18/10/1952"] <- "10/18/1952"
+#18/10/1987
+newdat$End.date[newdat$End.date=="18/10/1987"] <- "10/18/1987"
+#18/5/1958
+newdat$End.date[newdat$End.date=="18/5/1958"] <- "05/18/1958"
+#18/7/1950
+newdat$End.date[newdat$End.date=="18/7/1950"] <- "07/18/1950"
+#19/03/1947
+newdat$End.date[newdat$End.date=="19/03/1947"] <- "03/19/1947"
+#19/03/1980
+newdat$End.date[newdat$End.date=="19/03/1980"] <- "03/19/1980"
+#19/03/1986
+newdat$End.date[newdat$End.date=="19/03/1986"] <- "03/19/1986"
+#19/03/1995
+newdat$End.date[newdat$End.date=="19/03/1995"] <-  "03/19/1995"
+#19/05/1967
+newdat$End.date[newdat$End.date=="19/05/1967"] <- "05/19/1967"
+#19/05/2016
+newdat$End.date[newdat$End.date=="19/05/2016"] <- "05/19/2016"
+#19/06/1970
+newdat$End.date[newdat$End.date=="19/06/1970"] <- "06/19/1970"
+#19/06/1975
+newdat$End.date[newdat$End.date=="19/06/1975"] <- "06/19/1975"
+#19/07/1970
+newdat$End.date[newdat$End.date=="19/07/1970"] <- "07/19/1970"
+#19/07/1978
+newdat$End.date[newdat$End.date=="19/07/1978"] <- "07/19/1978"
+#19/08/1996
+newdat$End.date[newdat$End.date=="19/08/1996"] <- "08/19/1996"
+#19/09/1963
+newdat$End.date[newdat$End.date=="19/09/1963"] <- "08/19/1963"
+#19/09/1975
+newdat$End.date[newdat$End.date=="19/09/1975"] <- "08/19/1975"
+#19/10/924
+newdat$End.date[newdat$End.date=="19/10/924"] <- "10/19/1924"
+#19/6/1973
+newdat$End.date[newdat$End.date=="19/6/1973"] <- "06/19/1973"
+#19/8/1949
+newdat$End.date[newdat$End.date=="19/8/1949"] <- "08/19/1949"
+#18/07/1953
+newdat$End.date[newdat$End.date=="18/07/1953"] <- "07/18/1953"
+#18/08/1968
+newdat$End.date[newdat$End.date=="18/08/1968"] <- "08/18/1968"
+#18/09/1952
+newdat$End.date[newdat$End.date=="18/09/1952"] <- "09/18/1952"
+#18/6/1978
+newdat$End.date[newdat$End.date=="18/6/1978"] <- "06/18/1978"
+#20/04/1994
+newdat$End.date[newdat$End.date=="20/04/1994"] <- "04/20/1994"
+#24/04/1993
+newdat$End.date[newdat$End.date=="24/04/1993"] <- "04/24/1993"
+#24/05/58
+newdat$End.date[newdat$End.date=="24/05/58"] <- "05/24/1958"
+#24/07/924
+newdat$End.date[newdat$End.date=="24/07/924"] <- "07/24/1924"
+#25/05/2016
+newdat$End.date[newdat$End.date=="25/05/2016"] <- "05/25/2016"
+#29/07/924
+newdat$End.date[newdat$End.date=="29/07/924"] <- "07/29/1924"
+#3/04/70
+newdat$End.date[newdat$End.date=="3/04/70"] <- "03/04/1970"
+#3/05/58
+newdat$End.date[newdat$End.date=="3/05/58"] <- "03/05/1958"
+#30/04/1993
+newdat$End.date[newdat$End.date=="30/04/1993"] <- "04/30/1993"
+#30/05/1959
+newdat$End.date[newdat$End.date=="30/05/1959"] <- "05/30/1959"
+#30/05/1962
+newdat$End.date[newdat$End.date=="30/05/1962"] <- "05/30/1962"
+#30/05/1967
+newdat$End.date[newdat$End.date=="30/05/1967"] <- "05/30/1967"
+#30/06/1969
+newdat$End.date[newdat$End.date=="30/06/1969"] <- "06/30/1969"
+#30/06/1970
+newdat$End.date[newdat$End.date=="30/06/1970"] <- "06/30/1970"
+#30/06/1977
+newdat$End.date[newdat$End.date=="30/06/1977"] <- "06/30/1977"
+#30/07/1960
+newdat$End.date[newdat$End.date=="30/07/1960"] <- "07/30/1960"
+#30/07/1968
+newdat$End.date[newdat$End.date=="30/07/1968"] <- "07/30/1968"
+#30/07/1969
+newdat$End.date[newdat$End.date=="30/07/1969"] <- "07/30/1969"
+#30/07/1970
+newdat$End.date[newdat$End.date=="30/07/1970"] <- "07/30/1970"
+#30/08/1969
+newdat$End.date[newdat$End.date=="30/08/1969"] <- "08/30/1969"
+#30/6/90
+newdat$End.date[newdat$End.date=="30/6/90"] <- "06/30/1990"
+#30/8/1972
+newdat$End.date[newdat$End.date=="30/8/1972"] <- "08/30/1972"
+#31/05/1955
+newdat$End.date[newdat$End.date=="31/05/1955"] <- "05/31/1955"
+#31/05/2016
+newdat$End.date[newdat$End.date=="31/05/2016"] <- "05/31/2016"
+#31/05/2016
+newdat$End.date[newdat$End.date=="31/05/2016"] <- "05/31/2016"
+#31/07/1968
+newdat$End.date[newdat$End.date=="31/07/1968"] <- "07/31/1968"
+#31/07/1970
+newdat$End.date[newdat$End.date=="31/07/1970"] <- "07/31/1970"
+#31/08/1969
+newdat$End.date[newdat$End.date=="31/08/1969"] <- "08/31/1969"
+#31/09/2013
+newdat$End.date[newdat$End.date=="31/09/2013"] <- "09/31/2013"
+#31/12/1896
+newdat$End.date[newdat$End.date=="31/12/1896"] <- "12/31/1896"
+#31/12/1904
+newdat$End.date[newdat$End.date=="31/12/1904"] <- "12/31/1904"
+#31/21/1959
+newdat$End.date[newdat$End.date=="31/21/1959"] <- "12/31/1959"
+#31/21/1992
+newdat$End.date[newdat$End.date=="31/21/1992"] <- "12/31/1992"
+#5/24/
+newdat$End.date[newdat$End.date=="5/24/"] <- NA
 
-
-
-
+#Delete dates with more than 2 or less forward slashes 
 is.na(newdat$End.date) <- nchar(newdat$End.date) - nchar(gsub("/", "", newdat$End.date, fixed = TRUE)) > 2
+is.na(newdat$End.date) <- nchar(newdat$End.date) - nchar(gsub("/", "", newdat$End.date, fixed = TRUE)) < 2
+
+#newdat$End.date <- gsub("924", "1924", newdat$End.date,fixed = TRUE)
+#newdat$End.date <- gsub("11924", "1924", newdat$End.date,fixed = TRUE)
+
+#leading zeros and without zeros
+newdat$End.date <- anydate(newdat$End.date)
+#Now is in YEAR/MONTH/DAY
+#Convert to standard format of the database
+newdat$End.date <- as.Date(newdat$End.date,format = "%y/%d/%m")
+newdat$End.date<- format(newdat$End.date, "%d/%m/%Y")
+#d <- as.data.frame(levels(factor(newdat$End.date))) #check levels
+
+#Now looks much better!
+
+#Check next column
+d <- as.data.frame(levels(factor(newdat$Collector))) #check levels
 
 
-d <- as.data.frame(levels(factor(newdat$End.date))) #check levels
+#Select unique cases
+df <- distinct(newdat, End.date, .keep_all = TRUE)
 
+df_1 <- as.data.frame(stringr::str_split_fixed(newdat$End.date, "/", 3))
 
-
-
-f <- levels(factor(as.Date(newdat$End.date, format = "%m/%d/%Y")))
-f <- as.data.frame(f)
 
 
 newdat$uid <- paste("54_Wood_etal_", 1:nrow(newdat), sep = "")
