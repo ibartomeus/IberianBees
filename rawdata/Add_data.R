@@ -4974,6 +4974,9 @@ newdat$Collector[newdat$Collector=="Puerto [?]"] <- "Puerto"
 newdat$Collector[newdat$Collector=="P"] <- NA
 newdat$Collector[newdat$Collector=="K."] <- NA
 newdat$Collector[newdat$Collector=="J. Briedã©"] <- "J. Briedé"
+#d <- as.data.frame(levels(factor(newdat$Collector))) #check levels
+
+
 
 #Now Determined.by col
 newdat$Determined.by[newdat$Determined.by==""] <- NA
@@ -5003,11 +5006,56 @@ newdat$Determined.by[newdat$Determined.by=="K.-H. K.-H. Schwammberger"] <- "K. H
 newdat$Determined.by[newdat$Determined.by=="K.-H. Schwammberger"] <- "K. H. Schwammberger"
 newdat$Determined.by[newdat$Determined.by=="K.-H. Schwammberger"] <- "K. H. Schwammberger"
 newdat$Determined.by[newdat$Determined.by=="Pã©Rã©Z"] <- "Pérez"
+#d <- as.data.frame(levels(factor(newdat$Determined.by))) #check levels
+#it looks better now
 
-#Check other cols male/female 
-d <- as.data.frame(levels(factor(newdat$Reference.doi))) #check levels
 
+#Check male/female cols
+#LOOK AT IT!
 
+#Check Reference.doi
+newdat$Reference.doi[newdat$Reference.doi==""] <- NA
+newdat$Reference.doi[newdat$Reference.doi==" "] <- NA
+newdat$Reference.doi[newdat$Reference.doi=="Ceballos & &Al (1956)"] <- "Ceballos & Al 1956"
+newdat$Reference.doi[newdat$Reference.doi=="Ceballos & Al (1956)"] <- "Ceballos & Al 1956"
+newdat$Reference.doi[newdat$Reference.doi=="Erlndsson (1979)"] <- "Erlandsson 1979"
+#String to title
+newdat$Reference.doi <- stringr::str_to_title(newdat$Reference.doi)
+#Delete parenthesis
+newdat$Reference.doi <- gsub("(", "", newdat$Reference.doi, fixed=TRUE)
+newdat$Reference.doi <- gsub(")", "", newdat$Reference.doi, fixed=TRUE)
+#d <- as.data.frame(levels(factor(newdat$Reference.doi))) #check levels
+#it looks decent now
+
+#Now flowers_visited col
+newdat$Flowers.visited[newdat$Flowers.visited==""] <- NA
+newdat$Flowers.visited[newdat$Flowers.visited=="(dennenbos)"] <- "Dennenbos"
+newdat$Flowers.visited[newdat$Flowers.visited=="(weitjes)"] <- "Weitjes"
+newdat$Flowers.visited[newdat$Flowers.visited=="1000 m., op Lavandula stoechas"] <- "Lavandula stoechas"
+newdat$Flowers.visited[newdat$Flowers.visited=="1600 m., on Echium"] <- "Echium sp."
+newdat$Flowers.visited[grepl("Galactites to", newdat$Flowers.visited, ignore.case=FALSE)] <- "Galactites tomentosa"
+newdat$Flowers.visited[newdat$Flowers.visited=="725 m, Scabiosa maritima L."] <- "Scabiosa maritima"
+newdat$Flowers.visited[newdat$Flowers.visited=="725 m, Scrophularia auriculata L."] <- "Scrophularia auriculata"
+newdat$Flowers.visited[newdat$Flowers.visited=="900 m, Echium"] <- "Echium"
+newdat$Flowers.visited[newdat$Flowers.visited=="ca 500 m"] <- NA
+newdat$Flowers.visited[newdat$Flowers.visited=="ca. 800 M"] <- NA
+newdat$Flowers.visited[newdat$Flowers.visited=="ca. 800 m."] <- NA
+newdat$Flowers.visited <- gsub("on ", "", newdat$Flowers.visited, fixed=TRUE)
+newdat$Flowers.visited[newdat$Flowers.visited=="1600 m., Echium"] <-"Echium sp."
+newdat$Flowers.visited[newdat$Flowers.visited=="600 m, Rubus"] <-"Rubus sp."
+newdat$Flowers.visited[newdat$Flowers.visited=="600 m, Rubus"] <-"Rubus sp."
+newdat$Flowers.visited[newdat$Flowers.visited=="725 m, Rubus"] <-"Rubus sp."
+newdat$Flowers.visited[newdat$Flowers.visited=="Echium no. 78"] <-"Echium sp."
+newdat$Flowers.visited[grepl("Lotus uligin", newdat$Flowers.visited, ignore.case=FALSE)] <- "Lotus uliginosus"
+newdat$Flowers.visited <- gsub("op ", "", newdat$Flowers.visited, fixed=TRUE)
+newdat$Flowers.visited[grepl("Tolpis ba", newdat$Flowers.visited, ignore.case=FALSE)] <- "Tolpis barbata"
+newdat$Flowers.visited[grepl("Thymus ma", newdat$Flowers.visited, ignore.case=FALSE)] <- "Thymus mastichina"
+newdat$Flowers.visited[grepl("1", newdat$Flowers.visited, ignore.case=FALSE)] <- NA
+newdat$Flowers.visited[grepl("00", newdat$Flowers.visited, ignore.case=FALSE)] <- NA
+newdat$Flowers.visited[grepl("2", newdat$Flowers.visited, ignore.case=FALSE)] <- NA
+newdat$Flowers.visited <- stringr::str_to_sentence(newdat$Flowers.visited)
+#d <- as.data.frame(levels(factor(newdat$Flowers.visited))) #check levels
+#Now it looks better could be a bit more edited
 
 
 
