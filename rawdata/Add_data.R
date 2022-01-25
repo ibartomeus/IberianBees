@@ -721,7 +721,7 @@ colnames(newdat)[which(colnames(newdat) == 'End.Date')] <- 'End.date' #Rename va
 colnames(newdat)[which(colnames(newdat) == 'COLLECTION')] <- 'Local_ID' #Rename variables if needed
 
 newdat <- add_missing_variables(check, newdat)
-newdat <- drop_variables(check, newdat) #reorder and drop varia
+newdat <- drop_variables(check, newdat) #reorder and drop variables
 
 #species includes genus
 newdat$Species <- unlist(strsplit(x = as.character(newdat$Species),split = " "))[seq(2,108,2)]
@@ -4948,12 +4948,65 @@ newdat$Collector[newdat$Collector=="531632058"] <- NA
 newdat$Collector[newdat$Collector=="881932368"] <- NA
 newdat$Collector[newdat$Collector==""] <- NA
 
+#Add space after dot
+newdat$Collector <- gsub("\\.(?=[A-Za-z])", ". ", newdat$Collector, perl = TRUE)
+#String to title
+newdat$Collector <- stringr::str_to_title(newdat$Collector)
+#Remove numbers from string
+newdat$Collector <- gsub('[0-9]+', '', newdat$Collector)
+#delete leading trailing space
+newdat$Collector <- trimws(newdat$Collector, which = c("both"), whitespace = "[ \t\r\n]")
+#change separator
+newdat$Collector <- gsub(" &", ",", newdat$Collector)
 
+#Fix just big typos
+newdat$Collector[newdat$Collector=="Agull?? Villaronga,"] <- "Agustí Villalonga"
+newdat$Collector[grepl("Bã", newdat$Collector, ignore.case=FALSE)] <- "Bür Blote De Jong De Osse"
+newdat$Collector[newdat$Collector=="C. A. W. Jeek@"] <- "C. A. W. Jeekel"
+newdat$Collector[newdat$Collector=="C. V. Achterberg Rmnh '"] <- "C. V. Achterberg"
+newdat$Collector[newdat$Collector=="Equip Gesti?? Artr??"] <- "Equipo Gestión Artrópodos"
+newdat$Collector[newdat$Collector=="Equip Gesti?? Artr??"] <- "Equipo Gestión Artrópodos"
+newdat$Collector[newdat$Collector=="Escol?Á Boada, Olegu"] <- "Escolá Boada, Olegu"
+newdat$Collector[newdat$Collector=="Gonz?Ílez, I."] <- "González, I."
+newdat$Collector[newdat$Collector=="Gonz?Ílez, I."] <- "González, I."
+newdat$Collector[newdat$Collector=="S. Bogya, I. Sebesyã©N"] <- "S. Bogya, I. Sebesyén"
+newdat$Collector[newdat$Collector=="Puerto [?]"] <- "Puerto"
+newdat$Collector[newdat$Collector=="P"] <- NA
+newdat$Collector[newdat$Collector=="K."] <- NA
+newdat$Collector[newdat$Collector=="J. Briedã©"] <- "J. Briedé"
 
-e
+#Now Determined.by col
+newdat$Determined.by[newdat$Determined.by==""] <- NA
 
+newdat$Determined.by <- gsub("Det. ", "", newdat$Determined.by)
+newdat$Determined.by <- gsub("Det ", "", newdat$Determined.by)
+newdat$Determined.by <- gsub("Det.", "", newdat$Determined.by)
+newdat$Determined.by <- gsub("Det.", "", newdat$Determined.by)
+newdat$Determined.by[newdat$Determined.by=="@"] <- NA
 
-d <- as.data.frame(levels(factor(newdat$Collector))) #check levels
+#Add space after dot
+newdat$Determined.by <- gsub("\\.(?=[A-Za-z])", ". ", newdat$Determined.by, perl = TRUE)
+#String to title
+newdat$Determined.by <- stringr::str_to_title(newdat$Determined.by)
+#Remove numbers from string
+newdat$Determined.by <- gsub('[0-9]+', '', newdat$Determined.by)
+#delete leading trailing space
+newdat$Determined.by <- trimws(newdat$Determined.by, which = c("both"), whitespace = "[ \t\r\n]")
+#change formard slash by comma and space
+newdat$Determined.by <- gsub("/", ", ", newdat$Determined.by)
+
+#Fix some big errors
+newdat$Determined.by[newdat$Determined.by=="Blã¼Thgen"] <- "Blüthgen P"
+newdat$Determined.by[newdat$Determined.by=="Blã¼Thgen Det."] <- "Blüthgen P"
+newdat$Determined.by[newdat$Determined.by=="G. Mas??"] <- "G. Mas"
+newdat$Determined.by[newdat$Determined.by=="K.-H. K.-H. Schwammberger"] <- "K. H. Schwammberger"
+newdat$Determined.by[newdat$Determined.by=="K.-H. Schwammberger"] <- "K. H. Schwammberger"
+newdat$Determined.by[newdat$Determined.by=="K.-H. Schwammberger"] <- "K. H. Schwammberger"
+newdat$Determined.by[newdat$Determined.by=="Pã©Rã©Z"] <- "Pérez"
+
+#Check other cols male/female 
+d <- as.data.frame(levels(factor(newdat$Reference.doi))) #check levels
+
 
 
 
