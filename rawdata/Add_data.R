@@ -4932,7 +4932,30 @@ newdat$End.date<- format(newdat$End.date, "%d/%m/%Y")
 #Now looks much better!
 
 #Check next column
+#Collector
+newdat$Collector[newdat$Collector=="-1082328577"] <- NA
+newdat$Collector[newdat$Collector=="-1510526472"] <- NA
+newdat$Collector[newdat$Collector=="-1692779921"] <- NA
+newdat$Collector[newdat$Collector=="-2075801121"] <- NA
+newdat$Collector[newdat$Collector=="-264761682"] <- NA
+newdat$Collector[newdat$Collector=="@@"] <- NA
+newdat$Collector[newdat$Collector=="1139381203"] <- NA
+newdat$Collector[newdat$Collector=="1159555953"] <- NA
+newdat$Collector[newdat$Collector=="1315648783"] <- NA
+newdat$Collector[newdat$Collector=="1647598034"] <- NA
+newdat$Collector[newdat$Collector=="341725260"] <- NA
+newdat$Collector[newdat$Collector=="531632058"] <- NA
+newdat$Collector[newdat$Collector=="881932368"] <- NA
+newdat$Collector[newdat$Collector==""] <- NA
+
+
+
+
+
+
 d <- as.data.frame(levels(factor(newdat$Collector))) #check levels
+
+
 
 
 #Select unique cases
