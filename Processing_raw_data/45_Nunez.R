@@ -3,7 +3,7 @@ source("Processing_raw_data/Source_file.R") #Generate template
 
 # 45_Nunez  ----
 
-#read data
+#Read data
 newdat <- read.csv(file = "Rawdata/csvs/45_Nunez.csv")
 
 #old template, subgenus, start and end date missing
@@ -39,6 +39,7 @@ newdat$Determined.by <- gsub("\\.", ". ", newdat$Determined.by)
 newdat$Authors.to.give.credit <- "A. Núñez"
 
 #Save data
-write.table(x = newdat, file = "Processing_raw_data/45_Nunez.csv", 
+write.table(x = newdat, file = "Data/Processing_raw_data/45_Nunez.csv", 
             quote = TRUE, sep = ",", col.names = FALSE,
             row.names = FALSE)
+
