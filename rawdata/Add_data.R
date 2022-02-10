@@ -668,8 +668,10 @@ unique(newdat$Sex)
 newdat$Male <- ifelse(newdat$Sex == "male", 1, 0)
 newdat$Female <- ifelse(newdat$Sex %in% c("female", "queen"), 1, 0)
 newdat$Worker <- ifelse(newdat$Sex == "worker", 1, 0)
+
+#reorder and drop variables
 newdat <- add_missing_variables(check, newdat)
-newdat <- drop_variables(check, newdat) #reorder and drop variables
+newdat <- drop_variables(check, newdat) 
 summary(newdat)
 newdat$Authors.to.give.credit <- "I. Bartomeus"
 
