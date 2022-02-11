@@ -41,6 +41,8 @@ for (i in 1:length(newdat$Species)){
 unique(newdat$Subspecies)
 newdat$Species[which(newdat$Subspecies == "agg")] <- paste(newdat$Species[which(newdat$Subspecies == "agg")], 
                                                            "_agg", sep = "")
+
+
 newdat$Subspecies[which(newdat$Subspecies == "agg")] <- NA
 newdat$Species[which(newdat$Subspecies == "s.l.")] <- paste(newdat$Species[which(newdat$Subspecies == "s.l.")], 
                                                             "_s.l.", sep = "")
@@ -156,6 +158,15 @@ colnames(newdat)[which(colnames(newdat)=="End.date.original")] <- "End.date"
 colnames(newdat)[which(colnames(newdat)=="Determiner")] <- "Determined.by"
 colnames(newdat)[which(colnames(newdat)=="refbib")] <- "Reference.doi"
 colnames(newdat)[which(colnames(newdat)=="Code")] <- "Local_ID"
+
+#Delete leading and trailing spaces on genus and species cols
+newdat$Genus <- trimws(newdat$Genus)
+newdat$Species <- trimws(newdat$Species)
+#Delete genus with just on (lotus cornicolatus)
+newdat <- newdat %>% filter(Genus!="on")
+#Some species levels has _agg, I gsub this for nothing 
+newdat$Species <- gsub("_agg", "", newdat$Species)
+#They seem ok now
 
 #Check levels
 levels(factor(newdat$Country))
@@ -2453,17 +2464,33 @@ newdat$Flowers.visited <- stringr::str_to_sentence(newdat$Flowers.visited)
 #d <- as.data.frame(levels(factor(newdat$Flowers.visited))) #check levels
 #Now it looks better could be a bit more edited
 
+#Convert space to NA in Local_Id
+newdat$Local_ID[newdat$Local_ID==""] <- NA
+
+#Convert space to NA in Any.other.additional.data
+newdat$Any.other.additional.data[newdat$Any.other.additional.data==""] <- NA
+newdat$Any.other.additional.data[newdat$Any.other.additional.data==" "] <- NA
+#Convert first element of the string to cap letter
+newdat$Any.other.additional.data <- str_to_title(newdat$Any.other.additional.data)
+
+#Notes.and.queries, semicolon here is a big issue, fix it
+newdat$Notes.and.queries <- gsub( ";", "", as.character(newdat$Notes.and.queries))
+#Semicolon is out, now delete leading and trailing spaces
+newdat$Notes.and.queries <- trimws(newdat$Notes.and.queries)
+#Convert space to NA
+newdat$Notes.and.queries[newdat$Notes.and.queries==""] <- NA
+#More work can be done but seems ok 
 
 
-#Select unique cases
-df <- distinct(newdat, End.date, .keep_all = TRUE)
 
-df_1 <- as.data.frame(stringr::str_split_fixed(newdat$End.date, "/", 3))
+
+#Convert space to NA in Any.other.additional.data
+df <- as.data.frame(unique(levels(factor(newdat$Species))))
+
 
 
 
 newdat$uid <- paste("54_Wood_etal_", 1:nrow(newdat), sep = "")
-
 
 
 #Save data

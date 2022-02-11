@@ -6,8 +6,9 @@ library(cleanR)
 library(dplyr)
 library(tidyr)
 library(mgrs)
+library(stringr)
 
-#First create TEMPLATE to Add new data.
+#First create TEMPLATE to add new data.
 #Create an empty data file. 
 data <- matrix(ncol = 28, nrow = 1)
 data <- as.data.frame(data)
