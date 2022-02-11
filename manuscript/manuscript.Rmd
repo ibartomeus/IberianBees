@@ -1,7 +1,7 @@
 ---
 title: "| Base de datos de abejas Ibéricas \n| Iberian Bees database\n"
   
-author: Ignasi Bartomeus^1^, Thomas Woods^2^, Luisa Carvalheiro^3^, and a lot of coauthors^4^
+author: Ignasi Bartomeus^1^, Jose B. Lanuza, Thomas Woods^2^, Luisa Carvalheiro^3^, and a lot of coauthors^4^
   
 output:
   word_document:
