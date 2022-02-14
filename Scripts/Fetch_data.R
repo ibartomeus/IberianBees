@@ -2,6 +2,7 @@
 
 #Gbif----
 library(rgbif)
+library(cleanR)
 #get codes of places and families
 spain_code <- isocodes[grep("Spain", isocodes$name), "code"]
 portugal_code <- isocodes[grep("Portugal", isocodes$name), "code"]
@@ -57,72 +58,63 @@ occ_count(taxonKey= melittidae_key,
           georeferenced=TRUE, 
           country=portugal_code) #14
 #fetch data
+check <-  data.frame(scientificName = NA, decimalLatitude = NA,
+                     decimalLongitude = NA,
+                     family = NA, genus = NA, species = NA,
+                     year = NA, month = NA, day = NA, recordedBy = NA,
+                     identifiedBy = NA, sex = NA,  stateProvince = NA,
+                     locality = NA, coordinatePrecision=NA)
+
+check <- define_template(check, NA)
+
+family_key <- c(apidae_key, andrenidae_key,
+                halictidae_key, colletidae_key,
+                megachilidae_key, 
+                melittidae_key)
+
 dat <-  data.frame(scientificName = NA, decimalLatitude = NA,
-                  decimalLongitude = NA, scientificName = NA,
-                  family = NA, genus = NA, species = NA,
-                  year = NA, month = NA, day = NA, recordedBy = NA,
-                  identifiedBy = NA, sex = NA, stateProvince = NA,
-                  locality = NA, coordinatePrecision = NA)
-for(i in c(apidae_key, andrenidae_key,
-           halictidae_key, colletidae_key,
-           megachilidae_key, 
-           melittidae_key)){
+                   decimalLongitude = NA,
+                   family = NA, genus = NA, species = NA,
+                   year = NA, month = NA, day = NA, recordedBy = NA,
+                   identifiedBy = NA, sex = NA,  stateProvince = NA,
+                   locality = NA, coordinatePrecision=NA)
+
+for(i in family_key){
+  
   temp <- occ_search(taxonKey= i, 
                      return='data', 
                      hasCoordinate=TRUE,
                      hasGeospatialIssue=FALSE,
                      limit=7000, #safe threshold based on rounding up counts above
-                     country = c(spain_code, portugal_code),
-                     fields = c('scientificName','name', 'decimalLatitude',
-                                'decimalLongitude', 'scientificName',
+                     country = c(spain_code),
+                     fields = c('scientificName','decimalLatitude',
+                                'decimalLongitude',
                                 'family','genus', 'species',
                                 'year', 'month', 'day', 'recordedBy',
                                 'identifiedBy', 'sex', 'stateProvince', 
                                 'locality', 'coordinatePrecision'))
-  if(length(temp$PT) == 1){
-    temp$PT <- data.frame(scientificName = NA, decimalLatitude = NA,
-                          decimalLongitude = NA, scientificName = NA,
-                          family = NA, genus = NA, species = NA,
-                          year = NA, month = NA, day = NA, recordedBy = NA,
-                          identifiedBy = NA, sex = NA,  stateProvince = NA,
-                          locality = NA, coordinatePrecision = NA)
-  }
-  if(is.null(temp$ES$sex)){
-    temp$ES$sex <- NA
-  }
-  if(is.null(temp$PT$sex)){
-    temp$PT$sex <- NA
-  }
-  if(is.null(temp$PT$coordinatePrecision)){
-    temp$PT$coordinatePrecision <- NA
-  }
-  if(is.null(temp$ES$coordinatePrecision)){
-    temp$ES$coordinatePrecision <- NA
-  }
-  if(is.null(temp$ES$stateProvince)){
-    temp$ES$stateProvince <- NA
-  }
-  if(is.null(temp$PT$stateProvince)){
-    temp$PT$stateProvince <- NA
-  }
-  temp$ES <- temp$ES[,c('scientificName','decimalLatitude',
-                        'decimalLongitude', 'scientificName',
-                        'family','genus', 'species',
-                        'year', 'month', 'day', 'recordedBy',
-                        'identifiedBy', 'sex',  'stateProvince', 
-                        'locality', 'coordinatePrecision')]
-  temp$PT <- temp$PT[,c('scientificName','decimalLatitude',
-                        'decimalLongitude', 'scientificName',
-                        'family','genus', 'species',
-                        'year', 'month', 'day', 'recordedBy',
-                        'identifiedBy', 'sex',  'stateProvince', 
-                        'locality', 'coordinatePrecision')]
-  dat <- rbind(dat, as.data.frame(temp$ES), as.data.frame(temp$PT))
-}
+  
+  #C
+  temp <- as.data.frame(temp$data)
+  temp <- add_missing_variables(check, temp)
+  
+  dat <- rbind(dat, temp)
+  
+} 
+
+#Delete first row with full NA's
 dat <- dat[-1,]
+#Add unique identifier
+dat$uid <-  paste("55_Gbif_", 1:nrow(newdat), sep = "")
+
+dat %>% 
+  group_by(family) %>%
+  summarise(no_rows = length(family))
+#7000 as a max for gbif seems ok but this may need to increase in the next year or so
+#see apidae 6224 records
 head(dat)
 tail(dat)
-dim(dat) #13289
+dim(dat) #16146 records 14/02/2022
 
 #iNaturalist----
 #library(devtools)
