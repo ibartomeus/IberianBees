@@ -4,8 +4,14 @@ source("Scripts/Processing_raw_data/Source_file.R") #Generate template
 #Add online data ----
 
 #Read data
-newdat <- read.csv(file = "Data/idata.csv")[,-1]
+newdat <- read.csv(file = "Data/Processing_raw_data/online_data.csv")[,-1]
 head(newdat)
+
+
+#DO IT WITH CLEANR!
+
+
+
 
 #split genus species
 newdat$Genus <- substr(newdat$species, 
@@ -38,12 +44,13 @@ newdat$Longitude <- newdat$decimalLongitude
 newdat$Year <- newdat$year
 newdat$Month <- newdat$month
 newdat$Day <- newdat$day
-newdat$uid <- paste("55_Internet_", 1:nrow(newdat), sep = "")
 #reorder
 colnames(data)
 colnames(newdat)
 tail(newdat)
 
+compare_variables(check, newdat)
+colnames(newdat)
 #Selectcols
 newdat <- newdat[,c("Genus","Subgenus","Species","Subspecies",
                     "Country","Province","Locality",
@@ -84,21 +91,6 @@ newdat$Collector[!grepl("[A-Za-z]+", newdat$Collector)] <- NA
 newdat$Collector <- str_to_title(newdat$Collector)
 #Convert first element of the string to cap
 newdat$Determined.by <- str_to_title(newdat$Determined.by)
-
-
-
-
-s <- data.frame(levels(factor(newdat$Locality)))
-
-
-
-
-unique(newdat$Locality)
-newdat$Locality <- gsub('"', "", newdat$Locality, fixed = TRUE)
-newdat$Locality <- gsub('-', "", newdat$Locality, fixed = TRUE)
-newdat$Locality <- gsub('\\', "", newdat$Locality, fixed = TRUE)
-#newdat$Locality <- gsub('', "", newdat$Locality, fixed = TRUE)
-#Some of the above was causing a loooot of trubles.
 
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/55_Online_data.csv", 
