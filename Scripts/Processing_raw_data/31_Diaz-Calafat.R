@@ -19,6 +19,10 @@ summary(newdat)
 newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
 newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
 
+
+#Fix wrong species name
+newdat$Genus <- gsub("Andrea", "Andrena", newdat$Genus, fixed=T)
+
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '31_Diaz-Calafat_')
 

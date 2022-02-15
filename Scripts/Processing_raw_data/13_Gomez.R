@@ -55,6 +55,12 @@ newdat$Authors.to.give.credit <- "Compiled by J.M. Gomez"
 #Fix this, gives issues when merge all datasets
 newdat$Locality[newdat$Locality=="S\" Baza"] <-"Sierra de Baza"
 
+#Clean some species names
+#Na's on genus
+newdat <- newdat %>% filter(!is.na(Genus))
+#Fix lower case
+newdat$Genus <- gsub("andrena", "Andrena", newdat$Genus, fixed=T)
+
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '13_Gomez_')
 

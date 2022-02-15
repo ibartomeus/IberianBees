@@ -40,6 +40,12 @@ newdat$Collector <- gsub("F.Torres", "F. Torres", newdat$Collector)
 newdat$Determined.by <- gsub("F.Torres", "F. Torres", newdat$Determined.by)
 newdat$Determined.by <- gsub("Torres/Ornosa", "F. Torres, C. Ornosa", newdat$Determined.by)
 
+#Clean some undertmined species names
+newdat <- newdat %>% filter(!Genus=="?")
+
+#Clean undermined genus
+newdat <- newdat %>% filter(!Genus=="Anthidium?")
+
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '41_Torres_')
 
