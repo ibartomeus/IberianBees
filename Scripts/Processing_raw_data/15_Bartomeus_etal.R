@@ -31,6 +31,9 @@ newdat$Authors.to.give.credit <- "I. Bartomeus"
 #Clean NA's in genus
 newdat <- newdat[!is.na(newdat$Genus),]
 
+#Add country
+newdat$Country <- "Spain"
+
 #Add DOI
 newdat$Reference.doi <- "https://doi.org/10.1007/s00442-007-0946-1"
 #LAT LONG CAN BE ADDED!

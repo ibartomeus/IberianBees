@@ -23,6 +23,9 @@ newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
 newdat$Determined.by <- gsub("J.Ortiz", 
                              "J. Ortiz", newdat$Determined.by)
 
+#Fix trailing space
+newdat$Country <- trimws(newdat$Country)
+
 #Convert to link format
 newdat$Reference.doi <- paste0("https://doi.org/",
                                newdat$Reference.doi)
