@@ -1,3 +1,4 @@
+"Genus","Subgenus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision","Year","Month","Day","Start.date","End.date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries","uid"
 "Andrena",NA,"agilissima",NA,"Spain","Asturias","Tiñana",43.3637,-5.763696,"0,1 km",2015,"05","03",NA,NA,NA,"O. Aguado",1,0,0,0,NA,"Raphanus raphanistrum","15-093","M. Miñarro, A. Núñez",NA,NA,"51_Minarro_1"
 "Andrena",NA,"agilissima",NA,"Spain","Asturias","Las Vías",43.500869,-6.086791,"0,1 km",2015,"06","07",NA,NA,NA,"O. Aguado",0,1,0,0,NA,"Brassica rapa","K-162","M. Miñarro, A. Núñez",NA,NA,"51_Minarro_2"
 "Andrena",NA,"agilissima",NA,"Spain","Asturias","Forcinas",43.483535,-6.101761,"0,1 km",2015,"06","02",NA,NA,NA,"O. Aguado",1,0,0,0,NA,"Brassica sp.","K-218","M. Miñarro, A. Núñez",NA,NA,"51_Minarro_3"

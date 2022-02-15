@@ -40,6 +40,6 @@ newdat$Authors.to.give.credit <- "A. Núñez"
 
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/45_Nunez.csv", 
-            quote = TRUE, sep = ",", col.names = FALSE,
+            quote = TRUE, sep = ",", col.names = TRUE,
             row.names = FALSE)
 

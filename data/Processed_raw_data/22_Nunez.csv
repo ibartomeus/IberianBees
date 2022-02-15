@@ -1,3 +1,4 @@
+"Genus","Subgenus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision","Year","Month","Day","Start.date","End.date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries","uid"
 "Lithurgus",NA,"cornutus",NA,"Spain","León","Villaquejida",42.14581,-5.592914,NA,2018,"08","04",NA,NA,"R. Martínez","A. Núñez",1,0,0,0,NA,NA,NA,"A. Núñez",NA,NA,"22_Nunez_1"
 "Anthidium ",NA,"florentinum",NA,"Spain","León","Villaquejida",42.14581,-5.592914,NA,2018,"08","04",NA,NA,"R. Martínez","A. Núñez",0,1,0,0,NA,NA,NA,"A. Núñez",NA,NA,"22_Nunez_2"
 "Eucera",NA,"nigrifacies",NA,"Spain","Asturias","Caldones",43.492067,-5.631048,NA,2017,"07","04",NA,NA,"A. Núñez","A. Núñez",1,0,0,0,NA,NA,NA,"A. Núñez",NA,NA,"22_Nunez_3"

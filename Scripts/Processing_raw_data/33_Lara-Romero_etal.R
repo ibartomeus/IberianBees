@@ -29,5 +29,5 @@ colnames(newdat)[which(colnames(newdat) == 'Reference..doi.')] <- 'Reference.doi
 
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/33_Lara-Romero_etal.csv", 
-            quote = TRUE, sep = ",", col.names = FALSE,
+            quote = TRUE, sep = ",", col.names = TRUE,
             row.names = FALSE)

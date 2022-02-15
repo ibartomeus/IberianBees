@@ -65,5 +65,5 @@ newdat$Authors.to.give.credit <- gsub("Ana Picanço; Paulo A. V.Borges", "Ana Pi
 
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/52_Picanco.csv", 
-            quote = TRUE, sep = ",", col.names = FALSE,
+            quote = TRUE, sep = ",", col.names = TRUE,
             row.names = FALSE)

@@ -1,3 +1,4 @@
+"Genus","Subgenus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision","Year","Month","Day","Start.date","End.date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries","uid"
 "Megachile",NA,"apicalis",NA,"Spain","Madrid",NA,NA,NA,NA,1994,"06","17",NA,NA,"F.G. Gonzalez","F. G. Gonzalez",1,NA,NA,NA,NA,NA,NA,"C. Ornosa",NA,NA,"40_Gonzalez_1"
 "Megachile",NA,"apicalis",NA,"Spain","Madrid",NA,NA,NA,NA,1994,"07","07",NA,NA,"F.G. Gonzalez","F. G. Gonzalez",NA,1,NA,NA,NA,NA,NA,"C. Ornosa",NA,NA,"40_Gonzalez_2"
 "Megachile",NA,"retundata",NA,"Spain","Madrid",NA,NA,NA,NA,1994,"06","15",NA,NA,"F.G. Gonzalez","F. G. Gonzalez",NA,1,NA,NA,NA,NA,NA,"C. Ornosa",NA,NA,"40_Gonzalez_3"

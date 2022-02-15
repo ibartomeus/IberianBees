@@ -55,5 +55,5 @@ newdat$Reference.doi <- paste0("https://doi.org/",newdat$Reference.doi)
 
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/3_Montero_etal.csv", 
-            quote = TRUE, sep = ",", col.names = FALSE,
+            quote = TRUE, sep = ",", col.names = TRUE,
             row.names = FALSE)

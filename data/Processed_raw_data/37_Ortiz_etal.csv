@@ -1,3 +1,4 @@
+"Genus","Subgenus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision","Year","Month","Day","Start.date","End.date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries","uid"
 "Osmia","Metallinella","brevicornis",NA,"Spain","La Rioja","La Tejera",NA,NA,NA,2007,NA,NA,NA,NA,"L. Baños","Torres",1,NA,NA,NA,NA,NA,NA,"J. Ortiz, C. Ornosa, F. Torres",NA,NA,"37_Ortiz_etal_1"
 "Osmia","Metallinella","brevicornis",NA,"Spain","La Rioja","La Tejera",NA,NA,NA,2007,NA,NA,NA,NA,"L. Baños","Torres",1,NA,NA,NA,NA,NA,NA,"J. Ortiz, C. Ornosa, F. Torres",NA,NA,"37_Ortiz_etal_2"
 "Osmia","Metallinella","brevicornis",NA,"Spain","La Rioja","La Tejera",NA,NA,NA,2007,NA,NA,NA,NA,"L. Baños","Torres",1,NA,NA,NA,NA,NA,NA,"J. Ortiz, C. Ornosa, F. Torres",NA,NA,"37_Ortiz_etal_3"

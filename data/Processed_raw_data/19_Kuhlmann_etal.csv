@@ -1,3 +1,4 @@
+"Genus","Subgenus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision","Year","Month","Day","Start.date","End.date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries","uid"
 "Colletes",NA,"abeillei",NA,"Spain",NA,NA,38.4300003051758,0.0199999995529652,NA,"1997","09",28,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Scheuchl",NA,NA,"19_Kuhlmann_etal_1"
 "Colletes",NA,"abeillei",NA,"Spain",NA,NA,41.1300010681152,0.300000011920929,NA,"2000","05",6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Scheuchl",NA,NA,"19_Kuhlmann_etal_2"
 "Colletes",NA,"abeillei",NA,"Spain",NA,NA,41.0699996948242,0.5,NA,"2008","06",NA,"01-06-2008","05-06-2008",NA,NA,NA,NA,NA,NA,NA,NA,NA,"USDA, Logan, Utah",NA,NA,"19_Kuhlmann_etal_3"

@@ -1,3 +1,4 @@
+"Genus","Subgenus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision","Year","Month","Day","Start.date","End.date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries","uid"
 "Bombus",NA,"pascuorum",NA,"Spain","Jaén","Sierra de Cazorla. Nacimiento del Guadalquivir",NA,NA,NA,NA,NA,NA,NA,NA,"J.L. Blanco","C. Ornosa",0,NA,1,NA,NA,NA,NA,"C. Ornosa",NA,NA,"1_Ornosa_1"
 "Bombus",NA,"pascuorum",NA,"Spain","Jaén","Sierra de Cazorla. Nacimiento del Guadalquivir",NA,NA,NA,NA,NA,NA,NA,NA,"J.L. Blanco","C. Ornosa",0,NA,1,NA,NA,NA,NA,"C. Ornosa",NA,NA,"1_Ornosa_2"
 "Anthophora",NA," atroalba",NA,"Spain","Jaén","Sierra de Cazorla. Nacimiento del Guadalquivir",NA,NA,NA,NA,NA,NA,NA,NA,"J.L. Blanco","C. Ornosa",0,NA,1,NA,NA,NA,NA,"C. Ornosa",NA,NA,"1_Ornosa_3"

@@ -302,5 +302,5 @@ newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Mont
 newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
 
 write.table(x = newdat, file = 'Data/Processed_raw_data/47_Collado_etal.csv', 
-            quote = TRUE, sep = ',', col.names = FALSE,
+            quote = TRUE, sep = ',', col.names = TRUE,
             row.names = FALSE)

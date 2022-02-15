@@ -37,5 +37,5 @@ newdat <- add_uid(newdat = newdat, '16_Carvalho_')
 
 #write
 write.table(x = newdat, file = "Data/Processed_raw_data/16_Carvalho.csv", 
-            quote = TRUE, sep = ",", col.names = FALSE,
+            quote = TRUE, sep = ",", col.names = TRUE,
             row.names = FALSE)

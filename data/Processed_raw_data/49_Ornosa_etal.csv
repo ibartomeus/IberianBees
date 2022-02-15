@@ -1,3 +1,4 @@
+"Genus","Subgenus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision","Year","Month","Day","Start.date","End.date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries","uid"
 "Rhodanthidium",NA,"siculum ",NA,"Spain","Granada","Alhama",NA,NA,NA,NA,NA,NA,NA,NA,"J. Dusmet","C. Ornosa",1,NA,NA,NA,NA,NA,NA,"C. Ornosa",NA,NA,"49_Ornosa_etal_1"
 "Rhodanthidium",NA,"siculum ",NA,"Spain","Cádiz","Puerto Santa María",NA,NA,NA,NA,NA,NA,NA,NA,"Dusmet","C. Ornosa",1,NA,NA,NA,NA,NA,NA,"C. Ornosa",NA,NA,"49_Ornosa_etal_2"
 "Rhodanthidium",NA,"siculum ",NA,"Spain","Cádiz","Jerez",NA,NA,NA,NA,NA,NA,NA,NA,"Pons","C. Ornosa",NA,"1",NA,NA,NA,NA,NA,"C. Ornosa",NA,NA,"49_Ornosa_etal_3"

@@ -1,3 +1,4 @@
+"Genus","Subgenus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision","Year","Month","Day","Start.date","End.date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries","uid"
 "Bombus",NA,"terrestris",NA,"France",NA,NA,42.74037,-0.04113,NA,1889,"08","18",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carduus carlinoides",NA,NA,NA,NA,"14_Marshall_1"
 "Bombus",NA,"sichelii",NA,"France",NA,NA,42.74206,-0.038612,NA,1889,"08","18",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carduus defloratus",NA,NA,NA,NA,"14_Marshall_2"
 "Bombus",NA,"sichelii",NA,"France",NA,NA,42.70804,-0.036181,NA,1889,"08","15",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carduus carlinoides",NA,NA,NA,NA,"14_Marshall_3"

@@ -1,3 +1,4 @@
+"Genus","Subgenus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision","Year","Month","Day","Start.date","End.date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries","uid"
 "Anthidium","Anthid","florentinum",NA,"Spain","Ávila","San Lorenzo de Tormes",NA,NA,NA,1988,"08","18",NA,NA,"F. Sanza","F. Torres",NA,1,NA,NA,NA,NA,NA,"Felix Torres",NA,NA,"41_Torres_1"
 "Anthidium","Proanthid","oblongatum",NA,"Spain","Ávila","Poyales del Hoyo",NA,NA,NA,1988,"08","20",NA,NA,"J. J. Pedrero","F. Torres",NA,1,NA,NA,NA,NA,NA,"Felix Torres",NA,NA,"41_Torres_2"
 "Anthidium","Anthid","manicatum",NA,"Spain","Ávila","Piedrahita",NA,NA,NA,1987,"08","12",NA,NA,"S. F. Gayubo","F. Torres",1,NA,NA,NA,NA,NA,NA,"Felix Torres",NA,NA,"41_Torres_3"

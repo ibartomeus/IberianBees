@@ -1,3 +1,4 @@
+"Genus","Subgenus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision","Year","Month","Day","Start.date","End.date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries","uid"
 "Ceratina",NA,"cucurbitina",NA,"Spain","Lleida","Espot",42.571086,1.104549,"GPS",2019,"06",NA,NA,NA,"B. Arroyo-Correa","J. Bosch",1,1,0,0,NA,NA,NA,"B. Arroyo-Correa, J.Bosch",NA,NA,"4_Arroyo-Correa_1"
 "Ceratina",NA,"cyanea",NA,"Spain","Lleida","Espot",42.571086,1.104549,"GPS",2019,"06",NA,NA,NA,"B. Arroyo-Correa","J. Bosch",2,0,0,0,NA,NA,NA,"B. Arroyo-Correa, J.Bosch",NA,NA,"4_Arroyo-Correa_2"
 "Andrena",NA,"flavipes",NA,"Spain","Lleida","Espot",42.571086,1.104549,"GPS",2019,"06",NA,NA,NA,"B. Arroyo-Correa","B. Arroyo-Correa",2,1,0,0,NA,NA,NA,"B. Arroyo-Correa",NA,NA,"4_Arroyo-Correa_3"

@@ -1,3 +1,4 @@
+"Genus","Subgenus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision","Year","Month","Day","Start.date","End.date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries","uid"
 "Bombus ","Thoracobombus","pascuorum",NA,"Spain","La Coruña","Faro de Mera ",43.3713874816895,-8.39583301544189,NA,"2013","04","24",NA,NA,"JB. Lafora","C. Ornosa",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11_Ornosa_etal_1"
 "Bombus ","Bombus","terrestris",NA,"Spain","La Coruña","Faro de Mera ",43.3713874816895,-8.39583301544189,NA,"2013","04","24",NA,NA,"JB. Lafora","C. Ornosa",0,NA,1,NA,NA,NA,NA,NA,NA,NA,"11_Ornosa_etal_2"
 "Osmia",NA,NA,NA,"Spain","Madrid","Subida Pto. de Canencia",40.8544425964355,-3.75277781486511,NA,"2013","06","11",NA,NA,"C. Ornosa","C. Ornosa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11_Ornosa_etal_3"

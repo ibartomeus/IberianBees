@@ -64,7 +64,7 @@ month_d <- as.data.frame(format(as.Date(newdat$Start.date, format="%d-%m-%Y"),"%
 colnames(month_d) <- "m" #New colname for simplicity
 #Add leading 0 to month column before merging
 newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
-month_d$Month <- newdat$month #Add new column (the month one from newdat)
+month_d$Month <- newdat$Month #Add new column (the month one from newdat)
 
 #Workaround to fill missing years (needs Tydiverse)
 month_d_1 <- data.frame(t(month_d)) %>% 
@@ -101,4 +101,4 @@ newdat <- add_uid(newdat = newdat, '2_Ornosa_')
 
 #Save data
 write.table(x = newdat, file = 'Data/Processed_raw_data/2_Ornosa_etal.csv', quote = TRUE, sep = ',', 
-col.names = FALSE, row.names = FALSE)
+col.names = TRUE, row.names = FALSE)

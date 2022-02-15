@@ -42,5 +42,5 @@ newdat$Authors.to.give.credit <- gsub("Martínez-Núñez C., Rey P.J.",
 
 #write
 write.table(x = newdat, file = "Data/Processed_raw_data/36_Nunez.csv", 
-            quote = TRUE, sep = ",", col.names = FALSE,
+            quote = TRUE, sep = ",", col.names = TRUE,
             row.names = FALSE)

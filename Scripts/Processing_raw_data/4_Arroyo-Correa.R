@@ -36,5 +36,5 @@ newdat$Genus <- trimws(newdat$Genus, "r") #Erase trailing white space
 
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/4_Arroyo-Correa.csv", 
-            quote = TRUE, sep = ",", col.names = FALSE,
+            quote = TRUE, sep = ",", col.names = TRUE,
             row.names = FALSE)

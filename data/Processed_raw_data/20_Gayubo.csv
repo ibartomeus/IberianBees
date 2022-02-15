@@ -1,3 +1,4 @@
+"Genus","Subgenus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision","Year","Month","Day","Start.date","End.date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries","uid"
 "Ceratina",NA,"cucurbitina",NA,"Spain",NA,"Barco de Avila",40.3531248512773,-5.51993429374315,NA,1987,"08","19",NA,NA,NA,NA,1,0,NA,NA,"Gayubo et al 1990",NA,NA,NA,NA,NA,"20_Gayubo_1"
 "Ammobates",NA,"punctatus",NA,"Spain",NA,"Pasarón de la Vera",40.0488147831578,-5.82516013610499,NA,1986,"08","18",NA,NA,NA,NA,0,1,NA,NA,"Gayubo et al 1990",NA,NA,NA,NA,NA,"20_Gayubo_2"
 "Ceratina",NA,"cucurbitina",NA,"Spain",NA,"Villafranca de la Sierra",40.4941978719063,-5.23023186123744,NA,1986,"06","25",NA,NA,NA,NA,3,0,NA,NA,"Gayubo et al 1990",NA,NA,NA,NA,NA,"20_Gayubo_3"

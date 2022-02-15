@@ -1,3 +1,4 @@
+"Genus","Subgenus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision","Year","Month","Day","Start.date","End.date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries","uid"
 "Bombus","Bombus","terrestris",NA,"Spain","Madrid"," A. Soria, M-30",40.4167,-3.70325,NA,2019,"01","10",NA,NA,"C. Ornosa","C. Ornosa",0,1,NA,NA,NA,NA,NA,"C. Ornosa",NA,NA,"9_Ornosa_1"
 "Bombus","Bombus","terrestris",NA,"Spain","Madrid"," A. Soria, M-30",40.4168,-3.70326,NA,2019,"01","10",NA,NA,"C. Ornosa","C. Ornosa",0,1,NA,NA,NA,NA,NA,"C. Ornosa",NA,NA,"9_Ornosa_2"
 "Bombus","Bombus","terrestris",NA,"Spain","Madrid"," A. Soria, M-30",40.4169,-3.70327,NA,2019,"01","10",NA,NA,"C. Ornosa","C. Ornosa",0,1,NA,NA,NA,NA,NA,"C. Ornosa",NA,NA,"9_Ornosa_3"

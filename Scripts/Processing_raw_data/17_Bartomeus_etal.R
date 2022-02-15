@@ -72,7 +72,7 @@ beefun$uid <-  paste("17_Bartomeus_etal_", 1:nrow(beefun), sep = "")
 
 #Save data
 write.table(x = beefun, file = 'Data/Processed_raw_data/17_Bartomeus_etal.csv', 
-            quote = TRUE, sep = ',', col.names = FALSE, 
+            quote = TRUE, sep = ',', col.names = TRUE, 
             row.names = FALSE)
 
 
