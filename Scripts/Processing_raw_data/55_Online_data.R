@@ -7,63 +7,37 @@ source("Scripts/Processing_raw_data/Source_file.R") #Generate template
 newdat <- read.csv(file = "Data/Processing_raw_data/online_data.csv")[,-1]
 head(newdat)
 
+compare_variables(check, newdat)
 
-#DO IT WITH CLEANR!
+#Rename cols first
+colnames(newdat)[which(colnames(newdat)=="species")] <- "Species"
+colnames(newdat)[which(colnames(newdat)=="decimalLatitude")] <- "Latitude"
+colnames(newdat)[which(colnames(newdat)=="decimalLongitude")] <- "Longitude"
+colnames(newdat)[which(colnames(newdat)=="coordinatePrecision")] <- "Coordinate.precision"
+colnames(newdat)[which(colnames(newdat)=="year")] <- "Year"
+colnames(newdat)[which(colnames(newdat)=="month")] <- "Month"
+colnames(newdat)[which(colnames(newdat)=="day")] <- "Day"
+colnames(newdat)[which(colnames(newdat)=="identifiedBy")] <- "Determined.by"
+colnames(newdat)[which(colnames(newdat)=="recordedBy")] <- "Collector"
+colnames(newdat)[which(colnames(newdat)=="stateProvince")] <- "Province"
+colnames(newdat)[which(colnames(newdat)=="locality")] <- "Locality"
 
-
-
-
-#split genus species
-newdat$Genus <- substr(newdat$species, 
-                       start = 1,
-                       stop = unlist(gregexpr(pattern = " ", newdat$species))-1)
-newdat$Species <- substr(newdat$species, 
-                         start = unlist(gregexpr(pattern = " ", newdat$species))+1,
-                         stop = nchar(as.character(newdat$species)))  
-
-#Rename cols
-newdat$Collector <- newdat$recordedBy
-newdat$Determined.by <- newdat$identifiedBy
-levels(newdat$sex)
-newdat$Subspecies <- newdat$subspecies
+#Add cols based on sex col
 newdat$Female <- ifelse(newdat$sex %in% c("FEMALE", "female", "queen"), 1, 0)
 newdat$Male <- ifelse(newdat$sex %in% c("MALE", "male"), 1, 0)
 newdat$Worker <- ifelse(newdat$sex %in% c("worker"), 1, 0)
 newdat$Not.specified <- ifelse(is.na(newdat$sex) | newdat$sex == "males_and_females", 1, 0)
-colnames(data)
-newdat$Subgenus <- NA
-newdat$Province <- newdat$stateProvince
-newdat$Locality <- newdat$locality
-newdat$Coordinate.precision <- newdat$coordinatePrecision
-newdat$Start.date <- NA
-newdat$End.date <- NA
-newdat$Flowers.visited <- NA
-newdat$Notes.and.queries <- NA
-newdat$Latitude <- newdat$decimalLatitude
-newdat$Longitude <- newdat$decimalLongitude
-newdat$Year <- newdat$year
-newdat$Month <- newdat$month
-newdat$Day <- newdat$day
-#reorder
-colnames(data)
-colnames(newdat)
-tail(newdat)
 
-compare_variables(check, newdat)
-colnames(newdat)
-#Selectcols
-newdat <- newdat[,c("Genus","Subgenus","Species","Subspecies",
-                    "Country","Province","Locality",
-                    "Latitude","Longitude","Coordinate.precision",
-                    "Year","Month","Day","Start.date","End.date",
-                    "Collector","Determined.by","Female","Male","Worker","Not.specified",
-                    "Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit",
-                    "Any.other.additional.data","Notes.and.queries", "uid")]
-summary(newdat)
-cbind(colnames(newdat), colnames(data)) #can be merged
+#Add missing cols
+newdat <- add_missing_variables(check, newdat)
+newdat <- drop_variables(check, newdat)
 
-#Check vars
-compare_variables(check, newdat)
+#Now create Genus col by selecting 1st element of the string
+newdat$Genus <-  word(newdat$Species, 1)
+newdat$Subspecies <-  word(newdat$Species, 3)
+newdat$Species <-  word(newdat$Species, 2)
+#Check
+#s <-  data.frame(unique(newdat$Genus)) #Looks fine
 
 #Check species level
 #Fix empty spaces
@@ -91,6 +65,49 @@ newdat$Collector[!grepl("[A-Za-z]+", newdat$Collector)] <- NA
 newdat$Collector <- str_to_title(newdat$Collector)
 #Convert first element of the string to cap
 newdat$Determined.by <- str_to_title(newdat$Determined.by)
+
+
+#Tell Spanish province by coordinate (ine province names)
+#Adapted from here (is fast :)
+#https://stackoverflow.com/questions/8751497/latitude-longitude-coordinates-to-state-code-in-r
+library(sf)
+library(spData)
+library(mapSpain)
+
+## pointsDF: A data.frame whose first column contains longitudes and
+##           whose second column contains latitudes.
+##
+## states:   An sf MULTIPOLYGON object with 50 states plus DC.
+##
+## name_col: Name of a column in `states` that supplies the states'
+##           names.
+lonlat_to_state <- function(pointsDF,
+                            states = mapSpain::esp_get_prov(),
+                            name_col = "ine.prov.name") {
+  ## Convert points data.frame to an sf POINTS object
+  pts <- st_as_sf(pointsDF, coords = 1:2, crs = 4326)
+  
+  ## Transform spatial data to some planar coordinate system
+  ## (e.g. Web Mercator) as required for geometric operations
+  states <- st_transform(states, crs = 3857)
+  pts <- st_transform(pts, crs = 3857)
+  
+  ## Find names of state (if any) intersected by each point
+  state_names <- states[[name_col]]
+  ii <- as.integer(st_intersects(pts, states))
+  state_names[ii]
+}
+
+#Add province name to the dataset
+ine_province <- data.frame(x = newdat$Longitude, y = newdat$Latitude)
+newdat$Province <- lonlat_to_state(ine_province)
+
+#Now check country
+library(maps)
+newdat$Country <- map.where(x = newdat$Longitude, y = newdat$Latitude)
+#Rename the spanish label of balearic islands
+newdat$Country[grepl("Spain", newdat$Country)] <- "Spain"
+unique(levels(factor(newdat$Country)))
 
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/55_Online_data.csv", 

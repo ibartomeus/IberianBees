@@ -8,7 +8,7 @@
 #are more authors involved
 
 #Read all files
-file_names_old <- list.files("./rawdata/csvs")  
+file_names_old <- list.files("./Rawdata/csvs")  
 #write.csv(file_names_old, "Rename_csv.csv") #Save file names to add
 #names manually, this needs a proper search in the dataset and check
 #who is the main contributor of the dataset, that is, 
@@ -17,11 +17,11 @@ file_names_old <- list.files("./rawdata/csvs")
 
 #Once this previous task is done and the new names are added manually
 #we proceed to read the data and rename after
-file_names_new <- read.csv("./rawdata/Rename_csvs.csv")
+file_names_new <- read.csv("./Rawdata/Rename_csvs.csv")
 file_names_new <- file_names_new$New_Name #Overwrite with list of new names
   
 #Set path name and rename
-my_path <- "./rawdata/csvs/"
+my_path <- "./Rawdata/csvs/"
 # Rename files  
 file.rename(paste0(my_path, file_names_old),      
             paste0(my_path, file_names_new))            
