@@ -1,3 +1,4 @@
+"Genus","Subgenus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision","Year","Month","Day","Start.date","End.date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries","uid"
 "Bombus ","Bombus","terrestris",NA,"Spain","Guadalajara","Guadalajara",NA,NA,NA,1983,"05","10",NA,NA,"Antonio Rodríguez","C. Ornosa","1",NA,NA,NA,NA,NA,NA,"C. Ornosa",NA,NA,"10_Ornosa_etal_1"
 "Bombus ","Bombus","terrestris",NA,"Spain","Cuenca","Villares del Saz",NA,NA,NA,1986,"06","25",NA,NA,"Isaac Vega","C. Ornosa","1",NA,NA,NA,NA,NA,NA,"C. Ornosa",NA,NA,"10_Ornosa_etal_2"
 "Bombus ","Bombus","terrestris",NA,"Spain","Madrid","Cerceda",NA,NA,NA,1986,"05","20",NA,NA,"J.A. Díaz","C. Ornosa","1",NA,NA,NA,NA,NA,NA,"C. Ornosa",NA,NA,"10_Ornosa_etal_3"

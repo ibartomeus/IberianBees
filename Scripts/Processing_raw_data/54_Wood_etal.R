@@ -2495,5 +2495,5 @@ newdat$uid <- paste("54_Wood_etal_", 1:nrow(newdat), sep = "")
 
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/54_Wood_etal.csv", 
-            quote = TRUE, sep = ",", col.names = FALSE,
+            quote = TRUE, sep = ",", col.names = TRUE,
             row.names = FALSE)

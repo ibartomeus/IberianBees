@@ -1,3 +1,4 @@
+"Genus","Subgenus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision","Year","Month","Day","Start.date","End.date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries","uid"
 "Amegilla",NA,"albifrons","albifrons","Spain","Canary Islands","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,NA,"Erysimum bicolor",NA,"Compiled by J.M. Gomez",NA,NA,"13_Gomez_1"
 "Amegilla",NA,"albifrons","albifrons","Spain","Canary Islands","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,NA,"Erysimum bicolor",NA,"Compiled by J.M. Gomez",NA,NA,"13_Gomez_2"
 "Amegilla",NA,"canifrons","canifrons","Spain","Canary Islands","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,NA,"Erysimum bicolor",NA,"Compiled by J.M. Gomez",NA,NA,"13_Gomez_3"
@@ -1106,7 +1107,7 @@ NA,NA,NA,NA,"Spain","Almería","Pulpí",NA,NA,NA,"2011",NA,NA,NA,NA,NA,NA,NA,NA,
 "Osmia",NA,"cornuta","cornuta","Spain","Granada","IFAPA",NA,NA,NA,"2013","3","15",NA,NA,NA,NA,NA,NA,NA,8,NA,"Diplotaxis erucoides",NA,"Compiled by J.M. Gomez",NA,NA,"13_Gomez_1106"
 "Osmia",NA,"emarginata","emarginata","Spain","Almería","En12",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2,NA,"Erysimum nevadense",NA,"Compiled by J.M. Gomez",NA,NA,"13_Gomez_1107"
 "Osmia",NA,"fulviventris","fulviventris","Spain","Canary Islands","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,NA,"Hirschfeldia incana",NA,"Compiled by J.M. Gomez",NA,NA,"13_Gomez_1108"
-"Osmia",NA,"grande","negra","Spain","Granada","S\" Baza",NA,NA,NA,"2015","6","10",NA,NA,NA,NA,NA,NA,NA,5,NA,"Hormathophylla cadevalliana",NA,"Compiled by J.M. Gomez",NA,NA,"13_Gomez_1109"
+"Osmia",NA,"grande","negra","Spain","Granada","Sierra de Baza",NA,NA,NA,"2015","6","10",NA,NA,NA,NA,NA,NA,NA,5,NA,"Hormathophylla cadevalliana",NA,"Compiled by J.M. Gomez",NA,NA,"13_Gomez_1109"
 "Osmia",NA,"inermis","inermis","Spain","Asturias","Picos Europa",NA,NA,NA,"2011",NA,NA,NA,NA,NA,NA,NA,NA,NA,1,NA,"Biscutella laevigata",NA,"Compiled by J.M. Gomez",NA,NA,"13_Gomez_1110"
 "Osmia",NA,"latreillei","latreillei","Spain","Mallorca","",NA,NA,NA,"2010",NA,NA,NA,NA,NA,NA,NA,NA,NA,1,NA,"Brassica balearica",NA,"Compiled by J.M. Gomez",NA,NA,"13_Gomez_1111"
 "Osmia",NA,"latreillei","latreillei","Spain","Canary Islands","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,NA,"Hirschfeldia incana",NA,"Compiled by J.M. Gomez",NA,NA,"13_Gomez_1112"

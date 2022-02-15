@@ -47,5 +47,5 @@ newdat <- add_uid(newdat = newdat, '5_Banos-Picon_')
 
 #save data
 write.table(x = newdat, file = 'Data/Processed_raw_data/5_Banos-Picon_etal.csv', 
-            quote = TRUE, sep = ',', col.names = FALSE, 
+            quote = TRUE, sep = ',', col.names = TRUE, 
             row.names = FALSE)

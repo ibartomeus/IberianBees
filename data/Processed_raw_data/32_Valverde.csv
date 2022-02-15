@@ -1,3 +1,4 @@
+"Genus","Subgenus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision","Year","Month","Day","Start.date","End.date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries","uid"
 "Ammobates",NA,"muticus",NA,"Spain","Valencia","Javea (Alicante)",38.78333,0.16666,"<10m",1989,"05",NA,"NA-5-1989","NA-5-1989","H. Wolf","H. Wolf",1,0,0,0,NA,NA,"AMNH_BEE 00024743","J. Ascher",NA,NA,"32_Valverde_1"
 "Ammobates",NA,"punctatus",NA,"Portugal","Setubal","Taipadas",38.7333,-8.6667,"<1km",1996,"08","31","31-8-1996","31-8-1996","unknown","M. Schwarz",1,0,0,0,NA,NA,"AMNH_BEE 00020527","J. Ascher",NA,NA,"32_Valverde_2"
 "Apis",NA,"mellifera",NA,"Portugal","Lisbon","Lisbon",38.736946,-9.142685,"<3km",2000,NA,NA,"NA-NA-2000","NA-NA-2000","unknown","M. Silva",1,0,0,0,NA,NA,"CE3C",NA,NA,NA,"32_Valverde_3"

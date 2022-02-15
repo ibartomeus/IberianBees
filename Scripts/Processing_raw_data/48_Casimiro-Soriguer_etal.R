@@ -28,5 +28,5 @@ newdat$Any.other.additional.data <- NA
 newdat <- add_uid(newdat = newdat, '48_Casimiro-Soriguer_etal_')
 
 write.table(x = newdat, file = 'Data/Processed_raw_data/48_Casimiro-Soriguer_etal.csv', 
-            quote = TRUE, sep = ',', col.names = FALSE, 
+            quote = TRUE, sep = ',', col.names = TRUE, 
             row.names = FALSE)

@@ -44,5 +44,5 @@ newdat$Reference.doi <- gsub("https://doi.org/10/f3pm57.",
 
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/42_Ornosa_etal.csv", 
-            quote = TRUE, sep = ",", col.names = FALSE,
+            quote = TRUE, sep = ",", col.names = TRUE,
             row.names = FALSE)

@@ -45,5 +45,5 @@ newdat <- add_uid(newdat = newdat, '41_Torres_')
 
 #Save data
 write.table(x = newdat, file = 'Data/Processed_raw_data/41_Torres.csv', 
-            quote = TRUE, sep = ',', col.names = FALSE, 
+            quote = TRUE, sep = ',', col.names = TRUE, 
             row.names = FALSE,)

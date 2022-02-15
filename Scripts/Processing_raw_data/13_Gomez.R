@@ -52,9 +52,12 @@ newdat$Flowers.visited <- gsub("\\_", " ", newdat$Flowers.visited)
 #Credit
 newdat$Authors.to.give.credit <- "Compiled by J.M. Gomez"
 
+#Fix this, gives issues when merge all datasets
+newdat$Locality[newdat$Locality=="S\" Baza"] <-"Sierra de Baza"
+
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '13_Gomez_')
 
 write.table(x = newdat, file = 'Data/Processed_raw_data/13_Gomez.csv', 
-            quote = TRUE, sep = ',', col.names = FALSE,
+            quote = TRUE, sep = ',', col.names = TRUE,
             row.names = FALSE)

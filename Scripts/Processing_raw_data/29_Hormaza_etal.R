@@ -35,5 +35,5 @@ newdat <- add_uid(newdat = newdat, '29_Hormaza_etal_')
 
 #save data
 write.table(x = newdat, file = 'Data/Processed_raw_data/29_Hormaza_etal.csv', 
-            quote = TRUE, sep = ',', col.names = FALSE, 
+            quote = TRUE, sep = ',', col.names = TRUE, 
             row.names = FALSE)

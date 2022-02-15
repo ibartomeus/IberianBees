@@ -50,5 +50,5 @@ newdat$Determined.by <- gsub("Identified by A. Núñez, O.  Aguado and/or J.  Or
 
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/51_Minarro.csv", 
-            quote = TRUE, sep = ",", col.names = FALSE,
+            quote = TRUE, sep = ",", col.names = TRUE,
             row.names = FALSE)

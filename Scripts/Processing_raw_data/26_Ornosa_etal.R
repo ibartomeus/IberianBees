@@ -46,5 +46,5 @@ newdat <- add_uid(newdat = newdat, '26_Ornosa_etal_')
 
 #Save data
 write.table(x = newdat, file = 'Data/Processed_raw_data/26_Ornosa_etal.csv', 
-            quote = TRUE, sep = ',', col.names = FALSE,
+            quote = TRUE, sep = ',', col.names = TRUE,
             row.names = FALSE)
