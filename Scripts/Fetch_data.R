@@ -190,6 +190,19 @@ unique(d3$species) #681
 d4 <- d3[grep(" ", d3$species, fixed = TRUE, value = FALSE),]
 unique(d4$species) #591 sp ... not bad...some subspecies...
 
+
+
+beefun$Subspecies <- NA  
+for(i in 1:length(beefun$Species)){
+  temp <- unlist(gregexpr(pattern = " ", text = beefun$Species[i]))
+  if(length(temp) == 2){
+    beefun$Subspecies[i] <- substr(beefun$Species[i], start = temp[2]+1, stop = nchar(beefun$Species[i]))
+    beefun$Species[i] <- substr(beefun$Species[i], start = 1, stop = temp[2]-1)
+  }
+}
+dim(d5) #15026 occurrences...
+
+
 #Save data
 write.csv(d4, file = "Data/Processing_raw_data/online_data.csv")
 
