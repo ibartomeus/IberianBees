@@ -30,7 +30,8 @@ newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
 
 #Rename country
-newdat$Country <- gsub("España", "Spain", newdat$Country)
+newdat$Country <- "Spain" #All are in Spain
+
 #Delete extra spaces
 newdat$Locality <- gsub("El Raso.   Agoncillo" , 
                         "El Raso. Agoncillo" , newdat$Locality)

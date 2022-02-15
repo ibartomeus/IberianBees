@@ -27,6 +27,13 @@ newdat$Authors.to.give.credit <- "J. Ortiz, F. Torres, C. Ornosa"
 
 #Rename country
 newdat$Country <- gsub("España", "Spain", newdat$Country)
+newdat$Country <- trimws(newdat$Country)
+newdat$Country[is.na(newdat$Country)] <- "Spain"
+#levels(factor(newdat$Country))
+
+#Fix trailing space
+newdat$Country <- trimws(newdat$Country)
+
 #Fix province
 newdat$Province <- gsub("Á06la", "Ávila", newdat$Province)
 newdat$Province <- gsub("Sego06a", "Segovia", newdat$Province)

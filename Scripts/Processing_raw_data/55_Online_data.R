@@ -109,6 +109,10 @@ newdat$Country <- map.where(x = newdat$Longitude, y = newdat$Latitude)
 newdat$Country[grepl("Spain", newdat$Country)] <- "Spain"
 unique(levels(factor(newdat$Country)))
 
+newdat %>% filter(is.na(newdat$Country))
+
+
+map.where(40.00, 0.066)
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/55_Online_data.csv", 
             quote = TRUE, sep = ",", col.names = TRUE,
