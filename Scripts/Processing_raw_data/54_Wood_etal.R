@@ -2481,17 +2481,17 @@ newdat$Notes.and.queries <- trimws(newdat$Notes.and.queries)
 newdat$Notes.and.queries[newdat$Notes.and.queries==""] <- NA
 #More work can be done but seems ok 
 
-
-
-
 #Convert space to NA in Any.other.additional.data
 df <- as.data.frame(unique(levels(factor(newdat$Species))))
 
+#Fix special characters that give issues when merging all
+newdat$Subspecies[newdat$Subspecies=="dest.\""] <- NA
+newdat$Subspecies[newdat$Subspecies=="L.\""] <- NA
+newdat$Locality[newdat$Locality=="Panticosa, 42â°43' 30\"N 2 38 30 W of Paris"] <- "Panticosa"
+newdat$Any.other.additional.data[newdat$Any.other.additional.data=="Flying Over \"Humilis\" Holes"] <- "Flying Over Humilis Holes"
 
-
-
+#add finally uid
 newdat$uid <- paste("54_Wood_etal_", 1:nrow(newdat), sep = "")
-
 
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/54_Wood_etal.csv", 

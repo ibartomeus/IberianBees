@@ -107,7 +107,11 @@ newdat$Month[newdat$Start.date=="13-08-1944"] <- "08"
 newdat$Month[newdat$Start.date=="13-07-1985"] <- "07"
 newdat$Month[newdat$Month=="18"] <- "07"
 
+#Add credit to authors
 newdat$Authors.to.give.credit <- "P. Alvarez, M. Paris"
+
+#Clean empty genus
+newdat <- newdat %>% filter(!is.na(Genus))
 
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '43_Alvarez_etal_')

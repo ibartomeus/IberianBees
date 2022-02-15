@@ -39,9 +39,6 @@ newdat$Reference.doi <- "https://doi.org/10.1007/s00442-007-0946-1"
 newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
 newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
 
-#Add unique identifier
-newdat <- add_uid(newdat = newdat, '15_Bartomeus_etal_')
-
 #Fixed levels Determined.by
 levels(factor(newdat$Determined.by))
 
@@ -55,6 +52,12 @@ newdat$Determined.by <- gsub("L.Castro",
 "L. Castro", newdat$Determined.by)
 
 newdat$Determined.by[newdat$Determined.by==""] <- "I. Bartomeus"
+
+#Clean undetermined genus
+newdat <- newdat %>% filter(!Genus=="Andrena??")
+
+#Add unique identifier
+newdat <- add_uid(newdat = newdat, '15_Bartomeus_etal_')
 
 #Save data
 write.table(x = newdat, file = 'Data/Processed_raw_data/15_Bartomeus_etal.csv', 

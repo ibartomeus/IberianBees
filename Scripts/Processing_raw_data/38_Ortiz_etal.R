@@ -24,7 +24,6 @@ newdat$Female <- as.character(newdat$Female)
 newdat$Worker[which(newdat$Female == " obrera")] <- 1
 newdat$Female[which(newdat$Female == " obrera")] <- 0
 newdat$Authors.to.give.credit <- "J. Ortiz, F. Torres, C. Ornosa"
-newdat <- add_uid(newdat = newdat, '38_Ortiz_etal_')
 
 #Rename country
 newdat$Country <- gsub("España", "Spain", newdat$Country)
@@ -59,6 +58,14 @@ newdat$Determined.by <- gsub("J.  Ortiz", "J. Ortiz", newdat$Determined.by)
 newdat$Determined.by <- gsub("J. Ortiz/C. Ornosa", "J. Ortiz, C. Ornosa", newdat$Determined.by)
 newdat$Determined.by <- gsub("Félix Torres", "F. Torres", newdat$Determined.by)
 levels(factor(newdat$Authors.to.give.credit))
+
+#Clean some empty genus
+newdat <- newdat %>% filter(!is.na(Genus))
+#Fix some genus names
+newdat$Genus <- gsub("Anthidium. ", "Anthidium", newdat$Genus,fixed=T)
+
+#Add unique identifier
+newdat <- add_uid(newdat = newdat, '38_Ortiz_etal_')
 
 #Save data
 write.table(x = newdat, file = 'Data/Processed_raw_data/38_Ortiz_etal.csv', 

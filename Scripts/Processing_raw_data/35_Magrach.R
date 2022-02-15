@@ -101,6 +101,23 @@ newdat <- drop_variables(check, newdat) #reorder and drop variables
 newdat$Collector <- gsub("Juan. P. Gonzalez-Varo", "Juan P. Gonzalez-Varo",
                          newdat$Collector)
 
+#Fix some genus names
+#1st
+newdat$Subgenus[newdat$Genus=="Andrena(Rufandrena)"] <- "Rufandrena"
+newdat$Genus[newdat$Genus=="Andrena(Rufandrena)"] <- "Andrena"
+#2nd
+newdat$Subgenus[newdat$Genus=="Andrena(Truncandrena)"] <- "Truncandrena"
+newdat$Genus[newdat$Genus=="Andrena(Truncandrena)"] <- "Andrena"
+#3rd
+newdat$Subgenus[newdat$Genus=="Hoplitis(Anthocopa)"] <- "Anthocopa"
+newdat$Genus[newdat$Genus=="Hoplitis(Anthocopa)"] <- "Hoplitis"
+#4th
+newdat$Subgenus[newdat$Genus=="Osmia(Metallinella)"] <- "Metallinella"
+newdat$Genus[newdat$Genus=="Osmia(Metallinella)"] <- "Osmia"
+#5th
+newdat$Subgenus[newdat$Genus=="Pseudapis(Nomiapis)"] <- "Nomiapis"
+newdat$Genus[newdat$Genus=="Pseudapis(Nomiapis)"] <- "Pseudapis"
+
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/35_Magrach.csv", 
             quote = TRUE, sep = ",", col.names = TRUE,
