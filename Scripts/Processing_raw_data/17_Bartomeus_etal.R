@@ -1,26 +1,32 @@
-#Load and merge Beefun----
-install.packages("devtools")
-require(devtools)
-devtools::install_github("ibartomeus/BeeFunData")
+source("Scripts/Processing_raw_data/Source_file.R") #Generate template
+
+#This is a special processing file the data comes from the Beefun project and not a csv
+#Installation of Beefun
+#install.packages("devtools")
+#require(devtools)
+#devtools::install_github("ibartomeus/BeeFunData")
+
+#Load library which contains the data
 library(BeeFunData)
-
-
-install_github("BeeFunData", "ibartomeus")
-
-library(BeeFunData)
+#Load data
 data(all_interactions)
+
+#Check data
 head(all_interactions)
 data(sites)
 head(sites)
 data(traits_pollinators_estimated)
 head(traits_pollinators_estimated)
+
+#Merege with sites
 beefun <- merge(all_interactions, sites)
 beefun <- merge(beefun, traits_pollinators_estimated)
 
+#Check and ilter by family of interest
 unique(beefun$family)
 beefun <- subset(beefun, family %in% c("Andrenidae", "Apidae", "Megachilidae",
                                        "Colletidae", "Melittidae"))
-
+#Clean species
 head(beefun)
 beefun$species <- beefun$Pollinator_gen_sp
 unique(beefun$species)
@@ -31,48 +37,42 @@ beefun <- subset(beefun, !species %in% c("Osmia sp", "Panurgus sp",
                                          "Coelioxys sp", "Ceratina sp",
                                          "Ceratina sp", "Apidae NA",
                                          "Anthophora sp", "Andrena sp"))
-beefun$decimalLatitude <- beefun$latitude
-beefun$decimalLongitude <- beefun$longitude
+
+#Check colnames
+compare_variables(check, beefun)
+
+#Rename and add cols
+beefun$Species <- beefun$species
+beefun$Latitude <- beefun$latitude
+beefun$Longitude <- beefun$longitude
 beefun$family <- beefun$family
-beefun$year <- 2015
-beefun$month <- NA #this can be added...
-beefun$day <- NA
-beefun$recordedBy <- "Curro Molina"
-beefun$identifiedBy <- "Oscar Aguado"
-beefun$sex <- beefun$Pollinator_sex
-beefun$stateProvince <- "Huelva"
-beefun$locality <- beefun$Site_ID            
-beefun$coordinatePrecision <- "gps"
-#Add
+beefun$Year <- 2015
+beefun$Collector <- "Curro Molina"
+beefun$Determined.by <- "Oscar Aguado"
+beefun$Province <- "Huelva"
+beefun$Locality <- beefun$Site_ID            
+beefun$Coordinate.precision <- "gps"
+beefun$Female <-  ifelse(beefun$Pollinator_sex =="female", "female", NA)
+beefun$Female <- beefun$Frequency[beefun$Female=="female"] 
+beefun$Male <-  ifelse(beefun$Pollinator_sex =="male", "male", NA)
+beefun$Male <- beefun$Frequency[beefun$Male=="male"] 
+beefun$Flowers.visited <- beefun$Plant_gen_sp
 beefun$Reference.doi <- "http://doi.org/10.5281/zenodo.3364037"
 beefun$Local_ID <- beefun$Pollinator_id
 beefun$Authors.to.give.credit <- "I. Bartomeus, C. Molina"
-beefun$Any.other.additional.data <- NA
 beefun$Country <- "Spain"
-#Add
-d4$Reference.doi <- NA
-d4$Local_ID <- NA
-d4$Authors.to.give.credit <- NA
-d4$Any.other.additional.data <- "Gbif/iNat"
-d4$Country <- NA
+beefun$Genus <- word(beefun$Species, 1)
 
-head(beefun)
-colnames(d4)
-colnames(beefun)
-d5 <- rbind(d4, 
-            beefun[, c("species", "decimalLatitude",  "decimalLongitude", "family",
-                       "year", "month",  "day", "recordedBy", "identifiedBy", "sex",
-                       "stateProvince", "locality", "coordinatePrecision",
-                       "Reference.doi", "Local_ID", "Authors.to.give.credit",
-                       "Any.other.additional.data", "Country")])
+#Now add missing vars and drop extra
+beefun <- add_missing_variables(check, beefun)
+beefun <- drop_variables(check, beefun)
 
-unique(d5$species) #543 #some subspecies!!
-d5$subspecies <- NA  
-for(i in 1:length(d5$species)){
-  temp <- unlist(gregexpr(pattern = " ", text = d5$species[i]))
-  if(length(temp) == 2){
-    d5$subspecies[i] <- substr(d5$species[i], start = temp[2]+1, stop = nchar(d5$species[i]))
-    d5$species[i] <- substr(d5$species[i], start = 1, stop = temp[2]-1)
-  }
-}
-dim(d5) #15026 occurrences...
+#Finally add uid
+beefun$uid <-  paste("17_Bartomeus_etal_", 1:nrow(beefun), sep = "")
+
+#Save data
+write.table(x = beefun, file = 'Data/Processed_raw_data/17_Bartomeus_etal.csv', 
+            quote = TRUE, sep = ',', col.names = FALSE, 
+            row.names = FALSE)
+
+
