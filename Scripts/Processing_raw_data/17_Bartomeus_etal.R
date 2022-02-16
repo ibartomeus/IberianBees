@@ -62,6 +62,7 @@ beefun$Local_ID <- beefun$Pollinator_id
 beefun$Authors.to.give.credit <- "I. Bartomeus, C. Molina"
 beefun$Country <- "Spain"
 beefun$Genus <- word(beefun$Species, 1)
+beefun$Species <- word(beefun$Species, 2)
 
 #Now add missing vars and drop extra
 beefun <- add_missing_variables(check, beefun)

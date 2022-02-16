@@ -25,6 +25,9 @@ newdat$Determined.by <- gsub("FJ Ortiz-Sánchez",
 newdat$Authors.to.give.credit <- gsub("A. Trillo, FJ Ortiz-Sánchez", 
                                       "A. Trillo, F.J. Ortiz-Sánchez",newdat$Authors.to.give.credit)
 
+#Fix species name
+newdat$Species[newdat$Species=="nigroaenea nigrosericea"] <- "nigroaenea"
+
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '25_Trillo_')
 

@@ -297,6 +297,28 @@ newdat$Reference.doi[grepl("https://doi.org/10.11646/", newdat$Reference.doi,ign
 newdat$Reference.doi[grepl("ISSN: 1134-61", newdat$Reference.doi,ignore.case=F)] <- "ISSN: 1134-6108"
 #All dois work now
 
+#Fix some species names
+#1st
+newdat$Subgenus[newdat$Species=="(Psithyrus) flavidus"] <- "Psithyrus"
+newdat$Subspecies[newdat$Species=="(Psithyrus) flavidus"] <- NA
+newdat$Species[newdat$Species=="(Psithyrus) flavidus"] <- "flavidus"
+#2nd
+newdat$Subgenus[newdat$Species=="(Psithyrus) rupestris"] <- "Psithyrus"
+newdat$Subspecies[newdat$Species=="(Psithyrus) rupestris"] <- NA
+newdat$Species[newdat$Species=="(Psithyrus) rupestris"] <- "rupestris"
+#3rd
+newdat$Subgenus[newdat$Species=="(Psithyrus) sylvestris"] <- "Psithyrus"
+newdat$Species[newdat$Species=="(Psithyrus) sylvestris"] <- "sylvestris"
+#4th
+newdat$Subgenus[newdat$Species=="(Psithyrus) sylvestris"] <- "Psithyrus"
+#5th
+newdat$Species[newdat$Species=="Frey-Gessneri"] <- "frey-gessneri"
+#6th
+newdat$Species[newdat$Species=="monticola rondoui"] <- "monticola"
+#7th
+newdat$Subgenus[newdat$Species=="seladonia-smaragdulus"] <- "seladonia"
+newdat$Species[newdat$Species=="seladonia-smaragdulus"] <- "smaragdulus"
+
 #Add leading 0 to month
 newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
 newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)

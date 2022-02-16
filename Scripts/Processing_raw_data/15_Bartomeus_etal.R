@@ -58,6 +58,8 @@ newdat$Determined.by[newdat$Determined.by==""] <- "I. Bartomeus"
 
 #Clean undetermined genus
 newdat <- newdat %>% filter(!Genus=="Andrena??")
+#Clean undet species
+newdat <- newdat %>% filter(!Species=="grupo (morio)")
 
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '15_Bartomeus_etal_')

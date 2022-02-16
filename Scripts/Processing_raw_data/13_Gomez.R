@@ -33,12 +33,12 @@ newdat$Year[newdat$Year=="Iberideae"] <- NA
 #Just showing the fisrt one for now
 newdat$Year <- sub("-.*", "", newdat$Year)
 
-temp <- extract_pieces(newdat$GenSp, species = TRUE)
-head(temp)
-newdat$Genus <- temp$piece2  
-temp <- extract_pieces(temp$piece1, species = TRUE)  
-newdat$Species <-ifelse(!is.na(temp$piece2), temp$piece2, temp$to_split)
-newdat$Subspecies <-ifelse(!is.na(temp$piece2), temp$piece1, temp$to_split)
+#Fill genus, spp and subspecies cols
+newdat$Genus <- word(newdat$GenSp, 1)
+newdat$Species <- word(newdat$GenSp, 2)
+newdat$Subspecies <- word(newdat$GenSp, 3)
+
+#Add missing vars and drop
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
@@ -60,6 +60,39 @@ newdat$Locality[newdat$Locality=="S\" Baza"] <-"Sierra de Baza"
 newdat <- newdat %>% filter(!is.na(Genus))
 #Fix lower case
 newdat$Genus <- gsub("andrena", "Andrena", newdat$Genus, fixed=T)
+
+#Fix species name
+#1st
+newdat$Species[newdat$Species=="~aestivalis"] <- NA
+newdat$Subspecies[newdat$Subspecies=="~aestivalis"] <- NA
+#2nd
+newdat$Species[newdat$Species=="abd"] <- NA
+newdat$Subspecies[newdat$Subspecies=="negro"] <- NA
+#3rd
+newdat$Species[newdat$Species=="muy"] <- NA
+newdat$Subspecies[newdat$Subspecies=="pequeña"] <- NA
+#4th
+newdat$Subspecies[newdat$Species=="aff"] <- NA
+newdat$Species[newdat$Species=="aff"] <- NA
+#5th
+newdat$Species[newdat$Species==""] <- NA
+newdat$Subspecies[newdat$Subspecies==""] <- NA
+#6th
+newdat$Species[newdat$Species=="sp"] <- NA
+#7th
+newdat$Species[newdat$Species=="simplex,"] <- "simplex"
+newdat$Species[newdat$Species=="grande"] <- NA
+newdat$Species[newdat$Species=="antena"] <- NA
+newdat$Species[newdat$Species=="clipeo"] <- NA
+newdat$Species[newdat$Species=="cliípeo"] <- NA
+#8th
+newdat$Subspecies[newdat$Subspecies=="abdomen"] <- NA
+newdat$Subspecies[newdat$Subspecies=="ssp."] <- NA
+newdat$Subspecies[newdat$Subspecies=="y"] <- NA
+newdat$Subspecies[newdat$Subspecies=="negra"] <- NA
+newdat$Subspecies[newdat$Subspecies=="larga"] <- NA
+newdat$Subspecies[newdat$Subspecies=="amarillo"] <- NA
+newdat$Subspecies[newdat$Subspecies=="Andrena"] <- NA
 
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '13_Gomez_')

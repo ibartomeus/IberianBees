@@ -74,6 +74,23 @@ newdat$Genus <- gsub("Anthidium. ", "Anthidium", newdat$Genus,fixed=T)
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '38_Ortiz_etal_')
 
+#Fix species name
+#1st
+newdat$Subspecies[newdat$Species=="carduele malacopygum"] <- "malacopygum"
+newdat$Species[newdat$Species=="carduele malacopygum"] <- "carduele"
+#2nd
+newdat$Subspecies[newdat$Species=="albonotata setulosa"] <- "setulosa"
+newdat$Species[newdat$Species=="albonotata setulosa"] <- "albonotata"
+#3rd
+newdat$Subgenus[newdat$Species=="aurolimbata algeriensis"] <- NA
+newdat$Species[newdat$Species=="aurolimbata algeriensis"] <- "aurolimbata" #Source ITIS
+#4th
+newdat$Species[newdat$Species=="chrysurus \"chico\""] <- "chrysurus"
+#5th
+newdat$Species[newdat$Species=="florentinum poco desarrollado"] <- "florentinum"
+#6th
+newdat$Species[newdat$Species=="lefebvrei albida"] <- "lefebvrei" #Source catalogue of life
+
 #Save data
 write.table(x = newdat, file = 'Data/Processed_raw_data/38_Ortiz_etal.csv', 
             quote = TRUE, sep = ',', col.names = TRUE, 
