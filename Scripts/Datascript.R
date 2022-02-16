@@ -99,6 +99,7 @@ unique(data3$Species)
 #overwrite data #Non identified species are removed directly.
 data <- subset(data3, !Species %in% c("sp.", "sp.1", "sp.2", "sp.3", "sp.4", "sp.5", "sp.6",
                                     "sp.7", "", "sp1", "sp2", "sp"))
+
 #remove numbers.
 numbers <- unlist(grepl("[[:digit:]]", data$Species))
 #data[which(numbers == TRUE),3]
@@ -114,6 +115,9 @@ if(length(which(is.na(data$Species) == TRUE)) > 0){
 unique(data$Species)
 #Move ?? and "_or_" "o" , "_agg" , "s.l.", "/" to $flag.
 data$flag <- NA
+
+#FOR JOSE: KEEP WORKING FROM HERE
+
 #Create Gen_sp
 data$Genus_species <- paste(data$Genus, data$Species)
 

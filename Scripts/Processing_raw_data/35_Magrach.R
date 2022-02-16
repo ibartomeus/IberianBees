@@ -117,6 +117,8 @@ newdat$Genus[newdat$Genus=="Osmia(Metallinella)"] <- "Osmia"
 #5th
 newdat$Subgenus[newdat$Genus=="Pseudapis(Nomiapis)"] <- "Nomiapis"
 newdat$Genus[newdat$Genus=="Pseudapis(Nomiapis)"] <- "Pseudapis"
+#6th
+newdat$Species[newdat$Species=="dispar?"] <- NA
 
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/35_Magrach.csv", 
