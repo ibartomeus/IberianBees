@@ -61,6 +61,11 @@ newdat <- newdat %>% filter(!Genus=="Andrena??")
 #Clean undet species
 newdat <- newdat %>% filter(!Species=="grupo (morio)")
 
+#Fix species name
+newdat$Species[newdat$Species=="haemorhoa"] <- "haemorrhoa"
+#Filter non bee species
+newdat <- newdat %>% filter(Genues=="Ancistrocerus" & Species=="oviventris")
+
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '15_Bartomeus_etal_')
 

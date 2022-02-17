@@ -30,6 +30,9 @@ newdat$Authors.to.give.credit <- "O. Aguado, J.I. Hormaza, M.L. Alcaraz, V. Ferr
 #Delete row with NA in genus
 newdat <- newdat[!is.na(newdat$Genus),]
 
+#Fix species name
+newdat$Species[newdat$Species=="vilolacea"] <- "violacea"
+
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '29_Hormaza_etal_')
 

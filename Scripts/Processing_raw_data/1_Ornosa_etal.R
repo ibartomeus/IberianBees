@@ -56,7 +56,8 @@ levels(factor(newdat$Determined.by))
 #Replace front slash by a comma and a space
 newdat$Determined.by <- gsub("JL Blanco/C. Ornosa", 
                              "JL Blanco, C. Ornosa", newdat$Determined.by)
-colnames(newdat)
+#Fix species name
+newdat$Species[newdat$Species=="pacuorum"] <- "pascuorum"
 
 #Save data
 write.table(x = newdat, file = 'Data/Processed_raw_data/1_Ornosa_etal.csv', quote = TRUE, sep = ',', 

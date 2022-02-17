@@ -35,6 +35,9 @@ levels(factor(newdat$Collector))
 newdat$Collector <- gsub("\\.", ". ", newdat$Collector)
 newdat$Determined.by <- gsub("\\.", ". ", newdat$Determined.by)
 
+#Fix subspecies name
+newdat$Subspecies <- gsub("spp.", "", newdat$Subspecies, fixed=T)
+
 #Add author to give credit
 newdat$Authors.to.give.credit <- "A. Núñez"
 

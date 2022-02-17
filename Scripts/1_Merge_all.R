@@ -37,6 +37,6 @@ file_names <- dir("Data/Processed_raw_data") #where you have your files
 iberian_bees_raw <- do.call(rbind,lapply(paste("Data/Processed_raw_data/", file_names, sep=""),read.csv))
 
 #Save as a zip file
-write.csv(iberian_bees_raw, file=gzfile("Data/iberian_bees_raw.csv.gz"))
+write.csv(iberian_bees_raw, file=gzfile("Data/Processing_iberian_bees_raw/iberian_bees_raw.csv.gz"))
 
 #That's it! The Iberianbees dataset has been generated and now it needs a final cleaning

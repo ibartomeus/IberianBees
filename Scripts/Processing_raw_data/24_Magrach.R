@@ -22,6 +22,9 @@ newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '24_Magrach_')
 
+#Fix species name
+newdat$Species[newdat$Species=="pascurorum"] <- "pascuorum"
+
 #Save data
 write.table(x = newdat, file = 'Data/Processed_raw_data/24_Magrach.csv', 
             quote = TRUE, sep = ',', col.names = TRUE, 
