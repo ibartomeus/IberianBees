@@ -202,6 +202,8 @@ missed <- data$accepted_name[which(!data$accepted_name %in% master$Genus_species
 summary(data$Genus_species==data$accepted_name)
 #So now we filter out one of these cols
 data <- data %>% select(-Genus_species)
+#I think that if there is the need to check specific species
+#Always the raw data can be checked because is available
 
 #########################-
 #Fix now subspecies ----
