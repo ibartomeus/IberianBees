@@ -47,6 +47,9 @@ newdat$Determined.by <- gsub("F Torres", "F. Torres", newdat$Determined.by)
 newdat$Determined.by[newdat$Determined.by==" "] <- NA
 levels(factor(newdat$Determined.by))
 
+#Fix species name
+newdat$Species[newdat$Species=="grohmanii"] <- "grohmanni"
+
 #Add uid
 newdat <- add_uid(newdat = newdat, '39_Ortiz_etal_')
 

@@ -35,6 +35,9 @@ newdat <- add_uid(newdat = newdat, '8_Ornosa_')
 newdat <- newdat[!is.na(newdat$Genus),]
 newdat <- newdat[newdat$Genus!="Ácaros del 17_103",]
 
+#Fix species name
+newdat$Species[newdat$Species=="pascurum"] <- "pascuorum"
+
 #Save data
 write.table(x = newdat, file = 'Data/Processed_raw_data/8_Ornosa.csv', 
             quote = TRUE, sep = ',', col.names = TRUE, 

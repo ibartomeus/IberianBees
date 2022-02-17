@@ -42,6 +42,17 @@ newdat$Locality <- stringr::str_to_title(newdat$Locality)
 #Delete leading space
 newdat$Determined.by <- trimws(newdat$Determined.by, "l")
 
+#Fix subspecies name
+newdat$Subspecies[newdat$Subspecies=="dusmeti con algo de maculatus"] <- NA
+newdat$Subspecies[newdat$Subspecies=="lusitanicus mezcla"] <- NA
+newdat$Subspecies[newdat$Subspecies=="lusitanicus?"] <- NA
+newdat$Subspecies[newdat$Subspecies=="maculatus con mezcla"] <- NA
+newdat$Subspecies[newdat$Subspecies=="maculatus x dusmeti"] <- NA
+newdat$Subspecies[newdat$Subspecies=="no se distingue"] <- NA
+newdat$Subspecies[newdat$Subspecies=="soroeensis mezcla"] <- NA
+newdat$Subspecies[newdat$Subspecies=="terrestisxlusitanicus"] <- NA
+newdat$Subspecies[newdat$Subspecies=="terrestris mezcla"] <- NA
+
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '12_Ornosa_etal_')
 

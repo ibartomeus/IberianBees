@@ -84,7 +84,7 @@ newdat$Species[newdat$Species=="simplex,"] <- "simplex"
 newdat$Species[newdat$Species=="grande"] <- NA
 newdat$Species[newdat$Species=="antena"] <- NA
 newdat$Species[newdat$Species=="clipeo"] <- NA
-newdat$Species[newdat$Species=="cliípeo"] <- NA
+newdat$Species[newdat$Species=="clípeo"] <- NA
 #8th
 newdat$Subspecies[newdat$Subspecies=="abdomen"] <- NA
 newdat$Subspecies[newdat$Subspecies=="ssp."] <- NA
@@ -93,6 +93,22 @@ newdat$Subspecies[newdat$Subspecies=="negra"] <- NA
 newdat$Subspecies[newdat$Subspecies=="larga"] <- NA
 newdat$Subspecies[newdat$Subspecies=="amarillo"] <- NA
 newdat$Subspecies[newdat$Subspecies=="Andrena"] <- NA
+#9th
+newdat$Species[newdat$Species=="humlis"] <- "humilis"
+#10th
+newdat$Species[newdat$Species=="subge"] <- NA
+newdat$Subgenus[newdat$Subspecies=="micrandrena"] <- "Micrandrena"
+newdat$Subspecies[newdat$Subspecies=="micrandrena"] <-NA
+#11th
+newdat$Species[newdat$Species=="nigraenea"] <- "nigroaenea"
+#12th
+newdat$Species[newdat$Species=="pelirroja"] <- NA
+#13th
+newdat$Species[newdat$Genus=="Andrena_nigroaenea"] <- "nigroaenea"
+newdat$Genus[newdat$Genus=="Andrena_nigroaenea"] <- "Andrena"
+#14th
+newdat$Species[newdat$Genus=="Apis_mellifera"] <- "mellifera"
+newdat$Genus[newdat$Genus=="Apis_mellifera"] <- "Apis"
 
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '13_Gomez_')

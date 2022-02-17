@@ -2490,6 +2490,12 @@ newdat$Subspecies[newdat$Subspecies=="L.\""] <- NA
 newdat$Locality[newdat$Locality=="Panticosa, 42â°43' 30\"N 2 38 30 W of Paris"] <- "Panticosa"
 newdat$Any.other.additional.data[newdat$Any.other.additional.data=="Flying Over \"Humilis\" Holes"] <- "Flying Over Humilis Holes"
 
+#Fix species names
+newdat$Species[newdat$Species=="schultessi"] <- "schulthessii" #Source https://www.discoverlife.org/
+newdat$Species[newdat$Species=="schultessii"] <- "schulthessii" #Source https://www.discoverlife.org/
+#Filter non bee species
+newdat <- newdat %>% filter(!Species=="bellidifolium")
+
 #add finally uid
 newdat$uid <- paste("54_Wood_etal_", 1:nrow(newdat), sep = "")
 

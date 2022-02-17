@@ -62,6 +62,7 @@ newdat$Determined.by <- gsub("Torres/Ornosa"  ,
 
 #Fix species name
 newdat$Species[newdat$Species=="lituratum       Ornosa det"] <- "lituratum"
+newdat$Species[newdat$Species=="ghrohmanni"] <- "grohmanni"
 
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '37_Ortiz_etal_')

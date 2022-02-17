@@ -90,6 +90,9 @@ newdat$Species[newdat$Species=="chrysurus \"chico\""] <- "chrysurus"
 newdat$Species[newdat$Species=="florentinum poco desarrollado"] <- "florentinum"
 #6th
 newdat$Species[newdat$Species=="lefebvrei albida"] <- "lefebvrei" #Source catalogue of life
+#7th
+newdat$Species[newdat$Species=="schultessi"] <- "schulthessii" #Source https://www.discoverlife.org/
+newdat$Species[newdat$Species=="shultessi"] <- "schulthessii" #Source https://www.discoverlife.org/
 
 #Save data
 write.table(x = newdat, file = 'Data/Processed_raw_data/38_Ortiz_etal.csv', 

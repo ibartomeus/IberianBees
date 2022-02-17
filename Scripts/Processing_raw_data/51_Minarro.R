@@ -48,6 +48,10 @@ newdat$Collector <- gsub("\\.", ". ", newdat$Collector)
 newdat$Determined.by <- gsub("\\.", ". ", newdat$Determined.by)
 newdat$Determined.by <- gsub("Identified by A. Núñez, O.  Aguado and/or J.  Ortiz", "A. Núñez, O.  Aguado, J.  Ortiz", newdat$Determined.by)
 
+#Fix subspecies names
+newdat$Subspecies <- gsub("spp.", "", newdat$Subspecies, fixed=T)
+newdat$Subspecies <- gsub("ssp. ", "", newdat$Subspecies, fixed=T)
+
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/51_Minarro.csv", 
             quote = TRUE, sep = ",", col.names = TRUE,

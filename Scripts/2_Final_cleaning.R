@@ -2,7 +2,7 @@
 
 #Read compressed csv with data.table library
 library(data.table)
-data <- read.table("Data/iberian_bees_raw.csv.gz",  header=T, quote="\"", sep=",")
+data <- read.table("Data/Processing_iberian_bees_raw/iberian_bees_raw.csv.gz",  header=T, quote="\"", sep=",")
 #Delete first col that are rownames
 data <- data %>% select(-X)
 
@@ -16,9 +16,10 @@ data <- data %>%  mutate(across(c(colnames(data)), trimws))
 library(stringr)
 #Make upper case first letter of genus
 data$Genus <- str_to_title(data$Genus)
-
+#Make specific epithet to lower case
+data$Species <- tolower(data$Species)
 #Read iberian species masterlist to filter incorrect species names
-master <- read.csv("Data/Iberian_species_masterlist.csv", stringsAsFactors = FALSE)
+master <- read.csv("Data/Processing_iberian_bees_raw/Iberian_species_masterlist.csv", stringsAsFactors = FALSE)
 head(master);nrow(master); unique(master$Genus) #1055 spp and 57 genus
 
 #Check spelling mistakes
@@ -36,7 +37,6 @@ for(i in 1:length(mismatches)){
   }
 }
 tesaurus <- data.frame(mismatches, fixed, stringsAsFactors = FALSE)
-
 
 #Recover subgenus listed as genus
 tesaurus$subgenus <- NA
@@ -76,16 +76,17 @@ mm <- mismatches[-which(mismatches %in% c(master$Subgenus, "Nomia",
                                           "Melissodes", "Haetosmia", "Trianthidium", "Peponapis"))]       
 
 #Save removed genus
-write.csv(mm, "data/genus_removed.csv")
+write.csv(mm, "Data/Processing_iberian_bees_raw/genus_removed.csv")
 data2$rm <- rep(NA, nrow(data2))
 data2$rm[which(data2$Genus %in% mm)] <- "Remove"
 data3 <- data2
+#Safety checking 
 head(data3)
 dim(data3) #[1] 113679     29
 
 
 #######################################-
-#Cleaning of species names ----
+#Cleaning of specific epithet ----
 #######################################-
 #Non identified species are deleted directly
 data <- subset(data3, !Species %in% c("sp.", "sp.1", "sp.2", "sp.3", "sp.4", "sp.5", "sp.6",
@@ -103,8 +104,108 @@ undet_species <- c("spinulosus_or_ferruginatus", "sin gáster....", "rufa/aurule
                    "rufa/aurulenta", "cf pyrenaica", "cf pascuorum", "(microandrena)",
                    "alfkenella o nana", "dargius/cephalotes", "ferruginatus_or_croaticus",
                    "lagopoda-maritima", "lativentre/sexnotatum/laterale",
-                   "leucoleucozonium/immunitum", "malachurum/mediterraneum")
+                   "leucoleucozonium/immunitum", "malachurum/mediterraneum", "diminuta")
 #Filter out undet species
 data <- data %>% filter(!Species %in% undet_species)
-#s <- data.frame(unique(data$Species)) seems ok now
+
+#######################################################################-
+#Now compare full species names with master list of iberian species ----
+#######################################################################-
+#Create Gen_sp
+data$Genus_species <- paste(data$Genus, data$Species)
+
+#compare with Thomas accepted names
+master$Genus_species <- paste(master$Genus, master$Species)
+missed <- data$Genus_species[which(!data$Genus_species %in% master$Genus_species)]
+length(missed) #5631
+unique(missed) #638 (let's see how many we can fix)
+#flag all records not matching Thomas master list.
+data$flag <- ifelse(data$Genus_species %in% master$Genus_species,
+                    NA, data$Genus_species)
+
+############################################################################################-
+#Fill not found genus in iberian masterlist with a manual check when possible ----
+############################################################################################-
+#Load data and use it to update/remove species
+#This file is generated later and now is rename to "to_check.csv"
+#All species names in the file "to_check.csv" would be manually searched
+#and  finally unified to manual checks which would be load here
+manual <- read.csv("Data/Processing_iberian_bees_raw/manual_checks.csv", sep = ";", stringsAsFactors = FALSE, 
+                   na.strings = c(NA, ""))
+#Merge with raw data
+data2 <- merge(data, 
+               manual[,c("flag", "accepted_name", "accepted_subspecies")], 
+               by = "flag", all.x = TRUE)
+#Should have same dimension but different number of cols
+dim(data2) == dim(data) #sanity check expect TRUE FALSE
+#Seems correct
+
+######-
+#Generate list of species for the "to_check" file
+######-
+
+#Mark the species to be removed according to manual checks
+data2$rm[which(data2$accepted_name == "Remove")] <- "Remove"
+#recheck for new species not in manual checking
+to_check <- data2[which(!is.na(data2$flag) & 
+                          is.na(data2$accepted_name) & 
+                          is.na(data2$rm)),c(1,32)]
+to_check
+unique(to_check$flag) #145 species
+#Add needed columns to create another future manual check list of species 
+#(not included in the previous one) 
+to_check$checked <- NA
+to_check$synonym_names <- NA
+to_check$questionable <- NA
+to_check$accepted_name <- NA
+to_check$accepted_subspecies <- NA
+to_check$Notes <- NA
+to_check <- to_check[,c("flag", "checked",
+                        "synonym_names", "questionable",
+                        "accepted_name", "accepted_subspecies", "Notes")]
+
+#Save species list to check manually
+write.csv(to_check, "Data/Processing_iberian_bees_raw/to_check.csv")
+
+######-
+#Unify names
+######-
+#Add subspecies names
+data2$Subspecies <- ifelse(is.na(data2$accepted_subspecies), 
+                    data2$Subspecies, data2$accepted_subspecies) 
+#Convert to NULL the col from manual checks
+data2$accepted_subspecies <- NULL
+
+#Now, unify species names
+summary(as.factor(data2$accepted_name))
+data2$accepted_name <- ifelse(is.na(data2$accepted_name), 
+                       data2$Genus_species, data2$accepted_name)
+
+#For now, we removed flagged species not tagged to remove
+#These are the ones that would be checked in the next manual check, don't worry!
+data2 <- data2[which(is.na(data2$flag)),] #removing here ~5000 entries. Those will be recovered when maual_check.csv is updated
+#Delete flag column and back to data
+data <- subset(data2, select = -flag)
+
+#Split accepted names again and rename genus and species cols
+data$Genus <- word(data$accepted_name,1)
+data$Species <- word(data$accepted_name,2)
+nlevels(factor(data$accepted_name)) #923 species!!
+
+#Recheck after fixes #Note that if flags removed above, this is empty
+missed <- data$accepted_name[which(!data$accepted_name %in% master$Genus_species & is.na(data$rm))]
+#Good!
+
+#Now accepted_name and Genus_species should be identical
+#The original names were "corrected" already and the ones that not
+#have been deleted
+summary(data$Genus_species==data$accepted_name)
+#So now we filter out one of these cols
+data <- data %>% select(-Genus_species)
+
+#########################-
+#Fix now subspecies ----
+#########################-
+
+  s <- data.frame(unique(data$Subgenus))
 

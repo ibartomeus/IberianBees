@@ -318,6 +318,8 @@ newdat$Species[newdat$Species=="monticola rondoui"] <- "monticola"
 #7th
 newdat$Subgenus[newdat$Species=="seladonia-smaragdulus"] <- "seladonia"
 newdat$Species[newdat$Species=="seladonia-smaragdulus"] <- "smaragdulus"
+#Filter non bee species
+newdat <- newdat %>% filter(genus=="Agrotis" & Species=="puta")
 
 #Add leading 0 to month
 newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
