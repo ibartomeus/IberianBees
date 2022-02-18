@@ -204,8 +204,67 @@ summary(data$Genus_species==data$accepted_name)
 data <- data %>% select(-Genus_species)
 
 #########################-
-#Fix now subspecies ----
+#Fix now subgenus ----
 #########################-
+#Convert to NA confusing subgenus
+data$Subgenus[data$Subgenus=="Thoracobombus ? Rhodobombus?"] <- NA
+data$Subgenus[data$Subgenus=="Anthid"] <- NA
+data$Subgenus[data$Subgenus=="Apis"] <- NA
+data$Subgenus[data$Subgenus=="Rhod."] <- NA
+data$Subgenus[data$Subgenus=="Neoeutric."] <- NA
+data$Subgenus[data$Subgenus=="Eutrich."] <- NA
+data$Subgenus[data$Subgenus=="Megach."] <- NA
+#now gsub spaces "()" sobe are in parenthesis
+data$Subgenus <- gsub("[()]", "", data$Subgenus)
+#Seems ok now
 
-  s <- data.frame(unique(data$Subgenus))
+
+################################################################################-
+#Check now the rest of the columns (e.g., country, coordinates, etc) ----
+################################################################################-
+
+#Check country levels
+levels(factor(data$Country))
+#Seems ok
+
+#Check province levels
+nlevels(factor(data$Province))
+#This field is a bit chaotic
+#I'm going to try to recover the province by coordinate
+#Maybe this will clean a bit
+#Nice function to add Spanish standar provinces
+lonlat_to_state <- function(pointsDF,
+                            states = mapSpain::esp_get_prov(),
+                            name_col = "ine.prov.name") {
+  ## Convert points data.frame to an sf POINTS object
+  pts <- st_as_sf(pointsDF, coords = 1:2, crs = 4326)
+  
+  ## Transform spatial data to some planar coordinate system
+  ## (e.g. Web Mercator) as required for geometric operations
+  states <- st_transform(states, crs = 3857)
+  pts <- st_transform(pts, crs = 3857)
+  
+  ## Find names of state (if any) intersected by each point
+  state_names <- states[[name_col]]
+  ii <- as.integer(st_intersects(pts, states))
+  state_names[ii]
+}
+
+#Add province name to the dataset
+data$Longitude <- gsub(",", ".", data$Longitude)
+data$Latitude <- gsub(",", ".", data$Latitude)
+#Separate missing values not allowed for this function
+data_na <- data %>% filter(is.na(Longitude) |is.na(Latitude))
+data_non_na <- data %>% filter(!is.na(Longitude) | !is.na(Latitude))
+#Create dataframe with coordinates
+ine_province <- data.frame(x = data_non_na$Longitude, y = data_non_na$Latitude)
+#Add standard province names
+data_non_na$Province <- lonlat_to_state(ine_province)
+#Rbind again data
+data <- rbind(data_na, data_non_na)
+#Ok some have been fixed by coordinate!
+
+#Keep checking here!
+s <-data$Province 
+
 

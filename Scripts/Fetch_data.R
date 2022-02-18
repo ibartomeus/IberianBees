@@ -1,9 +1,16 @@
 #Fetch data from internet
 
-#Gbif----
+########################################-
+# Download GBIF data ----
+########################################-
+#Load libraries
 library(rgbif)
 library(cleanR)
 library(tidyverse)
+
+########################################-
+#Prepare data download-
+########################################-
 #get codes of places and families
 spain_code <- isocodes[grep("Spain", isocodes$name), "code"]
 portugal_code <- isocodes[grep("Portugal", isocodes$name), "code"]
@@ -78,7 +85,13 @@ dat <-  data.frame(scientificName = NA, decimalLatitude = NA,
                    family = NA, genus = NA, species = NA,
                    year = NA, month = NA, day = NA, recordedBy = NA,
                    identifiedBy = NA, sex = NA,  stateProvince = NA,
-                   locality = NA, coordinatePrecision=NA)
+                   locality = NA,  coordinatePrecision=NA)
+
+#Load data separately
+dat_spain <- dat
+########################################-
+#Fetch Spain data-
+########################################-
 
 for(i in family_key){
   
@@ -99,26 +112,99 @@ for(i in family_key){
   temp <- as.data.frame(temp$data)
   temp <- add_missing_variables(check, temp)
   #store the data
-  dat <- rbind(dat, temp)
+  dat_spain <- rbind(dat_spain, temp)
   
 } 
 
 #Delete first row with full NA's
-dat <- dat[-1,]
-#Add unique identifier
-dat$uid <-  paste("55_Gbif_", 1:nrow(dat), sep = "")
+dat_spain <- dat_spain[-1,]
 
 #check if max number is right
-dat %>% 
+dat_spain %>% 
   group_by(family) %>%
   summarise(no_rows = length(family))
 #7000 as a max for gbif seems ok but this may need to be increased in the next year or so
-#see apidae 6224 records
-head(dat)
-tail(dat)
-dim(dat) #16146 records 14/02/2022
+head(dat_spain)
+tail(dat_spain)
+dim(dat_spain) #16146 records 14/02/2022
+dat_spain$Country <- "Spain" 
+#The good thing of doing this separately 
+#is that we can add country and is missing for many
 
-#iNaturalist----
+########################################-
+#Fetch Portugal data-
+########################################-
+#Exclude coordinate precision for Portugal for now, it is giving trouble...
+#I'll have to check what is happening running one by one, future caveat
+#Seems that there are just few records with coordinate precision overall
+
+check <-  data.frame(scientificName = NA, decimalLatitude = NA,
+                     decimalLongitude = NA,
+                     family = NA, genus = NA, species = NA,
+                     year = NA, month = NA, day = NA, recordedBy = NA,
+                     identifiedBy = NA, sex = NA,  stateProvince = NA,
+                     locality = NA)
+
+check <- define_template(check, NA)
+
+dat <-  data.frame(scientificName = NA, decimalLatitude = NA,
+                   decimalLongitude = NA,
+                   family = NA, genus = NA, species = NA,
+                   year = NA, month = NA, day = NA, recordedBy = NA,
+                   identifiedBy = NA, sex = NA,  stateProvince = NA,
+                   locality = NA)
+dat_portugal <- dat
+
+temp <- NULL
+
+for(i in family_key){
+  
+  temp <- occ_search(taxonKey= i, 
+                     return='data', 
+                     hasCoordinate=TRUE,
+                     hasGeospatialIssue=FALSE,
+                     limit=7000, #safe threshold based on rounding up counts above
+                     country = c(portugal_code),
+                     fields = c('scientificName','decimalLatitude',
+                                'decimalLongitude',
+                                'family','genus', 'species',
+                                'year', 'month', 'day', 'recordedBy',
+                                'identifiedBy', 'sex', 'stateProvince', 
+                                'locality'))
+  
+  #Convert to dataframe and add cols if necessary
+  temp <- as.data.frame(temp$dat)
+  temp <- add_missing_variables(check, temp)
+  #store the data
+  dat_portugal <- rbind(dat_portugal, temp)
+  
+} 
+
+#Delete first row with full NA's
+dat_portugal <- dat_portugal[-1,]
+
+#check if max number is right
+dat_portugal %>% 
+  group_by(family) %>%
+  summarise(no_rows = length(family))
+#7000 as a max for gbif seems ok but this may need to be increased in the next year or so
+head(dat_portugal)
+tail(dat_portugal)
+dim(dat_portugal) #16146 records 14/02/2022
+#Add country
+dat_portugal$Country <- "Portugal"
+dat_portugal$coordinatePrecision <- NA #This was giving trouble!
+colnames(dat_spain)
+colnames(dat_portugal)
+
+#Unify gbif data for Spain and Portugal
+dat <- rbind(dat_spain, dat_portugal)
+#Add unique identifier
+dat$uid <-  paste("55_Gbif_", 1:nrow(dat), sep = "")
+
+########################################-
+# Download inaturalist data ----
+########################################-
 #library(devtools)
 #install_github(repo = "ropensci/rinat")
 library(rinat)
@@ -135,25 +221,11 @@ megachilidae <- get_inat_obs(taxon_name = "Megachilidae", geo = TRUE, maxresults
 melittidae <- get_inat_obs(taxon_name = "Melittidae", geo = TRUE, maxresults = 9999 , bounds = bounds)
 
 #This needs to be fixed, at the moment we are losing species of Apidae because of the max limit
-length(apidae$scientific_name) #7258; 14/02/2022: 9999
-length(andrenidae$scientific_name) #884 (most genus only);  14/02/2022:2148
-length(halictidae$scientific_name) #1152;  14/02/2022:2719
-length(colletidae$scientific_name) #238; 14/02/2022:531
-length(megachilidae$scientific_name) #1262; 14/02/2022:2827
-length(melittidae$scientific_name) #62; 14/02/2022:118
-
 inat <- rbind(apidae_1,apidae_2, andrenidae, halictidae, colletidae, megachilidae)
 unique(inat$scientific_name) #need to clean data, a couple subsp.
 head(inat)
 
-#Other sources----
-#Traitbase?
-#Observado?
-
 #Merge Gen sp plant lat long, date, credit----
-colnames(dat)
-head(dat)
-head(inat)
 colnames(inat)[which(colnames(inat) == "scientific_name")] <- "species"
 colnames(inat)[which(colnames(inat) == "latitude")] <- "decimalLatitude"
 colnames(inat)[which(colnames(inat) == "longitude")] <- "decimalLongitude"
@@ -169,14 +241,14 @@ inat$day <- date$mday #extract the day only
 inat$month <- date$mon+1 #extract the day only
 inat$year <- date$year + 1900 #extract the day only
 inat$uid <- paste("55_inaturalist_", 1:nrow(inat), sep = "")
-
+inat$Country <- NA
 
 d <- rbind(dat[,c("species", "decimalLatitude",  "decimalLongitude", "family",
                   "year", "month",  "day", "recordedBy", "identifiedBy", "sex",
-                  "stateProvince", "locality", "coordinatePrecision", "uid")], 
+                  "stateProvince", "locality", "coordinatePrecision", "uid", "Country")], 
            inat[, c("species", "decimalLatitude",  "decimalLongitude", "family",
                     "year", "month",  "day", "recordedBy", "identifiedBy", "sex",
-                    "stateProvince", "locality", "coordinatePrecision", "uid")])
+                    "stateProvince", "locality", "coordinatePrecision", "uid", "Country")])
 
 #Clean and merge Gbig and inat----
 #species in canary islands

@@ -103,16 +103,16 @@ ine_province <- data.frame(x = newdat$Longitude, y = newdat$Latitude)
 newdat$Province <- lonlat_to_state(ine_province)
 
 #Now check country
-library(maps)
-newdat$Country <- map.where(x = newdat$Longitude, y = newdat$Latitude)
+#library(maps)
+newdat$Country_1 <- map.where(x = newdat$Longitude, y = newdat$Latitude)
+newdat$Country <- ifelse(is.na(newdat$Country) == FALSE, newdat$Country, newdat$Country_1)
+#Delete col
+newdat <- newdat %>% select(-Country_1)
+
 #Rename the spanish label of balearic islands
 newdat$Country[grepl("Spain", newdat$Country)] <- "Spain"
 unique(levels(factor(newdat$Country)))
 
-newdat %>% filter(is.na(newdat$Country))
-
-
-map.where(40.00, 0.066)
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/55_Online_data.csv", 
             quote = TRUE, sep = ",", col.names = TRUE,
