@@ -239,16 +239,16 @@ lonlat_to_state <- function(pointsDF,
                             states = mapSpain::esp_get_prov(),
                             name_col = "ine.prov.name") {
   ## Convert points data.frame to an sf POINTS object
-  pts <- st_as_sf(pointsDF, coords = 1:2, crs = 4326)
+  pts <- sf::st_as_sf(pointsDF, coords = 1:2, crs = 4326)
   
   ## Transform spatial data to some planar coordinate system
   ## (e.g. Web Mercator) as required for geometric operations
-  states <- st_transform(states, crs = 3857)
-  pts <- st_transform(pts, crs = 3857)
+  states <- sf::st_transform(states, crs = 3857)
+  pts <- sf::st_transform(pts, crs = 3857)
   
   ## Find names of state (if any) intersected by each point
   state_names <- states[[name_col]]
-  ii <- as.integer(st_intersects(pts, states))
+  ii <- as.integer(sf::st_intersects(pts, states))
   state_names[ii]
 }
 
@@ -266,7 +266,28 @@ data_non_na$Province <- lonlat_to_state(ine_province)
 data <- rbind(data_na, data_non_na)
 #Ok some have been fixed by coordinate!
 
+#Keep homgeneizing province names (this could go forever)
+#Remember all are ine standard: 
+#https://www.ine.es/daco/daco42/codmun/cod_provincia_estandar.htm
+data$Province[grepl("Alicante", data$Province)] <- "Alicante/Alacant"
+data$Province[grepl("Islas Bal", data$Province)] <- "Balears, Illes"
+data$Province[grepl("Balear", data$Province)] <- "Balears, Illes"
+data$Province[grepl("Guip", data$Province)] <- "Gipuzkoa"
+data$Province <- gsub("Gerona", "Girona", data$Province, fixed=T)
+data$Province[grepl("Valencia", data$Province)] <- "Valencia/València"
+data$Province[grepl("Valencia", data$Province)] <- "Valencia/València"
+data$Province[grepl("Vizcaya", data$Province)] <- "Bizkaia"
+data$Province[grepl("Lérida", data$Province)] <- "Lleida"
+data$Province[grepl("La Coruña", data$Province)] <- "Coruña, A"
+data$Province[grepl("Albacetel", data$Province)] <- "Albacete"
+data$Province[grepl("Jaen", data$Province)] <- "Jaén"
+data$Province[grepl("Majorca", data$Province)] <- "Mallorca"
+data$Province[grepl("Orense", data$Province)] <- "Ourense"
+data$Province[grepl("Léon", data$Province)] <- "León"
+data$Province[grepl("Muercia", data$Province)] <- "Murcia"
+data$Province[grepl("near", data$Province, fixed=T)] <- "Málaga"
+
 #Keep checking here!
-s <-data$Province 
+s <- data.frame(unique(data$Province))
 
 

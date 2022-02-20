@@ -45,6 +45,10 @@ summary(newdat)
 
 #Add country, all records seem that are from Spain
 newdat$Country <- "Spain"
+newdat$Province[newdat$Province=="Canarias"] <- "Islas Canarias"
+newdat$Province[newdat$Province=="Almeria"] <- "Almería"
+newdat$Province[newdat$Province=="Avila"] <- "Ávila"
+newdat$Province[newdat$Province=="Cadiz"] <- "Cádiz"
 
 #Substitute underscore by space
 newdat$Flowers.visited <- gsub("\\_", " ", newdat$Flowers.visited)
