@@ -46,6 +46,8 @@ newdat$Province[newdat$Locality=="Jerez"] <- "Cádiz"
 newdat$Province[newdat$Locality=="Cartagena"] <- "Cádiz"
 newdat$Province[newdat$Locality=="Esporlas"] <- "Baleares"
 newdat$Province[newdat$Locality=="Esporlas"] <- "Baleares"
+newdat$Province[grepl("Polígono I. Olmo", newdat$Locality)] <- NA
+newdat$Locality[grepl("Polígono I. Olmo", newdat$Locality)] <- "Polígono I. Olmo, Almería?"
 
 #Fix spacing in some levels
 levels(factor(newdat$Collector))

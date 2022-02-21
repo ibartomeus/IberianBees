@@ -268,6 +268,9 @@ data <- rbind(data_na, data_non_na)
 
 #Keep homgeneizing province names (this could go forever)
 #Remember all are ine standard: 
+#One exception: Islas Canarias are not divided in their provinces
+#because their are filtered out (easier to have everything as Islas Canarias) 
+#not in the Iberian Peninsula
 #https://www.ine.es/daco/daco42/codmun/cod_provincia_estandar.htm
 data$Province[grepl("Alicante", data$Province)] <- "Alicante/Alacant"
 data$Province[grepl("Islas Bal", data$Province)] <- "Balears, Illes"
@@ -295,6 +298,28 @@ data$Province[grepl("Castellón", data$Province)] <- "Castellón/Castelló"
 data$Province[grepl("Santander", data$Province)] <- "Cantabria"
 data$Province[grepl("Mérida", data$Province)] <- "Badajoz"
 data$Province[grepl("Mahón", data$Province)] <- "Balears, Illes"
+data$Province[grepl("Canary", data$Province)] <- "Islas Canarias"
+data$Province[grepl("Fuerteventura, Canarias", data$Province)] <- "Islas Canarias"
+data$Province[grepl("Islas Canarias", data$Province)] <- "Islas Canarias"
+data$Province[grepl("Cádiz?", data$Province)] <- "Cádiz"
+data$Province[grepl("North-East Spain", data$Province) & grepl("Barcelona", data$Locality)] <- "Barcelona"
+data$Province[grepl("North-East Spain", data$Province)] <- NA #No idea where these are
+data$Province[grepl("PyreneeÃ«n", data$Province) & grepl("Alã²S", data$Locality)] <- "Lleida"
+data$Locality[grepl("PyreneeÃ«n", data$Province) & grepl("Noarte", data$Locality)] <- "Pirineos"
+data$Province[grepl("PyreneeÃ«n", data$Province) & grepl("Noarte", data$Locality)] <- NA
+data$Locality[grepl("PyreneeÃ«n", data$Province)] <- "Pirineos"
+data$Province[grepl("PyreneeÃ«n", data$Province)] <- NA
+data$Province[grepl("Tenerife", data$Province)] <- "Islas Canarias"
+data$Province[grepl("Cataluña", data$Province)] <- NA
+data$Country[grepl("Andorra", data$Province)] <- "Andorra"
+data$Province[grepl("Andorra", data$Province)] <- NA
+data$Country[grepl("Francia", data$Province)] <- "Francia"
+data$Province[grepl("Francia", data$Province)] <- NA
+data$Province[grepl("Estremadura", data$Province)] <- "Estramadura"
+data$Country[grepl("Portugal", data$Province)] <- "Portugal"
+data$Province[grepl("Portugal", data$Province)] <- NA
+
+
 
 #Keep checking here!
 s <- data.frame(unique(data$Province))
