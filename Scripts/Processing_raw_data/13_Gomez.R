@@ -49,6 +49,8 @@ newdat$Province[newdat$Province=="Canarias"] <- "Islas Canarias"
 newdat$Province[newdat$Province=="Almeria"] <- "Almería"
 newdat$Province[newdat$Province=="Avila"] <- "Ávila"
 newdat$Province[newdat$Province=="Cadiz"] <- "Cádiz"
+newdat$Province[newdat$Province=="Aragon"] <- NA
+newdat$Province[newdat$Province=="Extremadura"] <- NA
 
 #Substitute underscore by space
 newdat$Flowers.visited <- gsub("\\_", " ", newdat$Flowers.visited)

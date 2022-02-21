@@ -434,6 +434,19 @@ newdat$Province[newdat$Province=="Andalucía" & newdat$Locality=="Malaga, Torre 
 newdat$Province[newdat$Province=="Vieja"] <- "Soria"
 newdat$Province[newdat$Province=="South-East Spain, dept. MÃ laga"] <- "Málaga"
 newdat$Province[newdat$Locality=="(Huesca) Toria, 1000 m."] <- "Huesca"
+newdat$Province[grepl("Jaramiel", newdat$Locality)] <- "Palencia"
+newdat$Province[grepl("Villanueva de Valdueza", newdat$Locality)] <- "León"
+newdat$Province[grepl("Cuenca", newdat$Locality)] <- "Cuenca"
+newdat$Province[grepl("Huelamo", newdat$Locality)] <- "Cuenca"
+newdat$Locality[grepl("Goria", newdat$Locality)] <- "Coria"
+newdat$Province[grepl("Coria", newdat$Locality)] <- "Cáceres"
+newdat$Province[grepl("Vigo", newdat$Locality)] <- "Pontevedra"
+newdat$Province[grepl("Padrones", newdat$Locality)] <- "Pontevedra"
+newdat$Province[grepl("Galicia", newdat$Province)] <- NA
+newdat$Province[grepl("San Pedro de Alcantara", newdat$Locality)] <- "Málaga"
+newdat$Province[grepl("Moncayo", newdat$Locality)] <- NA
+newdat$Province[grepl("Andalucía", newdat$Province)] <- NA
+newdat$Province[grepl("Helechar", newdat$Province)] <- "Badajoz"
 
 #Organize Portugal by districts (equivalent of provinces in Spain?)
 #This is going to take ages and portugal is small, maybe something to do in the future
