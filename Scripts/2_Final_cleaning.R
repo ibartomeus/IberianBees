@@ -286,8 +286,19 @@ data$Province[grepl("Orense", data$Province)] <- "Ourense"
 data$Province[grepl("Léon", data$Province)] <- "León"
 data$Province[grepl("Muercia", data$Province)] <- "Murcia"
 data$Province[grepl("near", data$Province, fixed=T)] <- "Málaga"
+data$Province[grepl("Álava", data$Province, fixed=T)] <- "Araba/Álava"
+data$Province[grepl("unknown", data$Province, fixed=T)] <- NA
+data$Province[grepl("South-East Spain, dept.", data$Province)] <- "Málaga"
+data$Province[grepl("La Rioja", data$Province)] <- "Rioja, La"
+data$Province[grepl("Algeciras", data$Province)] <- "Cádiz"
+data$Province[grepl("Castellón", data$Province)] <- "Castellón/Castelló"
+data$Province[grepl("Santander", data$Province)] <- "Cantabria"
+data$Province[grepl("Mérida", data$Province)] <- "Badajoz"
+data$Province[grepl("Mahón", data$Province)] <- "Balears, Illes"
 
 #Keep checking here!
 s <- data.frame(unique(data$Province))
 
+s <- data.frame(unique(data$Year))
+s <- data.frame(unique(newdat$Year))
 
