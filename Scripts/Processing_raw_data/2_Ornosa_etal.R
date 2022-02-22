@@ -73,6 +73,10 @@ month_d_1 <- data.frame(t(month_d)) %>%
 #Works well, add now the column back to the dataframe
 newdat$Month <- month_d_1$Month
 
+#Replace hyphen by forward slash
+newdat$Start.date <- gsub("-", "/", newdat$Start.date)
+newdat$End.date <- gsub("-", "/", newdat$End.date)
+
 #Check collector levels
 levels(factor(newdat$Collector)) #they are a bit chaotic
 #Lets unify a bit

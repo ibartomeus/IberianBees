@@ -42,6 +42,19 @@ colnames(newdat)[which(colnames(newdat) == 'Collection.Location_ID')] <- 'Local_
 newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
 newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
 
+#Replace hyphen by forward slash
+newdat$Start.date <- gsub("-", "/", newdat$Start.date)
+newdat$Start.date <- gsub("NA", "1", newdat$Start.date)
+newdat$End.date <- gsub("-", "/", newdat$End.date)
+newdat$End.date <- gsub("NA", "1", newdat$End.date)
+
+#Convert Start.date to day/month/year
+#Two step process
+newdat$Start.date <- as.Date(newdat$Start.date,format = "%d/%m/%Y")
+newdat$Start.date <- format(newdat$Start.date, "%d/%m/%Y")
+newdat$End.date <- as.Date(newdat$End.date,format = "%d/%m/%Y")
+newdat$End.date <- format(newdat$End.date, "%d/%m/%Y")
+
 #Standardize separator
 newdat$Determined.by <- gsub("\\ /", ",", newdat$Determined.by)
 

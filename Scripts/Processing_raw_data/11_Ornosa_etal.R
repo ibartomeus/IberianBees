@@ -34,6 +34,10 @@ newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
 newdat$Year[newdat$Start.date=="02-08-2013"] <- "2013"
 newdat$Month[newdat$Start.date=="02-08-2013"] <- "08"
 
+#Replace hyphen by forward slash
+newdat$Start.date <- gsub("-", "/", newdat$Start.date)
+newdat$End.date <- gsub("-", "/", newdat$End.date)
+
 #Change separator of forward slash to comma
 levels(factor(newdat$Collector))
 newdat$Collector <- gsub("\\/", ", ", newdat$Collector)

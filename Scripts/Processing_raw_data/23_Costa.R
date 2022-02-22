@@ -24,6 +24,19 @@ newdat$Month <- gsub("Marzo", "03", newdat$Month)
 #Add leading 0 to month
 newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
 
+#Fix dates
+library(anytime)  
+#This library is awesome and can stand 
+#leading zeros and without zeros
+#Start.date
+newdat$Start.date <- anydate(newdat$Start.date)
+newdat$Start.date <- as.Date(newdat$Start.date,format = "%Y/%d/%m")
+newdat$Start.date <- format(newdat$Start.date, "%d/%m/%Y")
+#End.date
+newdat$End.date <- anydate(newdat$End.date)
+newdat$End.date <- as.Date(newdat$End.date,format = "%Y/%d/%m")
+newdat$End.date <- format(newdat$End.date, "%d/%m/%Y")
+
 #Convert to link format
 newdat$Reference.doi <- paste0("https://doi.org/",
                                newdat$Reference.doi)

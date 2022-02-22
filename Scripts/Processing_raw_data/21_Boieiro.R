@@ -30,6 +30,18 @@ newdat <- add_uid(newdat = newdat, '21_Boieiro_etal_')
 newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
 newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
 
+#Replace hyphen by forward slash
+newdat$Start.date <- gsub("-", "/", newdat$Start.date)
+newdat$End.date <- gsub("-", "/", newdat$End.date)
+
+#Convert to standard format of the database
+#Start.date
+newdat$Start.date <- as.Date(newdat$Start.date,format = "%Y/%d/%m")
+newdat$Start.date <- format(newdat$Start.date, "%d/%m/%Y")
+#End.date
+newdat$End.date <- as.Date(newdat$End.date,format = "%Y/%d/%m")
+newdat$End.date <- format(newdat$End.date, "%d/%m/%Y")
+
 #Change separator to keep consistency
 newdat$Collector <- gsub("\\ e", ",", newdat$Collector)
 newdat$Determined.by <- gsub("\\ e", ",", newdat$Determined.by)

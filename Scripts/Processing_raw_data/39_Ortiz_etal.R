@@ -37,6 +37,10 @@ newdat$Country <- gsub("Francia", "France", newdat$Country)
 newdat$Province <- trimws(newdat$Province, "r")
 newdat$Locality <- trimws(newdat$Locality, "r")
 
+#Fix start and end dates
+newdat$Start.date[newdat$Start.date=="15-06-2005"] <- "15/06/2005"
+newdat$End.date[newdat$End.date=="30-06-2005"] <- "30/06/2005"
+
 #Standardize collectors
 newdat$Collector <- gsub("A. Glez.-Posada", "A. Glez-Posada", newdat$Collector)
 newdat$Collector <- gsub("A. López /C. Ornosa", "A. López, C. Ornosa", newdat$Collector)

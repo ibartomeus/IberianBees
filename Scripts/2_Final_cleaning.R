@@ -320,10 +320,24 @@ data$Country[grepl("Portugal", data$Province)] <- "Portugal"
 data$Province[grepl("Portugal", data$Province)] <- NA
 
 
+#Select just 3 decimals for coordinates (this rounds last decimals but i think it's fine)
+data$Latitude = formatC(as.numeric(data$Latitude), digits = 3, format = "f")
+data$Longitude = formatC(as.numeric(data$Longitude), digits = 3, format = "f")
 
-#Keep checking here!
-s <- data.frame(unique(data$Province))
+#Add leading 0 to months under 10
+data$Month <- as.numeric(data$Month)  
+data$Month <- ifelse(data$Month < 10, paste0("0", data$Month), data$Month)
 
-s <- data.frame(unique(data$Year))
-s <- data.frame(unique(newdat$Year))
+#Add leading 0 to days under 10
+data$Day <- as.numeric(data$Day)  
+data$Day <- ifelse(data$Day < 10, paste0("0", data$Day), data$Day)
 
+#Now 00 in Start.date is converted to 01 
+data$Start.date <- gsub("00/", "01/", data$Start.date)
+#Fix empty level
+data$Start.date[data$Start.date==""] <- NA
+
+
+s <- data %>% filter(Male=="m")
+
+s <- data.frame(unique(factor(data$Reference.doi)))

@@ -22,6 +22,7 @@ colnames(newdat)[which(colnames(newdat) == 'Frequency.of.visits')] <- 'Not.speci
 newdat$Day <- ifelse(is.na(newdat$Day), temp$day, newdat$Day)
 newdat$Month <- as.character(newdat$Month)
 newdat$Month <- ifelse(as.character(newdat$Month) == "", as.character(temp$month), newdat$Month)
+newdat$Month[newdat$Month=="August"] <- "08"
 newdat$Year <- as.character(newdat$Year)
 newdat$Year <- ifelse(newdat$Year == "", temp$year, newdat$Year)
 

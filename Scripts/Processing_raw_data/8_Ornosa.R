@@ -24,9 +24,20 @@ newdat$Authors.to.give.credit <- "C. Ornosa"
 
 #Add leading 0 to month
 newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+#Replace hyphen by forward slash
+newdat$Start.date <- gsub("-", "/", newdat$Start.date)
+newdat$End.date <- gsub("-", "/", newdat$End.date)
 
 # Rename country
 newdat$Country <- gsub("España", "Spain", newdat$Country)
+
+#Fix female col
+newdat$Worker[newdat$Female=="1 obrera"] <- 1
+newdat$Female[newdat$Female=="1 obrera"] <- NA
+newdat$Worker[newdat$Female=="1 reina"] <- 1
+newdat$Female[newdat$Female=="1 reina"] <- NA
+newdat$Worker[newdat$Female=="1  reina"] <- 1
+newdat$Female[newdat$Female=="1  reina"] <- NA
 
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '8_Ornosa_')

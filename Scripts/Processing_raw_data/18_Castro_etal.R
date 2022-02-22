@@ -30,6 +30,17 @@ for(i in which(temp > 0)){
                               stop = nchar(newdat$Species[i]))
 }
 
+#Replace hyphen by forward slash
+newdat$Start.date <- gsub("-", "/", newdat$Start.date)
+newdat$End.date <- gsub("-", "/", newdat$End.date)
+
+#Start.date
+newdat$Start.date <- as.Date(newdat$Start.date,format = "%Y/%d/%m")
+newdat$Start.date <- format(newdat$Start.date, "%d/%m/%Y")
+#End.date
+newdat$End.date <- as.Date(newdat$End.date,format = "%Y/%d/%m")
+newdat$End.date <- format(newdat$End.date, "%d/%m/%Y")
+
 #Rename country
 newdat$Country <- gsub("España", "Spain", newdat$Country)
 
@@ -50,6 +61,9 @@ newdat <- newdat %>% filter(!Genus=="delete")
 #Fix string pattern that gives trouble when merging all files
 newdat$Notes.and.queries <- gsub("AVAILABLE ON ", "", newdat$Notes.and.queries)
 newdat$Notes.and.queries <- gsub("ADD AN \"A\" BEFORE COLLECTION NUMBER TO SEARCH ON ", "", newdat$Notes.and.queries, fixed=T)
+
+#Fix reference DOI
+newdat$Reference.doi[grepl("DOI", newdat$Reference.doi, ignore.case=FALSE)] <- "https://doi.org/10.1007/s11258-013-0247-1" 
 
 #Add uid
 newdat$uid <- paste("18_Castro_etal_", 1:nrow(newdat), sep = "")

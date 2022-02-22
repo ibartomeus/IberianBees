@@ -30,6 +30,9 @@ newdat$Country <- gsub("España", "Spain", newdat$Country)
 #This dataset has - in some cells instead of NA
 newdat[newdat=="-"] <- NA
 
+#Fix male col
+newdat$Male[newdat$Male=="macho"] <- 1
+
 #add unique identifier
 newdat <- add_uid(newdat = newdat, '10_Ornosa_etal_')
 

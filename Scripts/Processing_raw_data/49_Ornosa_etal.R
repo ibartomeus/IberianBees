@@ -18,6 +18,10 @@ newdat$Day <- temp$day
 newdat$Month <- temp$month
 newdat$Year <- temp$year
 
+#Fix male col
+#Here there are some Collectors? We could recover them
+newdat$Male <- ifelse(newdat$Male==1, 1, NA)
+
 #fix coordinates
 help_geo()
 temp <- mgrs::mgrs_to_latlng(as.character(newdat$UTM)[which(!is.na(newdat$UTM))][-c(8,12,13)])
@@ -48,6 +52,10 @@ newdat$Province[newdat$Locality=="Esporlas"] <- "Baleares"
 newdat$Province[newdat$Locality=="Esporlas"] <- "Baleares"
 newdat$Province[grepl("Polígono I. Olmo", newdat$Locality)] <- NA
 newdat$Locality[grepl("Polígono I. Olmo", newdat$Locality)] <- "Polígono I. Olmo, Almería?"
+
+#Fix start and end dates
+newdat$Start.date[newdat$Start.date=="04-02-1960"] <- "04/02/1960"
+newdat$End.date[newdat$End.date=="14-02-1960"] <- "14/02/1960"
 
 #Fix spacing in some levels
 levels(factor(newdat$Collector))
