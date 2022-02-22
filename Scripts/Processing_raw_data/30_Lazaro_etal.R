@@ -42,6 +42,8 @@ newdat$Reference.doi <- paste0("https://doi.org/",
 #Ugly but works, convert now "https://doi.org/NA" back to NA
 newdat$Reference.doi <- gsub("https://doi.org/NA" , NA, newdat$Reference.doi)
 #DOI works fine
+newdat$Reference.doi[grepl("10.1016", newdat$Reference.doi)] <- "https://doi.org/10.1016/j.agee.2018.05.004"
+newdat$Reference.doi[grepl("10.1111", newdat$Reference.doi)] <- "https://doi.org/10.1111/1365-2745.13334"
 
 #Rename
 levels(factor(newdat$Collector))

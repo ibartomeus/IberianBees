@@ -48,6 +48,10 @@ newdat$Locality <- gsub("Ribarrey.       Cenicero" ,
 newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
 newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
 
+#Replace hyphen by forward slash
+newdat$Start.date <- gsub("-", "/", newdat$Start.date)
+newdat$End.date <- gsub("-", "/", newdat$End.date)
+
 #Delete extra spaces
 newdat$Collector <- gsub("J.  Bosch"  , 
                          "J. Bosch"  , newdat$Collector)

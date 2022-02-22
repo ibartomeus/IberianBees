@@ -41,6 +41,18 @@ newdat$Year <- gsub("1279[sic]", "1927", newdat$Year, fixed = T)
 newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
 newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
 
+#Replace hyphen by forward slash
+newdat$Start.date <- gsub("-", "/", newdat$Start.date)
+newdat$End.date <- gsub("-", "/", newdat$End.date)
+
+#Convert to standard format of the database
+#start.date
+newdat$Start.date <- as.Date(newdat$Start.date,format = "%d/%m/%Y")
+newdat$Start.date<- format(newdat$Start.date, "%d/%m/%Y")
+#end.date
+newdat$End.date <- as.Date(newdat$End.date,format = "%d/%m/%Y")
+newdat$End.date<- format(newdat$End.date, "%d/%m/%Y")
+
 #Unify some collector names
 levels(factor(newdat$Collector))
 newdat$Collector <- gsub("\\[", "", newdat$Collector)
@@ -106,6 +118,7 @@ newdat$Determined.by <- gsub("H. H. Dathe",  "H.H. Dathe", newdat$Determined.by)
 newdat$Month[newdat$Start.date=="13-08-1944"] <- "08"
 newdat$Month[newdat$Start.date=="13-07-1985"] <- "07"
 newdat$Month[newdat$Month=="18"] <- "07"
+newdat$Year[newdat$Year=="192i"] <- NA
 
 #Add credit to authors
 newdat$Authors.to.give.credit <- "P. Alvarez, M. Paris"

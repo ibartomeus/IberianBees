@@ -26,6 +26,22 @@ coord <- as.data.frame(spTransform(utm,
 newdat$Longitude <- coord$coords.x1
 newdat$Latitude <- coord$coords.x2
 
+#Replace hyphen by forward slash
+newdat$Start.date <- gsub("-", "/", newdat$Start.date)
+newdat$End.date <- gsub("-", "/", newdat$End.date)
+#Convert to standard format of the database
+library(anytime)  
+#This library is awesome and can stand 
+#leading zeros and without zeros
+#Start.date
+newdat$Start.date <- anydate(newdat$Start.date)
+newdat$Start.date <- as.Date(newdat$Start.date,format = "%Y/%d/%m")
+newdat$Start.date <- format(newdat$Start.date, "%d/%m/%Y")
+#End.date
+newdat$End.date <- anydate(newdat$End.date)
+newdat$End.date <- as.Date(newdat$End.date,format = "%Y/%d/%m")
+newdat$End.date <- format(newdat$End.date, "%d/%m/%Y")
+
 #Convert DOI to link
 levels(factor(newdat$Reference.doi)) #annoying error in doi (classical excel one)
 #Substitute all partial matches with the correct doi

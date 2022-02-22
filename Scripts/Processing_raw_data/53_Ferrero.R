@@ -51,6 +51,9 @@ newdat$Month[newdat$Month=="May/June"] <- NA
 #Now convert month names to numbers
 newdat$Month <- match(newdat$Month, month.name)
 newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+#Replace hyphen by forward slash
+newdat$Start.date <- gsub("-", "/", newdat$Start.date)
+newdat$End.date <- gsub("-", "/", newdat$End.date)
 
 #Fix one level in Flowers.visited
 newdat$Flowers.visited <- gsub("Brassica oleracea Brassicaceae III", "Brassica oleracea", newdat$Flowers.visited)

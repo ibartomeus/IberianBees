@@ -54,12 +54,17 @@ colnames(month_d) <- "m" #New colname for simplicity
 #Add leading 0 to month column before merging
 newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
 month_d$Month <- newdat$Month #Add new column (the month one from newdat)
+
 #Workaround to fill missing years (needs Tydiverse)
 month_d_1 <- data.frame(t(month_d)) %>% 
   fill(., names(.)) %>%
   t() %>% as.data.frame()
 #Works well, add now the column back to the dataframe
 newdat$Month <- month_d_1$Month
+
+#Replace hyphen by forward slash
+newdat$Start.date <- gsub("-", "/", newdat$Start.date)
+newdat$End.date <- gsub("-", "/", newdat$End.date)
 
 #The number of levels here is a bit crazy
 #and maybe a bit repetitive
