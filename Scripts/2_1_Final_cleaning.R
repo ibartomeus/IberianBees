@@ -337,7 +337,9 @@ data$Start.date <- gsub("00/", "01/", data$Start.date)
 #Fix empty level
 data$Start.date[data$Start.date==""] <- NA
 
+#delete rm col 
+data <- data %>% select(-c(rm))
 
-s <- data %>% filter(Male=="m")
+#Save as a zip file
+write.csv(data, file=gzfile("Data/Processing_iberian_bees_raw/iberian_bees.csv.gz"))
 
-s <- data.frame(unique(factor(data$Reference.doi)))
