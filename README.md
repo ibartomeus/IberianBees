@@ -1,14 +1,12 @@
 [![License](https://licensebuttons.net/l/by/4.0/80x15.png)](https://raw.githubusercontent.com/ibartomeus/IberianBees/master/LICENSE)
 
-*Ver version en español más abajo*  
-
-# IberianBees (english version)
+# Iberianbees database (English version)
 
 This is an in progress repository to document the Iberian Bees Database (v.0.3.0). You can see a summary of the data [here](https://github.com/ibartomeus/IberianBees/blob/master/Summary.md).   
 
-# How to use this repo  
+## How to use this repo  
 
-- If you want to use clean data go to: `data/data_clean.csv`. Metadata can be veiwed [here](http://htmlpreview.github.io/?https://github.com/ibartomeus/IberianBees/blob/master/docs/index.html). If you spot any error, please fill an [issue](https://github.com/ibartomeus/IberianBees/issues) and indicate the uid of the record to fix. If you plan to clean this data further (e.g. dates, localities), let @ibartomeus know to avoid duplicating efforts.
+- If you want to use clean data go to: `data/data_clean.csv`. Metadata can be viewed [here](http://htmlpreview.github.io/?https://github.com/ibartomeus/IberianBees/blob/master/docs/index.html). If you spot any error, please fill an [issue](https://github.com/ibartomeus/IberianBees/issues) and indicate the uid of the record to fix. If you plan to clean this data further (e.g. dates, localities), let @ibartomeus know to avoid duplicating efforts.
 
 - If you want to fix non recognized species (*blink, blink* -> Thomas), the only data that can be manually altered is `data/manual_checks.csv`. We can move this file via email, and that way you don't need to get into git. If you want to see details on removed specimens, check `data/removed.csv`. If you wish to correct any of those, fill an issue [issue](https://github.com/ibartomeus/IberianBees/issues) and indicate the uid of the record to fix. 
 
@@ -36,7 +34,7 @@ This is an in progress repository to document the Iberian Bees Database (v.0.3.0
 
 9- The manuscript is written in folder /manuscript.
 
-# IberianBees (version en español)
+# Iberianbees database (versión en español)
 
 Este es un repositorio en curso para documentar la Base de Datos de Abejas Ibéricas (v.0.3.0). Puedes ver un extracto de estos datos [aquí](https://github.com/ibartomeus/IberianBees/blob/master/Summary.md).
 
