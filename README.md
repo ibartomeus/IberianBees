@@ -1,8 +1,8 @@
 [![License](https://licensebuttons.net/l/by/4.0/80x15.png)](https://raw.githubusercontent.com/ibartomeus/IberianBees/master/LICENSE)
 
-# Iberianbees database :bee: (English version)
+# IberianBees database v.0.3.0 :bee: (English version)
 
-This is an in progress repository to document the Iberian Bees Database (v.0.3.0). You can see a summary of the data [here](https://github.com/ibartomeus/IberianBees/blob/master/Summary.md).   
+This is a work in progress repository to document the distribution and diversity of bee species of the Iberian Peninsula. You can see a summary of the data [here](https://github.com/ibartomeus/IberianBees/blob/master/Summary.md).   
 
 ## How to use this repo  
 
@@ -34,7 +34,7 @@ This is an in progress repository to document the Iberian Bees Database (v.0.3.0
 
 9- The manuscript is written in folder /manuscript.
 
-# Iberianbees database :bee: (versión en español)
+# Iberianbees database (v.0.3.0) :bee: (versión en español)
 
 Este es un repositorio en curso para documentar la Base de Datos de Abejas Ibéricas (v.0.3.0). Puedes ver un extracto de estos datos [aquí](https://github.com/ibartomeus/IberianBees/blob/master/Summary.md).
 
