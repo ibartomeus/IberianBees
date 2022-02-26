@@ -34,7 +34,7 @@ This is a work in progress repository to document the distribution and diversity
 
 9- The manuscript is written in folder /manuscript.
 
-# Iberianbees database (v.0.3.0) :bee: (versión en español)
+# Iberianbees database v.0.3.0 :bee: (versión en español)
 
 Este es un repositorio en curso para documentar la Base de Datos de Abejas Ibéricas (v.0.3.0). Puedes ver un extracto de estos datos [aquí](https://github.com/ibartomeus/IberianBees/blob/master/Summary.md).
 
