@@ -341,5 +341,5 @@ data$Start.date[data$Start.date==""] <- NA
 data <- data %>% select(-c(rm))
 
 #Save as a zip file
-write.csv(data, file=gzfile("Data/Processing_iberian_bees_raw/iberian_bees.csv.gz"))
+write.csv(data, file=gzfile("Data/iberian_bees.csv.gz"))
 

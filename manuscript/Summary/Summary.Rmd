@@ -68,11 +68,28 @@ plotmap
 library(sf)
 library(raster)
 library(rasterVis)
-
+library(tidyverse)
 crs.geo <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
 crs.laea <- "+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs"
 
-dat <- subset(data, !is.na(Latitude) & !is.na(Longitude))
+library(data.table)
+data <- read.table("../../Data/iberian_bees.csv.gz",  header=T, quote="\"", sep=",")
+
+#Prepare data
+data$Longitude <- as.numeric(data$Longitude)
+data$Latitude <- as.numeric(data$Latitude)
+data <- data %>% filter(!is.na(Latitude) & !is.na(Longitude))
+#Keep points on balearic islands
+data_1 <- data %>% filter(Province=="Balears, Illes")
+data_1$Country_1 <- NA
+
+#Filter points in Spain and Portugal
+data$Country_1 <- NA
+data$Country_1 <- maps::map.where(x = data$Longitude, y = data$Latitude)
+data <- data %>% filter(Country_1=="Spain" | Country_1=="Portugal")
+#Rbind points that are in Spain with the ones of Balearic islands
+dat <- rbind(data, data_1)
+
 datos.sf <- st_as_sf(dat,
                      coords = c("Longitude", "Latitude"),
                      crs = crs.geo)
