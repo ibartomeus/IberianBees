@@ -104,6 +104,7 @@ newdat$Province <- lonlat_to_state(ine_province)
 
 #Now check country
 #library(maps)
+newdat$Country <- NA
 newdat$Country_1 <- maps::map.where(x = newdat$Longitude, y = newdat$Latitude)
 newdat$Country <- ifelse(is.na(newdat$Country) == FALSE, newdat$Country, newdat$Country_1)
 #Delete col
