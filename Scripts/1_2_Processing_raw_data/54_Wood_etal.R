@@ -893,7 +893,8 @@ newdat$Locality[newdat$Locality=="Segovia"]  <- NA
 #d <- as.data.frame(levels(factor(newdat$Longitude)))
 #One Longitude val. to fix
 newdat$Longitude[newdat$Longitude=="-4006"] <- "-4.006"
-
+newdat$Latitude <- as.numeric(newdat$Latitude)
+newdat$Latitude[newdat$Latitude>1000] <- NA
 #Years also look good
 #levels(factor(newdat$Year))
 #Months look good too
