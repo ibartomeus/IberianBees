@@ -13,8 +13,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r include=FALSE}
-data <- read.csv("data/data_clean.csv", stringsAsFactors = FALSE)
-master <- read.csv("data/Iberian_species_masterlist.csv", stringsAsFactors = FALSE)
+library(data.table)
+data <- read.table("../../Data/iberian_bees.csv.gz",  header=T, quote="\"", sep=",")
+
+master <- read.csv("../../Data/Processing_iberian_bees_raw/Iberian_species_masterlist.csv", stringsAsFactors = FALSE)
 master$accepted_name <- paste(master$Genus, master$Species, sep = " ")
 colnames(data)
 colnames(master)
@@ -25,7 +27,7 @@ length(unique(data$accepted_name))
 nrow(master)
 ```
 
-The Iberian Bee Database contains `r nrow(data)` entries of bee occurrences over the peninsula and nearby islands. We have at least one record of `r length(unique(data$accepted_name))` species out of the `r nrow(master)` species known to occurr in the area. 
+The Iberian Bee Database contains `r nrow(data)` entries of bee occurrences over the peninsula and nearby islands. We have at least one record of `r length(unique(data$accepted_name))` species out of the `r nrow(master)` species known to occurr in the Iberian Peninsula. 
 
 We retained only valid, updated species names. All records have accompaining metadata on where and when it was collected, and on who collected, identified and curated the data. We are still reciving and cleaning data, but we aim to publish the open database after summer.
 
