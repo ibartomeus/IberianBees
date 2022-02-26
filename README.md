@@ -1,6 +1,6 @@
 [![License](https://licensebuttons.net/l/by/4.0/80x15.png)](https://raw.githubusercontent.com/ibartomeus/IberianBees/master/LICENSE)
 
-# Iberianbees database (English version)
+# Iberianbees database :bee: (English version)
 
 This is an in progress repository to document the Iberian Bees Database (v.0.3.0). You can see a summary of the data [here](https://github.com/ibartomeus/IberianBees/blob/master/Summary.md).   
 
