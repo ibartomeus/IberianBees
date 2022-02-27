@@ -1,0 +1,261 @@
+﻿Genus;Subgenus;Species;Locality;Municipe;Province;Country;Day;Month;Year;Start.date;End.date;Altitud;GPS;GPS;Collector;Determined.by;Year.ident;Male;Female;Worker;Proced/caja
+Megachile ;Eutricharaea;leachella;NA;P.N. Cabañeros;NA;España;1;9;2006;NA;NA;NA;NA;NA;M.A. Marcos ;C. Ornosa;2007;NA;1;NA;Uni Alicante
+Bombus ;Bombus;terrestris ;Cerro Colgado, pinarcillo;Sierra de Guadarrama;Madrid;España;16;7;2012;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;NA;NA;UCME
+Bombus ;Bombus;terrestris ;Las Dehesas. Albergue;Sierra de Guadarrama;Madrid;España;15;7;2012;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Bombus;terrestris ;Cerro Colgado;Sierra de Guadarrama;Madrid;España;15;7;2012;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Las Dehesas. Albergue;Sierra de Guadarrama;Madrid;España;14;7;2012;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Bombus;terrestris ;Ciudad Universitaria;NA;Madrid;España;13;9;2009;NA;NA;NA;NA;NA;V. Monserrat;C. Ornosa;2012;1;NA;NA;UCME
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;1;NA;NA;UCME
+Bombus ;Megabombus;hortorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;1;NA;NA;UCME
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;1;NA;UCME
+Bombus ;Bombus;terrestris;Cabo de Gata;NA;Almería;España;NA;NA;2009;NA;NA;NA;NA;NA;P. Vargas;C. Ornosa;2012;NA;1;NA;UCME
+Bombus ;Bombus;terrestris;Valsaín;NA;Segovia;España;14;7;2009;NA;NA;NA;NA;NA;R. Outerelo;C. Ornosa;2012;NA;1;NA;UCME
+Bombus ;Bombus;terrestris;Cerros yeso, Aranjuez;NA;Madrid;España;24;4;1977;NA;NA;NA;NA;NA;J. L. Viejo;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Bombus;terrestris;CSIC Madrid;NA;Madrid;España;16;4;1985;NA;NA;NA;NA;NA;A. Fdez. Torres;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Bombus;terrestris;Candelario;NA;Salamanca;España;22;4;1976;NA;NA;NA;NA;NA;Pilar Esteban;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Cantoblanco, UAM;Tres Cantos;Madrid;España;NA;11;1979;NA;NA;NA;NA;NA;J. L. Viejo;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Thoracobombus;pascuorum;Cerro Colgado;Sierra de Guadarrama (Cercedilla);Madrid;España;31;7;1991;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Cerro Colgado;Sierra de Guadarrama (Cercedilla);Madrid;España;25;7;1990;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Cerro Colgado;Sierra de Guadarrama (Cercedilla);Madrid;España;20;7;1990;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Cerro Colgado;Sierra de Guadarrama (Cercedilla);Madrid;España;25;7;1990;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Thoracobombus;pascuorum;Cerro Colgado;Sierra de Guadarrama (Cercedilla);Madrid;España;25;7;1990;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Cerro Colgado;Sierra de Guadarrama (Cercedilla);Madrid;España;23;7;1991;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;NA;NA;NA
+Bombus ;Thoracobombus;pascuorum;Cerro Colgado;Sierra de Guadarrama (Cercedilla);Madrid;España;28;7;1991;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;1;NA;UCME
+Bombus ;Thoracobombus;pascuorum;Cerro Colgado;Sierra de Guadarrama (Cercedilla);Madrid;España;25;7;1990;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;1;NA;UCME
+Bombus ;Thoracobombus;pascuorum;Cerro Colgado;Sierra de Guadarrama (Cercedilla);Madrid;España;17;7;1990;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;1;NA;UCME
+Bombus ;Thoracobombus;pascuorum;Cerro Colgado;Sierra de Guadarrama (Cercedilla);Madrid;España;9;7;1990;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;1;NA;UCME
+Bombus ;Megabombus;hortorum;Mondragón;NA;Guipúzkoa;España;NA;5;1973;NA;NA;NA;NA;NA;R. M. Muñoz;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Megabombus;hortorum;Espalion;NA;NA;Francia;4;4;1972;NA;NA;NA;NA;NA;A. García;C. Ornosa;2012;NA;NA;NA;NA
+Bombus ;Megabombus;hortorum;Sendero San Glorio;NA;Cantabria;España;2;5;1996;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Megabombus;hortorum;Sendero San Glorio;NA;Cantabria;España;2;5;1996;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;UCME
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0;1;UCME
+Bombus ;Megabombus;hortorum;Béjar. Cª: Cast-Cand.;NA;Salamanca;España;4;7;1977;NA;NA;1040;NA;NA;S. Fdez. Gayubo;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Premiá de Dalt;NA;Barcelona;España;13;8;1982;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;NA
+Bombus ;Thoracobombus;pascuorum;Premiá de Dalt;NA;Barcelona;España;13;8;1983;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Premiá de Dalt;NA;Barcelona;España;13;8;1984;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Premiá de Dalt;NA;Barcelona;España;13;8;1985;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;NA
+Bombus ;Thoracobombus;pascuorum;Premiá de Dalt;NA;Barcelona;España;13;8;1986;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Sta. Cruz de Oleiros;NA;La Coruña;España;16;8;1995;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;1;NA;NA;NA
+Bombus ;Thoracobombus;pascuorum;Valença do Minho;NA;NA;Portugal;11;8;1995;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Thoracobombus;pascuorum;Circo de Fuente Dé;NA;Cantabria;España;10;7;1995;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Circo de Fuente Dé;NA;Cantabria;España;10;7;1995;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;UCME
+Bombus;Megabombus;reinigiellus;Laguna Majano;Capileira;Granada;España;24;8;1988;NA;NA;NA;NA;NA;F. J. Ortiz-Sánchez;C. Ornosa;1988/2012;NA;0;1;NA
+Bombus;Megabombus;reinigiellus;Laguna Majano;Capileira;Granada;España;24;8;1988;NA;NA;NA;NA;NA;F. J. Ortiz-Sánchez;C. Ornosa;1988/2012;NA;0;1;NA
+Bombus;Megabombus;reinigiellus;Laguna Majano;Capileira;Granada;España;24;8;1988;NA;NA;NA;NA;NA;F. J. Ortiz-Sánchez;C. Ornosa;1988/2012;NA;0;1;NA
+Bombus;Megabombus;reinigiellus;Laguna Majano;Capileira;Granada;España;24;8;1988;NA;NA;NA;NA;NA;F. J. Ortiz-Sánchez;C. Ornosa;1988/2012;NA;0;1;NA
+Bombus ;Kallobombus;soroeensis;Baqueira, Ruda;NA;Lérida;España;27;7;2006;NA;NA;1.550 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;1;NA;UCME
+Bombus ;Kallobombus;soroeensis;Estany Ratera, Mirador;PN Aiguestortes;Lérida;España;26;7;2006;NA;NA;2.200 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Kallobombus;soroeensis;Soldeu;NA;Lérida;Andorra;28;7;2006;NA;NA;2.300 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;NA
+Bombus ;Kallobombus;soroeensis;Salardú;NA;Lérida;España;27;7;2006;NA;NA;1. 350 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;1;NA;UCME
+Bombus ;Kallobombus;soroeensis;Puerto de Tarna;NA;Léon;España;NA;NA;NA;18-06-2008;21-06-2008;1.490 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Kallobombus;soroeensis;Selva de Oza, subida Aguas Tortas;PN Valles Occidentales;Huesca;España;10;7;2009;NA;NA;1.500 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;1;NA;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Pto Sahún;Valle de Benasque;Huesca;España;14;7;2011;NA;NA;1.512 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;La Besurta. Ibón de Vilamorta;Parque N. Posets y la Madaleta;Huesca;España;15;7;2011;NA;NA;1.994 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;1;NA;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;La Besurta. Ibón de Vilamorta;Parque N. Posets y la Madaleta;Huesca;España;15;7;2011;NA;NA;1.700 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;1;NA;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Ctra. Rodiezno-Poladura de la Tercia ;NA;León;España;27;6;2010;NA;NA;1.250 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;1;NA;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Pto. de Tarna;NA;León;España;NA;NA;NA;18-06-2008;21-06-2008;1.490 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;1;NA;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Pto. de Tarna;NA;León;España;NA;NA;NA;18-06-2008;21-06-2008;1.490 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;NA;NA;NA
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Maraña bajo Tarna;NA;León;España;NA;NA;NA;18-06-2008;21-06-2008;1.400 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Maraña bajo Tarna;NA;León;España;NA;NA;NA;18-06-2008;21-06-2008;1.400 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Maraña bajo Tarna;NA;León;España;NA;NA;NA;18-06-2008;21-06-2008;1.400 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Maraña bajo Tarna;NA;León;España;NA;NA;NA;18-06-2008;21-06-2008;1.400 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Valle de Arán;Pirineos;Lérida;España;7;8;2012;NA;NA;NA;NA;NA;P. Vargas (de M. Luceño);C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Valle de Arán;Pirineos;Lérida;España;7;8;2012;NA;NA;NA;NA;NA;P. Vargas (de M. Luceño);C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Valle de Arán;Pirineos;Lérida;España;7;8;2012;NA;NA;NA;NA;NA;P. Vargas (de M. Luceño);C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Valle de Arán;Pirineos;Lérida;España;7;8;2012;NA;NA;NA;NA;NA;P. Vargas (de M. Luceño);C. Ornosa;2012;NA;0;1;UCME
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0;1;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Pto. de San Glorio, Collado de Llesba;Picos de Europa;Cantabria;España;16;6;2006;NA;NA;1.609 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;NA;NA;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Pto. de San Glorio, Collado de Llesba;Picos de Europa;Cantabria;España;16;6;2006;NA;NA;1.609 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Pto. de San Glorio, Collado de Llesba;Picos de Europa;Cantabria;España;16;6;2006;NA;NA;1.609 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Pto. de San Glorio, Collado de Llesba;Picos de Europa;Cantabria;España;16;6;2006;NA;NA;1.609 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;NA;NA;NA
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Pto. de San Glorio, Collado de Llesba;Picos de Europa;Cantabria;España;16;6;2006;NA;NA;1.609 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0;1;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Alto de Abodi;Pirineos;Navarra;España;11;7;2009;NA;NA;1.400 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Alto de Abodi;Pirineos;Navarra;España;11;7;2009;NA;NA;1.400 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;NA;NA;UCME
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0;1;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Pto. de la Bonaigua, La Peulla;Pirineos;Lérida;Andorra;26;7;2006;NA;NA;1.950 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;NA;NA;NA
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Pto. de la Bonaigua, La Peulla;Pirineos;Lérida;Andorra;26;7;2006;NA;NA;1.950 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Pto. de la Bonaigua, La Peulla;Pirineos;Lérida;Andorra;26;7;2006;NA;NA;1.950 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;NA;NA;NA
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;1;NA;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Soldeu;Pirineos;Andorra;Andorra;28;7;2006;NA;NA;2.300 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;1;NA;UCME
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;1;NA;NA;UCME
+Bombus ;Thoracobombus ? Rhodobombus?;mesomelas;Baqueira, Ruda;Pirineos;Lérida;España;27;7;2006;NA;NA;1.550 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Campanarios de Azaba;NA;Salamanca;España;26;6;2010;NA;NA;NA;NA;NA;Micó et al.;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Campanarios de Azaba;NA;Salamanca;España;26;6;2010;NA;NA;NA;NA;NA;Micó et al.;C. Ornosa;2012;NA;1;NA;UCME
+Bombus ;Bombus;terrestris;Campanarios de Azaba;NA;Salamanca;España;26;6;2010;NA;NA;NA;NA;NA;Micó et al.;C. Ornosa;2012;NA;NA;NA;NA
+Bombus ;Bombus;terrestris;Campanarios de Azaba;NA;Salamanca;España;26;6;2010;NA;NA;NA;NA;NA;Micó et al.;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Campanarios de Azaba;NA;Salamanca;España;26;6;2010;NA;NA;NA;NA;NA;Micó et al.;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Campanarios de Azaba;NA;Salamanca;España;26;6;2010;NA;NA;NA;NA;NA;Micó et al.;C. Ornosa;2012;NA;NA;NA;NA
+Bombus ;Bombus;terrestris;Campanarios de Azaba;NA;Salamanca;España;12;4;2011;NA;NA;NA;NA;NA;Quinto et al.;C. Ornosa;2012;NA;0;1;UCME
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0;1;UCME
+Bombus;Melanobombus;lapidarius;Panticosa, alto;NA;Huesca;NA;5;6;2006;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2006;NA;NA;NA;NA
+Bombus;Melanobombus;lapidarius;Panticosa, alto;NA;Huesca;NA;5;6;2006;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2006;NA;0;1;UCME
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0;1;UCME
+Bombus;Melanobombus;lapidarius;Puerto Sahún;Valle de Benasque;Huesca;NA;14;7;2011;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2011;NA;NA;NA;NA
+Bombus;Melanobombus;lapidarius;Chía, Mirador;Valle de Benasque;Huesca;NA;14;7;2011;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2011;NA;0;1;UCME
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0;1;UCME
+Bombus;Thoracobombus;ruderarius;Crta La Molina;NA;Gerona;NA;25;7;2009;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2009;NA;NA;NA;NA
+Bombus;Thoracobombus;ruderarius;Crta La Molina;NA;Gerona;NA;25;7;2009;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2009;NA;NA;NA;NA
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0;1;UCME
+Bombus;Thoracobombus;ruderarius;Subida Cascada Estany Ratera;PN. Aigüestortes;Lérida;NA;26;7;2006;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2006;NA;0;1;UCME
+Bombus;Thoracobombus;ruderarius;Subida Cascada Estany Ratera;PN. Aigüestortes;Lérida;NA;26;7;2007;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2006;NA;0;1;UCME
+Bombus ;Alpigenobombus;wurfleinii;Nuria, Bosc de la Verge;NA;Gerona;España;24;7;2009;NA;NA;2000 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Alpigenobombus;wurfleinii;La Molina. Roc Blanco;NA;Gerona;España;25;7;2009;NA;NA;1650 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Alpigenobombus;wurfleinii;Gradas de Soaso;P.N. Ordesa;Huesca;España;4;7;2006;NA;NA;1700 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Alpigenobombus;wurfleinii;Puerto de la Magdalena;NA;León;España;18;21;6;18-06-2008;21-06-2008;1435 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Alpigenobombus;wurfleinii;Puerto de las Señales;NA;León;España;18;21;6;18-06-2008;21-06-2008;1490 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Psithyrus;Ashtonipsithyrus;bohemicus;Liñares;Sierra del Caurel;Lugo;España;3;9;2010;NA;NA;NA;NA;NA;R. Outerelo;C. Ornosa;2010;1;NA;NA;UCME
+Psithyrus;Psithyrus;rupestris;Liñares;Sierra del Caurel;Lugo;España;3;9;2010;NA;NA;NA;NA;NA;R. Outerelo;C. Ornosa;2010;1;NA;NA;UCME
+Bombus;Thoracobombus;sylvarum;Camijanes;NA;Cantabria;España;18;9;2010;NA;NA;NA;43º20´805´´N;4º29´305´´W;C. Ornosa;C. Ornosa;2010;NA;1;NA;UCME
+Bombus;Thoracobombus;pascuorum;Rionansa;NA;Cantabria;España;18;9;2010;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2010;NA;0;1;UCME
+Bombus;Kallobombus;soroeensis;Pto. Piedrasluengas;NA;Palencia;España;19;9;2008;NA;NA;1355;NA;NA;C. Ornosa;C. Ornosa;2010;NA;0;1;UCME
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;C. Ornosa;NA;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;España;24;7;2012;NA;NA;3.210 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;España;24;7;2012;NA;NA;3.210 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;España;24;7;2012;NA;NA;3.210 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;España;24;7;2012;NA;NA;3.210 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;España;24;7;2012;NA;NA;3.210 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;España;24;7;2012;NA;NA;2.170 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Psithyrus;vestalis;Veleta;PN Sierra Nevada;Granada;España;25;7;2012;NA;NA;3.300 m;NA;NA;J. Freijanes;C. Ornosa;2013;1;NA;NA;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;España;25;7;2012;NA;NA;3.300 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;España;25;7;2012;NA;NA;3.300 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;España;25;7;2012;NA;NA;3.300 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;España;25;7;2012;NA;NA;3.300 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3.300 m;NA;NA;C. Ornosa;C. Ornosa;NA;1;NA;NA;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3.300 m;NA;NA;J. Freijanes;C. Ornosa;2014;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3.300 m;NA;NA;D. Romero;C. Ornosa;2014;NA;0;1;CACLM
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;España;24;7;2012;NA;NA;2.170 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Psithyrus;maxillosus;Veleta;PN Sierra Nevada;Granada;España;24;7;2012;NA;NA;2.800 m;NA;NA;C. Ornosa;C. Ornosa;2014;NA;1;NA;NA
+Bombus;Bombus;terrestris;Los Balbases;NA;Burgos;España;17;9;2010;NA;NA;1154;NA;NA;C. Ornosa;C. Ornosa;2014;NA;0;1;CACLM
+Bombus;Bombus;terrestris;Los Balbases;NA;Burgos;España;17;9;2010;NA;NA;1154;NA;NA;C. Ornosa;C. Ornosa;2012;NA;1;NA;UCME
+Bombus;Bombus;terrestris;Los Balbases;NA;Burgos;España;17;9;2010;NA;NA;1154;NA;NA;C. Ornosa;C. Ornosa;2012;NA;1;NA;UCME
+Bombus;Bombus;terrestris;Los Balbases;NA;Burgos;España;17;9;2010;NA;NA;1154;NA;NA;C. Ornosa;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Bombus;terrestris;Monte Cidade Fornelos Montes;NA;Pontevedra;NA;25;8;2011;NA;NA;NA;NA;NA;R. Outerelo;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Bombus;terrestris ;Moratalla;NA;NA;España;10;6;2012;NA;NA;NA;NA;NA;NA;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Bombus;terrestris ;Moratalla;NA;NA;España;10;6;2012;NA;NA;NA;NA;NA;NA;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Peñalara;Sierra de Guadarrama;Madrid;España;28;6;2011;NA;NA;NA;NA;NA;J. Lorente;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Bombus;terrestris;Peñalara;Sierra de Guadarrama;Madrid;España;28;6;2011;NA;NA;NA;NA;NA;J. Lorente;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Peñalara;Sierra de Guadarrama;Madrid;España;5;7;2011;NA;NA;NA;NA;NA;C. Lara;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Peñalara;Sierra de Guadarrama;Madrid;España;22;6;2011;NA;NA;NA;NA;NA;C. Lara;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris ;Cerro Colgado, pinarcillo;Sierra de Guadarrama;Madrid;España;16;7;2012;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris ;Las Dehesas. Albergue;Sierra de Guadarrama;Madrid;España;15;7;2012;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris ;Cerro Colgado;Sierra de Guadarrama;Madrid;España;15;7;2012;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Las Dehesas. Albergue;Sierra de Guadarrama;Madrid;España;14;7;2012;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;NA;1;NA;NA;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;España;24;7;2012;NA;NA;3.210 m;NA;NA;C. Ornosa;C. Ornosa;2014;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;NA;24;7;2012;NA;NA;3.210 m;NA;NA;C. Ornosa;C. Ornosa;2014;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;NA;24;7;2012;NA;NA;3.210 m;NA;NA;C. Ornosa;C. Ornosa;2014;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;NA;24;7;2012;NA;NA;3.210 m;NA;NA;C. Ornosa;C. Ornosa;2014;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;NA;24;7;2012;NA;NA;3.210 m;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Pto. Morcuera;NA;Madrid;NA;24;7;2011;NA;NA;NA;NA;NA;P. Vargas;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Valsaín;NA;Segovia;NA;14;7;2010;NA;NA;NA;NA;NA;R. Outerelo;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Valsaín;NA;Segovia;NA;14;7;2010;NA;NA;NA;NA;NA;R. Outerelo;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Valsaín;NA;Segovia;NA;14;7;2010;NA;NA;NA;NA;NA;R. Outerelo;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Valsaín;NA;Segovia;NA;14;7;2010;NA;NA;NA;NA;NA;R. Outerelo;C. Ornosa;2014;1;NA;NA;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3.300 m;NA;NA;C. Ornosa;NA;NA;NA;NA;NA;NA
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3.300 m;NA;NA;C. Ornosa;C. Ornosa;2014;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3.300 m;NA;NA;C. Ornosa;C. Ornosa;2014;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3.300 m;NA;NA;C. Ornosa;C. Ornosa;2014;1;0;1;UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3.300 m;NA;NA;J. Freijanes;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Punta de la Mona;NA;Granada;NA;19;8;2011;NA;NA;0 m;NA;NA;V. Monserrat;C. Ornosa;2012;NA;0;1;UCME
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Bombus;terrestris;Panticosa;NA;Huesca;NA;NA;7;2011;NA;NA;0 m;NA;NA;CA;C. Ornosa;2013;1;NA;NA;UCME
+Bombus ;Bombus;terrestris;Panticosa;NA;Huesca;NA;NA;7;2011;NA;NA;0 m;NA;NA;CA;C. Ornosa;2013;1;NA;NA;UCME
+Bombus ;Bombus;terrestris;Nava de San Pedro;Sierra de Cazorla;Jaén;NA;17;6;2010;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Alameda del Moncayo;NA;Zaragoza;NA;NA;7;2010;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2013;1;NA;NA;UCME
+Bombus ;Bombus;terrestris;Alameda del Moncayo;NA;Zaragoza;NA;NA;7;2010;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Tierga ;NA;Zaragoza;NA;NA;7;2010;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;SªNoguerira;Braganza;NA;Portugal;22;5;2010;NA;NA;NA;NA;NA;NA;C. Ornosa;2013;NA;0;1;UCME
+Bombus ;Bombus;terrestris;SªNoguerira;Braganza;NA;Portugal;22;5;2010;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+Bombus ;Bombus;terrestris;SªNoguerira;Braganza;NA;Portugal;22;5;2010;NA;NA;NA;NA;NA;NA;NA;2012;NA;1;NA; UCME
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;NA;24;7;2012;NA;NA;2.170 m;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;Botánico
+Bombus ;Bombus;terrestris;NA;PN Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3.300 m;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;Botánico
+Bombus ;Bombus;terrestris;NA;PN Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3.300 m;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;Botánico
+Bombus ;Bombus;terrestris;Veleta;PN Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3.300 m;NA;NA;D. Romero;C. Ornosa;2012;1;NA;NA;UCME
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;C. Ornosa;2012;1;NA;NA;UCME
+Bombus;Thoracobombus;humilis;Pardines;Pirineos;Gerona;NA;6;6;2012;NA;NA;NA;NA;NA;A. Glez-Posada;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Mergabombus;ruderatus ;Cerro Colgado, pinarcillo;Sierra de Guadarrama;Madrid;España;16;7;2012;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Megabombus;hortorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Megabombus;hortorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Megabombus;hortorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Megabombus;hortorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Megabombus;hortorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Megabombus;hortorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;NA;NA;NA;NA
+Bombus ;Megabombus;hortorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Megabombus;hortorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Megabombus;hortorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Megabombus;hortorum;La Molina Roc Blanco;NA;Gerona;España;24;7;2009;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;UCME
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;NA;NA;NA;UCME
+Bombus ;Thoracobombus;pascuorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;1;NA;NA;UCME
+Bombus ;Thoracobombus;pascuorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;NA;0;1;UCME
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;;;NA;NA;NA;NA;NA;NA;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;NA;NA;NA;NA
+Bombus ;Thoracobombus;pascuorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;NA;NA;NA;NA
+Bombus ;Thoracobombus;pascuorum;Moscoso;NA;Pontevedra;España;NA;NA;NA;10-07-2012;28-07-2012;NA;NA;NA;R. Outerelo;C. Ornosa;2012;NA;NA;NA;NA
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Cerro Colgado, pinarcillo;Sierra de Guadarrama;Madrid;España;16;7;2012;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Nava de San Pedro;P.N. Sierra de Cazorla…;Jaén;España;17;6;2010;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;NA;NA;NA
+Bombus;Megabombus;reinigiellus;La Carihuela, Veleta;Monachil;Granada;España;20;8;2006;NA;NA;3200;NA;NA;F. J. Ortiz-Sánchez;C. Ornosa;2012;NA;1;NA;UCME
+Bombus;Megabombus;reinigiellus;Tajos Virgen, Veleta;Capileira;Granada;España;20;8;2006;NA;NA;3255;NA;NA;F. J. Ortiz-Sánchez;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Ribes de Fresser;NA;Gerona;España;NA;NA;2009;NA;NA;NA;NA;NA;P. Vargas;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Megabombus;hortorum;Ribes de Fresser;NA;Gerona;España;15;6;2008;NA;NA;NA;NA;NA;P. Vargas;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Megabombus;hortorum;Áliva, refugio;Picos de Europa;Cantabria;España;17;6;2006;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Thoracobombus;pascuorum;Chía, mirador;Valle de Benasque;Huesca;España;14;7;2011;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;1;NA;UCME
+Bombus ;Megabombus;hortorum;Baños de Benasque;NA;Huesca;España;14;7;2011;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;1;NA;UCME
+Bombus ;Megabombus;hortorum;Vallibierna;NA;Huesca;España;15;7;2011;NA;NA;NA;NA;NA;C. Ornosa;C. Ornosa;2012;NA;NA;NA;NA
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0;1;UCME
+Bombus ;Megabombus;hortorum;Bielva;NA;Cantabria ;España;NA;7;2007;NA;NA;NA;NA;NA;P. Vargas;C. Ornosa;2012;NA;NA;NA;NA
+Bombus ;Thoracobombus;pascuorum;Quintanilla;NA;Cantabria;España;NA;7;2007;NA;NA;NA;NA;NA;P. Vargas;C. Ornosa;2012;NA;0;1;UCME
+Bombus ;Bombus;terrestris;Puerto de la Morcuera;NA;Madrid;España;24;7;2008;NA;NA;NA;NA;NA;P. Vargas;C. Ornosa;2012;NA;1;NA;UCME
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;C. Ornosa;2012;1;NA;NA;UCME
+Osmia;NA;latreille;La Herradura;NA;Granada;España;2;4;2012;NA;NA;NA;NA;NA;V. Monserrat;J. Ortiz;2012;1;NA;NA;UCME
+Apis;NA;mellifera ;Crta. Puigcerdá-Das. Cerca de Alp ;NA;Gerona;España;6;6;2012;NA;NA;NA;NA;NA;V. Monserrat;F. Torres;2012;NA;1;NA;UCME
+Apis;NA;mellifera ;Crta. Puigcerdá-Das. Cerca de Alp ;NA;Gerona;España;6;6;2012;NA;NA;NA;NA;NA;V. Monserrat;NA;NA;NA;NA;NA;NA
+Apis;NA;mellifera ;Crta. Puigcerdá-Das. Cerca de Alp ;NA;Gerona;España;6;6;2012;NA;NA;NA;NA;NA;V. Monserrat;NA;2012;1;NA;NA;UCME
+Anthidium;NA;oblongatum;Crta. Puigcerdá-Das. Cerca de Alp ;NA;Gerona;España;6;6;2012;NA;NA;NA;NA;NA;V. Monserrat;NA;NA;NA;NA;NA;NA
+Chalicodoma;NA;ericetorum;Crta. Puigcerdá-Das. Cerca de Alp ;NA;Gerona;España;6;6;2012;NA;NA;NA;NA;NA;V. Monserrat;C. Onosa;2011;NA;0;1;Botánico
+Megachile;NA;circucimcta;Avellanet;NA;Lérida;España;6;6;2012;NA;NA;NA;NA;NA;V. Monserrat;C. Onosa;2011;NA;0;1;Botánico
+Osmia;NA;aurulenta;Crta. Puigcerdá-Das. Cerca de Alp ;NA;Gerona;España;6;6;2012;NA;NA;NA;NA;NA;V. Monserrat;C. Onosa;2011;NA;0;1;Botánico
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;C. Onosa;2011;NA;0;1;Botánico
+Ceratina;NA;cyanea;Venta de los Mosquitos;NA;Segovia;España;NA;6;2010;NA;NA;1450;NA;NA;R. Outerelo;C. Onosa;2012;NA;0;1;Botánico
+Apis;NA;mellifera;Tama;Tama;Santander;España;31;11;2011;NA;NA;NA;NA;NA;C. Onosa;NA;NA;NA;0;5;NA
+Apis;NA;mellifera;Tama;Tama;Santander;España;31;11;2011;NA;NA;NA;NA;NA;C. Onosa;NA;NA;NA;NA;NA;NA
+Apis;NA;mellifera;Tama;Tama;Santander;España;31;11;2011;NA;NA;NA;NA;NA;C. Onosa;C. Onosa;2011;NA;0;1;Botánico
+Apis;NA;mellifera;Tama;Tama;Santander;España;31;11;2011;NA;NA;NA;NA;NA;C. Onosa;NA;NA;NA;NA;NA;NA
+Apis;NA;mellifera;Sta. Mª de Lebeña;Lebeña;Santander;España;3;3;2012;NA;NA;NA;NA;NA;C. Onosa;C. Onosa;2011;NA;0;1;Botánico
+Apis ;NA;mellifera ;Alto Atlas;NA;NA;Marruecos;NA;NA;NA;NA;NA;NA;NA;NA;NA;C. Ornosa;2012;NA;0;1;NA
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;C. Ornosa;2012;NA;0;1;NA
+Apis;NA;mellifera;Puigcerdá;NA;Gerona;España;NA;NA;2012;NA;NA;NA;NA;NA;Pablo Vargas;C. Ornosa;2012;NA;0;1;NA
+Apis;NA;mellifera;Seo de Urgell;NA;Lérida;España;NA;NA;2012;NA;NA;NA;NA;NA;Pablo Vargas;C. Onosa;2012;NA;0;10;Botánico
+Apis;NA;mellifera;Crta. Puigcerdá-Das. (3) Cerca de Alp ;NA;Gerona;NA;6;6;2012;NA;NA;NA;NA;NA;A. Glez.-Posada;C. Onosa;2012;NA;0;1;Botánico
+Apis;NA;mellifera;Crta. Puigcerdá-Das. (3) Cerca de Alp ;NA;Gerona;NA;6;6;2012;NA;NA;NA;NA;NA;A. Glez.-Posada;NA;NA;NA;NA;NA;NA
+Apis;NA;mellifera;Crta. Puigcerdá-Das. (3) Cerca de Alp ;NA;Gerona;NA;6;6;2012;NA;NA;NA;NA;NA;A. Glez.-Posada;C. Onosa;2012;NA;0;1;Botánico
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;C. Onosa;2012;NA;0;1;Botánico
+Apis;NA;mellifera;Lavaderos;Sierra Nevada;Granada;España;NA;NA;2012;NA;NA;NA;NA;NA;Pablo Vargas;NA;NA;NA;NA;NA;NA
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;C. Onosa;2012;NA;0;1;Botánico
+Apis;NA;mellifera;Tours;NA;NA;Francia;NA;NA;2012;NA;NA;NA;NA;NA;NA;C. Onosa;2012;NA;0;1;Botánico
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;C. Onosa;2012;NA;0;1;Botánico
+Apis;NA;mellifera;"Veleta ""arriba"" (5)";Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3300;NA;NA;C. Ornosa;C. Onosa;2012;NA;0;1;Botánico
+Apis;NA;mellifera;"Veleta ""arriba"" (5)";Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3300;NA;NA;C. Ornosa;C. Onosa;2012;NA;0;1;Botánico
+NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;C. Onosa;2012;NA;0;1;Botánico
+Apis;NA;mellifera;"Veleta ""arriba"" (5)";Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3300;NA;NA;C. Ornosa;C. Onosa;2012;NA;0;1;Botánico
+Apis;NA;mellifera;"Veleta ""arriba"" (5)";Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3300;NA;NA;C. Ornosa;C. Onosa;2012;NA;0;1;Botánico
+Apis;NA;mellifera;"Veleta ""arriba"" (5)";Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3300;NA;NA;C. Ornosa;C. Onosa;2012;NA;0;1;Botánico
+Apis;NA;mellifera;"Veleta ""arriba"" (5)";Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3300;NA;NA;C. Ornosa;C. Onosa;2012;NA;0;3;Botánico
+Apis;NA;mellifera;"Veleta ""arriba"" (5)";Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3300;NA;NA;C. Ornosa;NA;NA;NA;NA;NA;NA
+Apis;NA;mellifera;"Veleta ""arriba"" (5)";Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3300;NA;NA;C. Ornosa;C. Onosa;2012;NA;0;3;Botánico
+Apis;NA;mellifera;"Veleta ""arriba"" (5)";Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3300;NA;NA;D. Romero;C. Onosa;2012;NA;0;3;Botánico
+Apis;NA;mellifera;"Veleta ""arriba"" (5)";Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3300;NA;NA;D. Romero;NA;NA;NA;NA;NA;NA
+Apis;NA;mellifera;"Veleta ""arriba"" (5)";Sierra Nevada;Granada;NA;25;7;2012;NA;NA;3300;NA;NA;D. Romero;C. Onosa;2012;NA;0;1;UCME
+Apis;NA;mellifera;NA;Sierra Nevada;Granada;NA;24;7;2012;NA;NA;NA;NA;NA;Pablo Vargas;C. Onosa;2011;NA;0;1;UCME
+Apis;NA;mellifera;NA;Sierra Nevada;Granada;NA;24;7;2012;NA;NA;NA;NA;NA;Pablo Vargas;C. Onosa;2012;NA;0;1;UCME/Botánico
+Apis;NA;mellifera;NA;Sierra Nevada;Granada;NA;24;7;2012;NA;NA;NA;NA;NA;Pablo Vargas;C. Onosa;2012;NA;0;1;UCME/Botánico
+Apis;NA;mellifera;Angra do Heroismo hotel;Terceira;NA;Portugal;3;9;2012;NA;NA;NA;NA;NA;C. Onosa;C. Onosa;2012;NA;NA;NA;UCME/Botánico
+Apis;NA;mellifera;Monte do Brasil ;Terceira;NA;Portugal;4;9;2012;NA;NA;NA;NA;NA;C. Onosa;C. Onosa;2012;NA;NA;NA;UCME/Botánico
+Apis;NA;mellifera;Angra do Heroismo universidad;Terceira;NA;Portugal;2;9;2012;NA;NA;NA;NA;NA;C. Onosa;C. Onosa;2012;NA;NA;NA;UCME/Botánico
