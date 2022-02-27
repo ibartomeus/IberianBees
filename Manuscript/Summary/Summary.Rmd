@@ -125,23 +125,37 @@ levelplot(log(ras.counts2+1), margin = FALSE, scales = list(draw = FALSE),
 
 ```
 
+\newpage
+
 ## Which are the most reported species?   
 
 Here we show the top-20 most abundant species excluding _Apis mellifera_.  
 
 ```{r echo=FALSE}
-#barplot of top 10 species
-data2 <- subset(data, accepted_name != "Apis mellifera")
-default <- par()$mar
-par(mar = c(10.1, 4.1, 4.1, 2.1))
-barplot(head(sort(table(data2$accepted_name), decreasing = TRUE),20), las = 2, cex.names = 0.7)
-#barplot(tail(sort(table(data2$accepted_name), decreasing = TRUE),20), las = 2, cex.names = 0.7)
-par(mar = default)
+#Prepare top 20 records
+top_20 <- data %>% filter(!accepted_name=="Apis mellifera") %>% group_by(accepted_name) %>%
+summarise(no_rows = length(accepted_name)) %>% 
+arrange(-no_rows) %>% slice(1:20)
+#Fix row position
+top_20$accepted_name <- factor(top_20$accepted_name, levels = top_20$accepted_name)
+#Plot
+ggplot(top_20, aes(x=accepted_name, y=no_rows)) + 
+geom_bar(stat = "identity", fill="#287D8EFF") +
+theme_classic()+
+theme(axis.text.x=element_text(angle=45, hjust=1, size=8, face = "italic")) +
+ylab("Number of records") + 
+xlab("Species") + 
+ggtitle("Top 20 species") +
+scale_y_continuous(expand = c(0, 0)) 
+    
+    
 ```
 
 ## When are we recording more bees?  
 
 ```{r echo=FALSE, warning=FALSE}
+data2 <- subset(data, accepted_name != "Apis mellifera")
+
 hist(data2$Year, main = "Most records are recorded since year 2000", 
      las = 1, xlab = "Year")
 ```
