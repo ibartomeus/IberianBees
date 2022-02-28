@@ -1,12 +1,15 @@
 ---
-title: "Summary of the Iberian Bees Database"
-author: I. Bartomeus, T. Wood, L. Carvalheiro, C. Molina, et al. - 
-date: "`r format(Sys.time(), '%d %B, %Y')`"
+#title: 
+#author: I. Bartomeus, T. Wood, L. Carvalheiro, C. Molina, et al. - 
+#date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: pdf_document
 #output: github_document
 editor_options: 
   chunk_output_type: console
 ---
+
+# Summary of the IberianBees database
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -27,15 +30,13 @@ length(unique(data$accepted_name))
 nrow(master)
 ```
 
-The Iberian Bee Database contains `r nrow(data)` entries of bee occurrences over the peninsula and nearby islands. We have at least one record of `r length(unique(data$accepted_name))` species out of the `r nrow(master)` species known to occurr in the Iberian Peninsula. 
+The Iberian Bee Database contains **`r nrow(data)` entries** of bee occurrences over the peninsula and nearby islands. We have at least one record of **`r length(unique(data$accepted_name))` species** out of the **`r nrow(master)` species** known to occur in the Iberian Peninsula. 
 
-We retained only valid, updated species names. All records have accompaining metadata on where and when it was collected, and on who collected, identified and curated the data. We are still reciving and cleaning data, but we aim to publish the open database after summer.
+We retained only valid, updated species names. All records have accompaining metadata on where and when it was collected, and on who collected, identified and curated the data. 
 
 Here we present a summary of the database:
 
-## Where are the records? 
-
-We have records all over the peninsula, but higer concentrations are marked in yellow. The scale is the logarithm of the number of occurrences.  
+## Where are the records? (Logarithmic scale of the number of occurrences)
 
 ```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 #map
@@ -63,7 +64,7 @@ plotmap <- ggplot(data = data, aes(x = Longitude, y = Latitude)) +  # plot the d
 plotmap
 ```
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width="70%"}
 #code courtesy of Paco Rodriguez.
 library(sf)
 library(raster)
@@ -125,13 +126,10 @@ levelplot(log(ras.counts2+1), margin = FALSE, scales = list(draw = FALSE),
 
 ```
 
-\newpage
 
-## Which are the most reported species?   
+## Which are the 20 most reported species? (Excluding _Apis mellifera_) 
 
-Here we show the top-20 most abundant species excluding _Apis mellifera_.  
-
-```{r echo=FALSE}
+```{r echo=FALSE, fig.align='center', out.width="70%"}
 #Prepare top 20 records
 top_20 <- data %>% filter(!accepted_name=="Apis mellifera") %>% group_by(accepted_name) %>%
 summarise(no_rows = length(accepted_name)) %>% 
@@ -145,7 +143,6 @@ theme_classic()+
 theme(axis.text.x=element_text(angle=45, hjust=1, size=8, face = "italic")) +
 ylab("Number of records") + 
 xlab("Species") + 
-ggtitle("Top 20 species") +
 scale_y_continuous(expand = c(0, 0)) 
     
     
@@ -153,24 +150,43 @@ scale_y_continuous(expand = c(0, 0))
 
 ## When are we recording more bees?  
 
-```{r echo=FALSE, warning=FALSE}
-data2 <- subset(data, accepted_name != "Apis mellifera")
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+#Prepare top 20 records
+by_year <- data %>% filter(!accepted_name=="Apis mellifera")
 
-hist(data2$Year, main = "Most records are recorded since year 2000", 
-     las = 1, xlab = "Year")
+p1 <- ggplot(by_year, aes(Year)) +
+  geom_histogram(fill="#287D8EFF") + theme_classic() + ylab("Number of records")+
+  scale_y_continuous(expand = c(0, 0)) 
+
+data$month_name <-  month.abb[data$Month]
+
+month_sum <- data %>% group_by(month_name) %>%
+summarise(no_rows = length(month_name)) %>%  arrange(-no_rows)
+
+month_sum <- month_sum %>% filter(!is.na(month_name))
+
+month_sum$month_name <- factor(month_sum$month_name, levels =  c("Jan","Feb","Mar",
+              "Apr","May","Jun",
+              "Jul","Aug","Sep",
+              "Oct","Nov","Dec"))
+
+p2 <- ggplot(data=month_sum, aes(x=month_name, y=no_rows)) +
+  geom_bar(stat="identity", fill="#287D8EFF") + theme_classic()+
+  scale_y_continuous(expand = c(0, 0)) +
+  ylab("Number of records") + xlab("Months")
+
+library(patchwork)
+
+p1 / p2
+
 ```
 
-
-```{r echo=FALSE, warning=FALSE}
-hist(data2$Month, main = "Most records are recorded in April",
-     las = 1, xlab = "Month", breaks = 12)
-```
 
 ## Who make this posible?
 
 This is a large collaborative effort lead by I. Bartomeus, L. Carvalheiro and T. Woods, but it would not be possible without the contribution of thousends of researchers. Full list of contributors will be available soon.
 
-```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+```{r echo=FALSE,eval=FALSE, message=FALSE, warning=FALSE}
 #table of
 #Name	
 #Contact	
