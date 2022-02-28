@@ -186,7 +186,7 @@ p1 / p2
 
 This is a large collaborative effort lead by I. Bartomeus, L. Carvalheiro and T. Woods, but it would not be possible without the contribution of thousends of researchers. Full list of contributors will be available soon.
 
-```{r eval=FALSE, message=FALSE, warning=FALSE}
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 #table of
 #Name	
 #Contact	
@@ -220,13 +220,11 @@ authors[which(authors == "Castro, L.")] <- "L. Castro"
 authors[which(authors == "Ortiz-Sanchez, F. J., Ornosa, C.")] <- "F.J. Ortiz-Sanchez, C. Ornosa"
 authors[which(authors == "Banaszak, J., Ortiz-Sanchez, F. J.")] <- "J. Banaszak, F.J. Ortiz-Sanchez"
 authors[which(authors == "C. Ornosa, F. Torres & F. J. Ortiz-Sánchez")] <- "C. Ornosa, F. Torres, F. J. Ortiz-Sánchez"
-
 author_pool <- stri_paste(authors, collapse = ",")
 author_list <- unlist(strsplit(author_pool, ","))
 author_list <- trimws(author_list)
 #sort(unique(author_list))[-1] #79 contributors!
 #write.csv(sort(unique(author_list))[-1], "data/authors.csv")
-
 auth <- c(
 "Alejandro Núñez"
 ,"Amparo Lázaro"
@@ -304,9 +302,7 @@ auth <- c(
 ,"S.F. Gayubo"
 ,"Victoria Ferrero"
 ,"Volker Haeseler")
-
-unique(auth)
+print(unique(auth))
 ```
 
 Contact nacho.bartomeus@gmail.com if you want to contribute.
-
