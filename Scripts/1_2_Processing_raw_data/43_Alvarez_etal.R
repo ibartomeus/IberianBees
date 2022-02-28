@@ -39,6 +39,8 @@ newdat$Year <- gsub("1279[sic]", "1927", newdat$Year, fixed = T)
 
 #Add leading 0 to month
 newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
+newdat$Month[newdat$Month=="14"] <- "07"
+newdat$Month[newdat$Month=="18"] <- "08"
 newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
 
 #Replace hyphen by forward slash
