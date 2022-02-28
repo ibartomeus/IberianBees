@@ -186,7 +186,7 @@ p1 / p2
 
 This is a large collaborative effort lead by I. Bartomeus, L. Carvalheiro and T. Woods, but it would not be possible without the contribution of thousends of researchers. Full list of contributors will be available soon.
 
-```{r echo=FALSE,eval=FALSE, message=FALSE, warning=FALSE}
+```{r eval=FALSE, message=FALSE, warning=FALSE}
 #table of
 #Name	
 #Contact	
