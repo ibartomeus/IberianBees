@@ -8,8 +8,9 @@ This is a work in progress repository to document the distribution and diversity
 
 - The Iberiabees database can be found on: `Data/iberian_bees.csv.gz`. This is a zip file so double click on it to unzip.
 
-- Records with non-accepted names have been excluded of the final dataset but can be found on `Data/Processing_iberian_bees_raw/removed.csv`. Non-accepted names are checked manually with special help of Thomas Wood and will be updated on the list of `Data/Processing_iberian_bees_raw/manual_checks.csv` that automatically will include the corrected records once the file 
-`Scripts/3_1Final_cleaning.R` is run again. 
+- Records with non-accepted names on the Iberian bee species masterlist have been excluded of the final dataset but can be found on `Data/Processing_iberian_bees_raw/removed.csv`. 
+
+- The excluded species will be checked manually with special help of Thomas Wood and added to `Data/Processing_iberian_bees_raw/manual_checks.csv` that after running `Scripts_3_1_Final_cleaning.R` will update the database with the corrected record.
 
 - Please, if you spot any issue or you want to clean this data further, please let @ibartomeus know to avoid duplicating efforts by creating an [issue](https://github.com/ibartomeus/IberianBees/issues) with the corresponding unique identifier (uid) of the record that needs to be fixed.
 
