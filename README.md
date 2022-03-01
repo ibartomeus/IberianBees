@@ -18,26 +18,20 @@ This is a work in progress repository to document the distribution and diversity
 
 # Process:
 
-
 ![plot](Manuscript/Summary/summary_repo.png)
 
+1- Use `Scripts/1_1_Fetch_data.R` to update data from internet (i.e. Gbif, iNaturalist).
 
-1- Use "rawdata/Fetch_data.R" to update data from interent (e.g. Gbif, iNaturalist).
+2- Add new excels with data locally to `Data/Rawdata/csvs/`.
 
-2- Add new excels with data locally to "/rawdata/xls_to_add/" with the data in the first sheet.  
+3- Process and clean individual files and assign a unique identifier within the folder `Scripts/1_2_Processing_raw_data/`.
 
-3- Run "rawdata/preprocessing.R" to convert those to csv and upload them to github.  
-3.1- I modified manually some csvs because of non ASCII characters, and other annoying stuff. Sorry for the non-reproducible part.
+4- Run `Scripts/2_Run_all-Merge_all.R`. This will run all individual files in `Scripts/1_2_Processing_raw_data/`and bind the data. The data can be merged directly without running all files by running the second section of the code.
 
-4- Add new csv's programatically using "/rawdata/Add_data.R".
+5- Conduct a final cleaning (things that weren't fixed on the individual files on step 3). This is done in `Scripts/3_1_Final_cleaning.R` and will generate the final dataset `Data/iberian_bees.csv.gz`.
 
-5- Use "data/datascript.R" to generate "data/clean_data.csv".  
-5.1- To fix species names I am using the workflow in "data/datascript.R" along with "data/manual_checks.csv", which can be edited to add synonims, etc...  
+5.1- Non accepted species are excluded and saved on `Data/Processing_iberian_bees_raw/removed.csv`. 
 
-6- Knit Summary.Rmd to see updated nice summaries.  
+5.2- The non-accepted species names (e.g., synonyms) are checked manually from `Data/Processing_iberian_bees_raw/to_check.csv` and added to `Data/Processing_iberian_bees_raw/manual_checks.csv` once they have been reviewed.  After running `Scripts/3_1_Final_cleaning.R` the fixed species will be included on the final Iberianbees dataset.
 
-7- Commit and push. Automatic tests may be done (in the future). Manually release a version on major updates.
-
-8- Metadata in EML is generated in Metadata_generator.R and can be consulted in "data/metadata".
-
-9- The manuscript is written in folder /manuscript.
+.
