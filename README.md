@@ -2,7 +2,7 @@
 
 # IberianBees database v.0.3.0 :bee:
 
-This is a work in progress repository to document the distribution and diversity of bee species of the Iberian Peninsula. You can see a summary of the data [here](https://github.com/ibartomeus/IberianBees/blob/master/Summary.md).   
+This is a work in progress repository to document the distribution and diversity of bee species of the Iberian Peninsula. You can see a summary of the data [here](https://github.com/ibartomeus/IberianBees/blob/Jose_cleaning/Manuscript/Summary/Summary.pdf).   
 
 ## How to use this repo  
 
