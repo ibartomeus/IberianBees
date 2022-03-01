@@ -18,6 +18,10 @@ This is a work in progress repository to document the distribution and diversity
 
 # Process:
 
+
+![plot](Manuscript/Summary/summary_repo.png)
+
+
 1- Use "rawdata/Fetch_data.R" to update data from interent (e.g. Gbif, iNaturalist).
 
 2- Add new excels with data locally to "/rawdata/xls_to_add/" with the data in the first sheet.  
