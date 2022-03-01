@@ -18,8 +18,6 @@ This is a work in progress repository to document the distribution and diversity
 
 # Process:
 
-![plot](Manuscript/Summary/summary_repo.png)
-
 1- Use `Scripts/1_1_Fetch_data.R` to update data from internet (i.e. Gbif, iNaturalist).
 
 2- Add new excels with data locally to `Data/Rawdata/csvs/`.
@@ -34,4 +32,4 @@ This is a work in progress repository to document the distribution and diversity
 
 5.2- The non-accepted species names (e.g., synonyms) are checked manually from `Data/Processing_iberian_bees_raw/to_check.csv` and added to `Data/Processing_iberian_bees_raw/manual_checks.csv` once they have been reviewed.  After running `Scripts/3_1_Final_cleaning.R` the fixed species will be included on the final Iberianbees dataset.
 
-.
+![plot](Manuscript/Summary/summary_repo.png)
