@@ -181,8 +181,11 @@ summary(as.factor(data2$accepted_name))
 data2$accepted_name <- ifelse(is.na(data2$accepted_name), 
                        data2$Genus_species, data2$accepted_name)
 
+
 #For now, we removed flagged species not tagged to remove
 #These are the ones that would be checked in the next manual check, don't worry!
+removed <- data2[which(!is.na(data2$flag)),] #Save removed entries
+write.csv(removed, "Data/Processing_iberian_bees_raw/removed.csv")
 data2 <- data2[which(is.na(data2$flag)),] #removing here ~5000 entries. Those will be recovered when maual_check.csv is updated
 #Delete flag column and back to data
 data <- subset(data2, select = -flag)
