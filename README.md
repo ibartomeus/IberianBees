@@ -6,12 +6,11 @@ This is a work in progress repository to document the distribution and diversity
 
 ## How to use this repo  
 
-- If you want to use clean data go to: `Data/iberian_bees.csv.gz`. This is a zip file so double click on it to unzip.
+- The Iberiabees database can be found on: `Data/iberian_bees.csv.gz`. This is a zip file so double click on it to unzip.
 
-Metadata can be viewed
-[here](http://htmlpreview.github.io/?https://github.com/ibartomeus/IberianBees/blob/master/docs/index.html). If you spot any error, please fill an [issue](https://github.com/ibartomeus/IberianBees/issues) and indicate the uid of the record to fix. If you plan to clean this data further (e.g. dates, localities), let @ibartomeus know to avoid duplicating efforts.
+- Records with non-accepted names have been excluded of the final dataset but can be seen in `Data/Processing_iberian_bees_raw/to_check.csv`. Non-accepted names are checked manually and will be updated on the list of `Data/Processing_iberian_bees_raw/manual_checks.csv` that automatically will include the corrected records.
 
-- If you want to fix non recognized species (*blink, blink* -> Thomas), the only data that can be manually altered is `data/manual_checks.csv`. We can move this file via email, and that way you don't need to get into git. If you want to see details on removed specimens, check `data/removed.csv`. If you wish to correct any of those, fill an issue [issue](https://github.com/ibartomeus/IberianBees/issues) and indicate the uid of the record to fix. 
+- Please, if you spot any issue or you want to clean this data further, please let @ibartomeus know to avoid duplicating efforts by creating an [issue](https://github.com/ibartomeus/IberianBees/issues) with the corresponding unique identifier (uid) of the record that needs to be fixed.
 
 - If you are curious on the process keep reading.
 
