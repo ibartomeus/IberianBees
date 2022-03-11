@@ -12,11 +12,12 @@ data <- data %>% extract(uid, into = c("Id", "number"), "(.*)_([^_]+)$")
 #Select unique identifier of dataset instead of record
 data <- data %>% select(Id) %>% distinct(Id)
 
-#arrange by same order that I have
+#Arrange by same order that we have in "Scripts/1_2_Processing_raw_data"
 library(stringr)
 data$Number <- word(data$Id, 1, sep = "_")
 data$Number <- as.numeric(data$Number)
 data <- data %>% arrange(-desc(Number))
 
+#Save data
 write.csv(data, "Data/Processing_iberian_bees_raw/dataset_id_list.csv", row.names =F)
 
