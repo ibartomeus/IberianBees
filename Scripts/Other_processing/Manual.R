@@ -1,8 +1,7 @@
-#Make some checks.
-#this uses data in datascript.R processed up to line 123.
 #I don't think we will use it more, so I am not cleaning much this code.
 #This created manual_checks.csv for first time.
-#Now it works by appending data. NEVER OVERWRITE.
+#Now it works by appending data manually. 
+#NEVER OVERWRITE.
 
 
 #use fuzzy matching
