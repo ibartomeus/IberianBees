@@ -1,6 +1,6 @@
 ---
 title: "| Base de datos de abejas Ibéricas \n| Iberian Bees database\n"
-author: Ignasi Bartomeus^1^, Jose B. Lanuza, Thomas Woods^2^, Luisa Carvalheiro^3^,
+author: Ignasi Bartomeus^1^, Jose B. Lanuza^1^, Thomas Woods^2^, Luisa Carvalheiro^3^,
   and a lot of coauthors^4^
 output:
   pdf_document: default
@@ -14,6 +14,8 @@ csl: ecosistemas.csl
 bibliography:
 - references.bib
 - knitcitations.bib
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r include=FALSE}
@@ -64,17 +66,16 @@ flw <- length(which(!is.na(data$Flowers.visited)))
 
 # Resumen
 
-> **Base de datos de abejas Ibéricas**. Las abejas son un grupo diverso con más de 1000 espcies descritas en la Península Ibérica. Recientemente han recibido especial atención debido a su importante papel como polinizadores y proveedores de servicios ecosistémicos. Además, diversos cambios ambientales rápidos inducidos por el hombre estan propiciando el declive de algunas de sus poblaciones. Sin embargo, sabemos muy poco del estado de conservación de la mayoría de espcies y de muchas especies apenas sabemos cual es su distribución en la península Ibérica. Aquí presentamos un esfuerzo colaborativo para agrupar y curar una base de datos de ocurrencias que permita responder questions sobre su distribución, preferencia de habitats, phenologia, o tendencias historicas. En total hemos acumulado `r nrow(data)` registros en la Península Ibérica y Islas Baleares de `r length(unique(data$accepted_name))` espcies diferentes recolectados entre 1900 y 2022. Más de `r round(geo/nrow(data),2)*100`% de estos registros tienen información asociada como la localidad y fecha de captura, y el `r round(flw/nrow(data),2)*100`% tiene datos extra como las especies de planta donde se recolecto. Esta base de datos es el punto de partida para conocer y conservar mejor la biodiversidad de abejas en la peninsula Iberica. Se puede acceder en: XXXX. [max 300w]()
+> **Base de datos de abejas Ibéricas**. Las abejas son un grupo diverso con más de 1000 espcies descritas en la Península Ibérica. Recientemente han recibido especial atención debido a su importante papel como polinizadores y proveedores de servicios ecosistémicos. Además, diversos cambios ambientales rápidos inducidos por el hombre estan propiciando el declive de algunas de sus poblaciones. Sin embargo, sabemos muy poco del estado de conservación de la mayoría de espcies y de muchas especies apenas sabemos cual es su distribución en la península Ibérica. Aquí presentamos un esfuerzo colaborativo para agrupar y curar una base de datos de ocurrencias que permita responder questions sobre su distribución, preferencia de habitats, phenologia, o tendencias historicas. En total hemos acumulado `r nrow(data)` registros en la Península Ibérica y Islas Baleares de `r length(unique(data$accepted_name))` espcies diferentes recolectados entre `r min(data$Year, na.rm = T)` y `r max(data$Year, na.rm = T)` Más de `r round(geo/nrow(data),2)*100`% de estos registros tienen información asociada como la localidad y fecha de captura, y el `r round(flw/nrow(data),2)*100`% tiene datos extra como las especies de planta donde se recolecto. Esta base de datos es el punto de partida para conocer y conservar mejor la biodiversidad de abejas en la peninsula Iberica. Se puede acceder en: XXXX. [max 300w]()
 
 # Abstract
 
-> **Iberian Bees database**. Bees are a diverse group with more than 1000 species described in the Iberian Peninsula. They have recently received special attention due to their important role as pollinators and providers of ecosystem services. In addition, various rapid human-induced environmental changes are leading to the decline of some of its populations. However, we know very little about the conservation status of most species and for many species, we hardly know what their distribution is in the Iberian Peninsula. Here we present a collaborative effort to collate and curate a database of bee occurrences to answer questions about their distribution, habitat preference, phenology, or historical trends. In total we have accumulated `r nrow(data)` records in the Iberian Peninsula and the Balearic Islands of `r length(unique(data$accepted_name))` different species collected between 1900 and 2022. More than `r round(geo/nrow(data),2)*100`% of these records have associated information such as the location and date of capture, and `r round(flw/nrow(data),2)*100`% have extra data such as the plant species where it was collected. This database is the starting point to better understand and conserve bee biodiversity in the Iberian peninsula. It can be accessed at: XXXX.
+> **Iberian Bees database**. Bees are a diverse group with more than 1000 species described in the Iberian Peninsula. They have recently received special attention due to their important role as pollinators and providers of ecosystem services. In addition, various rapid human-induced environmental changes are leading to the decline of some of its populations. However, we know very little about the conservation status of most species and for many species, we hardly know what their distribution is in the Iberian Peninsula. Here we present a collaborative effort to collate and curate a database of bee occurrences to answer questions about their distribution, habitat preference, phenology, or historical trends. In total we have accumulated `r nrow(data)` records in the Iberian Peninsula and the Balearic Islands of `r length(unique(data$accepted_name))` different species collected between `r min(data$Year, na.rm = T)` and `r max(data$Year, na.rm = T)`. More than `r round(geo/nrow(data),2)*100`% of these records have associated information such as the location and date of capture, and `r round(flw/nrow(data),2)*100`% have extra data such as the plant species where it was collected. This database is the starting point to better understand and conserve bee biodiversity in the Iberian peninsula. It can be accessed at: XXXX.
 
 
 # Palabras clave
 
 > Biodiversidad; Apoidea; Polinizadores; Fenología 
-
 
 # Keywords
 
@@ -84,13 +85,13 @@ flw <- length(which(!is.na(data$Flowers.visited)))
 
 TBTranslated
 
-# Background & Summary (700 palabras máximo).  
+# Background & Summary (700 words max).  
 
-Bees (Hymenoptera, Apoidea) are a diverse group of species with more than 20000 species described worldwide (@Ascher). The Iberian Peninsula, with its bee-loved Mediterranean climate, is one of the hotspots of bee diversity with more than 1000 species described to date and counting (@Ortiz). Unfortunately, despite the high diversity of Iberian bees, we know very little of their diversity and distribution. This is paradoxical, as in recent years bees have been highlighted as a keystone group in the ecosystem due to a key function they provide, the pollination of thousands of plants (@ollerton), including most crop species (@klein). In addition, various rapid human-induced environmental changes are leading to the decline of some of its populations (@goulson). However, the response of bee species to global change is heterogeneous both in space and taxonomically. That is, while some areas and species are declining  drastically (@Burkle), other areas are well conserved (@Herrera2020) and while some species are in the brink of extinction (@Cameron) some species are even thriving (@Ruso). A better description of bee distribution, habitat preference, phenology, or historical trends in the Iberian peninsula would require information on when and where different species occur. 
+Bees (Hymenoptera, Apoidea) are a diverse group of species with more than 20.000 species described worldwide (@Ascher). The Iberian Peninsula, with its bee-loved Mediterranean climate, is one of the hotspots of bee diversity with more than 1000 species described to date and counting (@Ortiz). Unfortunately, despite the high diversity of Iberian bees, we know very little of their diversity and distribution. This is paradoxical, as in recent years bees have been highlighted as a keystone group in the ecosystem due to a key function they provide, the pollination of thousands of plants (@ollerton), including most crop species (@klein). In addition, various rapid human-induced environmental changes are leading to the decline of some of its populations (@goulson). However, the response of bee species to global change is heterogeneous both in space and taxonomically. That is, while some areas and species are declining  drastically (@Burkle), other areas are well conserved (@Herrera2020) and while some species are in the brink of extinction (@Cameron) some species are even thriving (@Ruso). A better description of bee distribution, habitat preference, phenology, or historical trends in the Iberian peninsula would require information on when and where different species occur. 
 
-In the absence of standardized monitoring efforts, one may think that detailed information on species occurrences in space and time does not exists. However, there are different sources of useful information. First, natural history museums hold historical collections of amateur naturalists and researchers who collected bees (@Bartomeus2018). Collectors are really good at classifying, and labeling each specimen, which means we can retrieve the information stored along the pinned specimens relating to when and where those where collected. Second, the Iberian peninsula has a rich tradition of pollinator and pollination researchers (@Archer), which have been collecting occurrence bee data with different aims. Finally, many occurrence records are being made available through internet portals which centralize data hosted in institutions all around the world (e.g. Gbif) or collected by citizen scientists (INaturalist). The challenge is how to digitalize, access, and curate all this different dara sources. 
+In the absence of standardized monitoring efforts, one may think that detailed information on species occurrences in space and time does not exists. However, there are different sources of useful information. First, natural history museums hold historical collections of amateur naturalists and researchers who collected bees (@Bartomeus2018). Collectors are really good at classifying and labeling each collected specimen, which means we can retrieve the information stored along the pinned specimens about when and where those where collected. Second, the Iberian peninsula has a rich tradition of pollinator and pollination researchers (@Archer), which have been collecting occurrence bee data with different aims. Finally, many occurrence records are being made available through internet portals which centralize data hosted in institutions all around the world (e.g. Gbif) or collected by citizen scientists (INaturalist). The challenge is how to digitalize, access, and curate all this different dara sources. 
 
-Here we compile an Iberian Bee Database of occurrence records by integrating digitalization efforts by leading national history museums, with more than 100 individual datasets contributed by researchers, and publicly available information on online repositories. After data cleaning and harmonization, we release the first `r nrow(data)` records in the Iberian Peninsula and the Balearic Islands. Figure one shows the spatial distribution of records, which as expected its biased to certain areas (Fig 1). Overall, the database contains information of `r length(unique(data$accepted_name))` different species, for which the most commonly collected are depictted in Figure 2. The data has been collected between 1900 and 2022, with an increasing trend of the number of records with time, reflecting a renewed interest for documenting this taxa (Figure 3A). Figure 3 also shows the temporal distribution of records within years (Figure 3B). More than `r round(geo/nrow(data),2)*100`% of these records have associated information such as the location and date of capture, and `r round(flw/nrow(data),2)*100`% have extra data such as the plant species where it was collected. This Iberian Bee Database (v.1.0) will continue to grow, but it is the starting point to better understand and conserve bee biodiversity. It can be accessed at:
+Here we compile an Iberian Bee Database of occurrence records by integrating digitalization efforts by leading national history museums, with more than 100 individual datasets contributed by researchers, and publicly available information on online repositories. After data cleaning and harmonization, we release the first `r nrow(data)` records in the Iberian Peninsula and the Balearic Islands. Figure one shows the spatial distribution of records, which as expected its biased to certain areas near main cities (Fig 1). Overall, the database contains information of `r length(unique(data$accepted_name))` different species, for which the most commonly collected are depictted in Figure 2. The data has been collected between `r min(data$Year, na.rm = T)` y `r max(data$Year, na.rm = T)`, with an increasing trend of the number of records with time, reflecting a renewed interest for documenting this taxa (Figure 3A). Figure 3 also shows the temporal distribution of records within years (Figure 3B). More than `r round(geo/nrow(data),2)*100`% of these records have associated information such as the location and date of capture, and `r round(flw/nrow(data),2)*100`% have extra data such as the plant species where it was collected. This Iberian Bee Database (v.1.0) will continue to grow, but it is the starting point to better understand and conserve bee biodiversity. It can be accessed at:
 
 [Refs require a bibtext]()
 
@@ -98,17 +99,17 @@ Here we compile an Iberian Bee Database of occurrence records by integrating dig
 
 ## Recopilación de datos originales
 
-*Museos*: Hemos digitalizado el X% de los espcimenes depositados en el MNCN, sobretodo los generos X, Y , Z, para los cuales se ha revisado la identificación taxonomica. THOMAS TO ADD MUSEUMS. En el futuro esta previsto continuar con la digitalización del MNCN y añadir el museo de bcn.
+*Museos*: Hemos digitalizado el 10% de los espcimenes depositados en el Museo Nacional de Ciencias Natural de Madrid, sobretodo las familias Melitidae y Apidae, para los cuales se han revisado la identificación taxonomicas. THOMAS CAN YOU ADD WHICH MUSEUMS DID YOU DIGITALIZED SPECIMENS, THANKS. En el futuro esta previsto continuar con la digitalización del MNCN y añadir otras colecciones hitóricas.
 
-*Proyectos de investigación*: Hemos contactado los principales investigadores en ecología de la polinización de España y Portugal, asi como anunciado en las principales listas de distribución tematicas para recoger datos sobre ocurrencia de abejas en la Peninsula Iberica. Se recogieron `r length(unique(data$Authors.to.give.credit))-2` estudios con datos ya digitalizados. En el futuro se seguiran añadiendo nuevas contribuciones, asi como se rescatarán datos ya publicados en formatos de dificil extracción como PDF.
+*Proyectos de investigación*: Hemos contactado los principales investigadores en ecología de la polinización de España y Portugal, asi como anunciado en las principales listas de distribución tematicas para recoger datos sobre ocurrencia de abejas en la Peninsula Iberica. Se recogieron `r length(unique(data$Authors.to.give.credit))-2` estudios con datos ya digitalizados. Estos han sido limpiados y harmobizados (ver más abajo). En el futuro se seguiran añadiendo nuevas contribuciones, asi como se rescatarán datos ya publicados en formatos de dificil extracción como PDF.
 
-*Repositorios de internet*: Usando paquetes programaticos de R (@bartomeus, @ropensciINat, @ropensciGbif) descargamos a todos los datos de Gbif (www.) y INaturalist (www.) de ocurrencias de abejas en la peninsula Iberica a fecha X-XX-2021. Estos datos pueden ser actualizados en nuevas versiones automaticamente.
+*Repositorios de internet*: Usando paquetes programaticos de R (@bartomeus, @ropensciINat, @ropensciGbif) descargamos todos los datos de Gbif (https://www.gbif.org) y INaturalist (https://www.inaturalist.org) de ocurrencias de abejas en la peninsula Iberica a fecha 01-03-2021. Estos datos pueden ser actualizados en nuevas versiones automaticamente.
 
 ## Tratamiento de datos
 
-Todo el tratamiento de datos se ha hecho de forma reproducible en R `r citep(citation())`. Primero hemos seleccionado los campos comunes que reflejan que especie y de que sexo, cuando fue colectada, y donde, asi como datos de quien fue el colector, quien determino la identidad de la especie, y referencias de donde ha sido publicada. La Tabla 1 ofrece un resumen de los metadatos creados con  @dataspice, y que también están disponibles en formato json (indexado por Google datasets) y EML. Debido a la naturaleza variada de este tipo de datos el proceso de limpieza de datos fue importante. De los `r nrow(data)+nrow(removed)` datos iniciales, `r nrow(removed)` fueron descartados. Todo el proceso así como los datos descartados pueden consultarse aqui: XXX
+Todo el tratamiento de datos se ha hecho de forma reproducible en R `r citep(citation())`. Primero hemos seleccionado los campos comunes que reflejan que especie y de que sexo, cuando fue colectada, y donde, asi como datos de quien fue el colector, quien determino la identidad de la especie, y referencias de donde ha sido publicada. La Tabla 1 ofrece un resumen de los metadatos creados con  @dataspice, y que también están disponibles en formato json (indexado por Google datasets) y EML. Debido a la naturaleza variada de este tipo de datos el proceso de limpieza de datos fue importante. De los `r nrow(data)+nrow(removed)` datos iniciales, `r nrow(removed)` fueron descartados. Todo el proceso así como los datos descartados pueden consultarse aqui: https://github.com/ibartomeus/IberianBees 
 
-Primero se reviso toda la taxonomia de las especies cotejandolos con la lista de espcies actualizada para la peninsula iberica (@Wood, @Ortiz). Solo se han aceptado especies correctamente identificadas a nivel de espcie. Se han actualizado más de `r length(which(data$accepted_name != data$original_species))` registros, actualizando todos los simonimos y corrigiendo errores ortograficos. Segundo se ha recogido Pais, Provincia y Localidad, así como estandarizado las geolocalizaciones a latitud y longitud en grados decimales (WGS84) cuando estaba disponible así como lap precisión de las coordenadas. Tercero, se ha recogido el día mes y año de colección. En caso de no figurar una fecha precisa, se incluye el intervalo. Para los datos de "donde" y "cuando" se han corregido o eliminado datos imposibles (e.g. geolocalizaciones en el mar, especimens recogidos en el mes 18). Cuarto, se recoge el nombre del collector y determinador del especimen, así como el numero de machos, hembras y obreras cuando se especifica. Finalmente hemos añadido referencias a publicaciones donde se usan estos datos, y otros datos de interes como la planta que estaban visitando, la identificación unica de la base de datos local (si la hay), los autores que han proporcionado los datos y cualquier otra nota de interes.
+Primero se reviso toda la taxonomia de las especies cotejandolos con la lista de espcies actualizada para la peninsula iberica (@Wood, @Ortiz). Solo se han aceptado especies correctamente identificadas a nivel de espcie. Se han actualizado más de `r length(which(data$accepted_name != data$original_species))` registros, actualizando todos los simonimos y corrigiendo errores ortograficos. Segundo se ha recogido Pais, Provincia y Localidad, así como estandarizado las geolocalizaciones a latitud y longitud en grados decimales (WGS84) cuando estaba disponible así como la precisión de las coordenadas. Tercero, se ha recogido el día mes y año de colección. En caso de no figurar una fecha precisa, se incluye el intervalo. Para los datos de "donde" y "cuando" se han corregido o eliminado datos imposibles (e.g. geolocalizaciones en el mar, especimens recogidos en el mes 18). Cuarto, se recoge el nombre del collector y determinador del especimen, así como el numero de machos, hembras y obreras cuando se especifica. Finalmente hemos añadido referencias a publicaciones donde se usan estos datos, y otros datos de interes como la planta que estaban visitando, la identificación unica de la base de datos local (si la hay), los autores que han proporcionado los datos y cualquier otra nota de interes.
 
 La base de datos resultante se ha asignado a cada entrada un identificador unico, y se guarda tanto el nombre de la espcecia original tal y como fue inicialmente reportada, como el nombre aceptado final despues de su limpieza. 
 
@@ -124,11 +125,11 @@ Todo el proceso de trabajo esta en abierto en Github y los todos los archivos de
 
 # Contribución de los autores
 
-IB and JL cleaned and prepared the database. MAC gathered data from the literature. PA digitalized MNCN data, TW and CM provided taxonomic expertise. IB, LGC and JB wrote the paper. All authors contributed data.
+IB and JL cleaned and prepared the database. MAC gathered data from the literature. PA digitalized MNCN data, TW and CM provided taxonomic expertise. IB, LGC, TW and JL wrote the paper. All authors contributed data.
 
 # Agradecimientos
 
-Thanks to the thousands of collectors, naturalists, and scientists who contributed to collect, curate and identify this dataset. 
+Thanks to the thousands of collectors, naturalists, and scientists who contributed to collect, curate and identify this dataset. We thank project EUCLIPO [Luisa, Fill in details] and SAFEGUARD (ref. 101003476 H2020-SFS-2019-2)
 
 ###### REFERENCIAS
 
@@ -140,10 +141,9 @@ write.bibtex(file="knitcitations.bib")
 
 ###### TABLA 1
 
-**Tabla 1**. Cada tabla debe aportar su correspondiente encabezamiento explicativo. En los Artículos de investigación, de revisión y Comunicaciones breves se aportarán los encabezamientos tanto en castellano como en inglés, en letra Arial 10 y en página independiente. Es importante que sean simples y que no superen el ancho una página DIN A4 vertical. Los originales se deben aportar en formato tabla y no en formato imagen. 
+**Tabla 1**. Metadatos explicando el significado y las unidades de cada variable en el set de datos. [Cada tabla debe aportar su correspondiente encabezamiento explicativo. En los Artículos de investigación, de revisión y Comunicaciones breves se aportarán los encabezamientos tanto en castellano como en inglés, en letra Arial 10 y en página independiente. Es importante que sean simples y que no superen el ancho una página DIN A4 vertical. Los originales se deben aportar en formato tabla y no en formato imagen.]
 
-**Table 1**. Table heading in English. 
-
+**Table 1**. Metadata explaining for each variable in the data set, its meaning and units.
 
 ```{r Tabla1, results='asis', echo=FALSE, cache=FALSE}
 library("knitr")
@@ -154,24 +154,24 @@ kable(metadata[,-1])
 
 ###### PIES DE FIGURA
 
-**Figura 1**. Cobertura taxonomica
+**Figura 1**. Barplot indicating the 20 more common recorded species in the final data set.
 
-**Figura 2**. Cobertura espacial
+**Figura 2**. Map of the Iberian peninsula indicating where the bee occurrences were sampled.
 
-**Figura 3**. Cobertura temporal
+**Figura 3**. Temporal coverage of (A) collection years and (B) collection moths.
 
 ###### FIGURE LEGENDS
 
-**Figure 1**. Taxonomic coverage.
+**Figura 1**. Gráfico de barras indicando la abundancia de las 20 especies más abundantes. 
 
-**Figure 2**. Spatial coverage.
+**Figura 2**. Mapa de la Península Ibérica donde se muestran las zonas con mayor numero de registros.
 
-**Figure 2**. Temporal coverage.
+**Figura 3**. Cobertura temporal de (A) los años con más ocurrencias, y (B) los meses con más ocurrencias. 
 
 
 ###### FIGURA 1
 
-```{r Fig1, echo=FALSE, fig.cap="Figura 1. Esto es un ejemplo.", message=FALSE, warning=FALSE, cache=FALSE}
+```{r Fig1, echo=FALSE, fig.cap="Figura 1. Barplot indicating the 20 more common recorded species in the final data set.", message=FALSE, warning=FALSE, cache=FALSE}
 #barplot of top 10 species
 data2 <- subset(data, accepted_name != "Apis mellifera")
 default <- par()$mar
@@ -183,7 +183,7 @@ par(mar = default)
 
 ###### FIGURA 2
 
-```{r Fig2, echo=FALSE, fig.cap="Figura 2. Segundo ejemplo", message=FALSE, warning=FALSE, cache=FALSE}
+```{r Fig2, echo=FALSE, fig.cap="Map of the Iberian peninsula indicating where the bee occurrences were sampled.", message=FALSE, warning=FALSE, cache=FALSE}
 library(sf)
 library(raster)
 library(rasterVis)
@@ -233,11 +233,11 @@ levelplot(log(ras.counts2+1), margin = FALSE, scales = list(draw = FALSE),
 
 ###### FIGURA 3
 
-```{r Fig3, echo=FALSE, fig.cap="Figura 2. Segundo ejemplo", message=FALSE, warning=FALSE, cache=FALSE}
-par(mfrow = c(1,2))
-hist(data2$Year, main = "Most records are recorded since year 2000", 
+```{r Fig3, echo=FALSE, fig.cap="Cobertura temporal de (A) los años con más ocurrencias, y (B) los meses con más ocurrencias. ", message=FALSE, warning=FALSE, cache=FALSE}
+par(mfrow = c(2,1))
+hist(data2$Year, 
      las = 1, xlab = "Year")
-hist(data2$Month, main = "Most records are recorded in April",
+hist(data2$Month,
      las = 1, xlab = "Month", breaks = 12)
 ```
 
