@@ -1,15 +1,12 @@
 ---
-#title: 
-#author: I. Bartomeus, T. Wood, L. Carvalheiro, C. Molina, et al. - 
+#title: "| Base de datos de abejas Ibéricas \n| Iberian Bees database\n"
 #date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: pdf_document
-#output: github_document
+output: github_document
 editor_options: 
   chunk_output_type: console
 ---
 
 # Summary of the IberianBees database
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -36,7 +33,7 @@ We retained only valid, updated species names. All records have accompaining met
 
 Here we present a summary of the database:
 
-## Where are the records? (Logarithmic scale of the number of occurrences)
+## Where are the records? 
 
 ```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 # map
@@ -144,7 +141,7 @@ levelplot(log(ras.counts2 + 1),
 ```
 
 
-## Which are the 20 most reported species? (Excluding _Apis mellifera_) 
+## Which are the 20 most reported species?
 
 ```{r echo=FALSE, fig.align='center', out.width="70%"}
 # Prepare top 20 records
@@ -209,126 +206,6 @@ p1 / p2
 
 ## Who make this posible?
 
-This is a large collaborative effort lead by I. Bartomeus, L. Carvalheiro and T. Woods, but it would not be possible without the contribution of thousends of researchers. Full list of contributors will be available soon.
-
-```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-# table of
-# Name
-# Contact
-# Number of records as main dataholder
-# Number of records as co-dataholder
-# email?? Maually :(
-# default <- par()$mar
-# par(mar = c(13.1, 4.1, 4.1, 2.1))
-# barplot(head(sort(table(data2$Authors.to.give.credit), decreasing = TRUE),20), las = 2, cex.names = 0.7)
-# par(mar = default)
-# Can be done prettier.
-# Ideally, we can merge all authors, split and count individually.
-library(stringi)
-authors <- data$Authors.to.give.credit[which(!is.na(data$Authors.to.give.credit))]
-authors[which(authors == "Ornosa, C., Martínez, M. D.")] <- "C. Ornosa, M.D. Martínez"
-authors[which(authors == "C. Ornosa & F. J. Ortiz-Sánchez")] <- "C. Ornosa, F. J. Ortiz-Sánchez"
-authors[which(authors == "C. Ornosa & M.D. Martínez")] <- "C. Ornosa, M.D. Martínez"
-authors[which(authors == "Ortiz-Sanchez, F.J.")] <- "F.J. Ortiz-Sanchez"
-authors[which(authors == "Heras, C., Gayubo, S. F.")] <- "C. Heras, S.F. Gayubo"
-authors[which(authors == "Ornosa, C.")] <- "C. Ornosa"
-authors[which(authors == "Herrera, J.")] <- "Javier Herrera"
-authors[which(authors == "Francisco Javier Ortiz-Sánchez, Pedro Coello & Manuel Baena")] <- "Francisco Javier Ortiz-Sánchez, Pedro Coello, Manuel Baena"
-authors[which(authors == "González, J. A., Torres, F., Gayubo, S. F.")] <- "J.A. González, , F. Torres, S.F. Gayubo"
-authors[which(authors == "Dardón, M. J., Torres, F., Asís, J. D.")] <- "M.J. Dardón, F. Torres, J.D. Asís"
-authors[which(authors == "Pérez-Iñigo Mora, C.")] <- "C. Pérez-Iñigo Mora"
-authors[which(authors == "Pablo Vargas, Concepción Ornosa, Francisco Javier Ortiz-Sánchez & Juan Arroyo")] <- "Pablo Vargas, Concepción Ornosa, Francisco Javier Ortiz-Sánchez, Juan Arroyo"
-authors[which(authors == "C. Heras y S.F. Gayubo")] <- "C. Heras, S.F. Gayubo"
-authors[which(authors == "J. L. BLANCO-PASTOR, C. ORNOSA, D. ROMERO, I. M. LIBERAL, J. M. GÓMEZ & P. VARGAS")] <- "J. L. Blanco-Pastor, C. Ornosa, D. Romero, I.M. Liberal, J.M. Gómez, P. Vargas"
-authors[which(authors == "Concepción Ornosa, Félix Torres & Pilar de la Rúa")] <- "Concepción Ornosa, Félix Torres, Pilar de la Rúa"
-authors[which(authors == "Castro, L.")] <- "L. Castro"
-authors[which(authors == "Ortiz-Sanchez, F. J., Ornosa, C.")] <- "F.J. Ortiz-Sanchez, C. Ornosa"
-authors[which(authors == "Banaszak, J., Ortiz-Sanchez, F. J.")] <- "J. Banaszak, F.J. Ortiz-Sanchez"
-authors[which(authors == "C. Ornosa, F. Torres & F. J. Ortiz-Sánchez")] <- "C. Ornosa, F. Torres, F. J. Ortiz-Sánchez"
-author_pool <- stri_paste(authors, collapse = ",")
-author_list <- unlist(strsplit(author_pool, ","))
-author_list <- trimws(author_list)
-# sort(unique(author_list))[-1] #79 contributors!
-# write.csv(sort(unique(author_list))[-1], "data/authors.csv")
-auth <- c(
-  "Alejandro Núñez",
-  "Amparo Lázaro",
-  "Ana Montero-Castaño",
-  "Anna Traveset",
-  "Blanca Arroyo-Correa",
-  "C. Heras",
-  "Curro Molina",
-  "C. O’Connor",
-  "Concepción Ornosa",
-  "C. Pérez-Iñigo Mora",
-  "Carlos Lara-Romero",
-  "T. Wood",
-  "Concepción Ornosa",
-  "Concepción Ornosa",
-  "D. Paredes",
-  "D. Romero",
-  "David Alomar",
-  "F. Javier Ortiz-Sánchez",
-  "F. Javier Ortiz-Sánchez",
-  "F. López-Núñez",
-  "F. Perfectti",
-  "Félix Torres",
-  "F. Javier Ortiz-Sánchez",
-  "Félix Torres",
-  "F. Javier Ortiz-Sánchez",
-  "H. Gaspar",
-  "Ignasi Bartomeus",
-  "Isabel María Liberal",
-  "Isabel María Liberal",
-  "J. Ascher",
-  "J. Banaszak",
-  "J. Bosch",
-  "J. Dusmet",
-  "J. Gonzalez-Varo",
-  "J. L. Blanco-Pastor",
-  "J. Loureiro",
-  "J. R. Obeso",
-  "J.A. González",
-  "J. Bosch",
-  "J.D. Alche",
-  "J.D. Asís",
-  "J.M. Gómez",
-  "Javier Herrera",
-  "Javier Morente-López",
-  "Joana Costa",
-  "José Iriondo",
-  "Jose Luis Blanco-Pastor",
-  "Juan Arroyo",
-  "L. Castro",
-  "Luis Navarro",
-  "M. Campos",
-  "M. Miñarro",
-  "M. Porcel",
-  "M.D. Martínez",
-  "M.J. Dardón",
-  "M.L. Fernández",
-  "Montserrat Vilà",
-  "Manuel Baena",
-  "Marina Alonso Solano",
-  "Mario Fernández-Mazuecos",
-  "Carlos Martínez-Núñez",
-  "Miguel A. González-Estévez",
-  "Montserrat Vilà",
-  "Pablo Vargas",
-  "Pablo Vargas",
-  "Pedro Coello",
-  "Pilar de la Rúa",
-  "R. Alcalá",
-  "R. Carvalho",
-  "R. Heleno",
-  "P.J. Rey",
-  "S. Castro",
-  "S. Castro",
-  "S.F. Gayubo",
-  "Victoria Ferrero",
-  "Volker Haeseler"
-)
-print(unique(auth))
-```
+This is a large collaborative effort lead by I. Bartomeus, L. Carvalheiro and T. Woods, but it would not be possible without the contribution of thousends of researchers. 
 
 Contact nacho.bartomeus@gmail.com if you want to contribute.
