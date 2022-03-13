@@ -40,7 +40,7 @@ write_eml(eml_doc, "data/metadata/IBD.xml")
 
 
 
-# I also explored EML package... but this is not used-----
+# I also explored EML package... but this is not used, IGNORE-----
 
 #install.packages("EML")
 library(EML)

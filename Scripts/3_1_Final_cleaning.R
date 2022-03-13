@@ -4,7 +4,7 @@
 library(data.table)
 data <- read.table("Data/Processing_iberian_bees_raw/iberian_bees_raw.csv.gz",  header=T, quote="\"", sep=",")
 #Delete first col that are rownames
-data <- data %>% select(-X)
+data <- data %>% select(-X) #JOSE: que paquete hay que cargar? Me da error.
 
 #Delete leading and trailing spaces for all columns
 library(dplyr)
@@ -71,8 +71,8 @@ mis <- data2$Genus[which(!data2$Genus %in% genus)]
 mismatches <- unique(mis) #CHECK with Thomas / Curro none of those are bees. 
 mismatches 
 #exclude synonims that need to be fixed
-mm <- mismatches[-which(mismatches %in% c(master$Subgenus, "Nomia", 
-                                          "Tetraloniella",
+mm <- mismatches[-which(mismatches %in% c(master$Subgenus, "Nomia", "Megachilini", "Osmiini",
+                                          "Tetraloniella", "Reanthidium", "Vestitohalictus", "Paranthidiellum",
                                           "Melissodes", "Haetosmia", "Trianthidium", "Peponapis"))]       
 
 #Save removed genus
@@ -163,9 +163,9 @@ to_check$Notes <- NA
 to_check <- to_check[,c("flag", "checked",
                         "synonym_names", "questionable",
                         "accepted_name", "accepted_subspecies", "Notes")]
-
+dim(unique(to_check))
 #Save species list to check manually
-write.csv(to_check, "Data/Processing_iberian_bees_raw/to_check.csv")
+write.csv(unique(to_check), "Data/Processing_iberian_bees_raw/to_check.csv")
 
 ######-
 #Unify names
@@ -196,7 +196,7 @@ data$Species <- word(data$accepted_name,2)
 nlevels(factor(data$accepted_name)) #923 species!!
 
 #Recheck after fixes #Note that if flags removed above, this is empty
-missed <- data$accepted_name[which(!data$accepted_name %in% master$Genus_species & is.na(data$rm))]
+(missed <- data$accepted_name[which(!data$accepted_name %in% master$Genus_species & is.na(data$rm))])
 #Good!
 
 #Now accepted_name and Genus_species should be identical
@@ -208,6 +208,7 @@ data <- data %>% select(-Genus_species)
 #I think that if there is the need to check specific species
 #Always the raw data can be checked because is available
 
+#NOTE: JOSE I would prefer to keep original and accepted name in the final dataset.
 #########################-
 #Fix now subgenus ----
 #########################-
@@ -237,7 +238,7 @@ nlevels(factor(data$Province))
 #This field is a bit chaotic
 #I'm going to try to recover the province by coordinate
 #Maybe this will clean a bit
-#Nice function to add Spanish standar provinces
+#Nice function to add Spanish standard provinces
 lonlat_to_state <- function(pointsDF,
                             states = mapSpain::esp_get_prov(),
                             name_col = "ine.prov.name") {

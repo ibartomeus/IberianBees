@@ -53,6 +53,8 @@ beefun$Province <- "Huelva"
 beefun$Locality <- beefun$Site_ID            
 beefun$Coordinate.precision <- "gps"
 beefun$Female <-  ifelse(beefun$Pollinator_sex =="female", "female", NA)
+#JOSE, Me gustaria usar count y no frequency, que se refiere a visitas. Can you fix it?
+#To be clear, each row is one individual, regardless of the value on Frequency.
 beefun$Female <- beefun$Frequency[beefun$Female=="female"] 
 beefun$Male <-  ifelse(beefun$Pollinator_sex =="male", "male", NA)
 beefun$Male <- beefun$Frequency[beefun$Male=="male"] 
