@@ -17,17 +17,17 @@ library(data.table)
 data <- read.table("../../Data/iberian_bees.csv.gz", header = T, quote = "\"", sep = ",")
 
 master <- read.csv("../../Data/Processing_iberian_bees_raw/Iberian_species_masterlist.csv", stringsAsFactors = FALSE)
-master$accepted_name <- paste(master$Genus, master$Species, sep = " ")
+master$Accepted_name <- paste(master$Genus, master$Species, sep = " ")
 colnames(data)
 colnames(master)
-data[which(!data$accepted_name %in% master$accepted_name), ] # OK
-master[which(!master$accepted_name %in% data$accepted_name), ]
+data[which(!data$Accepted_name %in% master$Accepted_name), ] # OK
+master[which(!master$Accepted_name %in% data$Accepted_name), ]
 # we are missing ~100 species, mostly parasites!
-length(unique(data$accepted_name))
+length(unique(data$Accepted_name))
 nrow(master)
 ```
 
-The Iberian Bee Database contains **`r nrow(data)` entries** of bee occurrences over the peninsula and nearby islands. We have at least one record of **`r length(unique(data$accepted_name))` species** out of the **`r nrow(master)` species** known to occur in the Iberian Peninsula. 
+The Iberian Bee Database contains **`r nrow(data)` entries** of bee occurrences over the peninsula and nearby islands. We have at least one record of **`r length(unique(data$Accepted_name))` species** out of the **`r nrow(master)` species** known to occur in the Iberian Peninsula. 
 
 We retained only valid, updated species names. All records have accompaining metadata on where and when it was collected, and on who collected, identified and curated the data. 
 
@@ -107,8 +107,8 @@ datos.laea <- st_transform(datos.sf,
 
 ras <- raster(datos.laea, resolution = 10000)
 
-ras.counts <- rasterize(datos.laea[, "accepted_name"], ras,
-  field = "accepted_name", fun = "count"
+ras.counts <- rasterize(datos.laea[, "Accepted_name"], ras,
+  field = "Accepted_name", fun = "count"
 )
 # str(datos.laea)
 datos.laea$total <- datos.laea$Male + datos.laea$Female + datos.laea$Worker + datos.laea$Not.specified
@@ -116,14 +116,14 @@ ras.counts2 <- rasterize(datos.laea[, "total"], ras,
   field = "total", fun = "sum"
 )
 ras2 <- raster(datos.laea, resolution = 30000)
-ras.richness <- rasterize(datos.laea[, "accepted_name"], ras2,
-  field = "accepted_name", fun = function(x, ...) {
+ras.richness <- rasterize(datos.laea[, "Accepted_name"], ras2,
+  field = "Accepted_name", fun = function(x, ...) {
     length(unique(na.omit(x)))
   }
 )
 library(vegan)
-ras.chao <- rasterize(datos.laea[, "accepted_name"], ras2,
-  field = "accepted_name", fun = function(x, ...) {
+ras.chao <- rasterize(datos.laea[, "Accepted_name"], ras2,
+  field = "Accepted_name", fun = function(x, ...) {
     estimateR(t(as.matrix(x = table(x), nrow = 1, ncol = x)))[2, 1]
   }
 ) # 2 chao, 4 ACE #TO DO THIS WELL, we need to recover abundances.
@@ -146,15 +146,15 @@ levelplot(log(ras.counts2 + 1),
 ```{r echo=FALSE, fig.align='center', out.width="70%"}
 # Prepare top 20 records
 top_20 <- data %>%
-  filter(!accepted_name == "Apis mellifera") %>%
-  group_by(accepted_name) %>%
-  summarise(no_rows = length(accepted_name)) %>%
+  filter(!Accepted_name == "Apis mellifera") %>%
+  group_by(Accepted_name) %>%
+  summarise(no_rows = length(Accepted_name)) %>%
   arrange(-no_rows) %>%
   slice(1:20)
 # Fix row position
-top_20$accepted_name <- factor(top_20$accepted_name, levels = top_20$accepted_name)
+top_20$Accepted_name <- factor(top_20$Accepted_name, levels = top_20$Accepted_name)
 # Plot
-ggplot(top_20, aes(x = accepted_name, y = no_rows)) +
+ggplot(top_20, aes(x = Accepted_name, y = no_rows)) +
   geom_bar(stat = "identity", fill = "#287D8EFF") +
   theme_classic() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 8, face = "italic")) +
@@ -167,7 +167,7 @@ ggplot(top_20, aes(x = accepted_name, y = no_rows)) +
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 # Prepare top 20 records
-by_year <- data %>% filter(!accepted_name == "Apis mellifera")
+by_year <- data %>% filter(!Accepted_name == "Apis mellifera")
 
 p1 <- ggplot(by_year, aes(Year)) +
   geom_histogram(fill = "#287D8EFF") +
