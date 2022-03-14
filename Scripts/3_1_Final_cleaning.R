@@ -9,7 +9,7 @@ library(dplyr)
 data <- data %>%  mutate(across(c(colnames(data)), trimws))
 
 #Create column for original species name
-data$Original_species_name <- paste(data$Genus, data$Species)
+data$Original_name <- paste(data$Genus, data$Species)
 
 #######################################-
 #Cleaning of genus and subgenus names----
@@ -352,8 +352,8 @@ data <- data %>% dplyr::select(-c(rm))
 colnames(data) <- str_to_title(colnames(data))
 
 #Reorder cols, final order! :) 
-data_1 <- data %>% dplyr::select(Genus, Subgenus, Species, Subspecies, Accepted_name, Original_species_name)
-data_2 <- data %>% dplyr::select(!c(Genus, Subgenus, Species, Subspecies, Accepted_name, Original_species_name))
+data_1 <- data %>% dplyr::select(Genus, Subgenus, Species, Subspecies, Accepted_name, Original_name)
+data_2 <- data %>% dplyr::select(!c(Genus, Subgenus, Species, Subspecies, Accepted_name, Original_name))
 #All species cols are now first
 data <- cbind(data_1, data_2)
 
