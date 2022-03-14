@@ -1,58 +1,43 @@
 [![License](https://licensebuttons.net/l/by/4.0/80x15.png)](https://raw.githubusercontent.com/ibartomeus/IberianBees/master/LICENSE)
 
-*ver version en español más abajo*  
+# IberianBees database v.1.0.0 :bee:
 
-# IberianBees
+This is a repository to document the distribution and diversity of bee species of the Iberian Peninsula. You can see a summary of the data [here](https://github.com/ibartomeus/IberianBees/blob/Jose_cleaning/Manuscript/Summary/Summary.md).   
 
-This is an in progress repo to document Iberian Bees Database (v.0.3.0). You can see a summary of the data [here](https://github.com/ibartomeus/IberianBees/blob/master/Summary.md)      
+## How to contribute:
 
-# How to use this repo  
+If you have data on Iberian bee's occurrence, fill in this [template](https://github.com/ibartomeus/IberianBees/Data/IBD_template.odt) and send it to nacho.bartomeus@gmail.com
 
-- If you want to use clean data go to: `data/data_clean.csv`. Metadata can be veiwed [here](http://htmlpreview.github.io/?https://github.com/ibartomeus/IberianBees/blob/master/docs/index.html). If you spot any error, please fill an [issue](https://github.com/ibartomeus/IberianBees/issues) and indicate the uid of the record to fix. If you plan to clean this data further (e.g. dates, localities), let @ibartomeus know to avoid duplicating efforts.
+## How to use this repo  
 
-- If you want to fix non recognized species (*blink, blink* -> Thomas), the only data that can be manually altered is `data/manual_checks.csv`. We can move this file via email, and that way you don't need to get into git. If you want to see details on removed specimens, check `data/removed.csv`. If you wish to correct any of those, fill an issue [issue](https://github.com/ibartomeus/IberianBees/issues) and indicate the uid of the record to fix. 
+- The IberianBees database can be found on: `Data/iberian_bees.csv.gz`. This is a zip file so double click on it to unzip.
+
+- Metadata can be consulted here: https://rawcdn.githack.com/ibartomeus/IberianBees/Jose_cleaning/docs/index.html
+
+- Records with non-accepted names on the Iberian bee species masterlist have been excluded of the final dataset but can be found on `Data/Processing_iberian_bees_raw/removed.csv`. 
+
+- Please, if you spot any issue, please let @ibartomeus know to avoid duplicating efforts by creating an [issue](https://github.com/ibartomeus/IberianBees/issues) with the corresponding unique identifier (uid) of the record that needs to be fixed.
 
 - If you are curious on the process keep reading.
 
 # Process:
 
-1-   Use "rawdata/Fetch_data.R" to update data from interent (e.g. Gbif, iNaturalist)   
-2-   Add new excels with data locally to "/rawdata/xls_to_add/" with the data in the first sheet.  
-3-   Run "rawdata/preprocessing.R" to convert those to csv and upload them to github.  
-3.3- I modified manually some csvs because of non ASCII characters, and other annoying stuff. Sorry for the non-reproducible part.  
-4-   Add new csv's programatically using "/rawdata/Add_data.R".  
-5-   Use "data/datascript.R" to generate "data/clean_data.csv".  
-5.5- To fix species names I am using the workflow in "data/datascript.R" along with "data/manual_checks.csv", which can be edited to add synonims, etc...  
-6-   Knit Summary.Rmd to see updated nice summaries.  
-7-   Commit and push. Automatic tests may be done (in the future). Manually release a version on major updates.   
-8-   Metadata in EML is generated in Metadata_generator.R and can be consulted in "data/metadata"    
-9-   The manuscript is written in folder /manuscript
+To build this database, we follow a reproducible workflow to clean and ensemble the data.  
 
-# To Do:
+1- Use `Scripts/1_1_Fetch_data.R` to update data from internet (i.e. Gbif, iNaturalist).
 
-  [x] Download data from Gbif, iNat (as per May 2020).  
-  [x] pre-preprocess data contributed by coauthors (as per Aug 2021).  
-  [x] read from rawdata, clean and append files to data.   
-  [x] Implement manual tests... (datascript.R) 
-  [ ] Think on automated testing (e.g. use package CleanR?)
-  [x] create summary.
-  [o] Think what to do with manual data cleaning? Aim to keep it reproducible in datascript.R   
-  [o] Create metadata (in EML? Dataspice?)  
-  [ ] Add more data (see below)  
-  [o] Write a paper explaining scope, methodology, potential uses. 
-  [ ] Recover Lat long from localities (automated)
+2- Add new datasets (i.e. csv files) locally to `Data/Rawdata/csvs/`.
 
-# Datasets to add
+3- Process and clean individual files and assign a unique identifier within the folder `Scripts/1_2_Processing_raw_data/`.
 
-  [x] Species master list  
-  [x] Contributors via .xls in "/rawdata" [missing: Curro, Cap de creus, ...]     
-  [x] Thomas Wood et al. data (Check data from Ian Cross)  
-  [x] Gbif + iNaturalist in Fetch_data.R    
-  [o] Historical papers  [MA] 
-  [ ] E. Asensio data 
-  [o] Museo ciencias Naturales  [Piluca]   
-  [ ] Museo bcn [Curro]
-  [ ] Other datasets: Felix Torres, Leopoldo Castro, Obeso[x], Aguado, Piluca, Ortiz PDFs ...    
+4- Run `Scripts/2_Run_all-Merge_all.R`. This will run all individual files in `Scripts/1_2_Processing_raw_data/`and bind the data. The data can be merged directly without running all files by running the second section of the code "2 Merge all files".
 
+5- Conduct a final cleaning (things that weren't fixed on the individual files on step 3). This is done in `Scripts/3_1_Final_cleaning.R` and will generate the final dataset `Data/iberian_bees.csv.gz`.
 
+5.1- Non accepted species are excluded and saved on `Data/Processing_iberian_bees_raw/removed.csv`. 
 
+5.2- The non-accepted species names (e.g., synonyms) are checked manually from `Data/Processing_iberian_bees_raw/to_check.csv` and added to `Data/Processing_iberian_bees_raw/manual_checks.csv` once they have been reviewed with taxonomic advice when necessary.  After running `Scripts/3_1_Final_cleaning.R` the fixed species will be included on the final Iberianbees dataset.
+
+![plot](Manuscript/Summary/summary_repo.png)
+
+Metadata is generated using DataSpice.

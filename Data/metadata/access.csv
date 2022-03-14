@@ -1,0 +1,4 @@
+fileName,name,contentUrl,encodingFormat
+iberian_bees.csv.gz,clean data,https://github.com/ibartomeus/IberianBees/Data/iberian_bees.csv.gz,csv.gz
+authors.csv,contributors list,https://github.com/ibartomeus/IberianBees/Data/authors.csv,csv
+removed.csv,removed data,https://github.com/ibartomeus/IberianBees/Data/Processing_iberian_bees_raw/removed.csv,csv
