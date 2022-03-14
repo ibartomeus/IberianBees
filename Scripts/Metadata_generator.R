@@ -22,7 +22,7 @@ edit_biblio()
 #Run to update metadata based on the csv's in folder metadata
 write_spice() #creates Json Original name is dataspice.json. Manually renamed to IBD.json
 
-build_site(path = "Data/metadata/IBD.json") # Optional
+build_site(path = "Data/metadata/IBD.json", out_path = "Data/metadata/index.html") # Optional
 
 #create EML (and validate it)
 IBD_json <-  "~/Documents/R/IberianBees/Data/metadata/IBD.json"
