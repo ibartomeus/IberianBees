@@ -1,5 +1,5 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6354503.svg)](https://doi.org/10.5281/zenodo.6354503)
-[![License](https://licensebuttons.net/l/by/4.0/80x15.png)](https://raw.githubusercontent.com/ibartomeus/IberianBees/master/LICENSE)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 # IberianBees database v.1.0.0 :bee:
 
@@ -13,7 +13,8 @@ If you have data on Iberian bee's occurrence, fill in this [template](TBA) and s
 
 - The IberianBees database can be found on: `Data/iberian_bees.csv.gz`. This is a zip file so double click on it to unzip.
 
-- Metadata can be consulted here: https://rawcdn.githack.com/ibartomeus/IberianBees/blob/master/Data/metadata/index.html
+- Metadata can be consulted [here](https://rawcdn.githack.com/ibartomeus/IberianBees/65a387dca56829a7b3b6d00661eba64394b4ef8e/Data/metadata/index.html). 
+
 
 - Records with non-accepted names on the Iberian bee species masterlist have been excluded of the final dataset but can be found on `Data/Processing_iberian_bees_raw/removed.csv`. 
 
@@ -39,6 +40,7 @@ To build this database, we follow a reproducible workflow to clean and ensemble 
 
 5.2- The non-accepted species names (e.g., synonyms) are checked manually from `Data/Processing_iberian_bees_raw/to_check.csv` and added to `Data/Processing_iberian_bees_raw/manual_checks.csv` once they have been reviewed with taxonomic advice when necessary.  After running `Scripts/3_1_Final_cleaning.R` the fixed species will be included on the final Iberianbees dataset.
 
+Metadata is generated using [DataSpice](https://github.com/ropensci/dataspice).
+
 ![plot](Manuscript/Summary/summary_repo.png)
 
-Metadata is generated using DataSpice.
