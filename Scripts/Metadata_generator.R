@@ -1,5 +1,8 @@
 # Metadata is created using dataspice ----
 
+#This was used originally to create the structure, but now it should be
+  #manually updated in /Data/metadata
+
 #RUN JUST ONCE! As involves manual data entry via shiny apps.
 #install.packages("dataspice")
 library(dataspice)
@@ -16,12 +19,13 @@ edit_access()
 edit_creators()
 edit_biblio()
 
+#Run to update metadata based on the csv's in folder metadata
 write_spice() #creates Json Original name is dataspice.json. Manually renamed to IBD.json
 
-build_site() # Optional
+build_site(path = "Data/metadata/IBD.json") # Optional
 
 #create EML (and validate it)
-IBD_json <-  "~/Documents/R/IberianBees/data/metadata/IBD.json"
+IBD_json <-  "~/Documents/R/IberianBees/Data/metadata/IBD.json"
 eml_doc <- spice_to_eml(IBD_json)
 library(EML)
 eml_validate(eml_doc)
@@ -30,7 +34,7 @@ eml_doc$system <- "uuid"
 eml_validate(eml_doc) #need to fix those...
 
 #write EML
-write_eml(eml_doc, "data/metadata/IBD.xml")
+write_eml(eml_doc, "Data/metadata/IBD.xml")
 
 
 
