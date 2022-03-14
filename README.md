@@ -1,18 +1,19 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6354503.svg)](https://doi.org/10.5281/zenodo.6354503)
 [![License](https://licensebuttons.net/l/by/4.0/80x15.png)](https://raw.githubusercontent.com/ibartomeus/IberianBees/master/LICENSE)
 
 # IberianBees database v.1.0.0 :bee:
 
-This is a repository to document the distribution and diversity of bee species of the Iberian Peninsula. You can see a summary of the data [here](https://github.com/ibartomeus/IberianBees/blob/Jose_cleaning/Manuscript/Summary/Summary.md).   
+This is a repository to document the distribution and diversity of bee species of the Iberian Peninsula. You can see a summary of the data [here](https://github.com/ibartomeus/IberianBees/blob/master/Manuscript/Summary/Summary.md).   
 
 ## How to contribute:
 
-If you have data on Iberian bee's occurrence, fill in this [template](https://github.com/ibartomeus/IberianBees/Data/IBD_template.odt) and send it to nacho.bartomeus@gmail.com
+If you have data on Iberian bee's occurrence, fill in this [template](TBA) and send it to nacho.bartomeus@gmail.com
 
 ## How to use this repo  
 
 - The IberianBees database can be found on: `Data/iberian_bees.csv.gz`. This is a zip file so double click on it to unzip.
 
-- Metadata can be consulted here: https://rawcdn.githack.com/ibartomeus/IberianBees/Jose_cleaning/docs/index.html
+- Metadata can be consulted here: https://rawcdn.githack.com/ibartomeus/IberianBees/blob/master/Data/metadata/index.html
 
 - Records with non-accepted names on the Iberian bee species masterlist have been excluded of the final dataset but can be found on `Data/Processing_iberian_bees_raw/removed.csv`. 
 
