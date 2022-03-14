@@ -180,6 +180,6 @@ d4 <- d3[grep(" ", d3$species, fixed = TRUE, value = FALSE),]
 unique(d4$species) #591 sp ... not bad...some subspecies...
 
 #Save data
-write.csv(d4, file = "Data/Processing_raw_data/online_data.csv")
+write.csv(d4, file = "Data/Processing_iberian_bees_raw/online_data.csv")
 
 
