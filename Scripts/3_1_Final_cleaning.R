@@ -261,13 +261,18 @@ lonlat_to_state <- function(pointsDF,
 data$Longitude <- gsub(",", ".", data$Longitude)
 data$Latitude <- gsub(",", ".", data$Latitude)
 #Separate missing values not allowed for this function
-data_na <- data %>% filter(is.na(Longitude) |is.na(Latitude))
-data_non_na <- data %>% filter(!is.na(Longitude) | !is.na(Latitude))
+data$Longitude <- as.numeric(data$Longitude)
+data$Latitude <- as.numeric(data$Latitude)
+
+data_na <- data %>% dplyr::filter(is.na(Longitude) & is.na(Latitude))
+data_non_na <- data %>% dplyr::filter(!is.na(Longitude) & !is.na(Latitude))
 #Create dataframe with coordinates
 ine_province <- data.frame(x = data_non_na$Longitude, y = data_non_na$Latitude)
 #Add standard province names
 data_non_na$Province <- lonlat_to_state(ine_province)
 #Rbind again data
+#Filter out by coordinate Canary Islands
+data_non_na <- data_non_na %>% filter(Latitude>35.7 & Latitude < 44 & Longitude > - 10.4 & Longitude < 4.6)
 data <- rbind(data_na, data_non_na)
 #Ok some have been fixed by coordinate!
 
@@ -324,7 +329,8 @@ data$Province[grepl("Estremadura", data$Province)] <- "Estramadura"
 data$Country[grepl("Portugal", data$Province)] <- "Portugal"
 data$Province[grepl("Portugal", data$Province)] <- NA
 
-
+#Filter out Canary islands by province
+data <- data %>% dplyr::filter(!Province %in% "Islas Canarias")
 #Select just 3 decimals for coordinates (this rounds last decimals but i think it's fine)
 data$Latitude = formatC(as.numeric(data$Latitude), digits = 3, format = "f")
 data$Longitude = formatC(as.numeric(data$Longitude), digits = 3, format = "f")
