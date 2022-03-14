@@ -19,8 +19,8 @@
   "description": "Bees are a diverse group with more than 1000 species described in the Iberian Peninsula. This is a collaborative effort to collate and curate a database of bee occurrences.",
   "datePublished": "2022-01-01",
   "keywords": ["Biodiversity", "Apoidea", "Pollinators", "Phenology"],
-  "funder": null,
-  "temporalCoverage": "1900-01-01/2022-12-31",
+  "funder": "EU-H2020",
+  "temporalCoverage": "1830-01-01/2022-12-31",
   "license": "CC-by",
   "spatialCoverage": {
     "type": "Place",
@@ -179,13 +179,13 @@
       "type": "PropertyValue",
       "unitText": "Text",
       "name": "Authors.to.give.credit",
-      "description": "Authors providing the original dataset"
+      "description": "List of authors providing the original dataset"
     },
     {
       "type": "PropertyValue",
       "unitText": "Text",
       "name": "Any.other.additional.data",
-      "description": "Free text to note any other additional data"
+      "description": "Free text to note any other additional information"
     },
     {
       "type": "PropertyValue",
@@ -198,19 +198,37 @@
       "unitText": "id",
       "name": "uid",
       "description": "Unique identification in IBD."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "original_name",
+      "description": "Species name as provided by the orignal dataset"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "accepted_name",
+      "description": "Final species name after correcting for misspellings and synonims"
     }
   ],
   "distribution": [
     {
       "type": "DataDownload",
-      "name": "data",
-      "contentUrl": "https://github.com/ibartomeus/IberianBees/data/data_clean.csv",
+      "name": "clean data",
+      "contentUrl": "https://github.com/ibartomeus/IberianBees/Data/iberian_bees.csv.gz",
+      "encodingFormat": "csv.gz"
+    },
+    {
+      "type": "DataDownload",
+      "name": "contributors list",
+      "contentUrl": "https://github.com/ibartomeus/IberianBees/Data/authors.csv",
       "encodingFormat": "csv"
     },
     {
       "type": "DataDownload",
       "name": "removed data",
-      "contentUrl": "https://github.com/ibartomeus/IberianBees/data/removed.csv",
+      "contentUrl": "https://github.com/ibartomeus/IberianBees/Data/Processing_iberian_bees_raw/removed.csv",
       "encodingFormat": "csv"
     }
   ]
@@ -286,7 +304,7 @@
       </tr>
       <tr>
         <td>Funder</td>
-        <td></td>
+        <td>EU-H2020</td>
       </tr>
       <tr>
         <td>License</td>
@@ -301,7 +319,7 @@
     <table class="listing">
       <tr>
         <td>Begin</td>
-        <td>1900-01-01</td>
+        <td>1830-01-01</td>
       </tr>
       <tr>
         <td>End</td>
@@ -447,12 +465,12 @@
           </tr>
           <tr>
             <td><code>Authors.to.give.credit</code></td>
-            <td>Authors providing the original dataset</td>
+            <td>List of authors providing the original dataset</td>
             <td>Text</td>
           </tr>
           <tr>
             <td><code>Any.other.additional.data</code></td>
-            <td>Free text to note any other additional data</td>
+            <td>Free text to note any other additional information</td>
             <td>Text</td>
           </tr>
           <tr>
@@ -464,6 +482,16 @@
             <td><code>uid</code></td>
             <td>Unique identification in IBD.</td>
             <td>id</td>
+          </tr>
+          <tr>
+            <td><code>original_name</code></td>
+            <td>Species name as provided by the orignal dataset</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td><code>accepted_name</code></td>
+            <td>Final species name after correcting for misspellings and synonims</td>
+            <td>Categorical</td>
           </tr>
         </tbody>
       </table>
@@ -480,14 +508,19 @@
       </thead>
       <tbody>
         <tr>
-          <td><code>data</code></td>
+          <td><code>clean data</code></td>
+          <td><code>csv.gz</code></td>
+          <td><a href="https://github.com/ibartomeus/IberianBees/Data/iberian_bees.csv.gz">Download</a></td>
+        </tr>
+        <tr>
+          <td><code>contributors list</code></td>
           <td><code>csv</code></td>
-          <td><a href="https://github.com/ibartomeus/IberianBees/data/data_clean.csv">Download</a></td>
+          <td><a href="https://github.com/ibartomeus/IberianBees/Data/authors.csv">Download</a></td>
         </tr>
         <tr>
           <td><code>removed data</code></td>
           <td><code>csv</code></td>
-          <td><a href="https://github.com/ibartomeus/IberianBees/data/removed.csv">Download</a></td>
+          <td><a href="https://github.com/ibartomeus/IberianBees/Data/Processing_iberian_bees_raw/removed.csv">Download</a></td>
         </tr>
       </tbody>
     </table>

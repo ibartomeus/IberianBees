@@ -14,8 +14,8 @@
   "description": "Bees are a diverse group with more than 1000 species described in the Iberian Peninsula. This is a collaborative effort to collate and curate a database of bee occurrences.",
   "datePublished": "2022-01-01",
   "keywords": ["Biodiversity", "Apoidea", "Pollinators", "Phenology"],
-  "funder": null,
-  "temporalCoverage": "1900-01-01/2022-12-31",
+  "funder": "EU-H2020",
+  "temporalCoverage": "1830-01-01/2022-12-31",
   "license": "CC-by",
   "spatialCoverage": {
     "type": "Place",
@@ -174,13 +174,13 @@
       "type": "PropertyValue",
       "unitText": "Text",
       "name": "Authors.to.give.credit",
-      "description": "Authors providing the original dataset"
+      "description": "List of authors providing the original dataset"
     },
     {
       "type": "PropertyValue",
       "unitText": "Text",
       "name": "Any.other.additional.data",
-      "description": "Free text to note any other additional data"
+      "description": "Free text to note any other additional information"
     },
     {
       "type": "PropertyValue",
@@ -193,19 +193,37 @@
       "unitText": "id",
       "name": "uid",
       "description": "Unique identification in IBD."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "original_name",
+      "description": "Species name as provided by the orignal dataset"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "accepted_name",
+      "description": "Final species name after correcting for misspellings and synonims"
     }
   ],
   "distribution": [
     {
       "type": "DataDownload",
-      "name": "data",
-      "contentUrl": "https://github.com/ibartomeus/IberianBees/data/data_clean.csv",
+      "name": "clean data",
+      "contentUrl": "https://github.com/ibartomeus/IberianBees/Data/iberian_bees.csv.gz",
+      "encodingFormat": "csv.gz"
+    },
+    {
+      "type": "DataDownload",
+      "name": "contributors list",
+      "contentUrl": "https://github.com/ibartomeus/IberianBees/Data/authors.csv",
       "encodingFormat": "csv"
     },
     {
       "type": "DataDownload",
       "name": "removed data",
-      "contentUrl": "https://github.com/ibartomeus/IberianBees/data/removed.csv",
+      "contentUrl": "https://github.com/ibartomeus/IberianBees/Data/Processing_iberian_bees_raw/removed.csv",
       "encodingFormat": "csv"
     }
   ]
