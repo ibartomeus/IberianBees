@@ -52,8 +52,20 @@ master <- read.csv("../Data/Processing_iberian_bees_raw/Iberian_species_masterli
 #Load removed species from the database
 removed <- read.csv("../Data/Processing_iberian_bees_raw/removed.csv")
 master$accepted_name <- paste(master$Genus, master$Species, sep = " ")
+data$Latitude <- as.numeric(data$Latitude)
+data$Longitude <- as.numeric(data$Longitude)
+
+#Create vector with info for abstract
+#Geo
 geo <- length(which(!is.na(data$Latitude) & !is.na(data$Longitude)))
+#Flowers
 flw <- length(which(!is.na(data$Flowers.visited)))
+#Locality
+local <- length(which(!is.na(data$Locality)))
+#Colector and ide by
+deter <- length(which(!is.na(data$Collector) & !is.na(data$Determined.by)))
+#Locality
+date <- length(which(!is.na(data$Year) & !is.na(data$Month) & !is.na(data$Day)))
 ```
 
 > (1) Departamento de Ecología Integrativa, Estación Biológica de Doñana (EBD-CSIC), Consejo Superior de Investigaciones Científicas, Avda. Américo Vespucio s/n, E-41092 Sevilla, España.
@@ -66,7 +78,8 @@ flw <- length(which(!is.na(data$Flowers.visited)))
 
 # Resumen
 
-> **Base de datos de abejas Ibéricas**. Las abejas son un grupo diverso con más de 1000 espcies descritas en la Península Ibérica. Recientemente han recibido especial atención debido a su importante papel como polinizadores y proveedores de servicios ecosistémicos. Además, diversos cambios ambientales rápidos inducidos por el hombre estan propiciando el declive de algunas de sus poblaciones. Sin embargo, sabemos muy poco del estado de conservación de la mayoría de espcies y de muchas especies apenas sabemos cual es su distribución en la península Ibérica. Aquí presentamos un esfuerzo colaborativo para agrupar y curar una base de datos de ocurrencias que permita responder questions sobre su distribución, preferencia de habitats, phenologia, o tendencias historicas. En total hemos acumulado `r nrow(data)` registros en la Península Ibérica y Islas Baleares de `r length(unique(data$accepted_name))` espcies diferentes recolectados entre `r min(data$Year, na.rm = T)` y `r max(data$Year, na.rm = T)` Más de `r round(geo/nrow(data),2)*100`% de estos registros tienen información asociada como la localidad y fecha de captura, y el `r round(flw/nrow(data),2)*100`% tiene datos extra como las especies de planta donde se recolecto. Esta base de datos es el punto de partida para conocer y conservar mejor la biodiversidad de abejas en la peninsula Iberica. Se puede acceder en: XXXX. [max 300w]()
+> **Base de datos de abejas Ibéricas**. Las abejas (Anthophila) son un grupo extremadamente diverso con más de 1000 especies descritas en la Península Ibérica. Además, son excelentes polinizadores y proveen numerosos servicios ecosistémicos fundamentales para la mayoría de ecosistemas terrestres. Debido a los diversos cambios ambientales inducidos por el ser humano, existen evidencias del declive de algunas de sus poblaciones para ciertas especies. Sin embargo, sabemos muy poco del estado de conservación de la mayoría de especies y para muchas de ellas apenas sabemos cual es su distribución en la Península Ibérica. En este trabajo presentamos un esfuerzo colaborativo para agrupar y curar una base de datos de ocurrencias en la Península Ibérica e Islas Baleares que permita responder preguntas sobre su distribución, preferencia de hábitat, fenología o tendencias históricas. En total esta base de datos consta por ahora de `r nrow(data)` registros de `r length(unique(data$accepted_name))` especies con un `r round(geo/nrow(data),2)*100`% con información georeferenciada recolectada entre `r min(data$Year, na.rm = T)` y `r max(data$Year, na.rm = T)`. Además cada registro tiene información asociada como la localidad de muestreo (`r round(local/nrow(data),2)*100`%), identificador y colector de la especie (`r round(deter/nrow(data),2)*100`%), fecha de captura (`r round(date/nrow(data),2)*100`%) y planta donde se recolectó (`r round(flw/nrow(data),2)*100`%). Creemos que esta base de datos es el punto de partida para conocer y conservar mejor la biodiversidad de abejas en la Península Ibérica e Islas Baleares. Se puede acceder en: XXXX. [max 300w]()
+
 
 # Abstract
 
@@ -87,7 +100,9 @@ TBTranslated
 
 # Background & Summary (700 words max).  
 
-Bees (Hymenoptera, Apoidea) are a diverse group of species with more than 20.000 species described worldwide (@Ascher). The Iberian Peninsula, with its bee-loved Mediterranean climate, is one of the hotspots of bee diversity with more than 1000 species described to date and counting (@Ortiz). Unfortunately, despite the high diversity of Iberian bees, we know very little of their diversity and distribution. This is paradoxical, as in recent years bees have been highlighted as a keystone group in the ecosystem due to a key function they provide, the pollination of thousands of plants (@ollerton), including most crop species (@klein). In addition, various rapid human-induced environmental changes are leading to the decline of some of its populations (@goulson). However, the response of bee species to global change is heterogeneous both in space and taxonomically. That is, while some areas and species are declining  drastically (@Burkle), other areas are well conserved (@Herrera2020) and while some species are in the brink of extinction (@Cameron) some species are even thriving (@Ruso). A better description of bee distribution, habitat preference, phenology, or historical trends in the Iberian peninsula would require information on when and where different species occur. 
+Las abejas (Hymenoptera, Apoidea) son un grupo muy diverso de especies con más de 20.000 especies descritas en el mundo (@Ascher). Debido a las condiciones climáticas de la Península Ibérica, esta se caracteriza por ser uno de los puntos calientes de diversidad a nivel mundial con más de 1000 abejas descritas hasta la fecha (@Ortiz). A pesar de la gran diversidad de abejas Ibéricas, conocemos muy poco de su ecología
+y distribución. Paradójicamente las abejas son un un grupo clave que desarrolla una función vital para la moyoría de ecosistemaas terrestres, la polinización de miles de plantas (@ollerton) incluyendo a la mayoría de cultivos (@klein). Además el cambio debido al impacto del ser humano esta dando lugar al declive de algunas de sus poblaciones (@goulson). No obstante, la respuesta de las abejas al cambio global es heterogénea en el espacio y taxonomicámente. Es decir, existen áreas que están sufriendo un decaimiento poblacional drástico (@Burkle) mientras que otras se mantienen bien conservadas (@Herrera2020) y mientras que algunas especies se encuntra al borde de la extinción (@Cameron), otras se encuentran incluso prosperando (@Ruso). Una mejor descripción de la distribución de las abejas sobre su distribución, preferencia de hábitat, fenología, o tendencias históricas en la Península Ibérica requerirían información de dónde y cuándo las especies aparecen.  
+
 
 In the absence of standardized monitoring efforts, one may think that detailed information on species occurrences in space and time does not exists. However, there are different sources of useful information. First, natural history museums hold historical collections of amateur naturalists and researchers who collected bees (@Bartomeus2018). Collectors are really good at classifying and labeling each collected specimen, which means we can retrieve the information stored along the pinned specimens about when and where those where collected. Second, the Iberian peninsula has a rich tradition of pollinator and pollination researchers (@Archer), which have been collecting occurrence bee data with different aims. Finally, many occurrence records are being made available through internet portals which centralize data hosted in institutions all around the world (e.g. Gbif) or collected by citizen scientists (INaturalist). The challenge is how to digitalize, access, and curate all this different dara sources. 
 
@@ -169,76 +184,133 @@ kable(metadata[,-1])
 **Figura 3**. Cobertura temporal de (A) los años con más ocurrencias, y (B) los meses con más ocurrencias. 
 
 
-###### FIGURA 1
-
-```{r Fig1, echo=FALSE, fig.cap="Figura 1. Barplot indicating the 20 more common recorded species in the final data set.", message=FALSE, warning=FALSE, cache=FALSE}
-#barplot of top 10 species
-data2 <- subset(data, accepted_name != "Apis mellifera")
-default <- par()$mar
-par(mar = c(10.1, 4.1, 4.1, 2.1))
-barplot(head(sort(table(data2$accepted_name), decreasing = TRUE),20), las = 2, cex.names = 0.7)
-#barplot(tail(sort(table(data2$accepted_name), decreasing = TRUE),20), las = 2, cex.names = 0.7)
-par(mar = default)
+```{r Fig1, echo=FALSE, fig.align='center', out.width="70%", fig.cap="Barplot indicating the 20 more common recorded species in the final data set."}
+# Prepare top 20 records
+top_20 <- data %>%
+  filter(!accepted_name == "Apis mellifera") %>%
+  group_by(accepted_name) %>%
+  summarise(no_rows = length(accepted_name)) %>%
+  arrange(-no_rows) %>%
+  slice(1:20)
+# Fix row position
+top_20$accepted_name <- factor(top_20$accepted_name, levels = top_20$accepted_name)
+# Plot
+ggplot(top_20, aes(x = accepted_name, y = no_rows)) +
+  geom_bar(stat = "identity", fill = "#287D8EFF") +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 8, face = "italic")) +
+  ylab("Number of records") +
+  xlab("Species") +
+  scale_y_continuous(expand = c(0, 0))
 ```
 
-###### FIGURA 2
-
-```{r Fig2, echo=FALSE, fig.cap="Map of the Iberian peninsula indicating where the bee occurrences were sampled.", message=FALSE, warning=FALSE, cache=FALSE}
+```{r Fig2, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.cap="Map of the Iberian peninsula indicating where the bee occurrences were sampled.",out.width="70%"}
+# code courtesy of Paco Rodriguez.
 library(sf)
 library(raster)
 library(rasterVis)
-#code courtesy of Paco Rodriguez.
+library(tidyverse)
 crs.geo <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
 crs.laea <- "+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs"
 
-#Convert coordinates to numeric 
+library(data.table)
+data <- read.table("../Data/iberian_bees.csv.gz", header = T, quote = "\"", sep = ",")
+
+# Prepare data
 data$Longitude <- as.numeric(data$Longitude)
 data$Latitude <- as.numeric(data$Latitude)
-#Filter out missing coords to work with them
-dat <- subset(data, !is.na(Latitude) & !is.na(Longitude))
+data <- data %>% filter(!is.na(Latitude) & !is.na(Longitude))
+# Keep points on balearic islands
+data_1 <- data %>% filter(Province == "Balears, Illes")
+data_1$Country_1 <- NA
 
-datos.sf <- st_as_sf(dat,coords = c("Longitude", "Latitude"),
-crs = crs.geo)
+# Filter points in Spain and Portugal
+data$Country_1 <- NA
+data$Country_1 <- maps::map.where(x = data$Longitude, y = data$Latitude)
+data <- data %>% filter(Country_1 == "Spain" | Country_1 == "Portugal")
+# Rbind points that are in Spain with the ones of Balearic islands
+dat <- rbind(data, data_1)
+
+datos.sf <- st_as_sf(dat,
+  coords = c("Longitude", "Latitude"),
+  crs = crs.geo
+)
 
 datos.laea <- st_transform(datos.sf,
-crs = crs.laea)
+  crs = crs.laea
+)
 
 ras <- raster(datos.laea, resolution = 10000)
 
 ras.counts <- rasterize(datos.laea[, "accepted_name"], ras,
-               field = "accepted_name", fun = "count")
-#str(datos.laea)
-datos.laea$total <- datos.laea$Male + datos.laea$Female + datos.laea$Worker + datos.laea$Not.specified 
+  field = "accepted_name", fun = "count"
+)
+# str(datos.laea)
+datos.laea$total <- datos.laea$Male + datos.laea$Female + datos.laea$Worker + datos.laea$Not.specified
 ras.counts2 <- rasterize(datos.laea[, "total"], ras,
-               field = "total", fun = "sum")
+  field = "total", fun = "sum"
+)
 ras2 <- raster(datos.laea, resolution = 30000)
 ras.richness <- rasterize(datos.laea[, "accepted_name"], ras2,
-               field = "accepted_name", fun = function(x, ...)
-                 {length(unique(na.omit(x)))} )
-
+  field = "accepted_name", fun = function(x, ...) {
+    length(unique(na.omit(x)))
+  }
+)
 library(vegan)
 ras.chao <- rasterize(datos.laea[, "accepted_name"], ras2,
-               field = "accepted_name", fun = function(x, ...)
-                 {estimateR(t(as.matrix(x = table(x), nrow = 1, ncol = x)))[2,1]} ) #2 chao, 4 ACE #TO DO THIS WELL, we need to recover abundances.
+  field = "accepted_name", fun = function(x, ...) {
+    estimateR(t(as.matrix(x = table(x), nrow = 1, ncol = x)))[2, 1]
+  }
+) # 2 chao, 4 ACE #TO DO THIS WELL, we need to recover abundances.
 
-#levelplot(log(ras.counts+1), margin = FALSE, scales = list(draw = FALSE),
- #         par.settings = viridisTheme())
-levelplot(log(ras.counts2+1), margin = FALSE, scales = list(draw = FALSE),
-          par.settings = viridisTheme())
-#levelplot(log(ras.richness+1), margin = FALSE, scales = list(draw = FALSE),
- #         par.settings = viridisTheme())
-#levelplot(ras.chao, margin = FALSE, scales = list(draw = FALSE),
- #         par.settings = viridisTheme())
+# levelplot(log(ras.counts+1), margin = FALSE, scales = list(draw = FALSE),
+#         par.settings = viridisTheme())
+levelplot(log(ras.counts2 + 1),
+  margin = FALSE, scales = list(draw = FALSE),
+  par.settings = viridisTheme()
+)
+# levelplot(log(ras.richness+1), margin = FALSE, scales = list(draw = FALSE),
+#         par.settings = viridisTheme())
+# levelplot(ras.chao, margin = FALSE, scales = list(draw = FALSE),
+#         par.settings = viridisTheme())
 ```
 
-###### FIGURA 3
+```{r Fig3, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Cobertura temporal de (A) los años con más ocurrencias, y (B) los meses con más ocurrencias. ", message=FALSE, warning=FALSE, cache=FALSE}
+# Prepare top 20 records
+by_year <- data %>% filter(!accepted_name == "Apis mellifera")
 
-```{r Fig3, echo=FALSE, fig.cap="Cobertura temporal de (A) los años con más ocurrencias, y (B) los meses con más ocurrencias. ", message=FALSE, warning=FALSE, cache=FALSE}
-par(mfrow = c(2,1))
-hist(data2$Year, 
-     las = 1, xlab = "Year")
-hist(data2$Month,
-     las = 1, xlab = "Month", breaks = 12)
+p1 <- ggplot(by_year, aes(Year)) +
+  geom_histogram(fill = "#287D8EFF") +
+  theme_classic() +
+  ylab("Number of records") +
+  scale_y_continuous(expand = c(0, 0))
+
+data$month_name <- month.abb[data$Month]
+
+month_sum <- data %>%
+  group_by(month_name) %>%
+  summarise(no_rows = length(month_name)) %>%
+  arrange(-no_rows)
+
+month_sum <- month_sum %>% filter(!is.na(month_name))
+
+month_sum$month_name <- factor(month_sum$month_name, levels = c(
+  "Jan", "Feb", "Mar",
+  "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep",
+  "Oct", "Nov", "Dec"
+))
+
+p2 <- ggplot(data = month_sum, aes(x = month_name, y = no_rows)) +
+  geom_bar(stat = "identity", fill = "#287D8EFF") +
+  theme_classic() +
+  scale_y_continuous(expand = c(0, 0)) +
+  ylab("Number of records") +
+  xlab("Months")
+
+library(patchwork)
+
+p1 / p2
 ```
 
 
