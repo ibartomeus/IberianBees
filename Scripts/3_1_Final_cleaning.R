@@ -8,6 +8,9 @@ data <- read.table("Data/Processing_iberian_bees_raw/iberian_bees_raw.csv.gz",  
 library(dplyr)
 data <- data %>%  mutate(across(c(colnames(data)), trimws))
 
+#Create column for original species name
+data$Original_species_name <- paste(data$Genus, data$Species)
+
 #######################################-
 #Cleaning of genus and subgenus names----
 #######################################-
@@ -202,7 +205,7 @@ nlevels(factor(data$accepted_name)) #923 species!!
 #have been deleted
 
 #So now we filter out one of these cols
-data <- data %>% select(-Genus_species)
+data <- data %>%  dplyr::select(-Genus_species)
 #I think that if there is the need to check specific species
 #Always the raw data can be checked because is available
 
@@ -338,9 +341,21 @@ data$Day <- ifelse(data$Day < 10, paste0("0", data$Day), data$Day)
 data$Start.date <- gsub("00/", "01/", data$Start.date)
 #Fix empty level
 data$Start.date[data$Start.date==""] <- NA
+data$Coordinate.precision[data$Coordinate.precision==""] <- NA
+data$Locality[data$Locality==""] <- NA
+data$Province[data$Province==""] <- NA
 
 #delete rm col 
-data <- data %>% select(-c(rm))
+data <- data %>% dplyr::select(-c(rm))
+
+#Make first letter upper case for all cols
+colnames(data) <- str_to_title(colnames(data))
+
+#Reorder cols, final order! :) 
+data_1 <- data %>% dplyr::select(Genus, Subgenus, Species, Subspecies, Accepted_name, Original_species_name)
+data_2 <- data %>% dplyr::select(!c(Genus, Subgenus, Species, Subspecies, Accepted_name, Original_species_name))
+#All species cols are now first
+data <- cbind(data_1, data_2)
 
 #Save as a zip file
 write.csv(data, file=gzfile("Data/iberian_bees.csv.gz"))
