@@ -18,11 +18,11 @@ head(sites)
 data(traits_pollinators_estimated)
 head(traits_pollinators_estimated)
 
-#Merege with sites
+#Merge with sites
 beefun <- merge(all_interactions, sites)
 beefun <- merge(beefun, traits_pollinators_estimated)
 
-#Check and ilter by family of interest
+#Check and filter by family of interest
 unique(beefun$family)
 beefun <- subset(beefun, family %in% c("Andrenidae", "Apidae", "Megachilidae",
                                        "Colletidae", "Melittidae"))
@@ -52,12 +52,13 @@ beefun$Determined.by <- "Oscar Aguado"
 beefun$Province <- "Huelva"
 beefun$Locality <- beefun$Site_ID            
 beefun$Coordinate.precision <- "gps"
+#Just by count and no frequency
 beefun$Female <-  ifelse(beefun$Pollinator_sex =="female", "female", NA)
-#JOSE, Me gustaria usar count y no frequency, que se refiere a visitas. Can you fix it?
-#To be clear, each row is one individual, regardless of the value on Frequency.
-beefun$Female <- beefun$Frequency[beefun$Female=="female"] 
 beefun$Male <-  ifelse(beefun$Pollinator_sex =="male", "male", NA)
-beefun$Male <- beefun$Frequency[beefun$Male=="male"] 
+#Convert to one if equal male or female
+beefun$Female[beefun$Female=="female"] <- "1"
+beefun$Male[beefun$Male=="male"] <- "1"
+#Plants
 beefun$Flowers.visited <- beefun$Plant_gen_sp
 beefun$Reference.doi <- "http://doi.org/10.5281/zenodo.3364037"
 beefun$Local_ID <- beefun$Pollinator_id
