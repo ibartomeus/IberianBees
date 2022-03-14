@@ -4,7 +4,7 @@ source("Scripts/1_2_Processing_raw_data/Source_file.R") #Generate template
 #Add online data ----
 
 #Read data
-newdat <- read.csv(file = "Data/Processing_raw_data/online_data.csv")[,-1]
+newdat <- read.csv(file = "Data/Processing_iberian_bees_raw/online_data.csv")[,-1]
 head(newdat)
 
 compare_variables(check, newdat)
