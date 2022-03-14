@@ -2,9 +2,7 @@
 
 #Read compressed csv with data.table library
 library(data.table)
-data <- read.table("Data/Processing_iberian_bees_raw/iberian_bees_raw.csv.gz",  header=T, quote="\"", sep=",")
-#Delete first col that are rownames
-data <- data %>% select(-X) #JOSE: que paquete hay que cargar? Me da error.
+data <- read.table("Data/Processing_iberian_bees_raw/iberian_bees_raw.csv.gz",  header=T, quote="\"", sep=",", row.names=1)
 
 #Delete leading and trailing spaces for all columns
 library(dplyr)
@@ -202,7 +200,7 @@ nlevels(factor(data$accepted_name)) #923 species!!
 #Now accepted_name and Genus_species should be identical
 #The original names were "corrected" already and the ones that not
 #have been deleted
-summary(data$Genus_species==data$accepted_name)
+
 #So now we filter out one of these cols
 data <- data %>% select(-Genus_species)
 #I think that if there is the need to check specific species

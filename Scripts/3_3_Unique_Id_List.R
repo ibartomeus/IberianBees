@@ -2,9 +2,7 @@
 #mail and all metadata related
 library(tidyverse)
 
-data <- read.table("Data/iberian_bees.csv.gz",  header=T, quote="\"", sep=",")
-#Delete first col that are rownames
-data <- data %>% select(-X)
+data <- read.table("Data/iberian_bees.csv.gz",  header=T, quote="\"", sep=",",row.names=1)
 
 #Select unique identifier (I love R but won't be able to remember this (.*)_([^_]+)$)
 data <- data %>% extract(uid, into = c("Id", "number"), "(.*)_([^_]+)$")
