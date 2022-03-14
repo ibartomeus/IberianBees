@@ -1,0 +1,545 @@
+<html>
+  <head>
+    <title>Iberian Bee Database</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="application/ld+json">
+      {
+  "@context": "http://schema.org",
+  "type": "Dataset",
+  "name": "Iberian Bee Database",
+  "creator": [
+    {
+      "type": "Person",
+      "id": "0000-0001-7893-4389",
+      "email": "nacho.bartomeus@gmail.com",
+      "affiliation": "EBD-CSIC",
+      "name": "Ignasi Bartomeus"
+    }
+  ],
+  "description": "Bees are a diverse group with more than 1000 species described in the Iberian Peninsula. This is a collaborative effort to collate and curate a database of bee occurrences.",
+  "datePublished": "2022-01-01",
+  "keywords": ["Biodiversity", "Apoidea", "Pollinators", "Phenology"],
+  "funder": "EU-H2020",
+  "temporalCoverage": "1830-01-01/2022-12-31",
+  "license": "CC-by",
+  "spatialCoverage": {
+    "type": "Place",
+    "name": "Iberian peninsula",
+    "geo": {
+      "type": "GeoShape",
+      "box": "44.15 4.76 35.67 -10.13"
+    }
+  },
+  "variableMeasured": [
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Genus",
+      "description": "Genus"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Subgenus",
+      "description": "Subgenus"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Species",
+      "description": "Species"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Subspecies",
+      "description": "Subspecies"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Country",
+      "description": "Country of collection"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Province",
+      "description": "Province of collection"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Text",
+      "name": "Locality",
+      "description": "Locality as provided by original collectors"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Decimal degrees",
+      "name": "Latitude",
+      "description": "Latitude"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Decimal degrees",
+      "name": "Longitude",
+      "description": "Longitude"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Coordinate.precision",
+      "description": "Precision at which the coordinates are provided"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Year",
+      "name": "Year",
+      "description": "Year of collection"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Month",
+      "name": "Month",
+      "description": "Month of collection"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Day",
+      "name": "Day",
+      "description": "Day of collection"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Text",
+      "name": "Start.date",
+      "description": "Free text regarding earlier posible date of collection"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Text",
+      "name": "End.date",
+      "description": "Free text regarding later posible date of collection"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Collector",
+      "description": "Name of the collector"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Determined.by",
+      "description": "Name of the person who identified the specimen"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "number of records",
+      "name": "Female",
+      "description": "Number of females recorded (including queens in social spcies)"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "number of records",
+      "name": "Male",
+      "description": "Number of males recorded"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "number of records",
+      "name": "Worker",
+      "description": "Number of workers recorded (for social species)"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "number of records",
+      "name": "Not.specified",
+      "description": "Number of specimens recorded without sex identification"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Text",
+      "name": "Reference.doi",
+      "description": "If the data is publiched, the DOI of the papers where it appears"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Text",
+      "name": "Flowers.visited",
+      "description": "Free text including the flowers that the specimen was visiting"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "id",
+      "name": "Local_ID",
+      "description": "Unique identification in the local collection"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Text",
+      "name": "Authors.to.give.credit",
+      "description": "List of authors providing the original dataset"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Text",
+      "name": "Any.other.additional.data",
+      "description": "Free text to note any other additional information"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Text",
+      "name": "Notes.and.queries",
+      "description": "Free text to note any other notes or queries"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "id",
+      "name": "uid",
+      "description": "Unique identification in IBD."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "original_name",
+      "description": "Species name as provided by the orignal dataset"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "accepted_name",
+      "description": "Final species name after correcting for misspellings and synonims"
+    }
+  ],
+  "distribution": [
+    {
+      "type": "DataDownload",
+      "name": "clean data",
+      "contentUrl": "https://github.com/ibartomeus/IberianBees/Data/iberian_bees.csv.gz",
+      "encodingFormat": "csv.gz"
+    },
+    {
+      "type": "DataDownload",
+      "name": "contributors list",
+      "contentUrl": "https://github.com/ibartomeus/IberianBees/Data/authors.csv",
+      "encodingFormat": "csv"
+    },
+    {
+      "type": "DataDownload",
+      "name": "removed data",
+      "contentUrl": "https://github.com/ibartomeus/IberianBees/Data/Processing_iberian_bees_raw/removed.csv",
+      "encodingFormat": "csv"
+    }
+  ]
+}
+
+    </script>
+    <style>
+      body {
+        font-size: 16px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        margin: 0 auto;
+        padding: 1rem;
+        max-width: 800px;
+      }
+
+      #map {
+        height: 20rem;
+      }
+
+      #attributes-wrapper,
+      #jsonld-wrapper {
+        height: 20rem;
+        overflow-y: scroll;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      th {
+        border-bottom: 1px solid black;
+      }
+
+      th, td {
+        padding: 0.25rem;
+      }
+
+      table.listing td {
+        border: 1px solid #CCC;
+      }
+
+      table.listing tr td:first-child {
+          background-color: #EEE;
+      }
+
+      table.listing ul {
+        margin: 0 0 0 1.5rem;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Iberian Bee Database</h1>
+    <p><strong>Description:</strong> Bees are a diverse group with more than 1000 species described in the Iberian Peninsula. This is a collaborative effort to collate and curate a database of bee occurrences.</p>
+
+    <h2>Bibliographic</h2>
+
+    <table class="listing">
+      <tr>
+        <td>Published</td>
+        <td>2022-01-01</td>
+      </tr>
+      <tr>
+        <td>Keywords</td>
+        <td>
+          <ul>
+            <li>Biodiversity</li>
+            <li>Apoidea</li>
+            <li>Pollinators</li>
+            <li>Phenology</li>
+        </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Funder</td>
+        <td>EU-H2020</td>
+      </tr>
+      <tr>
+        <td>License</td>
+        <td>CC-by</td>
+      </tr>
+    </table>
+
+    <h2>Coverage</h2>
+
+    <h3>Temporal</h3>
+
+    <table class="listing">
+      <tr>
+        <td>Begin</td>
+        <td>1830-01-01</td>
+      </tr>
+      <tr>
+        <td>End</td>
+        <td>2022-12-31</td>
+      </tr>
+    </table>
+
+    <h3>Spatial</h3>
+    <pre><code></code></pre>
+    <div id="map"></div>
+
+    <h2>Attributes</h2>
+
+    <div id="attributes-wrapper">
+      <table id="attributes">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Unit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>Genus</code></td>
+            <td>Genus</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td><code>Subgenus</code></td>
+            <td>Subgenus</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td><code>Species</code></td>
+            <td>Species</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td><code>Subspecies</code></td>
+            <td>Subspecies</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td><code>Country</code></td>
+            <td>Country of collection</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td><code>Province</code></td>
+            <td>Province of collection</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td><code>Locality</code></td>
+            <td>Locality as provided by original collectors</td>
+            <td>Text</td>
+          </tr>
+          <tr>
+            <td><code>Latitude</code></td>
+            <td>Latitude</td>
+            <td>Decimal degrees</td>
+          </tr>
+          <tr>
+            <td><code>Longitude</code></td>
+            <td>Longitude</td>
+            <td>Decimal degrees</td>
+          </tr>
+          <tr>
+            <td><code>Coordinate.precision</code></td>
+            <td>Precision at which the coordinates are provided</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td><code>Year</code></td>
+            <td>Year of collection</td>
+            <td>Year</td>
+          </tr>
+          <tr>
+            <td><code>Month</code></td>
+            <td>Month of collection</td>
+            <td>Month</td>
+          </tr>
+          <tr>
+            <td><code>Day</code></td>
+            <td>Day of collection</td>
+            <td>Day</td>
+          </tr>
+          <tr>
+            <td><code>Start.date</code></td>
+            <td>Free text regarding earlier posible date of collection</td>
+            <td>Text</td>
+          </tr>
+          <tr>
+            <td><code>End.date</code></td>
+            <td>Free text regarding later posible date of collection</td>
+            <td>Text</td>
+          </tr>
+          <tr>
+            <td><code>Collector</code></td>
+            <td>Name of the collector</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td><code>Determined.by</code></td>
+            <td>Name of the person who identified the specimen</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td><code>Female</code></td>
+            <td>Number of females recorded (including queens in social spcies)</td>
+            <td>number of records</td>
+          </tr>
+          <tr>
+            <td><code>Male</code></td>
+            <td>Number of males recorded</td>
+            <td>number of records</td>
+          </tr>
+          <tr>
+            <td><code>Worker</code></td>
+            <td>Number of workers recorded (for social species)</td>
+            <td>number of records</td>
+          </tr>
+          <tr>
+            <td><code>Not.specified</code></td>
+            <td>Number of specimens recorded without sex identification</td>
+            <td>number of records</td>
+          </tr>
+          <tr>
+            <td><code>Reference.doi</code></td>
+            <td>If the data is publiched, the DOI of the papers where it appears</td>
+            <td>Text</td>
+          </tr>
+          <tr>
+            <td><code>Flowers.visited</code></td>
+            <td>Free text including the flowers that the specimen was visiting</td>
+            <td>Text</td>
+          </tr>
+          <tr>
+            <td><code>Local_ID</code></td>
+            <td>Unique identification in the local collection</td>
+            <td>id</td>
+          </tr>
+          <tr>
+            <td><code>Authors.to.give.credit</code></td>
+            <td>List of authors providing the original dataset</td>
+            <td>Text</td>
+          </tr>
+          <tr>
+            <td><code>Any.other.additional.data</code></td>
+            <td>Free text to note any other additional information</td>
+            <td>Text</td>
+          </tr>
+          <tr>
+            <td><code>Notes.and.queries</code></td>
+            <td>Free text to note any other notes or queries</td>
+            <td>Text</td>
+          </tr>
+          <tr>
+            <td><code>uid</code></td>
+            <td>Unique identification in IBD.</td>
+            <td>id</td>
+          </tr>
+          <tr>
+            <td><code>original_name</code></td>
+            <td>Species name as provided by the orignal dataset</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td><code>accepted_name</code></td>
+            <td>Final species name after correcting for misspellings and synonims</td>
+            <td>Categorical</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Distribution</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>File</th>
+          <th>Format</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>clean data</code></td>
+          <td><code>csv.gz</code></td>
+          <td><a href="https://github.com/ibartomeus/IberianBees/Data/iberian_bees.csv.gz">Download</a></td>
+        </tr>
+        <tr>
+          <td><code>contributors list</code></td>
+          <td><code>csv</code></td>
+          <td><a href="https://github.com/ibartomeus/IberianBees/Data/authors.csv">Download</a></td>
+        </tr>
+        <tr>
+          <td><code>removed data</code></td>
+          <td><code>csv</code></td>
+          <td><a href="https://github.com/ibartomeus/IberianBees/Data/Processing_iberian_bees_raw/removed.csv">Download</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
+    <script>
+      var mymap = L.map('map').setView([39.91, -2.685], 1);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+        maxZoom: 18,
+      }).addTo(mymap);
+
+      var polygon = L.polygon([[ 44.15, 4.76], [ 35.67, 4.76], [ 35.67, -10.13], [ 44.15, -10.13]]).addTo(mymap);
+    </script>
+  </body>
+</html>
