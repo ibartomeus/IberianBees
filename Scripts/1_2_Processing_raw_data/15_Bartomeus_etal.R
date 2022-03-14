@@ -57,14 +57,14 @@ newdat$Determined.by <- gsub("L.Castro",
 newdat$Determined.by[newdat$Determined.by==""] <- "I. Bartomeus"
 
 #Clean undetermined genus
-newdat <- newdat %>% filter(!Genus=="Andrena??")
+newdat <- newdat %>% dplyr::filter(!Genus=="Andrena??")
 #Clean undet species
-newdat <- newdat %>% filter(!Species=="grupo (morio)")
+newdat <- newdat %>% dplyr::filter(!Species=="grupo (morio)")
 
 #Fix species name
 newdat$Species[newdat$Species=="haemorhoa"] <- "haemorrhoa"
 #Filter non bee species
-newdat <- newdat %>% filter(Genues=="Ancistrocerus" & Species=="oviventris")
+newdat <- newdat %>% dplyr::filter(Genus=="Ancistrocerus" & Species=="oviventris")
 
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '15_Bartomeus_etal_')

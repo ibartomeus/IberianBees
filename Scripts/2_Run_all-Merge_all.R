@@ -29,7 +29,7 @@ sourceEntireFolder <- function(folderName, verbose=FALSE, showWarnings=TRUE) {
   return(invisible(NULL))
 }
 
-sourceEntireFolder("Scripts/Processing_raw_data")
+sourceEntireFolder("Scripts/1_2_Processing_raw_data")
 
 # 2 Merge all files ----
 #Read all files and merge into one 
