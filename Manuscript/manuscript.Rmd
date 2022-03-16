@@ -14,10 +14,9 @@ bibliography:
 - references.bib
 - knitcitations.bib
 editor_options: 
-  chunk_output_type: console
   
+  chunk_output_type: console
 header-includes:
-#To find unicode issues on refs
 - \DeclareUnicodeCharacter{0301}{*************************************}
   
 ---
@@ -95,8 +94,7 @@ date_2 <- length(which(!is.na(date_1$Start.date) & !is.na(date_1$End.date)))
 
 # Abstract
 
-> **Iberian Bees database**. Bees are a diverse group with more than 1000 species known from the Iberian Peninsula. They have increasing received special attention due to their important role as pollinators and providers of ecosystem services. In addition, various rapid human-induced environmental changes are leading to the decline of some of its populations. However, we know very little about the conservation status of most species and for many species, we hardly know their true distributions across the Iberian Peninsula. Here we present a collaborative effort to collate and curate a database of Iberian bee occurrences to answer questions about their distribution, habitat preference, phenology, or historical trends. In total we have accumulated `r nrow(data)` records from the Iberian Peninsula and the Balearic Islands of `r length(unique(data$Accepted_name))` different species collected between `r min(data$Year, na.rm = T)` and `r max(data$Year, na.rm = T)`. More than `r round(geo/nrow(data),2)*100`% of these records have associated information such as the location and date of capture, and `r round(flw/nrow(data),2)*100`% have extra data such as the plant species from which it was collected. This database is the starting point to better understand and conserve bee biodiversity in the Iberian Peninsula. It can be accessed at: https://doi.org/10.5281/zenodo.6354502.
-
+> **Iberian Bees database**. Bees are a diverse group with more than 1000 species known from the Iberian Peninsula. They have increasing received special attention due to their important role as pollinators and providers of ecosystem services. In addition, various rapid human-induced environmental changes are leading to the decline of some of its populations. However, we know very little about the conservation status of most species and for many species, we hardly know their true distributions across the Iberian Peninsula. Here we present a collaborative effort to collate and curate a database of Iberian bee occurrences to answer questions about their distribution, habitat preference, phenology, or historical trends. In total we have accumulated `r nrow(data)` records from the Iberian Peninsula and the Balearic Islands of `r length(unique(data$Accepted_name))` different species with `r round(geo/nrow(data),2)*100`% of georeferenced records collected between `r min(data$Year, na.rm = T)` and `r max(data$Year, na.rm = T)`. In addition, each record has associated information such as the sampling location (`r round(local/nrow(data),2)*100`%), collector and person who id the species (`r round(deter/nrow(data),2)*100`%), date of the capture (`r round(date/nrow(data),2)*100`%) and plant species where the bees was captured (`r round(flw/nrow(data),2)*100`%). We believe that this database is the starting point to better understand and conserve bee biodiversity in the Iberian Peninsula. It can be accessed at: https://doi.org/10.5281/zenodo.6354502.
 
 # Palabras clave
 
