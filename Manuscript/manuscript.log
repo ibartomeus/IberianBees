@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.3)  16 MAR 2022 19:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.3)  16 MAR 2022 21:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -561,34 +561,30 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 130.
 [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-19.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [3] [4] [5]
-Overfull \hbox (2.45476pt too wide) in paragraph at lines 627--627
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+[4] [5]
+Overfull \hbox (2.45476pt too wide) in paragraph at lines 644--644
 []|\T1/lmr/m/n/10 (-20) Any.other.additional.data|  
  []
 
 [6]
-<manuscript_files/figure-latex/Fig1-1.pdf, id=108, 463.7325pt x 315.1775pt>
+<manuscript_files/figure-latex/Fig1-1.pdf, id=107, 463.7325pt x 315.1775pt>
 File: manuscript_files/figure-latex/Fig1-1.pdf Graphic file (type pdf)
 <use manuscript_files/figure-latex/Fig1-1.pdf>
 Package pdftex.def Info: manuscript_files/figure-latex/Fig1-1.pdf  used on inpu
-t line 663.
+t line 680.
 (pdftex.def)             Requested size: 328.83488pt x 223.49384pt.
-<manuscript_files/figure-latex/Fig2-1.pdf, id=109, 434.62375pt x 291.0875pt>
+<manuscript_files/figure-latex/Fig2-1.pdf, id=108, 434.62375pt x 291.0875pt>
 File: manuscript_files/figure-latex/Fig2-1.pdf Graphic file (type pdf)
 <use manuscript_files/figure-latex/Fig2-1.pdf>
 Package pdftex.def Info: manuscript_files/figure-latex/Fig2-1.pdf  used on inpu
-t line 672.
+t line 689.
 (pdftex.def)             Requested size: 328.84521pt x 220.24274pt.
-<manuscript_files/figure-latex/Fig3-1.pdf, id=110, 452.69125pt x 302.12875pt>
+<manuscript_files/figure-latex/Fig3-1.pdf, id=109, 452.69125pt x 302.12875pt>
 File: manuscript_files/figure-latex/Fig3-1.pdf Graphic file (type pdf)
 <use manuscript_files/figure-latex/Fig3-1.pdf>
 Package pdftex.def Info: manuscript_files/figure-latex/Fig3-1.pdf  used on inpu
-t line 681.
+t line 698.
 (pdftex.def)             Requested size: 452.69014pt x 302.128pt.
 [7 <./manuscript_files/figure-latex/Fig1-1.pdf>] [8 <./manuscript_files/figure-
 latex/Fig2-1.pdf> <./manuscript_files/figure-latex/Fig3-1.pdf>] (./manuscript.a
@@ -598,11 +594,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 12988 strings out of 478994
- 192901 string characters out of 5858184
- 548323 words of memory out of 5000000
- 30032 multiletter control sequences out of 15000+600000
- 462907 words of font info for 141 fonts, out of 8000000 for 9000
+ 12944 strings out of 478994
+ 192194 string characters out of 5858184
+ 546323 words of memory out of 5000000
+ 29992 multiletter control sequences out of 15000+600000
+ 462411 words of font info for 139 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,10n,88p,515b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/
@@ -611,12 +607,11 @@ texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/20
 ist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/t
 ype1/public/lm/lmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public
 /lm/lmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr8.pf
-b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/lo
-cal/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on manuscript.pdf (8 pages, 262392 bytes).
+b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
+Output written on manuscript.pdf (8 pages, 241074 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 204 compressed objects within 3 object streams
- 67 named destinations out of 1000 (max. 500000)
+ 230 PDF objects out of 1000 (max. 8388607)
+ 201 compressed objects within 3 object streams
+ 70 named destinations out of 1000 (max. 500000)
  30848 words of extra memory for PDF output out of 35830 (max. 10000000)
 
