@@ -78,10 +78,10 @@ date_2 <- length(which(!is.na(date_1$Start.date) & !is.na(date_1$End.date)))
 
 ```
 
-> (1) Departamento de Ecología Integrativa, Estación Biológica de Doñana (EBD-CSIC), Consejo Superior de Investigaciones Científicas, Avda. Américo Vespucio s/n, E-41092 Sevilla, España.
-> (2) 
-> (3) CE3C, Universidade de Lisboa, Lisboa, Portugal
-> (4) Departamento de Ecologia, Universidade Federal de Goiás, Goiânia, Brasil
+> (1) Departamento de Ecología Integrativa, Estación Biológica de Doñana (EBD-CSIC), Consejo Superior de Investigaciones Científicas, Avda. Américo Vespucio s/n, E-41092 Sevilla, España.  
+> (2) Laboratory of Zoology, University of Mons, Avenue du Champs de Mars 6, 7000, Mons, Belgium.  
+> (3) CE3C, Universidade de Lisboa, Lisboa, Portugal.  
+> (4) Departamento de Ecologia, Universidade Federal de Goiás, Goiânia, Brasil.  
 > (5)
 
 > Autor para correspondencia: I. Bartomeus [nacho.bartomeus@gmail.com]
@@ -124,7 +124,7 @@ En este estudio hemos creado una base datos de abejas Ibéricas (IberianBees) a 
 
 ## Recopilación de datos originales
 
-*Museos*: Hemos digitalizado el 10% de los especímenes depositados en el Museo Nacional de Ciencias Natural de Madrid, sobretodo las familias Melitidae y Apidae, para las cuales se han revisado las identificaciones taxonómicas. Así como recabado información digitalizada de museos extranjeros incluyendo "Naturalis Biodiversity Center" (Holanda), "Oberösterreichisches Landesmuseum" (Austria) y la "Smithosian collection" (USA). En el futuro esta previsto continuar con la digitalización del MNCN, así como añadir otras colecciones históricas de importancia.
+*Museos*: Hemos digitalizado el 10% de los especímenes depositados en el Museo Nacional de Ciencias Natural de Madrid (MNCN), sobretodo las familias Melitidae y Apidae, para las cuales se han revisado las identificaciones taxonómicas. Así como recabado información digitalizada de museos extranjeros incluyendo "Naturalis Biodiversity Center" (Holanda), "Oberösterreichisches Landesmuseum" (Austria) y la "Smithosian collection" (USA). En el futuro esta previsto continuar con la digitalización del MNCN, así como añadir otras colecciones históricas de importancia.
 
 *Proyectos de investigación*: Para recoger datos sobre ocurrencia de abejas en la Península Ibérica hemos contactado con los principales investigadores en ecología de la polinización de España y Portugal, así como anunciado en las principales listas de distribución temáticas de la creación de una base de datos de abejas Ibéricas. Se recogieron `r length(unique(data$Authors.to.give.credit))-2` estudios con datos ya digitalizados. Estos han sido limpiados y homogeneizados (ver más abajo). En el futuro se seguiran añadiendo nuevas contribuciones, y además se rescatarán datos ya publicados en formatos de difícil extracción como PDF.
 
@@ -132,7 +132,7 @@ En este estudio hemos creado una base datos de abejas Ibéricas (IberianBees) a 
 
 ## Tratamiento de datos
 
-Todo el tratamiento de datos se ha hecho de forma reproducible en R `r citep(citation())`. Primero hemos seleccionado los campos comunes que reflejan la especie, el sexo, fecha de captura y localización del registro, además de la referencia correspondiente al registro si era oportuno. La **Tabla 1** ofrece un resumen de los metadatos creados con  [@dataspice], y que también están disponibles en formato json indexado por Google datasets [@EML_2019]. Debido a la naturaleza variada de este tipo de datos el proceso de limpieza de datos fue un proceso complejo y tedioso. De los `r nrow(data)+nrow(removed)` datos iniciales, `r nrow(removed)` fueron descartados. Todo el proceso así como los datos descartados pueden consultarse aquí: https://github.com/ibartomeus/IberianBees 
+Todo el tratamiento de datos se ha hecho de forma reproducible en R `r citep(citation())`. Primero hemos seleccionado los campos comunes que reflejan la especie, el sexo, fecha de captura y localización del registro, además de la referencia correspondiente al registro si era oportuno. La **Tabla 1** ofrece un resumen de los metadatos creados con  [@dataspice], y que también están disponibles en formato json y EML, el cual esta indexado por Google datasets [@EML_2019]. Debido a la naturaleza variada de este tipo de datos el proceso de limpieza de datos fue un proceso complejo y tedioso. De los `r nrow(data)+nrow(removed)` datos iniciales, `r nrow(removed)` fueron descartados. Todo el proceso así como los datos descartados pueden consultarse aquí: https://github.com/ibartomeus/IberianBees 
 
 En primer lugar se revisó toda la taxonomía de las especies que se cotejó con la lista de especies actualizada para la Península Ibérica [@ortiz2020]. Solo se han aceptado especies correctamente identificadas a nivel de especie. Se han actualizado más de `r length(which(data$Accepted_name != data$Original_name))` registros, actualizando todos los sinónimos y corrigiendo errores tipográficos. En segundo lugar, se ha recogido información del país, provincia y localidad de donde se produjo el registro. Además se realizó un proceso de estandarización de las geolocalizaciones a latitud y longitud en grados decimales (WGS84) siempre y cuando esta información estaba presente. Aunque también se incluyó información sobre la precisión de las coordenadas, este metadato estaba raramente disponible para muchas de las coordenadas. En tercer lugar, se ha incluido también información de la fecha de la captura u observación con respectivo día, mes y  año. Para registros sin fecha concreta, se intentó recuperar un intervalo temporal orientativo si era posible. Los datos con fechas y localizaciones erróneas o ilógicas (e.g. geolocalizaciones en el mar o especiménes recogidos en el mes 18) han sido corregidos o eliminados. En cuarto lugar, se han añadido los nombres de los colectores y personas que identificaron las especies, así como información sobre el número de abejas macho, hembra u obreras cuando se especificaba. Finalmente, se han añadido las referencias correspondientes a cada registro y otros datos de interés como la planta que visitaba el espécimen de interés, identificación unica de la base de datos local (si la hay), autores que han proporcionado los datos y cualquier otra nota de interés si la había.
  
