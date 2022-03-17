@@ -164,18 +164,25 @@ write.bibtex(file="knitcitations.bib")
 
 <div id = "refs"></div>
 
-###### TABLA 1
+\newpage
+
+###### LEYENDA DE TABLA
 
 **Tabla 1**. Metadatos explicando el significado y las unidades de cada variable en el set de datos. 
+
+###### TABLE CAPTION
 
 **Table 1**. Metadata explaining for each variable in the data set, its meaning and units.
 
 ```{r Tabla1, results='asis', echo=FALSE, cache=FALSE}
 library("knitr")
 metadata <- read.csv("../Data/Metadata/attributes.csv")
+colnames(metadata) <- c("Variable name", "Description", "Data type")
+
 kable(metadata[,-1])
 ```
 
+\newpage
 
 ###### PIES DE FIGURA
 
