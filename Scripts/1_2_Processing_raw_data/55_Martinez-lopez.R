@@ -35,5 +35,11 @@ newdat$Longitude <- gsub("°", "", newdat$Longitude)
 newdat$Flowers.visited <- gsub("sp.", "sp", newdat$Flowers.visited, fixed = T)
 newdat$Flowers.visited <- gsub("sp2", "sp", newdat$Flowers.visited, fixed = T)
 
+#Add unique identifier
+newdat$uid <- paste("55_Martinez-lopez.csv_", 1:nrow(newdat), sep = "")
 
+#Save data
+write.table(x = newdat, file = "Data/Processed_raw_data/55_Martinez-lopez.csv", 
+            quote = TRUE, sep = ",", col.names = TRUE,
+            row.names = FALSE)
 

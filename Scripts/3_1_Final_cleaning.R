@@ -148,19 +148,21 @@ dim(data2) == dim(data) #sanity check expect TRUE FALSE
 #Mark the species to be removed according to manual checks
 data2$rm[which(data2$accepted_name == "Remove")] <- "Remove"
 #recheck for new species not in manual checking
+
+#Generate future data to check
 to_check <- data2[which(!is.na(data2$flag) & 
                           is.na(data2$accepted_name) & 
                           is.na(data2$rm)),c(1,32)]
-to_check
-unique(to_check$flag) #145 species
+
 #Add needed columns to create another future manual check list of species 
 #(not included in the previous one) 
-to_check$checked <- NA
-to_check$synonym_names <- NA
-to_check$questionable <- NA
-to_check$accepted_name <- NA
-to_check$accepted_subspecies <- NA
-to_check$Notes <- NA
+#This is done with dplyr because it can add the cols with 0 rows so we don't get an error
+to_check <- to_check %>% dplyr::mutate(checked=NA, synonym_names=NA, questionable=NA, accepted_name=NA,
+                           accepted_subspecies=NA, Notes=NA)
+#Select unique cases
+unique(to_check$flag)
+
+#Select columns of interest
 to_check <- to_check[,c("flag", "checked",
                         "synonym_names", "questionable",
                         "accepted_name", "accepted_subspecies", "Notes")]
