@@ -25,6 +25,5 @@ vignettes/*.pdf
 #Custom view
 .DS_Store
 #Preprocessing files
-*.xlsx
 .Rproj.user
 /raw_files
