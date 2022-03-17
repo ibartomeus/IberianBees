@@ -177,7 +177,7 @@ write.bibtex(file="knitcitations.bib")
 ```{r Tabla1, results='asis', echo=FALSE, cache=FALSE}
 library("knitr")
 metadata <- read.csv("../Data/Metadata/attributes.csv")
-colnames(metadata) <- c("Variable name", "Description", "Data type")
+colnames(metadata) <- c("","Variable name", "Description", "Data type")
 
 kable(metadata[,-1])
 ```
@@ -201,7 +201,7 @@ kable(metadata[,-1])
 **Figura 3**. Cobertura temporal de (A) los años con más ocurrencias, y (B) los meses con más ocurrencias. 
 
 
-```{r Fig1, echo=FALSE, fig.align='center', out.width="70%", fig.cap="\\label{fig:Fig1} Barplot indicating the 20 more common recorded species in the final data set."}
+```{r echo=FALSE, fig.align='center', out.width="70%", fig.cap="Figure 1"}
 # Prepare top 20 records
 top_20 <- data %>%
   filter(!Accepted_name == "Apis mellifera") %>%
@@ -221,7 +221,7 @@ ggplot(top_20, aes(x = Accepted_name, y = no_rows)) +
   scale_y_continuous(expand = c(0, 0))
 ```
 
-```{r Fig2, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.cap="Map of the Iberian peninsula indicating where the bee occurrences were sampled.",out.width="70%"}
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.cap="Figure 2",out.width="70%"}
 # code courtesy of Paco Rodriguez.
 library(sf)
 library(raster)
@@ -292,7 +292,7 @@ levelplot(log(ras.counts2 + 1),
 #         par.settings = viridisTheme())
 ```
 
-```{r Fig3, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Cobertura temporal de (A) los años con más ocurrencias, y (B) los meses con más ocurrencias. ", message=FALSE, warning=FALSE, cache=FALSE}
+```{r echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Figure 3", message=FALSE, warning=FALSE, cache=FALSE}
 # Prepare top 20 records
 by_year <- data %>% filter(!Accepted_name == "Apis mellifera")
 
