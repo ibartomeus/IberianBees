@@ -1,14 +1,13 @@
 source("Scripts/1_2_Processing_raw_data/Source_file.R") #Generate template
 
 
-# 26_Ornosa_etal ----
-#(Old file name Vicente Martínez-López, maybe rename to Martinez?) 
+# 26_Martinez-Lopez_etal ----
 
 #Check help of the function CleanR
 help_structure()
 
 #Read data
-newdat <- read.csv(file = 'Data/Rawdata/csvs/26_Ornosa_etal.csv')
+newdat <- read.csv(file = 'Data/Rawdata/csvs/26_Martinez-Lopez.csv')
 
 #Check vars
 compare_variables(check, newdat)
@@ -42,9 +41,9 @@ newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
 newdat$Determined.by <- gsub("\\ y", ",", newdat$Determined.by)
 
 #Add unique identifier
-newdat <- add_uid(newdat = newdat, '26_Ornosa_etal_')
+newdat <- add_uid(newdat = newdat, '26_Martinez-Lopez_')
 
 #Save data
-write.table(x = newdat, file = 'Data/Processed_raw_data/26_Ornosa_etal.csv', 
+write.table(x = newdat, file = 'Data/Processed_raw_data/26_Martinez-Lopez.csv', 
             quote = TRUE, sep = ',', col.names = TRUE,
             row.names = FALSE)
