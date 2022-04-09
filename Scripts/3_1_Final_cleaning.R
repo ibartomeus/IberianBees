@@ -365,6 +365,9 @@ data_2 <- data %>% dplyr::select(!c(Genus, Subgenus, Species, Subspecies, Accept
 #All species cols are now first
 data <- cbind(data_1, data_2)
 
+#Exclude Apis mellifera records
+data <- data %>% filter(Accepted_name == "Apis mellifera")
+
 #Save as a zip file
 write.csv(data, file=gzfile("Data/iberian_bees.csv.gz"))
 
