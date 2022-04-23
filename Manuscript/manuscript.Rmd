@@ -1,6 +1,13 @@
 ---
 title: "| Base de datos de abejas ibéricas \n| Iberian Bees database\n"
-author: Ignasi Bartomeus^1^, Jose B. Lanuza^1^, Thomas Wood^2^, Luisa Carvalheiro^3,4^, and a lot of coauthors to be added^5^s
+author: 
+- Ignasi Bartomeus^1^ \orcidlink{0000-0001-7893-4389}
+- Jose B. Lanuza^1^ \orcidlink{0000-0002-0287-409X}
+- Thomas Wood^2^, 
+- Luisa Carvalheiro^3,4^
+- Francisco P. Molina^1^
+
+
 output:
   pdf_document: default
   word_document:
@@ -21,6 +28,8 @@ header-includes:
 - \usepackage{caption}
 - \captionsetup[figure]{labelformat=empty}
 - \captionsetup[table]{labelformat=empty}
+- \usepackage{orcidlink}
+
 
 ---
 
@@ -80,6 +89,7 @@ date_1 <- data[is.na(data$Latitude) & is.na(data$Longitude),]
 date_2 <- length(which(!is.na(date_1$Start.date) & !is.na(date_1$End.date)))
 
 ```
+
 
 > (1) Departamento de Ecología Integrativa, Estación Biológica de Doñana (EBD-CSIC), Consejo Superior de Investigaciones Científicas, Avda. Américo Vespucio s/n, E-41092 Sevilla, España.  
 > (2) Laboratory of Zoology, University of Mons, Avenue du Champs de Mars 6, 7000, Mons, Belgium.  
