@@ -1,5 +1,5 @@
 ---
-title: "| Base de datos de abejas ibéricas \n| Iberian Bees database\n"
+title: "| Base de datos de abejas ibéricas \n| Iberian bees database\n"
 author: 
 - Ignasi Bartomeus^1^ \orcidlink{0000-0001-7893-4389} \vspace{-1.5cm}
 - Jose B. Lanuza^1^ \orcidlink{0000-0002-0287-409X} \vspace{-1.5cm}
@@ -257,18 +257,14 @@ date_2 <- length(which(!is.na(date_1$Start.date) & !is.na(date_1$End.date)))
 
 > **Base de datos de abejas ibéricas**. Las abejas (Anthophila) son un grupo extremadamente diverso con más de 1,000 especies descritas en la península ibérica. Además, son excelentes polinizadores y proveen numerosos servicios ecosistémicos fundamentales para la mayoría de ecosistemas terrestres. Debido a los diversos cambios ambientales inducidos por el ser humano, existen evidencias del declive de algunas de sus poblaciones para ciertas especies. Sin embargo, sabemos muy poco del estado de conservación de la mayoría de especies y para muchas de ellas apenas sabemos cuál es su distribución en la península ibérica. En este trabajo presentamos un esfuerzo colaborativo para crear una base de datos de ocurrencias de abejas que abarca la península ibérica e islas Baleares que permitirá responder preguntas sobre la distribución de las diferentes especies, preferencia de hábitat, fenología o tendencias históricas. En total esta base de datos consta por ahora de `r formatC(nrow(data),format="d", big.mark=",")` registros de `r length(unique(data$Accepted_name))` especies con un `r round(geo/nrow(data),2)*100`% de estos con información georreferenciada recolectada entre `r min(data$Year, na.rm = T)` y `r max(data$Year, na.rm = T)`. Además cada registro tiene información asociada como la localidad de muestreo (`r round(local/nrow(data),2)*100`%), identificador y colector de la especie (`r round(deter/nrow(data),2)*100`%), fecha de captura (`r round(date/nrow(data),2)*100`%) y planta donde se recolectó (`r round(flw/nrow(data),2)*100`%). Creemos que esta base de datos es el punto de partida para conocer y conservar mejor la biodiversidad de abejas en la península ibérica e islas Baleares. Se puede acceder en: https://doi.org/10.5281/zenodo.6354502
 
+**Palabras clave**: Biodiversidad; Apoidea; Anthophila; Polinizadores; Fenología 
+
 
 # Abstract
 
-> **Iberian Bees database**. Bees are a diverse group with more than 1,000 species known from the Iberian Peninsula. They have increasingly received special attention due to their important role as pollinators and providers of ecosystem services. In addition, various rapid human-induced environmental changes are leading to the decline of some of its populations. However, we know very little about the conservation status of most species and for many species, we hardly know their true distributions across the Iberian Peninsula. Here we present a collaborative effort to collate and curate a database of Iberian bee occurrences to answer questions about their distribution, habitat preference, phenology, or historical trends. In total we have accumulated `r formatC(nrow(data),format="d", big.mark=",")` records from the Iberian Peninsula and the Balearic Islands of `r length(unique(data$Accepted_name))` different species with `r round(geo/nrow(data),2)*100`% of georeferenced records collected between `r min(data$Year, na.rm = T)` and `r max(data$Year, na.rm = T)`. In addition, each record has associated information such as the sampling location (`r round(local/nrow(data),2)*100`%), collector and person who identified the species (`r round(deter/nrow(data),2)*100`%), date of the capture (`r round(date/nrow(data),2)*100`%) and plant species where the bees were captured (`r round(flw/nrow(data),2)*100`%). We believe that this database is the starting point to better understand and conserve bee biodiversity in the Iberian Peninsula. It can be accessed at: https://doi.org/10.5281/zenodo.6354502.
+> **Iberian bees database**. Bees are a diverse group with more than 1,000 species known from the Iberian Peninsula. They have increasingly received special attention due to their important role as pollinators and providers of ecosystem services. In addition, various rapid human-induced environmental changes are leading to the decline of some of its populations. However, we know very little about the conservation status of most species and for many species, we hardly know their true distributions across the Iberian Peninsula. Here we present a collaborative effort to collate and curate a database of Iberian bee occurrences to answer questions about their distribution, habitat preference, phenology, or historical trends. In total we have accumulated `r formatC(nrow(data),format="d", big.mark=",")` records from the Iberian Peninsula and the Balearic Islands of `r length(unique(data$Accepted_name))` different species with `r round(geo/nrow(data),2)*100`% of georeferenced records collected between `r min(data$Year, na.rm = T)` and `r max(data$Year, na.rm = T)`. In addition, each record has associated information such as the sampling location (`r round(local/nrow(data),2)*100`%), collector and person who identified the species (`r round(deter/nrow(data),2)*100`%), date of the capture (`r round(date/nrow(data),2)*100`%) and plant species where the bees were captured (`r round(flw/nrow(data),2)*100`%). We believe that this database is the starting point to better understand and conserve bee biodiversity in the Iberian Peninsula. It can be accessed at: https://doi.org/10.5281/zenodo.6354502.
 
-# Palabras clave
-
-> Biodiversidad; Apoidea; Anthophila; Polinizadores; Fenología 
-
-# Keywords
-
-> Biodiversity; Apoidea; Anthophila; Pollinators; Phenology
+**Keywords**: Biodiversity; Apoidea; Anthophila; Pollinators; Phenology
 
 # Background & Summary   
 
@@ -329,25 +325,110 @@ Gracias a todos los naturalistas y científicos que han contribuido de algún mo
 
 \newpage
 
-###### LEYENDA DE TABLA
+**LEYENDA DE TABLA**
 
 **Tabla 1**. Metadatos explicando el significado y las unidades de cada variable en el set de datos. 
 
-###### TABLE CAPTION
+**TABLE CAPTION**
 
 **Table 1**. Metadata explaining for each variable in the data set, its meaning and units.
 
 ```{r Tabla1, results='asis', echo=FALSE, cache=FALSE}
 library("knitr")
-metadata <- read.csv("../Data/Metadata/attributes.csv")
-colnames(metadata) <- c("","Variable name", "Description", "Data type")
+#metadata <- read.csv("../Data/Metadata/attributes.csv")
+library(kableExtra)
 
-kable(metadata[,-1], caption ="\\textbf{Figure 1}")
+library(tidyverse)
+
+d <- data.frame(colnames(data))
+colnames(d) <- "Variable_name"
+
+d <- reshape2::melt(d)
+
+
+Description <- c("Taxonomic rank", #1
+                 "Taxonomic rank",
+                 "Taxonomic rank",
+                 "Taxonomic rank",
+                 "Accepted species name", #5
+                 "Original species name",
+                 "Country of collection",
+                 "Province of collection",
+                 "Locality as provided by orginal collectors",
+                 "Geographic coordinates", #10
+                 "Geographic coordinates",
+                 "Accuracy of the coordinates provided by the authors",
+                 "Year of collection",
+                 "Month of collection",
+                 "Day of collection", #15
+                 "Approximate range of dates if specific dates are missing",
+                 "Approximate range of dates if specific dates are missing",
+                 "Name of the collector",
+                 "Name of the person who identified the specimen",
+                 "Number of females recorded", #20
+                 "Number of males recorded",
+                 "Number of workers recorded (for social species)",
+                 "Number of specimens recorded without sex identification",
+                 "Digital object identifier",
+                 "Plant species where the specimen was collected", #25
+                 "Unique identification in the local collection",
+                 "All authors that have contributed on the original dataset",
+                 "Extra column for additional information",
+                 "Notes or queries",
+                 "Unique identifier in the IberianBee database" #30
+                 )
+
+d$Description <- Description
+
+Data_type <- c("Categorical",
+               "Categorical",
+               "Categorical",
+               "Categorical",
+               "Categorical", #5
+               "Categorical",
+               "Categorical",
+               "Categorical",
+               "Text",
+               "Decimal degrees", #10
+               "Decimal degrees", 
+               "Text",
+               "Date (YYYY)",
+               "Date (MM)",
+               "Date (DD)", #15
+               "Date (DD-MM-YYYY)",
+               "Date (DD-MM-YYYY)",
+               "Categorical",
+               "Categorical",
+               "Natural number", #20
+               "Natural number",
+               "Natural number",
+               "Natural number",
+               "Text/link",
+               "Text", #25
+               "Categorical",
+               "Text",
+               "Text",
+               "Text",
+               "Categorical")
+               
+d$Data_type <- Data_type    
+
+colnames(d) <- c("Variable name", "Description", "Data type")
+
+d$`Variable name`[d$`Variable name`=="Accepted_name"] <- "Accepted.name"
+
+d$`Variable name`[d$`Variable name`=="Original_name"] <- "Original.name"
+
+d$`Variable name`[d$`Variable name`=="Local_id"] <- "Local.id"
+
+
+kbl(d, caption = '\\textbf{Table 1}', format = 'latex', escape = F,booktabs = T, linesep = "\\addlinespace") %>% row_spec(0, bold=T) 
+
 ```
 
 \newpage
 
-###### PIES DE FIGURA
+**PIES DE FIGURA**
 
 **Figura 1**. Map of the Iberian Peninsula where the different number of records are shown with a colour code in logarithmic scale. Areas with high number of records are coloured in yellow, areas with low number of records in purple and areas with lack of records are shown in white.
 
@@ -355,7 +436,7 @@ kable(metadata[,-1], caption ="\\textbf{Figure 1}")
 
 **Figura 3**. Number of records in the database by year (A) and month (B).
 
-###### FIGURE LEGENDS
+**FIGURE LEGENDS**
 
 **Figura 1**. Mapa de la península ibérica donde se muestra el número de registros en escala logarítmica con un código de colores. Áreas con alto número de registros se muestran en amarillo, con un bajo número de registros en morado y zonas con ausencia de registros en blanco.
 
