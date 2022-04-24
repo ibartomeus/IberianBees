@@ -7,75 +7,78 @@ author:
 - Luisa Carvalheiro^3,4^ \orcidlink{0000-0001-7655-979X} \vspace{-1.5cm}
 - Francisco P. Molina^1^ \orcidlink{0000-0003-2425-5246} \vspace{-1.5cm}
 - Miguel Ángel Collado Aliaño^5^ \orcidlink{0000-0002-4216-317X} \vspace{-1.5cm}
-- David Alomar^6^ \vspace{-1.5cm}
-- Piluca Álvarez Fidalgo^7^ \orcidlink{0000-0002-5330-3078} \vspace{-1.5cm}
+- Luis Oscar Aguado-Martín^6^  \vspace{-1.5cm}
+- David Alomar^7^ \vspace{-1.5cm}
 - Marián Álvarez Fidalgo^8^ \orcidlink{0000-0002-3313-1467} \vspace{-1.5cm}
+- Piluca Álvarez Fidalgo^9^ \orcidlink{0000-0002-5330-3078} \vspace{-1.5cm}
+- Montse Arista ^10^
 - Blanca Arroyo-Correa^1^ \orcidlink{0000-0002-9402-3013} \vspace{-1.5cm}
-- Josep D. Asís^9^ \orcidlink{0000-0001-8134-1875} \vspace{-1.5cm}
-- Celeste Azpiazu^10,11,12^ \orcidlink{0000-0001-8217-9347} \vspace{-1.5cm}
-- Laura Baños-Picón^9^ \orcidlink{0000-0003-0500-8231} \vspace{-1.5cm}
-- Pedro Beja^13^ \orcidlink{0000-0001-8164-0760} \vspace{-1.5cm}
-- Mário Boieiro^14^ \orcidlink{0000-0002-9087-091X} \vspace{-1.5cm}
-- Paulo A.V. Borges^14^ \orcidlink{0000-0002-8448-7623} \vspace{-1.5cm}
-- Guillermo González Bornay^15^ \orcidlink{0000-0002-8260-5622} \vspace{-1.5cm}
-- Rafael Carvalho^16^ \orcidlink{0000-0002-4901-5305} \vspace{-1.5cm}
-- Ramón Casimiro-Soriguer^17^ \orcidlink{0000-0002-5272-0902} \vspace{-1.5cm}
-- Sílvia Castro^16^ \orcidlink{0000-0002-7358-6685} \vspace{-1.5cm}
-- Joana Costa^16,18^ \orcidlink{0000-0002-9784-8272}
-- Ian Cross^19^ \vspace{-1.5cm}
-- Pilar De la Rúa^20^ \orcidlink{0000-0002-0058-1402} \vspace{-1.5cm}
-- Luis Miguel de Pablos^21^ \orcidlink{0000-0001-8940-2919} \vspace{-1.5cm}
-- Víctor de Paz^9^ \orcidlink{0000-0001-9938-3416} \vspace{-1.5cm}
-- Joan Díaz-Calafat^22^ \orcidlink{0000-0002-5823-2176} \vspace{-1.5cm}
-- Victoria Ferrrero^23^ \orcidlink{0000-0002-2091-8957} \vspace{-1.5cm}
-- Hugo Gaspar^16^ \orcidlink{0000-0001-5448-8396} \vspace{-1.5cm}
+- Josep D. Asís^11^ \orcidlink{0000-0001-8134-1875} \vspace{-1.5cm}
+- Celeste Azpiazu^12,13,14^ \orcidlink{0000-0001-8217-9347} \vspace{-1.5cm}
+- Laura Baños-Picón^11^ \orcidlink{0000-0003-0500-8231} \vspace{-1.5cm}
+- Pedro Beja^15^ \orcidlink{0000-0001-8164-0760} \vspace{-1.5cm}
+- Mário Boieiro^16^ \orcidlink{0000-0002-9087-091X} \vspace{-1.5cm}
+- Paulo A.V. Borges^16^ \orcidlink{0000-0002-8448-7623} \vspace{-1.5cm}
+- Guillermo González Bornay^17^ \orcidlink{0000-0002-8260-5622} \vspace{-1.5cm}
+- Rafael Carvalho^18^ \orcidlink{0000-0002-4901-5305} \vspace{-1.5cm}
+- Ramón Casimiro-Soriguer^19^ \orcidlink{0000-0002-5272-0902} \vspace{-1.5cm}
+- Sílvia Castro^18^ \orcidlink{0000-0002-7358-6685} \vspace{-1.5cm}
+- Joana Costa^18,20^ \orcidlink{0000-0002-9784-8272}
+- Ian Cross^21^ \vspace{-1.5cm}
+- Pilar De la Rúa^22^ \orcidlink{0000-0002-0058-1402} \vspace{-1.5cm}
+- Luis Miguel de Pablos^23^ \orcidlink{0000-0001-8940-2919} \vspace{-1.5cm}
+- Víctor de Paz^11^ \orcidlink{0000-0001-9938-3416} \vspace{-1.5cm}
+- Joan Díaz-Calafat^24^ \orcidlink{0000-0002-5823-2176} \vspace{-1.5cm}
+- Victoria Ferrrero^25^ \orcidlink{0000-0002-2091-8957} \vspace{-1.5cm}
+- Hugo Gaspar^18^ \orcidlink{0000-0001-5448-8396} \vspace{-1.5cm}
 - Guillaume Ghisbain^2^ \orcidlink{0000-0003-2032-8081} \vspace{-1.5cm}
-- José María Gómez^24^ \orcidlink{0000-0001-6153-707X} \vspace{-1.5cm}
-- Carmelo Gómez-Martínez^6^ \orcidlink{0000-0003-1449-0138} \vspace{-1.5cm}
-- Miguel Ángel González-Estévez^6^ \vspace{-1.5cm}
-- Ruben Heleno^16^ \orcidlink{0000-0002-4808-4907} \vspace{-1.5cm}
-- José M. Herrera^25^ \orcidlink{0000-0001-7968-3438} \vspace{-1.5cm}
-- Jose I. Hormaza^26^ \orcidlink{0000-0001-5449-7444}
-- Jose M. Iriondo^27^ \orcidlink{0000-0003-2710-3889} \vspace{-1.5cm}
-- Michael Kuhlmann^28^ \orcidlink{0000-0003-3664-6922} \vspace{-1.5cm}
-- Paola Laiolo^29^ \orcidlink{0000-0002-2009-6797} \vspace{-1.5cm}
-- Carlos Lara-Romero^27^ \orcidlink{0000-0003-0962-0567} \vspace{-1.5cm}
-- Amparo Lázaro^6^ \orcidlink{0000-0001-5626-4134} \vspace{-1.5cm}
-- Jesús López-Angulo^30^ \orcidlink{0000-0003-3539-2545} \vspace{-1.5cm}
-- Francisco A. López-Núñez^16^ \orcidlink{0000-0003-0773-9134} \vspace{-1.5cm}
-- João Loureiro^16^ \orcidlink{0000-0002-9068-3954} \vspace{-1.5cm}
-- Ainhoa Magrach^31^ \orcidlink{0000-0003-2155-7556} \vspace{-1.5cm}
-- Vicente Martínez-López^32^ \orcidlink{0000-0001-7800-0703} \vspace{-1.5cm}
-- Carlos Martínez-Núñez^33^ \orcidlink{0000-0001-7814-4985} \vspace{-1.5cm}
+- José María Gómez^26^ \orcidlink{0000-0001-6153-707X} \vspace{-1.5cm}
+- Carmelo Gómez-Martínez^7^ \orcidlink{0000-0003-1449-0138} \vspace{-1.5cm}
+- Miguel Ángel González-Estévez^7^ \vspace{-1.5cm}
+- Ruben Heleno^18^ \orcidlink{0000-0002-4808-4907} \vspace{-1.5cm}
+- José M. Herrera^27^ \orcidlink{0000-0001-7968-3438} \vspace{-1.5cm}
+- Jose I. Hormaza^28^ \orcidlink{0000-0001-5449-7444}
+- Jose M. Iriondo^29^ \orcidlink{0000-0003-2710-3889} \vspace{-1.5cm}
+- Michael Kuhlmann^30^ \orcidlink{0000-0003-3664-6922} \vspace{-1.5cm}
+- Paola Laiolo^31^ \orcidlink{0000-0002-2009-6797} \vspace{-1.5cm}
+- Carlos Lara-Romero^29^ \orcidlink{0000-0003-0962-0567} \vspace{-1.5cm}
+- Amparo Lázaro^7^ \orcidlink{0000-0001-5626-4134} \vspace{-1.5cm}
+- Jesús López-Angulo^32^ \orcidlink{0000-0003-3539-2545} \vspace{-1.5cm}
+- Francisco A. López-Núñez^18^ \orcidlink{0000-0003-0773-9134} \vspace{-1.5cm}
+- João Loureiro^18^ \orcidlink{0000-0002-9068-3954} \vspace{-1.5cm}
+- Ainhoa Magrach^33^ \orcidlink{0000-0003-2155-7556} \vspace{-1.5cm}
+- Vicente Martínez-López^34^ \orcidlink{0000-0001-7800-0703} \vspace{-1.5cm}
+- Carlos Martínez-Núñez^35^ \orcidlink{0000-0001-7814-4985} \vspace{-1.5cm}
 - Denis Michez^2^ \orcidlink{0000-0001-8880-1838} \vspace{-1.5cm}
-- Marcos Miñarro^34^ \orcidlink{0000-0002-5851-6873} \vspace{-1.5cm}
+- Marcos Miñarro^36^ \orcidlink{0000-0002-5851-6873} \vspace{-1.5cm}
 - Ana Montero-Castaño^1^ \orcidlink{0000-0003-2631-0085} \vspace{-1.5cm}
-- Bruno Moreira^35^ \orcidlink{0000-0002-7319-2555} \vspace{-1.5cm}
-- Javier Morente-López^27^ \orcidlink{0000-0001-9141-8581} \vspace{-1.5cm}
-- Nacho Noval Fonseca^36^ \orcidlink{0000-0001-8387-9417} \vspace{-1.5cm}
-- Alejandro Núñez Carbajal^34^ \orcidlink{0000-0002-4937-0534} \vspace{-1.5cm}
-- José Ramón Obeso^29^ \orcidlink{0000-0001-7157-6478} \vspace{-1.5cm}
-- Concepción Ornosa^37^ \orcidlink{0000-0003-0615-0790} \vspace{-1.5cm}
-- Francisco Javier Ortiz-Sánchez^38^ \orcidlink{0000-0003-3364-3101} \vspace{-1.5cm}
+- Bruno Moreira^37^ \orcidlink{0000-0002-7319-2555} \vspace{-1.5cm}
+- Javier Morente-López^29^ \orcidlink{0000-0001-9141-8581} \vspace{-1.5cm}
+- Nacho Noval Fonseca^38^ \orcidlink{0000-0001-8387-9417} \vspace{-1.5cm}
+- Alejandro Núñez Carbajal^36^ \orcidlink{0000-0002-4937-0534} \vspace{-1.5cm}
+- José Ramón Obeso^31^ \orcidlink{0000-0001-7157-6478} \vspace{-1.5cm}
+- Concepción Ornosa^39^ \orcidlink{0000-0003-0615-0790} \vspace{-1.5cm}
+- Francisco Javier Ortiz-Sánchez^40^ \orcidlink{0000-0003-3364-3101} \vspace{-1.5cm}
+- Daniel Pareja Bonilla^10^ \orcidlink{0000-0001-9137-2376} \vspace{-1.5cm}
 - Sébastien Patiny^2^ \orcidlink{0000-0003-4583-9902} \vspace{-1.5cm}
-- Andreia Penado^13,39,40^ \orcidlink{0000-0003-0365-802X} \vspace{-1.5cm}
-- Ana Picanço^14^ \orcidlink{0000-0002-1188-6519} \vspace{-1.5cm}
-- Emilie F. Ploquin^29^
-- Carla Rego^14^ \orcidlink{0000-0001-8005-4508} \vspace{-1.5cm}
-- Pedro J. Rey^33^ \orcidlink{0000-0001-5550-0393} \vspace{-1.5cm}
-- Elisa Ribas-Marquès^41^ \orcidlink{0000-0002-7616-5835} \vspace{-1.5cm}
-- Stuart P.M. Roberts^42^ \vspace{-1.5cm}
-- Marta Rodriguez^27^ \vspace{-1.5cm}
-- Natalia Rosas-Ramos^9^ \orcidlink{0000-0002-8653-0306} \vspace{-1.5cm}
-- Ana M. Sánchez^27^ \orcidlink{0000-0002-6220-3001} \vspace{-1.5cm}
-- Silvia Santamaría^27^ \orcidlink{0000-0003-2100-2657} \vspace{-1.5cm}
-- Estefanía Tobajas^9^ \orcidlink{0000-0003-2356-8881} \vspace{-1.5cm}
-- José Tormos^9^ \orcidlink{0000-0002-0568-4486} \vspace{-1.5cm}
-- Félix Torres^9^ \orcidlink{0000-0002-2035-109X} \vspace{-1.5cm}
+- Andreia Penado^15,41,42^ \orcidlink{0000-0003-0365-802X} \vspace{-1.5cm}
+- Ana Picanço^16^ \orcidlink{0000-0002-1188-6519} \vspace{-1.5cm}
+- Emilie F. Ploquin^31^
+- Carla Rego^16^ \orcidlink{0000-0001-8005-4508} \vspace{-1.5cm}
+- Pedro J. Rey^35^ \orcidlink{0000-0001-5550-0393} \vspace{-1.5cm}
+- Elisa Ribas-Marquès^43^ \orcidlink{0000-0002-7616-5835} \vspace{-1.5cm}
+- Stuart P.M. Roberts^44^ \vspace{-1.5cm}
+- Marta Rodriguez^29^ \vspace{-1.5cm}
+- Natalia Rosas-Ramos^11^ \orcidlink{0000-0002-8653-0306} \vspace{-1.5cm}
+- Ana M. Sánchez^29^ \orcidlink{0000-0002-6220-3001} \vspace{-1.5cm}
+- Silvia Santamaría^29^ \orcidlink{0000-0003-2100-2657} \vspace{-1.5cm}
+- Estefanía Tobajas^11^ \orcidlink{0000-0003-2356-8881} \vspace{-1.5cm}
+- José Tormos^11^ \orcidlink{0000-0002-0568-4486} \vspace{-1.5cm}
+- Félix Torres^11^ \orcidlink{0000-0002-2035-109X} \vspace{-1.5cm}
 - Alejandro Trillo^1^ \orcidlink{0000-0002-6944-0923} \vspace{-1.5cm}
 - Javier Valverde^1^ \orcidlink{0000-0001-8807-567X} \vspace{-1.5cm}
 - Montserrat Vilà^1^ \orcidlink{0000-0003-3171-8261} \vspace{-1.5cm}
-- Elisa Viñuela^43^ \orcidlink{0000-0002-6283-5236} \vspace{-1.5cm}
+- Elisa Viñuela^45^ \orcidlink{0000-0002-6283-5236} \vspace{-1.5cm}
 
 
 output:
@@ -113,80 +116,84 @@ header-includes:
 
 > (5) Universidad de Sevilla, Escuela Técnica Superior de Ingeniería Informática, Av. Reina Mercedes s/n.
 
-> (6) Instituto Mediterráneo de Estudios Avanzados (IMEDEA; UIB-CSIC).
+> (6) Andrena Initiatives and Environmental Studies, Nueva del Saliente 1-Bis, 47328 Valladolid, Spain.
 
-> (7) Museo Nacional de Ciencias Naturales, Madrid E-28006 Spain.
+> (7) Instituto Mediterráneo de Estudios Avanzados (IMEDEA; UIB-CSIC).
 
 > (8) Independent researcher, Oviedo, Asturias, E-33006 Spain.
 
-> (9) Departamento de Biología Animal (Área de Zoología), Facultad de Biología, Universidad de Salamanca, 37007 Salamanca, Spain.
+> (9) Museo Nacional de Ciencias Naturales, Madrid E-28006 Spain.
 
-> (10) Institute of Evolutionary Biology (CSIC- Universitat Pompeu Fabra), 08034 Barcelona, Spain.
+> (10) Departamento de Biología Vegetal y Ecología, Universidad de Sevilla, Apdo. 41080. Sevilla, Spain.
 
-> (11) CREAF- Universitat Autònoma de Barcelona, 08193 Bellaterra, Spain.                                                                                                        
-> (12) Universidad Politécnica de Madrid, 28040 Madrid, Spain.
+> (11) Departamento de Biología Animal (Área de Zoología), Facultad de Biología, Universidad de Salamanca, 37007 Salamanca, Spain.
 
-> (13) CIBIO, Centro de Investigação em Biodiversidade e Recursos Genéticos, InBIO Laboratório Associado, Campus de Vairão, Universidade do Porto, Vairão, Portugal.
+> (12) Institute of Evolutionary Biology (CSIC- Universitat Pompeu Fabra), 08034 Barcelona, Spain.
 
-> (14) cE3c - Centre for Ecology, Evolution and Environmental Changes, Azorean Biodiversity Group, Faculty of Agricultural Sciences and Environment, University of the Azores, PT-9700-042 Angra do Heroísmo, Portugal.
+> (13) CREAF- Universitat Autònoma de Barcelona, 08193 Bellaterra, Spain.                                                                                                        
+> (14) Universidad Politécnica de Madrid, 28040 Madrid, Spain.
 
-> (15) Centro Universitario de Plasencia. Universidad de Extremadura. Virgen del Puerto 2 10600 Plasencia.
+> (15) CIBIO, Centro de Investigação em Biodiversidade e Recursos Genéticos, InBIO Laboratório Associado, Campus de Vairão, Universidade do Porto, Vairão, Portugal.
 
-> (16) Centre for Functional Ecology, Department of Life Sciences, University of Coimbra, Calçada Martim de Freitas 3000-456 Coimbra, Portugal.
+> (16) cE3c - Centre for Ecology, Evolution and Environmental Changes, Azorean Biodiversity Group, Faculty of Agricultural Sciences and Environment, University of the Azores, PT-9700-042 Angra do Heroísmo, Portugal.
 
-> (17) Biology Departament – IVAGRO, Cádiz University, Campus Río San Pedro, ES11510 Puerto Real, Spain.
+> (17) Centro Universitario de Plasencia. Universidad de Extremadura. Virgen del Puerto 2 10600 Plasencia.
 
-> (18) LEAF – Linking Landscape, Environment, Agriculture and Food, Instituto Superior de Agronomia, Universidade de Lisboa, Lisboa, Portugal.
+> (18) Centre for Functional Ecology, Department of Life Sciences, University of Coimbra, Calçada Martim de Freitas 3000-456 Coimbra, Portugal.
 
-> (19) 16 Briantspuddle, Dorchester, Dorset, UK.
+> (19) Biology Departament – IVAGRO, Cádiz University, Campus Río San Pedro, ES11510 Puerto Real, Spain.
 
-> (20) Facultad de Veterinaria, Departmento de Zoología y Antropología Física, Universidad de Murcia, 30100 Murcia, Spain.
+> (20) LEAF – Linking Landscape, Environment, Agriculture and Food, Instituto Superior de Agronomia, Universidade de Lisboa, Lisboa, Portugal.
 
-> (21) Grupo CTS-183 Bioquímica y Parasitología Molecular, Departamento de Parasitología, Universidad de Granada.18071, Granada, Spain.
+> (21) 16 Briantspuddle, Dorchester, Dorset, UK.
 
-> (22) Southern Swedish Forest Research Centre, Swedish University of Agricultural Sciences, 230 53 Alnarp, Sweden.
+> (22) Facultad de Veterinaria, Departmento de Zoología y Antropología Física, Universidad de Murcia, 30100 Murcia, Spain.
 
-> (23) Departamento de Biodiversidad y Gestión Ambiental (Área de Botánica), Facultad de Ciencias Biológicas y Ambientales, Universidad de León, Campus de Vegazana s/n, 24071 León, Spain.
+> (23) Grupo CTS-183 Bioquímica y Parasitología Molecular, Departamento de Parasitología, Universidad de Granada.18071, Granada, Spain.
 
-> (24) Departamento de Ecología Funcional y Evolutiva - Estación Experimental de Zonas Áridas (EEZA-CSIC).
+> (24) Southern Swedish Forest Research Centre, Swedish University of Agricultural Sciences, 230 53 Alnarp, Sweden.
 
-> (25) Instituto Mediterrâneo para a Agricultura, Ambiente e Desenvolvimento (Universidade de Évora).
+> (25) Departamento de Biodiversidad y Gestión Ambiental (Área de Botánica), Facultad de Ciencias Biológicas y Ambientales, Universidad de León, Campus de Vegazana s/n, 24071 León, Spain.
 
-> (26) Instituto de Hortofruticultura Subtropical y Mediterránea la Mayora (IHSM la Mayora - CSIC - UMA, 29750 Algarrobo-Costa, Spain.
+> (26) Departamento de Ecología Funcional y Evolutiva - Estación Experimental de Zonas Áridas (EEZA-CSIC).
 
-> (27) Universidad Rey Juan Carlos, C/ Tulipan s/n, E-28933, Spain.
+> (27) Instituto Mediterrâneo para a Agricultura, Ambiente e Desenvolvimento (Universidade de Évora).
 
-> (28) Zoological Museum, University of Kiel, Hegewischstr. 3, D-24105 Kiel, Germany.
+> (28) Instituto de Hortofruticultura Subtropical y Mediterránea la Mayora (IHSM la Mayora - CSIC - UMA, 29750 Algarrobo-Costa, Spain.
 
-> (29) Instituto Mixto de Investigación en Biodiversidad (CSIC, Universidad de Oviedo, Principado de Asturias).
+> (29) Universidad Rey Juan Carlos, C/ Tulipan s/n, E-28933, Spain.
 
-> (30) Department of Environmental Systems Science, Swiss Federal Institute of Technology Zurich (ETH), 8092 Zurich, Switzerland.
+> (30) Zoological Museum, University of Kiel, Hegewischstr. 3, D-24105 Kiel, Germany.
 
-> (31) Basque Centre for Climate Change (BC3).
+> (31) Instituto Mixto de Investigación en Biodiversidad (CSIC, Universidad de Oviedo, Principado de Asturias).
 
-> (32) Institute of Infection, Veterinary and Ecological Sciences, Department of Evolution, Ecology and Behaviour, University of Liverpool, L69 7ZB Liverpool, UK.
+> (32) Department of Environmental Systems Science, Swiss Federal Institute of Technology Zurich (ETH), 8092 Zurich, Switzerland.
 
-> (33) Universidad de Jaén. Dept. Biología Animal, Biología Vegetal y Ecología. E-23071 Jaén, Spain.
+> (33) Basque Centre for Climate Change (BC3).
 
-> (34) Servicio Regional de Investigación y Desarrollo Agroalimentario (SERIDA), Ctra AS-267, PK 19, E-33300 Villaviciosa, Asturias, Spain.
+> (34) Institute of Infection, Veterinary and Ecological Sciences, Department of Evolution, Ecology and Behaviour, University of Liverpool, L69 7ZB Liverpool, UK.
 
-> (35) Centro de investigaciones sobre desertificación (CIDE-CSIC/UV/GV). Carretera Moncada-Náquera km 4,5 s/n 46113 Moncada (Valencia), Spain.
+> (35) Universidad de Jaén. Dept. Biología Animal, Biología Vegetal y Ecología. E-23071 Jaén, Spain.
 
-> (36) Independent researcher, Pola de Siero, Asturias, E-33510 Spain.
+> (36) Servicio Regional de Investigación y Desarrollo Agroalimentario (SERIDA), Ctra AS-267, PK 19, E-33300 Villaviciosa, Asturias, Spain.
 
-> (37) Departamento de Biodiversidad, Ecología y Evolución. Universidad Complutense de Madrid.
+> (37) Centro de investigaciones sobre desertificación (CIDE-CSIC/UV/GV). Carretera Moncada-Náquera km 4,5 s/n 46113 Moncada (Valencia), Spain.
 
-> (38) Grupo de Investigación “Transferencia de I+D en el Área de Recursos Naturales”. Universidad de Almería. E-04120 La Cañada de San Urbano (Almería). Spain.
+> (38) Independent researcher, Pola de Siero, Asturias, E-33510 Spain.
 
-> (39) School of Life Sciences, University of Sussex, Brighton, UK.
+> (39) Departamento de Biodiversidad, Ecología y Evolución. Universidad Complutense de Madrid.
 
-> (40) BIOPOLIS Program in Genomics, Biodiversity and Land Planning, CIBIO, Campus de Vairão, Vairão, Portugal".
+> (40) Grupo de Investigación “Transferencia de I+D en el Área de Recursos Naturales”. Universidad de Almería. E-04120 La Cañada de San Urbano (Almería). Spain.
 
-> (41) Independent researcher, Palma, Mallorca, Illes Balears, Spain
+> (41) School of Life Sciences, University of Sussex, Brighton, UK.
 
-> (42) Agroecology Lab, Université libre de Bruxelles, Brussels, Belgium
+> (42) BIOPOLIS Program in Genomics, Biodiversity and Land Planning, CIBIO, Campus de Vairão, Vairão, Portugal".
 
-> (43) Unidad de Protección de Cultivos, Departamento de Producción Agraria, Escuela Técnica Superior de Ingeniería Agronómica, Alimentaria y de Biosistemas, Universidad Politécnica de Madrid, 28040, Madrid, Spain.
+> (43) Independent researcher, Palma, Mallorca, Illes Balears, Spain
+
+> (44) Agroecology Lab, Université libre de Bruxelles, Brussels, Belgium
+
+> (45) Unidad de Protección de Cultivos, Departamento de Producción Agraria, Escuela Técnica Superior de Ingeniería Agronómica, Alimentaria y de Biosistemas, Universidad Politécnica de Madrid, 28040, Madrid, Spain.
 
 > Autor para correspondencia: I. Bartomeus [nacho.bartomeus@gmail.com]
 
@@ -333,7 +340,7 @@ Gracias a todos los naturalistas y científicos que han contribuido de algún mo
 
 **Table 1**. Metadata explaining for each variable in the data set, its meaning and units.
 
-```{r Tabla1, results='asis', echo=FALSE, cache=FALSE}
+```{r Tabla1, results='asis', echo=FALSE, cache=FALSE, warning=FALSE, message=FALSE}
 library("knitr")
 #metadata <- read.csv("../Data/Metadata/attributes.csv")
 library(kableExtra)
