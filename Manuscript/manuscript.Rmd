@@ -1,11 +1,80 @@
 ---
 title: "| Base de datos de abejas ibéricas \n| Iberian Bees database\n"
 author: 
-- Ignasi Bartomeus^1^ \orcidlink{0000-0001-7893-4389}
-- Jose B. Lanuza^1^ \orcidlink{0000-0002-0287-409X}
-- Thomas Wood^2^, 
-- Luisa Carvalheiro^3,4^
-- Francisco P. Molina^1^
+- Ignasi Bartomeus^1^ \orcidlink{0000-0001-7893-4389} \vspace{-1.5cm}
+- Jose B. Lanuza^1^ \orcidlink{0000-0002-0287-409X} \vspace{-1.5cm}
+- Thomas Wood^2^, \orcidlink{0000-0001-5653-224X} \vspace{-1.5cm}
+- Luisa Carvalheiro^3,4^ \orcidlink{0000-0001-7655-979X} \vspace{-1.5cm}
+- Francisco P. Molina^1^ \orcidlink{0000-0003-2425-5246} \vspace{-1.5cm}
+- Miguel Ángel Collado Aliaño^5^ \orcidlink{0000-0002-4216-317X} \vspace{-1.5cm}
+- David Alomar^6^ \vspace{-1.5cm}
+- Piluca Álvarez Fidalgo^7^ \orcidlink{0000-0002-5330-3078} \vspace{-1.5cm}
+- Marián Álvarez Fidalgo^8^ \orcidlink{0000-0002-3313-1467} \vspace{-1.5cm}
+- Blanca Arroyo-Correa^1^ \orcidlink{0000-0002-9402-3013} \vspace{-1.5cm}
+- Josep D. Asís^9^ \orcidlink{0000-0001-8134-1875} \vspace{-1.5cm}
+- Celeste Azpiazu^10,11,12^ \orcidlink{0000-0001-8217-9347} \vspace{-1.5cm}
+- Laura Baños-Picón^9^ \orcidlink{0000-0003-0500-8231} \vspace{-1.5cm}
+- Pedro Beja^13^ \orcidlink{0000-0001-8164-0760} \vspace{-1.5cm}
+- Mário Boieiro^14^ \orcidlink{0000-0002-9087-091X} \vspace{-1.5cm}
+- Paulo A.V. Borges^14^ \orcidlink{0000-0002-8448-7623} \vspace{-1.5cm}
+- Guillermo González Bornay^15^ \orcidlink{0000-0002-8260-5622} \vspace{-1.5cm}
+- Rafael Carvalho^16^ \orcidlink{0000-0002-4901-5305} \vspace{-1.5cm}
+- Ramón Casimiro-Soriguer^17^ \orcidlink{0000-0002-5272-0902} \vspace{-1.5cm}
+- Sílvia Castro^16^ \orcidlink{0000-0002-7358-6685} \vspace{-1.5cm}
+- Ian Cross^18^ \vspace{-1.5cm}
+- Pilar De la Rúa^19^ \orcidlink{0000-0002-0058-1402} \vspace{-1.5cm}
+- Luis Miguel de Pablos^20^ \orcidlink{0000-0001-8940-2919} \vspace{-1.5cm}
+- Víctor de Paz^9^ \orcidlink{0000-0001-9938-3416} \vspace{-1.5cm}
+- Joan Díaz-Calafat^21^ \orcidlink{0000-0002-5823-2176} \vspace{-1.5cm}
+- Victoria Ferrrero^22^ \orcidlink{0000-0002-2091-8957} \vspace{-1.5cm}
+- Hugo Gaspar^16^ \orcidlink{0000-0001-5448-8396} \vspace{-1.5cm}
+- Guillaume Ghisbain^2^ \orcidlink{0000-0003-2032-8081} \vspace{-1.5cm}
+- José María Gómez^23^ \orcidlink{0000-0001-6153-707X} \vspace{-1.5cm}
+- Carmelo Gómez-Martínez^6^ \orcidlink{0000-0003-1449-0138} \vspace{-1.5cm}
+- Miguel Ángel González-Estévez^6^ \vspace{-1.5cm}
+- Ruben Heleno^16^ \orcidlink{0000-0002-4808-4907} \vspace{-1.5cm}
+- José M. Herrera^24^ \orcidlink{0000-0001-7968-3438} \vspace{-1.5cm}
+- Jose I. Hormaza^25^ \orcidlink{0000-0001-5449-7444}
+- Jose M. Iriondo^26^ \orcidlink{0000-0003-2710-3889} \vspace{-1.5cm}
+- Michael Kuhlmann^27^ \orcidlink{0000-0003-3664-6922} \vspace{-1.5cm}
+- Paola Laiolo^28^ \orcidlink{0000-0002-2009-6797} \vspace{-1.5cm}
+- Carlos Lara-Romero^26^ \orcidlink{0000-0003-0962-0567} \vspace{-1.5cm}
+- Amparo Lázaro^6^ \orcidlink{0000-0001-5626-4134} \vspace{-1.5cm}
+- Jesús López-Angulo^29^ \orcidlink{0000-0003-3539-2545} \vspace{-1.5cm}
+- Francisco A. López-Núñez^16^ \orcidlink{0000-0003-0773-9134} \vspace{-1.5cm}
+- João Loureiro^16^ \orcidlink{0000-0002-9068-3954} \vspace{-1.5cm}
+- Ainhoa Magrach^30^ \orcidlink{0000-0002-9068-3954} \vspace{-1.5cm}
+- Vicente Martínez-López^31^ \orcidlink{0000-0001-7800-0703} \vspace{-1.5cm}
+- Carlos Martínez-Núñez^32^ \orcidlink{0000-0001-7814-4985} \vspace{-1.5cm}
+- Denis Michez^23^ \orcidlink{0000-0001-8880-1838} \vspace{-1.5cm}
+- Marcos Miñarro^33^ \orcidlink{0000-0002-5851-6873} \vspace{-1.5cm}
+- Ana Montero-Castaño^1^ \orcidlink{0000-0003-2631-0085} \vspace{-1.5cm}
+- Bruno Moreira^34^ \orcidlink{0000-0002-7319-2555} \vspace{-1.5cm}
+- Javier Morente-López^26^ \orcidlink{0000-0001-9141-8581} \vspace{-1.5cm}
+- Nacho Noval Fonseca^35^ \orcidlink{0000-0001-8387-9417} \vspace{-1.5cm}
+- Alejandro Núñez Carbajal^33^ \orcidlink{0000-0002-4937-0534} \vspace{-1.5cm}
+- José Ramón Obeso^28^ \orcidlink{0000-0001-7157-6478} \vspace{-1.5cm}
+- Concepción Ornosa^36^ \orcidlink{0000-0003-0615-0790} \vspace{-1.5cm}
+- Fco. Javier Ortiz Sánchez^37^ \orcidlink{0000-0003-3364-3101} \vspace{-1.5cm}
+- Sébastien Patiny^2^ \orcidlink{0000-0003-4583-9902} \vspace{-1.5cm}
+- Andreia Penado^13,38,39^ \orcidlink{0000-0003-0365-802X} \vspace{-1.5cm}
+- Ana Picanço^14^ \orcidlink{0000-0002-1188-6519} \vspace{-1.5cm}
+- Emilie F. Ploquin^28^
+- Carla Rego^14^ \orcidlink{0000-0001-8005-4508} \vspace{-1.5cm}
+- Pedro J. Rey^32^ \orcidlink{0000-0001-5550-0393} \vspace{-1.5cm}
+- Elisa Ribas-Marquès^40^ \orcidlink{0000-0002-7616-5835} \vspace{-1.5cm}
+- Stuart P.M. Roberts^41^ \vspace{-1.5cm}
+- Marta Rodriguez^26^ \vspace{-1.5cm}
+- Natalia Rosas-Ramos^9^ \orcidlink{0000-0002-8653-0306} \vspace{-1.5cm}
+- Ana M. Sánchez^26^ \orcidlink{0000-0002-6220-3001} \vspace{-1.5cm}
+- Silvia Santamaría^26^ \orcidlink{0000-0003-2100-2657} \vspace{-1.5cm}
+- Estefanía Tobajas^9^ \orcidlink{0000-0003-2356-8881} \vspace{-1.5cm}
+- José Tormos^9^ \orcidlink{0000-0002-0568-4486} \vspace{-1.5cm}
+- Félix Torres^9^ \orcidlink{0000-0002-2035-109X} \vspace{-1.5cm}
+- Alejandro Trillo^1^ \orcidlink{0000-0002-6944-0923} \vspace{-1.5cm}
+- Javier Valverde^1^ \orcidlink{0000-0001-8807-567X} \vspace{-1.5cm}
+- Montserrat Vilà Planella^1^ \orcidlink{0000-0003-3171-8261} \vspace{-1.5cm}
+- Elisa Viñuela^42^ \orcidlink{0000-0002-6283-5236} \vspace{-1.5cm}
 
 
 output:
@@ -32,6 +101,93 @@ header-includes:
 
 
 ---
+
+> (1) Estación Biológica de Doñana (EBD-CSIC), Consejo Superior de Investigaciones Científicas, Avda. Américo Vespucio s/n, E-41092 Sevilla, España.
+
+> (2) Laboratory of Zoology, University of Mons, Avenue du Champs de Mars 6, 7000, Mons, Belgium.
+
+> (3) cE3c, Universidade de Lisboa, Lisboa, Portugal.
+
+> (4) Departamento de Ecologia, Universidade Federal de Goiás, Goiânia, Brasil.
+
+> (5) Universidad de Sevilla, Escuela Técnica Superior de Ingeniería Informática, Av. Reina Mercedes s/n.
+
+> (6) Instituto Mediterráneo de Estudios Avanzados (IMEDEA; UIB-CSIC).
+
+> (7) Museo Nacional de Ciencias Naturales, Madrid E-28006 Spain.
+
+> (8) Independent researcher, Oviedo, Asturias, E-33006 Spain.
+
+> (9) Departamento de Biología Animal (Área de Zoología), Facultad de Biología, Universidad de Salamanca, 37007 Salamanca, Spain.
+
+> (10) Institute of Evolutionary Biology (CSIC- Universitat Pompeu Fabra), 08034 Barcelona, Spain.
+
+> (11) CREAF- Universitat Autònoma de Barcelona, 08193 Bellaterra, Spain.                                                                                                        
+> (12) Universidad Politécnica de Madrid, 28040 Madrid, Spain.
+
+> (13) CIBIO, Centro de Investigação em Biodiversidade e Recursos Genéticos, InBIO Laboratório Associado, Campus de Vairão, Universidade do Porto, Vairão, Portugal.
+
+> (14) cE3c - Centre for Ecology, Evolution and Environmental Changes, Azorean Biodiversity Group, Faculty of Agricultural Sciences and Environment, University of the Azores, PT-9700-042 Angra do Heroísmo, Portugal.
+
+> (15) Centro Universitario de Plasencia. Universidad de Extremadura. Virgen del Puerto 2 10600 Plasencia.
+
+> (16) Centre for Functional Ecology, Department of Life Sciences, University of Coimbra, Calçada Martim de Freitas 3000-456 Coimbra, Portugal.
+
+> (17) Biology Departament – IVAGRO, Cádiz University, Campus Río San Pedro, ES11510 Puerto Real, Spain.
+
+> (18) 16 Briantspuddle, Dorchester, Dorset, UK.
+
+> (19) Facultad de Veterinaria, Departmento de Zoología y Antropología Física, Universidad de Murcia, 30100 Murcia, Spain.
+
+> (20) Grupo CTS-183 Bioquímica y Parasitología Molecular, Departamento de Parasitología, Universidad de Granada.18071, Granada, Spain.
+
+> (21) Southern Swedish Forest Research Centre, Swedish University of Agricultural Sciences, 230 53 Alnarp, Sweden.
+
+> (22) Departamento de Biodiversidad y Gestión Ambiental (Área de Botánica), Facultad de Ciencias Biológicas y Ambientales, Universidad de León, Campus de Vegazana s/n, 24071 León, Spain.
+
+> (23) Departamento Ecología Funcional y Evolutiva - Estación Experimental de Zonas Áridas (EEZA-CSIC).
+
+> (24) Instituto Mediterrâneo para a Agricultura, Ambiente e Desenvolvimento (Universidade de Évora).
+
+> (25) Instituto de Hortofruticultura Subtropical y Mediterránea la Mayora (IHSM la Mayora - CSIC - UMA, 29750 Algarrobo-Costa, Spain.
+
+> (26) Universidad Rey Juan Carlos, C/ Tulipan S/N, E-28933, Spain.
+
+> (27) Zoological Museum, University of Kiel, Hegewischstr. 3, D-24105 Kiel, Germany.
+
+> (28) Instituto Mixto de Investigación en Biodiversidad (CSIC, Universidad de Oviedo, Principado de Asturias).
+
+> (29) Department of Environmental Systems Science, Swiss Federal Institute of Technology Zurich (ETH), 8092 Zurich, Switzerland.
+
+> (30) Basque Centre for Climate Change (BC3).
+
+> (31) Institute of Infection, Veterinary and Ecological Sciences, Department of Evolution, Ecology and Behaviour, University of Liverpool, L69 7ZB Liverpool, UK.
+
+> (32) Universidad de Jaén. Dept. Biología Animal, Biología Vegetal y Ecología. E-23071 Jaén, Spain.
+
+> (33) Servicio Regional de Investigación y Desarrollo Agroalimentario (SERIDA), Ctra AS-267, PK 19, E-33300 Villaviciosa, Asturias, Spain.
+
+> (34) Centro de investigaciones sobre desertificación (CIDE-CSIC/UV/GV). Carretera Moncada-Náquera km 4,5 s/n 46113 Moncada (Valencia), Spain.
+
+> (35) Independent researcher, Pola de Siero, Asturias, E-33510 Spain.
+
+> (36) Departamento de Biodiversidad, Ecología y Evolución. Universidad Complutense de Madrid.
+
+> (37) Grupo de Investigación “Transferencia de I+D en el Área de Recursos Naturales”. Universidad de Almería. E-04120 La Cañada de San Urbano (Almería). Spain.
+
+> (38) School of Life Sciences, University of Sussex, Brighton, UK.
+
+> (39) BIOPOLIS Program in Genomics, Biodiversity and Land Planning, CIBIO, Campus de Vairão, Vairão, Portugal".
+
+> (40) Independent researcher, Palma, Mallorca, Illes Balears, Spain
+
+> (41) Agroecology Lab, Université libre de Bruxelles, Brussels, Belgium
+
+> (42) Unidad de Protección de Cultivos, Departamento de Producción Agraria, Escuela Técnica Superior de Ingeniería Agronómica, Alimentaria y de Biosistemas, Universidad Politécnica de Madrid, 28040, Madrid, Spain.
+
+> Autor para correspondencia: I. Bartomeus [nacho.bartomeus@gmail.com]
+
+
 
 ```{r include=FALSE}
 
@@ -91,13 +247,7 @@ date_2 <- length(which(!is.na(date_1$Start.date) & !is.na(date_1$End.date)))
 ```
 
 
-> (1) Departamento de Ecología Integrativa, Estación Biológica de Doñana (EBD-CSIC), Consejo Superior de Investigaciones Científicas, Avda. Américo Vespucio s/n, E-41092 Sevilla, España.  
-> (2) Laboratory of Zoology, University of Mons, Avenue du Champs de Mars 6, 7000, Mons, Belgium.  
-> (3) CE3C, Universidade de Lisboa, Lisboa, Portugal.  
-> (4) Departamento de Ecologia, Universidade Federal de Goiás, Goiânia, Brasil.  
-> (5)
 
-> Autor para correspondencia: I. Bartomeus [nacho.bartomeus@gmail.com]
 
 
 # Resumen
@@ -275,14 +425,14 @@ top_20$Accepted_name <- factor(top_20$Accepted_name, levels = top_20$Accepted_na
 ggplot(top_20, aes(x = Accepted_name, y = no_rows)) +
   geom_bar(stat = "identity", fill = "#287D8EFF") +
   theme_classic() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 8, face = "italic")) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10, face = "italic"),   axis.title=element_text(size=16)) +
   ylab("Number of records") +
   xlab("Species") +
   scale_y_continuous(expand = c(0, 0))
 ```
 
 
-```{r echo=FALSE, warning=FALSE, message=FALSE, fig.cap="\\textbf{Figure 3}", message=FALSE, warning=FALSE, cache=FALSE}
+```{r echo=FALSE, warning=FALSE, message=FALSE, fig.cap="\\textbf{Figure 3}", message=FALSE, warning=FALSE, cache=FALSE, fig.width=5}
 # Prepare top 20 records
 by_year <- data %>% filter(!Accepted_name == "Apis mellifera")
 
@@ -290,7 +440,7 @@ p1 <- ggplot(by_year, aes(Year)) +
   geom_histogram(fill = "#287D8EFF") +
   theme_classic() +
   ylab("Number of records") +
-  scale_y_continuous(expand = c(0, 0)) + ggtitle("A")
+  scale_y_continuous(expand = c(0, 0)) + ggtitle("A") + theme(axis.title=element_text(size=12))
 
 data$month_name <- month.abb[data$Month]
 
@@ -313,7 +463,7 @@ p2 <- ggplot(data = month_sum, aes(x = month_name, y = no_rows)) +
   theme_classic() +
   scale_y_continuous(expand = c(0, 0)) +
   ylab("Number of records") +
-  xlab("Months") + ggtitle("B")
+  xlab("Months") + ggtitle("B") + theme(axis.title=element_text(size=12))
 
 library(patchwork)
 
