@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6354503.svg)](https://doi.org/10.5281/zenodo.6354503)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6354502.svg)](https://doi.org/10.5281/zenodo.6354502)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 # IberianBees database v.1.0.0 :bee:
