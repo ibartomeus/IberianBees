@@ -7,7 +7,7 @@ This is a repository to document the distribution and diversity of bee species o
 
 ## How to contribute:
 
-If you have data on Iberian bee's occurrence, fill in this [template](TBA) and send it to nacho.bartomeus@gmail.com
+If you have data on Iberian bee's occurrence, fill in this [template](https://github.com/ibartomeus/IberianBees/blob/master/Add_New_Data_Template_English_Version.xlsx) and send it to nacho.bartomeus@gmail.com
 
 ## How to use this repo  
 
