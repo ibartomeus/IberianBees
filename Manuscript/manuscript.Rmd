@@ -80,13 +80,13 @@ author:
 - Montserrat Vilà^1^ \orcidlink{0000-0003-3171-8261} \vspace{-1.5cm}
 - Elisa Viñuela^45^ \orcidlink{0000-0002-6283-5236} \vspace{-1.5cm}
 output:
+  pdf_document: default
   word_document:
     fig_caption: yes
     fig_height: 6
     fig_width: 7.5
     highlight: null
     reference_docx: Ecosistemas_template.docx
-  pdf_document: default
 csl: ecosistemas.csl
 bibliography:
 - references.bib
