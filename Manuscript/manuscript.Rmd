@@ -308,7 +308,7 @@ En la base de datos resultante se ha asignado a cada entrada o registro  un iden
 
 Toda la base de datos se puede reconstruir de las fuentes originales usando los scripts proporcionados, y por tanto se pueden trazar todas las decisiones tomadas. Finalmente, se ha creado una plantilla para contribuir con más datos que puede ser consultada en el repositorio de esta base de datos.
 
-Utilizamos R `r citep(citation())` y Rmarkdown `r citep(list(citation("knitr"), citation("rmarkdown")))` para todo el procesado, escritura y creación de esta base de datos.
+Utilizamos R `r citep(citation())` y Rmarkdown [@mark1; @mark2; @mark3] para todo el procesado, escritura y creación de esta base de datos.
 
 # Registro y disponibilidad de datos  
 
