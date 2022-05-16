@@ -9,13 +9,13 @@ bounds <- c(35.67, -10.13, 44.15, 4.76) #Iberian peninsula
 bound_1 <- c(35.67, -10.13, 44.15, -2.99) #Iberian peninsula in half
 bound_2 <- c(35.67, -3.00, 44.15, 4.76) #Iberian peninsula in half
 #Apidae is divided in two in order to get the max records of the Iberia peninsula
-apidae_1 <- get_inat_obs(taxon_name = "Apidae", geo = TRUE, maxresults = 9999 , bounds = bound_1)
-apidae_2 <- get_inat_obs(taxon_name = "Apidae", geo = TRUE, maxresults = 9999 , bounds = bound_2)
-andrenidae <- get_inat_obs(taxon_name = "Andrenidae", geo = TRUE, maxresults = 9999 , bounds = bounds)
-halictidae <- get_inat_obs(taxon_name = "Halictidae", geo = TRUE, maxresults = 9999 , bounds = bounds)
-colletidae <- get_inat_obs(taxon_name = "Colletidae", geo = TRUE, maxresults = 9999 , bounds = bounds)
-megachilidae <- get_inat_obs(taxon_name = "Megachilidae", geo = TRUE, maxresults = 9999 , bounds = bounds)
-melittidae <- get_inat_obs(taxon_name = "Melittidae", geo = TRUE, maxresults = 9999 , bounds = bounds)
+apidae_1 <- get_inat_obs(taxon_name = "Apidae", geo = TRUE, maxresults = 9999 , bounds = bound_1, quality =  "research")
+apidae_2 <- get_inat_obs(taxon_name = "Apidae", geo = TRUE, maxresults = 9999 , bounds = bound_2, quality =  "research")
+andrenidae <- get_inat_obs(taxon_name = "Andrenidae", geo = TRUE, maxresults = 9999 , bounds = bounds, quality =  "research")
+halictidae <- get_inat_obs(taxon_name = "Halictidae", geo = TRUE, maxresults = 9999 , bounds = bounds, quality =  "research")
+colletidae <- get_inat_obs(taxon_name = "Colletidae", geo = TRUE, maxresults = 9999 , bounds = bounds, quality =  "research")
+megachilidae <- get_inat_obs(taxon_name = "Megachilidae", geo = TRUE, maxresults = 9999 , bounds = bounds, quality =  "research")
+melittidae <- get_inat_obs(taxon_name = "Melittidae", geo = TRUE, maxresults = 9999 , bounds = bounds, quality =  "research")
 
 inat <- rbind(apidae_1,apidae_2, andrenidae, halictidae, colletidae, megachilidae)
 unique(inat$scientific_name) #need to clean data, a couple subsp.
