@@ -18,7 +18,7 @@ localities <- older_1990 %>%
 #We need to filter locations with unique records
 #Maybe unique levels of species by location...
 
-s <- older_1990 %>% count(Accepted_name, Locality, sort = TRUE)
-
-
-
+unique_loc <- older_1990 %>%
+  group_by(Locality) %>%
+  summarise(total = n(),
+            Y = n_distinct(Accepted_name))
