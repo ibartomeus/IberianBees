@@ -71,7 +71,7 @@ data2$subgenus <- NULL
 mis <- data2$Genus[which(!data2$Genus %in% genus)]
 mismatches <- unique(mis) #CHECK with Thomas / Curro none of those are bees. 
 mismatches 
-#exclude synonims that need to be fixed
+#exclude synonyms that need to be fixed
 mm <- mismatches[-which(mismatches %in% c(master$Subgenus, "Nomia", "Megachilini", "Osmiini",
                                           "Tetraloniella", "Reanthidium", "Vestitohalictus", "Paranthidiellum",
                                           "Melissodes", "Haetosmia", "Trianthidium", "Peponapis"))]       
@@ -211,7 +211,6 @@ data <- data %>%  dplyr::select(-Genus_species)
 #I think that if there is the need to check specific species
 #Always the raw data can be checked because is available
 
-#NOTE: JOSE I would prefer to keep original and accepted name in the final dataset.
 #########################-
 #Fix now subgenus ----
 #########################-
