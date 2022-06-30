@@ -367,6 +367,9 @@ data <- cbind(data_1, data_2)
 #Exclude Apis mellifera records
 data <- data %>% filter(!Accepted_name == "Apis mellifera")
 
+#Rename colname uid to Unique.identifier
+data <- data %>% rename(Unique.identifier = Uid)
+
 #Save as a zip file
 write.csv(data, file=gzfile("Data/iberian_bees.csv.gz"))
 
