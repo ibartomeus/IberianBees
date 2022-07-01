@@ -15,6 +15,11 @@ library(raster)
 library(rasterVis)
 library(tidyverse)
 library(data.table)
+library(ggplot2)
+library(viridis)
+library(ggspatial)
+library(ggsn)
+
 data <- read.table("../../Data/iberian_bees.csv.gz", header = T, quote = "\"", sep = ",")
 
 # Prepare data
@@ -32,42 +37,8 @@ data <- data %>% filter(Country_1 == "Spain" | Country_1 == "Portugal")
 # Rbind points that are in Spain with the ones of Balearic islands
 dat <- rbind(data, data_1)
 
-# install.packages("ggplot2")
-library(ggplot2)
-library(viridis)
-library(giscoR) #map of europe
-library(ggspatial)
-
-#gisco
-#gisco_countrycode
-eu2016 <- c(gisco_countrycode[gisco_countrycode$eu, ]$CNTR_CODE)
-
-#Select data
-europe_map <- gisco_get_nuts(
-  year = "2016",
-  epsg = "3035",
-  resolution = "3",
-  nuts_level = "2",
-  country = eu2016) %>%
-  sf::st_transform(crs = 4326) 
-
-
-# Borders
-borders <- gisco_get_countries(
-  epsg = "3035",
-  year = "2016",
-  resolution = "3",
-  country = eu2016) %>%
-  sf::st_transform(crs = 4326) 
-
-vars <- c("ES",  "PT")
-#Extract counties of interest
-euro_map <- filter(europe_map, CNTR_CODE %in% vars)
-
 #Plot map
 world <- map_data("world")
-
-library(ggsn)
 
 ibera <- world %>% filter(region == "Spain" | region == "Portugal"| region == "France" |region == "Andorra"|region == "Marroco")
 
@@ -89,6 +60,5 @@ dist = 100, dist_unit = "km",st.size = 3,st.dist=0.04,
 transform = TRUE, model = "WGS84", st.color="black") +
 theme(axis.title = element_text(size=16), axis.text = element_text(size=12))  
 
-  
 
 ```

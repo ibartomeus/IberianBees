@@ -261,7 +261,7 @@ date_2 <- length(which(!is.na(date_1$Start.date) & !is.na(date_1$End.date)))
 
 # Background & Summary
 
-Bees (Hymenoptera, Apoidea, Anthophila) are a diverse group of insects with more than 20,000 species described worldwide [@ascher2020]. The Iberian Peninsula, with its bee-loved Mediterranean climate, is one of the hotspots of bee biodiversity with more than 1,000 species recorded to date and counting [@ascher2020; @ortiz2020]. Unfortunately, despite the high biodiversity of Iberian bees, we know very little about the species themselves and their distributions. This is paradoxical, as in recent years bees have been highlighted as a keystone group in the ecosystem due to a key function they provide, the pollination of thousands of plants [@ollerton2011], including most crop species [@klein2007]. In addition, various rapid human-induced environmental changes are leading to the decline of some bee populations [@goulson2015]. However, the response of bee species to global change is heterogeneous both in space and also taxonomically. That is, while in some areas species are declining drastically [@burkle2013], other areas are well conserved [@herrera2019] and while some species are in the brink of extinction [@cameron2011] some species are even thriving [@russo2016]. A better description of bee distributions, habitat preferences, phenologies, or historical trends in the Iberian Peninsula would require information on when and where different species occur.
+Bees (Hymenoptera, Apoidea, Anthophila) are a diverse group of insects with more than 20,000 species described worldwide  (Ascher and Pickering, 2020). The Iberian Peninsula, with its bee-loved Mediterranean climate, is one of the hotspots of bee biodiversity with more than 1,000 species recorded to date and counting (Ascher and Pickering, 2020; Ortiz-Sánchez, 2020). Unfortunately, despite the high biodiversity of Iberian bees, we know very little about the species themselves and their distributions. This is paradoxical, as in recent years bees have been highlighted as a keystone group in the ecosystem due to a key function they provide, the pollination of thousands of plants [@ollerton2011], including most crop species [@klein2007]. In addition, various rapid human-induced environmental changes are leading to the decline of some bee populations [@goulson2015]. However, the response of bee species to global change is heterogeneous both in space and also taxonomically. That is, while in some areas species are declining drastically [@burkle2013], other areas are well conserved [@herrera2019] and while some species are in the brink of extinction [@cameron2011] some species are even thriving [@russo2016]. A better description of bee distributions, habitat preferences, phenologies, or historical trends in the Iberian Peninsula would require information on when and where different species occur.
 
 In the absence of standardized monitoring efforts, one may think that detailed information on species occurrences in space and time does not exists. However, there are different sources of extremely useful information. First, natural history museums hold historical collections of amateur naturalists and researchers who collected bees [@bartomeus2019]. Collectors are very good at classifying and labeling each collected specimen, which means we can retrieve the information stored along the pinned specimens about when and where those where collected. Second, the Iberian Peninsula has a rich tradition of pollinator and pollination researchers [@archer2014], which have been collecting occurrence bee data with different aims. Finally, many occurrence records are being made available through internet portals which centralize data hosted in institutions all around the world (e.g. Gbif) or collected by citizen scientists (e.g. iNaturalist). The challenge is how to digitalize, access, and curate all these different data sources.
 
@@ -439,6 +439,7 @@ kbl(d, caption = '\\textbf{Table 1}', format = 'latex', escape = F,booktabs = T,
 
 \newpage
 
+# Figura 1
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center',out.width="115%"}
 library(sf)
@@ -446,6 +447,11 @@ library(raster)
 library(rasterVis)
 library(tidyverse)
 library(data.table)
+library(ggplot2)
+library(viridis)
+library(ggspatial)
+library(ggsn)
+
 data <- read.table("../Data/iberian_bees.csv.gz", header = T, quote = "\"", sep = ",")
 
 # Prepare data
@@ -463,42 +469,8 @@ data <- data %>% filter(Country_1 == "Spain" | Country_1 == "Portugal")
 # Rbind points that are in Spain with the ones of Balearic islands
 dat <- rbind(data, data_1)
 
-# install.packages("ggplot2")
-library(ggplot2)
-library(viridis)
-library(giscoR) #map of europe
-library(ggspatial)
-
-#gisco
-#gisco_countrycode
-eu2016 <- c(gisco_countrycode[gisco_countrycode$eu, ]$CNTR_CODE)
-
-#Select data
-europe_map <- gisco_get_nuts(
-  year = "2016",
-  epsg = "3035",
-  resolution = "3",
-  nuts_level = "2",
-  country = eu2016) %>%
-  sf::st_transform(crs = 4326) 
-
-
-# Borders
-borders <- gisco_get_countries(
-  epsg = "3035",
-  year = "2016",
-  resolution = "3",
-  country = eu2016) %>%
-  sf::st_transform(crs = 4326) 
-
-vars <- c("ES",  "PT")
-#Extract counties of interest
-euro_map <- filter(europe_map, CNTR_CODE %in% vars)
-
 #Plot map
 world <- map_data("world")
-
-library(ggsn)
 
 ibera <- world %>% filter(region == "Spain" | region == "Portugal"| region == "France" |region == "Andorra"|region == "Marroco")
 
@@ -523,6 +495,10 @@ theme(axis.title = element_text(size=16), axis.text = element_text(size=12))
   
 
 ```
+
+\newpage
+
+# Figura 2
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width="100%"}
 
@@ -549,6 +525,10 @@ ggplot(top_20, aes(x = Accepted_name, y = no_rows)) +
   xlab("Species") +
   scale_y_continuous(expand = c(0, 0))
 ```
+
+\newpage
+
+# Figura 3
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE,fig.width=7,fig.height=6, fig.align='center',message=FALSE, warning=FALSE, cache=FALSE, out.width="100%"}
 

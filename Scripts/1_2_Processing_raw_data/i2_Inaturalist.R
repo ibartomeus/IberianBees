@@ -115,6 +115,8 @@ newdat <- newdat %>% dplyr::select(-Country_1)
 newdat$Country[grepl("Spain", newdat$Country)] <- "Spain"
 unique(levels(factor(newdat$Country)))
 
+newdat <- newdat %>% filter(Country=="Portugal" | Country== "Spain")
+
 newdat$Collector <- ifelse(is.na(newdat$Collector)==FALSE,  paste0("Online_", newdat$Collector), NA)
 newdat$Determined.by <- ifelse(is.na(newdat$Determined.by)==FALSE,  paste0("Online_", newdat$Determined.by), NA)
 

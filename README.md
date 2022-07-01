@@ -42,5 +42,37 @@ To build this database, we follow a reproducible workflow to clean and ensemble 
 
 Metadata is generated using [DataSpice](https://github.com/ropensci/dataspice).
 
-![plot](Manuscript/Summary/summary_repo.png)
+![](Manuscript/Summary/summary_repo.png)
+
+# Example:
+
+Here, we provide an example of how to select, filter and plot the distribution of the species _Xylocopa violacea_ for the records after the year 1999.
+
+- First, read compressed data in gzip format:
+```r
+data <- read.table("../Data/iberian_bees.csv.gz", 
+header = T, quote = "\"", sep = ",",row.names=1)
+```
+- Second, select records of _X. violacea_ after 1999
+
+```r
+library(dplyr) #Library to filter data
+xylocopa <- data %>% filter(Accepted_name == "Xylocopa violacea" & Year > 1999)
+```
+- Finally, load map and plot records:
+
+```r
+library(ggplot2) #to load worldmap and plotting
+#Load map
+world <- map_data("world")
+#Plot records and adjust map to the Iberian Peninsula
+ggplot(data = xylocopa, aes(Longitude, Latitude)) +
+geom_map(data = world, map = world,
+aes(long, lat, map_id = region), color = "white", fill = "grey", size = 0.1) +
+coord_sf(xlim = c(-9, 4), ylim = c(36, 44)) +
+geom_point() 
+```
+
+![](Manuscript/Summary/xylocopa_map.png)
+
 

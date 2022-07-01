@@ -370,6 +370,11 @@ data <- data %>% filter(!Accepted_name == "Apis mellifera")
 #Rename colname uid to Unique.identifier
 data <- data %>% rename(Unique.identifier = Uid)
 
+#Convert coordinates to numeric
+data$Latitude <- as.numeric(data$Latitude)
+data$Longitude <- as.numeric(data$Longitude)
+str(data)
+
 #Save as a zip file
 write.csv(data, file=gzfile("Data/iberian_bees.csv.gz"))
 

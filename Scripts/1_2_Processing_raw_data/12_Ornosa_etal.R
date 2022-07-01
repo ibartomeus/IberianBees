@@ -56,6 +56,10 @@ newdat$Subspecies[newdat$Subspecies=="terrestris mezcla"] <- NA
 #Fix male col
 newdat$Male[newdat$Male=="m"] <- 1
 
+#Fix one coordinate
+newdat$Latitude[newdat$Species == "violacea"] <- 37.150267
+newdat$Longitude[newdat$Species == "violacea"] <- -3.633878
+
 #Add unique identifier
 newdat <- add_uid(newdat = newdat, '12_Ornosa_etal_')
 
