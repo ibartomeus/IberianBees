@@ -326,7 +326,12 @@ Gracias a todos los naturalistas y científicos que han contribuido de algún mo
 
 **Table 1**. Metadata explaining for each variable in the data set, its meaning and units.
 
-```{r Tabla1, results='asis', echo=FALSE, cache=FALSE, warning=FALSE, message=FALSE}
+\newpage
+
+
+# Tabla 1
+
+```{r  results='asis', echo=FALSE, cache=FALSE, warning=FALSE, message=FALSE}
 library("knitr")
 #metadata <- read.csv("../Data/Metadata/attributes.csv")
 library(kableExtra)
@@ -415,7 +420,7 @@ d$`Variable name`[d$`Variable name`=="Original_name"] <- "Original.name"
 d$`Variable name`[d$`Variable name`=="Local_id"] <- "Local.id"
 
 
-kbl(d, caption = '\\textbf{Table 1}', format = 'latex', escape = F,booktabs = T, linesep = "\\addlinespace") %>% row_spec(0, bold=T) 
+kbl(d, format = 'latex', escape = F,booktabs = T, linesep = "\\addlinespace") %>% row_spec(0, bold=T) 
 
 ```
 
