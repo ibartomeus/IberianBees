@@ -1,0 +1,94 @@
+---
+title: "\\textbf{Figure 1}"
+output:
+  pdf_document: default
+  html_document: default
+header-includes:
+ - \usepackage{caption}
+ - \captionsetup[figure]{labelformat=empty}
+ - \captionsetup[table]{labelformat=empty}
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center',out.width="115%"}
+library(sf)
+library(raster)
+library(rasterVis)
+library(tidyverse)
+library(data.table)
+data <- read.table("../../Data/iberian_bees.csv.gz", header = T, quote = "\"", sep = ",")
+
+# Prepare data
+data$Longitude <- as.numeric(data$Longitude)
+data$Latitude <- as.numeric(data$Latitude)
+data <- data %>% filter(!is.na(Latitude) & !is.na(Longitude))
+# Keep points on balearic islands
+data_1 <- data %>% filter(Province == "Balears, Illes")
+data_1$Country_1 <- NA
+
+# Filter points in Spain and Portugal
+data$Country_1 <- NA
+data$Country_1 <- maps::map.where(x = data$Longitude, y = data$Latitude)
+data <- data %>% filter(Country_1 == "Spain" | Country_1 == "Portugal")
+# Rbind points that are in Spain with the ones of Balearic islands
+dat <- rbind(data, data_1)
+
+# install.packages("ggplot2")
+library(ggplot2)
+library(viridis)
+library(giscoR) #map of europe
+library(ggspatial)
+
+#gisco
+#gisco_countrycode
+eu2016 <- c(gisco_countrycode[gisco_countrycode$eu, ]$CNTR_CODE)
+
+#Select data
+europe_map <- gisco_get_nuts(
+  year = "2016",
+  epsg = "3035",
+  resolution = "3",
+  nuts_level = "2",
+  country = eu2016) %>%
+  sf::st_transform(crs = 4326) 
+
+
+# Borders
+borders <- gisco_get_countries(
+  epsg = "3035",
+  year = "2016",
+  resolution = "3",
+  country = eu2016) %>%
+  sf::st_transform(crs = 4326) 
+
+vars <- c("ES",  "PT")
+#Extract counties of interest
+euro_map <- filter(europe_map, CNTR_CODE %in% vars)
+
+#Plot map
+world <- map_data("world")
+
+library(ggsn)
+
+ibera <- world %>% filter(region == "Spain" | region == "Portugal"| region == "France" |region == "Andorra"|region == "Marroco")
+
+
+ggplot(data=dat, aes(Longitude, Latitude)) +
+geom_map(data = ibera, map = ibera,
+aes(long, lat, map_id = region), color = "white", fill = "grey", size = 0.1) +
+geom_bin2d(bins=70, aes(fill=log(..count..))) +
+theme(panel.grid.major = element_line(color = gray(0.5), linetype = "dashed", 
+size = 0.5), panel.background = element_rect(fill = "aliceblue"),
+panel.border = element_rect(colour = "black", fill=NA, size=1.5)) +
+scale_fill_viridis() +
+coord_sf(xlim = c(-9, 4), ylim = c(36, 44)) +
+ggsn::north(x.min = -0.7, x.max = 3.3, 
+y.min = 35.6, y.max = 37.6, scale = 0.4) +
+scalebar(x.min = -2, x.max = 3.6,
+y.min = 36.5, y.max = 42.5,
+dist = 100, dist_unit = "km",st.size = 3,st.dist=0.04,
+transform = TRUE, model = "WGS84", st.color="black") +
+theme(axis.title = element_text(size=16), axis.text = element_text(size=12))  
+
+  
+
+```

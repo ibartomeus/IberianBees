@@ -1,0 +1,34 @@
+---
+title: "\\textbf{Figure 2}"
+output:
+  pdf_document: default
+  html_document: default
+header-includes:
+ - \usepackage{caption}
+ - \captionsetup[figure]{labelformat=empty}
+ - \captionsetup[table]{labelformat=empty}
+---
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width="100%"}
+
+library(tidyverse)
+
+data <- read.table("../../Data/iberian_bees.csv.gz", header = T, quote = "\"", sep = ",")
+
+# Prepare top 20 records
+top_20 <- data %>%
+  filter(!Accepted_name == "Apis mellifera") %>%
+  group_by(Accepted_name) %>%
+  summarise(no_rows = length(Accepted_name)) %>%
+  arrange(-no_rows) %>%
+  slice(1:20)
+# Fix row position
+top_20$Accepted_name <- factor(top_20$Accepted_name, levels = top_20$Accepted_name)
+# Plot
+ggplot(top_20, aes(x = Accepted_name, y = no_rows)) +
+  geom_bar(stat = "identity", fill = "#287D8EFF") +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 11, face = "italic"), axis.text.y = element_text(size=12),   axis.title=element_text(size=16), axis.line =element_line(size=1)) +
+  ylab("Number of records") +
+  xlab("Species") +
+  scale_y_continuous(expand = c(0, 0))
+```

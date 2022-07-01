@@ -437,15 +437,14 @@ kbl(d, caption = '\\textbf{Table 1}', format = 'latex', escape = F,booktabs = T,
 
 **Figura 3**. Número de registros en la base de datos por año (A) y por mes (B).
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.cap="\\textbf{Figure 1}",out.width="70%"}
-# code courtesy of Paco Rodriguez.
+\newpage
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center',out.width="115%"}
 library(sf)
 library(raster)
 library(rasterVis)
 library(tidyverse)
-crs.geo <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
-crs.laea <- "+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs"
-
 library(data.table)
 data <- read.table("../Data/iberian_bees.csv.gz", header = T, quote = "\"", sep = ",")
 
@@ -464,28 +463,73 @@ data <- data %>% filter(Country_1 == "Spain" | Country_1 == "Portugal")
 # Rbind points that are in Spain with the ones of Balearic islands
 dat <- rbind(data, data_1)
 
-datos.sf <- st_as_sf(dat,
-                     coords = c("Longitude", "Latitude"),
-                     crs = crs.geo
-)
+# install.packages("ggplot2")
+library(ggplot2)
+library(viridis)
+library(giscoR) #map of europe
+library(ggspatial)
 
-datos.laea <- st_transform(datos.sf,
-                           crs = crs.laea
-)
+#gisco
+#gisco_countrycode
+eu2016 <- c(gisco_countrycode[gisco_countrycode$eu, ]$CNTR_CODE)
 
-ras <- raster(datos.laea, resolution = 10000)
+#Select data
+europe_map <- gisco_get_nuts(
+  year = "2016",
+  epsg = "3035",
+  resolution = "3",
+  nuts_level = "2",
+  country = eu2016) %>%
+  sf::st_transform(crs = 4326) 
 
-ras.counts <- rasterize(datos.laea[, "Accepted_name"], ras,
-                        field = "Accepted_name", fun = "count"
-)
 
-levelplot(log(ras.counts+1), margin = FALSE, scales = list(draw = FALSE),
-          par.settings = viridisTheme())
+# Borders
+borders <- gisco_get_countries(
+  epsg = "3035",
+  year = "2016",
+  resolution = "3",
+  country = eu2016) %>%
+  sf::st_transform(crs = 4326) 
 
+vars <- c("ES",  "PT")
+#Extract counties of interest
+euro_map <- filter(europe_map, CNTR_CODE %in% vars)
+
+#Plot map
+world <- map_data("world")
+
+library(ggsn)
+
+ibera <- world %>% filter(region == "Spain" | region == "Portugal"| region == "France" |region == "Andorra"|region == "Marroco")
+
+
+ggplot(data=dat, aes(Longitude, Latitude)) +
+geom_map(data = ibera, map = ibera,
+aes(long, lat, map_id = region), color = "white", fill = "grey", size = 0.1) +
+geom_bin2d(bins=70, aes(fill=log(..count..))) +
+theme(panel.grid.major = element_line(color = gray(0.5), linetype = "dashed", 
+size = 0.5), panel.background = element_rect(fill = "aliceblue"),
+panel.border = element_rect(colour = "black", fill=NA, size=1.5)) +
+scale_fill_viridis() +
+coord_sf(xlim = c(-9, 4), ylim = c(36, 44)) +
+ggsn::north(x.min = -0.7, x.max = 3.3, 
+y.min = 35.6, y.max = 37.6, scale = 0.4) +
+scalebar(x.min = -2, x.max = 3.6,
+y.min = 36.5, y.max = 42.5,
+dist = 100, dist_unit = "km",st.size = 3,st.dist=0.04,
+transform = TRUE, model = "WGS84", st.color="black") +
+theme(axis.title = element_text(size=16), axis.text = element_text(size=12))  
+
+  
 
 ```
 
-```{r echo=FALSE, fig.align='center', out.width="70%", fig.cap="\\textbf{Figure 2}"}
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width="100%"}
+
+library(tidyverse)
+
+data <- read.table("../Data/iberian_bees.csv.gz", header = T, quote = "\"", sep = ",")
+
 # Prepare top 20 records
 top_20 <- data %>%
   filter(!Accepted_name == "Apis mellifera") %>%
@@ -499,13 +543,19 @@ top_20$Accepted_name <- factor(top_20$Accepted_name, levels = top_20$Accepted_na
 ggplot(top_20, aes(x = Accepted_name, y = no_rows)) +
   geom_bar(stat = "identity", fill = "#287D8EFF") +
   theme_classic() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10, face = "italic"),   axis.title=element_text(size=16)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 11, face = "italic"), axis.text.y = element_text(size = 12),
+  axis.title=element_text(size=16), axis.line =element_line(size=1)) +
   ylab("Number of records") +
   xlab("Species") +
   scale_y_continuous(expand = c(0, 0))
 ```
 
-```{r echo=FALSE, warning=FALSE, message=FALSE, fig.cap="\\textbf{Figure 3}", message=FALSE, warning=FALSE, cache=FALSE, fig.width=5}
+```{r echo=FALSE, warning=FALSE, message=FALSE,fig.width=7,fig.height=6, fig.align='center',message=FALSE, warning=FALSE, cache=FALSE, out.width="100%"}
+
+
+library(tidyverse)
+data <- read.table("../Data/iberian_bees.csv.gz", header = T, quote = "\"", sep = ",")
+
 # Prepare top 20 records
 by_year <- data %>% filter(!Accepted_name == "Apis mellifera")
 
@@ -513,7 +563,8 @@ p1 <- ggplot(by_year, aes(Year)) +
   geom_histogram(fill = "#287D8EFF") +
   theme_classic() +
   ylab("Number of records") +
-  scale_y_continuous(expand = c(0, 0)) + ggtitle("A") + theme(axis.title=element_text(size=12))
+  scale_y_continuous(expand = c(0, 0)) + ggtitle("A") + theme(axis.title=element_text(size=16), axis.text =element_text(size=12), axis.line =element_line(size=1),
+plot.title = element_text(size=18, face = "bold"))
 
 data$month_name <- month.abb[data$Month]
 
@@ -536,7 +587,8 @@ p2 <- ggplot(data = month_sum, aes(x = month_name, y = no_rows)) +
   theme_classic() +
   scale_y_continuous(expand = c(0, 0)) +
   ylab("Number of records") +
-  xlab("Months") + ggtitle("B") + theme(axis.title=element_text(size=12))
+  xlab("Months") + ggtitle("B") + theme(axis.title=element_text(size=16), axis.text =element_text(size=12), axis.line =element_line(size=1),
+plot.title = element_text(size=18, face = "bold"))
 
 library(patchwork)
 
