@@ -1,0 +1,595 @@
+---
+title: "| Base de datos de abejas ibéricas \n| Iberian bees database\n"
+author: 
+- Ignasi Bartomeus^1^ \orcidlink{0000-0001-7893-4389} \vspace{-1.5cm}
+- Jose B. Lanuza^1^ \orcidlink{0000-0002-0287-409X} \vspace{-1.5cm}
+- Thomas James Wood^2^ \orcidlink{0000-0001-5653-224X} \vspace{-1.5cm}
+- Luisa Carvalheiro^3,4^ \orcidlink{0000-0001-7655-979X} \vspace{-1.5cm}
+- Francisco P. Molina^1^ \orcidlink{0000-0003-2425-5246} \vspace{-1.5cm}
+- Miguel Ángel Collado Aliaño^5^ \orcidlink{0000-0002-4216-317X} \vspace{-1.5cm}
+- Luis Oscar Aguado-Martín^6^  \vspace{-1.5cm}
+- David Alomar^7^ \vspace{-1.5cm}
+- Marián Álvarez Fidalgo^8^ \orcidlink{0000-0002-3313-1467} \vspace{-1.5cm}
+- Piluca Álvarez Fidalgo^9^ \orcidlink{0000-0002-5330-3078} \vspace{-1.5cm}
+- Montse Arista ^10^
+- Blanca Arroyo-Correa^1^ \orcidlink{0000-0002-9402-3013} \vspace{-1.5cm}
+- Josep D. Asís^11^ \orcidlink{0000-0001-8134-1875} \vspace{-1.5cm}
+- Celeste Azpiazu^12,13,14^ \orcidlink{0000-0001-8217-9347} \vspace{-1.5cm}
+- Laura Baños-Picón^11^ \orcidlink{0000-0003-0500-8231} \vspace{-1.5cm}
+- Pedro Beja^15^ \orcidlink{0000-0001-8164-0760} \vspace{-1.5cm}
+- Mário Boieiro^16^ \orcidlink{0000-0002-9087-091X} \vspace{-1.5cm}
+- Paulo A.V. Borges^16^ \orcidlink{0000-0002-8448-7623} \vspace{-1.5cm}
+- Guillermo González Bornay^17^ \orcidlink{0000-0002-8260-5622} \vspace{-1.5cm}
+- Rafael Carvalho^18^ \orcidlink{0000-0002-4901-5305} \vspace{-1.5cm}
+- Ramón Casimiro-Soriguer^19^ \orcidlink{0000-0002-5272-0902} \vspace{-1.5cm}
+- Sílvia Castro^18^ \orcidlink{0000-0002-7358-6685} \vspace{-1.5cm}
+- Joana Costa^18,20^ \orcidlink{0000-0002-9784-8272}
+- Ian Cross^21^ \vspace{-1.5cm}
+- Pilar De la Rúa^22^ \orcidlink{0000-0002-0058-1402} \vspace{-1.5cm}
+- Luis Miguel de Pablos^23^ \orcidlink{0000-0001-8940-2919} \vspace{-1.5cm}
+- Víctor de Paz^11^ \orcidlink{0000-0001-9938-3416} \vspace{-1.5cm}
+- Joan Díaz-Calafat^24^ \orcidlink{0000-0002-5823-2176} \vspace{-1.5cm}
+- Victoria Ferrrero^25^ \orcidlink{0000-0002-2091-8957} \vspace{-1.5cm}
+- Hugo Gaspar^18^ \orcidlink{0000-0001-5448-8396} \vspace{-1.5cm}
+- Guillaume Ghisbain^2^ \orcidlink{0000-0003-2032-8081} \vspace{-1.5cm}
+- José María Gómez^26^ \orcidlink{0000-0001-6153-707X} \vspace{-1.5cm}
+- Carmelo Gómez-Martínez^7^ \orcidlink{0000-0003-1449-0138} \vspace{-1.5cm}
+- Miguel Ángel González-Estévez^7^ \vspace{-1.5cm}
+- Ruben Heleno^18^ \orcidlink{0000-0002-4808-4907} \vspace{-1.5cm}
+- José M. Herrera^27^ \orcidlink{0000-0001-7968-3438} \vspace{-1.5cm}
+- Jose I. Hormaza^28^ \orcidlink{0000-0001-5449-7444}
+- Jose M. Iriondo^29^ \orcidlink{0000-0003-2710-3889} \vspace{-1.5cm}
+- Michael Kuhlmann^30^ \orcidlink{0000-0003-3664-6922} \vspace{-1.5cm}
+- Paola Laiolo^31^ \orcidlink{0000-0002-2009-6797} \vspace{-1.5cm}
+- Carlos Lara-Romero^29^ \orcidlink{0000-0003-0962-0567} \vspace{-1.5cm}
+- Amparo Lázaro^7^ \orcidlink{0000-0001-5626-4134} \vspace{-1.5cm}
+- Jesús López-Angulo^32^ \orcidlink{0000-0003-3539-2545} \vspace{-1.5cm}
+- Francisco A. López-Núñez^18^ \orcidlink{0000-0003-0773-9134} \vspace{-1.5cm}
+- João Loureiro^18^ \orcidlink{0000-0002-9068-3954} \vspace{-1.5cm}
+- Ainhoa Magrach^33^ \orcidlink{0000-0003-2155-7556} \vspace{-1.5cm}
+- Vicente Martínez-López^34^ \orcidlink{0000-0001-7800-0703} \vspace{-1.5cm}
+- Carlos Martínez-Núñez^35^ \orcidlink{0000-0001-7814-4985} \vspace{-1.5cm}
+- Denis Michez^2^ \orcidlink{0000-0001-8880-1838} \vspace{-1.5cm}
+- Marcos Miñarro^36^ \orcidlink{0000-0002-5851-6873} \vspace{-1.5cm}
+- Ana Montero-Castaño^1^ \orcidlink{0000-0003-2631-0085} \vspace{-1.5cm}
+- Bruno Moreira^37^ \orcidlink{0000-0002-7319-2555} \vspace{-1.5cm}
+- Javier Morente-López^29^ \orcidlink{0000-0001-9141-8581} \vspace{-1.5cm}
+- Nacho Noval Fonseca^38^ \orcidlink{0000-0001-8387-9417} \vspace{-1.5cm}
+- Alejandro Núñez Carbajal^36^ \orcidlink{0000-0002-4937-0534} \vspace{-1.5cm}
+- José Ramón Obeso^31^ \orcidlink{0000-0001-7157-6478} \vspace{-1.5cm}
+- Concepción Ornosa^39^ \orcidlink{0000-0003-0615-0790} \vspace{-1.5cm}
+- Francisco Javier Ortiz-Sánchez^40^ \orcidlink{0000-0003-3364-3101} \vspace{-1.5cm}
+- Daniel Pareja Bonilla^10^ \orcidlink{0000-0001-9137-2376} \vspace{-1.5cm}
+- Sébastien Patiny^2^ \orcidlink{0000-0003-4583-9902} \vspace{-1.5cm}
+- Andreia Penado^15,41,42^ \orcidlink{0000-0003-0365-802X} \vspace{-1.5cm}
+- Ana Picanço^16^ \orcidlink{0000-0002-1188-6519} \vspace{-1.5cm}
+- Emilie F. Ploquin^31^
+- Carla Rego^16^ \orcidlink{0000-0001-8005-4508} \vspace{-1.5cm}
+- Pedro J. Rey^35^ \orcidlink{0000-0001-5550-0393} \vspace{-1.5cm}
+- Elisa Ribas-Marquès^43^ \orcidlink{0000-0002-7616-5835} \vspace{-1.5cm}
+- Stuart P.M. Roberts^44^ \vspace{-1.5cm}
+- Marta Rodriguez^29^ \vspace{-1.5cm}
+- Natalia Rosas-Ramos^11^ \orcidlink{0000-0002-8653-0306} \vspace{-1.5cm}
+- Ana M. Sánchez^29^ \orcidlink{0000-0002-6220-3001} \vspace{-1.5cm}
+- Silvia Santamaría^29^ \orcidlink{0000-0003-2100-2657} \vspace{-1.5cm}
+- Estefanía Tobajas^11^ \orcidlink{0000-0003-2356-8881} \vspace{-1.5cm}
+- José Tormos^11^ \orcidlink{0000-0002-0568-4486} \vspace{-1.5cm}
+- Félix Torres^11^ \orcidlink{0000-0002-2035-109X} \vspace{-1.5cm}
+- Alejandro Trillo^1^ \orcidlink{0000-0002-6944-0923} \vspace{-1.5cm}
+- Javier Valverde^1^ \orcidlink{0000-0001-8807-567X} \vspace{-1.5cm}
+- Montserrat Vilà^1^ \orcidlink{0000-0003-3171-8261} \vspace{-1.5cm}
+- Elisa Viñuela^45^ \orcidlink{0000-0002-6283-5236} \vspace{-1.5cm}
+output:
+  pdf_document: default
+  word_document:
+    fig_caption: yes
+    fig_height: 6
+    fig_width: 7.5
+    highlight: null
+    reference_docx: Ecosistemas_template.docx
+csl: ecosistemas.csl
+bibliography:
+- references.bib
+- knitcitations.bib
+editor_options: 
+  
+  chunk_output_type: console
+header-includes:
+- \DeclareUnicodeCharacter{0301}{*************************************}
+- \usepackage{caption}
+- \captionsetup[figure]{labelformat=empty}
+- \captionsetup[table]{labelformat=empty}
+- \usepackage{orcidlink}
+---
+
+> (1) Estación Biológica de Doñana (EBD-CSIC), Avenida Américo Vespucio 26, E-41092 Sevilla, Spain.
+
+> (2) Laboratory of Zoology, University of Mons, Avenue du Champs de Mars 6, 7000 Mons, Belgium.
+
+> (3) Centre for Ecology, Evolution and Environmental Changes (cE3c), edifício C2, Universidade de Lisboa, Campo Grande, 1749-016 Lisboa, Portugal.
+
+> (4) Departamento de Ecologia, Universidade Federal de Goiás, Av. Esperança s/n, 74690-900 Goiânia, Brazil.
+
+> (5) Universidad de Sevilla, Escuela Técnica Superior de Ingeniería Informática, Av. Reina Mercedes s/n, 41012 Sevilla, Spain.
+
+> (6) Andrena Initiatives and Environmental Studies, Nueva del Saliente 1-Bis, 47328 Valladolid, Spain.
+
+> (7) Instituto Mediterráneo de Estudios Avanzados (IMEDEA; UIB-CSIC), C/ Miquel Marquès 21, 07190 Esporles, Illes Balears, Spain.
+
+> (8) Independent researcher, E-33006 Oviedo, Asturias, Spain.
+
+> (9) Museo Nacional de Ciencias Naturales, C/ de José Gutiérrez Abascal 2, E-28006 Madrid, Spain.
+
+> (10) Departamento de Biología Vegetal y Ecología, Universidad de Sevilla, Avenida de la Reina Mercedes 6, 41012 Sevilla, Spain.
+
+> (11) Departamento de Biología Animal (Área de Zoología), Facultad de Biología, Universidad de Salamanca, 37007 Salamanca, Spain.
+
+> (12) Institute of Evolutionary Biology, Universitat Pompeu Fabra, 08034 Barcelona, Spain.
+
+> (13) Centro de Investigación Ecológica y Aplicaciones Forestales, Universitat Autònoma de Barcelona, 08193 Bellaterra, Barcelona, Spain.\
+> (14) Universidad Politécnica de Madrid, 28040 Madrid, Spain.
+
+> (15) CIBIO, Centro de Investigação em Biodiversidade e Recursos Genéticos, InBIO Laboratório Associado, Campus de Vairão, Universidade do Porto, 4485-661 Vairão, Portugal.
+
+> (16) Centre for Ecology, Evolution and Environmental Changes, Azorean Biodiversity Group, Faculty of Agricultural Sciences and Environment, University of the Azores, PT-9700-042 Angra do Heroísmo, Portugal.
+
+> (17) Centro Universitario de Plasencia, Universidad de Extremadura, Virgen del Puerto 2, 10600 Plasencia, España.
+
+> (18) Centre for Functional Ecology, Department of Life Sciences, University of Coimbra, Calçada Martim de Freitas 3000-456 Coimbra, Portugal.
+
+> (19) Departamento de Biología -- Instituto de Investigación Vitivinícola y Agroalimentaria, University de Caádiz, Campus Río San Pedro, ES11510 Puerto Real, Spain.
+
+> (20) Linking Landscape, Environment, Agriculture and Food (LEAF), Instituto Superior de Agronomia, Universidade de Lisboa, 1349-017 Lisboa, Portugal.
+
+> (21) 16 Briantspuddle, Dorchester, Dorset, United Kingdom.
+
+> (22) Facultad de Veterinaria, Departmento de Zoología y Antropología Física, Universidad de Murcia, 30100 Murcia, Spain.
+
+> (23) Grupo CTS-183 Bioquímica y Parasitología Molecular, Departamento de Parasitología, Universidad de Granada, 18071 Granada, Spain.
+
+> (24) Southern Swedish Forest Research Centre, Swedish University of Agricultural Sciences, 230 53 Alnarp, Sweden.
+
+> (25) Departamento de Biodiversidad y Gestión Ambiental, Facultad de Ciencias Biológicas y Ambientales, Universidad de León, Campus de Vegazana s/n, 24071 León, Spain.
+
+> (26) Departamento de Ecología Funcional y Evolutiva, Estación Experimental de Zonas Áridas (EEZA-CSIC), Ctra. de Sacramento s/n, La Cañada de San Urbano, 04120 Almería, Spain
+
+> (27) Instituto Mediterrâneo para a Agricultura, Ambiente e Desenvolvimento, Universidade de Évora, 7006-554 Évora, Portugal.
+
+> (28) Instituto de Hortofruticultura Subtropical y Mediterránea la Mayora (IHSM la Mayora - CSIC - UMA), Avenida Dr. Wienberg, s/n, 29750 Algarrobo-Costa, Málaga, Spain.
+
+> (29) Universidad Rey Juan Carlos, C/ Tulipan s/n, E-28933 Móstoles, Madrid, Spain.
+
+> (30) Zoological Museum, University of Kiel, Hegewischstr. 3, D-24105 Kiel, Germany.
+
+> (31) Instituto Mixto de Investigación en Biodiversidad, Universidad de Oviedo, Campus de Mieres, E-33006 Mieres, Asturias, Spain.
+
+> (32) Department of Environmental Systems Science, Swiss Federal Institute of Technology Zurich (ETH), 8092 Zurich, Switzerland.
+
+> (33) Basque Centre for Climate Change, Edif. Sede 1, 1°, Parque Científico UPV-EHU, Barrio Sarriena s/n, 48940 Leioa, Spain.
+
+> (34) Institute of Infection, Veterinary and Ecological Sciences, Department of Evolution, Ecology and Behaviour, University of Liverpool, L69 7ZB Liverpool, United Kingdom.
+
+> (35) Departamento de Biología Animal, Biología Vegetal y Ecología, Universidad de Jaén, E-23071 Jaén, Spain.
+
+> (36) Servicio Regional de Investigación y Desarrollo Agroalimentario (SERIDA), Ctra AS-267, PK 19, E-33300 Villaviciosa, Asturias, Spain.
+
+> (37) Centro de investigaciones sobre desertificación (CIDE-CSIC/UV/GV), Carretera Moncada-Náquera km 4,5 s/n 46113 Moncada, Valencia, Spain.
+
+> (38) Independent researcher, E-33510 Pola de Siero, Asturias, Spain.
+
+> (39) Departamento de Biodiversidad, Ecología y Evolución, Universidad Complutense de Madrid, C/ José Antonio Novais 12, 28040 Madrid, Spain.
+
+> (40) Grupo de Investigación "Transferencia de I+D en el Área de Recursos Naturales", Universidad de Almería, E-04120 La Cañada de San Urbano, Almería, Spain.
+
+> (41) School of Life Sciences, University of Sussex, BN1 9QG, Brighton, United Kingdom.
+
+> (42) BIOPOLIS Program in Genomics, Biodiversity and Land Planning, CIBIO, Campus de Vairão, 4485-661 Vairão, Portugal.
+
+> (43) Independent researcher, Palma, Mallorca, Illes Balears, Spain.
+
+> (44) Agroecology Lab, Université libre de Bruxelles, Campus de la Plaine, B-1050 Brussels, Belgium.
+
+> (45) Unidad de Protección de Cultivos, Departamento de Producción Agraria, Escuela Técnica Superior de Ingeniería Agronómica, Alimentaria y de Biosistemas, Universidad Politécnica de Madrid, 28040 Madrid, Spain.
+
+> Autor para correspondencia: I. Bartomeus [[nacho.bartomeus\@gmail.com](mailto:nacho.bartomeus@gmail.com){.email}]
+
+```{r include=FALSE}
+
+#Load main libraries at once
+library(tidyverse)
+library(dplyr)
+library(data.table)
+
+#To obtain the same template
+# install.packages("remotes")
+#remotes::install_github("Pakillo/template")
+
+```
+
+```{r knitcitations, echo=FALSE, cache = FALSE}
+library(knitcitations)
+cleanbib()   
+cite_options(citation_format = "pandoc")
+```
+
+```{r include=FALSE}
+#Load data
+data <- read.table("../Data/iberian_bees.csv.gz",  header=T, quote="\"", sep=",")
+#Delete first col that are rownames
+data <- data %>% select(-X)
+
+#Load Iberianbees masterlist
+master <- read.csv("../Data/Processing_iberian_bees_raw/Iberian_species_masterlist.csv", stringsAsFactors = FALSE)
+
+#Load removed species from the database
+removed <- read.csv("../Data/Processing_iberian_bees_raw/removed.csv")
+master$Accepted_name <- paste(master$Genus, master$Species, sep = " ")
+data$Latitude <- as.numeric(data$Latitude)
+data$Longitude <- as.numeric(data$Longitude)
+
+#Create vector with info for abstract
+#Geo
+geo <- length(which(!is.na(data$Latitude) & !is.na(data$Longitude)))
+#Flowers
+flw <- length(which(!is.na(data$Flowers.visited)))
+#Locality
+local <- length(which(!is.na(data$Locality)))
+#Colector and ide by
+deter <- length(which(!is.na(data$Collector) & !is.na(data$Determined.by)))
+#Locality
+date <- length(which(!is.na(data$Year) & !is.na(data$Month) & !is.na(data$Day)))
+
+
+
+#Date for the ones that do not have specific date (range date)
+date_1 <- data[is.na(data$Latitude) & is.na(data$Longitude),]
+date_2 <- length(which(!is.na(date_1$Start.date) & !is.na(date_1$End.date)))
+
+```
+
+# Resumen
+
+> **Base de datos de abejas ibéricas**. Las abejas son un grupo extremadamente diverso con más de 1,000 especies descritas en la península ibérica. Además, son excelentes polinizadores y aportan numerosos servicios ecosistémicos fundamentales para la mayoría de ecosistemas terrestres. Debido a los diversos cambios ambientales inducidos por el ser humano, existen evidencias del declive de algunas de sus poblaciones para ciertas especies. Sin embargo, conocemos muy poco del estado de conservación de la mayoría de especies y de muchas de ellas ignoramos cuál es su distribución en la península ibérica. En este trabajo presentamos un esfuerzo colaborativo para crear una base de datos de ocurrencias de abejas que abarca la península ibérica e islas Baleares que permitirá resolver cuestiones como la distribución de las diferentes especies, preferencia de hábitat, fenología o tendencias históricas. En su versión actual, esta base de datos contiene un total de `r formatC(nrow(data),format="d", big.mark=",")` registros de `r length(unique(data$Accepted_name))` especies recolectados entre `r min(data$Year, na.rm = T)` y `r max(data$Year, na.rm = T)`, de los cuales un `r round(geo/nrow(data),2)*100`% presentan información georreferenciada. Para cada registro se incluye información relativa a la localidad de muestreo (`r round(local/nrow(data),2)*100`%), identificador y colector de la especie (`r round(deter/nrow(data),2)*100`%), fecha de captura (`r round(date/nrow(data),2)*100`%) y planta donde se recolectó (`r round(flw/nrow(data),2)*100`%). Creemos que esta base de datos es el punto de partida para conocer y conservar mejor la biodiversidad de abejas en la península ibérica e Islas Baleares. Se puede acceder a estos datos a través del siguiente enlace permanente: <https://doi.org/10.5281/zenodo.6354502>
+
+**Palabras clave**: biodiversidad; Apoidea; Anthophila; polinizadores; fenología; península ibérica; base de datos
+
+# Abstract
+
+> **Iberian bees database**. Bees are a diverse group with more than 1,000 species known from the Iberian Peninsula. They have increasingly received special attention due to their important role as pollinators and providers of ecosystem services. In addition, various rapid human-induced environmental changes are leading to the decline of some of its populations. However, we know very little about the conservation status of most species and for many species, we hardly know their true distributions across the Iberian Peninsula. Here we present a collaborative effort to collate and curate a database of Iberian bee occurrences to answer questions about their distribution, habitat preference, phenology, or historical trends. In total we have accumulated `r formatC(nrow(data),format="d", big.mark=",")` records from the Iberian Peninsula and the Balearic Islands of `r length(unique(data$Accepted_name))` different species with `r round(geo/nrow(data),2)*100`% of georeferenced records collected between `r min(data$Year, na.rm = T)` and `r max(data$Year, na.rm = T)`. In addition, each record has associated information such as the sampling location (`r round(local/nrow(data),2)*100`%), collector and person who identified the species (`r round(deter/nrow(data),2)*100`%), date of the capture (`r round(date/nrow(data),2)*100`%) and plant species where the bees were captured (`r round(flw/nrow(data),2)*100`%). We believe that this database is the starting point to better understand and conserve bee biodiversity in the Iberian Peninsula. It can be accessed at: <https://doi.org/10.5281/zenodo.6354502>.
+
+**Keywords**: Biodiversity; Apoidea; Anthophila; Pollinators; Phenology
+
+# Background & Summary
+
+Bees (Hymenoptera, Apoidea, Anthophila) are a diverse group of insects with more than 20,000 species described worldwide (Ascher and Pickering, 2020). The Iberian Peninsula, with its bee-loved Mediterranean climate, is one of the hotspots of bee biodiversity with more than 1,000 species recorded to date and counting (Ascher and Pickering, 2020; Ortiz-Sánchez, 2020). Unfortunately, despite the high biodiversity of Iberian bees, we know very little about the species themselves and their distributions. This is paradoxical, as in recent years bees have been highlighted as a keystone group in the ecosystem due to a essential function they provide, the pollination of thousands of plants [@ollerton2011], including most crop species [@klein2007]. In addition, various rapid human-induced environmental changes are leading to the decline of some bee populations [@goulson2015]. However, the response of bee species to global change is heterogeneous both in space and also taxonomically. That is, while in some areas bee species are declining drastically [@burkle2013], in other areas are well conserved [@herrera2019] and while some species are in the brink of extinction [@cameron2011] other species are even thriving [@russo2016]. A better description of bee distributions, habitat preferences, phenologies, or historical trends in the Iberian Peninsula would require information on when and where different species occur.
+
+In the absence of standardized monitoring efforts, one may think that detailed information on species occurrences in space and time does not exists. However, there are different sources of extremely useful information. First, natural history museums hold historical collections of amateur naturalists and researchers who collected bees [@bartomeus2019]. Collectors are very good at classifying and labeling each collected specimen, which means we can retrieve the information stored along the pinned specimens about when and where those where collected. Second, the Iberian Peninsula has a rich tradition of pollinator and pollination researchers [@archer2014], which have been collecting occurrence bee data with different aims. Finally, many occurrence records are being made available through internet portals which centralize data hosted in institutions all around the world (e.g. Global Biodiversity Information Facility, GBIF) or collected by citizen scientists (e.g. iNaturalist). The challenge is how to digitalize, access, and curate all these different data sources. Thus, despite the obvious challenges to digitalize, access, and curate all these different data sources, they provide an essential source of information for biodiversity research [@nelson2019; @hedrick2020]
+
+Here we have compiled an Iberian bee database of occurrence records. For this, we have digitalize natural history records from museums, compiled more than 100 datasets contributed by individual researchers, and gathered publicly available information from online repositories (see **Fig. 1** for workflow). After data cleaning and harmonization, we release the first `r formatC(nrow(data),format="d", big.mark=",")` records from the Iberian Peninsula and the Balearic Islands. **Figure 2** shows the spatial distribution of records, which as expected it is biased to the main urban areas. Overall, the database contains information of `r length(unique(data$Accepted_name))` different species and in **Figure 3** we show the 20 most frequently collected species. The data has been collected between `r min(data$Year, na.rm = T)` and `r max(data$Year, na.rm = T)`, with an increasing trend of the number of records with time, reflecting a renewed interest for documenting bee species (**Fig. 4A**). As expected, most records were recorded in spring with May being the month with highest number of records (**Fig. 4B**). More than `r round(geo/nrow(data),2)*100`% of these records have associated information such as the location and date of capture, and `r round(flw/nrow(data),2)*100`% have extra data such as the plant species where bee specimens were collected. Here, we release the version 1.0 of the Iberian bee database with name "IberianBees". Although this database is a work in progress, we believe that this is a good starting point to better understand and conserve bee biodiversity. It can be accessed at the following permanent link: <https://doi.org/10.5281/zenodo.6354502>.
+
+# Antecedentes y resumen ampliado
+
+Las abejas (Hymenoptera, Apoidea, Anthophila) son un grupo muy diverso con más de 20,000 especies descritas en el mundo [@ascher2020]. Las condiciones climáticas de la península ibérica hacen a esta región geográfica uno de los puntos calientes de biodiversidad de abejas a nivel mundial con más de 1,000 especies descritas hasta la fecha [@ortiz2020]. A pesar de la gran riqueza de especies de abejas ibéricas, conocemos muy poco de su ecología y distribución. Paradójicamente las abejas son un grupo clave que desarrolla una función vital para la mayoría de ecosistemas terrestres, la polinización de miles de plantas [@ollerton2011], incluyendo la mayoría de cultivos [@klein2007]. Además los cambios ambientales originados por el impacto del ser humano están ocasionando el declive de algunas de sus poblaciones [@goulson2015]. No obstante, la respuesta de las abejas al cambio global es heterogénea tanto espacial como taxonomicámente. Es decir, existen áreas que están sufriendo un decaimiento poblacional drástico [@burkle2013], mientras que otras se mantienen bien conservadas [@herrera2019] y aunque algunas especies se encuentran al borde de la extinción [@cameron2011], otras están incluso prosperando [@russo2016]. Para un mayor conocimiento de la distribución, preferencia de hábitat, fenología, o tendencias históricas de las diferentes especies de abejas es necesaria información detallada del escenario temporal y espacial de aparición de las mismas.
+
+Debido a la ausencia de esfuerzos de muestreo estandarizados se podría pensar que no existe información detallada del registro de especies en el espacio y en el tiempo. Sin embargo, hay diversas fuentes con información muy útil. En primer lugar, los museos de historia natural albergan colecciones históricas de naturalistas amateur e investigadores que capturaron abejas [@bartomeus2019]. Puesto que las colecciones de museos suelen estar muy bien clasificadas y etiquetadas, es posible recopilar información específica sobre la localización y momento de captura de los diferentes especímenes. En segundo lugar, la península ibérica tiene una rica tradición de investigadores sobre polinizadores y ecología de la polinización [@archer2014] que han recopilado gran cantidad de información de abejas con diferentes objetivos. Finalmente, muchos datos de ocurrencias han sido liberados de forma abierta a través de portales de internet que centralizan datos almacenados por instituciones de todo el mundo (p.ej. GBIF) o datos de ciencia ciudadana (p.ej. iNaturalist). Aunque sigue siendo un desafio digitalizar, acceder y depurar la información procedente de las diferentes fuentes de datos, la información que estas fuentes aportan ese esencial para la investigación de la biodiversidad [@nelson2019; @hedrick2020]
+
+En este estudio hemos creado una base datos de abejas ibéricas mediante la unificación de: (i) los esfuerzos de digitalización de museos, (ii) conjuntos de datos de investigadores, e (iii) información de repositorios en línea de libre acceso (ver **Fig. 1** para ver flujo de trabajo). Tras la depuración y homogeneización de los datos, se han liberado los primeros `r formatC(nrow(data),format="d", big.mark=",")` registros que abarcan la península ibérica e Islas Baleares. La **Figura 2** muestra la distribución espacial de los registros, observándose, tal y como se esperaba, un sesgo hacia ciertas áreas cercanas a los grandes núcleos urbanos. Esta base de datos contiene información sobre `r length(unique(data$Accepted_name))` diferentes especies y el número de obersevaciones de las 20 más comunes se encuentran representadas en la **Figura 3**. Los datos han sido recopilados entre los años `r min(data$Year, na.rm = T)` y `r max(data$Year, na.rm = T)`, con un ascendente número de registros en el tiempo que refleja el creciente interés de documentar a este grupo taxonómico (**Fig. 4A**). Además, como es de esperar, la mayoría de registros tienen lugar en los meses de primavera, siendo mayo el mes que cuenta con un mayor número de registros (**Fig. 4B**). El `r round(geo/nrow(data),2)*100`% de estos registros presenta información georreferenciada y el resto de registros al menos contiene información de la localidad del evento de captura u observación del espécimen. También un `r round(date/nrow(data),2)*100`% de los registros aporta la fecha de captura, y un `r round(flw/nrow(data),2)*100`% tiene información de la planta donde se capturó u observó el espécimen. Esta es la versión 1.0 de la base de datos de abejas ibéricas con nombre "IberianBees" que, aunque se seguirá actualizando, creemos que es un buen punto de partida para mejorar nuestro conocimiento y contribuir a la conservación de este grupo taxonómico tan importante para nuestros ecosistemas y la producción agrícola. Se puede acceder desde el siguiente link permanente: <https://doi.org/10.5281/zenodo.6354502>.
+
+# Material y métodos
+
+## Recopilación de datos originales
+
+*Museos*: Hemos digitalizado el 10% de los especímenes depositados en el Museo Nacional de Ciencias Naturales de Madrid (MNCN), sobre todo las familias Melittidae y Apidae, para las cuales se han revisado las identificaciones taxonómicas. Además se ha recabado información digitalizada de museos extranjeros incluyendo "Naturalis Biodiversity Center" (Holanda), "Oberösterreichisches Landesmuseum" (Austria) y la "Smithsonian collection" (USA). En el futuro está previsto continuar con la digitalización del MNCN, así como añadir otras colecciones históricas de importancia.
+
+*Proyectos de investigación*: Para recoger datos sobre ocurrencia de abejas en la península ibérica hemos contactado con los principales investigadores en ecología de la polinización de España y Portugal, así como publicitado en las principales listas de distribución temáticas la creación de una base de datos de abejas ibéricas. En total, se recogieron `r length(unique(data$Authors.to.give.credit))-2` estudios con datos ya digitalizados que han sido depurados y homogeneizados (ver más abajo). En el futuro se seguirán añadiendo nuevas contribuciones y además se rescatarán datos ya publicados en formatos de difícil extracción como PDF.
+
+*Repositorios de internet*: Usando los paquetes de R rgibif versión 3.6.0 [@gbif] y rinat versión 0.1.8 [@inat] hemos descargado todas las ocurrencias de abejas de la península ibérica de los repositorios de libre acceso GBIF (<https://www.gbif.org>) e iNaturalist (<https://www.inaturalist.org>) a fecha 14-03-2022. Estos datos pueden ser actualizados en nuevas versiones automáticamente y así incorporar los nuevos registros a la base de datos.
+
+## Tratamiento de datos
+
+Todo el tratamiento de datos se ha hecho de forma reproducible en R `r citep(citation())`. Primero se han seleccionado los campos comunes que reflejan la especie, el sexo, fecha de captura y localización del registro, además de la referencia de la publicación correspondiente al registro cuando era posible. La **Tabla 1** ofrece un resumen de los metadatos creados con DataSpice [@dataspice], y también están disponibles en formato JSON y XML que cumple el estándar EML -Ecological Metadata Language- [@EML_2019], los cuales están indexados por Google datasets. Debido a la naturaleza variada de este tipo de datos, el proceso de limpieza y homogeneización de datos fue complejo y tedioso. De los `r formatC(nrow(data)+nrow(removed),format="d", big.mark=",")` datos iniciales, `r formatC(nrow(removed),format="d", big.mark=",")` fueron descartados. Todo el proceso detratamiento de dtaos, así como los datos descartados, pueden consultarse tanto en Github (<https://github.com/ibartomeus/IberianBees>) como en Zenodo (<https://doi.org/10.5281/zenodo.6354502>).
+
+En primer lugar se revisó toda la taxonomía de las especies que se cotejó con la lista de especies actualizada para la península ibérica [@ortiz2020]. Solo se han incluido especies con nombres taxonómicos aceptados en este último listado. En total, se han comprobado más de `r length(which(data$Accepted_name != data$Original_name))` registros, actualizando todos los sinónimos y corrigiendo errores tipográficos. En segundo lugar, se ha recogido información del país, provincia y localidad en la que se produjo el registro. Además se realizó un proceso de homogeneización de las geolocalizaciones (latitud y longitud) a grados decimales (WGS84) siempre y cuando esta información estuviera presente. Aunque también se incluyó información sobre la precisión de las coordenadas, esta variable estaba raramente disponible para muchas de las coordenadas. En tercer lugar, se ha incluido también información de la fecha de la captura u observación con su respectivo día, mes y año. Para registros sin fechas concretas, se han intentado recuperar un intervalo temporal orientativo. Los datos con fechas y localizaciones erróneas o ilógicas (p.ej. geolocalizaciones en el mar o especímenes recogidos en el mes 18) han sido corregidos o eliminados. En cuarto lugar, se han añadido los nombres de los colectores y personas que identificaron las especies, así como información sobre el número de abejas macho, hembra u obreras cuando se especificaba. Finalmente, se han añadido las referencias correspondientes a cada registro y otros datos de interés como la planta visitada, identificación única de la base de datos local (si la hay), autores que han proporcionado los datos y cualquier otra información relevante si la hubiese.
+
+En la base de datos resultante se ha asignado a cada entrada o registro un identificador único. Además, se ha conservado tanto el nombre de la especie original con el que fue inicialmente identificada, como el nombre aceptado tras la revisión. Sinonimias o nombres de especies que no se encontraron en la lista actualizada de abejas ibéricas fueron consultadas a taxónomos expertos antes de ser descartadas.
+
+## Flujo de trabajo
+
+Toda la base de datos se puede reconstruir de las fuentes originales usando los scripts proporcionados, y por tanto se pueden trazar todas las decisiones tomadas. Finalmente, se ha creado una plantilla para contribuir con más datos que puede ser consultada en el repositorio de esta base de datos.
+
+Utilizamos R `r citep(citation())` y Rmarkdown [@mark1; @mark2; @mark3] para todo el procesado, escritura y creación de esta base de datos.
+
+# Registro y disponibilidad de datos
+
+Todos los archivos del código creado tienen licencia MIT (<https://opensource.org/licenses/MIT>) y el uso de datos tiene licencia CC-By 4.0 (<https://creativecommons.org/licenses/by/4.0/>). La versión depositada junto al envío de este artículo corresponde a la versión 1.0. de IberianBees y tanto los datos como los scripts, tienen una versión permanente depositada en Zenodo que es citable usando este identificador único: <https://doi.org/10.5281/zenodo.6354503>. Además todo el proceso de trabajo se encuentra disponible en el repositorio de Github: <https://github.com/ibartomeus/IberianBees>. Se usará un sistema de versionado incremental, donde pequeñas correcciones de errores o incrementos no substanciales de datos recibirán actualizaciones en el segundo dígito (v1.1, v.1.2, etc.) y actualizaciones con modificaciones considerables tendrán cambios en el primer número (v2.0, v3.0, etc.). Todas estas versiones con grandes cambios serán depositadas en Zenodo bajo el link permanente: <https://doi.org/10.5281/zenodo.6354502>.
+
+# Contribución de los autores
+
+IB, LGC y TW han compilado los datos de múseos y propietarios individuales de datos. MAC ayudó con la recogida de datos de la literatura. PA digitalizó los datos de MNCN. TW y CM ayudaron con las revisiones taxonómicas. IB y JBL depuraron y prepararon la base de datos. IB, JBL, LGC y TW escribieron el artículo. Todos los autores aportaron registros a la base de datos.
+
+# Agradecimientos
+
+Gracias a todos los naturalistas y científicos que han contribuido de algún modo en la creación de esta base de datos, este trabajo es el resultado del cariño y esfuerzo de miles de personas. Esta base de datos se ha realizado con la ayuda de los proyectos EUCLIPO (Fundaçao para a Ciencia e a Tecnologia, LISBOA-01-0145-FEDER-028360/EUCLIPO) y SAFEGUARD (ref. 101003476 H2020-SFS-2019-2).
+
+# Referencias
+
+::: {#refs}
+:::
+
+\newpage
+
+**LEYENDA DE TABLA**
+
+**Tabla 1**. Metadatos explicando el significado y las unidades de cada variable en el conjunto de datos.
+
+**TABLE CAPTION**
+
+**Table 1**. Metadata explaining for each variable in the data set, its meaning and units.
+
+\newpage
+
+
+# Tabla 1
+
+```{r  results='asis', echo=FALSE, cache=FALSE, warning=FALSE, message=FALSE}
+library("knitr")
+#metadata <- read.csv("../Data/Metadata/attributes.csv")
+library(kableExtra)
+
+library(tidyverse)
+
+d <- data.frame(colnames(data))
+colnames(d) <- "Variable_name"
+
+d <- reshape2::melt(d)
+
+
+Description <- c("Taxonomic rank", #1
+                 "Taxonomic rank",
+                 "Taxonomic rank",
+                 "Taxonomic rank",
+                 "Accepted species name", #5
+                 "Original species name",
+                 "Country of collection",
+                 "Province of collection",
+                 "Locality as provided by orginal collectors",
+                 "Geographic coordinates", #10
+                 "Geographic coordinates",
+                 "Accuracy of the coordinates provided by the authors",
+                 "Year of collection",
+                 "Month of collection",
+                 "Day of collection", #15
+                 "Approximate range of dates if specific dates are missing",
+                 "Approximate range of dates if specific dates are missing",
+                 "Name of the collector",
+                 "Name of the person who identified the specimen",
+                 "Number of females recorded", #20
+                 "Number of males recorded",
+                 "Number of workers recorded (for social species)",
+                 "Number of specimens recorded without sex identification",
+                 "Digital object identifier",
+                 "Plant species where the specimen was collected", #25
+                 "Unique identification in the local collection",
+                 "All authors that have contributed on the original dataset",
+                 "Extra column for additional information",
+                 "Notes or queries",
+                 "Unique identifier in the IberianBee database" #30
+                 )
+
+d$Description <- Description
+
+Data_type <- c("Categorical",
+               "Categorical",
+               "Categorical",
+               "Categorical",
+               "Categorical", #5
+               "Categorical",
+               "Categorical",
+               "Categorical",
+               "Text",
+               "Decimal degrees", #10
+               "Decimal degrees", 
+               "Text",
+               "Date (YYYY)",
+               "Date (MM)",
+               "Date (DD)", #15
+               "Date (DD-MM-YYYY)",
+               "Date (DD-MM-YYYY)",
+               "Categorical",
+               "Categorical",
+               "Natural number", #20
+               "Natural number",
+               "Natural number",
+               "Natural number",
+               "Text/link",
+               "Text", #25
+               "Categorical",
+               "Text",
+               "Text",
+               "Text",
+               "Categorical")
+               
+d$Data_type <- Data_type    
+
+colnames(d) <- c("Variable name", "Description", "Data type")
+
+d$`Variable name`[d$`Variable name`=="Accepted_name"] <- "Accepted.name"
+
+d$`Variable name`[d$`Variable name`=="Original_name"] <- "Original.name"
+
+d$`Variable name`[d$`Variable name`=="Local_id"] <- "Local.id"
+
+
+kbl(d, format = 'latex', escape = F,booktabs = T, linesep = "\\addlinespace") %>% row_spec(0, bold=T) 
+
+```
+
+\newpage
+
+**FIGURE LEGENDS**
+
+**Figure 1** Workflow to build the 'IberianBees' database.
+
+**Figure 2**. Heatmap of the number of bee records on the Iberian Peninsula. The records are in logarithmic scale with a gradient of colours. Areas with high number of records are coloured in yellow and areas with low number of records in purple.
+
+**Figure 3**. Barplot of the number of records of the 20 most common species.
+
+**Figure 4**. Number of records in the database by year (A) and month (B).
+
+**PIES DE FIGURA**
+
+**Figure 1** Fujo de trabajo para construir la base de datos de 'Iberianbeess'.
+
+**Figura 2**. Mapa de calor del número de registros de abejas en la península ibérica. Los registros se encuentran en escala logarítmica y se muestran con un gradiente de color. Zonas con alta densidad de registros aparecen en amarillo y zonas con una baja densidad en morado. 
+
+
+**Figura 3**. Gráfico de barras del número de registros de las 20 especies más comunes.
+
+**Figura 4**. Número de registros en la base de datos por año (A) y por mes (B).
+
+\newpage
+
+# Figura 1
+
+```{r, out.width="100%", include=TRUE, fig.align="center", echo=FALSE}
+knitr::include_graphics("workflow.pdf")
+```
+
+
+\newpage
+
+# Figura 2
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center',out.width="115%"}
+library(sf)
+library(raster)
+library(rasterVis)
+library(tidyverse)
+library(data.table)
+library(ggplot2)
+library(viridis)
+library(ggspatial)
+library(ggsn)
+
+data <- read.table("../Data/iberian_bees.csv.gz", header = T, quote = "\"", sep = ",")
+
+# Prepare data
+data$Longitude <- as.numeric(data$Longitude)
+data$Latitude <- as.numeric(data$Latitude)
+data <- data %>% filter(!is.na(Latitude) & !is.na(Longitude))
+# Keep points on balearic islands
+data_1 <- data %>% filter(Province == "Balears, Illes")
+data_1$Country_1 <- NA
+
+# Filter points in Spain and Portugal
+data$Country_1 <- NA
+data$Country_1 <- maps::map.where(x = data$Longitude, y = data$Latitude)
+data <- data %>% filter(Country_1 == "Spain" | Country_1 == "Portugal")
+# Rbind points that are in Spain with the ones of Balearic islands
+dat <- rbind(data, data_1)
+
+#Plot map
+world <- map_data("world")
+
+ibera <- world %>% filter(region == "Spain" | region == "Portugal"| region == "France" |region == "Andorra"|region == "Marroco")
+
+
+ggplot(data=dat, aes(Longitude, Latitude)) +
+geom_map(data = ibera, map = ibera,
+aes(long, lat, map_id = region), color = "white", fill = "grey", size = 0.1) +
+geom_bin2d(bins=70, aes(fill=log(..count..))) +
+theme(panel.grid.major = element_line(color = gray(0.5), linetype = "dashed", 
+size = 0.5), panel.background = element_rect(fill = "aliceblue"),
+panel.border = element_rect(colour = "black", fill=NA, size=1.5)) +
+scale_fill_viridis() +
+coord_sf(xlim = c(-9, 4), ylim = c(36, 44)) +
+ggsn::north(x.min = -0.7, x.max = 3.3, 
+y.min = 35.6, y.max = 37.6, scale = 0.4) +
+scalebar(x.min = -2, x.max = 3.6,
+y.min = 36.5, y.max = 42.5,
+dist = 100, dist_unit = "km",st.size = 3,st.dist=0.04,
+transform = TRUE, model = "WGS84", st.color="black") +
+theme(axis.title = element_text(size=16), axis.text = element_text(size=12))  
+
+  
+
+```
+
+\newpage
+
+# Figura 3
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width="100%"}
+
+library(tidyverse)
+
+data <- read.table("../Data/iberian_bees.csv.gz", header = T, quote = "\"", sep = ",")
+
+# Prepare top 20 records
+top_20 <- data %>%
+  filter(!Accepted_name == "Apis mellifera") %>%
+  group_by(Accepted_name) %>%
+  summarise(no_rows = length(Accepted_name)) %>%
+  arrange(-no_rows) %>%
+  slice(1:20)
+# Fix row position
+top_20$Accepted_name <- factor(top_20$Accepted_name, levels = top_20$Accepted_name)
+# Plot
+ggplot(top_20, aes(x = Accepted_name, y = no_rows)) +
+  geom_bar(stat = "identity", fill = "#287D8EFF") +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 11, face = "italic"), axis.text.y = element_text(size = 12),
+  axis.title=element_text(size=16), axis.line =element_line(size=1)) +
+  ylab("Number of records") +
+  xlab("Species") +
+  scale_y_continuous(expand = c(0, 0))
+```
+
+\newpage
+
+# Figura 4
+
+```{r echo=FALSE, warning=FALSE, message=FALSE,fig.width=7,fig.height=6, fig.align='center',message=FALSE, warning=FALSE, cache=FALSE, out.width="100%"}
+
+
+library(tidyverse)
+data <- read.table("../Data/iberian_bees.csv.gz", header = T, quote = "\"", sep = ",")
+
+# Prepare top 20 records
+by_year <- data %>% filter(!Accepted_name == "Apis mellifera")
+
+p1 <- ggplot(by_year, aes(Year)) +
+  geom_histogram(fill = "#287D8EFF") +
+  theme_classic() +
+  ylab("Number of records") +
+  scale_y_continuous(expand = c(0, 0)) + ggtitle("A") + theme(axis.title=element_text(size=16), axis.text =element_text(size=12), axis.line =element_line(size=1),
+plot.title = element_text(size=18, face = "bold"))
+
+data$month_name <- month.abb[data$Month]
+
+month_sum <- data %>%
+  group_by(month_name) %>%
+  summarise(no_rows = length(month_name)) %>%
+  arrange(-no_rows)
+
+month_sum <- month_sum %>% filter(!is.na(month_name))
+
+month_sum$month_name <- factor(month_sum$month_name, levels = c(
+  "Jan", "Feb", "Mar",
+  "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep",
+  "Oct", "Nov", "Dec"
+))
+
+p2 <- ggplot(data = month_sum, aes(x = month_name, y = no_rows)) +
+  geom_bar(stat = "identity", fill = "#287D8EFF") +
+  theme_classic() +
+  scale_y_continuous(expand = c(0, 0)) +
+  ylab("Number of records") +
+  xlab("Months") + ggtitle("B") + theme(axis.title=element_text(size=16), axis.text =element_text(size=12), axis.line =element_line(size=1),
+plot.title = element_text(size=18, face = "bold"))
+
+library(patchwork)
+
+p1 / p2
+```
