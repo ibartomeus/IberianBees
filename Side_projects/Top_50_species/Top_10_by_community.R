@@ -69,13 +69,30 @@ sc <- c("andalucia", "aragon", "asturias", "baleares", "cantabria", "castilla_le
 
 list_communities = list()
 
+#lista completa para catalunya
+i = 8 #catalunya
+d <- data %>% 
+  filter(Province %in% spanish_communities[[i]])
+
+lista <- d %>% group_by(Accepted_name) %>%
+  summarise(no_rows = length(Accepted_name)) %>% 
+  arrange(-no_rows) 
+
+colnames(lista) <- c("Species_name", "Number_of_records")
+
+filename = paste0("Side_projects/Top_50_species/", 
+                  "catalunya", "_all.csv")
+
+write.csv(lista, filename, row.names = F)
+
+# top 10 todas
 for(i in 1:16){
 
-  d <- data %>% filter(!accepted_name=="Apis mellifera") %>% 
+  d <- data %>% filter(!Accepted_name=="Apis mellifera") %>% 
   filter(Province %in% spanish_communities[[i]])
   
-  top_10 <- d %>% group_by(accepted_name) %>%
-    summarise(no_rows = length(accepted_name)) %>% 
+  top_10 <- d %>% group_by(Accepted_name) %>%
+    summarise(no_rows = length(Accepted_name)) %>% 
     arrange(-no_rows) %>% slice(1:10)
   
   colnames(top_10) <- c("Species_name", "Number_of_records")
@@ -85,7 +102,7 @@ for(i in 1:16){
   names(list_communities)[[i]] <- sc[i]
   
   filename = paste0("Side_projects/Top_50_species/Top_10_by_community/", 
-  names(list_communities)[[i]], ".csv")
+  names(list_communities)[[i]], "_all.csv")
   
   write.csv(list_communities[[i]], filename, row.names = F)
 
