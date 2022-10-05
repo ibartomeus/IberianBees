@@ -265,7 +265,7 @@ Bees (Hymenoptera, Apoidea, Anthophila) are a diverse group of insects with more
 
 In the absence of standardized monitoring efforts, one may think that detailed information on species occurrences in space and time does not exists. However, there are different sources of extremely useful information. First, natural history museums hold historical collections of amateur naturalists and researchers who collected bees [@bartomeus2019]. Collectors are very good at classifying and labeling each collected specimen, which means we can retrieve the information stored along the pinned specimens about when and where those where collected. Second, the Iberian Peninsula has a rich tradition of pollinator and pollination researchers [@archer2014], which have been collecting occurrence bee data with different aims. Finally, many occurrence records are being made available through internet portals which centralize data hosted in institutions all around the world (e.g. Global Biodiversity Information Facility, GBIF) or collected by citizen scientists (e.g. iNaturalist). The challenge is how to digitalize, access, and curate all these different data sources. Thus, despite the obvious challenges to digitalize, access, and curate all these different data sources, they provide an essential source of information for biodiversity research [@nelson2019; @hedrick2020]
 
-Here we have compiled an Iberian bee database of occurrence records. For this, we have digitalize natural history records from museums, compiled more than 100 datasets contributed by individual researchers, and gathered publicly available information from online repositories. After data cleaning and harmonization, we release the first `r formatC(nrow(data),format="d", big.mark=",")` records from the Iberian Peninsula and the Balearic Islands. **Figure 1** shows the spatial distribution of records, which as expected it is biased to the main urban areas. Overall, the database contains information of `r length(unique(data$Accepted_name))` different species and in **Figure 2** we show the 20 most frequently collected species. The data has been collected between `r min(data$Year, na.rm = T)` and `r max(data$Year, na.rm = T)`, with an increasing trend of the number of records with time, reflecting a renewed interest for documenting bee species (**Fig. 3A**). As expected, most records were recorded in spring with May being the month with highest number of records (**Fig. 3B**). More than `r round(geo/nrow(data),2)*100`% of these records have associated information such as the location and date of capture, and `r round(flw/nrow(data),2)*100`% have extra data such as the plant species where bee specimens were collected. Here, we release the version 1.0 of the Iberian bee database with name "IberianBees". Although this database is a work in progress, we believe that this is a good starting point to better understand and conserve bee biodiversity. It can be accessed at the following permanent link: <https://doi.org/10.5281/zenodo.6354502>.
+Here we have compiled an Iberian bee database of occurrence records. For this, we have digitalize natural history records from museums, compiled more than 100 datasets contributed by individual researchers, and gathered publicly available information from online repositories (see **Fig. 1** for workflow). After data cleaning and harmonization, we release the first `r formatC(nrow(data),format="d", big.mark=",")` records from the Iberian Peninsula and the Balearic Islands. **Figure 2** shows the spatial distribution of records, which as expected it is biased to the main urban areas. Overall, the database contains information of `r length(unique(data$Accepted_name))` different species and in **Figure 3** we show the 20 most frequently collected species. The data has been collected between `r min(data$Year, na.rm = T)` and `r max(data$Year, na.rm = T)`, with an increasing trend of the number of records with time, reflecting a renewed interest for documenting bee species (**Fig. 4A**). As expected, most records were recorded in spring with May being the month with highest number of records (**Fig. 4B**). More than `r round(geo/nrow(data),2)*100`% of these records have associated information such as the location and date of capture, and `r round(flw/nrow(data),2)*100`% have extra data such as the plant species where bee specimens were collected. Here, we release the version 1.0 of the Iberian bee database with name "IberianBees". Although this database is a work in progress, we believe that this is a good starting point to better understand and conserve bee biodiversity. It can be accessed at the following permanent link: <https://doi.org/10.5281/zenodo.6354502>.
 
 # Antecedentes y resumen ampliado
 
@@ -273,7 +273,7 @@ Las abejas (Hymenoptera, Apoidea, Anthophila) son un grupo muy diverso con más 
 
 Debido a la ausencia de esfuerzos de muestreo estandarizados se podría pensar que no existe información detallada del registro de especies en el espacio y en el tiempo. Sin embargo, hay diversas fuentes con información muy útil. En primer lugar, los museos de historia natural albergan colecciones históricas de naturalistas amateur e investigadores que capturaron abejas [@bartomeus2019]. Puesto que las colecciones de museos suelen estar muy bien clasificadas y etiquetadas, es posible recopilar información específica sobre la localización y momento de captura de los diferentes especímenes. En segundo lugar, la península ibérica tiene una rica tradición de investigadores sobre polinizadores y ecología de la polinización [@archer2014] que han recopilado gran cantidad de información de abejas con diferentes objetivos. Finalmente, muchos datos de ocurrencias han sido liberados de forma abierta a través de portales de internet que centralizan datos almacenados por instituciones de todo el mundo (p.ej. GBIF) o datos de ciencia ciudadana (p.ej. iNaturalist). Aunque sigue siendo un desafio digitalizar, acceder y depurar la información procedente de las diferentes fuentes de datos, la información que estas fuentes aportan ese esencial para la investigación de la biodiversidad [@nelson2019; @hedrick2020]
 
-En este estudio hemos creado una base datos de abejas ibéricas mediante la unificación de: (i) los esfuerzos de digitalización de museos, (ii) conjuntos de datos de investigadores, e (iii) información de repositorios en línea de libre acceso. Tras la depuración y homogeneización de los datos, se han liberado los primeros `r formatC(nrow(data),format="d", big.mark=",")` registros que abarcan la península ibérica e Islas Baleares. La **Figura 1** muestra la distribución espacial de los registros, observándose, tal y como se esperaba, un sesgo hacia ciertas áreas cercanas a los grandes núcleos urbanos. Esta base de datos contiene información sobre `r length(unique(data$Accepted_name))` diferentes especies y el número de obersevaciones de las 20 más comunes se encuentran representadas en la **Figura 2**. Los datos han sido recopilados entre los años `r min(data$Year, na.rm = T)` y `r max(data$Year, na.rm = T)`, con un ascendente número de registros en el tiempo que refleja el creciente interés de documentar a este grupo taxonómico (**Fig. 3A**). Además, como es de esperar, la mayoría de registros tienen lugar en los meses de primavera, siendo mayo el mes que cuenta con un mayor número de registros (**Fig. 3B**). El `r round(geo/nrow(data),2)*100`% de estos registros presenta información georreferenciada y el resto de registros al menos contiene información de la localidad del evento de captura u observación del espécimen. También un `r round(date/nrow(data),2)*100`% de los registros aporta la fecha de captura, y un `r round(flw/nrow(data),2)*100`% tiene información de la planta donde se capturó u observó el espécimen. Esta es la versión 1.0 de la base de datos de abejas ibéricas con nombre "IberianBees" que, aunque se seguirá actualizando, creemos que es un buen punto de partida para mejorar nuestro conocimiento y contribuir a la conservación de este grupo taxonómico tan importante para nuestros ecosistemas y la producción agrícola. Se puede acceder desde el siguiente link permanente: <https://doi.org/10.5281/zenodo.6354502>.
+En este estudio hemos creado una base datos de abejas ibéricas mediante la unificación de: (i) los esfuerzos de digitalización de museos, (ii) conjuntos de datos de investigadores, e (iii) información de repositorios en línea de libre acceso (ver **Fig. 1** para ver flujo de trabajo). Tras la depuración y homogeneización de los datos, se han liberado los primeros `r formatC(nrow(data),format="d", big.mark=",")` registros que abarcan la península ibérica e Islas Baleares. La **Figura 2** muestra la distribución espacial de los registros, observándose, tal y como se esperaba, un sesgo hacia ciertas áreas cercanas a los grandes núcleos urbanos. Esta base de datos contiene información sobre `r length(unique(data$Accepted_name))` diferentes especies y el número de obersevaciones de las 20 más comunes se encuentran representadas en la **Figura 3**. Los datos han sido recopilados entre los años `r min(data$Year, na.rm = T)` y `r max(data$Year, na.rm = T)`, con un ascendente número de registros en el tiempo que refleja el creciente interés de documentar a este grupo taxonómico (**Fig. 4A**). Además, como es de esperar, la mayoría de registros tienen lugar en los meses de primavera, siendo mayo el mes que cuenta con un mayor número de registros (**Fig. 4B**). El `r round(geo/nrow(data),2)*100`% de estos registros presenta información georreferenciada y el resto de registros al menos contiene información de la localidad del evento de captura u observación del espécimen. También un `r round(date/nrow(data),2)*100`% de los registros aporta la fecha de captura, y un `r round(flw/nrow(data),2)*100`% tiene información de la planta donde se capturó u observó el espécimen. Esta es la versión 1.0 de la base de datos de abejas ibéricas con nombre "IberianBees" que, aunque se seguirá actualizando, creemos que es un buen punto de partida para mejorar nuestro conocimiento y contribuir a la conservación de este grupo taxonómico tan importante para nuestros ecosistemas y la producción agrícola. Se puede acceder desde el siguiente link permanente: <https://doi.org/10.5281/zenodo.6354502>.
 
 # Material y métodos
 
@@ -428,24 +428,37 @@ kbl(d, format = 'latex', escape = F,booktabs = T, linesep = "\\addlinespace") %>
 
 **FIGURE LEGENDS**
 
-**Figure 1**. Heatmap of the number of bee records on the Iberian Peninsula. The records are in logarithmic scale with a gradient of colours. Areas with high number of records are coloured in yellow and areas with low number of records in purple.
+**Figure 1** Workflow to build the 'IberianBees' database.
 
-**Figure 2**. Barplot of the number of records of the 20 most common species.
+**Figure 2**. Heatmap of the number of bee records on the Iberian Peninsula. The records are in logarithmic scale with a gradient of colours. Areas with high number of records are coloured in yellow and areas with low number of records in purple.
 
-**Figure 3**. Number of records in the database by year (A) and month (B).
+**Figure 3**. Barplot of the number of records of the 20 most common species.
+
+**Figure 4**. Number of records in the database by year (A) and month (B).
 
 **PIES DE FIGURA**
 
-**Figura 1**. Mapa de calor del número de registros de abejas en la península ibérica. Los registros se encuentran en escala logarítmica y se muestran con un gradiente de color. Zonas con alta densidad de registros aparecen en amarillo y zonas con una baja densidad en morado. 
+**Figure 1** Fujo de trabajo para construir la base de datos de 'Iberianbeess'.
+
+**Figura 2**. Mapa de calor del número de registros de abejas en la península ibérica. Los registros se encuentran en escala logarítmica y se muestran con un gradiente de color. Zonas con alta densidad de registros aparecen en amarillo y zonas con una baja densidad en morado. 
 
 
-**Figura 2**. Gráfico de barras del número de registros de las 20 especies más comunes.
+**Figura 3**. Gráfico de barras del número de registros de las 20 especies más comunes.
 
-**Figura 3**. Número de registros en la base de datos por año (A) y por mes (B).
+**Figura 4**. Número de registros en la base de datos por año (A) y por mes (B).
 
 \newpage
 
 # Figura 1
+
+```{r, out.width="100%", include=TRUE, fig.align="center", echo=FALSE}
+knitr::include_graphics("Figures/Figure_1.pdf")
+```
+
+
+\newpage
+
+# Figura 2
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center',out.width="115%"}
 library(sf)
@@ -504,7 +517,7 @@ theme(axis.title = element_text(size=16), axis.text = element_text(size=12))
 
 \newpage
 
-# Figura 2
+# Figura 3
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width="100%"}
 
@@ -534,7 +547,7 @@ ggplot(top_20, aes(x = Accepted_name, y = no_rows)) +
 
 \newpage
 
-# Figura 3
+# Figura 4
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE,fig.width=7,fig.height=6, fig.align='center',message=FALSE, warning=FALSE, cache=FALSE, out.width="100%"}
 

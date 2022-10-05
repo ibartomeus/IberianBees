@@ -31,4 +31,8 @@ ggplot(top_20, aes(x = Accepted_name, y = no_rows)) +
   ylab("Number of records") +
   xlab("Species") +
   scale_y_continuous(expand = c(0, 0))
+
+ggsave("Figure_3.jpg", dpi=1500)
+
+
 ```

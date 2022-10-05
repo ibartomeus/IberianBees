@@ -60,5 +60,7 @@ dist = 100, dist_unit = "km",st.size = 3,st.dist=0.04,
 transform = TRUE, model = "WGS84", st.color="black") +
 theme(axis.title = element_text(size=16), axis.text = element_text(size=12))  
 
+ggsave("Figure_2.jpg", dpi=1500)
+
 
 ```

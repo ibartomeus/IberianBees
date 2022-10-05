@@ -52,4 +52,7 @@ plot.title = element_text(size=18, face = "bold"))
 library(patchwork)
 
 p1 / p2
+
+ggsave("Figure_4.jpg", dpi=1500)
+
 ```

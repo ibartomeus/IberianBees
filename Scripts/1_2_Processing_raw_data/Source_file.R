@@ -20,9 +20,9 @@ colnames(data) <- c("Genus","Subgenus","Species","Subspecies",
                     "Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit",
                     "Any.other.additional.data","Notes.and.queries", "uid")
 
-write.csv(data, "Data/data.csv", row.names = FALSE)
+write.csv(data, "Data/Processing_iberian_bees_raw/data.csv", row.names = FALSE)
 #read data.csv for comparisons
-data <- read.csv("Data/data.csv",stringsAsFactors=TRUE)
+data <- read.csv("Data/Processing_iberian_bees_raw/data.csv",stringsAsFactors=TRUE)
 #colnames(data)
 #head(data)
 check <- define_template(data, NA)
