@@ -80,13 +80,13 @@ author:
 - Montserrat Vilà^1^ \orcidlink{0000-0003-3171-8261} \vspace{-1.5cm}
 - Elisa Viñuela^45^ \orcidlink{0000-0002-6283-5236} \vspace{-1.5cm}
 output:
+  pdf_document: default
   word_document:
     fig_caption: yes
     fig_height: 6
     fig_width: 7.5
     highlight: null
     reference_docx: ms_Ecosistemas.docx
-  pdf_document: default
 csl: ecosistemas.csl
 bibliography:
 - references.bib
@@ -301,7 +301,7 @@ Utilizamos R `r citep(citation())` y Rmarkdown [@mark1; @mark2; @mark3] para tod
 
 # Registro y disponibilidad de datos
 
-Todos los archivos del código creado tienen licencia MIT (<https://opensource.org/licenses/MIT>) y el uso de datos tiene licencia CC-By 4.0 (<https://creativecommons.org/licenses/by/4.0/>). La versión depositada junto al envío de este artículo corresponde a la versión 1.0. de IberianBees y tanto los datos como los scripts, tienen una versión permanente depositada en Zenodo que es citable usando este identificador único: <https://doi.org/10.5281/zenodo.6354503>. Además todo el proceso de trabajo se encuentra disponible en el repositorio de Github: <https://github.com/ibartomeus/IberianBees>. Se usará un sistema de versionado incremental, donde pequeñas correcciones de errores o incrementos no substanciales de datos recibirán actualizaciones en el segundo dígito (v1.1, v.1.2, etc.) y actualizaciones con modificaciones considerables tendrán cambios en el primer número (v2.0, v3.0, etc.). Todas estas versiones con grandes cambios serán depositadas en Zenodo bajo el link permanente: <https://doi.org/10.5281/zenodo.6354502>.
+Todos los archivos del código creado tienen licencia MIT (<https://opensource.org/licenses/MIT>) y el uso de datos tiene licencia CC-By 4.0 (<https://creativecommons.org/licenses/by/4.0/>). La versión depositada junto al envío de este artículo corresponde a la versión 1.0. de IberianBees y tanto los datos como los scripts, tienen una versión permanente depositada en Zenodo que es citable usando este identificador único: <https://doi.org/10.5281/zenodo.6354502>. Además todo el proceso de trabajo se encuentra disponible en el repositorio de Github: <https://github.com/ibartomeus/IberianBees>. Se usará un sistema de versionado incremental, donde pequeñas correcciones de errores o incrementos no substanciales de datos recibirán actualizaciones en el segundo dígito (v1.1, v.1.2, etc.) y actualizaciones con modificaciones considerables tendrán cambios en el primer número (v2.0, v3.0, etc.). Todas estas versiones con grandes cambios serán depositadas en Zenodo bajo el link permanente: <https://doi.org/10.5281/zenodo.6354502>.
 
 # Contribución de los autores
 

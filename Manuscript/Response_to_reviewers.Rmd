@@ -26,7 +26,7 @@ Para esta versión 1.0 me parece bien las fuentes consultados para la recopilaci
 
 La importancia de la publicación de este tipo de artículo es vital para revalorizar y dar visibilidad a la cantidad de información de biodiversidad recogida a lo largo de la historia por las instituciones, investigadores, técnicos de colecciones, es su mayor parte financiado con el objetivo de potenciar el enorme patrimonio histórico-natural que se recoge en los registros de los diferentes grupos taxonómicos y su importancia para numerosos trabajos relevantes en el campo de la ecología, zoología, gestión sostenible del medioambiente, etc.
 
-> Una vez, gracias por las correcciones y por los animos.
+> Una vez más, gracias por las correcciones y por los animos.
 
 # Revisor/a B:
 
@@ -40,27 +40,27 @@ Durante el proceso de revisión del trabajo he anotado algunas comentarios que c
 
 > Hemos corregido todas las erratas e incorporado las suggerencias menores.
 
-1. Algunos párrafos presentan una lectura complicada, y parece ser derivado de una traducción del texto del inglés al castellano. En este sentido, creo que sería conveniente revisar sobre todo los signos de puntuación (sobre todo las comas), porque muchas frases son complicadas de leer sin estos signos. 
+Algunos párrafos presentan una lectura complicada, y parece ser derivado de una traducción del texto del inglés al castellano. En este sentido, creo que sería conveniente revisar sobre todo los signos de puntuación (sobre todo las comas), porque muchas frases son complicadas de leer sin estos signos. 
 
 > Gracias, hemos repasado las frases que sonaban más anglófilas. Es triste, pero en estos días es complicado escribir en nuestro propio idioma!
 
-2. Cuestiones de formato. Sugiero a los autores revisar y homogeneizar los formatos de citas en el texto, y adecuarlos a las normas indicadas en la página web de la revista. Asimismo existen algunos problemas con la forma de referenciar las Figuras. 
+Cuestiones de formato. Sugiero a los autores revisar y homogeneizar los formatos de citas en el texto, y adecuarlos a las normas indicadas en la página web de la revista. Asimismo existen algunos problemas con la forma de referenciar las Figuras. 
 
 > Gracias, hemos seguido las normas usando el .cls proporcionado por la revista para formatear las referencias.
 
-3. La figua 1 está incompleta. Hace falta incluir algunos aspectos necesarios para interpretar bien un mapa. Ver comentarios en el documento. 
+La figua 1 está incompleta. Hace falta incluir algunos aspectos necesarios para interpretar bien un mapa. Ver comentarios en el documento. 
 
 > Hemos añadido dichos aspectos.
 
-4. El apartado de Tratamiento de los datos y de Flujo de Trabajo se vería enormemente enriquecido si se incluyera alguna figura ilustrativa, similar a la que los autores incluyen en el repositorio https://github.com/ibartomeus/IberianBees 
+El apartado de Tratamiento de los datos y de Flujo de Trabajo se vería enormemente enriquecido si se incluyera alguna figura ilustrativa, similar a la que los autores incluyen en el repositorio https://github.com/ibartomeus/IberianBees 
 
 > Una gran sugerencia, hemos añadido un diagrama de cajas ilustrativo.
 
-5.  En el texto los autores indican que han generado los metadatos en formato EML y json usando DataSpice, sin embargo se echa en falta que aparezca la url de los metadatos donde se puede consultar todos los metadatos. Asimismo indican que están indexados en Google Datasets aunque no se incluye una url de dicha indexación. 
+En el texto los autores indican que han generado los metadatos en formato EML y json usando DataSpice, sin embargo se echa en falta que aparezca la url de los metadatos donde se puede consultar todos los metadatos. Asimismo indican que están indexados en Google Datasets aunque no se incluye una url de dicha indexación. 
 
 > La url generada por github es realmente larga, así que preferimos dejar el link al repositorio, donde esta claramente explicado en el readme como acceder a los metadatos en diferentes formatos. La indexación por google es automatica, y la URL generada no es fija que hayamos podido encontrar, por tanto, no hemos podido añadir una url.
 
-6. Finalmente, y como sugerencia, aunque suponga un trabajo extra, sería muy interesante indicar algún script con caso de uso de los datos. Es decir, como acceder a la base de datos y trabajar con ella. 
+Finalmente, y como sugerencia, aunque suponga un trabajo extra, sería muy interesante indicar algún script con caso de uso de los datos. Es decir, como acceder a la base de datos y trabajar con ella. 
 
-> Es una gran sugerencia y ayudara a usar el set de datos. La hemos incluido en el readme del repositorio de github.
+> Es una gran sugerencia y ayudará a usar el set de datos. La hemos incluido en el readme del repositorio de github.
 
