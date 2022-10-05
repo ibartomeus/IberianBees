@@ -1,0 +1,66 @@
+---
+title: "Response to reviewers"
+output: 
+  pdf_document: default
+header-includes:
+- \DeclareUnicodeCharacter{0301}{*************************************}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Revisor/a A:
+
+Trás la revisión del artículo "Base de Datos de Abejas Ibéricas" propuesto para publicación quisera exponer mis felicitaciones por el trabajo elaborado por los autores. Considero que supone una importante aportación a la comunidad científica este tipo de trabajos de recopilación de datos publicados y albergados en las colecciones científicas y repositorios online de libre disposición. Suponen un enorme esfuerzo de rcopilación y estandarización de la información para crear un juego de datos disponible y esencial como fuente de información pública  para el grupo faunístico en cuestión. Por ello, reitero al grupo de autores el éxito en el trabajo y la publicación asociada y que completa el proceso del Data Paper. Para la revista y sus lectores supone un paso más en la recopilación de artículos de datos fundamentales, y tratándose, de datos de muestros y ocurrencias de la península ibérica, un lugar de referencia para los investigadores y la comunidad científica donde acudir para la búsqueda de estos juegos de datos.
+
+> Muchas gracias por esta evaluación tan positiva.
+
+En general, el artículo es muy completo, en contenido y redacción. Adjunto el artículo revisado con cambios en algunos erróres menores detectados en el texto y comentarios añadidos en el margen, para su incorporación a la versión final del artículo. Sería recomendable revisar con profundidad la parte de los datos de contacto de los autores, muy extensa al tratarse de tantos, sobre todo, con el objetivo de darle uniformidad en la inforamción de direcciones y el idioma.  Espero que sea de utilidad la revisión realizada.
+
+> Hemos incorporado todos los cambios sugeridos y repasado las afiliaciones.
+
+Para esta versión 1.0 me parece bien las fuentes consultados para la recopilación de datos originales. Espero que si los autores pueden continuar con el proceso de actualización del juego de datos, en vesiones posteriores, se puede ir añadiendo la resivión de aquellos registros pertenecientes a otras colecciones científicas faunísticas ya catalogadas, no sólo el MNCN-Madrid, como por ejemplo, las colecciones científicas ligadas a las Universidades publicas españolas. 
+
+> Correcto, la ambición es ser lo más inlcusivo posibles y así lo hemos indicado en el texto.
+
+La importancia de la publicación de este tipo de artículo es vital para revalorizar y dar visibilidad a la cantidad de información de biodiversidad recogida a lo largo de la historia por las instituciones, investigadores, técnicos de colecciones, es su mayor parte financiado con el objetivo de potenciar el enorme patrimonio histórico-natural que se recoge en los registros de los diferentes grupos taxonómicos y su importancia para numerosos trabajos relevantes en el campo de la ecología, zoología, gestión sostenible del medioambiente, etc.
+
+> Una vez, gracias por las correcciones y por los animos.
+
+# Revisor/a B:
+
+Estimados Autores 
+
+El artículo de datos Base de datos de abejas ibéricas constituye un excelente ejemplo de artículo de datos, en el cual se combina un gran esfuerzo en recopilar información histórica alojada en colecciones de historia natural, información "escondida" en proyectos de investigación y en otras fuentes menos accesibles. Asimismo, además del esfuerzo realizado en la recopilación, destaca la excelente documentación del proceso de construcción de la base de datos, y el depósito en repositorios abiertos tanto del código utilizado como de los datos propiamente dichos. Todo ello contribuye a llevar a cabo uno de los principios básicos de la ciencia (la transparencia y la reproducibilidad). Por tanto, felicito a los autores por el excelente trabajo y por el esfuerzo y la dedicación en hacer un trabajo reproducible. 
+
+> Gracias.
+
+Durante el proceso de revisión del trabajo he anotado algunas comentarios que considero que pueden mejorar algunos aspectos del mismo. En la versión del documento que he subido con la revisión he ido anotando comentarios y sugerencias para que los autores las consideren. En general son pequeñas erratas o cuestiones de formato. A continuación, destaco algunas que creo merecen mas detenimiento. 
+
+> Hemos corregido todas las erratas e incorporado las suggerencias menores.
+
+1. Algunos párrafos presentan una lectura complicada, y parece ser derivado de una traducción del texto del inglés al castellano. En este sentido, creo que sería conveniente revisar sobre todo los signos de puntuación (sobre todo las comas), porque muchas frases son complicadas de leer sin estos signos. 
+
+> Gracias, hemos repasado las frases que sonaban más anglofilas. Es triste, pero en estos días es complicado escribir en nuestro propio idioma!
+
+2. Cuestiones de formato. Sugiero a los autores revisar y homogeneizar los formatos de citas en el texto, y adecuarlos a las normas indicadas en la página web de la revista. Asimismo existen algunos problemas con la forma de referenciar las Figuras. 
+
+> Gracias, hemos seguido las normas usando el .cls proporcionado por la revista para formatear las referencias.
+
+3. La figua 1 está incompleta. Hace falta incluir algunos aspectos necesarios para interpretar bien un mapa. Ver comentarios en el documento. 
+
+> Hemos añadido dichos aspectos.
+
+4. El apartado de Tratamiento de los datos y de Flujo de Trabajo se vería enormemente enriquecido si se incluyera alguna figura ilustrativa, similar a la que los autores incluyen en el repositorio https://github.com/ibartomeus/IberianBees 
+
+> Una gran sugerencia, hemos añadido un diagrama de cajas ilustrativo.
+
+5.  En el texto los autores indican que han generado los metadatos en formato EML y json usando DataSpice, sin embargo se echa en falta que aparezca la url de los metadatos donde se puede consultar todos los metadatos. Asimismo indican que están indexados en Google Datasets aunque no se incluye una url de dicha indexación. 
+
+> La url generada por github es realmente larga, así que preferimos dejar el link al repositorio, donde esta claramente explicado en el readme como acceder a los metadatos en diferentes formatos. La indexación por google es automatica, y la URL generada no es fija que hayamos podido encontrar, por tanto, no hemos podido añadir una url.
+
+6. Finalmente, y como sugerencia, aunque suponga un trabajo extra, sería muy interesante indicar algún script con caso de uso de los datos. Es decir, como acceder a la base de datos y trabajar con ella. 
+
+> Es una gran sugerencia y ayudara a usar el set de datos. La hemos incluido en el readme del repositorio de github.
+
