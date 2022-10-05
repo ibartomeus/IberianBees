@@ -8,48 +8,27 @@ header-includes:
  - \captionsetup[figure]{labelformat=empty}
  - \captionsetup[table]{labelformat=empty}
 ---
-
-```{r echo=FALSE, warning=FALSE, message=FALSE,fig.width=7,fig.height=6, fig.align='center',message=FALSE, warning=FALSE, cache=FALSE, out.width="100%"}
-
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width="100%"}
 
 library(tidyverse)
+
 data <- read.table("../../Data/iberian_bees.csv.gz", header = T, quote = "\"", sep = ",")
 
 # Prepare top 20 records
-by_year <- data %>% filter(!Accepted_name == "Apis mellifera")
-
-p1 <- ggplot(by_year, aes(Year)) +
-  geom_histogram(fill = "#287D8EFF") +
-  theme_classic() +
-  ylab("Number of records") +
-  scale_y_continuous(expand = c(0, 0)) + ggtitle("A") + theme(axis.title=element_text(size=16), axis.text =element_text(size=12), axis.line =element_line(size=1),
-plot.title = element_text(size=18, face = "bold"))
-
-data$month_name <- month.abb[data$Month]
-
-month_sum <- data %>%
-  group_by(month_name) %>%
-  summarise(no_rows = length(month_name)) %>%
-  arrange(-no_rows)
-
-month_sum <- month_sum %>% filter(!is.na(month_name))
-
-month_sum$month_name <- factor(month_sum$month_name, levels = c(
-  "Jan", "Feb", "Mar",
-  "Apr", "May", "Jun",
-  "Jul", "Aug", "Sep",
-  "Oct", "Nov", "Dec"
-))
-
-p2 <- ggplot(data = month_sum, aes(x = month_name, y = no_rows)) +
+top_20 <- data %>%
+  filter(!Accepted_name == "Apis mellifera") %>%
+  group_by(Accepted_name) %>%
+  summarise(no_rows = length(Accepted_name)) %>%
+  arrange(-no_rows) %>%
+  slice(1:20)
+# Fix row position
+top_20$Accepted_name <- factor(top_20$Accepted_name, levels = top_20$Accepted_name)
+# Plot
+ggplot(top_20, aes(x = Accepted_name, y = no_rows)) +
   geom_bar(stat = "identity", fill = "#287D8EFF") +
   theme_classic() +
-  scale_y_continuous(expand = c(0, 0)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 11, face = "italic"), axis.text.y = element_text(size=12),   axis.title=element_text(size=16), axis.line =element_line(size=1)) +
   ylab("Number of records") +
-  xlab("Months") + ggtitle("B") + theme(axis.title=element_text(size=16), axis.text =element_text(size=12), axis.line =element_line(size=1),
-plot.title = element_text(size=18, face = "bold"))
-
-library(patchwork)
-
-p1 / p2
+  xlab("Species") +
+  scale_y_continuous(expand = c(0, 0))
 ```
