@@ -45,7 +45,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url>https://github.com/ibartomeus/IberianBees/Data/iberian_bees.csv.gz</url>
+            <url>https://github.com/ibartomeus/IberianBees/blob/48b6f15f13f8d145a9543b69f156fdbd89d1a897/Data/iberian_bees.csv.gz</url>
           </online>
         </distribution>
       </physical>
