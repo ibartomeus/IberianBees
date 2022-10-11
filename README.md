@@ -13,7 +13,7 @@ If you have data on Iberian bee's occurrence, fill in this [template](https://gi
 
 - The IberianBees database can be found on: `Data/iberian_bees.csv.gz`. This is a zip file so double click on it to unzip.
 
-- Metadata can be consulted [here](https://rawcdn.githack.com/ibartomeus/IberianBees/65a387dca56829a7b3b6d00661eba64394b4ef8e/Data/metadata/index.html). 
+- Metadata can be consulted [here](https://rawcdn.githack.com/ibartomeus/IberianBees/987975d72eb13a83b3fd1a9844997de4bfe475d6/Data/metadata/index.html). 
 
 
 - Records with non-accepted names on the Iberian bee species masterlist have been excluded of the final dataset but can be found on `Data/Processing_iberian_bees_raw/removed.csv`. 
