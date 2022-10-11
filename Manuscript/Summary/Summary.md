@@ -1,9 +1,9 @@
 
 # Summary of the IberianBees database
 
-The Iberian Bee Database contains **103464 entries** of bee occurrences
+The Iberian Bee Database contains **87684 entries** of bee occurrences
 over the peninsula and nearby islands. We have at least one record of
-**925 species** out of the **1055 species** known to occur in the
+**923 species** out of the **1066 species** known to occur in the
 Iberian Peninsula.
 
 We retained only valid, updated species names. All records have
