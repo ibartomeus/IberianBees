@@ -23,7 +23,7 @@ edit_biblio()
 edit_access(metadata_dir = "Data/metadata")
 
 #Run to update metadata based on the csv's in folder metadata
-write_spice() #creates Json Original name is dataspice.json. Manually renamed to IBD.json
+write_spice(path = "Data/metadata") #creates Json Original name is dataspice.json. Manually renamed to IBD.json
 
 build_site(path = "Data/metadata/IBD.json", out_path = "Data/metadata/index.html") # Optional
 
