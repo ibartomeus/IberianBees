@@ -19,6 +19,9 @@ edit_access()
 edit_creators()
 edit_biblio()
 
+#To edit it:
+edit_access(metadata_dir = "Data/metadata")
+
 #Run to update metadata based on the csv's in folder metadata
 write_spice() #creates Json Original name is dataspice.json. Manually renamed to IBD.json
 
@@ -35,6 +38,10 @@ eml_validate(eml_doc) #need to fix those...
 
 #write EML
 write_eml(eml_doc, "Data/metadata/IBD.xml")
+
+
+
+
 
 
 
