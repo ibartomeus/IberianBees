@@ -63,7 +63,8 @@ author:
 - Sébastien Patiny^2^ \orcidlink{0000-0003-4583-9902} \vspace{-1.5cm}
 - Andreia Penado^15,41,42^ \orcidlink{0000-0003-0365-802X} \vspace{-1.5cm}
 - Ana Picanço^16^ \orcidlink{0000-0002-1188-6519} \vspace{-1.5cm}
-- Emilie F. Ploquin^31^
+- Emilie F. Ploquin^31^ \vspace{-1.5cm}
+- Pierre Rasmont^2^ \orcidlink{0000-0003-0891-2189} \vspace{-1.5cm}
 - Carla Rego^16^ \orcidlink{0000-0001-8005-4508} \vspace{-1.5cm}
 - Pedro J. Rey^35^ \orcidlink{0000-0001-5550-0393} \vspace{-1.5cm}
 - Elisa Ribas-Marquès^43^ \orcidlink{0000-0002-7616-5835} \vspace{-1.5cm}
