@@ -16,8 +16,8 @@ Apidae,Ammobates,Ammobates,dusmeti,NA,"Popov, 1951",NA
 Apidae,Ammobates,Euphileremus,muticus,NA,"Spinola, 1843",NA
 Apidae,Ammobates,Ammobates,punctatus,NA,"(Fabricius, 1804)",NA
 Apidae,Ammobates,Ammobates,rufiventris,NA,"Latreille, 1809",NA
-Apidae,Ammobates,Ammobates,vinctus,NA,"Gerstaecker, 1869",NA
-Apidae,Ammobatoides,Ammobatoides,scriptus,NA,"(Gerstaecker, 1869)",NA
+Apidae,Ammobates,Ammobates,vinctus,NA,"Gerstäcker, 1869",NA
+Apidae,Ammobatoides,Ammobatoides,scriptus,NA,"(Gerstäcker, 1869)",NA
 Andrenidae,Andrena,Micrandrena,abjecta,NA,"Pérez, 1895",NA
 Andrenidae,Andrena,Chlorandrena,abrupta,NA,"Warncke, 1967",NA
 Andrenidae,Andrena,Aenandrena,aeneiventris,NA,"Morawitz, 1872",NA
@@ -53,13 +53,13 @@ Andrenidae,Andrena,Simandrena,breviscopa,NA,"Pérez, 1895",NA
 Andrenidae,Andrena,Hoplandrena,bucephala,NA,"Stephens, 1846",NA
 Andrenidae,Andrena,Zonandrena,chrysopyga,NA,"Schenck, 1853",Currently unconfirmed but known historically from the French Pyrenees
 Andrenidae,Andrena,Notandrena,chrysosceles,NA,"(Kirby, 1802)",NA
-Andrenidae,Andrena,Melandrena,cineraria,NA,"(L., 1758)",NA
+Andrenidae,Andrena,Melandrena,cineraria,NA,"(Linnaeus, 1758)",NA
 Andrenidae,Andrena,Chlorandrena,cinerea,NA,"Brullé, 1832",NA
 Andrenidae,Andrena,Andrena,clarkella,NA,(Kirby  1802),NA
 Andrenidae,Andrena,Brachyandrena,colletiformis,NA,"Morawitz, 1874",NA
 Andrenidae,Andrena,Simandrena,combinata,NA,"(Christ, 1791)",NA
 Andrenidae,Andrena,Simandrena,confinis,NA,"Stöckhert, 1930",Currently a synonym of A. congruens but both species are valid and present in Iberia
-Andrenidae,Andrena,Simandrena,congruens,NA,"Schmiedekneckt, 1883",NA
+Andrenidae,Andrena,Simandrena,congruens,NA,"Schmiedeknecht, 1883",NA
 Andrenidae,Andrena,Poliandrena,corax,NA,"Warncke, 1967",NA
 Andrenidae,Andrena,Chlorandrena,curtivalvis,NA,"Morice, 1899",NA
 Andrenidae,Andrena,Lepidandrena,curvungula,NA,"Thomson, 1870",NA
@@ -100,7 +100,7 @@ Andrenidae,Andrena,Taeniandrena,gredana,NA,"Warncke, 1975","Originally A. gelria
 Andrenidae,Andrena,Trachandrena,haemorrhoa,NA,"(Fabricius, 1781)",NA
 Andrenidae,Andrena,Charitandrena,hattorfiana,NA,"(Fabricius, 1775)",NA
 Andrenidae,Andrena,Aenandrena,hedikae,NA,"Jaeger, 1934",NA
-Andrenidae,Andrena,Andrena,helvola,NA,"(L., 1758)",NA
+Andrenidae,Andrena,Andrena,helvola,NA,"(Linnaeus, 1758)",NA
 Andrenidae,Andrena,Chrysandrena,hesperia,NA,"Smith, 1853",NA
 Andrenidae,Andrena,Melandrena,hispania,NA,"Warncke, 1967",NA
 Andrenidae,Andrena,Chlorandrena,humilis,NA,"Imhoff, 1832",NA
@@ -136,7 +136,7 @@ Andrenidae,Andrena,Brachyandrena,miegiella,NA,"Dours, 1873",NA
 Andrenidae,Andrena,Truncandrena,minapalumboi,NA,"Gribodo, 1894",NA
 Andrenidae,Andrena,Micrandrena,minutula,NA,"(Kirby, 1802)",NA
 Andrenidae,Andrena,Micrandrena,minutuloides,NA,"Perkins, 1914",NA
-Andrenidae,Andrena,Andrena,mitis,NA,"Schmiedekneckt, 1883",NA
+Andrenidae,Andrena,Andrena,mitis,NA,"Schmiedeknecht, 1883",NA
 Andrenidae,Andrena,Orandrena,monilia,NA,"Warncke, 1967",As distinct from A. fulvicornis
 Andrenidae,Andrena,Graecandrena,montarca,NA,"Warncke, 1975",NA
 Andrenidae,Andrena,Melandrena,morio,NA,"Brullé, 1832",NA
@@ -181,7 +181,7 @@ Andrenidae,Andrena,Simandrena,rhypara,NA,"Pérez, 1903",NA
 Andrenidae,Andrena,Chlorandrena,rhyssonata,NA,"Pérez, 1895",NA
 Andrenidae,Andrena,Hoplandrena,rosae,NA,"Panzer, 1801",NA
 Andrenidae,Andrena,Lepidandrena,rufizona,NA,"Imhoff, 1834",NA
-Andrenidae,Andrena,Euandrena,rufula,NA,"Schmiedekneckt, 1883",NA
+Andrenidae,Andrena,Euandrena,rufula,NA,"Schmiedeknecht, 1883",NA
 Andrenidae,Andrena,Lepidandrena,sardoa,NA,"Lepeletier, 1841",NA
 Andrenidae,Andrena,Micrandrena,saxonica,NA,"Stöckhert, 1935",NA
 Andrenidae,Andrena,Opandrena,schencki,NA,"Morawitz, 1866",NA
@@ -197,7 +197,7 @@ Andrenidae,Andrena,Zonandrena,soror,aggregate,"Dours, 1872","Aggregate, in dire 
 Andrenidae,Andrena,Micrandrena,spreta,NA,"Pérez, 1895",NA
 Andrenidae,Andrena,Micrandrena,subopaca,NA,"Nylander, 1848",NA
 Andrenidae,Andrena,Suandrena,suerinensis,NA,"Friese, 1884",NA
-Andrenidae,Andrena,Euandrena,symphyti,NA,"Schmiedekneckt, 1883",NA
+Andrenidae,Andrena,Euandrena,symphyti,NA,"Schmiedeknecht, 1883",NA
 Andrenidae,Andrena,Andrena,synadelpha,NA,"Perkins, 1914",NA
 Andrenidae,Andrena,Tarsandrena,tarsata,NA,"Nylander, 1848",NA
 Andrenidae,Andrena,Parandrenella,taxana,NA,"Warncke, 1975",NA
@@ -463,7 +463,7 @@ Apidae,Eucera,Eucera,oraniensis,NA,"Lepeletier, 1841",NA
 Apidae,Eucera,Eucera,pannonica,NA,"Mocsáry, 1878",NA
 Apidae,Eucera,Tetralonia,pollinosa,NA,"(Lepeletier, 1841)",NA
 Apidae,Eucera,Eucera,proxima,NA,"Morawitz, 1875","E. graeca Radoszkowski, 1876 is a synonym, listed by Ortiz-Sanchez"
-Apidae,Eucera,Synhalonia,quilisi,NA,"(Dusment, 1926)",NA
+Apidae,Eucera,Synhalonia,quilisi,NA,"(Dusmet, 1926)",NA
 Apidae,Eucera,Synhalonia,rufa,NA,"(Lepeletier, 1841)",NA
 Apidae,Eucera,Tetralonia,ruficornis,NA,"(Fabricius, 1804)",NA
 Apidae,Eucera,Tetralonia,salicariae,NA,"(Lepeletier, 1841)",NA
@@ -657,7 +657,7 @@ Halictidae,Lasioglossum,Sphecodogastra,fratellum,NA,"(Pérez, 1903)",NA
 Halictidae,Lasioglossum,Sphecodogastra,fulvicorne,NA,"(Kirby, 1802)",NA
 Halictidae,Lasioglossum,Evylaeus s.l.,glabriusculum,NA,"(Morawitz, 1872)",NA
 Halictidae,Lasioglossum,Hemihalictus,griseolum,NA,"(Morawitz, 1872)",NA
-Halictidae,Lasioglossum,Hemihalictus,ibericum,NA,"Ember, 1975",NA
+Halictidae,Lasioglossum,Hemihalictus,ibericum,NA,"Ebmer, 1975",NA
 Halictidae,Lasioglossum,Sphecodogastra,immunitum,NA,"(Vachal, 1895)",NA
 Halictidae,Lasioglossum,Hemihalictus,intermedium,NA,"(Schenck, 1868)",NA
 Halictidae,Lasioglossum,Sphecodogastra,interruptum,NA,"(Panzer, 1798)",NA
@@ -715,7 +715,7 @@ Halictidae,Lasioglossum,Hemihalictus,semilucens,NA,"(Alfken, 1914)",NA
 Halictidae,Lasioglossum,Sphecodogastra,setulellum,NA,"(Strand, 1909)",NA
 Halictidae,Lasioglossum,Lasioglossum,sexmaculatum,NA,"(Schenck, 1853)",NA
 Halictidae,Lasioglossum,Lasioglossum,sexnotatum,NA,"(Kirby, 1802)",NA
-Halictidae,Lasioglossum,Hemihalictus,sexstrigatum,NA,"(Schecnk, 1868)",NA
+Halictidae,Lasioglossum,Hemihalictus,sexstrigatum,NA,"(Schenck, 1868)",NA
 Halictidae,Lasioglossum,Dialictus,smeathmanellum,NA,"(Kirby, 1802)",NA
 Halictidae,Lasioglossum,Dialictus,soror,NA,"(Saunders, 1901)",NA
 Halictidae,Lasioglossum,Hemihalictus,sphecidomorphum,NA,"(Vachal, 1892)",NA
@@ -775,7 +775,7 @@ Megachilidae,Megachile,Eutricharaea,thevestensis,NA,"Ferton, 1909",NA
 Megachilidae,Megachile,Megachile,versicolor,NA,"Smith, 1844",NA
 Megachilidae,Megachile,Xanthosarus,willughbiella,NA,"(Kirby, 1802)",NA
 Apidae,Melecta,Melecta,aegyptiaca,NA,"Radoszkowski, 1876",NA
-Apidae,Melecta,Melecta,albifrons,NA,"(Forster, 1771)",NA
+Apidae,Melecta,Melecta,albifrons,NA,"(Förster, 1771)",NA
 Apidae,Melecta,Melecta,duodecimmaculata,NA,"(Rossi, 1790)",NA
 Apidae,Melecta,Melecta,festiva,NA,"Lieftinck, 1980",NA
 Apidae,Melecta,Melecta,gracilipes,NA,"Lieftinck, 1980",NA
@@ -940,7 +940,7 @@ Megachilidae,Osmia,Melanosmia,parietina,NA,"Curtis, 1828",NA
 Megachilidae,Osmia,Hoplosmia,pinguis,NA,"Pérez, 1895",NA
 Megachilidae,Osmia,Allosmia,rufohirta,NA,"Latreille, 1811",NA
 Megachilidae,Osmia,Allosmia,rutila,NA,"Erichson, 1835",NA
-Megachilidae,Osmia,Pyrosmia,saxicola,NA,"saxicola Ducke, 1899",NA
+Megachilidae,Osmia,Pyrosmia,saxicola,NA,"Ducke, 1899",NA
 Megachilidae,Osmia,Hoplosmia,scutellaris,NA,"Morawitz, 1868",NA
 Megachilidae,Osmia,Helicosmia,signata,NA,"Erichson, 1835",NA
 Megachilidae,Osmia,Hoplosmia,spinulosa,NA,"(Kirby, 1802)",NA
@@ -978,7 +978,7 @@ Halictidae,Pseudapis,Nomiapis,femoralis,NA,"(Pallas, 1773)",NA
 Halictidae,Pseudapis,Nomiapis,valga,NA,"(Gerstäcker, 1872)",NA
 Megachilidae,Pseudoanthidium,Exanthidium,eximium,NA,"(Giraud, 1863)",NA
 Megachilidae,Pseudoanthidium,Royanthidium,melanurum,NA,"(Klug, 1832)",NA
-Megachilidae,Pseudoanthidium,Pseudoanthidium,nanum,aggregate,"Mocsary, 1879","Complex under revision, listed as lituratum by Ortiz-Sanchez"
+Megachilidae,Pseudoanthidium,Pseudoanthidium,nanum,aggregate,"Mocsáry, 1879","Complex under revision, listed as lituratum by Ortiz-Sanchez"
 Megachilidae,Pseudoanthidium,Royanthidium,reticulatum,NA,"(Mocsáry, 1884)",NA
 Megachilidae,Pseudoanthidium,Pseudoanthidium,scapulare,NA,"(Latreille, 1809)",NA
 Megachilidae,Rhodanthidium,Asianthidium,caturigense,NA,"(Giraud, 1863)",NA
@@ -1063,5 +1063,5 @@ Colletidae,Colletes,NA,dimidiatus,NA,"Brullé, 1840",NA
 Colletidae,Colletes,NA,jansmiti,NA,"Kuhlmann & Smit, 2018",NA
 Colletidae,Colletes,NA,moricei,NA,"Saunders, 1904",NA
 Megachilidae,Hoplitis,NA,cristata,NA,"(Fonscolombe, 1846)",NA
-Megachilidae,Osmia,NA,cinnabarina,NA,Perez 1895,NA
+Megachilidae,Osmia,NA,cinnabarina,NA,Pérez 1895,NA
 Megachilidae,Stelis,NA,murina,NA,"Pérez, 1884",NA

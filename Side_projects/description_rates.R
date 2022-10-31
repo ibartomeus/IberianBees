@@ -18,10 +18,18 @@ master[963,]
 year <- gsub(pattern = ')', '', year)
 year <- as.numeric(year)
 
+author <- gsub(pattern = '(', '', author, fixed = TRUE)
+author <- gsub(pattern = ')', '', author, fixed = TRUE)
+author <- gsub(pattern = "[[:digit:]]+", '', author)
+author <- trimws(author)
+
 #Alternative
 matches <- regmatches(master$Authority, gregexpr("[[:digit:]]+", master$Authority))
 year <- as.numeric(unlist(matches))
 
+
 plot(as.numeric(cumsum(table(year))) ~ as.numeric(names(table(year))),
      las = T, type = "l", ylab = "species described", xlab = "year")
 
+barplot(tail(sort(table(author)), 20), las = 2, cex.names = 0.5)
+        
