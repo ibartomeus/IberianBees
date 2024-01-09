@@ -2,9 +2,11 @@
 #Source code to process raw data
 #####################################################################################--
 #Set up----
+#devtools::install_github("RadicalCommEcol/CleanR", build_vignettes = TRUE)
 library(cleanR)
 library(dplyr)
 library(tidyr)
+#remotes::install_github("hrbrmstr/mgrs")
 library(mgrs)
 library(stringr)
 
