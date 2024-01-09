@@ -4,6 +4,7 @@ source("Scripts/1_2_Processing_raw_data/Source_file.R") #Generate template
 
 #Read data
 newdat <- read.csv(file = 'Data/Rawdata/csvs/1_Ornosa_etal.csv', sep = ";")
+head(newdat)
 #Compare vars
 compare_variables(check, newdat)
 #Fix dates
@@ -11,6 +12,10 @@ compare_variables(check, newdat)
 newdat$Day <- temp$day
 newdat$Month <- temp$month
 newdat$Year <- temp$year
+newdat$Year <- ifelse(temp$date_var == "00-00-2011", 2011, newdat$Year)
+newdat$Year <- ifelse(temp$date_var == "00-00-2010", 2010, newdat$Year)
+newdat$Year <- ifelse(temp$date_var == "00-00-2012", 2012, newdat$Year)
+#We can recover some dates are imposible e.g. 31 november.
 newdat <- add_missing_variables(check, newdat)
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
@@ -61,3 +66,4 @@ newdat$Species[newdat$Species=="pacuorum"] <- "pascuorum"
 #Save data
 write.table(x = newdat, file = 'Data/Processed_raw_data/1_Ornosa_etal.csv', quote = TRUE, sep = ',', 
             col.names = TRUE, row.names = FALSE)
+View(newdat)
