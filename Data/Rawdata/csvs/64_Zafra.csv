@@ -1,0 +1,11 @@
+﻿Genus;Subgenus;Species;Subspecies;Country;Province;Locality;Latitude;Longitude;Coordinate.precision;Year;Month;Day;Start.date;End.date;Collector;Determined.by;Female;Male;Worker;Not.specified;Reference.doi;Flowers.visited;Local_ID;Authors.to.give.credit;Any.other.additional.data;Notes.and.queries
+Megachile ;NA;pilidens ;NA;España;Granada ;Cumbres Verdes;37,088434;-3,5348916;100 m ;2021;Octubre;22;NA;NA;Maria Zafra ;Maria Zafra ;NA;NA;NA;1;NA;Ditrichia viscosa (L.) ;NA;NA;NA;NA
+Amegilla;NA;quadrifasciata ;NA;España;Granada ;Granada;37,1814;-3,61761;100 m ;2021;Octubre;28;NA;NA;Maria Zafra ;Maria Zafra ;NA;NA;NA;5;NA;Prasium majus L.;NA;NA;Todas parasitadas por tipanosomatidos ;NA
+Anthophora ;NA;bimaculata;NA;España;Granada ;Guadix;37,32466;-3,12891;100 m ;2021;Noviembre;29;NA;NA;Maria Zafra ;Maria Zafra ;NA;NA;NA;1;NA;Centaurea paniculata L.;NA;NA;NA;NA
+Eucera;NA;longicornus;NA;España;Granada ;Cumbres Verdes;37,093675;-3,536796;100 m ;2022;Marzo ;2;NA;NA;Maria Zafra ;Maria Zafra ;NA;NA;NA;2;NA;Salvia Rosmarinus ;NA;NA;NA;NA
+Lasioglossum;NA;immunitum;NA;España;Granada ;Durcal;37,00539;-3,56647;100 m ;2021;Octubre;23;NA;NA;Maria Zafra ;Maria Zafra ;NA;NA;NA;1;NA;Sonchus tenerrimus;NA;NA;NA;NA
+Lasioglossum;NA;immunitum;NA;España;Granada ;Granada;37,1814;-3,61761;100 m ;2021;Octubre;31;NA;NA;Maria Zafra ;Maria Zafra ;NA;NA;NA;1;NA;Sonchus tenerrimus;NA;NA;NA;NA
+Lasioglossum;NA;immunitum;NA;España;Granada ;Granada;37,1769;-3,6139;100 m ;2022;Febrero;18;NA;NA;Maria Zafra ;Maria Zafra ;NA;NA;NA;1;NA;Sonchus tenerrimus;NA;NA;Parasitada por tipanosomatidos ;NA
+Bombus ;NA;terrestris;NA;España;Granada ;Granada;37,1769;-3,6139;100 m ;2022;Febrero;18;NA;NA;Maria Zafra ;Maria Zafra ;NA;NA;NA;3;NA;Teucrium fruticans L. ;NA;NA;Todas parasitadas por tipanosomatidos  y dos contenian Pneumolaelaps ;NA
+Bombus ;NA;terrestris;NA;España;Granada ;Cumbres Verdes ;37,093675;-3,536796;100 m ;2022;Marzo ;2;NA;NA;Maria Zafra ;Maria Zafra ;NA;NA;NA;1;NA;Salvia Rosmarinus ;NA;NA;Parasitada por tipanosomatidos ;NA
+Andrena;NA;flavipes ;NA;España;Granada ;Cumbres Verdes;37,093675;-3,536796;100 m ;2022;Marzo ;2;NA;NA;Maria Zafra ;Maria Zafra ;NA;NA;NA;2;NA;Salvia Rosmarinus ;NA;NA;NA;NA

@@ -1,0 +1,253 @@
+﻿Genus;Subgenus;Species;Subspecies;Country;Province;Locality;Latitude;Longitude;Coordinate.precision;Year;Month;Day;Start.date;End.date;Collector;Determined.by;Female;Male;Worker;Not.specified;Reference.doi;Flowers.visited;Local_ID;Authors.to.give.credit;Any.other.additional.data;Notes.and.queries;uid
+Bombus ;Bombus;terretris;ferrugineus;Spain;Avila;Becedas;40.40396;-5.66322;30TTK7476;1977;8;6;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;2;0;0;NA;NA;NA;NA;Altitud:1090m;NA;64_ornosa_1
+Bombus ;Bombus;terretris;ferrugineus;Spain;Avila;Losar;40.38861;-5.54482;30TTK8474;1977;9;27;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_2
+Bombus ;Bombus;terretris;ferrugineus;Spain;Avila;Neila de San Miguel;40.41323;-5.6518;30TTK7577;1977;8;6;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_3
+Bombus ;Bombus;terretris;ferrugineus;Spain;Avila;San Bartolomé de Béjar;40.40396;-5.66322;30TTK7476;1977;8;6;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;1;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_4
+Bombus ;Bombus;terretris;ferrugineus;Spain;Caceres;Baños de Montemayor (a);40.31819;-5.8599;30TTK5767;1978;3;25;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;0;1;0;NA;NA;NA;NA;Altitud:706m;NA;64_ornosa_5
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1974;8;9;NA;NA;A.Verdejo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_6
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;15;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;1;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_7
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;23;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_8
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;25;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_9
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;8;8;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_10
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1978;7;5;NA;NA;C.Calvo;NA;0;0;1;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_11
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Béjar (El Canalizo);40.36575;-5.75593;30TTK6672;1977;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_12
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Béjar (Carretera de Aldeacipreste);40.39247;-5.7688;30TTK6575;1977;5;21;NA;NA;C. Ornosa y S.F. Gayubo;NA;3;1;0;0;NA;NA;NA;NA;Altitud:800m;NA;64_ornosa_13
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Béjar (Carretera de Ciudad Rodrigo);40.4009;-5.79271;30TTK6376;1977;6;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:940m;NA;64_ornosa_14
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Béjar (Carretera de Ciudad Rodrigo);40.4009;-5.79271;30TTK6376;1977;8;28;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:940m;NA;64_ornosa_15
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Béjar (El Castañar);40.40118;-5.78094;30TTK6476;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;4;2;0;NA;NA;NA;NA;Altitud:1080m;NA;64_ornosa_16
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Béjar (Llano Alto);40.37447;-5.76806;30TTK6573;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;1;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_17
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Béjar (Monte Mario);40.37362;-5.80336;30TTK6273;1977;7;3;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;1;0;NA;NA;NA;NA;Altitud:975m;NA;64_ornosa_18
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Béjar (en Valdesangil);40.40203;-5.74562;30TTK6776;1977;7;21;NA;NA;C. Ornosa y S.F. Gayubo;NA;6;0;0;0;NA;NA;NA;NA;Altitud:1030m;NA;64_ornosa_19
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Calzada de Béjar, La(a);40.40933;-5.81662;30TTK6177;1977;7;11;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:810m;NA;64_ornosa_20
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Candelario;40.35703;-5.7438;30TTK6771;1976;5;22;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;0;1;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_21
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Candelario;40.35703;-5.7438;30TTK6771;1977;7;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_22
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Candelario;40.35703;-5.7438;30TTK6771;1978;10;23;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;0;1;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_23
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Candelario;40.34887;-5.70815;30TTK7070;1977;9;3;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1650m;NA;64_ornosa_24
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Cantagallo;40.36405;-5.82651;30TTK6072;1977;7;12;NA;NA;C. Ornosa y S.F. Gayubo;NA;3;1;0;0;NA;NA;NA;NA;Altitud:910m;NA;64_ornosa_25
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Fresnedoso;40.43014;-5.69962;30TTK7179;1977;8;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;1;0;0;NA;NA;NA;NA;Altitud:1047m;NA;64_ornosa_26
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Hoya, La;40.40314;-5.69854;30TTK7176;1977;7;18;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1250m;NA;64_ornosa_27
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Navacarros;40.39359;-5.72172;30TTK6975;1977;7;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;7;1;0;0;NA;NA;NA;NA;Altitud:1120m;NA;64_ornosa_28
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Navalmoral de Béjar;40.49988;-5.79681;30TTK6387;1977;7;11;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:800m;NA;64_ornosa_29
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Palomares de Béjar;40.41018;-5.78131;30TTK6477;1977;7;6;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;2;0;0;NA;NA;NA;NA;Altitud:1030m;NA;64_ornosa_30
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Palomares de Béjar;40.41018;-5.78131;30TTK6477;1977;8;20;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1030m;NA;64_ornosa_31
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Peñacaballera;40.33619;-5.86066;30TTK5769;1977;7;12;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;2;0;0;NA;NA;NA;NA;Altitud:875m;NA;64_ornosa_32
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Puerto de Béjar;40.34576;-5.83752;30TTK5970;1977;7;12;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:940m;NA;64_ornosa_33
+Bombus ;Bombus;terretris;ferrugineus;Spain;Salamanca;Puerto de Béjar;40.34576;-5.83752;30TTK5970;1977;8;29;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:940m;NA;64_ornosa_34
+Bombus ;Bombus;lucorum;congruens;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1976;5;8;NA;NA;P. Hernández;NA;1;0;1;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_35
+Bombus ;Bombus;lucorum;congruens;Spain;Salamanca; Béjar (Carretera de Aldeacipreste);40.39247;-5.7688;30TTK6575;1977;5;21;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;0;4;0;NA;NA;NA;NA;Altitud:800m;NA;64_ornosa_36
+Bombus ;Bombus;lucorum;congruens;Spain;Salamanca;Béjar (Carretera de Ciudad Rodrigo);40.4009;-5.79271;30TTK6376;1977;8;18;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:940m;NA;64_ornosa_37
+Bombus ;Bombus;lucorum;congruens;Spain;Salamanca;Béjar (El Castañar);40.40118;-5.78094;30TTK6476;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1080m;NA;64_ornosa_38
+Bombus ;Bombus;lucorum;congruens;Spain;Salamanca;Béjar (Llano Alto);40.37447;-5.76806;30TTK6573;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_39
+Bombus ;Bombus;lucorum;congruens;Spain;Salamanca;Béjar (Llano Alto);40.37447;-5.76806;30TTK6573;1982;7;21;NA;NA; (A. Rueda);NA;0;1;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_40
+Bombus ;Bombus;lucorum;congruens;Spain;Salamanca;Candelario (Sierra);40.36631;-5.7324;30TTK6872;1977;7;18;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1300m;NA;64_ornosa_41
+Bombus ;Bombus;lucorum;congruens;Spain;Salamanca;Cantagallo (Sierra);40.35534;-5.81437;30TTK6171;1977;7;12;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_42
+Bombus ;Bombus;lucorum;congruens;Spain;Salamanca;Navacarros;40.39359;-5.72172;30TTK6975;1977;7;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;5;0;1;0;NA;NA;NA;NA;Altitud:1120m;NA;64_ornosa_43
+Bombus ;Bombus;lucorum;congruens;Spain;Salamanca;Puerto de Béjar;40.34576;-5.83752;30TTK5970;1977;7;12;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:940m;NA;64_ornosa_44
+Bombus ;Melanobombus;lapidarius;decipiens;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1974;8;5;NA;NA;A. Verdejo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_45
+Bombus ;Melanobombus;lapidarius;decipiens;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1975;8;10;NA;NA;A. Verdejo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_46
+Bombus ;Melanobombus;lapidarius;decipiens;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1976;5;8;NA;NA;P. Hernández;NA;0;0;1;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_47
+Bombus ;Melanobombus;lapidarius;decipiens;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_48
+Bombus ;Melanobombus;lapidarius;decipiens;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;15;NA;NA;C. Urones;NA;1;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_49
+Bombus ;Melanobombus;lapidarius;decipiens;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;23;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_50
+Bombus ;Melanobombus;lapidarius;decipiens;Spain;Salamanca;Béjar (El Canalizo);40.36575;-5.75593;30TTK6672;1977;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_51
+Bombus ;Melanobombus;lapidarius;decipiens;Spain;Salamanca;Béjar (El Castañar);40.40118;-5.78094;30TTK6476;1976;8;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1080m;NA;64_ornosa_52
+Bombus ;Melanobombus;lapidarius;decipiens;Spain;Salamanca;Béjar (El Castañar);40.40118;-5.78094;30TTK6476;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;3;0;0;NA;NA;NA;NA;Altitud:1080m;NA;64_ornosa_53
+Bombus ;Melanobombus;lapidarius;decipiens;Spain;Salamanca;Béjar (Monte Mario);40.37362;-5.80336;30TTK6273;1977;7;3;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;3;0;0;NA;NA;NA;NA;Altitud:975m;NA;64_ornosa_54
+Bombus ;Melanobombus;lapidarius;decipiens;Spain;Salamanca;Candelario;40.35703;-5.7438;30TTK6771;1977;7;3;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_55
+Bombus ;Melanobombus;lapidarius;decipiens;Spain;Salamanca;Candelario (Sierra);40.34887;-5.70815;30TTK7070;1977;9;3;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1650m;NA;64_ornosa_56
+Bombus ;Melanobombus;lapidarius;decipiens;Spain;Salamanca;Navacarros;40.39359;-5.72172;30TTK6975;1977;7;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;0;1;0;NA;NA;NA;NA;Altitud:1120m;NA;64_ornosa_57
+Bombus ;Melanobombus;lapidarius;decipiens;Spain;Salamanca;Peñacaballera;40.33619;-5.86066;30TTK5769;1977;7;12;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:875m;NA;64_ornosa_58
+Bombus ;Melanobombus;lapidarius;decipiens;Spain;Salamanca;Puerto de Béjar;40.34576;-5.83752;30TTK5970;1977;8;29;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;1;0;0;NA;NA;NA;NA;Altitud:940m;NA;64_ornosa_59
+Bombus;Megabombus;hortorum;hortorum;Spain;Cáceres;Baños de Montemayor;NA;;3055K5865;1978;3;24;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;0;1;0;NA;NA;NA;NA;Altitud:800m;NA;64_ornosa_60
+Bombus;Megabombus;hortorum;hortorum;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;197;5;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_61
+Bombus;Megabombus;hortorum;hortorum;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;6;3;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_62
+Bombus;Megabombus;hortorum;hortorum;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;25;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_63
+Bombus;Megabombus;hortorum;hortorum;Spain;Salamanca;Béjar (El Canalizo);40.36575;-5.75593;30TTK6672;1977;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_64
+Bombus;Megabombus;hortorum;hortorum;Spain;Salamanca;Béjar (El Castañar);40.40118;-5.78094;30TTK6476;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;9;2;0;0;NA;NA;NA;NA;Altitud:1080m;NA;64_ornosa_65
+Bombus;Megabombus;hortorum;hortorum;Spain;Salamanca; Béjar (Llano Alto);40.37447;-5.76806;30TTK6573;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;3;0;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_66
+Bombus;Megabombus;hortorum;hortorum;Spain;Salamanca; Béjar (Llano Alto);40.37447;-5.76806;30TTK6573;1982;7;19;NA;NA;C. Riaza;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_67
+Bombus;Megabombus;hortorum;hortorum;Spain;Salamanca;Cantagallo (Sierra);40.35534;-5.81437;30TTK6171;1977;7;12;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_68
+Bombus;Megabombus;hortorum;hortorum;Spain;Salamanca;Hoya, La;40.40314;-5.69854;30TTK7176;1977;7;18;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;1;0;0;NA;NA;NA;NA;Altitud:1250m;NA;64_ornosa_69
+Bombus;Megabombus;hortorum;hortorum;Spain;Salamanca;Navacarros;40.39359;-5.72172;30TTK6975;1977;7;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;2;0;0;NA;NA;NA;NA;Altitud:1120m;NA;64_ornosa_70
+Bombus;Megabombus;hortorum;hortorum;Spain;Salamanca;Navalmoral de Béjar;40.49988;-5.79681;30TTK6387;1977;7;9;NA;NA;C. Ornosa y S.F. Gayubo;NA;34;0;0;0;NA;NA;NA;NA;Altitud:800m;NA;64_ornosa_71
+Bombus;Megabombus;hortorum;hortorum;Spain;Salamanca; Puerto de Béjar;40.34576;-5.83752;30TTK5970;1977;7;13;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:940m;NA;64_ornosa_72
+Bombus;Megabombus;hortorum;asturiensis;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1974;8;5;NA;NA;A. Vallejo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_73
+Bombus;Megabombus;hortorum;asturiensis;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1976;5;20;NA;NA;M.L. Tomás;NA;0;1;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_74
+Bombus;Megabombus;hortorum;asturiensis;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;5;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_75
+Bombus;Megabombus;hortorum;asturiensis;Spain;Salamanca;Béjar (El Canalizo);40.36575;-5.75593;30TTK6672;1977;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;1;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_76
+Bombus;Megabombus;hortorum;asturiensis;Spain;Salamanca;Béjar (Carretera de Aldeacipreste);40.39247;-5.7688;30TTK6575;1978;3;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;0;1;0;NA;NA;NA;NA;Altitud:800m;NA;64_ornosa_77
+Bombus;Megabombus;hortorum;asturiensis;Spain;Salamanca;Béjar (El Castañar);40.40118;-5.78094;30TTK6476;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;4;6;0;0;NA;NA;NA;NA;Altitud:1080m;NA;64_ornosa_78
+Bombus;Megabombus;hortorum;asturiensis;Spain;Salamanca;Béjar (Monte Mario);40.37362;-5.80336;30TTK6273;1977;7;3;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:975m;NA;64_ornosa_79
+Bombus;Megabombus;hortorum;asturiensis;Spain;Salamanca;Béjar (Monte Mario);40.37362;-5.80336;30TTK6273;1978;2;6;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;0;1;0;NA;NA;NA;NA;Altitud:975m;NA;64_ornosa_80
+Bombus;Megabombus;hortorum;asturiensis;Spain;Salamanca;Candelario (Dehesa);40.35676;-5.75556;30TTK6671;1977;7;3;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_81
+Bombus;Megabombus;hortorum;asturiensis;Spain;Salamanca;Candelario (Sierra);40.36631;-5.7324;30TTK6872;1977;7;17;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1300m;NA;64_ornosa_82
+Bombus;Megabombus;hortorum;asturiensis;Spain;Salamanca;Candelario (Sierra);40.34887;-5.70815;30TTK7070;1977;7;13;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;4;0;0;NA;NA;NA;NA;Altitud:1650m;NA;64_ornosa_83
+Bombus;Megabombus;hortorum;asturiensis;Spain;Salamanca;Hoya, La;40.40314;-5.69854;30TTK7176;1977;7;18;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1250m;NA;64_ornosa_84
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;15;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_85
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;23;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_86
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;24;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_87
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;25;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_88
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1978;5;14;NA;NA;F. Ribas;NA;1;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_89
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Béjar (El Canalizo);40.36575;-5.75593;30TTK6672;1977;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_90
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Béjar (El Canalizo);40.36575;-5.75593;30TTK6672;1977;7;16;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_91
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Béjar (Carretera de Aldeacipreste);40.39247;-5.7688;30TTK6575;1977;5;21;NA;NA;C. Ornosa y S.F. Gayubo;NA;9;0;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_92
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Béjar (Carretera de Aldeacipreste);40.39247;-5.7688;30TTK6575;1977;6;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;6;1;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_93
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Béjar (Carretera de Aldeacipreste);40.39247;-5.7688;30TTK6575;1977;7;2;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;1;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_94
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca; Béjar (Carretera de Cantagallo);NA;;3055K8671;1977;8;14;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;1;0;0;NA;NA;NA;NA;Altitud:850m;NA;64_ornosa_95
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Béjar (Carretera de Ciudad Rodrigo);40.4009;-5.79271;30TTK6376;1977;7;1;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;1;0;0;NA;NA;NA;NA;Altitud:940m;NA;64_ornosa_96
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Béjar (El Castañar);40.40118;-5.78094;30TTK6476;1976;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1080m;NA;64_ornosa_97
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Béjar (El Castañar);40.40118;-5.78094;30TTK6476;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;4;0;0;0;NA;NA;NA;NA;Altitud:1080m;NA;64_ornosa_98
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Béjar (Llano Alto);40.37447;-5.76806;30TTK6573;1974;8;16;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_99
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Béjar (Llano Alto);40.37447;-5.76806;30TTK6573;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;3;0;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_100
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Béjar (en Valdesangil);40.40203;-5.74562;30TTK6776;1977;7;21;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;2;0;0;NA;NA;NA;NA;Altitud:1030m;NA;64_ornosa_101
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Hoya, La;40.40314;-5.69854;30TTK7176;1977;7;18;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;1;0;0;NA;NA;NA;NA;Altitud:1250m;NA;64_ornosa_102
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Navacarros;40.39359;-5.72172;30TTK6975;1977;7;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;3;0;0;0;NA;NA;NA;NA;Altitud:1120m;NA;64_ornosa_103
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Navacarros;40.39359;-5.72172;30TTK6975;1977;7;19;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1120m;NA;64_ornosa_104
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Navalmoral de Béjar;40.49988;-5.79681;30TTK6387;1977;4;30;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;0;2;0;NA;NA;NA;NA;Altitud:800m;NA;64_ornosa_105
+Bombus;Megabombus;ruderatus;NA;Spain;Salamanca;Navalmoral de Béjar;40.49988;-5.79681;30TTK6387;1977;7;11;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:800m;NA;64_ornosa_106
+Bombus;Thoracobombus;sylvarum;distinctus;Spain;Avila;Barco de Avila, El;40.36213;-5.52027;30TTK8671;1977;9;27;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;3;0;0;NA;NA;NA;NA;Altitud:1020m;NA;64_ornosa_107
+Bombus;Thoracobombus;sylvarum;distinctus;Spain;Avila;Gilbuena;40.41403;-5.61648;30TTK7877;1977;8;7;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1060m;NA;64_ornosa_108
+Bombus;Thoracobombus;sylvarum;distinctus;Spain;Avila;Losar, El;40.37987;-5.53271;30TTK8573;1977;9;27;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1040m;NA;64_ornosa_109
+Bombus;Thoracobombus;sylvarum;distinctus;Spain;Avila;Medinilla;40.44077;-5.62931;30TTK7780;1977;8;7;NA;NA;C. Ornosa y S.F. Gayubo;NA;3;0;0;0;NA;NA;NA;NA;Altitud:1050m;NA;64_ornosa_110
+Bombus;Thoracobombus;sylvarum;distinctus;Spain;Avila;Santa Lucía de la Sierra;40.34256;-5.59017;30TTK8069;1977;9;27;NA;NA;C. Ornosa y S.F. Gayubo;NA;3;1;0;0;NA;NA;NA;NA;Altitud:1240m;NA;64_ornosa_111
+Bombus;Thoracobombus;sylvarum;distinctus;Spain;Salamanca;Béjar (Carretera de Ciudad Rodrigo);40.4009;-5.79271;30TTK6376;1977;8;1;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:940m;NA;64_ornosa_112
+Bombus;Thoracobombus;sylvarum;distinctus;Spain;Salamanca;Béjar (Peña de la Cruz);40.36519;-5.77945;30TTK6472;1977;9;9;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1443m;NA;64_ornosa_113
+Bombus;Thoracobombus;sylvarum;distinctus;Spain;Salamanca;Béjar (en Valdesangil);40.40203;-5.74562;30TTK6776;1977;7;21;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1030m;NA;64_ornosa_114
+Bombus;Thoracobombus;sylvarum;distinctus;Spain;Salamanca;Navacarros;40.39359;-5.72172;30TTK6975;1977;7;19;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:1120m;NA;64_ornosa_115
+Bombus;Thoracobombus;sylvarum;distinctus;Spain;Salamanca;Sorihuela;40.43941;-5.6882;30TTK7280;1977;5;21;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1010m;NA;64_ornosa_116
+Bombus;Thoracobombus;sylvarum;distinctus;Spain;Salamanca;Valleja de Río Frío (Puerto);40.42086;-5.71103;30TTK7078;1977;9;26;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1200m;NA;64_ornosa_117
+Bombus;Thoracobombus;humilis;paraurantiacus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1976;5;9;NA;NA;A. Verdejo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_118
+Bombus;Thoracobombus;humilis;paraurantiacus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;8;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_119
+Bombus;Thoracobombus;humilis;paraurantiacus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;23;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;0;2;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_120
+Bombus;Thoracobombus;humilis;paraurantiacus;Spain;Salamanca;Béjar (El Canalizo);40.36575;-5.75593;30TTK6672;1977;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_121
+Bombus;Thoracobombus;humilis;paraurantiacus;Spain;Salamanca;Béjar (El Castañar);40.40118;-5.78094;30TTK6476;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:1080m;NA;64_ornosa_122
+Bombus;Thoracobombus;humilis;paraurantiacus;Spain;Salamanca;Béjar (Llano Alto);40.37447;-5.76806;30TTK6573;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_123
+Bombus;Thoracobombus;humilis;paraurantiacus;Spain;Salamanca;Béjar (en Valdesangil);40.40203;-5.74562;30TTK6776;1977;7;21;NA;NA;C. Ornosa y S.F. Gayubo;NA;3;1;0;0;NA;NA;NA;NA;Altitud:1030m;NA;64_ornosa_124
+Bombus;Thoracobombus;humilis;paraurantiacus;Spain;Salamanca;Candelario;40.35703;-5.7438;30TTK6771;1976;6;1;NA;NA;F. Pérez;NA;0;0;1;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_125
+Bombus;Thoracobombus;humilis;paraurantiacus;Spain;Salamanca;Candelario (Dehesa);40.35676;-5.75556;30TTK6671;1977;7;3;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;2;0;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_126
+Bombus;Thoracobombus;humilis;paraurantiacus;Spain;Salamanca;Candelario (Sierra);40.36631;-5.7324;30TTK6872;1977;7;17;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1300m;NA;64_ornosa_127
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Avila;Becedas;40.40396;-5.66322;30TTK7476;1977;8;6;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1090m;NA;64_ornosa_128
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Avila;Neila de San Miguel;40.41323;-5.6518;30TTK7577;1977;8;6;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;3;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_129
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Avila; San Bartolomé de Béjar;40.40396;-5.66322;30TTK7476;1977;8;6;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;1;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_130
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1976;5;25;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;0;1;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_131
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;4;30;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;0;1;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_132
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;3;1;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_133
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;15;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;1;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_134
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;24;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_135
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;8;8;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_136
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;4;30;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;0;1;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_137
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Béjar (El Canalizo);40.36575;-5.75593;30TTK6672;1977;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;1;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_138
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Béjar (El Castañar);40.40118;-5.78094;30TTK6476;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;10;0;0;0;NA;NA;NA;NA;Altitud:1080m;NA;64_ornosa_139
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Béjar (Llano Alto);40.37447;-5.76806;30TTK6573;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;5;0;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_140
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Béjar (Llano Alto);40.37447;-5.76806;30TTK6573;1981;8;11;NA;NA;M. Lorenzo;NA;1;1;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_141
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Béjar (Llano Alto);40.37447;-5.76806;30TTK6573;1981;8;12;NA;NA;C. Pérez;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_142
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Béjar (Peña de la Cruz);40.36519;-5.77945;30TTK6472;1977;9;19;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;1;0;0;NA;NA;NA;NA;Altitud:1443m;NA;64_ornosa_143
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Candelario;40.35703;-5.7438;30TTK6771;1977;8;25;NA;NA; J.M. Marcos;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_144
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Candelario (Dehesa);40.35676;-5.75556;30TTK6671;1977;7;3;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_145
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Candelario (Sierra);40.36631;-5.7324;30TTK6872;1977;8;13;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;1;0;0;NA;NA;NA;NA;Altitud:1300m;NA;64_ornosa_146
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Candelario (Sierra);40.36631;-5.7324;30TTK6872;1977;8;27;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1300m;NA;64_ornosa_147
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Candelario (Sierra);40.36631;-5.7324;30TTK6872;1971;7;25;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1300m;NA;64_ornosa_148
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Cantagallo (Sierra);40.35534;-5.81437;30TTK6171;1977;7;12;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_149
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Navalmoral de Béjar;40.49988;-5.79681;30TTK6387;1977;7;9;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;1;0;0;NA;NA;NA;NA;Altitud:800m;NA;64_ornosa_150
+Bombus;Thoracobombus;humilis;quasimuscorum;Spain;Salamanca;Palomares de Béjar;40.41018;-5.78131;30TTK6477;1977;7;6;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1030m;NA;64_ornosa_151
+Bombus;Thoracobombus;muscorum;NA;Spain;Avila;Santa Lucía de la Sierra;40.34256;-5.59017;30TTK8069;1977;9;27;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:1240m;NA;64_ornosa_152
+Bombus;Thoracobombus;muscorum;NA;Spain;Salamanca;Béjar (en Valdesangil);40.40203;-5.74562;30TTK6776;1977;7;21;NA;NA;C. Ornosa y S.F. Gayubo;NA;3;0;0;0;NA;NA;NA;NA;Altitud:1030m;NA;64_ornosa_153
+Bombus;Thoracobombus;muscorum;NA;Spain;Salamanca;Fresnedoso;40.43014;-5.69962;30TTK7179;1977;8;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;5;0;0;0;NA;NA;NA;NA;Altitud:1047m;NA;64_ornosa_154
+Bombus;Thoracobombus;muscorum;NA;Spain;Avila;Gilbuena;40.41403;-5.61648;30TTK7877;1977;7;7;NA;NA;C. Ornosa y S.F. Gayubo;NA;6;1;0;0;NA;NA;NA;NA;Altitud:1060m;NA;64_ornosa_155
+Bombus;Thoracobombus;muscorum;NA;Spain;Salamanca;Santibáñez de Béjar;40.4863;-5.60749;30TTK7985;1982;8;23;NA;NA;M.J. Jaén;NA;0;0;1;0;NA;NA;NA;NA;Altitud:940m;NA;64_ornosa_156
+Bombus;Thoracobombus;pascuorum;dusmeti;Spain;Avila;Becedas;40.40396;-5.66322;30TTK7476;1977;5;6;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1090m;NA;64_ornosa_157
+Bombus;Thoracobombus;pascuorum;dusmeti;Spain;Avila;Tremedal;40.34203;-5.6137;30TTK7869;1977;9;27;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;2;0;0;NA;NA;NA;NA;Altitud:1400;NA;64_ornosa_158
+Bombus;Thoracobombus;pascuorum;dusmeti;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;6;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_159
+Bombus;Thoracobombus;pascuorum;dusmeti;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;14;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_160
+Bombus;Thoracobombus;pascuorum;dusmeti;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;23;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;2;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_161
+Bombus;Thoracobombus;pascuorum;dusmeti;Spain;Salamanca;Béjar (El Canalizo);40.36575;-5.75593;30TTK6672;1977;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_162
+Bombus;Thoracobombus;pascuorum;dusmeti;Spain;Salamanca;Béjar (El Canalizo);40.36575;-5.75593;30TTK6672;1977;7;16;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_163
+Bombus;Thoracobombus;pascuorum;dusmeti;Spain;Salamanca;Béjar (Carretera de Aldeacipreste);40.39247;-5.7688;30TTK6575;1976;8;2;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:800m;NA;64_ornosa_164
+Bombus;Thoracobombus;pascuorum;dusmeti;Spain;Salamanca;Béjar (El Castañar);40.40118;-5.78094;30TTK6476;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:1080m;NA;64_ornosa_165
+Bombus;Thoracobombus;pascuorum;dusmeti;Spain;Salamanca;Béjar (Llano Alto);40.37447;-5.76806;30TTK6573;1974;8;16;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_166
+Bombus;Thoracobombus;pascuorum;dusmeti;Spain;Salamanca;Candelario;40.35703;-5.7438;30TTK6771;1977;8;25;NA;NA;J.M. Marcos;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_167
+Bombus;Thoracobombus;pascuorum;dusmeti;Spain;Salamanca;Candelario (Dehesa);40.35676;-5.75556;30TTK6671;1977;8;27;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_168
+Bombus;Thoracobombus;pascuorum;dusmeti;Spain;Salamanca;Candelario (Sierra);40.36631;-5.7324;30TTK6872;1977;8;13;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1300m;NA;64_ornosa_169
+Bombus;Thoracobombus;pascuorum;dusmeti;Spain;Salamanca;Candelario (Sierra);40.36631;-5.7324;30TTK6872;1977;8;27;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1300m;NA;64_ornosa_170
+Bombus;Thoracobombus;pascuorum;dusmeti;Spain;Salamanca;Palomares de Béjar;40.41018;-5.78131;30TTK6477;1977;7;20;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:1030m;NA;64_ornosa_171
+Bombus;Thoracobombus;pascuorum;dusmeti;Spain;Salamanca;Peñacaballera;40.33619;-5.86066;30TTK5769;1977;7;12;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:875m;NA;64_ornosa_172
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Avila;Neila de San Miguel;40.41323;-5.6518;30TTK7577;1977;8;6;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_173
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Avila;Tremedal;40.34203;-5.6137;30TTK7869;1977;9;27;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;2;0;0;NA;NA;NA;NA;Altitud:1400m;NA;64_ornosa_174
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Cáceres;Garganta;40.32806;-5.82501;30TTK6068;1977;9;29;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;2;0;0;NA;NA;NA;NA;Altitud:1120m;NA;64_ornosa_175
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1976;5;9;NA;NA;A. Verdejo;NA;0;0;1;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_176
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;15;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_177
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;15;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;1;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_178
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1978;8;5;NA;NA;C. Calvo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_179
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Béjar (Carretera de Aldeacipreste);40.39247;-5.7688;30TTK6575;1977;7;2;NA;NA;C. Ornosa y S.F. Gayubo;NA;5;0;0;0;NA;NA;NA;NA;Altitud:800m;NA;64_ornosa_180
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Béjar (Carretera de Aldeacipreste);40.39247;-5.7688;30TTK6575;1978;3;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;0;1;0;NA;NA;NA;NA;Altitud:800m;NA;64_ornosa_181
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Béjar (Carretera de Cantagaílo);NA;;3055K8671;1977;5;28;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:850m;NA;64_ornosa_182
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Béjar (Carretera de Ciudad Rodrigo);40.4009;-5.79271;30TTK6376;1977;7;1;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:940m;NA;64_ornosa_183
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Béjar (El Castañar);40.40118;-5.78094;30TTK6476;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;9;0;1;0;NA;NA;NA;NA;Altitud:1080m;NA;64_ornosa_184
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Béjar (Llano Alto);40.37447;-5.76806;30TTK6573;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_185
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Béjar (Peña de la Cruz);40.36519;-5.77945;30TTK6472;1977;9;9;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1443m;NA;64_ornosa_186
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Candelario;40.35703;-5.7438;30TTK6771;1977;7;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_187
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Candelario (Dehesa);40.35676;-5.75556;30TTK6671;1977;7;27;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_188
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Candelario (Sierra);40.36631;-5.7324;30TTK6872;1977;7;13;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:1300m;NA;64_ornosa_189
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Candelario (Sierra);40.36631;-5.7324;30TTK6872;1977;7;17;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:1300m;NA;64_ornosa_190
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Candelario (Sierra);40.36631;-5.7324;30TTK6872;1977;8;27;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;1;0;0;NA;NA;NA;NA;Altitud:1300m;NA;64_ornosa_191
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Cantagallo;40.36405;-5.82651;30TTK6072;1977;8;29;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;2;0;0;NA;NA;NA;NA;Altitud:910m;NA;64_ornosa_192
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Fresnedoso;40.43014;-5.69962;30TTK7179;1977;8;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1047m;NA;64_ornosa_193
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Navacarros;40.39359;-5.72172;30TTK6975;1977;7;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1120m;NA;64_ornosa_194
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Navacarros;40.39359;-5.72172;30TTK6975;1977;7;19;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1120m;NA;64_ornosa_195
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Palomares de Béjar;40.41018;-5.78131;30TTK6477;1977;7;6;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;1;0;0;NA;NA;NA;NA;Altitud:1030m;NA;64_ornosa_196
+Bombus;Thoracobombus;pascuorum;maculatus;Spain;Salamanca;Peñacaballera;40.33619;-5.86066;30TTK5769;1977;7;2;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:875m;NA;64_ornosa_197
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Avila;Becedas;40.40396;-5.66322;30TTK7476;1977;8;6;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1090m;NA;64_ornosa_198
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Avila;Tremedal;40.34203;-5.6137;30TTK7869;1977;9;27;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1400m;NA;64_ornosa_199
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Cáceres;Hervás;40.26391;-5.86937;30TTK5661;1976;5;24;NA;NA;V. Velasco;NA;1;0;0;0;NA;NA;NA;NA;Altitud:650m;NA;64_ornosa_200
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1976;5;9;NA;NA;A. Verdejo;NA;0;0;1;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_201
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1976;8;3;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_202
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;8;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_203
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;6;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_204
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_205
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;17;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_206
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;7;23;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_207
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;8;8;NA;NA;C. Ornosa y S.F. Gayubo;NA;3;0;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_208
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1978;5;25;NA;NA;M.A. Higelmo;NA;0;0;1;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_209
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar (El Canalizo);40.36575;-5.75593;30TTK6672;1977;7;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;6;0;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_210
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar (El Canalizo);40.36575;-5.75593;30TTK6672;1977;7;16;NA;NA;C. Ornosa y S.F. Gayubo;NA;3;1;0;0;NA;NA;NA;NA;Altitud:1000m;NA;64_ornosa_211
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar (Carretera de Aldeacipreste);40.39247;-5.7688;30TTK6575;1976;8;2;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:800m;NA;64_ornosa_212
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar (Carretera de Aldeacipreste);40.39247;-5.7688;30TTK6575;1977;7;2;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:800m;NA;64_ornosa_213
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar (El Castañar);40.40118;-5.78094;30TTK6476;1974;7;7;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1080m;NA;64_ornosa_214
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar (El Castañar);40.40118;-5.78094;30TTK6476;1976;8;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1080m;NA;64_ornosa_215
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar (El Castañar);40.40118;-5.78094;30TTK6476;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;12;0;1;0;NA;NA;NA;NA;Altitud:1080m;NA;64_ornosa_216
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar (Llano Alto);40.37447;-5.76806;30TTK6573;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_217
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Béjar (Llano Alto);40.37447;-5.76806;30TTK6573;1981;8;15;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_218
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Candelario;40.35703;-5.7438;30TTK6771;1976;7;21;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_219
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Candelario;40.35703;-5.7438;30TTK6771;1978;5;24;NA;NA;M.J. Ortiz;NA;0;0;1;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_220
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Candelario (Dehesa);40.35676;-5.75556;30TTK6671;1977;7;3;NA;NA;C. Ornosa y S.F. Gayubo;NA;4;0;0;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_221
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Candelario (Dehesa);40.35676;-5.75556;30TTK6671;1977;7;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_222
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Candelario (Sierra);40.36631;-5.7324;30TTK6872;1977;8;13;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1300m;NA;64_ornosa_223
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Candelario (Sierra);40.36631;-5.7324;30TTK6872;1977;8;27;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1300m;NA;64_ornosa_224
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Candelario (Sierra);40.34887;-5.70815;30TTK7070;1977;7;3;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:1650m;NA;64_ornosa_225
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Cantagallo;40.36405;-5.82651;30TTK6072;1977;8;29;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:910m;NA;64_ornosa_226
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Fresnedoso;40.43014;-5.69962;30TTK7179;1977;8;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;3;0;0;0;NA;NA;NA;NA;Altitud:1047m;NA;64_ornosa_227
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Hoya;40.40314;-5.69854;30TTK7176;1977;7;18;NA;NA;C. Ornosa y S.F. Gayubo;NA;4;0;0;0;NA;NA;NA;NA;Altitud:1250m;NA;64_ornosa_228
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Navacarros;40.39359;-5.72172;30TTK6975;1977;7;5;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1120m;NA;64_ornosa_229
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Navacarros;40.39359;-5.72172;30TTK6975;1977;7;19;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1120m;NA;64_ornosa_230
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Navacarros;40.39359;-5.72172;30TTK6975;1977;7;22;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:1120m;NA;64_ornosa_231
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Palomares de Béjar;40.41018;-5.78131;30TTK6477;1977;7;3;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1030m;NA;64_ornosa_232
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Palomares de Béjar;40.41018;-5.78131;30TTK6477;1977;7;6;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;0;0;NA;NA;NA;NA;Altitud:1030m;NA;64_ornosa_233
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Palomares de Béjar;40.41018;-5.78131;30TTK6477;1977;8;20;NA;NA;C. Ornosa y S.F. Gayubo;NA;2;0;1;0;NA;NA;NA;NA;Altitud:1030m;NA;64_ornosa_234
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Palomares de Béjar;40.41018;-5.78131;30TTK6477;1977;9;10;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;1;0;0;NA;NA;NA;NA;Altitud:1030m;NA;64_ornosa_235
+Bombus;Thoracobombus;pascuorum;rufostriatus;Spain;Salamanca;Valleja de Río Frío (Puerto);40.42086;-5.71103;30TTK7078;1977;9;26;NA;NA;C. Ornosa y S.F. Gayubo;NA;1;0;0;0;NA;NA;NA;NA;Altitud:1200m;NA;64_ornosa_236
+Psithyrus;Psithyrus;rupestris;rupestris;Spain;Salamanca;Candelario (Sierra);40.36631;-5.7324;30TTK6872;1977;9;3;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;Carduus sp;NA;NA;Altitud:1300m;NA;64_ornosa_237
+Psithyrus;Psithyrus;rupestris;vasco;Spain;Salamanca;Candelario (Sierra);40.34887;-5.70815;30TTK7070;1977;8;13;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;Digitalis purpurea;NA;NA;Altitud:1650m;NA;64_ornosa_238
+Psithyrus;Allopsithyrus;barbutellus;NA;Spain;Avila;San Bartolomé de Béjar;40.40396;-5.66322;30TTK7476;1977;8;6;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;Robus sp.;NA;NA;Altitud:1150m;NA;64_ornosa_239
+Psithyrus;Allopsithyrus;barbutellus;NA;Spain;Salamanca;Béjar (El Castañar);40.40118;-5.78094;30TTK6476;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;Trifolium sp.;NA;NA;Altitud:1080m;NA;64_ornosa_240
+Psithyrus;Allopsithyrus;barbutellus;NA;Spain;Salamanca;Candelario (Sierra);40.34887;-5.70815;30TTK7070;1977;8;13;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;Digitalis purpurea;NA;NA;Altitud:1650m;NA;64_ornosa_241
+Psithyrus;Allopsithyrus;maxillosus;italicus;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1977;4;30;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;0;1;0;NA;Vicia sp;NA;NA;Altitud:950m;NA;64_ornosa_242
+Psithyrus;Allopsithyrus;maxillosus;italicus;Spain;Salamanca;Béjar (El Castañar);40.40118;-5.78094;30TTK6476;1977;7;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;2;0;0;NA;Trifolium sp.;NA;NA;Altitud:1080m;NA;64_ornosa_243
+Psithyrus;Allopsithyrus;maxillosus;italicus;Spain;Salamanca;Béjar (Monte Mario);40.37362;-5.80336;30TTK6273;1977;7;3;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;2;0;0;NA;Carduus sp.;NA;NA;Altitud:975m;NA;64_ornosa_244
+Psithyrus;Ashtonipsithyrus;vestalis;obenbergeri;Spain;Salamanca;Candelario (Sierra);40.34887;-5.70815;30TTK7070;1977;9;3;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;0;1;0;NA;Digitalis purpurea;NA;NA;Altitud:1650m;NA;64_ornosa_245
+Psithyrus;Metapsithyrus;campestris;NA;Spain;Avila;Neila de San Miguel;40.41323;-5.6518;30TTK7577;1977;7;6;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1150m;NA;64_ornosa_246
+Psithyrus;Metapsithyrus;campestris;NA;Spain;Salamanca;Béjar;40.40147;-5.76916;30TTK6576;1975;8;5;NA;NA;A. Verdejo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:950m;NA;64_ornosa_247
+Psithyrus;Metapsithyrus;campestris;NA;Spain;Salamanca;Béjar (Carretera de Ciudad Rodrigo);40.4009;-5.79271;30TTK6376;1977;6;4;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;0;1;0;NA;NA;NA;NA;Altitud:940m;NA;64_ornosa_248
+Psithyrus;Metapsithyrus;campestris;NA;Spain;Salamanca;Béjar (Carretera de Ciudad Rodrigo);40.4009;-5.79271;30TTK6376;1977;8;28;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:940m;NA;64_ornosa_249
+Psithyrus;Metapsithyrus;campestris;NA;Spain;Salamanca;Béjar (Monte Mario);40.37362;-5.80336;30TTK6273;1977;7;3;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:975m;NA;64_ornosa_250
+Psithyrus;Metapsithyrus;campestris;NA;Spain;Salamanca;Candelario (Dehesa);40.35676;-5.75556;30TTK6671;1977;8;27;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;1;0;0;NA;NA;NA;NA;Altitud:1126m;NA;64_ornosa_251
+Psithyrus;Metapsithyrus;campestris;NA;Spain;Salamanca;Candelario (Sierra);40.34887;-5.70815;30TTK7070;1977;8;13;NA;NA;C. Ornosa y S.F. Gayubo;NA;0;2;0;0;NA;NA;NA;NA;Altitud:1650m;NA;64_ornosa_252

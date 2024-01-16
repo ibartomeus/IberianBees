@@ -1,0 +1,29 @@
+﻿Genus;Subgenus;Species;Subspecies;Country;Province;Locality;Latitude;Longitude;Coordinate.precision;Year;Month;Day;Start.date;End.date;Collector;Determined.by;Female;Male;Worker;Not.specified;Reference.doi;Flowers.visited;Local_ID;Authors.to.give.credit;Any.other.additional.data;Notes.and.queries;uid
+Bombus;NA;pratorum;santonae;Spain;Albacete;Monte Almenaras;NA;NA;WH46;1989;5;6;NA;NA;Leopoldo Castro;;0;0;1;NA;NA;Helleborus sp.;Colección L. Castro (Teruel);;1600 m;NA;68_Ortiz_1
+Bombus;NA;pratorum;santonae;Spain;Albacete;Monte Almenaras: Puerto del Mosquito;NA;NA;WH46;1989;5;6;NA;NA;Leopoldo Castro;;1;0;0;NA;NA;Helleborus sp.;Colección L. Castro (Teruel);;1600 m;NA;68_Ortiz_2
+Bombus;NA;pratorum;santonae;Spain;Albacete;Cueva ahumada;NA;NA;WH45;1985;6;8;NA;NA;Leopoldo Castro;;1;1;0;NA;NA;NA;NA;;1000 m;NA;68_Ortiz_3
+Bombus;NA;pratorum;santonae;Spain;Albacete;Cueva ahumada;NA;NA;WH45;1985;6;8;NA;NA;Leopoldo Castro;;0;1;0;NA;NA;NA;NA;;1050 m;NA;68_Ortiz_4
+Bombus;NA;pratorum;santonae;Spain;Albacete;La Mesta;NA;NA;WH47;1985;6;9;NA;NA;Leopoldo Castro;;0;0;1;NA;NA;NA;NA;;1200 m;NA;68_Ortiz_5
+Bombus;NA;pratorum;santonae;Spain;Albacete;Puerto de las Crucetillas (Riópar);NA;NA;WH56;1985;6;8;NA;NA;Leopoldo Castro;;0;1;0;NA;NA;NA;NA;;1300 m;NA;68_Ortiz_6
+Bombus;NA;pratorum;santonae;Spain;Albacete;Tortas;NA;NA;WH56;1985;6;9;NA;NA;Leopoldo Castro;;0;1;0;NA;NA;NA;NA;;1350 m;NA;68_Ortiz_7
+Bombus;NA;pratorum;santonae;Spain;Almería;Sierra de Adra;NA;NA;VF87;2010;6;5;NA;NA;Francisco Rodríguez;;0;1;0;NA;NA;NA;NA;;697 m;Extensión Area de B. pratorum;68_Ortiz_8
+Bombus;NA;pratorum;santonae;Spain;Almería;Bayárcal;NA;NA;VG90;2014;7;8;NA;NA;Francisco Rodríguez;;0;2;0;NA;NA;NA;NA;;1700 m;Extensión Area de B. pratorum;68_Ortiz_9
+Bombus;NA;pratorum;santonae;Spain;Almería;Monte Calar Alto: Fuente de la Merendera;NA;NA;WG41;2011;7;12;NA;NA;Leopoldo Castro;;0;1;0;NA;NA;Lavandula sp.;NA;;1870 m;Extensión Area de B. pratorum;68_Ortiz_10
+Bombus;NA;pratorum;santonae;Spain;Granada;Sierra de Almijara: arroyo de la Almijara;NA;NA;VF38;2015;5;12;NA;NA;Alberto Tinaut;;0;1;0;NA;NA;NA;Colección Francisco José Ortiz-Sánchez (El ejido, Almería);;1196 m;Extensión Area de B. pratorum;68_Ortiz_11
+Bombus;NA;pratorum;santonae;Spain;Granada;La Zubia;NA;NA;VG50;2012;5;24;NA;NA;Manuel López;;0;0;1;NA;NA;Crataegus sp.;NA;;1320 m;NA;68_Ortiz_12
+Bombus;NA;pratorum;santonae;Spain;Granada;La Zubia;NA;NA;VG50;2014;6;5;NA;NA;Blas Pardilla;;0;1;0;NA;NA;NA;NA;;1651 m;NA;68_Ortiz_13
+Bombus;NA;pratorum;santonae;Spain;Granada;La Zubia;NA;NA;VG50;2014;6;6;NA;NA;Blas Pardilla;;0;2;0;NA;NA;NA;NA;;1638 m;NA;68_Ortiz_14
+Bombus;NA;pratorum;santonae;Spain;Granada;Monachi;NA;NA;VG60;2014;7;10;NA;NA;Blas Pardilla;;0;1;0;NA;NA;NA;NA;;2167 m;NA;68_Ortiz_15
+Bombus;NA;pratorum;santonae;Spain;Granada;Prado Negro;NA;NA;VG53;2014;5;29;NA;NA;Manuel López;;0;1;0;NA;NA;NA;NA;;1410 m;NA;68_Ortiz_16
+Bombus;NA;pratorum;santonae;Spain;Jaén;Orcera: río Madera;NA;NA;WH33;1989;3;25;NA;NA;Francisco Javier Ortiz-Sánchez;;5;0;0;NA;NA;NA;Colección Francisco Javier Ortiz-Sánchez (El ejido, Almería);;1200 m;NA;68_Ortiz_17
+Bombus;NA;pratorum;santonae;Spain;Jaén;Sierra de Cazorla: Las Correhuelas;NA;NA;WG19;1988;6;22;NA;NA;NA;;0;0;2;NA;NA;Lonicera arborea;Estación biológica de Doñana, CSIC (Sevilla);;1650 m;NA;68_Ortiz_18
+Bombus;NA;pratorum;santonae;Spain;Jaén;Sierra de Cazorla: Las Correhuelas;NA;NA;WG19;1988;6;22;NA;NA;NA;;0;1;0;NA;NA;Marrubium supinum;Estación biológica de Doñana, CSIC (Sevilla);;1650 m;NA;68_Ortiz_19
+Bombus;NA;pratorum;santonae;Spain;Jaén;Sierra de Cazorla: Las Correhuelas;NA;NA;WG19;1989;5;19;NA;NA;P. Jordano;;0;0;1;NA;NA;Prunus mahaleb;Estación biológica de Doñana, CSIC (Sevilla);;1650 m;NA;68_Ortiz_20
+Bombus;NA;pratorum;santonae;Spain;Jaén;Sierra de Cazorla: Las Correhuelas;NA;NA;WG19;1989;6;2;NA;NA;P. Jordano;;0;1;0;NA;NA;Prunus mahaleb;Estación biológica de Doñana, CSIC (Sevilla);;1650 m;NA;68_Ortiz_21
+Bombus;NA;pratorum;santonae;Spain;Jaén;Sierra de Cazorla: Las Correhuelas;NA;NA;WG19;1989;6;10;NA;NA;P. Jordano;;0;1;0;NA;NA;Thymus sp.;Estación biológica de Doñana, CSIC (Sevilla);;1650 m;NA;68_Ortiz_22
+Bombus;NA;pratorum;santonae;Spain;Jaén;Sierra de Cazorla: Quesada: Puerto Llorente;NA;NA;WG08;1990;4;12;NA;NA;Francisco Javier Ortiz-Sánchez;;0;1;1;NA;NA;NA;Colección Francisco José Ortiz-Sánchez (El ejido, Almería);;1450 m;NA;68_Ortiz_23
+Bombus;NA;pratorum;santonae;Spain;Jaén;La Garganta;NA;NA;WH33;1985;6;8;NA;NA;Leopoldo Castro;;0;0;1;NA;NA;NA;NA;;1450 m;NA;68_Ortiz_24
+Bombus;NA;pratorum;santonae;Spain;Jaén;La Iruela: Parador Nacional;NA;NA;WG09;1985;6;6;NA;NA;Leopoldo Castro;;0;0;1;NA;NA;NA;NA;;1150 m;NA;68_Ortiz_25
+Bombus;NA;pratorum;santonae;Spain;Jaén;Las Acebeas;NA;NA;WH34;1985;6;8;NA;NA;Leopoldo Castro;;0;1;1;NA;NA;NA;NA;;1500 m;NA;68_Ortiz_26
+Bombus;NA;pratorum;santonae;Spain;Jaén;Sierra de Cazorla: Nava del Espino;NA;NA;WG09;1987;5;25;NA;NA;Leopoldo Castro;;0;0;2;NA;NA;Berberis sp. Y Marrubium supinum;NA;;1440 m;NA;68_Ortiz_27
+Bombus;NA;pratorum;santonae;Spain;Jaén;Sierra de Cazorla: Seis Pinos;NA;NA;WG08;1987;5;23;NA;NA;Leopoldo Castro;;1;0;1;NA;NA;Berberis sp.  ;NA;;1550 m;NA;68_Ortiz_28
