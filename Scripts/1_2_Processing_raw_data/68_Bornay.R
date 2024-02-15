@@ -51,6 +51,9 @@ newdat$Not.specified[na_rows] <- 1
 newdat$Any.other.additional.data <- paste(newdat$HABITAT.FIELD.PLOT.CODE, newdat$HABITAT.FIELD.PLOTc_ODE, sep = "_")
 newdat$Any.other.additional.data <- gsub("_NA|NA_", "", newdat$Any.other.additional.data) #| works as the OR operator.
 
+#Put info from 'medio'-var under 'Notes.and.queries'
+newdat$Notes.and.queries <- newdat$medio
+
 #Remove empty rows
 newdat <- newdat[gsub("^\\s*$", "", newdat$Any.other.additional.data) != "", ]
 
@@ -97,8 +100,29 @@ for (i in 2:nrow(newdat)) {
 newdat$Latitude <- as.numeric(gsub(",", ".", newdat$Latitude))
 newdat$Longitude <- as.numeric(gsub(",", ".", newdat$Longitude))
 
-#Change coordinate system from RT90 to WGS 84
-##START WORKING HERE. NOT SURE WHAT COORD SYSTEM THEY HAVE.
+#Change coordinate system from UTM to WGS 84
+library(sp)
+library(sf)
+#Transform newdat to a spatial object with coordinates in UTM Zone 30 (valid for Spain).
+newdat_coords <- newdat[, c("Latitude", "Longitude")]
+
+newdat_sp <- SpatialPointsDataFrame(coords = cbind(newdat$Latitude, newdat$Longitude),
+                                    data = newdat_coords,
+                                    proj4string = CRS("+proj=utm +zone=30 +ellps=WGS84"))
+
+#Transform coordinates from UTM Zone 30 to WGS 84.
+newdat_wgs84 <- spTransform(newdat_sp, CRS("+proj=longlat +datum=WGS84"))
+
+#Save the new coordinates in the variables Latitude and Longitude.
+newdat$Longitude <- newdat_wgs84@coords[,1]
+newdat$Latitude <- newdat_wgs84@coords[,2]
+
+newdat_sf <- st_as_sf(newdat_wgs84) #Convert the SpatialPointsDataFrame to an sf object to be able to look at them in GIS.s
+# st_write(newdat_sf, "Bornay_test_coordinates.shp") #Looks good in QGIS. Points are in region Extramadura in Cáceres.
+
+#Add country and province
+newdat$Province <- "Cáceres"
+newdat$Country <- "Spain"
 
 #Reorder and drop variables
 newdat <- drop_variables(check, newdat) #No info is lost. Old vars are stored in new ones.
