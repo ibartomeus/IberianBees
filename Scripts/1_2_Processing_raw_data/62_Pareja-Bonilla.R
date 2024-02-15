@@ -15,6 +15,9 @@ newdat <- add_missing_variables(check, newdat)  #uid added.
 month_names <- c("january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december")
 newdat$Month <- match(trimws(newdat$Month), month_names) #Using trimws if the months are followed by a blank space.
 
+#Copy Coordinate.precision to Any.other.additional.data so that the info doesn't get lost.
+newdat$Any.other.additional.data <- paste(newdat$Coordinate.precision, "coordinate precision")
+
 #Reorder and drop variables
 newdat <- drop_variables(check, newdat) #No valuable info is lost
 

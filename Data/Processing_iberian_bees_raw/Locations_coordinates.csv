@@ -1,0 +1,1113 @@
+",Var1,Freq,Locality,Lat ,Long ,""Precision(site, city, natural park, etcÉ)"","
+"1,""""""Finca Zamadue?as"""""",248,Zamadue–as,41.698036,-4.708621,Site,"
+2,Toro,234,Toro,41.524042,-5.393639,City,
+3,Granja Escuela Jose Antonio,172,auditorio_Delibes,41.643131,-4.748269,Site,
+4,Villab??ez,115,,,,,
+5,Santo?a,105,SantoÐa,43.447315,-3.483581,Natural Park,Geotag taken from middle of Natural Park
+6,Traspinedo,100,,41.585523,-4.477209,Municipality,
+7,Do?ana,94,DoÐana,36.984063,-6.382262,National Park,Geotag taken from middle of park
+"8,""""""""""Finca Zamadue?as"""""""""",78,ZamadueÐas,41.698036,-4.708621,Site,"
+9,Hornillos,73,Hornillos,41.366347,-4.719036,Village,
+10,Quintanilla de Abajo,72,,41.625675,-4.36155,Municipality,
+11,Alba de los Cardaños,62,Alba de los Cardaños,42.908458,-4.718973,Village,
+12,Íscar,60,,41.351162,-4.53232,Municipality,
+"13,""""""Camino Hondo"""" Granja Escuela Jose Antonio"",60,auditorio_Delibes,,,,"
+14,El Pinar,60,,,,,
+15,Montes de Oca,54,,42.390258,-3.211928,Region,
+16,Cazorla,52,,38.125509,-2.718551,National Park,
+17,Cantalejo,49,,41.257376,-3.927324,Municipality,
+18,Villafranca del Bierzo,49,,42.608515,-6.808033,Village ,
+19,Batuecas,47,,40.420242,-6.187191,Natural park,
+20,Paredes de Nava,47,,42.152683,-4.692188,Municipality,
+21,Pe?afiel,44,PeÐafiel,41.59734,-4.120817,Town,
+22,Cigales,43,,41.757706,-4.697975,Municipality,
+23,Osera,43,,41.534312,-0.579094,Municipality,
+24,Papiol,41,,41.44657,-0.023773,Natural Park,
+25,Sanabria,41,,42.093411,-6.728564,Town ,
+26,Fuentiduena,39,FuentidueÐa,41.441263,-3.964435,Municipality,
+27,Sierra de Cazorla,39,,38.233389,-2.652265,Natural Park,
+28,Villanueva,39,,38.973984,-5.795797,Municipality,
+29,Mula,38,,38.039969,-1.491907,Municipality,
+30,Quintanilla de Yuso,38,,42.241368,-6.377228,Village,
+31,Valladolid,38,,41.63572,-4.732603,City,
+32,San Miguel de Arroyo,36,,41.443061,-4.460218,Municipality,
+33,Bejes,33,,43.24247,-4.64643,Village,
+34,Roldan,31,,37.797301,-1.007145,Pedanía of the Torre Pacheco municipality,
+35,Guisando,30,,40.213826,-5.13804,Municipality,
+36,Parc. 16 Granja Escuela Jose Antonio,30,auditorio_Delibes,41.643099,-4.747883,Site,Farm school
+37,Piedrafita del Cebrero,30,,42.726724,-7.021199,Municipality,
+"38,""""""Los ?lamos"""""",29,,,,,"
+39,Librilla,28,,37.886558,-1.354729,Village,
+40,Alcala de Henares,26,,40.481974,-3.365991,City,
+41,Fuensaldana,26,,41.706764,-4.765457,Municipality,
+42,Mojados,26,,41.431092,-4.664313,Municipality,
+"43,Perrozo,25,,43.117828,-4.550059,Site,""Perrozo is a place in the municipality of Cabezón de Liébana ( Cantabria , Spain )"""
+44,Salamanca,24,,40.966933,-5.663033,City,
+45,Fuentespina?,23,,41.633216,-3.686378,Municipality,
+"46,""""""Granja de Ma?ces"""""",,,,,,"
+47,Pastrana,21,,40.417562,-2.922062,Municipality ,
+48,Quintanilla de abajo,21,,41.624969,-4.36228,Municipality ,
+49,Tapia de Casariego,21,,43.570089,-6.944229,Municipality ,
+50,Arnuero,20,,43.470643,-3.568431,Municipality ,
+51,Alcazar?n,19,,,,,
+52,Guadalupe,19,,39.452567,-5.326872,Municipality,
+53,Padilla,19,,,,,Padilla de Abajo or Padilla de Arriba?
+54,parc.16,,,,,,
+55,La Alberca,18,,40.479137,-6.130809,Municipality,
+56,Trillayo,18,,43.186728,-4.593621,Town,
+"57,""""""Camino Hondo"""" Talud 1"",,,,,,"
+58,Quintanilla de Onesimo,17,,41.625226,-4.362065,Municipality,
+59,Taller Granja Escuela Jose Antonio,17,,41.643099,-4.747883,Farm School,
+60,Canduela,16,,42.83373,-4.188593,Hamlet,
+61,Herrera de Duero,16,,41.56388,-4.654119,Village,
+62,La Granja,16,,40.902606,-4.007481,Town,
+63,Simancas,16,,41.591506,-4.829746,Town/Municipality,
+"64,""""""Coto Bajo Matallana"""""",,,,,,"
+65,Cillorigo,15,,43.207121,-4.617695,Municipality,
+66,Pinar,15,,37.443427,-3.439457,Municipality,
+67,Torreblanca,,,40.220661,0.195476,Municipality,
+68,Torremormojon,15,,41.960689,-4.777859,Municipality,
+69,Villafuerte,15,,41.732688,-4.322961,Municipality,
+70,Castronuevo,14,,41.729828,-5.553757,Municipality,
+71,Paradilla del Alcor,14,,41.965189,-4.650572,Town,
+"72,""""""La Armedilla"""""",,,41.539134,-4.341443,Site,"
+73,La Flecha,13,,41.624045,-4.776945,Town,
+"74,La Ventosilla,13,,41.716004,-3.821389,Site,""""""Large Country house"""""""
+75,Villaseca,13,,,,,Numerous sites with same name
+"76,""""""Las Fuentes"""""",,,41.640932,-0.854461,Site,"
+"77,""""""Torreblanca"""" Torrepacheco"",12,,37.744156,-0.953992,Municipality,"
+78,Corchuela,12,,37.234705,-5.975069,Urban Park,
+79,San llorente,12,,41.686169,-4.067735,Municipality,
+80,Sierra de Los Ancares,12,,42.861291,-6.53639,Mountain range,
+81,Valdestillas,12,,41.479788,-4.771272,Town/Municipality,
+"82,""""""Camino Hondo"""""",,,37.318517,-5.405794,Road,"
+83,Alcala de Henares,11,,40.481452,-3.363245,City,
+84,Belmonte de Campos,11,,41.942699,-4.987337,Municipality,
+85,Cabo de Gata,11,,36.722179,-2.191724,Natural Park,
+86,Celadilla,11,,,,,
+87,Cieza,11,,38.240915,-1.420249,Town,
+88,Padron,11,,42.756043,-8.63178,Concello,
+89,Torremolinos,11,,36.626069,-4.512266,Municipality,
+"90,""""""Batuecas"""""",10,,40.452735,-6.120541,Valley region,"
+91,Bejar,10,,40.384822,-5.76128,Town/Municipality,
+92,La Parrilla,10,,41.536288,-4.532888,Municipality,
+93,Monte Torozos,10,,41.749386,-4.908322,Site,
+94,Parc. 1 Granja Escuela Jose Antonio,10,,41.643099,-4.747883,Farm School,
+95,Pedrosa del Rey,10,,41.55585,-5.203761,Municipality,
+96,San Bernardo,10,,41.630245,-4.26379,Site,
+97,San Llorente,10,,41.686153,-4.067928,Municipality,
+98,Sierra Nevada,10,,37.094072,-3.157595,Mountain Range,
+99,Sotoserrano,10,,40.434805,-6.031898,Municipality,
+100,Tariego,10,,41.904127,-4.481543,Municipality,
+101,Valoria de Alcor,10,,41.89921,-4.803117,Town,
+102,Villafrechos,10,,41.893061,-5.217834,Municipality,
+"103,""_""""Finca Zamadue?as""""_"",9,,,,,"
+"104,""""""Camino Hondo"""""",,,37.976124,-1.145156,Road,"
+"105,""""""La Armedilla"""" Cogeces del Monte"",9,,41.539382,-4.340949,Site,"
+"106,""""""La Senovilla"""" Olmedo"",9,,41.287778,-4.692511,Road site in Olmedo,"
+"107,""""""Montes Torozos"""""",,,41.749386,-4.908322,Site,"
+108,Ajo,9,,43.479597,-3.611941,City,
+109,Corcos,9,,41.809604,-4.693243,Municipality,
+110,Guarrate,9,,41.288951,-5.442673,Municipality,
+111,Hervas,9,,40.274025,-5.860139,Town,
+112,Ponferrada,9,,42.548845,-6.596978,City,
+113,Puenteduero,9,,41.550905,-4.7925,Town,
+114,Sierra Cazorla,9,,38.15568,-2.652265,Natural Park,
+115,Torquemada,9,,42.033988,-4.319882,Municipality,
+116,_Camino Hondo_,,,,,,
+"117,""""""Camino Hondo"""""",,,,,,"
+"118,""""""El Barcial"""""",,,41.951498,-5.283,Municipality,Barcial del Barco?"
+"119,""""""El Barcial"""""",,,41.951498,-5.283,Municipality,Barcial del Barco?"
+120,Albolote,8,,37.228266,-3.653929,Town,
+121,Astorga,8,,42.454798,-6.053553,Town,
+122,Becerril,8,,40.710191,-3.995595,Municipality,
+123,Caballar,8,,41.121413,-3.964316,Municipality,
+124,Ciudad Ducal,8,,40.582314,-4.375178,City,
+125,Curiel,8,,41.640918,-4.099019,Municipality,Curiel de Duero
+126,El Alquian,8,,36.852768,-2.355391,Municipality,
+127,Escalante,8,,43.436844,-3.513614,Municipality,
+128,Granja de Maices,,,,,,
+129,Huelva,8,,37.262939,-6.941837,City,
+130,Isla,8,,43.493883,-3.549992,Village,
+131,La Bazana,8,,38.275825,-6.745239,Hamlet,
+132,La Cisterniga,8,,41.611141,-4.685092,Municipality,
+133,Padilla ,8,,,,,Padilla de Abajo or Padilla de Arriba?
+134,Sierra de la Culebra,8,,41.899864,-6.324685,Mountain Range,
+135,Tineo,8,,43.339136,-6.474996,Municipality,
+136,Valero,8,,40.534915,-5.941862,Municipality,
+"137,""""""Corrall Jose Antonio"""""",,,,,,"
+"138,""""""Coto Bajo de Matallana"""" Villalba de los Alcores"",7,,41.900884,-4.864371,Site,"
+"139,""""""El Aguilucho"""" Librilla"",7,,37.886829,-1.354663,Village,"
+140,Mojados,7,,41.43122,-4.664356,Municipality,Las fuentes- site?
+"141,""""""Pinar"""""",7,,37. 443547,-3.4395,Municipality,"
+"142,""""""Torreblanca"""""",,,40.220661,0.195476,Municipality,"
+143,Balsicas,7,,37.818656,-0.956613,Village,
+144,Candeleda,7,,40.15602,-5.242303,Town,
+145,Fuentespina,7,,41.633505,-3.68655,Municipality,
+146,Mora de Luna,7,,42.821465,-5.845704,Town,
+147,Navafria,7,,41.054354,-3.823593,Municipality,
+148,Olmedo,7,,41.291901,-4.710961,Municipality,
+149,Retuerta,7,,42.029585,-3.506678,Municipality,
+150,Saucelle,7,,41.048218,-6.752926,Municipality,
+151,Valencia del Ventoso,7,,38.266116,-6.474,Municipality,
+"152,""""""Cerro Contiendas"""" Granja Escuela Jose Antonio"",6,,41.643099,-4.747883,Farm School,"
+"153,""""""Corral Jose Antonio"""""",,,,,,"
+"154,""""""El Barcial"""" Toro"",6,,41.951498,-5.283,Barcial del Barco?,"
+155,Armu?a,6,,,,,
+156,El Alquian,6,,36.85294,-2.355606,Municipality,
+157,La Fregeneda,6,,40.987703,-6.867205,Municipality,
+158,Naranco,6,,43.383238,-5.866474,Site,
+159,Puerto de Manzanal,6,,42.590603,-6.221759,Town,
+160,Sardin,6,,43.296605,-5.845774,Site,
+161,Villanueva de los Castillejos,6,,37.5003,-7.261676,Town/Municipality,
+"162,""""""Colina sobre puente"""" Toro"",5,,41.525359,-5.392351,Town/Municipality,"
+"163,""""""Coto Bajo Matallana"""" Villalba de los Alcores"",5,,41.863553,-4.859384,Municipality,"
+"164,""""""Los Saurines"""" Balsicas"",5,,37.81869,-0.956785,Town,"
+"165,""""""Naranco"""""",5,,43.383238,-5.866474,Site,"
+"166,""""""Zona vi?as"""" Granja Escuela Jose Antonio"",5,,41.643099,-4.747883,Farm School,"
+167,Antonanes del Paramo,5,,42.403282,-5.789363,Town,
+168,Barcelona,5,,41.398632,2.157692,City,
+169,Canet,5,,41.598654,2.577083,Municipality,Canet de Mar?
+170,Castelseras,5,,40.981343,-0.145804,Municipality,
+171,Cogeces del Monte,5,,41.509872,-4.318593,Municipality,
+172,Corchuela ,5,,39.987294,-5.18112,Park,
+173,corral J.Antonio,,,,,,
+174,Granja Escuela Jose Antonioparc.16,5,,41.643099,-4.747883,Farm School,
+175,Maderuelo,5,,41.485463,-3.523701,Municipality,
+176,Mayalde,5,,41.251445,-5.797864,Municipality,
+177,na,5,,,,,
+178,Navarredonda,5,,40.362387,-5.131121,Municipality/Town,
+"179,""nidos """"El Barcial"""""",,,41.951498,-5.283,Municipality,"
+180,Ojeda,5,,,,,
+181,Paguera,5,,39.539521,2.450143,Town,
+182,Pouzdrany,5,,,,Czech Republic?,
+183,Puebla de Valdavia,5,,42.673901,-4.609598,Municipality,
+184,Pueblonuevo del Guadiana,5,,38.923502,-6.756794,Town,
+185,Puerto de San Glorio,5,,43.066931,-4.765878,Site - Road through mountains,
+186,San Miguel de Bernuy,5,,41.398608,-3.951765,Municipality,
+187,Tafira Alta,5,,28.053042,-15.466195,Suburb,
+188,Tierra de Campos,5,,42.075632,-4.93534,Natural region,
+189,Villaveza,,,41.919684,-5.678276,Municipality,
+190,?,4,,,,,
+"191,""""""Berria"""""",,,,,Newspaper?,"
+"192,""""""Corral Jose Antonio"""""",,,,,,"
+"193,""""""Corral jose Antonio"""""",,,,,,"
+"194,""""""El Aguilucho"""""",,,,,,"
+"195,""""""Finca Boris Calero"""""",,,,,,"
+"196,""""""Hotel Las Batuecas"""""",,,40.490226,-6.112098,Site,"
+"197,""""""La Gonzala"""" Villanueva Castillejos"",4,,37.499959,-7.271891,Town,"
+"198,""""""La Senovilla"""""",,,,,,"
+"199,""""""Las Fuentes"""" Mojados"",4,,41.443547,-4.672135,Site,"
+"200,""""""Paramo de Matallana"""""",,,41.8667,-4.85,,"
+"201,""""""vi?as"""""",,,,,,"
+"202,""""""Vi?as"""""",,,,,,"
+"203,""""""Villaveza"""""",,,41.919732,-5.678212,Villaveza del Agua? ,"
+204,Aldehuela,4,,40.267646,-1.058236,Site,
+205,Bu?aco?,4,,,,,
+206,Cairo,4,,30.044291,31.235568,Capital of Egypt,
+207,Cancarix,4,,38.420505,-1.570298,Town,
+208,Carraduero,4,,41.602232,-4.548941,Site,
+209,Cascon de la Nava,4,,42.056786,-4.644565,Hamlet,
+210,Chane,4,,41.338943,-4.426661,Municipality,
+211,Galizano,4,,43.469343,-3.671774,Municipality,
+212,La Cisterniga,4,,41.611334,-4.685092,Municipality,
+213,Langayo,4,,41.569921,-4.198091,Municipality,
+214,lindero p.16,,,,,,
+215,Lindero p.16,,,,,,
+216,Marbella,4,,36.509893,-4.882497,City,
+217,Monegros (2),4,,41.743743,-0.307759,County,
+218,Montes Torozos,,,41.691799,-4.984308,Mountain site,
+219,Nava de los Correhuelas,,,37.926882,-2.866572,Site,
+220,Pallares,4,,38.110926,-6.15111,Village,
+221,parc. 16 ,4,,41.643099,-4.747883,,
+222,Parc. 16,,,,,,
+223,Parc. 21,,,,,,
+224,parc.16,,,,,,
+225,Pesqueruela,4,,41.59486,-4.839061,Valladolid Province,
+226,Pola de Lena,4,,43.157901,-5.828454,Town,
+227,Potes,4,,43.151483,-4.622905,Municipality,
+228,Priego,4,,37.438515,-4.198406,Town,
+229,Puerto de Puerto de San Glorio,4,,43.066931,-4.765878,Mountain ,
+230,Roblehondo,,,,,,
+231,Rodillo,4,,,,,
+"232,S. Miguel de Arroyo,4,,""41,442,884"",""-4,460,304"",Municipality,"
+"233,Salda?a,4,,""42,516,648"",""-4,738,471"",Town,"
+"234,San Bernando,4,,""41,630,221"",""-4,264,090"",Village,"
+"235,San Esteban de la Sierra,4,,""40,506,279"",""-5,905,857"",Village,"
+"236,Santa Eulalia de Tabara,4,,""41,809,007"",""-5,851,291"",Locality,"
+"237,Sebulcor,4,,""41,271,133"",""-3,885,056"",Municipality,"
+"238,Sep?lveda,4,,""41,297,642"",""-3,751,006"",Municipality,"
+"239,Sepulveda,4,,""41,297,642"",""-3,751,006"",Municipality,"
+"240,Talavera,4,,""39,961,068"",""-4,830,723"",City,"
+"241,taller Granja Escuela Jose Antonio,4,,""41,643,131"",""-4,748,269"",Site,"
+"242,Tamames,4,,""40,656,533"",""-6,106,046"",Municipality,"
+"243,Tordesillas,4,,""41,501,587"",""-5,000,507"",Town,"
+"244,Trescasas,4,,""40,959,979"",""-4,037,829"",Municipality,"
+"245,Villalba de los Alcores,4,,""41,863,753"",""-4,859,276"",Municipality,"
+"246,Zavist,4,Czech,""49,973,201"",""14,400,432"",District,"
+"247,""""""Camino Hondo"""""",,,""37,318,546"",""-5,405,757"",Street,"
+"248,""""""Casa Director"""""",,,,,,"
+"249,""""""Casa Rafael Lopez"""""",,,,,,"
+"250,""""""Corral J. Antonio"""""",,,,,,"
+"251,""""""El Cuartelillo"""""",3,,,,,"
+"252,""""""El lavadero"""" Santa Cruz de Tenerife"",3,,""28,461,779"",""-16,254,304"",City,"
+"253,""""""La Senovilla"""""",,,,,,"
+"254,""""""Los Saurines"""""",,,""37,790,561"",-0.972687,Golf Resort,"
+"255,""""""San Mam?s"""" Langayo"",3,,,,,"
+"256,""""""Zona del Castillo"""""",,,,,,"
+257,10 km E,3,,,,,
+258,30 km. E,3,,,,,
+"259,Alar del Rey,3,,""42,659,431"",""-4,310,091"",Municipality,"
+"260,Aldearrubia,3,,""41,007,159"",""-5,499,243"",Village,"
+261,Almendros casa Director,,,,,,
+"262,Aniezo,3,,""43,145,539"",""-4,537,506"",Hamlet,"
+"263,Aspe,3,,""38,343,923"",-0.768683,Town,"
+"264,Autilla del Pino,3,,""41,990,445"",""-4,631,599"",Municipality,"
+"265,Ayacata,3,,""27,852,095"",""-15,443,711"",District,"
+"266,Boadilla del Camino,3,,""42,259,522"",""-4,346,439"",Municipality,"
+"267,C?rdoba,3,,""37,891,107"",""-4,778,821"",City,"
+"268,Campaspero,3,,""41,493,515"",""-4,195,086"",Locality,"
+269,Carbonero,3,,,,,
+"270,Castillo de Sep?lveda,3,,""41,337,631"",""-3,789,226"",Village,"
+"271,Corral vi?as Granja Escuela Jose Antonio,3,,""41,643,131"",""-4,748,269"",Site,"
+"272,Dobrichovice,3,,""49,921,292"",""14,280,128"",Town,"
+"273,Fuentedue?a,3,,""41,440,683"",""-3,965,115"",Municipality,"
+"274,Fuentes de N.,3,,""42,082,934"",""-4,783,144"",Municipality,"
+"275,Fuentes de Nava,3,,""42,082,934"",""-4,783,144"",Municipality,"
+"276,Garcibuey,3,,""40,515,759"",""-5,994,369"",Village,"
+"277,Granja Escuela Jose Antonio,,,""41,643,131"",""-4,748,269"",Site,"
+"278,Guriezo,3,,""43,334,012"",""-3,317,135"",Town,"
+"279,Hinojos,3,,""37,291,159"",""-6,380,341"",Municipality,"
+"280,Ledigos,3,,""42,354,455"",""-4,864,843"",Municipality,"
+"281,Linares,3,,""38,096,523"",""-3,635,743"",City,"
+282,lindero 16-17,,,,,,
+"283,Medina de Pomar,3,,""42,928,395"",""-3,487,771"",Municipality,"
+"284,Mijas,3,,""36,593,973"",""-4,638,094"",Town,"
+"285,Miranda del Casta?ar,3,,""40,483,359"",""-5,996,038"",Municipality,"
+"286,Montemayor de Pililla,3,,""41,509,008"",""-4,458,141"",Municipality,"
+"287,Montes Torozos,3,,""41,698,464"",""-4,998,041"",Wilderness Area,"
+"288,Neila de San M.,3,,""40,423,298"",""-5,651,463"",Village,"
+"289,Noja,3,,""43,483,741"",""-3,526,501"",Municipality,"
+"290,Olmos de Ojeda,3,,""42,722,105"",""-4,425,889"",Municipality,"
+291,p.16,,,,,,
+292,parc. 16,,,,,,
+"293,Parc. 17 Granja Escuela Jose Antonio,3,,""41,643,131"",""-4,748,269"",Site,"
+294,Parc.24,,,,,,
+"295,Pino del R?o,3,,""42,645,031"",""-4,807,296"",Municipality,"
+"296,Plasencia,3,,""40,035,246"",""-6,083,929"",City,"
+"297,Portilla de Padornelo,3,,""42,032,766"",""-6,836,244"",Mountain Pass,"
+298,Puebla del M.,3,,,,,
+"299,Quintana,3,,""43,267,702"",""-6,307,111"",Municipality,"
+300,Reina,3,,,,,
+"301,Renedo,3,,""43,353,569"",""-3,951,279"",Village,"
+"302,S.Miguel de Arroyo,3,,""41,442,916"",""-4,460,647"",Municipality,"
+"303,Sanchiricones(vecinos),3,,""40,778,908"",""-5,877,738"",Municipality,"
+"304,Sarria,3,,""42,773,518"",""-7,427,432"",Municipality,"
+305,Slovakia orient.,3,,,,,
+"306,Sotillo de la Adrada,3,,""40,292,896"",""-4,585,354"",Municipality,"
+"307,Sotillo de Sanabria,3,,""42,091,743"",""-6,721,177"",Locality,"
+"308,Toro,3,,""41,524,877"",""-5,394,068"",Town,"
+"309,Torozos,3,,""41,698,464"",""-4,998,041"",Wilderness Area,"
+"310,Torrepacheco,3,,""37,743,579"",-0.953734,Municipality,"
+"311,Tres Casas,3,,""40,959,822"",""-4,037,829"",Municipality,"
+"312,Val de Santa Mar?a,3,,""41,965,367"",""-6,211,316"",Locality,"
+"313,Valdestillas,3,,""41,478,422"",""-4,771,916"",Municipality,"
+"314,Vecinos,3,,""40,778,908"",""-5,877,738"",Municipality,"
+"315,Villamuriel,3,,""41,948,081"",""-4,514,387"",Town,"
+"316,Villamuriel de Cerrato,3,,""41,948,081"",""-4,514,387"",Town,"
+"317,Vivero,3,,""43,663,697"",""-7,594,581"",Town,"
+"318,Toro,2,,""41,524,877"",""-5,394,068"",Town,"
+319,_Los ?lamos_,2,,,,,
+"320,""""""Buciero"""""",,,,,,"
+"321,""""""Camino Hondo"""" y entre parc. 19 y 21 Granja Escuela Jose Antonio"",2,,""37,318,546"",""-5,405,757"",Site,"
+"322,""""""Camino Hondo"""""",,,""37,318,546"",""-5,405,757"",Site,"
+"323,""""""chopera"""" Granja Escuela Jose Antonio"",2,,""41,643,131"",""-4,748,269"",Site,"
+"324,""""""colina sobre puente"""""",,,,,,"
+"325,""""""El Aguilucho"""""",,,,,,"
+"326,""""""El Pinar"""""",2,,,,,"
+"327,""""""faro Berria"""""",,,,,,"
+"328,""""""Faro Berria"""""",,,,,,"
+"329,""""""Finca Carraduero"""""",,,,,,"
+"330,""""""Finca Sr.Trigo"""" Tordesillas"",2,,""41,514,169"",""-4,994,456"",Finca,"
+"331,""""""La Cumbre"""""",2,,""39,405,177"",""-5,975,094"",Municipality,"
+"332,""""""Las Fuentes"""""",,,,,,"
+"333,""""""Los Chozones"""""",2,,""40,014,243"",""-6,426,586"",Walking Trail,"
+"334,""""""Los Saurines"""""",2,,""37,790,561"",-0.972687,Golf Resort,"
+"335,""""""Los Saurines"""" Balsicas"",,,""37,790,561"",-0.972687,Golf Resort,"
+"336,""""""Los Saurines"""""",,,""37,790,561"",-0.972687,Golf Resort,"
+"337,""""""Los Saurines"""""",,,""37,790,561"",-0.972687,Golf Resort,"
+"338,""""""Los Saurines"""""",,,""37,790,561"",-0.972687,Golf Resort,"
+"339,""""""Los Saurines"""""",,,""37,790,561"",-0.972687,Golf Resort,"
+"340,""""""Los Saurines""""Balsicas y """"El Aguilucho"""""",2,,""37,790,561"",-0.972687,Golf Resort,"
+"341,""""""San Mart?n"""""",,,""43,246,187"",""-6,003,710"",Parish,"
+"342,""""""Sanchiricones"""""",,,""40,812,111"",""-5,874,009"",Region,"
+"343,""""""Tierra de Campos"""""",,,""42,085,315"",""-4,940,833"",Region,"
+"344,""""""Villaguer"""""",,,,,,"
+345,20 km E,2,,,,,
+"346,Abades,2,,""28,144,068"",""-16,443,012"",Village,"
+"347,Aguilafuente,2,,""41,227,327"",""-4,111,252"",Municipality,"
+"348,Ajo,,,""43,478,616"",""-3,612,413"",Town,"
+"349,Aldeaso?a,2,,""41,471,888"",""-4,056,067"",Municipality,"
+350,Algeria,,,,,,
+"351,Alhama,2,,""37,003,288"",""-3,988,961"",Town,"
+"352,Alhaurin,2,,""36,642,432"",""-4,687,039"",Town,"
+"353,Andavias,2,,""41,596,409"",""-5,858,128"",Municipality,"
+"354,Arapiles,2,,""40,893,107"",""-5,644,834"",Village,"
+"355,Atarfe,2,,""37,222,838"",""-3,688,865"",City,"
+"356,Ateca,2,,""41,330,035"",""-1,791,748"",Municipality,"
+"357,Bejar,,,""40,385,345"",""-5,756,816"",Town,"
+"358,Ba?os de Montemayor,2,,""40,318,848"",""-5,857,481"",Municipality,"
+"359,Barcarrota,2,,""38,516,384"",""-6,850,081"",Municipality,"
+"360,Barcial de la Loma,2,,""41,951,282"",""-5,283,472"",Municipality,"
+"361,Bejes,2,,""43,242,507"",""-4,646,307"",Locality,"
+"362,Bejes y Puerto de San Glorio,2,,""43,066,539"",""-4,765,931"",Mountain Pass,"
+"363,Bejes,,,""43,242,351"",""-4,646,251"",Locality,"
+"364,Benidorm,2,,""38,539,618"",-0.123301,City,"
+"365,Beranga,2,,""43,414,756"",""-3,577,453"",Locality,"
+"366,Bienvenida,2,,""38,298,091"",""-6,209,496"",Municipality,"
+"367,Bo?ar,2,,""42,865,879"",""-5,323,655"",Municipality,"
+"368,Bohemia,2,Czech,""50,044,484"",""14,443,818"",Region,"
+"369,Burgos,2,,""42,343,153"",""-3,701,218"",City,"
+370,C?rtama,2,,,,,
+371,Cabezuela y Escalona,2,,,,,
+"372,Cabo de Gata y Sierra de Filabres,2,,""36,721,968"",""-2,191,584"",Natural Park,"
+"373,Cabrerizos,2,,""40,975,535"",""-5,611,665"",Municipality,"
+"374,Calahorra de Boedo,2,,""42,574,225"",""-4,384,909"",Municipality,"
+"375,Calatayud,2,,""41,351,675"",""-1,640,458"",Municipality,"
+376,camino cerca de tejera,,,,,,
+"377,Candelario,2,,""44,330,793"",""-5,745,033"",Municipality,"
+"378,Carbajales de Alba,2,,""41,652,174"",""-5,996,549"",Village,"
+"379,Carbonera?,2,,""37,003,916"",""-1,934,542"",Municipality,"
+"380,Carbonero el Mayor,2,,""41,120,984"",""-4,266,644"",Municipality,"
+381,Carcos,2,,,,,
+382,casa Rafael Lopez,,,,,,
+"383,Chamonix,2,France,""45,946,064"",""6,933,759"",Commune,"
+384,Coreos,2,,,,,
+385,Coreos????,2,,,,,
+386,Coreos??????????,2,,,,,
+"387,Corrales,2,,""37,273,829"",""-6,988,598"",District,"
+"388,Cubillo de Castrej?n,2,,""42,808,593"",""-4,567,812"",Locality,"
+"389,Cuenca de Campos,2,,""42,058,984"",""-5,055,018"",Municipality,"
+390,de los nidos de Megachile,2,,,,,
+391,de los nidos de Megachile,,,,,,
+"392,Dehesa de Candelario,2,,""40,325,993"",""-5,767,476"",Site,"
+"393,Duero,2,,""41,493,738"",""-5,481,435"",River,"
+394,E. Lansing,2,,,,,
+"395,El Escorial,2,,""40,588,959"",""-4,147,813"",Site,"
+396,Fennia N,2,,,,,
+"397,Fermoselle,2,,""41,316,162"",""-6,394,112"",Village,"
+"398,Fregeneda,2,,""40,988,424"",""-6,868,192"",Municipality,"
+"399,Fresno del R?o,2,,""42,681,843"",""-4,816,695"",Municipality,"
+"400,Fuentelc?sped?,2,,""41,592,041"",""-3,640,223"",Municipality,"
+"401,Fuentes Blancas,2,,""42,339,042"",""-3,651,902"",Green Zone,"
+"402,G?ejar Sierra,2,,""37,159,019"",""-3,440,469"",Municipality,"
+"403,Granada,2,,""37,177,727"",""-3,598,997"",City,"
+"404,Granja Escuela Jose Antonio,2,,""41,643,131"",""-4,748,269"",Site,"
+"405,Grazalema,2,,""36,758,652"",""-5,368,704"",Village,"
+406,Hamad?n?,2,,,,,
+"407,Hontoria,2,,""43,446,037"",""-4,911,855"",Parish,"
+"408,Jarandilla,2,,""40,128,126"",""-5,658,942"",Municipality,"
+"409,Juarros de Voltoya,2,,""41,030,561"",""-4,519,295"",Municipality,"
+410,Kamenica n. Hr.,2,,,,,
+"411,Kermanshahan,2,Iran,""34,340,875"",""47,093,804"",City,"
+"412,Klanovice,2,,""50,093,922"",""14,665,964"",District,"
+"413,La Herguijuela,2,,""40,395,333"",""-5,254,255"",Municipality,"
+414,La Honfria,,,,,,
+"415,La Maya,2,,""40,686,686"",""-5,612,927"",Municipality,"
+"416,La Solana(b),2,,""38,943,187"",""-3,237,482"",Municipality,"
+417,Labrilla,2,,,,,
+"418,Langre,2,,""43,473,679"",""-3,699,924"",Town,"
+"419,Las Rozas,2,,""40,519,565"",""-3,908,584"",Municipality,"
+"420,Lebanza,2,,""42,968,836"",""-4,526,471"",Locality,"
+"421,Ledesma,2,,""41,087,897"",""-6,001,688"",Town,"
+"422,Linares de Riofr?o,2,,""40,580,927"",""-5,918,602"",Municipality,"
+"423,Lindero chopos Granja Escuela Jose Antonio,2,,""41,643,131"",""-3,885,281"",Site,"
+"424,Lumbrales,2,,""40,935,188"",""-6,719,882"",Municipality,"
+425,Lusignan,,,,,,
+"426,Malard,2,Iran,""35,690,214"",""50,984,480"",District,"
+"427,Medina de las Torres,2,,""38,342,051"",""-6,411,848"",Municipality,"
+"428,Megeces,2,,""41,407,173"",""-4,565,997"",Municipality,"
+"429,Mejeces de ?scar,2,,""41,407,173"",""-4,565,997"",Municipality,"
+"430,Mi?anes,2,,""42,422,287"",""-4,570,381"",Locality,"
+"431,Moravia merid,2,,""49,798,755"",""17,063,608"",Region,"
+"432,MORAVIA merid,2,,""49,798,755"",""17,063,608"",Region,"
+"433,Moravia merid.,2,Czech,""49,798,755"",""17,063,608"",Region,"
+"434,Moya,2,,""39,948,037"",""-1,368,034"",Municipality,"
+"435,Mu?ovela,2,,""40,903,577"",""-5,779,824"",Finca,"
+"436,Museum Leiden,,,""52,155,307"",""4,501,006"",Site,"
+"437,Museum Leiden,,,""52,155,307"",""4,501,006"",Site,"
+"438,N. Correhuelas,,,""37,926,739"",""-2,866,712"",Site,"
+"439,Nava de las Correhuelas,2,,""37,926,739"",""-2,866,712"",Site,"
+"440,""nidos de """"El Barcial"""""",,,,,,"
+"441,nidos Granja Escuela Jose Antonio,2,,""41,643,131"",""-4,748,269"",Site,"
+"442,Orgaz,2,,""38,640,724"",""-3,885,281"",Municipality,"
+"443,Padilla de Duero,2,,""41,612,677"",""-4,163,444"",Locality,"
+"444,Palencia,2,,""42,009,166"",""-4,531,074"",City,"
+"445,Palma de Mallorca,2,,""39,570,464"",""2,649,161"",City,"
+"446,Pantano de Linares,2,,""41,496,695"",""-3,511,431"",Site,"
+"447,Parc. 1 y 16 Granja Escuela Jose Antonio,2,,""41,643,131"",""-4,748,269"",Site,"
+"448,Parc. 1-3 Granja Escuela Jose Antonio,2,,""41,643,131"",""-4,748,269"",Site,"
+"449,Parc. 19-21 Granja Escuela Jose Antonio,2,,""41,643,131"",""-4,748,269"",Site,"
+450,parc.1,,,,,,
+451,Parc.1,,,,,,
+452,parc.16-17,,,,,,
+453,Pedrosa de la C.,2,,,,,
+"454,Pido,2,,""43,127,236"",""-4,794,881"",Locality,"
+"455,Pinar de Antequera,2,,""41,597,202"",""-4,755,031"",Village,"
+"456,Pino del Rio,2,,""42,645,047"",""-4,807,532"",Municipality,"
+"457,Playa Porto Novo(por Cillero),2,,""42,398,095"",""-8,823,205"",Beach,"
+458,Ponte de Cabacas,2,,,,,
+"459,Portilla del Padornelo,2,,""42,033,041"",""-6,835,965"",Village,"
+"460,Pradochano,2,,""40,006,786"",""-6,216,622"",Village,"
+"461,Puebla de Mula,2,,""38,036,071"",""-1,445,753"",Village,"
+"462,Puente Duero,2,,""41,551,765"",""-4,792,092"",Locality,"
+463,Puente Herrera,2,,,,,
+"464,Puente Viesgo,2,,""43,298,478"",""-3,967,988"",Municipality,"
+"465,Puerto de Cabuerniga,2,,""43,062,991"",""-4,232,379"",Site,"
+466,Puerto de la Mazorra,2,,,,,
+"467,Puerto de la Ragua,2,,""37,113,981"",""-3,029,384"",Site,"
+"468,Puerto de La Ragua,2,,""37,113,981"",""-3,029,384"",Site,"
+"469,Puerto de Ragua,2,,""37,113,981"",""-3,029,384"",Site,"
+"470,Puerto Manzanal,2,,""42,590,248"",""-6,221,845"",Locality,"
+"471,Quemada,2,,""41,700,066"",""-3,576,446"",Municipality,"
+"472,Quintanaruz,2,,""42,566,396"",""-3,591,325"",Locality,"
+"473,Radotin,2,,""49,986,489"",""14,355,499"",District,"
+"474,Remesal,2,,""42,059,086"",""-6,549,161"",Locality,"
+"475,Riofr?o de Riaza,2,,""41,246,871"",""-3,449,647"",Municipality,"
+"476,Rome,2,,""41,885,581"",""12,503,693"",City,"
+"477,S. Bernando,2,,""41,629,936"",""-4,264,101"",Locality,"
+"478,S.Bernardo,2,,""41,629,936"",""-4,264,101"",Locality,"
+"479,Salarz?n,2,,""43,187,527"",""-4,571,401"",Locality,"
+"480,Salarzon,,,""43,187,527"",""-4,571,401"",Locality,"
+"481,Salinas de Pisuerga,2,,""42,850,903"",""-4,377,105"",Municipality,"
+"482,San Pedro de Due?as,2,,""42,330,904"",""-5,049,779"",Locality,"
+"483,Santa Cruz de Tenerife,2,,""28,463,707"",""-16,253,121"",City,"
+"484,Santa Eufemia del Barco,2,,""41,677,664"",""-5,898,262"",Municipality,"
+"485,Sebulcor,2,,""41,271,423"",""-3,885,194"",Municipality,"
+"486,Sierra de Gredos,2,,""40,299,437"",""-5,088,961"",Mountain Range,"
+"487,Sierra de los Ancares,2,,""42,800,612"",""-6,865,294"",Mountain Range,"
+"488,Sotosaltos,2,,""41,035,131"",""-3,941,006"",Municipality,"
+"489,taller en granja Escuela Jose Antonio,2,,""41,643,131"",""-4,748,269"",Site,"
+"490,Torremormojon,2,,""41,960,673"",""-4,777,720"",Municipality,"
+"491,Trigueros,2,,""3,738,154"",""-6,833,997"",Town,"
+"492,Trigueros del Valle,2,,""41,829,294"",""-4,651,464"",Municipality,"
+493,Utah,2,,,,,
+"494,Valdecuevas,,,""41,393,213"",""-4,980,798"",Site,"
+"495,Valdesangil,2,,""40,404,883"",""-5,748,496"",Locality,"
+"496,valladolid,2,,""41,640,146"",""-4,741,186"",City,"
+"497,Valsa?n,2,,""40,878,023"",""-4,027,683"",Locality,"
+"498,Valuengo,2,,""38,303,727"",""-6,713,402"",Village,"
+"499,Velez Benaudalla,2,,""36,833,606"",""-3,515,348"",Municipality,"
+"500,Verdiago,2,,""42,863,417"",""-5,138,827"",Locality,"
+"501,Viana de Cega,2,,""41,524,128"",""-4,749,745"",Municipality,"
+"502,Villamayor,2,,""41,001,213"",""-5,694,271"",Municipality,"
+503,Villanueva,2,,,,,
+"504,Villanueva de Duero,2,,""41,518,149"",""-4,865,916"",Municipality,"
+"505,Villanueva del R.,2,,""37,651,771"",""-5,712,556"",City,"
+"506,Villaveza-Toro,2,,""41,505,154"",""-5,357,122"",Finca,"
+"507,Yanguas,2,,""42,101,063"",""-2,338,456"",Municipality,"
+"508,Yanguas de Eresma,2,,""41,071,864"",""-4,239,090"",Municipality,"
+"509,Zamora,2,,""41,505,508"",""-5,745,223"",City,"
+"510,Zaragoza,2,,""41,646,218"",-0.887602,City,"
+511,zona Berria y faro,,,,,,
+"512,""""""Finca Boris"""" Montes Torozos"",1,,,,,"
+"513,""""""Los ?lamos"""""",1,,,,,"
+"514,_Batuecas_,1,,""40,460,343"",""-6,147,062"",Valley Region,"
+"515,_Camino Hondo_,,,""37,318,547"",""-5,405,526"",Street,"
+"516,_Coto Bajo de Matallana_,,,""41,900,692"",""-4,865,012"",Site,"
+"517,_Coto Bajo de Matallana_,,,""41,900,692"",""-4,865,012"",Site,"
+518,_ej_,,,,,,
+519,_ej_,,,,,,
+"520,_Playa Portonovo_,,,""42,397,858"",""-8,823,226"",Beach,"
+521,_Rodas Viejas_,1,,,,,
+522,_v?c?rna?,1,,,,,
+523,_Zona Vi?as_,,,,,,
+524,-,1,,,,,
+525,?Bu?aco (Coimbra),1,,,,,
+"526,?lava,1,,""42,822,097"",""-2,702,175"",Region,"
+"527,""""""Almendros carretera"""""",,,,,,"
+"528,""""""almendros casa Director"""""",,,,,,"
+"529,""""""Almendros casa Director"""""",,,,,,"
+"530,""""""Argales"""" Fuensalda?a"",1,,,,,"
+"531,""""""Arroyo de Gualay"""""",,,""37,852,912"",""-2,922,774"",River,"
+"532,""""""Bater?a"""""",,,""36,613,639"",""-4,506,667"",Park,"
+"533,""""""Bateria"""""",,,""36,613,639"",""-4,506,667"",Park,"
+"534,""""""Bco. de las Vibora""""s"",,,,,,"
+"535,""""""Camino Faro Benia"""" Santo?a"",1,,,,,"
+"536,""""""Camino Hondo"""""",,,""37,318,547"",""-5,405,526"",Street,"
+"537,""""""Camino Hondo"""""",,,""37,318,547"",""-5,405,526"",Street,"
+"538,""""""Camino Hondo"""""",,,""37,318,547"",""-5,405,526"",Street,"
+"539,""""""Camino vi?a"""" Granja Escuela Jose Antonio"",1,,""41,643,131"",""-4,748,269"",Site,"
+"540,""""""Camino vi?as"""""",,,,,,"
+"541,""""""Campo de tiro"""""",,,,,,"
+"542,""""""Carraduero"""" Villab??ez"",1,,,,,"
+"543,""""""Carraduero"""" Villab?nez"",1,,,,,"
+"544,""""""Carretera de la Chantrea"""""",1,,,,,"
+"545,""""""casa le?a"""" Santo?a"",1,,,,,"
+"546,""""""Cementerio de los Ingleses"""""",1,,""37,424,518"",""-5,986,031"",Site,"
+"547,""""""Cerro Contiendas"""""",,,,,,"
+"548,""""""Cerro Contiendas"""""",,,,,,"
+"549,""""""Corral de J.Antonio"""""",,,,,,"
+"550,""""""corral J. Antonio"""" Villab??ez"",1,,,,,"
+"551,""""""corral J.A."""""",,,,,,"
+"552,""""""Corral ose .Antonio"""""",,,,,,"
+"553,""""""Coto Bajo de Matallana"""" Montealegre"",1,,,,,"
+"554,""""""Coto Bajo Matallana"""""",,,,,,"
+"555,""""""Coto Bajo Matallana"""""",,,,,,"
+"556,""""""Covelo"""" Viana del Bollo"",1,,""42,231,878"",""-8,363,188"",Municipality,"
+"557,""""""Covelo"""""",,,""42,231,878"",""-8,363,188"",Municipality,"
+"558,""""""Dehesa de Fuentes"""""",,,,,,"
+"559,""""""El Cerrillo"""""",,,,,,"
+"560,""""""El Aguilucho"""""",1,,,,,"
+"561,""""""El Barcial"""""",,,,,,"
+"562,""""""El Cantalar"""" Cazorla"",1,,""37,975,688"",""-2,894,066"",Site,"
+"563,""""""en margaritas jardin Berria"""""",,,,,,"
+"564,""""""Faro Berria"""" Santo?a"",1,,,,,"
+"565,""""""Fte Perro"""""",,,,,,"
+"566,""""""Fuentes Blancas"""""",,,""42,338,369"",""-3,646,786"",Natural Park,"
+"567,""""""La Flecha"""""",,,,,,"
+"568,""""""La Fresnedilla"""" Cazorla"",1,,,,,"
+"569,""""""La Gonzala"""""",,,""37,480,939"",""-7,193,231"",Finca,"
+"570,""""""La Gozala"""" Villanueva de los Castillejos"",1,,""37,480,939"",""-7,193,231"",Finca,"
+"571,""""""La Gozala"""""",,,""37,480,939"",""-7,193,231"",Finca,"
+"572,""""""La Honfr?a"""""",,,,,,"
+"573,""""""La Petersime"""""",,,,,,"
+"574,""""""La Platina"""""",1,,,,,"
+"575,""""""Las Aldabas"""""",1,,,,,"
+"576,""""""Las Fuentes"""" Mojados"",1,,,,,"
+"577,""""""Llano Alto"""""",,,""40,375,391"",""-5,762,147"",Site,"
+"578,""""""Los Catolicos"""""",,,,,,"
+"579,""""""Los Saurines"""" Balsicas y """"Torreblanca"""" Torrepacheco"",1,,,,,"
+"580,""""""Los Saurines"""""",,,,,,"
+"581,""""""Monegros"""""",1,,""41,748,857"",-0.335225,Region,"
+"582,""""""Montes Torozos"""""",,,""41,664,618"",""-5,007,654"",Region,"
+"583,""""""Nava de los Correhuelas"""""",,,,,,"
+"584,""""""P?ramo de Matallana"""" Villanubla"",1,,,,,"
+"585,""""""Penal"""""",,,,,,"
+"586,""""""Picos de Europa"""""",,,""43,185,586"",""-4,281,181"",National Park,"
+"587,""""""Playa de Barra"""""",,,""42,261,469"",""-8,851,555"",Beach,"
+"588,""""""Playa del Esteiro"""" Jove"",1,,""43,751,527"",""-7,723,415"",Beach,"
+"589,""""""Playa Esteiro"""""",,,""43,751,527"",""-7,723,415"",Beach,"
+"590,""""""Playa Porto Novo"""""",,,""42,397,858"",""-8,823,226"",Beach,"
+"591,""""""Playa Porto Novo"""""",,,""42,397,858"",""-8,823,226"",Beach,"
+"592,""""""Pto. Vallejera"""""",,,""40,408,747"",""-5,720,675"",Municipality,"
+"593,""""""Roblehondo"""""",,,,,,"
+"594,""""""Rodillo"""""",1,,,,,"
+"595,""""""San Mart?n"""""",,,""43,246,089"",""-6,003,705"",Province,"
+"596,""""""San Martin"""""",,,""43,246,089"",""-6,003,705"",Province,"
+"597,""""""Sanchiricones"""" Vecinos"",1,,,,,"
+"598,""""""Sanchiricones"""""",,,,,,"
+"599,""""""Sazad?n"""""",,,,,,"
+"600,""""""Tierra de Campos"""" entre Cuenca-Tamariz"",1,,""42,085,825"",""-4,946,326"",Region,"
+"601,""""""Tierra de Campos"""""",,,""42,085,825"",""-4,946,326"",Region,"
+"602,""""""Tornillos Gualay"""""",,,""37,850,879"",""-2,922,946"",Natural Park,"
+"603,""""""Torreblanca"""""",,,""40,219,727"",0.195433,Municipality,"
+"604,""""""Valdecilla"""""",1,,""43,381,738"",""-3,735,648"",Locality,"
+"605,""1 en """"Torreblanca"""" Torrepacheco y 3 en Rold?n"",1,,""40,219,727"",0.195433,Municipality,"
+"606,10 Km N. L?rida,1,,""41,619,203"",0.618046,Site,"
+"607,10 km norte de L?rida,1,,""41,619,203"",0.618046,Site,"
+"608,10 km norte de Lerida,1,,""41,619,203"",0.618046,Site,"
+609,A.Tirol,1,,,,,
+610,Abad?a,1,,,,,
+611,Aetna,1,,,,,
+"612,Aguilar de Campoo,1,,""42,793,174"",""-4,261,922"",Town,"
+"613,Alaejos,1,,""41,307,412"",""-5,215,791"",Municipality,"
+"614,Alameda del Gard?n,1,,""40,650,582"",""-6,757,694"",Village,"
+"615,Alburqueque,1,,""39,220,997"",""-7,001,892"",Town,"
+"616,Alcaraz?n,1,,""41,369,835"",""-4,673,608"",Town,"
+"617,Alcarazen,1,,""41,369,835"",""-4,673,608"",Town,"
+"618,Alcazarem,1,,""41,369,835"",""-4,673,608"",Town,"
+619,Alcobayo,1,,,,,
+"620,Aldea Tejada,1,,""40,925,156"",""-5,690,917"",Village,"
+"621,Aldealengua,1,,""40,981,535"",""-5,550,988"",Village,"
+"622,Aldeanueva,1,,""42,227,603"",""-1,888,408"",Town,"
+623,Aliseda de T.,1,,,,,
+"624,Aliseda de Tormes,1,,""40,330,438"",""-5,398,742"",Locality,"
+"625,Almeida,1,,""40,726,201"",""-6,904,705"",Village,"
+"626,Almeida,1,,""40,726,201"",""-6,904,705"",Village,"
+627,Almendros carretera,,,,,,
+"628,Almu?ecar,1,,""36,772,473"",""-3,730,956"",Municipality,"
+"629,Alpi Cozie,,,""44,738,798"",""6,968,287"",Mountain Range,"
+630,alrededor 10km E y N,1,,,,,
+"631,Ampudia,1,,""41,915,633"",""-4,780,376"",Municipality,"
+"632,Amusco,1,,""42,173,552"",""-4,470,027"",Municipality,"
+"633,Andav?as,1,,""41,596,730"",""-5,858,042"",Municipality,"
+"634,Andav?as,1,,""41,596,730"",""-5,858,042"",Municipality,"
+"635,Andavias,1,,""41,596,730"",""-5,858,042"",Municipality,"
+"636,Antilla,1,,""37,206,821"",""-7,218,331"",Resort,"
+637,Anto?ares del P?ramo,1,,,,,
+"638,Aranda de Duero,1,,""41,671,123"",""-3,687,538"",Town,"
+"639,Aranjuez,1,,""40,031,397"",""-3,606,389"",Town,"
+640,Arca Real,1,,,,,
+"641,Arena del Rey,1,,""36,957,647"",""-3,893,961"",Village,"
+"642,Arroba de los Montes,1,,""39,153,951"",""-4,542,728"",Municipality,"
+"643,As?n,1,,""43,293,612"",""-3,509,899"",River,"
+"644,Ataquines,1,,""41,181,513"",""-4,803,815"",Municipality,"
+"645,Autilla del P.,1,,""41,992,232"",""-4,631,127"",Municipality,"
+"646,Ayora,1,,""39,016,967"",""-1,069,851"",Municipality,"
+"647,Aznalc?zar,1,,""37,304,202"",""-6,250,287"",Town,"
+"648,Azuaga,1,,""38,260,014"",""-5,677,756"",Town,"
+"649,B?jar (cement),1,,""40,386,261"",""-5,762,653"",Town,"
+"650,B?jar,,,""40,386,261"",""-5,762,653"",Town,"
+"651,B?jar,,,""40,386,261"",""-5,762,653"",Town,"
+"652,B?jar,,,""40,386,261"",""-5,762,653"",Town,"
+"653,B?jar,,,""40,386,261"",""-5,762,653"",Town,"
+"654,Baltan?s,1,,""41,937,593"",""-4,248,047"",Municipality,"
+"655,Barbate,1,,""36,191,677"",""-5,920,895"",Town,"
+"656,Barco de Avila,1,,""40,358,038"",""-5,522,282"",Municipality,"
+"657,Bareyo,1,,""43,470,491"",""-3,618,022"",Municipality,"
+"658,Becedas,1,,""40,390,769"",""-5,633,424"",Municipality,"
+659,Becerril de C.,1,,,,,
+"660,Bermellas,1,,""40,998,854"",""-6,669,363"",Village,"
+"661,Bermillo de Sayago,1,,""41,366,965"",""-6,111,539"",Municipality,"
+"662,Bernardos,1,,""41,140,943"",""-4,337,466"",Municipality,"
+"663,Blascomillan,1,,""40,801,063"",""-5,086,828"",Municipality,"
+664,Boadilla de R,1,,,,,
+"665,Bohemia centr.,1,,""50,058,787"",""14,461,413"",District,"
+"666,Bonifacio,,,""41,446,673"",""9,176,746"",Region,France"
+"667,Borau,1,,""42,657,918"",-0.588006,Municipality,"
+"668,Bordighera,1,,""43,783,823"",""7,660,669"",Town,"
+"669,Bouzas,1,,""42,225,676"",""-8,754,308"",District,"
+"670,Brovales,1,,""38,349,084"",""-6,684,666"",Village,"
+671,Buda,1,,,,,
+"672,Burgenland,1,,""47,481,618"",""16,358,663"",State,"
+673,Burgerland,,,,,,
+"674,Ca?averal,1,,""39,792,121"",""-6,391,379"",Municipality,"
+"675,Caba?as,1,,""43,437,434"",""-8,135,309"",Municipality,"
+"676,""Cabrerizos """"La Flecha"""""",1,,""40,975,032"",""-5,611,751"",Village,"
+"677,Cabrerizos,,,""40,975,032"",""-5,611,751"",Village,"
+"678,Cac?n,1,,""37,059,597"",""-3,916,406"",City,"
+"679,Cadalzo,1,,""40,237,794"",""-6,540,823"",Village,"
+680,Cala de Mosas,1,,,,,
+681,Calahorra de B.,1,,,,,
+682,Calarilla,,,,,,
+683,Camino Vi?as cerca de Barrio Gir?n,,,,,,
+684,Campamentos,1,,,,,
+"685,Campaspero,1,,""41,491,618"",""-4,194,442"",Locality,"
+"686,Campaspero?,1,,""41,491,618"",""-4,194,442"",Locality,"
+687,Campo de tiro al plato de San Isidro,1,,,,,
+"688,Camporredondo de Alba,1,,""42,894,511"",""-4,746,459"",Locality,"
+"689,Cancarix,1,,""38,420,761"",""-1,570,534"",Locality,"
+"690,Candeleda y Navarredonda,1,,""40,362,747"",""-5,132,730"",Municipality,"
+"691,Cantagallo 910 m.,1,,""40,373,189"",""-5,818,539"",Village,"
+"692,Cantalapiedra,1,,""41,125,021"",""-5,182,994"",Village,"
+"693,Campaspero,1,,""41,053,018"",""-5,330,323"",Municipality,"
+694,Cantoral,1,,,,,
+"695,Carbonera,1,,""37,005,561"",""-1,941,065"",Municipality,"
+"696,Carchuna,1,,""36,702,516"",""-3,442,194"",Locality,"
+"697,Carraduero-Villab??ez,1,,""41,603,313"",""-4,549,422"",Village,"
+"698,Carral,1,,""43,228,956"",""-8,355,628"",Municipality,"
+"699,Carrascal de B?rregos,1,,""40,978,801"",""-5,761,450"",Village,"
+"700,Carretera de VA,1,,""43,510,548"",""-5,602,528"",Road,"
+"701,Cartama,1,,""36,712,907"",""-4,629,587"",Town,"
+702,Casa Angel,,,,,,
+703,casa director,,,,,,
+704,Casa director,,,,,,
+"705,Casc?n de la Nava,1,,""42,056,442"",""-4,643,519"",Village,"
+"706,Cascon de la Nava,1,,""42,056,442"",""-4,643,519"",Village,"
+"707,Castelser?s,1,,""40,981,513"",-0.145912,Municipality,"
+"708,Castillejo de Mart?n el Viejo,1,,""40,700,606"",""-6,644,990"",Municipality,"
+709,Castillo,1,,,,,
+"710,Castrillo de Sepulveda,1,,""41,337,873"",""-3,788,732"",Locality,"
+"711,Cazulas,1,,""36,814,301"",""-3,696,031"",Site,"
+"712,Cerdanyola del Vall?s,1,,""41,483,602"",""2,123,899"",Municipality,"
+"713,Cerro San Crist?bal,1,,""37,883,926"",""-6,777,429"",Site,"
+"714,Cervera de Pisuerga,1,,""42,867,118"",""-4,499,199"",Municipality,"
+"715,Chiloeches,1,,""40,571,929"",""-3,163,843"",Municipality,"
+"716,Ciruelos de Cervera,1,,""41,095,351"",""-3,530,387"",Municipality,"
+"717,Ciudad Rodrigo,1,,""40,597,856"",""-6,530,968"",City,"
+"718,Collado de la Zambrana,1,,""42,662,593"",""-2,879,996"",Municipality,"
+"719,Collserola,1,,""41,411,737"",""2,073,803"",Mountain Range,"
+720,Coroes de Loriga,1,,,,,
+721,Corral,1,,,,,
+"722,Corral de Calatrava,1,,""38,858,321"",""-4,081,620"",Municipality,"
+723,corral J.Antonio,,,,,,
+724,Coto Mar?n,1,,,,,
+725,Cov?es de Loriga,1,,,,,
+"726,Covao de Ametade,1,,""4,032,796"",""-7,587,602"",Site,"
+727,Cuatro Calzadas,1,,,,,
+728,Cubillo de C.,1,,,,,
+729,de Pliego a Alhama,1,,,,,
+730,Del Pesak,,,,,,
+731,Del. Pesak,,,,,,
+"732,Descargamar?a,1,,""40,304,554"",""-6,485,518"",Municipality,"
+"733,Diezma,1,,""37,320,248"",""-3,331,540"",Municipality,"
+"734,Dobres,1,,""43,062,652"",""-4,642,092"",Village,"
+"735,Dwikozy pow. Sandomierz,1,,""50,734,716"",""21,788,146"",Village,Poland"
+736,El Cortijo,1,,,,,
+"737,El Losar,1,,""40,393,782"",""-5,539,172"",Municipality,"
+"738,El Villar,1,,""37,634,073"",""-5,057,511"",Locality,"
+739,en el coche,,,,,,
+740,En el coche,,,,,,
+"741,Espinama,1,,""43,127,916"",""-4,786,864"",Locality,"
+742,F. del Rey,1,,,,,
+"743,Faro de Maspalomas,1,,""27,735,008"",""-15,598,923"",Site,"
+744,Feria,1,,,,,
+"745,Flores de ?vila,1,,""40,933,573"",""-5,079,991"",Municipality,"
+"746,Fombellida,1,,""41,766,676"",""-4,184,793"",Municipality,"
+"747,Fr?mista,1,,""42,266,748"",""-4,406,407"",Municipality,"
+"748,Frumales,1,,""41,383,273"",""-4,186,053"",Village,"
+"749,""Fuensalda?a (""""La Petersime"""")"",1,,""41,707,733"",""-4,764,770"",Municipality,"
+"750,Fuente D?,1,,""43,144,274"",""-4,811,833"",Village,"
+"751,Fuente de Cantos,1,,""38,246,875"",""-6,305,454"",Municipality,"
+"752,Fuented?,1,,""43,144,274"",""-4,811,833"",Village,"
+"753,Fuentepelayo,1,,""41,221,601"",""-4,174,542"",Municipality,"
+"754,Fuseta (Algarve),1,,""37,046,356"",""-7,744,315"",Parish,"
+"755,Gabia Grande,1,,""37,135,455"",""-3,669,274"",Locality,"
+"756,Ggranja Escuela Jose Antonio,1,,""41,643,131"",""-4,748,269"",Site,"
+"757,Gilbuena,1,,""40,415,645"",""-5,605,872"",Municipality,"
+"758,Golpejas,1,,""41,001,662"",""-5,905,316"",Village,"
+"759,Granadella,1,,""41,354,973"",0.665861,Town,"
+760,Granedo,1,,,,,
+"761,Granja Escuela,1,,""41,643,131"",""-4,748,269"",Site,"
+"762,Granja escuela Jose Antonio,1,,""41,643,131"",""-4,748,269"",Site,"
+"763,""Granja Escuela Jose Antonio """"Camino Hondo"""""",,,""41,643,131"",""-4,748,269"",Site,"
+"764,""Granja Escuela Jose Antonio """"Casa Director"""""",1,,""41,643,131"",""-4,748,269"",Site,"
+"765,Granja Escuela Jose Antonio parc. 16,1,,""41,643,131"",""-4,748,269"",Site,"
+"766,Granja Escuela Jose Antonio parc.16,1,,""41,643,131"",""-4,748,269"",Site,"
+"767,Granja Escuela Jose Antonio,,,""41,643,131"",""-4,748,269"",Site,"
+"768,Granja Escuela Jose Antonio,,,""41,643,131"",""-4,748,269"",Site,"
+"769,Granja Escuela Jose Antonio,,,""41,643,131"",""-4,748,269"",Site,"
+"770,Granja Escuela Jose Antonio,,,""41,643,131"",""-4,748,269"",Site,"
+"771,Granja Escuela Jose Antonio,,,""41,643,131"",""-4,748,269"",Site,"
+"772,Granja Escuela Jose Antonio,,,""41,643,131"",""-4,748,269"",Site,"
+"773,Granja Escuela Jose Antonioparc.17,1,,""41,643,131"",""-4,748,269"",Site,"
+"774,Granollers,1,,""41,607,179"",""2,284,761"",City,"
+775,Grarnedo,1,,,,,
+776,Grarnedo (sic),1,,,,,
+777,grieta de poste,,,,,,
+"778,Gronsveld,1,,""50,806,940"",""5,729,960"",Village,Netherlands?"
+"779,Gualchos,1,,""36,743,805"",""-3,390,050"",Town,"
+"780,Guardo,1,,""42,788,602"",""-4,847,878"",Municipality,"
+"781,Hacinas,1,,""41,985,015"",""-3,288,175"",Municipality,"
+"782,Hamadan,1,,""34,799,200"",""48,514,872"",City,Iran"
+783,Hazas del Plan,,,,,,
+"784,Hinojosa,1,,""40,985,503"",""-6,794,979"",Municipality,"
+"785,Hinojosa de D.,1,,""40,985,503"",""-6,794,979"",Municipality,"
+"786,Hontares de E,1,,""40,983,196"",""-4,203,027"",Municipality,"
+"787,Horcajo de M,1,,""40,422,322"",""-5,893,991"",Village,"
+"788,Horcajo de M.,1,,""40,422,322"",""-5,893,991"",Village,"
+"789,Horcajo de Montemayor,,,""40,422,322"",""-5,893,991"",Village,"
+"790,Huerta del Rey,1,,""41,840,199"",""-3,348,215"",Municipality,"
+"791,Illinois,,,""40,436,471"",""-89,378,415"",State,USA?"
+"792,Jabarrella,1,,""42,471,062"",-0.389657,Locality,"
+"793,Jambrina,1,,""41,392,673"",""-5,664,662"",Municipality,"
+"794,Jara?z,1,,""40,059,855"",""-5,755,002"",Municipality,"
+"795,Jaraiz,1,,""40,059,855"",""-5,755,002"",Municipality,"
+"796,Jerez de los C.,1,,""38,322,785"",""-6,771,687"",Town,"
+"797,Jerez de los Caballeros,1,,""38,322,785"",""-6,771,687"",Town,"
+"798,Jete,1,,""36,795,795"",""-3,668,214"",Municipality,"
+"799,Karl. Stud?nka,1,,""50,076,355"",""17,307,311"",Village,"
+"800,Kaspi See,,,""41,610,244"",""50,724,879"",Sea,Caspian Sea?"
+801,Knopio,1,,,,,
+802,La Alameda,1,,,,,
+"803,La Bastida,1,,""40,585,341"",""-6,058,890"",Municipality,"
+"804,La Calzada,1,,""42,440,280"",""-2,951,951"",,"
+805,La Granja y Juarros de Riomoros,1,,,,,
+806,La Vid de O.,1,,,,,
+"807,ladera p.24 Granja Escuela Jose Antonio,1,,""41,643,131"",""-4,748,269"",Site,"
+808,Laguna Roja,1,,,,,
+"809,Langa de D.,1,,""41,608,969"",""-3,400,294"",Municipality,"
+"810,Lanjar?n y Sta. Luc?a,1,,""36,917,998"",""-3,482,081"",Municipality,"
+"811,Las Labores,1,,""39,274,573"",""-3,518,834"",Municipality,"
+"812,Las Matas,1,,""40,553,148"",""-3,896,325"",District,"
+813,Las Palitas,1,,,,,
+"814,Lastras de C.,1,,""41,297,806"",""-4,107,039"",Municipality,"
+"815,Lastras de Cu?llar,1,,""41,297,806"",""-4,107,039"",Municipality,"
+"816,Lastras de Cu?llar?,1,,""41,297,806"",""-4,107,039"",Municipality,"
+"817,Lastras de Cuellar,1,,""41,297,806"",""-4,107,039"",Municipality,"
+"818,Librilla,,,""37,888,065"",""-1,354,963"",Village,"
+"819,Linares de R.,1,,""40,581,057"",""-5,918,773"",Municipality,"
+"820,Linares de Riofrio,1,,""40,581,057"",""-5,918,773"",Municipality,"
+"821,Linares R,1,,""40,581,057"",""-5,918,773"",Municipality,"
+822,Lindero chopera,,,,,,
+"823,Lindero entre p.16-17,,,""41,643,131"",""-4,748,269"",Site,"
+"824,Lindero Parc. 16 - 17 Granja Escuela Jose Antonio,1,,""41,643,131"",""-4,748,269"",Site,"
+"825,lindero Parc. 16-17 Granja Escuela Jose Antonio,1,,""41,643,131"",""-4,748,269"",Site,"
+"826,Lobera de la Vega,1,,""42,499,536"",""-4,729,464"",Hamlet,"
+"827,Loja,1,,""37,169,416"",""-4,150,725"",Town,"
+828,Los Aldabos,1,,,,,
+"829,Los Quiles,1,,""39,249,676"",""-3,967,034"",Village,"
+"830,Luelmo,1,,""41,440,173"",""-6,133,754"",Municipality,"
+"831,Luelmo (a),1,,""41,440,173"",""-6,133,754"",Municipality,"
+"832,Lupiana,1,,""40,611,081"",""-3,053,744"",Municipality,"
+833,Luxor,1,,,,,
+"834,M?rida,1,,""38,951,287"",""-63,809,740"",City,"
+"835,Magaluf,1,,""39,506,069"",""2,531,137"",Town,"
+836,Mal?,1,,,,,
+"837,Malag?n,1,,""39,215,992"",""-3,971,641"",Municipality,"
+"838,Maria,1,,""37,711,229"",""-2,164,892"",Municipality,"
+"839,Massanes,1,,""41,774,883"",""2,648,181"",Municipality,"
+840,Megeces de ?scar,1,,,,,
+"841,Melgar,1,,""42,401,799"",""-4,245,495"",Municipality,"
+"842,Meneses,1,,""41,941,774"",""-4,919,405"",Municipality,"
+"843,Mi?anes,1,,""42,421,772"",""-4,572,316"",Locality,"
+"844,Miedes,1,,""41,257,159"",""-1,489,477"",Municipality,"
+"845,Miranda de Ebro,1,,""42,683,515"",""-2,944,933"",City,"
+"846,Miranda de Ebro,1,,""42,683,515"",""-2,944,933"",City,"
+"847,Monegros,1,,""41,757,053"",-0.370930,Region,"
+"848,Monegros,1,,""41,757,053"",-0.370930,Region,"
+"849,Monegros(2),1,,""41,757,053"",-0.370930,Region,"
+"850,Monegros(3),1,,""41,757,053"",-0.370930,Region,"
+"851,Montamarta?,1,,""41,647,433"",""-5,805,336"",Municipality,"
+"852,Monte el Viejo,1,,""41,939,063"",""-4,563,992"",Site,"
+"853,Monte las Mercedes y Bajamar,1,,""28,537,747"",""-16,324,296"",Mountain Range,"
+"854,Monte Torozos,,,""41,749,326"",""-4,908,312"",Site,"
+"855,Montemallor de Pililla,1,,""41,508,100"",""-4,458,055"",Municipality,"
+"856,Montemol?n,1,,""38,154,469"",""-6,213,274"",Municipality,"
+"857,Montigo,1,,""38,907,609"",""-6,616,796"",Municipality,"
+"858,Monz?n,1,,""41,911,812"",0.191377,City,"
+"859,Mor?n de A.,1,,""41,911,812"",0.191377,City,"
+860,Moravia,1,,,,,
+"861,Mozoncillo,1,,""41,144,464"",""-4,187,852"",Municipality,"
+862,Muelle de Vegaterra,1,,,,,
+"863,Mula,1,,""38,038,803"",""-1,492,315"",Municipality,"
+"864,Museum Leiden,,,""52,144,174"",""4,476,262"",Site,"
+"865,Museum Leiden,,,""52,144,174"",""4,476,262"",Site,"
+"866,Museum Leiden,,,""52,144,174"",""4,476,262"",Site,Netherlands?"
+867,Mykene,1,,,,,
+"868,Nachodsko,1,,""50,409,332"",""15,414,837"",,"
+"869,Najera,1,,""42,417,007"",""-2,731,181"",Town,"
+"870,Navalengua,1,,""40,410,881"",""-4,705,838"",Municipality,"
+871,Navaleno y Campamentos,1,,,,,
+"872,Navalmanzano,1,,""41,215,409"",""-4,255,966"",Municipality,"
+"873,Navaluenga,1,,""40,410,881"",""-4,705,838"",Municipality,"
+"874,Navamorisca,1,,""40,380,435"",""-5,525,089"",Locality,"
+875,Navas D.O.,1,,,,,
+"876,Navianos de Alba,1,,""41,742,842"",""-5,919,731"",Village,"
+"877,Negrilla de Palencia,1,,""41,091,804"",""-5,592,133"",Village,"
+"878,Neila de S. Miguel,1,,""40,423,853"",""-5,651,463"",Municipality,"
+"879,Nieder?sterreich,,,""48,312,755"",""15,682,973"",State,"
+"880,Ober?sterreich,1,,""48,127,886"",""13,941,107"",State,"
+881,Ochoz (Lupahara),1,,,,,
+"882,Odeleite,1,,""37,343,602"",""-7,518,861"",Parish,"
+"883,Odeleite,,,""37,343,602"",""-7,518,861"",Parish,"
+"884,Olmedo,,,""41,284,162"",""-4,695,683"",Municipality,"
+885,Olmillos de C.,1,,,,,
+"886,Olympia,1,,""37,638,306"",""21,629,751"",Historical Site,Greece?"
+"887,Orense,1,,""42,339,408"",""-7,864,287"",City,"
+888,orificios madera Tiro San Isidro,1,,,,,
+"889,Orlovice,1,,""49,235,309"",""17,092,811"",,"
+"890,Overuela,1,,""41,689,689"",""-4,706,839"",Town,"
+"891,Oviedo,1,,""43,361,027"",""-5,849,345"",Town,"
+"892,P?ntano Cubillas,,,""37,274,632"",""-3,668,678"",Reservoir,"
+893,P?ra,,,,,,
+894,P. la Salud?,1,,,,,
+895,p.21,,,,,,
+896,p.3,,,,,,
+"897,Palacios,1,,""37,162,342"",""-5,928,034"",Town,Los Palacios y Villafranca?"
+"898,Palacios de Sanabria,1,,""42,055,796"",""-6,527,560"",Municipality,"
+"899,Palma,1,,""39,569,008"",2.647959,City,"
+"900,Palomares,1,,""37,239,378"",""-1,799,503"",Town,"
+"901,Pantano Arlanz?n,1,,""42,322,611"",""-3,458,121"",Municipality,"
+"902,Pantano del Arlanz?n,1,,""42,322,611"",""-3,458,121"",Municipality,"
+903,Panzerfraben,,,,,,
+"904,Parador de Cazorla,1,,""3,790,315"",""-2,962,527"",Site,"
+"905,Parador de Gredos,1,,""4,035,456"",""-5,113,375"",Site,"
+906,Parc 24,,,,,,
+907,Parc. 1,,,,,,
+"908,Parc. 16-17 Granja Escuela Jose Antonio,1,,""41,643,131"",""-4,748,269"",Site,"
+909,Parc. 16,,,,,,
+910,Parc. 16,,,,,,
+"911,Parc. 2 Granja Escuela Jose Antonio,1,,""41,643,131"",""-4,748,269"",Site,"
+"912,Parc. 21 Granja Esc. J. A.,1,,""41,643,131"",""-4,748,269"",Site,"
+"913,Parc. 21 Granja Escuela Jose Antonio,1,,""41,643,131"",""-4,748,269"",Site,"
+"914,Parc. 24 Granja Escuela Jose Antonio,1,,""41,643,131"",""-4,748,269"",Site,"
+915,Parc. 24,,,,,,
+"916,Parc. 3 Granja Escuela Jose Antonio,1,,""41,643,131"",""-4,748,269"",Site,"
+917,Parc. 3,,,,,,
+918,Parc.1-3,,,,,,
+919,parc.11,,,,,,
+920,parc.11,,,,,,
+921,parc.24,,,,,,
+922,parcela 16-17,,,,,,
+923,parcela 3,,,,,,
+924,Pavlovsk? kopce,1,,,,,
+"925,Pe?acaballera,1,,""40,343,831"",""-5,860,664"",Municipality,"
+"926,Pe?afiel,1,,""41,597,653"",""-4,122,769"",Town,"
+"927,Pe?alara,,,""40,850,715"",""-3,956,421"",Mountain Peak,"
+"928,Pe?aparda,1,,""40,320,997"",""-6,669,614"",Municipality,"
+929,Pe?ones de San Francisco,1,,,,,
+"930,Peleagonzalo,1,,""41,481,939"",""-5,483,121"",Municipality,"
+"931,Peleas de Abajo,1,,""41,392,637"",""-5,689,985"",Municipality,"
+"932,Peligros,1,,""37,231,699"",""-3,627,905"",Municipality,"
+"933,Penhas Douradas,1,,""40,404,706"",""-7,565,664"",Mountain Range,"
+"934,Pera,1,,""42,017,033"",""2,972,886"",Municipality,"
+"935,Perales,1,,""42,194,213"",""-4,580,863"",Municipality,"
+936,Petersime,1,,,,,
+937,Pinar,,,,,,
+"938,Pinos del Valle,1,,""36,912,393"",""-3,555,008"",Municipality,"
+"939,Pirineos,1,,""42,725,794"",0.382520,Mountain Range,"
+"940,Placencia,1,,""40,035,706"",""-6,085,989"",City,"
+"941,Playa de Langre,1,,""43,474,768"",""-3,689,641"",Beach,"
+"942,Playa Porto Novo(cerca de Cillero),1,,""42,398,535"",""-8,823,280"",Beach,"
+"943,Pod_brady,1,,""50,145,016"",""15,115,331"",Town,"
+"944,Polentinos,1,,""42,938,873"",""-4,528,042"",Municipality,"
+"945,Porec,,,""45,226,183"",""13,601,348"",Town,"
+"946,Portillo,1,,""41,485,031"",""-457,028"",Municipality,"
+"947,Pozas de Hinojo,,,""40,913,605"",""-6,411,126"",Village,"
+"948,Poztoky,1,Roztoky?,""50,161,092"",""14,378,173"",Town,"
+"949,Pozuelo,1,,""40,446,586"",""-3,806,878"",Municipality,"
+"950,Praia da Luz,1,,""37,088,945"",""-8,758,446"",Parish,"
+"951,Puebla del Maestre,1,,""38,084,351"",""-6,079,296"",Municipality,"
+"952,Puebla,,,""41,918,534"",""-5,900,333"",Municipality,"
+"953,Pueblica de Valverde,1,,""41,918,534"",""-5,900,333"",Municipality,"
+"954,Pueblica del V.,1,,""41,918,534"",""-5,900,333"",Municipality,"
+"955,Pueblo Nuevo de Guad,1,,""36,296,512"",""-5,302,803"",Neighbourhood,"
+"956,Puente de San Lorenzo,1,,""41,283,041"",""-6,385,573"",Bridge,"
+957,Puente-Herrera,1,,,,,
+"958,Puerto Cabuerniga,1,,""43,196,654"",""-4,298,507"",Mountain Range,"
+"959,Puerto de Palombera,1,,""43,063,179"",""-4,232,593"",Mountain Range,"
+"960,Puerto de San Glorio,1,,""43,066,712"",""-4,765,288"",Mountain Range,"
+"961,Puerto Navacerrada,1,,""40,728,185"",""-4,014,690"",Municipality,"
+"962,Puerto Perales,1,,""40,156,198"",""-6,681,691"",Municipality,"
+"963,Punta Sabinal,1,,""36,692,692"",""-2,685,391"",Nature Reserve,"
+"964,Quintana del P.,1,,""42,083,787"",""-4,207,394"",Municipality,"
+"965,Quintanar de la Sierra,1,,""41,983,392"",""-3,036,897"",Municipality,"
+"966,Quintanilla de las Torres,1,,""42,820,166"",""-4,198,381"",Municipality,"
+"967,R?bano,1,,""41,533,220"",""-4,062,065"",Municipality,"
+"968,Rabanillo,1,,""42,094,229"",""-6,653,262"",Locality,"
+"969,Radolin,1,,""53,009,713"",""1,654,432"",Village,"
+"970,Renedo de Esgueva,1,,""41,654,297"",""-4,628,292"",Municipality,"
+"971,Riaza,1,,""41,275,976"",""-3,479,906"",Municipality,"
+"972,Ribadelago,1,,""42,121,834"",""-6,745,833"",Village,"
+"973,rio Ardila,,,""38,147,585"",""-7,204,643"",River,"
+"974,Riofr?o,1,,""37,153,105"",""-4,206,994"",Village,"
+"975,Riofrio,1,,""37,153,105"",""-4,206,994"",Village,"
+"976,Rokytno,1,,""50,103,125"",""15,877,373"",Village,"
+"977,Roturas,1,,""41,668,315"",""-4,118,430"",Municipality,"
+978,S Chalus 1600m,,,,,,
+"979,S Pedro de las Due?as,1,,""42,332,177"",""-5,050,262"",Locality,"
+"980,S. Jaume F.,1,,""42,187,441"",""2,023,612"",Municipality,"
+"981,S. Glorio,1,,""43,066,712"",""-4,765,288"",Mountain Range,"
+"982,S. Jaume,1,,""41,187,441"",""1,023,612"",Municipality,"
+"983,S. Jaume Frontany?,1,,""42,187,441"",""2,023,612"",Municipality,"
+"984,S. Miguel de Bernuy,1,,""41,398,982"",""-3,951,905"",Municipality,"
+"985,S.Esteban de Gormaz,1,,""41,572,490"",""-3,202,043"",Municipality,"
+"986,S.Martin de Quevedo,1,,""43,136,762"",""-4,396,646"",Locality,"
+"987,S.Pedro de las Due?as,1,,""42,332,177"",""-5,050,262"",Locality,"
+"988,S.Vicente del R.,1,,""38,427,366"",-0.533068,Municipality,"
+"989,Salda?a,1,,""42,516,933"",""-4,737,612"",Town,"
+"990,Samarkand,1,,""39,665,716"",""66,947,279"",City,"
+"991,San Esteban de Gormaz,1,,""41,572,426"",""-3,201,185"",Municipality,"
+"992,San Jose,1,,""36,763,508"",""-21,086,730"",Village,"
+993,San Juan del R?o,1,,,,,
+"994,San Mart?n del Pimpollar,1,,""40,368,597"",""-5,054,947"",Municipality,"
+"995,San Miguel de Valero,1,,""40,542,489"",""-5,921,868"",Municipality,"
+"996,San Miguel del Arroyo,1,,""41,442,852"",""-4,460,905"",Municipality,"
+"997,San Pedro de la Due?as,1,,""42,332,113"",""-5,050,198"",Village,"
+"998,San Roque,1,,""36,211,514"",""-5,384,508"",Municipality,"
+"999,San Torcuato,1,,""42,482,596"",""-2,889,519"",Village,"
+"1000,San Vicente de la Barquera,1,,""4,338,829"",""-4,396,960"",Municipality,"
+"1001,Sanchotello,1,,""40,438,144"",""-5,753,839"",Municipality,"
+"1002,Sanctiespiritu,1,,""36,697,789"",""-4,472,715"",District,"
+"1003,Sando,,,""40,967,514"",""-6,111,343"",Municipality,"
+"1004,Sanjuanejo,1,,""40,570,209"",""-6,491,124"",Locality,"
+1005,Santa Mar?a,1,,,,,
+"1006,Santiba?ez de Valcorba,1,,""41,570,503"",""-4,449,326"",Municipality,"
+"1007,Sard?n de Duero,1,,""40,606,983"",""-5,418,284"",Municipality,"
+"1008,Sardon,1,,""41,606,983"",""-4,418,284"",Municipality,"
+"1009,Sasam?n,1,,""42,417,587"",""-4,042,355"",Municipality,"
+1010,Sazad?n,,,,,,
+"1011,Sevilla,1,,""37,390,252"",""-5,983,041"",City,"
+"1012,Sierra de Filabres,1,,""37,223,353"",""-2,546,283"",Mountain Range,"
+"1013,Sierra de Gata,1,,""40,192,970"",""-6,656,220"",,"
+"1014,Sierra Mar?a,1,,""37,728,015"",""-2,109,572"",Natural Park,"
+"1015,Silves,,,""37,222,531"",""-8,436,332"",Municipality,"
+"1016,Slivenec,1,,""50,019,538"",""14,351,615"",District,"
+"1017,Sorihuela,1,,""40,443,698"",""-5,678,323"",Municipality,"
+"1018,Soto de la Marina,1,,""43,465,619"",""-3,894,688"",Locality,"
+"1019,Sotoserranao,1,,""40,435,342"",""-6,033,100"",Municipality,"
+1020,Sta Engracia,1,,,,,
+1021,Sta. Maria,1,,,,,
+"1022,Stratov,1,,""50,201,433"",""14,906,566"",Village,"
+1023,Sut?w pow. Milicz,1,,,,,
+"1024,T?bara,1,,""40,824,365"",""-6,960,192"",Municipality,"
+"1025,Tabara(Sazad?n),1,,""41,824,365"",""-5,960,192"",Municipality,"
+"1026,Tafira,1,,""28,051,631"",""-15,464,902"",District,"
+"1027,Tafira Alta,1,,""28,051,849"",""-15,467,783"",District,"
+1028,Tafisa,1,,,,,
+"1029,Talayuela,1,,""39,986,719"",""-5,609,105"",Municipality,"
+"1030,taller en Granja Escuela Jose Antonio,1,,""41,643,131"",""-4,748,269"",Site,"
+1031,taller,,,,,,
+"1032,Tapia Casariego,1,,""43,570,431"",""-6,944,916"",Municipality,"
+1033,Tar I,1,,,,,
+"1034,Tehran,,,""35,697,326"",""51,366,949"",City,"
+"1035,Tejares,1,,""40,954,125"",""-5,694,143"",Barrio,"
+"1036,Telde,1,,""27,996,446"",""-15,415,452"",Town,"
+1037,Termini,1,,,,,
+"1038,Terrassa,1,,""41,560,365"",""2,016,619"",City,"
+"1039,Tibi,1,,""38,532,727"",-0.576269,Municipality,"
+"1040,Tierra de Campos (Cuenca-Tamariz),1,,""41,057,281"",""-5,902,381"",Natural Park,"
+"1041,Tierra de Campos(Cuenca-Tamariz),1,,""42,057,281"",""-4,902,381"",Natural Park,"
+"1042,Tiro S.Isidro,1,,""41,782,582"",-0.827607,Site,"
+1043,Tk-Afri,,,,,,
+1044,Tk-Alanya,1,,,,,
+1045,Tk-Hakkar,,,,,,
+"1046,Tornillos Gualay,,,""37,850,065"",""-2,923,633"",Natural Park,"
+"1047,Torre de Pe?afiel,1,,""41,536,438"",""-4,088,433"",Municipality,"
+"1048,Torrecilla de los Angeles,1,,""40,248,926"",""-6,415,767"",Municipality,"
+"1049,Torrej?n el Rubio,1,,""39,770,842"",""-6,012,958"",Municipality,"
+"1050,Torrelavega,1,,""43,346,071"",""-4,049,856"",Municipality,"
+"1051,Tossa de Mar,1,,""41,741,699"",""2,918,677"",Municipality,"
+"1052,Trabazos,1,,""41,746,094"",""-6,492,824"",Municipality,"
+"1053,traspinedo,1,,""41,587,384"",""-4,476,007"",Municipality,"
+"1054,Traspinedo(casa R. L?pez),1,,""41,590,209"",""-4,477,724"",Site,"
+"1055,Trebinje,,,""42,720,381"",""18,344,505"",Municipality,"
+"1056,V?lez Benaudalla,1,,""36,833,692"",""-3,514,983"",Municipality,"
+"1057,V. Chuchle,1,,""50,013,949"",""14,344,553"",District,"
+"1058,Vadocondes,1,,""41,639,197"",""-3,572,774"",Municipality,"
+"1059,Val de San Lorenzo,1,,""42,417,776"",""-6,122,741"",Municipality,"
+"1060,Val de Santa Mar?a,1,,""41,965,591"",""-6,211,724"",Locality,"
+"1061,Val de Santa Mar?a y Viana del Bollo,1,,""42,181,544"",""-7,110,362"",Municipality,"
+"1062,Val de Sta. Maria,1,,""41,965,591"",""-6,211,724"",Locality,"
+"1063,Valdeande,1,,""41,832,972"",""-3,528,831"",Municipality,"
+"1064,Valdearcos,1,,""42,459,095"",""-5,387,657"",Municipality,"
+"1065,Valdefuentes de S.C.,1,,""39,275,935"",""-6,123,769"",Village,"
+"1066,Valdeteja,1,,""42,928,376"",""-5,426,328"",Village,"
+1067,Valencia del C.,1,,,,,
+"1068,Valenzuela de Calatrava,1,,""38,852,706"",""-3,773,024"",Municipality,"
+"1069,Valle de Cerrato,1,,""41,879,791"",""-4,362,262"",Municipality,"
+"1070,Valle Ordesa,1,,""42,651,668"",-0.007672,National Park,"
+"1071,Vallelado,1,,""41,405,798"",""-4,425,881"",Municipality,"
+"1072,Vallespinoso de Aguilar,1,,""42,774,451"",""-4,365,691"",Locality,"
+"1073,Valoria de alcor,1,,""41,899,214"",""-4,803,085"",Locality,"
+"1074,Valsain,1,,""40,878,311"",""-4,028,305"",Locality,"
+1075,Valverd?n,1,Valverdin or Valverdon?,,,,
+"1076,Valverde de Legan?s,1,,""37,670,319"",""-7,979,958"",Municipality,"
+"1077,Valverde de Legan?s,1,,""38,670,319"",""-6,979,958"",Municipality,"
+"1078,Vi?as Granja Escuela Jose Antonio,1,,""41,643,131"",""-4,748,269"",Site,"
+"1079,Viana del Bollo,1,,""42,182,117"",""-7,110,448"",Municipality,"
+1080,Vidova/Plesivec,1,,,,,
+"1081,Viella,1,,""42,698,460"",0.782787,,"
+"1082,Villacast?n,1,,""40,778,828"",""-4,413,939"",Municipality,"
+"1083,Villadiegua de la Ribera,1,,""41,535,836"",""-6,182,503"",Municipality,"
+"1084,Villadiezma,1,,""42,395,394"",""-4,409,596"",Hamlet,"
+"1085,Villafranca,1,,""42,278,835"",""-1,745,788"",Town,"
+"1086,Villaharta,1,,""38,139,718"",""-4,902,666"",Town,"
+"1087,Villajimena,1,,""42,085,038"",""-4,433,817"",Locality,"
+"1088,Villajimeno,1,,""42,085,038"",""-4,433,817"",Locality,"
+"1089,Villamar,1,,""38,547,753"",-0.076282,Municipality,"
+"1090,Villambroz,1,,""42,410,952"",""-4,824,644"",Locality,"
+"1091,Villamor,1,,""41,252,419"",""-5,574,267"",Municipality,"
+"1092,Villamor Escuderos,1,,""41,252,419"",""-5,574,267"",Municipality,"
+"1093,Villanu?o de Valdavia,1,,""42,507,603"",""-4,518,357"",Municipality,"
+"1094,Villanubla,1,,""40,701,217"",""-4,840,117"",Municipality,"
+1095,Villanueva de herrera,1,,,,,
+"1096,""Villanueva de los Castillejos""""La Gozala"""""",1,,""37,480,632"",""-719,396"",Finca,"
+"1097,Villanueva del R?o,1,,""37,651,796"",""-5,712,149"",Municipality,"
+"1098,Villardiegua de la Ribera,1,,""41,535,675"",""-6,182,782"",Municipality,"
+"1099,Villarino de los Aires,1,,""41,267,512"",""-6,468,417"",Municipality,"
+"1100,Villarroya de la Sierra,1,,""41,464,539"",""-1,784,524"",Municipality,"
+"1101,Villavente,1,,""42,617,644"",""-5,507,025"",Locality,"
+"1102,Villavieja del Cerro,1,,""41,533,053"",""-5,037,045"",Locality,"
+1103,Villotillo,1,,,,,
+"1104,Vilviestre del Pinar,1,,""41,951,314"",""-3,077,055"",Municipality,"
+"1105,Walding,1,,""48,351,521"",""14,159,729"",Municipality,"
+1106,Weiden am See,,,,,,
+1107,Wien,,,,,,
+"1108,Wien: Albern,1,,""48,147,133"",""16,512,407"",District,"
+1109,Zadar,,,,,,
+1110,Zafron,1,,,,,
+"1111,Zarza de Mot?nchez,1,,""39,257,693"",""-6,032,375"",Municipality,"
+"1112,Zarza la Mayor,1,,""39,877,315"",""-6,861,818"",Municipality,"

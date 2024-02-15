@@ -15,7 +15,7 @@ colnames(newdat) <- c('site_id', 'transect', 'day', 'month', 'year', 'time', 'we
 #Add missing variables
 newdat <- add_missing_variables(check, newdat) #All vars added.
 
-#Creating new variables based on already existing misspelled one.
+#Creating new variables based on already existing ones.
 newdat$Year <- newdat$year
 newdat$Month <- newdat$month
 newdat$Day <- newdat$day
@@ -33,6 +33,9 @@ newdat$Province <- ifelse(newdat$site_id == "ejea caballeros", "Zaragoza", ifels
 #Put info on temperature under 'Any.other.additional.info.'
 newdat$Any.other.additional.data <- newdat$temperature
 newdat$Notes.and.queries <- "additional data is temp"
+
+#Assume one species observed per observation event.
+newdat$Not.specified <- "1"
 
 #Reorder and drop variables
 newdat <- drop_variables(check, newdat) #Vars 'transect', 'time', 'weather', 'wind' is erased.

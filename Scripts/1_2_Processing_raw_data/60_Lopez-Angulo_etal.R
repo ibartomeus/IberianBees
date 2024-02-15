@@ -11,8 +11,14 @@ compare_variables(check, newdat) #No obvious errors found here. Some classes wro
 #Add missing variables
 newdat <- add_missing_variables(check, newdat) #uid column added.
 
-#Delete two rows with only NA's that don't contain any info
+#Delete two rows with only NA's that don't contain any info at all.
 newdat <- subset(newdat, !is.na(Year))
+
+#Assume one species observed per observation event.
+newdat$Not.specified <- "1"
+
+#Copy Coordinate.precision to Any.other.additional.data so that the info doesn't get lost.
+newdat$Any.other.additional.data <- paste(newdat$Coordinate.precision, "coordinate precision")
 
 #Compare vars again
 compare_variables(check, newdat) #Looks good

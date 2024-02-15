@@ -16,6 +16,19 @@ newdat <- newdat <- subset(newdat, Latitude != 56.49357)
 #Compare vars again
 compare_variables(check, newdat) #Coordinates now look good.
 
+#Replacing zeros to NAs in sexes.
+newdat$Female <- replace(newdat$Female, newdat$Female == 0, NA)
+newdat$Male <- replace(newdat$Male, newdat$Male == 0, NA)
+newdat$Worker <- replace(newdat$Worker, newdat$Worker == 0, NA)
+newdat$Not.specified <- replace(newdat$Not.specified, newdat$Not.specified == 0, NA)
+
+#Add "1" in Not.specified where all Female, Male, Worker, Not.specified are NAs.
+na_rows <- is.na(newdat$Female) & is.na(newdat$Male) & is.na(newdat$Worker) & is.na(newdat$Not.specified)
+newdat$Not.specified[na_rows] <- 1
+
+#Copy Coordinate.precision to Notes.and.queries so that the info doesn't get lost.
+newdat$Notes.and.queries <- paste(newdat$Coordinate.precision, "coordinate precision")
+
 #Reorder and drop variables
 newdat <- drop_variables(check, newdat) #No valuable info is lost
 

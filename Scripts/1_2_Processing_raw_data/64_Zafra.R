@@ -18,6 +18,9 @@ newdat$Month <- match(trimws(newdat$Month), month_names) #Using trimws because I
 #Add missing variables
 newdat <- add_missing_variables(check, newdat)  #uid added.
 
+#Copy Coordinate.precision to Notes.and.queries so that the info doesn't get lost.
+newdat$Notes.and.queries <- paste(newdat$Coordinate.precision, "coordinate precision")
+
 #Comparing vars again
 compare_variables(check, newdat) #Looks good.
 

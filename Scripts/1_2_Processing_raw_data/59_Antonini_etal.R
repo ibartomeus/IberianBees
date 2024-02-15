@@ -20,6 +20,12 @@ newdat$Month <- match(trimws(newdat$Month), month_names) #Using trimws if the mo
 #Last row on 'Authors to give credit' is missing an input. Adding here.
 newdat$Authors.to.give.credit <- gsub("^$", "Yasmine Antonini/Montserrat Arista/Juan Arroyo", newdat$Authors.to.give.credit)
 
+#Assume one species observed per observation event.
+newdat$Not.specified <- "1"
+
+#Copy Coordinate.precision to Any.other.additional.data so that the info doesn't get lost.
+newdat$Any.other.additional.data <- paste(newdat$Coordinate.precision, "coordinate precision")
+
 #Compare vars again
 compare_variables(check, newdat)
 

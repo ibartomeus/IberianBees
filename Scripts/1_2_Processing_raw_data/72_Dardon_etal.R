@@ -20,7 +20,19 @@ newdat$Country <- gsub("Bélgica", "Belgium", newdat$Country)
 #NOTE: There are more to fix here for countries, eg Hakkari is put as a country.
 #I don't do more at this point, but this can be fixed later.
 
-# DOI 10.11646/zootaxa.0000.0.10 doesn't seem to work?
+# DOI 10.11646/zootaxa.0000.0.10 doesn't seem to work? Not fixing now.
+
+#Replacing zeros to NAs in sexes.
+newdat$Female <- replace(newdat$Female, newdat$Female == 0, NA)
+newdat$Male <- replace(newdat$Male, newdat$Male == 0, NA)
+newdat$Worker <- replace(newdat$Worker, newdat$Worker == 0, NA)
+
+#Add "1" in Not.specified where all Female, Male, Worker, Not.specified are NAs.
+na_rows <- is.na(newdat$Female) & is.na(newdat$Male) & is.na(newdat$Worker) & is.na(newdat$Not.specified)
+newdat$Not.specified[na_rows] <- 1
+
+#Replacing zeros to NAs in Year
+newdat$Year <- replace(newdat$Year, newdat$Year == 0, NA)
 
 #Reorder and drop variables
 newdat <- drop_variables(check, newdat) #No valuable info is lost

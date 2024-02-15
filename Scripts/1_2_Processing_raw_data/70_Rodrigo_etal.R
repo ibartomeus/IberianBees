@@ -17,9 +17,18 @@ compare_variables(check, newdat) #No vars missing, no extra vars. Some classes w
 
 #Replace plants with their latin name (retrived from the paper w doi 10.1080/00379271.2020.1847191)
 #newdat$Flowers.visited <- gsub("melon", "Cucumis melo L.", newdat$Flowers.visited)
-newdat$Flowers.visited <- ifelse(newdat$Flowers.visited == "melon", "Cucumis melo L.", newdat$Flowers.visited)
+newdat$Flowers.visited <- ifelse(newdat$Flowers.visited == "melon", "Cucumis melo", newdat$Flowers.visited)
 newdat$Flowers.visited <- gsub("Watermelon", "Citrullus lanatus", newdat$Flowers.visited)
 newdat$Flowers.visited <- gsub("Almond", "Prunus dulcis", newdat$Flowers.visited)
+
+#Replacing zeros to NAs in sexes.
+newdat$Female <- replace(newdat$Female, newdat$Female == 0, NA)
+newdat$Male <- replace(newdat$Male, newdat$Male == 0, NA)
+newdat$Worker <- replace(newdat$Worker, newdat$Worker == 0, NA)
+
+#Add "1" in Not.specified where all Female, Male, Worker, Not.specified are NAs.
+na_rows <- is.na(newdat$Female) & is.na(newdat$Male) & is.na(newdat$Worker) & is.na(newdat$Not.specified)
+newdat$Not.specified[na_rows] <- 1
 
 #Reorder and drop variables
 newdat <- drop_variables(check, newdat) #No valuable info is lost

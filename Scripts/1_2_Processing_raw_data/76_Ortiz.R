@@ -10,6 +10,18 @@ compare_variables(check, newdat) #No vars missing, no extra vars.
 
 #Dataset lacks coordinates, but have coordinate precision.
 
+#Replacing zeros to NAs in sexes.
+newdat$Female <- replace(newdat$Female, newdat$Female == 0, NA)
+newdat$Male <- replace(newdat$Male, newdat$Male == 0, NA)
+newdat$Worker <- replace(newdat$Worker, newdat$Worker == 0, NA)
+
+#Add "1" in Not.specified where all Female, Male, Worker, Not.specified are NAs.
+na_rows <- is.na(newdat$Female) & is.na(newdat$Male) & is.na(newdat$Worker) & is.na(newdat$Not.specified)
+newdat$Not.specified[na_rows] <- 1
+
+#Putting coordinate.precision in another variable so that it doesn't get lost.
+newdat$Notes.and.queries <- paste(newdat$Coordinate.precision, "coordinate precision")
+
 #Reorder and drop variables
 newdat <- drop_variables(check, newdat) #No valuable info is lost
 
