@@ -130,6 +130,8 @@ newdat <- drop_variables(check, newdat) #No info is lost. Old vars are stored in
 #Add unique identifier
 newdat$uid <- paste("68_Bornay", 1:nrow(newdat), sep = "")
 
+newdat$Authors.to.give.credit <- "Bornay"
+
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/68_Bornay.csv", 
             quote = TRUE, sep = ",", col.names = TRUE,

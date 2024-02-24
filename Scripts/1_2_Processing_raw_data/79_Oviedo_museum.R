@@ -13,6 +13,7 @@ compare_variables(check, newdat) #All variables missing.
 #Add missing variables
 newdat <- add_missing_variables(check, newdat)  #All variables added since the original dataset has everything in Spanish.
 
+
 #Subset bees
 newdat <- subset(newdat,
                  Familia == "Apidae" |
@@ -56,6 +57,7 @@ newdat$Species <- str_trim(newdat$Species) #Trim blank spaces
 #Put some additional info from variables Hábitat and Observaciones.
 newdat$Any.other.additional.data <- newdat$Hábitat
 newdat$Notes.and.queries <- newdat$Observaciones
+newdat$Local_ID <- newdat$ID
 
 #Fix dates.
 library(stringr)
@@ -68,7 +70,7 @@ newdat$Day <- ifelse(grepl("^\\d{4}-\\d{2}-\\d{2}$", newdat$Fecha),
                      NA)
 
 selection <- select(newdat, Fecha, Year, Month, Day)
-View(selection) #There are some Fechas that have weird formats, eg 13/?/1993, 25/03 ó 04/1975, 1/2 Septiembre.
+#View(selection) #There are some Fechas that have weird formats, eg 13/?/1993, 25/03 ó 04/1975, 1/2 Septiembre.
 #These are very few (around 20), hence I don't spend time fixing all these. Years tho are always fixed.
 
 #Drop variables

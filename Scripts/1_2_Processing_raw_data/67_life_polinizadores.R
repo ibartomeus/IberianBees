@@ -31,17 +31,26 @@ newdat$Country <- "Spain"
 newdat$Province <- ifelse(newdat$site_id == "ejea caballeros", "Zaragoza", ifelse(newdat$site_id == "cantavieja", "Teruel", NA))
 
 #Put info on temperature under 'Any.other.additional.info.'
-newdat$Any.other.additional.data <- newdat$temperature
-newdat$Notes.and.queries <- "additional data is temp"
+newdat$Any.other.additional.data <- paste("temperature:", newdat$temperature)
+
 
 #Assume one species observed per observation event.
 newdat$Not.specified <- "1"
+
+#Locality
+newdat$Locality <- newdat$site_id
 
 #Reorder and drop variables
 newdat <- drop_variables(check, newdat) #Vars 'transect', 'time', 'weather', 'wind' is erased.
 
 #Add unique identifier
 newdat$uid <- paste("67_life_polinizadores", 1:nrow(newdat), sep = "")
+
+#Add dome info Nach knows
+newdat$Authors.to.give.credit <- "Eva Nuñez"
+newdat$Determined.by <- "Oscar Aguado"
+newdat$Collector <- "Oscar Aguado"
+
 
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/67_life_polinizadores.csv", 

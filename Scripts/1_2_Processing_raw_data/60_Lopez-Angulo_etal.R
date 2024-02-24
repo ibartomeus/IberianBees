@@ -29,6 +29,11 @@ newdat <- drop_variables(check, newdat) #This not really necessary since we don'
 #Add unique identifier
 newdat$uid <- paste("60_Lopez-Angulo_etal", 1:nrow(newdat), sep = "")
 
+#lat long is character because dec is ,
+newdat$Latitude <- as.numeric(gsub(pattern = ",", replacement = ".", x = newdat$Latitude))
+newdat$Longitude <- as.numeric(gsub(pattern = ",", replacement = ".", x = newdat$Longitude))
+
+
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/60_Lopez-Angulo_etal.csv", 
             quote = TRUE, sep = ",", col.names = TRUE,

@@ -28,6 +28,7 @@ newdat$Worker <- replace(newdat$Worker, newdat$Worker == 0, NA)
 
 #Add "1" in Not.specified where all Female, Male, Worker, Not.specified are NAs.
 na_rows <- is.na(newdat$Female) & is.na(newdat$Male) & is.na(newdat$Worker) & is.na(newdat$Not.specified)
+
 newdat$Not.specified[na_rows] <- 1
 
 #Reorder and drop variables
@@ -35,6 +36,8 @@ newdat <- drop_variables(check, newdat) #No valuable info is lost
 
 #Add unique identifier
 newdat$uid <- paste("70_Rodrigo_etal", 1:nrow(newdat), sep = "")
+
+#Probbaly there is lat long in the paper.
 
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/70_Rodrigo_etal.csv", 

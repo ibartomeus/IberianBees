@@ -35,6 +35,8 @@ newdat <- drop_variables(check, newdat) #No valuable info is lost
 #Add unique identifier
 newdat$uid <- paste("66_Alvarez_etal", 1:nrow(newdat), sep = "")
 
+newdat$Coordinate.precision <- NA
+
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/66_Alvarez_etal.csv", 
             quote = TRUE, sep = ",", col.names = TRUE,

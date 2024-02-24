@@ -39,8 +39,9 @@ newdat$Country <- "Spain"
 newdat$Locality <- newdat$LOCALIDAD
 newdat$Province <- newdat$PROVINCIA
 #Assume that provincies "Va" is Valencia, and "Za" Zaragoza.
+#No, Va is Valladolid, and Za I bet is also Va. 
 newdat <- newdat |>
-  mutate(Province = recode(Province, "Va" = "Valencia", "va" = "Valencia", "Za" = "Zaragoza"))
+  mutate(Province = recode(Province, "Va" = "Valladolid", "va" = "Valladolid", "Za" = "Valladolid"))
 
 #Fix other vars.
 newdat$Collector <- newdat$COLECTOR
@@ -97,6 +98,7 @@ newdat$Locality <- gsub("auditorio delibes jardines ", "Auditorio delibes jardin
 newdat$uid <- paste("82_Aguado_asensio", 1:nrow(newdat), sep = "")
 
 str(newdat)
+head(newdat, 50)
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/82_Aguado_asensio.csv", 
             quote = TRUE, sep = ",", col.names = TRUE,

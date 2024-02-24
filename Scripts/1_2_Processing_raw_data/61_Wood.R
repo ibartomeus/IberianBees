@@ -37,6 +37,11 @@ newdat <- drop_variables(check, newdat) #No valuable info is lost. A column call
 #Add unique identifier
 newdat$uid <- paste("61_Wood", 1:nrow(newdat), sep = "")
 
+#lat long is character because dec is ,
+newdat$Latitude <- as.numeric(gsub(pattern = ",", replacement = ".", x = newdat$Latitude))
+newdat$Longitude <- as.numeric(gsub(pattern = ",", replacement = ".", x = newdat$Longitude))
+
+
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/61_Wood.csv", 
             quote = TRUE, sep = ",", col.names = TRUE,

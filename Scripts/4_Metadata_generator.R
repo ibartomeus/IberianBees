@@ -1,11 +1,11 @@
 # Metadata is created using dataspice ----
+library(dataspice)
 
 #This was used originally to create the structure, but now it should be
   #manually updated in /Data/metadata
 
 #RUN JUST ONCE! As involves manual data entry via shiny apps.
 #install.packages("dataspice")
-library(dataspice)
 create_spice() #creates metadata directory
 # Then fill in template CSV files, more on this below
 files <- "~/Documents/R/IberianBees/data/data_clean.csv"

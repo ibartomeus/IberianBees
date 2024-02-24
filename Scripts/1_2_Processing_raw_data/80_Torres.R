@@ -48,6 +48,7 @@ newdat <- drop_variables(check, newdat)
 #Add unique identifier
 newdat$uid <- paste("80_Torres", 1:nrow(newdat), sep = "")
 
+
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/80_Torres.csv", 
             quote = TRUE, sep = ",", col.names = TRUE,

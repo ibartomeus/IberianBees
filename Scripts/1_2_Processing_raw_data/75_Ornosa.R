@@ -27,6 +27,9 @@ newdat <- drop_variables(check, newdat) #No valuable info is lost
 #Add unique identifier
 newdat$uid <- paste("75_Ornosa", 1:nrow(newdat), sep = "")
 
+newdat$Coordinate.precision <- NA
+newdat$Reference.doi <- "ISSN: 0210-8984"
+
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/75_Ornosa.csv", 
             quote = TRUE, sep = ",", col.names = TRUE,

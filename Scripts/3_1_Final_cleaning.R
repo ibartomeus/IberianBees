@@ -196,7 +196,7 @@ data <- subset(data2, select = -flag)
 #Split accepted names again and rename genus and species cols
 data$Genus <- word(data$accepted_name,1)
 data$Species <- word(data$accepted_name,2)
-nlevels(factor(data$accepted_name)) #923 species!!
+nlevels(factor(data$accepted_name)) #923 species!! -> 942 24 Feb 2024
 
 #Recheck after fixes #Note that if flags removed above, this is empty
 (missed <- data$accepted_name[which(!data$accepted_name %in% master$Genus_species & is.na(data$rm))])
@@ -233,6 +233,10 @@ data$Subgenus <- gsub("[()]", "", data$Subgenus)
 
 #Check country levels
 levels(factor(data$Country))
+#Nacho updated this... should we track this deleted rows? Probably yes.
+data <- subset(data, Country %in% c("Spain", "Portugal", "France", "Andorra"))
+#check Francia
+data[which(data$Country == "Francia"),] #This looks like the alps, ignoring it right now.
 #Seems ok
 
 #Check province levels

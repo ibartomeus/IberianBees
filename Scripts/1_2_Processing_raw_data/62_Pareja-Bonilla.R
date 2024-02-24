@@ -24,6 +24,10 @@ newdat <- drop_variables(check, newdat) #No valuable info is lost
 #Add unique identifier
 newdat$uid <- paste("62_Pareja-Bonilla", 1:nrow(newdat), sep = "")
 
+#lat long is character because dec is ,
+newdat$Latitude <- as.numeric(gsub(pattern = ",", replacement = ".", x = newdat$Latitude))
+newdat$Longitude <- as.numeric(gsub(pattern = ",", replacement = ".", x = newdat$Longitude))
+
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/62_Pareja-Bonilla.csv", 
             quote = TRUE, sep = ",", col.names = TRUE,

@@ -158,6 +158,7 @@ newdat <- drop_variables(check, newdat)
 #Add unique identifier
 newdat$uid <- paste("83_Asensio", 1:nrow(newdat), sep = "")
 
+head(newdat, 100)
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/83_Asensio.csv", 
             quote = TRUE, sep = ",", col.names = TRUE,

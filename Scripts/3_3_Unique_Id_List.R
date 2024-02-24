@@ -3,9 +3,11 @@
 library(tidyverse)
 
 data <- read.table("Data/iberian_bees.csv.gz",  header=T, quote="\"", sep=",",row.names=1)
+head(data)
 
 #Select unique identifier (I love R but won't be able to remember this (.*)_([^_]+)$)
-data <- data %>% extract(uid, into = c("Id", "number"), "(.*)_([^_]+)$")
+data <- data %>% extract(Unique.identifier, into = c("Id", "number"), "(.*)_([^_]+)$")
+#Nacho just changed "uid" by "Unique.identifier" as this is how is named. Is this correct?
 
 #Select unique identifier of dataset instead of record
 data <- data %>% select(Id) %>% distinct(Id)
