@@ -111,6 +111,15 @@ ras.counts <- rasterize(datos.laea[, "Accepted_name"], ras,
   field = "Accepted_name", fun = "count"
 )
 # str(datos.laea)
+#NACHO is fixing this here, but should be fixed in data cleaning, right!?
+datos.laea$Male[is.na(datos.laea$Male)] <- 0
+datos.laea$Female <- as.numeric(datos.laea$Female)
+datos.laea$Female[is.na(datos.laea$Female)] <- 0
+datos.laea$Worker <- as.numeric(datos.laea$Worker)
+datos.laea$Worker[is.na(datos.laea$Worker)] <- 0
+datos.laea$Not.specified[is.na(datos.laea$Not.specified)] <-
+  ifelse(is.na(datos.laea$Worker) == 0 & is.na(datos.laea$Female) == 0 & is.na(datos.laea$Male) == 0, 1, 0)
+
 datos.laea$total <- datos.laea$Male + datos.laea$Female + datos.laea$Worker + datos.laea$Not.specified
 ras.counts2 <- rasterize(datos.laea[, "total"], ras,
   field = "total", fun = "sum"
