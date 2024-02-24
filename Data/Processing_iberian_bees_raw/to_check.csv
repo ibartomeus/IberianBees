@@ -1,8 +1,140 @@
 "","flag","checked","synonym_names","questionable","accepted_name","accepted_subspecies","Notes"
-"258","Andrena haemorhoa",NA,NA,NA,NA,NA,NA
-"1328","Anthophora balearicus",NA,NA,NA,NA,NA,NA
-"1895","Colletes nasutus",NA,NA,NA,NA,NA,NA
-"3321","Lasioglossum algericollelum",NA,NA,NA,NA,NA,NA
-"3787","Lasioglossum transitorium planulum",NA,NA,NA,NA,NA,NA
-"4891","Pseudapis albocincta",NA,NA,NA,NA,NA,NA
-"4966","Rhodanthidium septemdemtatum",NA,NA,NA,NA,NA,NA
+"1","Afranthidium schulthesii",NA,NA,NA,NA,NA,NA
+"84","Andrena agulimima",NA,NA,NA,NA,NA,NA
+"95","Andrena asimilis",NA,NA,NA,NA,NA,NA
+"96","Andrena baemorrhoa",NA,NA,NA,NA,NA,NA
+"97","Andrena boyerella",NA,NA,NA,NA,NA,NA
+"147","Andrena cf. pilipes",NA,NA,NA,NA,NA,NA
+"232","Andrena cyanomicans/ suerinensis",NA,NA,NA,NA,NA,NA
+"259","Andrena ferrugineicrus/ truncatilabris",NA,NA,NA,NA,NA,NA
+"278","Andrena florea fabricius",NA,NA,NA,NA,NA,NA
+"279","Andrena fulica",NA,NA,NA,NA,NA,NA
+"282","Andrena fulvicrus",NA,NA,NA,NA,NA,NA
+"283","Andrena gallica assimilis",NA,NA,NA,NA,NA,NA
+"299","Andrena haemorhoa",NA,NA,NA,NA,NA,NA
+"303","Andrena humlis",NA,NA,NA,NA,NA,NA
+"408","Andrena minitula",NA,NA,NA,NA,NA,NA
+"415","Andrena morfo sp7",NA,NA,NA,NA,NA,NA
+"429","Andrena morfo sp9",NA,NA,NA,NA,NA,NA
+"430","Andrena na",NA,NA,NA,NA,NA,NA
+"449","Andrena obsoleta",NA,NA,NA,NA,NA,NA
+"467","Andrena pauxilla",NA,NA,NA,NA,NA,NA
+"656","Andrena schenki",NA,NA,NA,NA,NA,NA
+"767","Andrena varia",NA,NA,NA,NA,NA,NA
+"959","Anthidium interruptum",NA,NA,NA,NA,NA,NA
+"960","Anthidium laeviventris",NA,NA,NA,NA,NA,NA
+"1106","Anthophora balearicus",NA,NA,NA,NA,NA,NA
+"1115","Anthophora fluvitarsis",NA,NA,NA,NA,NA,NA
+"1132","Anthophora na",NA,NA,NA,NA,NA,NA
+"1140","Anthophora pilipes",NA,NA,NA,NA,NA,NA
+"1194","Anthophora sp a",NA,NA,NA,NA,NA,NA
+"1195","Anthophora sp b",NA,NA,NA,NA,NA,NA
+"1266","Apis tessellata",NA,NA,NA,NA,NA,NA
+"1276","Biastes emarginatus",NA,NA,NA,NA,NA,NA
+"1278","Bombus (throracobombud/ sylvarum)",NA,NA,NA,NA,NA,NA
+"1279","Bombus agrorum",NA,NA,NA,NA,NA,NA
+"1283","Bombus campestris/rupestris",NA,NA,NA,NA,NA,NA
+"1287","Bombus cullumanus/sylvarum",NA,NA,NA,NA,NA,NA
+"1289","Bombus dintingundus",NA,NA,NA,NA,NA,NA
+"1290","Bombus distinguendus",NA,NA,NA,NA,NA,NA
+"1309","Bombus distinguendus/sylvarum",NA,NA,NA,NA,NA,NA
+"1310","Bombus hiperboreus",NA,NA,NA,NA,NA,NA
+"1311","Bombus hortoru",NA,NA,NA,NA,NA,NA
+"1318","Bombus hortorum hortorum x asturiensis",NA,NA,NA,NA,NA,NA
+"1319","Bombus hortorum/ruderatus",NA,NA,NA,NA,NA,NA
+"1363","Bombus lapidarius decipiens",NA,NA,NA,NA,NA,NA
+"1364","Bombus lucorum magnus x lucorum",NA,NA,NA,NA,NA,NA
+"1365","Bombus lucorum/soroeensis",NA,NA,NA,NA,NA,NA
+"1371","Bombus lucorum/terrestris",NA,NA,NA,NA,NA,NA
+"1392","Bombus lucorum/terrestris/soroeensis",NA,NA,NA,NA,NA,NA
+"1422","Bombus mesometas",NA,NA,NA,NA,NA,NA
+"1520","Bombus muscorum/humilis",NA,NA,NA,NA,NA,NA
+"1536","Bombus pascaorum",NA,NA,NA,NA,NA,NA
+"1537","Bombus pascuarum",NA,NA,NA,NA,NA,NA
+"1538","Bombus pascuorum/distinguendus",NA,NA,NA,NA,NA,NA
+"1546","Bombus pascuorum/distinguendus/muscorum",NA,NA,NA,NA,NA,NA
+"1547","Bombus pascuorum/humilis",NA,NA,NA,NA,NA,NA
+"1550","Bombus pascuorum/muscorum",NA,NA,NA,NA,NA,NA
+"1668","Bombus pascuorum/muscorum/humilis",NA,NA,NA,NA,NA,NA
+"1724","Bombus ragellus",NA,NA,NA,NA,NA,NA
+"1779","Bombus ruderans",NA,NA,NA,NA,NA,NA
+"1780","Bombus ruderatus/hortorum",NA,NA,NA,NA,NA,NA
+"1807","Bombus sylvestris/psithyrus campestris",NA,NA,NA,NA,NA,NA
+"1810","Bombus terrestris lusitanicus",NA,NA,NA,NA,NA,NA
+"1822","Bombus terrestris terrestris",NA,NA,NA,NA,NA,NA
+"1824","Bombus terrestris/lucorum",NA,NA,NA,NA,NA,NA
+"1917","Bombus terrestris/lucorum/soroeensis",NA,NA,NA,NA,NA,NA
+"1934","Bombus terrestris/pratorum",NA,NA,NA,NA,NA,NA
+"1938","Bombus terrestris/soroeensis",NA,NA,NA,NA,NA,NA
+"1945","Bombus terresttris/lucorum",NA,NA,NA,NA,NA,NA
+"1946","Bombus terretris",NA,NA,NA,NA,NA,NA
+"1980","Bombus terrrestris",NA,NA,NA,NA,NA,NA
+"1981","Bombus variabilis",NA,NA,NA,NA,NA,NA
+"1982","Bombus vimialis",NA,NA,NA,NA,NA,NA
+"1985","Bombus wurfleini pyrenaicus",NA,NA,NA,NA,NA,NA
+"2019","Ceratina dentriventris",NA,NA,NA,NA,NA,NA
+"2055","Ceratina mocsary",NA,NA,NA,NA,NA,NA
+"2117","Coelioxys argentea",NA,NA,NA,NA,NA,NA
+"2389","Coelioxys emarginata",NA,NA,NA,NA,NA,NA
+"2420","Colletes bederae",NA,NA,NA,NA,NA,NA
+"2709","Colletes merceti o dimidiatus",NA,NA,NA,NA,NA,NA
+"2723","Colletes nasutus",NA,NA,NA,NA,NA,NA
+"2745","Dasypoda plumipes",NA,NA,NA,NA,NA,NA
+"2760","Dasypoda vishaga",NA,NA,NA,NA,NA,NA
+"2853","Epeolus productus",NA,NA,NA,NA,NA,NA
+"2881","Eucera cf. hispaliensis",NA,NA,NA,NA,NA,NA
+"2914","Eucera longicornus",NA,NA,NA,NA,NA,NA
+"2923","Eucera seminuda",NA,NA,NA,NA,NA,NA
+"2946","Halictus cf. smaragdula",NA,NA,NA,NA,NA,NA
+"2950","Halictus cf. subaurata",NA,NA,NA,NA,NA,NA
+"2951","Halictus cfr. smaragdula",NA,NA,NA,NA,NA,NA
+"3247","Halictus laevigatus",NA,NA,NA,NA,NA,NA
+"3248","Halictus maculata",NA,NA,NA,NA,NA,NA
+"3251","Halictus major",NA,NA,NA,NA,NA,NA
+"3252","Halictus nitidus",NA,NA,NA,NA,NA,NA
+"3671","Halictus rubiduncus",NA,NA,NA,NA,NA,NA
+"3681","Halictus sexnotatum",NA,NA,NA,NA,NA,NA
+"3684","Halictus smaragdula",NA,NA,NA,NA,NA,NA
+"4331","Heriades rubicula",NA,NA,NA,NA,NA,NA
+"4355","Hoplitis adunca contraria",NA,NA,NA,NA,NA,NA
+"4361","Hoplitis aounca",NA,NA,NA,NA,NA,NA
+"4372","Hoplitis leucomelanea",NA,NA,NA,NA,NA,NA
+"4395","Hoplitis serrilabris",NA,NA,NA,NA,NA,NA
+"4459","Hylaeus gibus",NA,NA,NA,NA,NA,NA
+"4474","Hylaeus lypearis",NA,NA,NA,NA,NA,NA
+"4534","Lasioglossum algericollelum",NA,NA,NA,NA,NA,NA
+"4535","Lasioglossum alpigenum",NA,NA,NA,NA,NA,NA
+"4572","Lasioglossum callizonius",NA,NA,NA,NA,NA,NA
+"4974","Lasioglossum sp. hembra",NA,NA,NA,NA,NA,NA
+"5012","Lasioglossum transitorium planulum",NA,NA,NA,NA,NA,NA
+"5398","Lasioglossum xanthopum",NA,NA,NA,NA,NA,NA
+"5421","Lithurgus cornutus fuscipennis",NA,NA,NA,NA,NA,NA
+"5422","Lithurgus crysurus",NA,NA,NA,NA,NA,NA
+"5441","Megachile andrenoides",NA,NA,NA,NA,NA,NA
+"5459","Megachile burdigalensis",NA,NA,NA,NA,NA,NA
+"5473","Megachile centucularis",NA,NA,NA,NA,NA,NA
+"5635","Melecta luctousa",NA,NA,NA,NA,NA,NA
+"5637","Melecta punctata",NA,NA,NA,NA,NA,NA
+"5710","Nomada agrestris",NA,NA,NA,NA,NA,NA
+"5716","Nomada cirtana",NA,NA,NA,NA,NA,NA
+"5717","Nomada flava",NA,NA,NA,NA,NA,NA
+"5726","Nomada godeniana",NA,NA,NA,NA,NA,NA
+"5727","Nomada gransassoi",NA,NA,NA,NA,NA,NA
+"5728","Nomada obtusifrons",NA,NA,NA,NA,NA,NA
+"5729","Nomada pusilla",NA,NA,NA,NA,NA,NA
+"5744","Nomada umbrosa",NA,NA,NA,NA,NA,NA
+"5746","Nomia diversipes",NA,NA,NA,NA,NA,NA
+"6788","Osmia anceyl",NA,NA,NA,NA,NA,NA
+"6797","Osmia caerulensis",NA,NA,NA,NA,NA,NA
+"6830","Osmia coerulescens",NA,NA,NA,NA,NA,NA
+"6911","Osmia latreillei iberoafricana",NA,NA,NA,NA,NA,NA
+"7093","Osmia vidua",NA,NA,NA,NA,NA,NA
+"7202","Panurgus albopilosus",NA,NA,NA,NA,NA,NA
+"7253","Pseudapis albocincta",NA,NA,NA,NA,NA,NA
+"7341","Rhodanthidium septemdemtatum",NA,NA,NA,NA,NA,NA
+"7371","Sphecodes anatolicus",NA,NA,NA,NA,NA,NA
+"7376","Sphecodes fuscipennis",NA,NA,NA,NA,NA,NA
+"7384","Sphecodes verticalis",NA,NA,NA,NA,NA,NA
+"7503","Tetraloniella pollinosa",NA,NA,NA,NA,NA,NA
+"8599","Xylocopa (x.) violacea",NA,NA,NA,NA,NA,NA
+"8639","Xylocopa udesiensis",NA,NA,NA,NA,NA,NA
