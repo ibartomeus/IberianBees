@@ -1,0 +1,224 @@
+{
+  "@context": "http://schema.org",
+  "type": "Dataset",
+  "name": "Iberian Bee Database",
+  "creator": [
+    {
+      "type": "Person",
+      "id": "0000-0001-7893-4389",
+      "email": "nacho.bartomeus@gmail.com",
+      "affiliation": "EBD-CSIC",
+      "name": "Ignasi Bartomeus"
+    }
+  ],
+  "description": "Bees are a diverse group with more than 1000 species described in the Iberian Peninsula. This is a collaborative effort to collate and curate a database of bee occurrences.",
+  "datePublished": "2022-01-01",
+  "keywords": ["Biodiversity", "Apoidea", "Pollinators", "Phenology"],
+  "funder": "EU-H2020",
+  "temporalCoverage": "1830-01-01/2022-12-31",
+  "license": "CC-by",
+  "spatialCoverage": {
+    "type": "Place",
+    "name": "Iberian peninsula",
+    "geo": {
+      "type": "GeoShape",
+      "box": "44.15 4.76 35.67 -10.13"
+    }
+  },
+  "variableMeasured": [
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Genus",
+      "description": "Genus"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Subgenus",
+      "description": "Subgenus"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Species",
+      "description": "Species"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Subspecies",
+      "description": "Subspecies"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Country",
+      "description": "Country of collection"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Province",
+      "description": "Province of collection"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Text",
+      "name": "Locality",
+      "description": "Locality as provided by original collectors"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Decimal degrees",
+      "name": "Latitude",
+      "description": "Latitude"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Decimal degrees",
+      "name": "Longitude",
+      "description": "Longitude"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Coordinate.precision",
+      "description": "Precision at which the coordinates are provided"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Year",
+      "name": "Year",
+      "description": "Year of collection"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Month",
+      "name": "Month",
+      "description": "Month of collection"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Day",
+      "name": "Day",
+      "description": "Day of collection"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Text",
+      "name": "Start.date",
+      "description": "Free text regarding earlier posible date of collection"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Text",
+      "name": "End.date",
+      "description": "Free text regarding later posible date of collection"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Collector",
+      "description": "Name of the collector"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "Determined.by",
+      "description": "Name of the person who identified the specimen"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "number of records",
+      "name": "Female",
+      "description": "Number of females recorded (including queens in social spcies)"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "number of records",
+      "name": "Male",
+      "description": "Number of males recorded"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "number of records",
+      "name": "Worker",
+      "description": "Number of workers recorded (for social species)"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "number of records",
+      "name": "Not.specified",
+      "description": "Number of specimens recorded without sex identification"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Text",
+      "name": "Reference.doi",
+      "description": "If the data is publiched, the DOI of the papers where it appears"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Text",
+      "name": "Flowers.visited",
+      "description": "Free text including the flowers that the specimen was visiting"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "id",
+      "name": "Local_ID",
+      "description": "Unique identification in the local collection"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Text",
+      "name": "Authors.to.give.credit",
+      "description": "List of authors providing the original dataset"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Text",
+      "name": "Any.other.additional.data",
+      "description": "Free text to note any other additional information"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Text",
+      "name": "Notes.and.queries",
+      "description": "Free text to note any other notes or queries"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "id",
+      "name": "uid",
+      "description": "Unique identification in IBD."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "original_name",
+      "description": "Species name as provided by the orignal dataset"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "Categorical",
+      "name": "accepted_name",
+      "description": "Final species name after correcting for misspellings and synonims"
+    }
+  ],
+  "distribution": [
+    {
+      "type": "DataDownload",
+      "name": "clean data",
+      "contentUrl": "https://github.com/ibartomeus/IberianBees/blob/master/Data/iberian_bees.csv.gz",
+      "encodingFormat": "csv.gz"
+    },
+    {
+      "type": "DataDownload",
+      "name": "removed data",
+      "contentUrl": "https://github.com/ibartomeus/IberianBees/blob/master/Data/Processing_iberian_bees_raw/removed.csv",
+      "encodingFormat": "csv"
+    }
+  ]
+}
