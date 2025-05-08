@@ -27,3 +27,4 @@ vignettes/*.pdf
 #Preprocessing files
 .Rproj.user
 /raw_files
+IberianBees.Rproj
