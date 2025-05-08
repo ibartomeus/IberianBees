@@ -34,6 +34,11 @@ sourceEntireFolder("Scripts/1_2_Processing_raw_data")
 # 2 Merge all files ----
 #Read all files and merge into one 
 file_names <- dir("Data/Processed_raw_data") #where you have your files
+
+###manually exclude Asensio, which needs further cleaning
+file_names <- file_names[-81]
+###
+
 iberian_bees_raw <- do.call(rbind,lapply(paste("Data/Processed_raw_data/", file_names, sep=""),read.csv))
 
 #Save as a zip file

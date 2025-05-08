@@ -131,8 +131,14 @@ data$flag <- ifelse(data$Genus_species %in% master$Genus_species,
 #This file is generated later and now is rename to "to_check.csv"
 #All species names in the file "to_check.csv" would be manually searched
 #and  finally unified to manual checks which would be load here
-manual <- read.csv("Data/Processing_iberian_bees_raw/manual_checks.csv", sep = ";", stringsAsFactors = FALSE, 
+###NOTE: manual_checks is corruptes, nacho created a manual_check2.csv, but this needs to be properly fixed.
+manual <- read.csv("Data/Processing_iberian_bees_raw/manual_checks2.csv", stringsAsFactors = FALSE, 
                    na.strings = c(NA, ""))
+###more manual fixes... remove repeated entries :(
+manual <- manual[!duplicated(manual$flag), ]
+#head(manual)
+###
+
 #Merge with raw data
 data2 <- merge(data, 
                manual[,c("flag", "accepted_name", "accepted_subspecies")], 
