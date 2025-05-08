@@ -1,7 +1,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6354502.svg)](https://doi.org/10.5281/zenodo.6354502)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-# IberianBees database v.1.1.0 :bee:
+# IberianBees database v.1.3.0 :bee:
 
 This is a repository to document the distribution and diversity of bee species of the Iberian Peninsula. You can see a summary of the data [here](https://github.com/ibartomeus/IberianBees/blob/master/Manuscript/Summary/Summary.md).   
 
