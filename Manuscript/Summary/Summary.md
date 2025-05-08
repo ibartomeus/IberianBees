@@ -1,5 +1,5 @@
 
-# Summary of the IberianBees database
+# Summary of the IberianBees database (V1.0.0)
 
 The Iberian Bee Database contains **93803 entries** of bee occurrences
 over the peninsula and nearby islands. We have at least one record of
@@ -26,8 +26,6 @@ Here we present a summary of the database:
 
 ## Who make this posible?
 
-This is a large collaborative effort lead by I. Bartomeus, L.
-Carvalheiro and T. Woods, but it would not be possible without the
-contribution of thousends of researchers.
+This is a large collaborative effort lead by I. Bartomeus, J. Lanuza, and T. Woods, but it would not be possible without the contribution of thousends of researchers.
 
 Contact <nacho.bartomeus@gmail.com> if you want to contribute.
