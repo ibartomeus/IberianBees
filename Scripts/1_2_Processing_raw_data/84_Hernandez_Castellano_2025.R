@@ -1,12 +1,14 @@
-setwd("C:/Users/maria/Dropbox/Spanish_Bees/done/Data_MJ")
-
-data_castellanos <- read_xlsx("Hernandez_Castellano_2025.xlsx")
-check <- read_xlsx("Add_New_Data_Template_English_Version.xlsx", sheet = 3)
 
 #cargar paquetes
+library(here)
 library(readxl)
 library(dplyr)
 library(tidyr)
+
+#read data
+
+data_castellanos <- read_xlsx(here("Data/Rawdata/csvs/84_Hernandez_Castellano_2025.xlsx"))
+check <- read_xlsx("Add_New_Data_Template_English_Version.xlsx", sheet = 3)
 
 
 #Check vars
