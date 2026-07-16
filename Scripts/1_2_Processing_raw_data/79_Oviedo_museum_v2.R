@@ -1,9 +1,8 @@
 setwd("C:/Users/maria/Dropbox/Spanish_Bees/done/Data_MJ")
 
-source("Scripts/1_2_Processing_raw_data/Source_file.R") #Generate template
-
 
 #cargar paquetes
+library(here)
 library(readxl)
 library(dplyr)
 library(tidyr)
@@ -12,7 +11,7 @@ library(stringr)
 library(stringi)
 
 #upload dataset 
-data <- read.csv("NO_79_Oviedo_museum.csv", sep = ";")
+data <- read.csv(here("Data/Rawdata/csvs/79_Oviedo_museum.csv"), sep = ";")
 
 #Subset bees
 newdat <- subset(data,
@@ -35,9 +34,9 @@ newdat$End.date <- NA
 newdat$Worker <- NA
 newdat$Reference.doi <- NA
 newdat$Flowers.visited <- NA
-newdat$Local_ID <- newdat$�..ID
+newdat$Local_ID <- newdat$?..ID
 newdat$Authors.to.give.credit <- "Oviedo Museum"
-newdat$Any.other.additional.data <- newdat$H�.bitat
+newdat$Any.other.additional.data <- newdat$H?.bitat
 newdat$Notes.and.queries <- newdat$Observaciones
 
 
@@ -77,7 +76,7 @@ newdat <- newdat %>%
 
 newdat$Locality <- newdat$Localidad
 newdat$Province <- newdat$Provincia
-newdat$Country <- newdat$Pa�.s
+newdat$Country <- newdat$Pa?.s
 newdat <- newdat %>%
   mutate(
     Country = recode(Country, 
@@ -89,15 +88,15 @@ newdat <- newdat %>%
   mutate(
     Locality = recode(Locality, 
                   "S. Lázaro" = "S. Lazaro",
-         "Tereñes" = "Tere�es", "Gijón" = "Gijon", "San Martín" = "San Martin", 
+         "Tereñes" = "Tere?es", "Gijón" = "Gijon", "San Martín" = "San Martin", 
 "Muros de Nalón" = "Muros de Nalon", "Peón" = "Peon", "León" = "Leon", "Panjón" = "Panjon", 
 "Universidad Laboral Gijón" = "Universidad Labora de Gijon", "Serín" = "Serin", "Río Cares" = "Rio Cares", "Santa Mª del Mar" = "Santa Maria del Mar", 
-"Orlé" = "Orle", "S. Martín de Podes" = "San Martin de Podes", "Cabueñes" = "Cabue�es", 
-"Palomas (río)" = "Palomas (r�o)", "Peñaullán" = "Pe�aullan", "Polígono de Silvota" = "Poligono de Silvota", 
-"Ablaña" = "Abla�a", "Agüera" = "Aguera", "Agüero" = "Aguero","Agües" = "Aguanes", "Avín" = "Avin", 
+"Orlé" = "Orle", "S. Martín de Podes" = "San Martin de Podes", "Cabueñes" = "Cabue?es", 
+"Palomas (río)" = "Palomas (r?o)", "Peñaullán" = "Pe?aullan", "Polígono de Silvota" = "Poligono de Silvota", 
+"Ablaña" = "Abla?a", "Agüera" = "Aguera", "Agüero" = "Aguero","Agües" = "Aguanes", "Avín" = "Avin", 
 "Avilés" = "Aviles", "Bárcena" = "Barcena","Bañugues" = "Banuges",  "Baiña" = "Bahia","Beleño" = "Beleno",
 "Boñar" = "Bonar", "Brañace (Aramo)" = "Branace", "Brañes" = "Branes","Cáceres" = "Caceres", "Cármenes" = "Carmenes", 
-"Cabañaquinta" = "Cabanaquinta", "Cabezón de Pisuerga" = "Cabezon de Pisuerga", "Cabuérniga" = "Cabuerniga","Cabueñes" = "Cabue�es", 
+"Cabañaquinta" = "Cabanaquinta", "Cabezón de Pisuerga" = "Cabezon de Pisuerga", "Cabuérniga" = "Cabuerniga","Cabueñes" = "Cabue?es", 
 "Campos próximos al Masaveu" = "Campos proximos al Masaveu", "Candás" = "Candas", 
 "Castañeda" = "Castaneda", "Cayés" = "Cayes", "Ceares (Gijón)" = "Ceares (Gijon)","Cerbón" = "Cerbon",
 "Ciaño" = "Cianu", "Doñajuandi" = "Donajuandi", "El Berrón" = "El Berron", "El Campón (Salinas)" = "Camping Salinas",
@@ -108,7 +107,7 @@ newdat <- newdat %>%
 "Fernán Caballero" = "Fernan Caballero","Fuenterrabía" = "Fuenterrabia", "Geras de Gordón" = "Geras de Gordon", 
 "Gijón" = "Gijon","Gijón (Los Compones)" = "Gijon (Los Compones)", "Hoces de Río Pino" = "Hoces de Rio Pino", 
 "Huétor Santillán" = "Huetor Santillan","Infanzón" = "Infanzon", "La Barraca-Riaño" = "La Barraca", 
-"La Bañeza" = "La Ba�eza", "La Candamia (León)" = "La Candamia (Leon)","La Luz (Avilés)" = "La Luz (Aviles)", 
+"La Bañeza" = "La Ba?eza", "La Candamia (León)" = "La Candamia (Leon)","La Luz (Avilés)" = "La Luz (Aviles)", 
 "La Peña" = " La pena", "Ablaña" = "Ablana", "Aboño" = "Abono", "Ajuyán (Brañes)" = "Ajuyan (Branes)", 
 "Los Maizales (Gijón)" = "Los Maizales (Gijon)", "Somió" = "Somio"))
 
