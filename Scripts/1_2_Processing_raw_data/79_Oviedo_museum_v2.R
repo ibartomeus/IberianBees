@@ -1,5 +1,3 @@
-setwd("C:/Users/maria/Dropbox/Spanish_Bees/done/Data_MJ")
-
 
 #cargar paquetes
 library(here)
@@ -34,9 +32,9 @@ newdat$End.date <- NA
 newdat$Worker <- NA
 newdat$Reference.doi <- NA
 newdat$Flowers.visited <- NA
-newdat$Local_ID <- newdat$?..ID
+newdat$Local_ID <- newdat$ï..ID 
 newdat$Authors.to.give.credit <- "Oviedo Museum"
-newdat$Any.other.additional.data <- newdat$H?.bitat
+newdat$Any.other.additional.data <- newdat$HÃ.bitat
 newdat$Notes.and.queries <- newdat$Observaciones
 
 
@@ -76,7 +74,7 @@ newdat <- newdat %>%
 
 newdat$Locality <- newdat$Localidad
 newdat$Province <- newdat$Provincia
-newdat$Country <- newdat$Pa?.s
+newdat$Country <- newdat$PaÃ.s
 newdat <- newdat %>%
   mutate(
     Country = recode(Country, 
@@ -137,6 +135,6 @@ newdat <- newdat %>%
 
 
 #Save data
-write.table(x = newdat, file = 'C:/Users/maria/OneDrive/Escritorio/Maria_Jose/Proyectos_git/IberianBees/Data/Processed_raw_data/79_Oviedo_museum_v2.csv', 
+write.table(x = newdat, file = "Data/Processed_raw_data/79_Oviedo_museum_v2.csv", 
             quote = TRUE, sep = ',', col.names = TRUE, 
             row.names = FALSE)

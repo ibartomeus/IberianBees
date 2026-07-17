@@ -17,7 +17,7 @@ newdata <- data %>%
     Province = "PROVINCIA", 
     Locality = "LOCALIDAD_ACTUAL", 
     Year = "ANHO_DETERM", 
-    Date_collection = "fecha standard", 
+    Date_collection = "fecha.standard", 
     Collector = "COLECTOR", 
     Determined.by = "DETERM", 
     Worker = "PROCEDENCIA")
@@ -52,7 +52,7 @@ newdata$End.date <- NA
 newdata$Reference.doi <- NA
 newdata$Flowers.visited <- NA
 newdata$Local_ID <- NA
-newdata$Authors.to.give.credit <- "Piluca ?lvarez Fidalgo and MNCN"
+newdata$Authors.to.give.credit <- "Piluca Alvarez Fidalgo and MNCN"
 newdata$Any.other.additional.data <- NA
 newdata$Notes.and.queries <- NA
 
@@ -66,7 +66,7 @@ newdata <- newdata %>%
          Authors.to.give.credit, Any.other.additional.data, Notes.and.queries)
 
 #exportar csv final
-write.table(x = newdata, file = "C:/Users/maria/OneDrive/Escritorio/Maria_Jose/Proyectos_git/IberianBees/Data/Processed_raw_data/85_Anthophila_2025_final_MUSEO.csv", 
+write.table(x = newdata, file = "Data/Processed_raw_data/85_Anthophila_2025_final_MUSEO.csv", 
             quote = TRUE, sep = ",", col.names = TRUE,
             row.names = FALSE)
 

@@ -1,6 +1,6 @@
-setwd("C:/Users/maria/Dropbox/Spanish_Bees/to_add")
 
 #cargar paquetes
+library(here)
 library(readxl)
 library(dplyr)
 library(tidyr)
@@ -8,7 +8,7 @@ library(lubridate)
 library(stringr)
 library(stringi)
 
-data <- read_xlsx("NOCOMPLEXHymenopteros_OVIEDO_20231024.xlsx")
+data <- read.csv(here("Data/Rawdata/csvs/87_NOCOMPLEXHymenopteros_OVIEDO_20231024.csv"), sep = ";")
 
 #Subset bees
 sort(unique(newdata$Familia))
@@ -55,7 +55,7 @@ newdata$Day <- ifelse(grepl("^\\d{4}-\\d{2}-\\d{2}$", newdata$Fecha),
 
 newdata$Province <- newdata$Provincia
 newdata$Locality <- newdata$Localidad
-newdata$Country <- newdata$País
+newdata$Country <- newdata$Pa?s
 
 #Fix sexes: just one "Zangano" so I leave it out. Same with 
 
@@ -92,7 +92,7 @@ newdata$Reference.doi <- NA
 newdata$Flowers.visited <- NA
 newdata$Local_ID <- NA
 newdata$Authors.to.give.credit <- "Oviedo Museum"
-newdata$Any.other.additional.data <- newdata$Hábitat
+newdata$Any.other.additional.data <- newdata$H?bitat
 newdata$Notes.and.queries <- newdata$Observaciones
 
 #Seleccionar columnas para csv final 
