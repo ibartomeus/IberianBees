@@ -1,10 +1,5 @@
 library(here)
 library(readxl)
-library(dplyr)
-library(tidyr)
-library(lubridate)
-library(stringr)
-
 
 data <- read.csv(here("Data/Rawdata/csvs/91_Ornosa_Torres_delaRua_2017.csv"), sep = ";")
 
