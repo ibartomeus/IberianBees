@@ -1,23 +1,30 @@
 ########################################-
 # Download inaturalist data ----
 ########################################-
-#library(devtools)
-#install_github(repo = "ropensci/rinat")
+library(devtools)
+install_github(repo = "ropensci/rinat")
 library(rinat)
 bounds <- c(35.67, -10.13, 44.15, 4.76) #Iberian peninsula
 #Divide it for apidae because we reach the max number of records
-bound_1 <- c(35.67, -10.13, 44.15, -2.99) #Iberian peninsula in half
-bound_2 <- c(35.67, -3.00, 44.15, 4.76) #Iberian peninsula in half
+bound_1 <- c(35.67, -10.13, 44.15, -6.41)  #Iberian peninsula in four halfs
+bound_2 <- c(35.67, -6.41,  44.15, -2.66) #Iberian peninsula in four halfs
+bound_3 <- c(35.67, -2.66,  44.15,  1.01) #Iberian peninsula in four halfs
+bound_4 <- c(35.67,  1.01,  44.15,  4.76) #Iberian peninsula in four halfs
+
 #Apidae is divided in two in order to get the max records of the Iberia peninsula
 apidae_1 <- get_inat_obs(taxon_name = "Apidae", geo = TRUE, maxresults = 9999 , bounds = bound_1, quality =  "research")
 apidae_2 <- get_inat_obs(taxon_name = "Apidae", geo = TRUE, maxresults = 9999 , bounds = bound_2, quality =  "research")
+apidae_3 <- get_inat_obs(taxon_name = "Apidae", geo = TRUE, maxresults = 9999 , bounds = bound_3, quality =  "research")
+apidae_4 <- get_inat_obs(taxon_name = "Apidae", geo = TRUE, maxresults = 9999 , bounds = bound_4, quality =  "research")
 andrenidae <- get_inat_obs(taxon_name = "Andrenidae", geo = TRUE, maxresults = 9999 , bounds = bounds, quality =  "research")
 halictidae <- get_inat_obs(taxon_name = "Halictidae", geo = TRUE, maxresults = 9999 , bounds = bounds, quality =  "research")
 colletidae <- get_inat_obs(taxon_name = "Colletidae", geo = TRUE, maxresults = 9999 , bounds = bounds, quality =  "research")
 megachilidae <- get_inat_obs(taxon_name = "Megachilidae", geo = TRUE, maxresults = 9999 , bounds = bounds, quality =  "research")
 melittidae <- get_inat_obs(taxon_name = "Melittidae", geo = TRUE, maxresults = 9999 , bounds = bounds, quality =  "research")
 
-inat <- rbind(apidae_1,apidae_2, andrenidae, halictidae, colletidae, megachilidae)
+nrow(melittidae)
+
+inat <- rbind(apidae_1,apidae_2,apidae_3, apidae_4, andrenidae, halictidae, colletidae, megachilidae)
 unique(inat$scientific_name) #need to clean data, a couple subsp.
 head(inat)
 
@@ -47,9 +54,9 @@ id2 <- inat[, c("decimalLatitude",
 
 
 #Clean and merge Gbig and inat----
-#species in canary islands
-id2.1 <- subset(id2, decimalLatitude > 35.8 & decimalLatitude < 43.88 & 
-                  decimalLongitude > - 10.11 & decimalLongitude < 4.56)
+#species in canary islands and baleares
+id2.1 <- subset(id2, decimalLatitude > 27.0 & decimalLatitude < 45.15 & 
+                  decimalLongitude > - 10.11 & decimalLongitude < 4.88)
 
 #species with only genus (Gbif, done using species column)
 id2.2 <- id2.1[which(is.na(id2.1$species) == FALSE),]
