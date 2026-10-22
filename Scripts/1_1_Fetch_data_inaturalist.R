@@ -22,7 +22,6 @@ colletidae <- get_inat_obs(taxon_name = "Colletidae", geo = TRUE, maxresults = 9
 megachilidae <- get_inat_obs(taxon_name = "Megachilidae", geo = TRUE, maxresults = 9999 , bounds = bounds, quality =  "research")
 melittidae <- get_inat_obs(taxon_name = "Melittidae", geo = TRUE, maxresults = 9999 , bounds = bounds, quality =  "research")
 
-nrow(melittidae)
 
 inat <- rbind(apidae_1,apidae_2,apidae_3, apidae_4, andrenidae, halictidae, colletidae, megachilidae)
 unique(inat$scientific_name) #need to clean data, a couple subsp.
