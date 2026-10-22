@@ -1,7 +1,7 @@
 source("Scripts/1_2_Processing_raw_data/Source_file.R") #Generate template
 
 #Read data
-newdat <- read.csv(file = "Data/Rawdata/online/i1_Gbif.csv")[,-1]
+newdat <- read.csv(file = "Data/Rawdata/online/i1_Gbif_2026.csv")[,-1]
 
 
 #Rename cols first
@@ -18,10 +18,14 @@ colnames(newdat)[which(colnames(newdat)=="stateProvince")] <- "Province"
 colnames(newdat)[which(colnames(newdat)=="locality")] <- "Locality"
 
 #Add cols based on sex col
-newdat$Female <- ifelse(newdat$sex %in% c("FEMALE", "female", "queen"), 1, 0)
-newdat$Male <- ifelse(newdat$sex %in% c("MALE", "male"), 1, 0)
-newdat$Worker <- ifelse(newdat$sex %in% c("worker"), 1, 0)
-newdat$Not.specified <- ifelse(is.na(newdat$sex) | newdat$sex == "males_and_females", 1, 0)
+
+unique(newdat$Male)
+
+
+newdat$Female <- ifelse(newdat$sex %in% c("Female"), 1, 0)
+newdat$Male <- ifelse(newdat$sex %in% c("Male"), 1, 0)
+newdat$Worker <- NA
+newdat$Not.specified <- ifelse(is.na(newdat$sex) | newdat$sex == "Mixed", 1, 0)
 
 #Add missing cols
 newdat <- add_missing_variables(check, newdat)
@@ -36,6 +40,8 @@ newdat$Species <-  word(newdat$Species, 2)
 
 #Check species level
 #Fix empty spaces
+
+unique(newdat$Locality)
 newdat$Locality[newdat$Locality==""] <- NA
 #Set coord here to NA
 newdat$Locality[newdat$Locality==" 40.586979, -3.702713 "] <- NA
@@ -55,9 +61,14 @@ newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Mont
 #Add leading 0 to month column before merging
 newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
 #This black magic changes strings with numbers by NA
+
+unique(newdat$Determined.by)
 newdat$Collector[!grepl("[A-Za-z]+", newdat$Collector)] <- NA
 #Convert first element of the string to cap
 newdat$Collector <- str_to_title(newdat$Collector)
+#Remove the opening and closing tags, but not the URLs contained within the opening tags.
+newdat$Determined.by <- gsub("<A[^>]*>|</A>", "", newdat$Determined.by, ignore.case = TRUE)
+newdat$Determined.by[grepl("<U\\+[0-9A-Fa-f]+>", newdat$Determined.by)] <- NA
 #Convert first element of the string to cap
 newdat$Determined.by <- str_to_title(newdat$Determined.by)
 
@@ -97,14 +108,20 @@ lonlat_to_state <- function(pointsDF,
 ine_province <- data.frame(x = newdat$Longitude, y = newdat$Latitude)
 newdat$Province <- lonlat_to_state(ine_province)
 
+
+
 #Now check country
-#library(maps)
+library(maps)
 newdat$Country <- NA
 newdat$Country_1 <- maps::map.where(x = newdat$Longitude, y = newdat$Latitude)
 newdat$Country <- ifelse(is.na(newdat$Country) == FALSE, newdat$Country, newdat$Country_1)
+#remove Morocco
+unique(newdat$Country)
+newdat <- newdat[is.na(newdat$Country) | newdat$Country != "Morocco",]
+
 #Delete col
 newdat <- newdat %>% dplyr::select(-Country_1)
-
+newdat <- newdat %>% dplyr::select(-uid)
 #Rename the spanish label of balearic islands
 newdat$Country[grepl("Spain", newdat$Country)] <- "Spain"
 unique(levels(factor(newdat$Country)))
