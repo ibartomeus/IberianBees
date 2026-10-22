@@ -19,47 +19,47 @@ melittidae_key <- name_backbone(name="Melittidae", rank = "family")$usageKey
 
 occ_count(taxonKey= apidae_key, 
           georeferenced=TRUE, 
-          country="ES") #4343
+          country="ES") #4343 #new number of records:5680
 occ_count(taxonKey= andrenidae_key, 
           georeferenced=TRUE, 
-          country="ES") #897
+          country="ES") #897 #new number of records:3549
 occ_count(taxonKey= halictidae_key, 
           georeferenced=TRUE, 
-          country="ES") #1153
+          country="ES") #1153 #new number of records:3446
 occ_count(taxonKey= colletidae_key, 
           georeferenced=TRUE, 
-          country="ES") #691
+          country="ES") #691 #new number of records:509
 occ_count(taxonKey= megachilidae_key, 
           georeferenced=TRUE, 
-          country="ES") #1914
+          country="ES") #1914 #new number of records:1080
 occ_count(taxonKey= stenotritidae_key, 
           georeferenced=TRUE, 
-          country="ES") #0 (expected)
+          country="ES") #0 (expected) #new number of records: 0
 occ_count(taxonKey= melittidae_key, 
           georeferenced=TRUE, 
-          country="ES") #203
+          country="ES") #203 #new number of records:81
 
 occ_count(taxonKey= apidae_key, 
           georeferenced=TRUE, 
-          country="PT") #2828
+          country="PT") #2828 #new number of records:1922
 occ_count(taxonKey= andrenidae_key, 
           georeferenced=TRUE, 
-          country="PT") #258
+          country="PT") #258 #new number of records:348
 occ_count(taxonKey= halictidae_key, 
           georeferenced=TRUE, 
-          country="PT") #454
+          country="PT") #454 #new number of records:275
 occ_count(taxonKey= colletidae_key, 
           georeferenced=TRUE, 
-          country="PT") #158
+          country="PT") #158 #new number of records:51
 occ_count(taxonKey= megachilidae_key, 
           georeferenced=TRUE, 
-          country="PT") #387
+          country="PT") #387 #new number of records:40
 occ_count(taxonKey= stenotritidae_key, 
           georeferenced=TRUE, 
-          country="PT") #0 (expected)
+          country="PT") #0 (expected) #new number of records:0
 occ_count(taxonKey= melittidae_key, 
           georeferenced=TRUE, 
-          country="PT") #14
+          country="PT") #14 #new number of records:14
 
 family_key <- c(apidae_key, andrenidae_key,
                 halictidae_key, colletidae_key,
@@ -132,6 +132,6 @@ id1.2 <- id1.1[which(is.na(id1.1$species) == FALSE),]
 id1.3 <- id1.2[grep(" ", id1.2$species, fixed = TRUE, value = FALSE),]
 
 #Save data
-write.csv(id1.3, file = "Data/Rawdata/online/i1_Gbif.csv")
+write.csv(id1.3, file = "Data/Rawdata/online/i1_Gbif_2026.csv")
 
 
