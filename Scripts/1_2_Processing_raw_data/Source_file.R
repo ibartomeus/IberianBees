@@ -33,7 +33,7 @@ data$Locality <- as.character("Locality")
 data$Latitude <- c(25, 44) #Should be numeric because they have decimals.
 data$Longitude <- c(-20, 10)
 data$Coordinate.precision <- as.character("Coordinate.precision")
-data$Year <- as.integer(c(1900, 2023))
+data$Year <- as.integer(c(1900, 2026))
 data$Month <- as.integer(c(1, 12))
 data$Day <- as.integer(c(1, 31))
 data$Start.date <- as.character("Start.date")
