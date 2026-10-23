@@ -24,6 +24,7 @@ colnames(newdat)[which(colnames(newdat)=="stateProvince")] <- "Province"
 colnames(newdat)[which(colnames(newdat)=="locality")] <- "Locality"
 
 #Add cols based on sex col
+
 newdat$Female <- ifelse(newdat$sex %in% c("FEMALE", "female", "queen"), 1, 0)
 newdat$Male <- ifelse(newdat$sex %in% c("MALE", "male"), 1, 0)
 newdat$Worker <- ifelse(newdat$sex %in% c("worker"), 1, 0)
@@ -44,6 +45,8 @@ newdat$Species <-  word(newdat$Species, 2)
 #Fix empty spaces
 newdat$Locality[newdat$Locality==""] <- NA
 #Set coord here to NA
+unique(newdat$Locality)
+
 newdat$Locality[newdat$Locality==" 40.586979, -3.702713 "] <- NA
 newdat$Locality <- gsub("- ", "", newdat$Locality, fixed = TRUE)
 #Delete leading and trailing spaces
@@ -52,6 +55,9 @@ newdat$Locality <- gsub('"', "", newdat$Locality, fixed = TRUE)
 newdat$Locality <- gsub('-', "", newdat$Locality, fixed = TRUE)
 newdat$Locality <- gsub('\\', "", newdat$Locality, fixed = TRUE)
 newdat$Locality <- gsub('^,|.$', '', newdat$Locality)
+newdat$Locality <- gsub("<U\\+[^>]*>.*", "", newdat$Locality)
+#delete numbers
+newdat$Locality <- gsub("[0-9]", "", newdat$Locality)
 #Run it again
 newdat$Locality <- trimws(newdat$Locality)
 
@@ -67,6 +73,7 @@ newdat$Collector <- str_to_title(newdat$Collector)
 #Convert first element of the string to cap
 newdat$Determined.by <- str_to_title(newdat$Determined.by)
 
+unique(newdat$Determined.by)
 
 #Tell Spanish province by coordinate (ine province names)
 #Adapted from here (is fast :)
@@ -104,10 +111,11 @@ ine_province <- data.frame(x = newdat$Longitude, y = newdat$Latitude)
 newdat$Province <- lonlat_to_state(ine_province)
 
 #Now check country
-#library(maps)
+library(maps)
 newdat$Country <- NA
 newdat$Country_1 <- maps::map.where(x = newdat$Longitude, y = newdat$Latitude)
 newdat$Country <- ifelse(is.na(newdat$Country) == FALSE, newdat$Country, newdat$Country_1)
+
 #Delete col
 newdat <- newdat %>% dplyr::select(-Country_1)
 
