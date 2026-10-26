@@ -38,6 +38,7 @@ newdat$Country <- "Portugal"
 unique(newdat$Country)
 
 newdat$Province <- newdat$stateProvince
+newdat$Province <- stri_encode(newdat$Province, from = "UTF-8", to = "UTF-8")
 newdat$Locality <- newdat$locality
 
 #fix longitude and latitude
@@ -48,6 +49,8 @@ newdat$Coordinate.precision <- newdat$coordinatePrecision
 
 #fix collector and determined by 
 newdat$Collector <- newdat$recordedBy
+newdat$Collector <- stri_encode(newdat$Collector, from = "UTF-8", to = "UTF-8")
+unique(newdat$Collector)
 newdat$Determined.by <- newdat$identifiedBy
 
 newdat$Reference.doi <- "https://doi.org/10.3897/BDJ.14.e188597"
