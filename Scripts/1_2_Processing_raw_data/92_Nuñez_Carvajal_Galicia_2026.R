@@ -1,20 +1,29 @@
+source("Scripts/1_2_Processing_raw_data/Source_file.R") #Generate template
+
 library(here)
 library(readxl)
 library(dplyr)
 
-data <- read.csv(here("Data/Rawdata/csvs/92_Nuñez_Carvajal_Galicia_2026.csv"), sep = ";")
+newdat <- read.csv(here("Data/Rawdata/csvs/92_Nuñez_Carvajal_Galicia_2026.csv"), sep = ";")
+
+#Compare vars
+compare_variables(check, newdat) #Many variables missing.
+
+#Add missing variables
+newdat <- add_missing_variables(check, newdat)
+
 
 #fix sexes
 
 #Add "1" in Not.specified where all Female, Male, Not.specified are NAs.
-data$Not.specified <- ifelse((data$Female == 0 & data$Male == 0),1,0)
+newdat$Not.specified <- ifelse((newdat$Female == 0 & newdat$Male == 0),1,0)
 
 
 #fix collector and determined by 
 
-unique(data$Collector)
+unique(newdat$Collector)
 
-data <- data %>%
+newdat <- newdat %>%
   mutate(
     Collector = recode(Collector, 
                      "DBT,YJR" = "Diego Benito Teno, Yamil Jimenez Rodríguez", 
@@ -39,9 +48,9 @@ data <- data %>%
                      "EAG, BDA" = "Emilio Alonso Gómez, Begoña Dávila Alvite", 
                      "DBT, GBD, YJR" = "Diego Benito Teno, Guillermo Bañares de Dios, Yamil Jimenez Rodríguez"))
 
-unique(data$Determined.by)
+unique(newdat$Determined.by)
 
-data <- data %>%
+newdat <- newdat %>%
   mutate(
     Determined.by = recode(Determined.by, 
                        "ANC, PAF" = "Alejandro Nuñez Carbajal, Piluca Alvarez Fidalgo", 
@@ -67,7 +76,11 @@ data <- data %>%
                        "AAG, MGF, GCT, CFA" = "Alvaro Asenjo Guerra, Mario Gonzalez Ferreiro, Guillermo Cabezas Torrero,Carlos Fernandez Alvarez  ", 
                        "MGF, IJF, AAG" = "Mario Gonzalez Ferreiro, Ines Jimenez Fernandez, Alvaro Asenjo Guerra "))
 
+#Add unique identifier
+newdat$uid <- paste("92_Nuñez_Carvajal_Galicia_2026", 1:nrow(newdat), sep = "_")
+
+
 #Save data
-write.table(x = data, file = "Data/Processed_raw_data/92_Nuñez_Carvajal_Galicia_2026.csv", 
+write.table(x = newdat, file = "Data/Processed_raw_data/92_Nuñez_Carvajal_Galicia_2026.csv", 
             quote = TRUE, sep = ',', col.names = TRUE, 
             row.names = FALSE)

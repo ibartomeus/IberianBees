@@ -1,72 +1,59 @@
+source("Scripts/1_2_Processing_raw_data/Source_file.R") #Generate template
 
+library(here)
 library(readxl)
 library(dplyr)
 library(lubridate)
 
+#read data
+newdat <- read.csv(here("Data/Rawdata/csvs/85_Anthophila_2025_final_MUSEO.csv"), sep= ";")
 
-data <- read.csv(here("Data/Rawdata/csvs/85_Anthophila_2025_final_MUSEO.csv"), sep= ";")
+#Compare vars
+compare_variables(check, newdat) #Many variables missing.
 
-#cambiar nombres de las columnas al formato del Template
+#Add missing variables
+newdat <- add_missing_variables(check, newdat)
 
-newdata <- data %>%
-  rename(
-    Genus = "GENERO",
-    Subgenus = "SUBGEN", 
-    Species = "ESPECIE", 
-    Country = "PAIS", 
-    Province = "PROVINCIA", 
-    Locality = "LOCALIDAD_ACTUAL", 
-    Year = "ANHO_DETERM", 
-    Date_collection = "fecha.standard", 
-    Collector = "COLECTOR", 
-    Determined.by = "DETERM", 
-    Worker = "PROCEDENCIA")
+newdat$Genus <- newdat$GENERO
+newdat$Subgenus <- newdat$SUBGEN
+newdat$Species <- newdat$ESPECIE
+newdat$Subspecies <- NA
 
-#corregir formato fecha
-newdata$Date_collection <- as.Date(as.numeric(newdata$Date_collection), origin = "1899-12-30")
-newdata$Day   <- format(newdata$Date_collection, "%d")
-newdata$Month <- format(newdata$Date_collection, "%m")
-newdata$Year  <- format(newdata$Date_collection, "%Y")
+#fix dates
+
+newdat <- newdat %>%
+  separate(fecha.standard,
+           into = c("Day", "Month", "Year"), sep = "/") 
 
 #fix sex columns
 
-unique(newdata$SEXO)
-newdata <- newdata %>%
+unique(newdat$SEXO)
+newdat <- newdat %>%
   mutate(
     Female = ifelse(SEXO == "hembra", 1, 0),
-    Male = ifelse(SEXO == "macho", 1, 0)
-  )
+    Male = ifelse(SEXO == "macho", 1, 0))
 
 #Add "1" in Not.specified where all Female, Male, Not.specified are NAs.
-newdata$Not.specified <- ifelse((newdata$Female == 0 & newdata$Male == 0),1,0)
+newdat$Not.specified <- ifelse((newdat$Female == 0 & newdat$Male == 0),1,0)
+newdat$Country <- newdat$PAIS
+#rename Spain
+newdat$Country[newdat$Country == "España"] <- "Spain"
+#add provinces and localities
+newdat$Province <- newdat$PROVINCIA
+unique(newdat$Province)
+newdat$Locality <- newdat$LOCALIDAD_ACTUAL
 
+newdat$Collector <- newdat$COLECTOR
+newdat$Determined.by <- newdat$DETERM
 
-#a?adir columnas del template que no tienen datos y completar
-
-newdata$Subspecies <- NA
-newdata$Latitude <- NA
-newdata$Longitude <- NA
-newdata$Coordinate.precision <- NA
-newdata$Start.date <- NA
-newdata$End.date <- NA
-newdata$Reference.doi <- NA
-newdata$Flowers.visited <- NA
-newdata$Local_ID <- NA
 newdata$Authors.to.give.credit <- "Piluca Alvarez Fidalgo and MNCN"
-newdata$Any.other.additional.data <- NA
-newdata$Notes.and.queries <- NA
 
-#Seleccionar columnas para csv final 
+#Drop variables
+newdat <- drop_variables(check, newdat)
 
-newdata <- newdata %>%
-  select(Genus, Subgenus, Species, Subspecies, Country, Province, Locality, 
-         Latitude, Longitude, Coordinate.precision, Year, Month, Day, 
-         Start.date, End.date, Collector, Determined.by, Female, Male,
-         Worker, Not.specified, Reference.doi, Flowers.visited, Local_ID, 
-         Authors.to.give.credit, Any.other.additional.data, Notes.and.queries)
 
-#exportar csv final
-write.table(x = newdata, file = "Data/Processed_raw_data/85_Anthophila_2025_final_MUSEO.csv", 
+#export final dataset
+write.table(x = newdat, file = "Data/Processed_raw_data/85_Anthophila_2025_final_MUSEO.csv", 
             quote = TRUE, sep = ",", col.names = TRUE,
             row.names = FALSE)
 

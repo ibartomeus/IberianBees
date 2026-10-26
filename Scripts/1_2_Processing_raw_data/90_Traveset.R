@@ -1,3 +1,6 @@
+source("Scripts/1_2_Processing_raw_data/Source_file.R") #Generate template
+
+
 library(here)
 library(readxl)
 library(dplyr)
@@ -6,79 +9,72 @@ library(lubridate)
 library(stringr)
 
 
-data <- read.csv(here("Data/Rawdata/csvs/90_Traveset.csv"), sep = ";")
+newdat <- read.csv(here("Data/Rawdata/csvs/90_Traveset.csv"), sep = ";")
 
 #Subset bees: subset Hymenoptera with only Apidae as bee group
-newdata <- subset(data, family == "Apidae")
+newdat <- subset(newdat, family == "Apidae")
+
+#Compare vars
+compare_variables(check, newdat) #Many variables missing.
+
+#Add missing variables
+newdat <- add_missing_variables(check, newdat)
+head(newdat)
 
 #This database contained specificEpithet that refers to species and infraspecificepithets that are subpecies
 #
-newdata$Genus <- newdata$genus
-newdata$Subgenus <- NA
-newdata$Species <- newdata$specificEpithet
-newdata$Subspecies <- newdata$infraspecificEpithet
-
-newdata <- newdata %>%
-  mutate(Species = word(Species, 1)) #remove species and subspecies from the same column
+newdat$Genus <- newdat$genus
+newdat$Species <- newdat$specificEpithet
+newdat$Subspecies <- newdat$infraspecificEpithet
 
 #fix country, province and locality
 
-newdata$Country <- newdata$country
-newdata <- newdata %>%
+newdat$Country <- newdat$country
+newdat <- newdat %>%
   mutate(Country = recode(Country, 
                           "Espanya" = "Spain"))
 
-newdata$Province <- newdata$stateProvince
-newdata$Locality <- newdata$locality
+newdat$Province <- newdat$stateProvince
+newdat$Locality <- newdat$locality
 
 #fix coordinates
 
-newdata$Longitude <- newdata$decimalLongitude
-newdata$Latitude <- newdata$decimalLatitude
-newdata$Coordinate.precision <- newdata$coordinateUncertaintyInMeters
+newdat$Longitude <- newdat$decimalLongitude
+newdat$Latitude <- newdat$decimalLatitude
+newdat$Coordinate.precision <- newdat$coordinateUncertaintyInMeters
 
 
 #fix dates
 
-newdata <- newdata %>%
+newdat <- newdat %>%
   separate(verbatimEventDate,
            into = c("Day", "Month", "Year"),
            sep = "/")
 
 #fix sexes
 
-newdata$Female <- 0
-newdata$Male <- 0
-newdata$Worker <- 0
+newdat$Female <- 0
+newdat$Male <- 0
+newdat$Worker <- 0
 
 #Add "1" in Not.specified where all Female, Male, Not.specified are NAs.
-newdata$Not.specified <- ifelse((newdata$Female == 0 & newdata$Male == 0),1,0)
+newdat$Not.specified <- ifelse((newdat$Female == 0 & newdata$Male == 0),1,0)
 
 
 #add missing variables
 
-newdata$Collector <- NA
-newdata$Determined.by <- NA
-newdata$Start.date <- NA
-newdata$End.date <- NA
-newdata$Reference.doi <- "https://ipt.gbif.es/resource?r=imedea-insecta&v=1.14"
-newdata$Flowers.visited <- NA
-newdata$Local_ID <- newdata$id
-newdata$Authors.to.give.credit <- "Traveset, A; Díaz-Lorca, A"
-newdata$Any.other.additional.data <- newdata$municipality 
-newdata$Notes.and.queries <- newdata$datasetName 
+newdat$Reference.doi <- "https://ipt.gbif.es/resource?r=imedea-insecta&v=1.14"
+newdat$Local_ID <- newdata$id
+newdat$Authors.to.give.credit <- "Traveset, A; Díaz-Lorca, A"
 
-#Select columns for final template csv
+#Add unique identifier
+newdat$uid <- paste("90_Traveset", 1:nrow(newdat), sep = "_")
 
-newdata <- newdata %>%
-  select(Genus, Subgenus, Species, Subspecies, Country, Province, Locality, 
-         Latitude, Longitude, Coordinate.precision, Year, Month, Day, 
-         Start.date, End.date, Collector, Determined.by, Female, Male,
-         Worker, Not.specified, Reference.doi, Flowers.visited, Local_ID, 
-         Authors.to.give.credit, Any.other.additional.data, Notes.and.queries)
+#Drop variables
+newdat <- drop_variables(check, newdat)
 
 #Save data
-write.table(x = newdata, file = "Data/Processed_raw_data/90_Traveset", 
+write.table(x = newdat, file = "Data/Processed_raw_data/90_Traveset", 
             quote = TRUE, sep = ",", col.names = TRUE,
             row.names = FALSE)
 

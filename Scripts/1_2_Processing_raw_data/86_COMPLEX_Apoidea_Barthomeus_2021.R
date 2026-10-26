@@ -1,3 +1,5 @@
+source("Scripts/1_2_Processing_raw_data/Source_file.R") #Generate template
+
 library(here)
 library(readxl)
 library(dplyr)
@@ -5,66 +7,55 @@ library(lubridate)
 
 #Read data
 
-data <- read.csv(here("Data/Rawdata/csvs/86_COMPLEX_Apoidea_Barthomeus_2021.csv"), sep = ";")
-colnames(data)
+newdat <- read.csv(here("Data/Rawdata/csvs/86_COMPLEX_Apoidea_Barthomeus_2021.csv"), sep = ";")
 
-#cambiar nombres de las columnas al formato del Template
+#Compare vars
+compare_variables(check, newdat) #Many variables missing.
 
-newdata <- data %>%
-  rename(
-    Genus = "tGenero",
-    Subgenus = "tSubgenero", 
-    Species = "tEspecie", 
-    Country = "Pais", 
-    Province = "Provincia", 
-    Locality = "tLocalidad", 
-    Day = "nDia", 
-    Month ="nMes",
-    Year = "nAnio", 
-    Collector = "tColector", 
-    Determined.by = "tAutorDeterminacion", 
-    Worker = "tProcedencia", 
-    Authors.to.give.credit = "tAutor", 
-    Notes.and.queries = "tNotas",
-    Any.other.additional.data = "tNotasCaptura")
+#Add missing variables
+newdat <- add_missing_variables(check, newdat)
 
-#corregir columna Sexo
+#Add genus, species, subg and ssp
 
-unique(newdata$tSexo)
-newdata$tSexo <- tolower(newdata$tSexo)
+newdat$Genus <- newdat$tGenero
+newdat$Species <- newdat$tEspecie
+newdat$Subgenus <- newdat$tSubgenero
+newdat$Subspecies <- newdat$Infra
 
-newdata$Female <- ifelse(newdata$tSexo == "hembra", 1, 0)
-newdata$Male <- ifelse(newdata$tSexo == "macho", 1, 0)
+#rename country and add provinces and localities
+newdat$Country <- newdat$Pais
+#rename Spain
+newdat$Country[newdat$Country == "España"] <- "Spain"
+
+newdat$Province <- newdat$Provincia
+newdat$Locality <- newdat$LocalidadOrig
+
+#fix sex
+newdat$Female <- ifelse(newdat$tSexo == "hembra", 1, 0)
+newdat$Male <- ifelse(newdat$tSexo == "macho", 1, 0)
 
 #Add "1" in Not.specified where all Female, Male, Not.specified are NAs.
-newdata$Not.specified <- ifelse(
-  (newdata$Female == 0 & newdata$Male == 0), 1, 0)
+newdat$Not.specified <- ifelse(
+  (newdat$Female == 0 & newdat$Male == 0), 1, 0)
 
-#add missing variables 
+#fix dates
+newdat$Year <- newdat$nAnio
+newdat$Month <- newdat$nMes
+newdat$Day <- newdat$nDia
 
-newdata$Subspecies <- NA
-newdata$Latitude <- NA
-newdata$Longitude <- NA
-newdata$Coordinate.precision <- NA
-newdata$Start.date <- NA
-newdata$End.date <- NA
-newdata$Reference.doi <- "MNCN"
-newdata$Flowers.visited <- NA
-newdata$Local_ID <- NA
-newdata$Any.other.additional.data <- NA
-newdata$Notes.and.queries <- NA
+newdat$Collector <- newdat$tColector
+newdat$Determined.by <- newdat$tAutorDeterminacion
+newdat$Local_ID <- newdat$nNoCatalogo
 
-#Seleccionar columnas para csv final 
+#Add unique identifier
+newdat$uid <- paste("86_COMPLEX_Apoidea_Barthomeus_2021", 1:nrow(newdat), sep = "_")
 
-newdata <- newdata %>%
-  select(Genus, Subgenus, Species, Subspecies, Country, Province, Locality, 
-         Latitude, Longitude, Coordinate.precision, Year, Month, Day, 
-         Start.date, End.date, Collector, Determined.by, Female, Male,
-         Worker, Not.specified, Reference.doi, Flowers.visited, Local_ID, 
-         Authors.to.give.credit, Any.other.additional.data, Notes.and.queries)
+#Drop variables
+newdat <- drop_variables(check, newdat)
 
-#exportar csv final
-write.table(x = newdata, file = "Data/Processed_raw_data/86_COMPLEX_Apoidea_Barthomeus_2021.csv", 
+
+#export csv final
+write.table(x = newdat, file = "Data/Processed_raw_data/86_COMPLEX_Apoidea_Barthomeus_2021.csv", 
             quote = TRUE, sep = ",", col.names = TRUE,
             row.names = FALSE)
 

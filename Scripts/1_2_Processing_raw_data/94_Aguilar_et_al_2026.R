@@ -1,3 +1,6 @@
+source("Scripts/1_2_Processing_raw_data/Source_file.R") #Generate template
+
+
 library(here)
 library(readxl)
 library(dplyr)
@@ -5,35 +8,32 @@ library(tidyr)
 library(stringr)
 library(lubridate)
 
-data <- read.csv(here("Data/Rawdata/csvs/94_Aguilar_et_al_2026.csv"), sep = ";")
+newdat <- read.csv(here("Data/Rawdata/csvs/94_Aguilar_et_al_2026.csv"), sep = ";")
 
-data <- data[1:833, ]
+#Compare vars
+compare_variables(check, newdat) #Many variables missing.
 
+#Add missing variables
+newdat <- add_missing_variables(check, newdat)
+
+
+#data <- data[1:833, ]
 #add variables from template
 
-data$Subgenus <- NA
-data$Species <- data$Species
-data$Subspecies <- NA
-data$Country <- "Spain"
-data$Province <- "Barcelona"
-data$Locality <- "Viladecans"
-data$Coordinate.precision <- NA
-data$Start.date <- NA
-data$End.date <- NA
-data$Collector <- data$Collected.by
-data$Determined.by <- data$Identified.by
-data$Worker <- 0
+newdat$Country <- "Spain"
+newdat$Province <- "Barcelona"
+newdat$Locality <- "Viladecans"
+newdat$Collector <- newdat$Collected.by
+newdat$Determined.by <- newdat$Identified.by
 
-data$Reference.doi <- "10.17632/y2y4rpfpvr.1"
-data$Flowers.visited <- NA
-data$Local_ID <- "The Wildlife Ecology and Health Lab, UAB (https://weh.cat/)"
-data$Authors.to.give.credit <- "Aguilar, M.; Carbonell, R.; Romero, J.L.; Batlle-Benaiges, J.; Coromina, J.; Peguero, G.; Hernández-Castellano, C."
-data$Any.other.additional.data <- data$Plot
-data$Notes.and.queries <- NA
+newdat$Reference.doi <- "10.17632/y2y4rpfpvr.1"
+newdat$Local_ID <- "The Wildlife Ecology and Health Lab, UAB (https://weh.cat/)"
+newdat$Authors.to.give.credit <- "Aguilar, M.; Carbonell, R.; Romero, J.L.; Batlle-Benaiges, J.; Coromina, J.; Peguero, G.; Hern?ndez-Castellano, C."
+newdat$Any.other.additional.data <- newdat$Plot
 
 #add subgenus to the different species 
 
-data <- data %>%
+newdat <- newdat %>%
   mutate(
     Subgenus = case_when(
       Species %in% c("Andrena aeneiventris ") ~ "Aenandrena",
@@ -183,57 +183,46 @@ data <- data %>%
 
 
 #separate genus and species 
-data <- data %>%
-  separate(Species,
-           into = c("Genus", "Species"),
-           sep = " ")
+newdat <- newdat %>%
+  separate(Species, into = c("Genus", "Species"), sep = " ")
 
 #fix sex columns
 
-unique(data$Sex)
-data <- data %>%
+unique(newdat$Sex)
+newdat <- newdat %>%
   mutate(
     Female = ifelse(Sex == "F", 1, 0),
     Male = ifelse(Sex == "M", 1, 0))
 
 #Add "1" in Not.specified where all Female, Male, Not.specified are NAs.
-data$Not.specified <- ifelse((data$Female == 0 & data$Male == 0),1,0)
+newdat$Not.specified <- ifelse((newdat$Female == 0 & newdat$Male == 0),1,0)
 
 #fix dates
 
-data <- data %>%
+newdat <- newdat %>%
   separate(Date,
            into = c("Day", "Month", "Year"),
            sep = "/")
 
-data$Year <- as.numeric(data$Year)
-data$Month <- as.numeric(data$Month)
-data$Day <- as.numeric(data$Day)
-
 #fix coordinates
-
-data <- data %>%
+newdat <- newdat %>%
   separate(Coordinates,
            into = c("Latitude", "Longitude"),
            sep = ",")
-
 #correct whitespace
-data <- data %>%
+newdat <- newdat %>%
   mutate(Longitude = trimws(Longitude), 
          Latitude = trimws((Latitude)))
 
+#Add unique identifier
+newdat$uid <- paste("94_Aguilar_et_al_2026", 1:nrow(newdat), sep = "_")
 
-#Select columns for final template csv
+#Drop variables
+newdat <- drop_variables(check, newdat)
 
-data <- data %>%
-  select(Genus, Subgenus, Species, Subspecies, Country, Province, Locality, 
-         Latitude, Longitude, Coordinate.precision, Year, Month, Day, 
-         Start.date, End.date, Collector, Determined.by, Female, Male,
-         Worker, Not.specified, Reference.doi, Flowers.visited, Local_ID, 
-         Authors.to.give.credit, Any.other.additional.data, Notes.and.queries)
 
 #Save data
-write.table(x = data, file = "../../Data/Processed_raw_data/94_Aguilar_et_al_2026.csv", 
+write.table(x = newdat, file = "Data/Processed_raw_data/94_Aguilar_et_al_2026.csv", 
             quote = TRUE, sep = ',', col.names = TRUE, 
             row.names = FALSE)
 

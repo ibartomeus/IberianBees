@@ -1,3 +1,6 @@
+source("Scripts/1_2_Processing_raw_data/Source_file.R") #Generate template
+
+
 library(here)
 library(readxl)
 library(dplyr)
@@ -5,14 +8,20 @@ library(tidyr)
 library(stringr)
 library(lubridate)
 
-data <- read.csv(here("Data/Rawdata/csvs/93_4life.csv"), sep = ",")
+newdat <- read.csv(here("Data/Rawdata/csvs/93_4life.csv"), sep = ",")
+
+#Compare vars
+compare_variables(check, newdat) #Many variables missing.
+
+#Add missing variables
+newdat <- add_missing_variables(check, newdat)
 
 #rename columns of scientic names of plants and pollinators
 
-names(data)
+names(newdat)
 
-names(data)[5] <- "flowers_sp"
-names(data)[7] <- "pollinators_sp"
+names(newdat)[5] <- "flowers_sp"
+names(newdat)[7] <- "pollinators_sp"
 
 #Filter only bees but first we need to assign functional group
 
@@ -27,77 +36,71 @@ bee <- c("Amegilla", "Andrena", "Anthidiellum", "Anthidium", "Anthophora",
   "Stelis", "Thyreus", "Vestitohalictus", "Xylocopa")
 
 
-data <- data %>%
+newdat <- newdat %>%
   mutate(group_func = 
            case_when(grepl(paste(bee, collapse = "|"), pollinators_sp) ~ "Bee",
       TRUE ~ "Other"))
 
-data<- data %>%
+newdat<- newdat %>%
   filter(group_func %in% c("Bee"))
 
 
 #separate genus and species
-data <- data %>%
-  separate(
-    pollinators_sp,
-    into = c("Genus", "Species"),
-    sep = " ",
-    extra = "merge",
-    fill = "right"
-  )
 
-data$Subgenus <- NA 
-data$Subspecies <- NA 
+newdat$Genus <-  word(newdat$pollinators_sp, 1)
+newdat$Species <-  word(newdat$pollinators_sp, 2)
+#filter only the ones identified to level species 
+newdat <- newdat %>%
+  filter(!is.na(Species) & !Species %in% c("sp.", "cf."))
 
 #fix country, province and locality
 
-data$Country <- data$country
-data$Locality <- data$locality #no info in the paper about localities, only this code
-data$Province <- NA
+newdat$Country <- newdat$country
+#filter only Spain
+unique(newdat$Country)
+newdat <- newdat %>%
+  filter(Country %in% c("Spain", "Portugal"))
+
+
+newdat$Locality <- newdat$locality #no info in the paper about localities, only this code
+#unique(newdat$verbatimLocality) #EXTRACT LOCALITY FROM NATURA 2000 IF NEEDED 
+
 
 #fix latitude and longitude
 
-data$Longitude <- as.numeric(data$decimalLongitude)
-data$Latitude <- as.numeric(data$decimalLatitude)
-data$Coordinate.precision <- NA
-
-unique(data$verbatimLocality) #EXTRACT LOCALITY FROM NATURA 2000 IF NEEDED 
+newdat$Longitude <- newdat$decimalLongitude
+newdat$Latitude <- newdat$decimalLatitude
 
 #fix dates: The date indicates when the photograph was taken (YYYY-MM-DD).
 #It assums that the date of observation was the same as the date of record submission.
 
-unique(data$eventDate)
+unique(newdat$eventDate)
 
-data$eventDate <- data$eventDate %>%
+newdat$eventDate <- newdat$eventDate %>%
   str_remove("\\*$") %>%
   parse_date_time(orders = c("dmy", "ymd")) %>%
   format("%Y/%m/%d")
 
-data <- data %>%
+newdat <- newdat %>%
   separate(eventDate,
            into = c("Year", "Month", "Day"), sep = "/") 
 
 
-data$Start.date <- NA
-data$End.date <- NA 
 
 #fix sexes
 
-data$Female <- 0
-data$Male <- 0
-data$Worker <- 0
+newdat$Female <- 0
+newdat$Male <- 0
+newdat$Worker <- 0
 
 #Add "1" in Not.specified where all Female, Male, Not.specified are NAs.
-data$Not.specified <- ifelse((data$Female == 0 & data$Male == 0),1,0)
+newdat$Not.specified <- ifelse((newdat$Female == 0 & newdat$Male == 0),1,0)
 
 #complete missing variables from the template 
 
-data$Collector <- NA
-data$Determined.by <- NA 
-data$Reference.doi <- "https://doi.org/10.26786/1920-7603(2025)872"
-data$Flowers.visited <- data$flowers_sp
-data$Local_ID <- NA 
-data$Authors.to.give.credit <- "Barberis, M.; 
+newdat$Reference.doi <- "https://doi.org/10.26786/1920-7603(2025)872"
+newdat$Flowers.visited <- newdat$flowers_sp
+newdat$Authors.to.give.credit <- "Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -114,23 +117,20 @@ Traveset, A.; Zenga, E. L.; Galloni, M."
 #This could either be entered by users or -when missing -deducted a posteriori
 #by consulting a map
 
-data$Any.other.additional.data <- data$habitat
+newdat$Any.other.additional.data <- newdat$habitat
 
 #this is the code used to join the three individual dataset provided in the paper. 
 
-data$Notes.and.queries <- data$eventID
+newdat$Notes.and.queries <- newdat$eventID
 
-#Select columns for final template csv
+#Add unique identifier
+newdat$uid <- paste("93_4life", 1:nrow(newdat), sep = "_")
 
-data <- data %>%
-  select(Genus, Subgenus, Species, Subspecies, Country, Province, Locality, 
-         Latitude, Longitude, Coordinate.precision, Year, Month, Day, 
-         Start.date, End.date, Collector, Determined.by, Female, Male,
-         Worker, Not.specified, Reference.doi, Flowers.visited, Local_ID, 
-         Authors.to.give.credit, Any.other.additional.data, Notes.and.queries)
+#Drop variables
+newdat <- drop_variables(check, newdat)
 
 #Save data
-write.table(x = data, file = "Data/Processed_raw_data/93_4life", 
+write.table(x = newdat, file = "Data/Processed_raw_data/93_4life", 
             quote = TRUE, sep = ",", col.names = TRUE,
             row.names = FALSE)
 

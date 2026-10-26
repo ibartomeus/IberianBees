@@ -1,3 +1,6 @@
+source("Scripts/1_2_Processing_raw_data/Source_file.R") #Generate template
+
+
 library(here)
 library(readxl)
 library(dplyr)
@@ -5,11 +8,15 @@ library(tidyr)
 library(lubridate)
 library(stringr)
 
-data <- read.csv(here("Data/Rawdata/csvs/89_Gbif_PT_bees.csv"), sep = ";")
+#read data
+newdat <- read.csv(here("Data/Rawdata/csvs/89_Gbif_PT_bees.csv"), sep = ";")
+
+#Compare vars
+compare_variables(check, newdat) #Many variables missing.
 
 #clean: select only variables to work with
 
-newdata <- data %>%
+newdat <- newdat %>%
   select(institutionID, collectionID ,datasetName, catalogNumber, recordedBy, individualCount, 
          sex, associatedReferences, otherCatalogNumbers, previousIdentifications, eventDate, 
          startDayOfYear, endDayOfYear, year, month, day, fieldNotes, countryCode, stateProvince, 
@@ -17,112 +24,69 @@ newdata <- data %>%
          georeferencedBy, identificationID, verbatimIdentification, identifiedBy,identifiedByID, 
          identificationReferences, genus, subgenus,specificEpithet, issue, species)
 
-##check with old identifications: The dataset includes information about previous identifications that are included in the template
-#as additional data to not lose this information
+#Add missing variables
+newdat <- add_missing_variables(check, newdat)
 
-species_check <- newdata %>%
-  select(previousIdentifications, species) 
+newdat$Any.other.additional.data <- newdat$previousIdentifications
 
-species_check <- species_check %>%
-  separate(previousIdentifications,
-           into = c("Previous_id", "ID_by"), sep = ",") 
-
-species_check$valor <- ifelse(species_check$Previous_id == species_check$species, "same", "Dif")
-
-table(species_check$valor)
-
-newdata$Any.other.additional.data <- newdata$previousIdentifications
-
-#Fix species categories
-
-unique(newdata$genus)
-
-newdata <- newdata %>%
-  separate(species,
-           into = c("Genus", "Species"), sep = " ")  %>%
-  mutate(Genus = coalesce(genus, Genus))
-
-newdata$Subgenus <- newdata$subgenus
-
-newdata$Subspecies <- NA
+#Create Genus and species col by selecting 1st and 2nd element of the string in Species column
+unique(newdat$species)
+newdat$Genus <-  word(newdat$species, 1)
+newdat$Species <-  word(newdat$species, 2)
+newdat$Subgenus <-  newdat$subgenus
 
 #fix countries, province and localities
-
-unique(newdata$countryCode) 
 #only three entries have "ZZ" which has no information from where was collected so I deleted: Bombus terrestris
 #Bombus pascuorum and Xylocopa violacea.
 
-newdata$Country <- newdata$countryCode
-
-newdata <- newdata %>%
+unique(newdat$countryCode) 
+newdat$Country <- newdat$countryCode
+newdat <- newdat %>%
   filter(Country %in% c("PT")) 
-
-newdata$Province <- newdata$stateProvince
-
-newdata$Locality <- newdata$locality
+newdat$Country[newdat$Country == "PT"] <- "Portugal"
+newdat$Province <- newdat$stateProvince
+newdat$Locality <- newdat$locality
 
 #fix latitude and longitude
 
-newdata$Longitude <- newdata$decimalLongitude
-newdata$Latitude <- newdata$decimalLatitude
-newdata$Coordinate.precision <- newdata$coordinatePrecision
+newdat$Longitude <- newdat$decimalLongitude
+newdat$Latitude <- newdat$decimalLatitude
+newdat$Coordinate.precision <- newdat$coordinatePrecision
 
 #fix dates and keep the rows with NAs
 
-newdata$Year <- newdata$year
-newdata$Month <- newdata$month
-newdata$Day <- newdata$day
+newdat$Year <- newdat$year
+newdat$Month <- newdat$month
+newdat$Day <- newdat$day
 
-#fix start dates and end dates
-
-newdata$fecha <- as.Date(newdata$startDayOfYear - 1, origin = paste0(newdata$Year, "-01-01"))
-newdata$dia_mes <- as.integer(format(newdata$fecha, "%d"))
-
-#check if start and end date match with Day and if so, merge
-
-check_dates <- newdata %>%
-  select(fecha, dia_mes, Day, Month, Year, Start.date)
-
-newdata$Start.date <- newdata$startDayOfYear
-newdata$End.date <- newdata$endDayOfYear
-
-colnames(newdata)
 
 #fix collector and determined by
-
-newdata$Collector <- newdata$recordedBy
-
-newdata$Determined.by <- newdata$identifiedBy
+newdat$Collector <- newdat$recordedBy
+newdat$Determined.by <- newdat$identifiedBy
 
 #Fix sexes 
-unique(newdata$sex)
-newdata$Female <- ifelse(newdata$sex == "FEMALE", 1, 0)
-newdata$Male <- ifelse(newdata$sex == "MALE", 1, 0)
-newdata$Worker <- NA
+unique(newdat$sex)
+newdat$Female <- ifelse(newdat$sex == "FEMALE", 1, 0)
+newdat$Male <- ifelse(newdat$sex == "MALE", 1, 0)
 
 #Add "1" in Not.specified where all Female, Male, Not.specified are NAs.
-newdata$Not.specified <- ifelse((newdata$Female == 0 & newdata$Male == 0), 1, 0)
+newdat$Not.specified <- ifelse((newdat$Female == 0 & newdat$Male == 0), 1, 0)
 
 #add missing variables 
 
-newdata$Subgenus <- newdata$subgenus
-newdata$Reference.doi <- newdata$institutionID
-newdata$Flowers.visited <- NA
-newdata$Local_ID <- newdata$collectionID
-newdata$Authors.to.give.credit <- NA
-newdata$Notes.and.queries <- newdata$catalogNumber
+newdat$Reference.doi <- newdat$institutionID
+newdat$Local_ID <- newdat$collectionID
+newdat$Notes.and.queries <- newdat$catalogNumber
 
-#Select columns for final template csv 
+#Add unique identifier
+newdat$uid <- paste("89_Gbif_PT_bees", 1:nrow(newdat), sep = "_")
 
-newdata <- newdata %>%
-  select(Genus, Subgenus, Species, Subspecies, Country, Province, Locality, 
-         Latitude, Longitude, Coordinate.precision, Year, Month, Day, 
-         Start.date, End.date, Collector, Determined.by, Female, Male,
-         Worker, Not.specified, Reference.doi, Flowers.visited, Local_ID, 
-         Authors.to.give.credit, Any.other.additional.data, Notes.and.queries)
+#Drop variables
+newdat <- drop_variables(check, newdat)
+
 
 #Save data
-write.table(x = newdata, file = "Data/Processed_raw_data/89_Gbif_PT_bees.csv", 
+write.table(x = newdat, file = "Data/Processed_raw_data/89_Gbif_PT_bees.csv", 
             quote = TRUE, sep = ',', col.names = TRUE, 
             row.names = FALSE)
 

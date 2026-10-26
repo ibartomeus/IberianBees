@@ -1,3 +1,4 @@
+source("Scripts/1_2_Processing_raw_data/Source_file.R") #Generate template
 
 library(here)
 library(readxl)
@@ -7,88 +8,63 @@ library(lubridate)
 library(stringr)
 library(stringi)
 
-data <- read.csv(here("Data/Rawdata/csvs/88_Baptista_et_al_2026.csv"), sep = ";")
+#read data
+newdat <- read.csv(here("Data/Rawdata/csvs/88_Baptista_et_al_2026.csv"), sep = ";")
 
-## fix Species column 
+#Compare vars
+compare_variables(check, newdat) #Many variables missing.
 
-newdata <- data %>%
-  separate(species,
-           into = c("Genus", "Species"), sep = " ") %>%
-  mutate(Genus = coalesce(genus, Genus))
+#Add missing variables
+newdat <- add_missing_variables(check, newdat)
 
+#Create Genus and species col by selecting 1st and 2nd element of the string in Species column
+unique(newdat$species)
+newdat$Genus <-  word(newdat$species, 1)
+newdat$Species <-  word(newdat$species, 2)
+newdat$Subspecies <-  newdat$infraspecificEpithet
+#remove rows with NA in Species 
+newdat <- newdat[!is.na(newdat$Species), ]
 
 #fix date column
 
-newdata$Day <- as.numeric(newdata$day)
-newdata$Month <- as.numeric(newdata$month)
-newdata$Year <- as.numeric(newdata$year)
+newdat$Day <- newdat$day
+newdat$Month <- newdat$month
+newdat$Year <- newdat$year
 
 #fix country, province and localilties
 
-newdata$Country <- newdata$countryCode
-newdata$Country <- "Portugal"
+newdat$Country <- newdat$countryCode
+newdat$Country <- "Portugal"
+unique(newdat$Country)
 
-unique(newdata$Province)
-
-newdata$Province <- newdata$stateProvince
-
-newdata <- newdata %>%
-  mutate(
-    Province = recode(Province, 
-                      "SantarÃ©m" = "Santarem",
-                      "BraganÃ§a" = "Braganza", 
-                      "RegiÃ£o AutÃ³noma da Madeira" = "Regiao Autonoma de Madeira", 
-                      "SetÃºbal" = "Setubal", 
-                      "RegiÃ£o AutÃ³noma dos AÃ§ores" = "Regiao Autonoma de Azores", 
-                      "Ã‰vora" = "Evora"))
-                
-
-newdata$Locality <- newdata$locality
+newdat$Province <- newdat$stateProvince
+newdat$Locality <- newdat$locality
 
 #fix longitude and latitude
 
-newdata$Latitude <- newdata$decimalLatitude
-newdata$Longitude <- newdata$decimalLongitude
-newdata$Coordinate.precision <- newdata$coordinatePrecision
+newdat$Latitude <- newdat$decimalLatitude
+newdat$Longitude <- newdat$decimalLongitude
+newdat$Coordinate.precision <- newdat$coordinatePrecision
 
 #fix collector and determined by 
-newdata$Collector <- newdata$recordedBy
-newdata$Determined.by <- newdata$identifiedBy
+newdat$Collector <- newdat$recordedBy
+newdat$Determined.by <- newdat$identifiedBy
 
-
-##add missing variables 
-
-newdata$Subgenus <- NA
-newdata$Subspecies <- NA
-newdata$Start.date <- NA
-newdata$End.date <- NA
-newdata$Female <- NA
-newdata$Male <- NA
-newdata$Worker <- NA
-newdata$Not.specified <- NA
-newdata$Flowers.visited <- NA
-newdata$Reference.doi <- "https://doi.org/10.3897/BDJ.14.e188597"
-newdata$Local_ID <- NA
-newdata$Authors.to.give.credit <- "Martim Baptista; Paulo de Sousa & Roberto A. Keller"
+newdat$Reference.doi <- "https://doi.org/10.3897/BDJ.14.e188597"
+newdat$Local_ID <- newdat$catalogNumber
+newdat$Authors.to.give.credit <- "Martim Baptista; Paulo de Sousa & Roberto A. Keller"
 
 #catalogue number add as additional information so it doesn´t get lost
-newdata$Any.other.additional.data <- newdata$catalogNumber
-newdata$Notes.and.queries <- NA
-
-#Seleccionar columnas para csv final 
-
-newdata <- newdata %>%
-  select(Genus, Subgenus, Species, Subspecies, Country, Province, Locality, 
-         Latitude, Longitude, Coordinate.precision, Year, Month, Day, 
-         Start.date, End.date, Collector, Determined.by, Female, Male,
-         Worker, Not.specified, Reference.doi, Flowers.visited, Local_ID, 
-         Authors.to.give.credit, Any.other.additional.data, Notes.and.queries)
+newdat$Any.other.additional.data <- newdata$catalogNumber
+newdat$Notes.and.queries <- NA
 
 #Add unique identifier
-newdata$uid <- paste("88_Baptista_et_al_2026", 1:nrow(newdata), sep = "")
+newdat$uid <- paste("88_Baptista_et_al_2026", 1:nrow(newdat), sep = "_")
 
+#Drop variables
+newdat <- drop_variables(check, newdat)
 
 #Save data
-write.table(x = newdata, file = "Data/Processed_raw_data/88_Baptista_et_al_2026.csv", 
+write.table(x = newdat, file = "Data/Processed_raw_data/88_Baptista_et_al_2026.csv", 
             quote = TRUE, sep = ',', col.names = TRUE, 
             row.names = FALSE)
