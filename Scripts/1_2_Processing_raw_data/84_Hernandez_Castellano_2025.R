@@ -11,8 +11,13 @@ newdat <- read.csv(here("Data/Rawdata/csvs/84_Hernandez_Castellano_2025.csv"), s
 
 #Compare vars
 compare_variables(check, newdat) #All variables missing. 
+
+#Add unique identifier
+newdat$uid <- paste("90_Traveset", 1:nrow(newdat), sep = "_")
+
 #Add missing variables
 newdat <- add_missing_variables(check, newdat)
+
 
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/84_Hernandez_Castellano_2025.csv", 
