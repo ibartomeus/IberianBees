@@ -8,15 +8,14 @@ library(tidyr)
 library(lubridate)
 library(stringr)
 
-#change directory to your Dropbox location for this csv and municipios csv 
-#newdat <- read.csv("C:/Users/maria/Dropbox/Spanish_Bees/done/Data_MJ/79_Oviedo_data_bombus_v2/rawdata/ocurrence.csv", sep = ";")
-
 #Read data
 newdat <- read.csv(file = 'Data/Rawdata/csvs/79_Oviedo_data_bombus_v2.csv', sep = ";")
 
 #Compare vars
-compare_variables(check, newdat) #No vars missing, no extra vars.
+compare_variables(check, newdat) #Many variables missing.
 
+#Add missing variables
+newdat <- add_missing_variables(check, newdat)
 
 #Fix species level and select only the one identified to species level. Some identifications are missing 
 
@@ -25,7 +24,7 @@ unique(newdat$scientificName)
 newdat <- newdat %>%
   separate(scientificName,
            into = c("Genus","Subgenus", "Subspecies", "Species"), sep = " ", fill = "right") 
-as.character(newdat$Genus)
+
 newdat <- newdat %>%
   mutate(Subgenus = str_remove_all(Subgenus, "[()]")) %>%
   filter(!is.na(Genus), trimws(Genus) != "") #remove NA and empty values
@@ -45,9 +44,6 @@ newdat$Locality <- newdat$locality
 newdat$Year <- newdat$year
 newdat$Month <- newdat$month
 newdat$Day <- newdat$day
-
-newdat$Start.date <- NA
-newdat$End.date <- NA
 
 #Fix Collector and determined by
 
@@ -78,19 +74,18 @@ newdat$Coordinate.precision <- newdat$coordinateUncertaintyInMeters
 
 ##complete variables from the template
 newdat$Reference.doi <- "https://doi.org/10.15470/kdd3tb"
-newdat$Flowers.visited <- NA
+
 newdat$Local_ID <- newdat$catalogNumber
 newdat$Authors.to.give.credit <- "Nuñez Carbajal A, Doblas-Bajo M, Fernandez-Enriquez O, Castro Santos L, Torrado-Blanco L, F. Ojanguren A, Orizaola G"
-newdat$Any.other.additional.data <- NA
-newdat$Notes.and.queries <- NA
 
 unique(newdat$Year)
-newdat <- newdat %>%
-  select(Genus, Subgenus, Species, Subspecies, Country, Province, Locality, 
-         Latitude, Longitude, Coordinate.precision, Year, Month, Day, 
-         Start.date, End.date, Collector, Determined.by, Female, Male,
-         Worker, Not.specified, Reference.doi, Flowers.visited, Local_ID, 
-         Authors.to.give.credit, Any.other.additional.data, Notes.and.queries)
+
+#Add unique identifier
+newdat$uid <- paste("79_Oviedo_data_bombus_v2", 1:nrow(newdat), sep = "_")
+
+#Drop variables
+newdat <- drop_variables(check, newdat)
+
 
 #Save data
 write.table(x = newdat, 
