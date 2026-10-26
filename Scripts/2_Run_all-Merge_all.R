@@ -36,12 +36,12 @@ sourceEntireFolder("Scripts/1_2_Processing_raw_data")
 file_names <- dir("Data/Processed_raw_data") #where you have your files
 
 ###manually exclude Asensio, which needs further cleaning
-file_names <- file_names[-81]
+#file_names <- file_names[-82]
 ###
 
 iberian_bees_raw <- do.call(rbind,lapply(paste("Data/Processed_raw_data/", file_names, sep=""),read.csv))
 
 #Save as a zip file
-write.csv(iberian_bees_raw, file=gzfile("Data/Processing_iberian_bees_raw/iberian_bees_raw.csv.gz"))
+write.csv(iberian_bees_raw, file=gzfile("Data/Processing_iberian_bees_raw/iberian_bees_raw_.csv.gz"))
 
 #That's it! The Iberianbees dataset has been generated and now it needs a final cleaning
