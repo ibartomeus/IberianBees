@@ -16,32 +16,30 @@ newdat <- read.csv("Data/Rawdata/csvs/95_Ahlam_Sentil_et_al_2026.csv", sep = ","
 
 newdat <- newdat %>%
   filter(country == "Spain")
-
+newdat$Country <- newdat$country
+unique(newdat$Country)
 #Compare vars
 compare_variables(check, newdat) #No vars missing, no extra vars.
 
-#Correct genus, subgenus, species and subspecies variables according to the Template
+#Add missing variables
+newdat <- add_missing_variables(check, newdat)
 
+#Correct genus, subgenus, species and subspecies variables
 newdat <- newdat %>%
   separate(scientificName,
            into = c("Genus", "Species"), sep = " ")
+unique(newdat$scientificName)
 
 newdat$Subgenus <- newdat$subgenus
 newdat$Subspecies <- newdat$infraspecificEpithet
 
-#Country, province and locality
-
-newdat$Country <- newdat$country
-newdat$Province <- NA
-
 #Fix dates 
-
 newdat$Year <- newdat$startYear
 newdat$Month <- newdat$startMonth
 newdat$Day <- newdat$startDay
 
-newdat$Start.date <- newdat$endEventDate
-newdat$End.date <- newdat$endEventDate
+newdat$Start.date <- as.factor(newdat$endEventDate)
+newdat$End.date <- as.factor(newdat$endEventDate)
 
 #fix sex columns: The sex of the individual(s) represented in the data. 
 #Different entries: F (female); M (male); M&F (both), H (hermaphrodite); 
@@ -114,18 +112,13 @@ newdat$Locality <- gsub("<U\\+[^>]*>.*", "", newdat$Locality)
 newdat$Locality <- gsub("[0-9]", "", newdat$Locality)
 #Run it again
 newdat$Locality <- trimws(newdat$Locality)
+newdat$Locality <- stri_encode(newdat$Locality, from = "UTF-8", to = "UTF-8")
+unique(newdat$Locality)
 
 #add and complete missing variables
 
-newdat$Collector <-  NA
-newdat$Determined.by <-  NA
 newdat$Reference.doi <- "https://doi.org/10.1038/s41597-026-06644-2"
-newdat$Flowers.visited <- NA
-newdat$Local_ID <- "NA"
 newdat$Authors.to.give.credit <- "A full list of authors and their affiliations appears at the end of the paper, see DOI"
-newdat$Any.other.additional.data <- NA
-newdat$Notes.and.queries <- NA
-newdat$uid <- NA
 
 #Fix latitude, longitude and coordinate.precision
 
@@ -138,12 +131,11 @@ newdat$Coordinate.precision <- newdat$coordinateUncertaintyInMeters
 
 unique(newdat$Coordinate.precision)
 
-newdat <- newdat %>%
-  select(Genus, Subgenus, Species, Subspecies, Country, Province, Locality, 
-         Latitude, Longitude, Coordinate.precision, Year, Month, Day, 
-         Start.date, End.date, Collector, Determined.by, Female, Male,
-         Worker, Not.specified, Reference.doi, Flowers.visited, Local_ID, 
-         Authors.to.give.credit, Any.other.additional.data, Notes.and.queries, uid)
+#Add unique identifier
+newdat$uid <- paste("95_Ahlam_Sentil_et_al_2026", 1:nrow(newdat), sep = "_")
+
+#Drop variables
+newdat <- drop_variables(check, newdat)
 
 #Save data
 write.table(x = newdat, 
