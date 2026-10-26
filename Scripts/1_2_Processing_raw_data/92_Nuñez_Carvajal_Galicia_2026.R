@@ -79,6 +79,8 @@ newdat <- newdat %>%
 #Add unique identifier
 newdat$uid <- paste("92_Nuñez_Carvajal_Galicia_2026", 1:nrow(newdat), sep = "_")
 
+#Drop variables
+newdat <- drop_variables(check, newdat)
 
 #Save data
 write.table(x = newdat, file = "Data/Processed_raw_data/92_Nuñez_Carvajal_Galicia_2026.csv", 
