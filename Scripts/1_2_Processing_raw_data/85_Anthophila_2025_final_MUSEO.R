@@ -17,7 +17,6 @@ newdat <- add_missing_variables(check, newdat)
 newdat$Genus <- newdat$GENERO
 newdat$Subgenus <- newdat$SUBGEN
 newdat$Species <- newdat$ESPECIE
-newdat$Subspecies <- NA
 
 #fix dates
 
@@ -47,6 +46,10 @@ newdat$Collector <- newdat$COLECTOR
 newdat$Determined.by <- newdat$DETERM
 
 newdata$Authors.to.give.credit <- "Piluca Alvarez Fidalgo and MNCN"
+
+#Add unique identifier
+newdat$uid <- paste("85_Anthophila_2025_final_MUSEO", 1:nrow(newdat), sep = "_")
+
 
 #Drop variables
 newdat <- drop_variables(check, newdat)
