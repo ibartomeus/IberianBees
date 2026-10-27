@@ -20,11 +20,16 @@ newdat$Genus <- "Colletes"
 newdat <- add_missing_variables(check, newdat)
 unique(newdat$Country)
 newdat <- subset(newdat, Country == "SPAIN") #PT already in T. Wood compilation according to Luisa. Check?
+newdat$Country[newdat$Country=="SPAIN"] <-"Spain"
 
 #Fix coordinates
 help_geo()
 newdat$Latitude <- parzer::parse_lat(as.character(newdat$Latitude))
 newdat$Longitude <- parzer::parse_lon(as.character(newdat$Longitude))
+
+#Fix species 
+newdat$Species <- newdat$ï..Species
+
 newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
 newdat <- add_uid(newdat = newdat, '19_Kuhlmann_etal_')
@@ -78,6 +83,12 @@ newdat$Authors.to.give.credit <- gsub("(WARNCKE 1978)",
                                       "Warncke 1978", newdat$Authors.to.give.credit, fixed=T)
 newdat$Authors.to.give.credit <- gsub("(WESTRICH 1997)",
                                       "Westrich 1997", newdat$Authors.to.give.credit, fixed=T)
+#Check vars
+compare_variables(check, newdat)
+
+#Add unique identifier
+newdat$uid <- paste("19_Kuhlmann_etal", 1:nrow(newdat), sep = "_")
+
 
 #Save data
 write.table(x = newdat, file = 'Data/Processed_raw_data/19_Kuhlmann_etal.csv', 
