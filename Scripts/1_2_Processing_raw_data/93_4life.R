@@ -99,10 +99,7 @@ newdat$Not.specified <- ifelse((newdat$Female == 0 & newdat$Male == 0),1,0)
 newdat$Reference.doi <- "https://doi.org/10.26786/1920-7603(2025)872"
 newdat$Flowers.visited <- newdat$flowers_sp
 
-#newdat$Authors.to.give.credit <- "Barberis, M.; Bitonto, F. F.; Costantino, R.; Bianco, L.; Birtele, D.; Bonifacino, M.; Cangelmi, G.; Capò, M.; Chroni, A.; D'Agostino, M.;
- #                                 Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.; Giacò, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
-  #                                Navarro, L.; Samuele, G.; Sánchez, J. M.; Petanidou, T.; Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-   #                               Traveset, A.; Zenga, E. L.; Galloni, M."
+newdat$Authors.to.give.credit <- "See DOI"
 
 
 #include information about habitat here to not lose it. 
