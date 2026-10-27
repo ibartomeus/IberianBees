@@ -62,7 +62,7 @@ newdat <- newdat %>%
   filter(Country %in% c("Spain", "Portugal"))
 
 
-newdat$Locality <- newdat$locality #no info in the paper about localities, only this code
+#newdat$Locality <- newdat$locality #no info in the paper about localities, only this code
 #unique(newdat$verbatimLocality) #EXTRACT LOCALITY FROM NATURA 2000 IF NEEDED 
 
 
@@ -84,8 +84,6 @@ newdat$eventDate <- newdat$eventDate %>%
 newdat <- newdat %>%
   separate(eventDate,
            into = c("Year", "Month", "Day"), sep = "/") 
-
-
 
 #fix sexes
 
@@ -117,8 +115,6 @@ Traveset, A.; Zenga, E. L.; Galloni, M."
 #This could either be entered by users or -when missing -deducted a posteriori
 #by consulting a map
 
-newdat$Any.other.additional.data <- newdat$habitat
-
 #this is the code used to join the three individual dataset provided in the paper. 
 
 newdat$Notes.and.queries <- newdat$eventID
@@ -130,7 +126,7 @@ newdat$uid <- paste("93_4life", 1:nrow(newdat), sep = "_")
 newdat <- drop_variables(check, newdat)
 
 #Save data
-write.table(x = newdat, file = "Data/Processed_raw_data/93_4life", 
+write.table(x = newdat, file = "Data/Processed_raw_data/93_4life.csv", 
             quote = TRUE, sep = ",", col.names = TRUE,
             row.names = FALSE)
 
