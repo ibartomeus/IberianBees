@@ -12,6 +12,15 @@ newdat <- read.csv(file = 'Data/Rawdata/csvs/11_Ornosa_etal.csv', sep = ";")
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
 
+#Fix Genus
+newdat$Genus <- newdat$ï..Genus
+#Fix genus 
+newdat$Genus <- trimws(newdat$Genus)
+
+#Fix Province
+newdat$Province <- stri_encode(newdat$Province, from = "UTF-8", to = "UTF-8")
+unique(newdat$Province)
+
 #Fix one coordinates
 help_geo()
 newdat$GPS..E. <- gsub("4º3'58\" N", "4º3'58\" W", newdat$GPS..E.)
@@ -24,7 +33,8 @@ newdat <- drop_variables(check, newdat) #reorder and drop variables
 summary(newdat)
 
 #Rename country
-newdat$Country <- gsub("España", "Spain", newdat$Country)
+newdat$Country <- gsub("EspaÃ±a", "Spain", newdat$Country)
+unique(newdat$Country)
 
 #Add leading 0 to month
 newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
@@ -41,9 +51,13 @@ newdat$End.date <- gsub("-", "/", newdat$End.date)
 #Change separator of forward slash to comma
 levels(factor(newdat$Collector))
 newdat$Collector <- gsub("\\/", ", ", newdat$Collector)
-
+newdat$Collector <- stri_encode(newdat$Collector, from = "UTF-8", to = "UTF-8")
 #Add unique identifier
-newdat <- add_uid(newdat = newdat, '11_Ornosa_etal_')
+#Add unique identifier
+newdat$uid <- paste("11_Ornosa_etal", 1:nrow(newdat), sep = "_")
+
+#drop variables
+newdat <- drop_variables(check, newdat)
 
 #Save data
 write.table(x = newdat, file = 'Data/Processed_raw_data/11_Ornosa_etal.csv', 
