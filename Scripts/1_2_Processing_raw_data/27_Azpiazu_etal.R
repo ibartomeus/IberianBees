@@ -12,13 +12,8 @@ newdat <- read.csv(file = 'Data/Rawdata/csvs/27_Azpiazu_etal.csv', sep = ";")
 #Check vars
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
-
-#Fix Genus and species
-newdat$Genus <- newdat$ï..Genus
-newdat$Genus <- trimws(newdat$Genus)
-newdat$Species <- trimws(newdat$Species)
-unique(newdat$Species)
-
+newdat <- drop_variables(check, newdat) #reorder and drop variables
+summary(newdat)
 
 #Add leading 0 to month
 newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
@@ -27,6 +22,7 @@ newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
 #Standardize separation in names
 newdat$Determined.by <- gsub("J.Ortiz", 
                              "J. Ortiz", newdat$Determined.by)
+
 #Fix trailing space
 newdat$Country <- trimws(newdat$Country)
 
@@ -38,10 +34,7 @@ newdat$Reference.doi <- gsub("https://doi.org/NA" , NA, newdat$Reference.doi)
 #DOI works fine
 
 #Add unique identifier
-newdat$uid <- paste("27_Azpiazu_etal", 1:nrow(newdat), sep = "_")
-
-newdat <- drop_variables(check, newdat) #reorder and drop variables
-summary(newdat)
+newdat <- add_uid(newdat = newdat, '27_Azpiazu_etal_')
 
 #Save data
 write.table(x = newdat, file = 'Data/Processed_raw_data/27_Azpiazu_etal.csv', 

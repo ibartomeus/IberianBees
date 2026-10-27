@@ -12,27 +12,19 @@ newdat <- read.csv(file = 'Data/Rawdata/csvs/31_Diaz-Calafat.csv', sep = ";")
 #check vars
 compare_variables(check, newdat)
 newdat <- add_missing_variables(check, newdat)
-
-#Fix genus 
-newdat$Genus <- newdat$ï..Genus
-#Fix wrong species name
-newdat$Genus <- gsub("Andrea", "Andrena", newdat$Genus, fixed=T)
-unique(newdat$Genus)
+newdat <- drop_variables(check, newdat) #reorder and drop variables
+summary(newdat)
 
 #Add leading 0 to month
 newdat$Month <- ifelse(newdat$Month < 10, paste0("0", newdat$Month), newdat$Month)
 newdat$Day <- ifelse(newdat$Day < 10, paste0("0", newdat$Day), newdat$Day)
-#Fix names of localities, collector and determined by
-newdat$Locality <- stri_encode(newdat$Locality, from = "UTF-8", to = "UTF-8")
-newdat$Collector <- stri_encode(newdat$Collector, from = "UTF-8", to = "UTF-8")
-newdat$Determined.by <- stri_encode(newdat$Determined.by, from = "UTF-8", to = "UTF-8")
 
-unique(newdat$Determined.by)
+
+#Fix wrong species name
+newdat$Genus <- gsub("Andrea", "Andrena", newdat$Genus, fixed=T)
+
 #Add unique identifier
-newdat$uid <- paste("31_Diaz-Calafat", 1:nrow(newdat), sep = "_")
-
-newdat <- drop_variables(check, newdat) #reorder and drop variables
-summary(newdat)
+newdat <- add_uid(newdat = newdat, '31_Diaz-Calafat_')
 
 #Save data
 write.table(x = newdat, file = 'Data/Processed_raw_data/31_Diaz-Calafat.csv', 
