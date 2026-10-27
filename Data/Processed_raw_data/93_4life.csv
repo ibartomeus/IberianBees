@@ -1,5 +1,5 @@
 "Genus","Subgenus","Species","Subspecies","Country","Province","Locality","Latitude","Longitude","Coordinate.precision","Year","Month","Day","Start.date","End.date","Collector","Determined.by","Female","Male","Worker","Not.specified","Reference.doi","Flowers.visited","Local_ID","Authors.to.give.credit","Any.other.additional.data","Notes.and.queries","uid"
-"Bombus",NA,"terrestris",NA,"Spain",NA,"OutsideNatura2000","41.902463","-8.870671",NA,"2023","05","21",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Cirsium filipendulum",NA,"Barberis, M.; 
+"Bombus",NA,"terrestris",NA,"Spain",NA,NA,"41.902463","-8.870671",NA,"2023","05","21",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Cirsium filipendulum",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -7,8 +7,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","urban, seaside","LIFE4POLL1040","93_4life_1"
-"Andrena",NA,"agilissima",NA,"Spain",NA,"ES0000001","42.21709","-8.90823",NA,"2023","05","23",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Thapsia villosa",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL1040","93_4life_1"
+"Andrena",NA,"agilissima",NA,"Spain",NA,NA,"42.21709","-8.90823",NA,"2023","05","23",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Thapsia villosa",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -16,8 +16,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island","LIFE4POLL1432","93_4life_2"
-"Bombus",NA,"terrestris",NA,"Spain",NA,"OutsideNatura2000","42.371662","-8.936242",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Cirsium filipendulum",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL1432","93_4life_2"
+"Bombus",NA,"terrestris",NA,"Spain",NA,NA,"42.371662","-8.936242",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Cirsium filipendulum",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -25,8 +25,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island","LIFE4POLL1448","93_4life_3"
-"Halictus",NA,"scabiosae",NA,"Spain",NA,"ES0000254|ES1140004","42.371662","-8.936242",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Cistus inflatus",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL1448","93_4life_3"
+"Halictus",NA,"scabiosae",NA,"Spain",NA,NA,"42.371662","-8.936242",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Cistus inflatus",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -34,8 +34,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island","LIFE4POLL1493","93_4life_4"
-"Halictus",NA,"scabiosae",NA,"Spain",NA,"ES0000254|ES1140004","42.371662","-8.936242",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Cistus sp.",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL1493","93_4life_4"
+"Halictus",NA,"scabiosae",NA,"Spain",NA,NA,"42.371662","-8.936242",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Cistus sp.",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -43,8 +43,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island","LIFE4POLL1494","93_4life_5"
-"Anthophora",NA,"bimaculata",NA,"Spain",NA,"ES0000001","42.227717","-8.901133",NA,"2023","05","25",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Galactites tomentosus",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL1494","93_4life_5"
+"Anthophora",NA,"bimaculata",NA,"Spain",NA,NA,"42.227717","-8.901133",NA,"2023","05","25",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Galactites tomentosus",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -52,8 +52,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island, seaside","LIFE4POLL1567","93_4life_6"
-"Bombus",NA,"terrestris",NA,"Spain",NA,"ES0000001","42.242417","-8.903767",NA,"2023","05","19",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Ulex europaeus",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL1567","93_4life_6"
+"Bombus",NA,"terrestris",NA,"Spain",NA,NA,"42.242417","-8.903767",NA,"2023","05","19",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Ulex europaeus",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -61,8 +61,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island, seaside","LIFE4POLL1568","93_4life_7"
-"Halictus",NA,"scabiosae",NA,"Spain",NA,"ES0000001","42.2173","-8.906833",NA,"2023","05","19",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Leontodon sp.",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL1568","93_4life_7"
+"Halictus",NA,"scabiosae",NA,"Spain",NA,NA,"42.2173","-8.906833",NA,"2023","05","19",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Leontodon sp.",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -70,8 +70,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island","LIFE4POLL1570","93_4life_8"
-"Andrena",NA,"flavipes",NA,"Spain",NA,"ES0000254|ES1140004","42.379851","-8.936005",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Apiaceae",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL1570","93_4life_8"
+"Andrena",NA,"flavipes",NA,"Spain",NA,NA,"42.379851","-8.936005",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Apiaceae",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -79,8 +79,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island","LIFE4POLL1675","93_4life_9"
-"Bombus",NA,"pascuorum",NA,"Spain",NA,"ES0000254|ES1140004","42.382894","-8.933258",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Galactites tomentosus",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL1675","93_4life_9"
+"Bombus",NA,"pascuorum",NA,"Spain",NA,NA,"42.382894","-8.933258",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Galactites tomentosus",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -88,8 +88,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island","LIFE4POLL1679","93_4life_10"
-"Bombus",NA,"terrestris",NA,"Spain",NA,"ES0000254|ES1140004","42.371735","-8.937378",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Galactites tomentosus",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL1679","93_4life_10"
+"Bombus",NA,"terrestris",NA,"Spain",NA,NA,"42.371735","-8.937378",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Galactites tomentosus",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -97,8 +97,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island","LIFE4POLL1680","93_4life_11"
-"Bombus",NA,"terrestris",NA,"Spain",NA,"ES0000254|ES1140004","42.378329","-8.939438",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Echium sp.",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL1680","93_4life_11"
+"Bombus",NA,"terrestris",NA,"Spain",NA,NA,"42.378329","-8.939438",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Echium sp.",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -106,8 +106,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island","LIFE4POLL1681","93_4life_12"
-"Bombus",NA,"pascuorum",NA,"Spain",NA,"ES0000254|ES1140004","42.378836","-8.940125",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Echium sp.",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL1681","93_4life_12"
+"Bombus",NA,"pascuorum",NA,"Spain",NA,NA,"42.378836","-8.940125",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Echium sp.",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -115,8 +115,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island","LIFE4POLL1682","93_4life_13"
-"Bombus",NA,"terrestris",NA,"Portugal",NA,"OutsideNatura2000","37.74366","-25.566398",NA,"2023","04","06",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Metrosideros excelsa",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL1682","93_4life_13"
+"Bombus",NA,"terrestris",NA,"Portugal",NA,NA,"37.74366","-25.566398",NA,"2023","04","06",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Metrosideros excelsa",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -124,8 +124,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","urban","LIFE4POLL1734","93_4life_14"
-"Bombus",NA,"terrestris",NA,"Portugal",NA,"OutsideNatura2000","37.743605","-25.566473",NA,"2023","07","04",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Echium fastuosum",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL1734","93_4life_14"
+"Bombus",NA,"terrestris",NA,"Portugal",NA,NA,"37.743605","-25.566473",NA,"2023","07","04",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Echium fastuosum",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -133,8 +133,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","urban","LIFE4POLL1735","93_4life_15"
-"Colletes",NA,"succinctus",NA,"Spain",NA,"ES0000471|ES0000023","39.289317","-0.30098",NA,"2023","10","26",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Erica multiflora",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL1735","93_4life_15"
+"Colletes",NA,"succinctus",NA,"Spain",NA,NA,"39.289317","-0.30098",NA,"2023","10","26",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Erica multiflora",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -142,8 +142,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","lowland, seaside","LIFE4POLL1797","93_4life_16"
-"Apis",NA,"mellifera",NA,"Spain",NA,"OutsideNatura2000","39.476154","-0.38641",NA,"2023","10","25",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Abutilon grandiflorum",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL1797","93_4life_16"
+"Apis",NA,"mellifera",NA,"Spain",NA,NA,"39.476154","-0.38641",NA,"2023","10","25",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Abutilon grandiflorum",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -151,8 +151,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","urban","LIFE4POLL1811","93_4life_17"
-"Andrena",NA,"flavipes",NA,"Spain",NA,"ES0000145","39.352848","3.187891",NA,"2022","04","30",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Glebionis coronaria",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL1811","93_4life_17"
+"Andrena",NA,"flavipes",NA,"Spain",NA,NA,"39.352848","3.187891",NA,"2022","04","30",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Glebionis coronaria",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -160,8 +160,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island","LIFE4POLL206","93_4life_18"
-"Bombus",NA,"terrestris",NA,"Spain",NA,"ES0000145","39.35707","3.19106",NA,"2022","04","30",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Tamarix chinensis",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL206","93_4life_18"
+"Bombus",NA,"terrestris",NA,"Spain",NA,NA,"39.35707","3.19106",NA,"2022","04","30",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Tamarix chinensis",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -169,8 +169,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","seaside","LIFE4POLL208","93_4life_19"
-"Bombus",NA,"terrestris",NA,"Spain",NA,"ES0000145","39.354941","3.184662",NA,"2022","04","30",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Galactites tomentosus",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL208","93_4life_19"
+"Bombus",NA,"terrestris",NA,"Spain",NA,NA,"39.354941","3.184662",NA,"2022","04","30",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Galactites tomentosus",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -178,8 +178,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","seaside","LIFE4POLL209","93_4life_20"
-"Anthophora",NA,"plumipes",NA,"Spain",NA,"ES0000037","39.36443","2.979012",NA,"2023","04","12",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Oxalis pes-caprae",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL209","93_4life_20"
+"Anthophora",NA,"plumipes",NA,"Spain",NA,NA,"39.36443","2.979012",NA,"2023","04","12",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Oxalis pes-caprae",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -187,8 +187,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island, seaside","LIFE4POLL2281","93_4life_21"
-"Bombus",NA,"terrestris",NA,"Spain",NA,"ES0000015|ES2410025","42.18527","-0.08655",NA,"2024","05","25",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Coris monspeliensis",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL2281","93_4life_21"
+"Bombus",NA,"terrestris",NA,"Spain",NA,NA,"42.18527","-0.08655",NA,"2024","05","25",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Coris monspeliensis",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -196,8 +196,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","mountain","LIFE4POLL2320","93_4life_22"
-"Apis",NA,"mellifera",NA,"Spain",NA,"ES4150032","40.350206","-6.784674",NA,"2024","06","05",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Echium lusitanicum",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL2320","93_4life_22"
+"Apis",NA,"mellifera",NA,"Spain",NA,NA,"40.350206","-6.784674",NA,"2024","06","05",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Echium lusitanicum",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -205,8 +205,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","hills","LIFE4POLL2324","93_4life_23"
-"Apis",NA,"mellifera",NA,"Spain",NA,"ES0000286|ES2410048","42.466387","0.022198",NA,"2024","05","01",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Verbascum boerhavii",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL2324","93_4life_23"
+"Apis",NA,"mellifera",NA,"Spain",NA,NA,"42.466387","0.022198",NA,"2024","05","01",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Verbascum boerhavii",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -214,8 +214,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","riverside","LIFE4POLL2330","93_4life_24"
-"Bombus",NA,"terrestris",NA,"Spain",NA,"ES4160122","41.428946","-3.772193",NA,"2021","05","21",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Asphodelus albus",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL2330","93_4life_24"
+"Bombus",NA,"terrestris",NA,"Spain",NA,NA,"41.428946","-3.772193",NA,"2021","05","21",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Asphodelus albus",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -223,8 +223,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","mountain","LIFE4POLL2335","93_4life_25"
-"Apis",NA,"mellifera",NA,"Spain",NA,"OutsideNatura2000","41.386477","-4.210622",NA,"2023","05","28",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Astragalus alopecuroides",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL2335","93_4life_25"
+"Apis",NA,"mellifera",NA,"Spain",NA,NA,"41.386477","-4.210622",NA,"2023","05","28",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Astragalus alopecuroides",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -232,8 +232,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","hills","LIFE4POLL2336","93_4life_26"
-"Apis",NA,"mellifera",NA,"Spain",NA,"OutsideNatura2000","36.723696","-4.951851",NA,"2023","04","21",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Reseda barrelieri",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL2336","93_4life_26"
+"Apis",NA,"mellifera",NA,"Spain",NA,NA,"36.723696","-4.951851",NA,"2023","04","21",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Reseda barrelieri",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -241,8 +241,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","mountain","LIFE4POLL2351","93_4life_27"
-"Bombus",NA,"terrestris",NA,"Spain",NA,"ES0000044","28.11472","-17.272485",NA,"2025","03","28",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Echium plantagineum",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL2351","93_4life_27"
+"Bombus",NA,"terrestris",NA,"Spain",NA,NA,"28.11472","-17.272485",NA,"2025","03","28",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Echium plantagineum",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -250,8 +250,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island, hills","LIFE4POLL2390","93_4life_28"
-"Bombus",NA,"terrestris",NA,"Spain",NA,"ES0000044","28.128793","-17.208676",NA,"2025","03","28",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Echium acanthocarpum",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL2390","93_4life_28"
+"Bombus",NA,"terrestris",NA,"Spain",NA,NA,"28.128793","-17.208676",NA,"2025","03","28",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Echium acanthocarpum",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -259,8 +259,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island, mountain","LIFE4POLL2391","93_4life_29"
-"Bombus",NA,"terrestris",NA,"Spain",NA,"OutsideNatura2000","28.11047","-17.2098",NA,"2025","03","29",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Galactites tomentosus",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL2391","93_4life_29"
+"Bombus",NA,"terrestris",NA,"Spain",NA,NA,"28.11047","-17.2098",NA,"2025","03","29",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Galactites tomentosus",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -268,8 +268,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island, mountain","LIFE4POLL2397","93_4life_30"
-"Osmia",NA,"cornuta",NA,"Spain",NA,"OutsideNatura2000","42.333333","2.4",NA,"2025","04","27",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Salvia rosmarinus",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL2397","93_4life_30"
+"Osmia",NA,"cornuta",NA,"Spain",NA,NA,"42.333333","2.4",NA,"2025","04","27",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Salvia rosmarinus",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -277,8 +277,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","urban","LIFE4POLL2406","93_4life_31"
-"Apis",NA,"mellifera",NA,"Spain",NA,"ES0000544|ES5310095","39.754644","3.182764",NA,"2022","05","28",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Teucrium sp.",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL2406","93_4life_31"
+"Apis",NA,"mellifera",NA,"Spain",NA,NA,"39.754644","3.182764",NA,"2022","05","28",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Teucrium sp.",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -286,8 +286,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island, seaside","LIFE4POLL352","93_4life_32"
-"Apis",NA,"mellifera",NA,"Spain",NA,"OutsideNatura2000","38.940965","1.2946933",NA,"2022","05","30",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Knautia sp.",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL352","93_4life_32"
+"Apis",NA,"mellifera",NA,"Spain",NA,NA,"38.940965","1.2946933",NA,"2022","05","30",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Knautia sp.",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -295,8 +295,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","lowland","LIFE4POLL368","93_4life_33"
-"Xylocopa",NA,"violacea",NA,"Spain",NA,"OutsideNatura2000","37.384489","-5.988209",NA,"2023","02","12",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Dombeya wallichii",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL368","93_4life_33"
+"Xylocopa",NA,"violacea",NA,"Spain",NA,NA,"37.384489","-5.988209",NA,"2023","02","12",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Dombeya wallichii",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -304,8 +304,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","urban","LIFE4POLL521","93_4life_34"
-"Anthophora",NA,"plumipes",NA,"Spain",NA,"OutsideNatura2000","39.585994","2.680473",NA,"2023","04","01",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Lavandula angustifolia",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL521","93_4life_34"
+"Anthophora",NA,"plumipes",NA,"Spain",NA,NA,"39.585994","2.680473",NA,"2023","04","01",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Lavandula angustifolia",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -313,8 +313,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island, urban","LIFE4POLL607","93_4life_35"
-"Apis",NA,"mellifera",NA,"Spain",NA,"ES1120010","43.119969","-6.888428",NA,"2023","04","29",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Borago sp.",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL607","93_4life_35"
+"Apis",NA,"mellifera",NA,"Spain",NA,NA,"43.119969","-6.888428",NA,"2023","04","29",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Borago sp.",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -322,8 +322,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","mountain","LIFE4POLL834","93_4life_36"
-"Bombus",NA,"terrestris",NA,"Spain",NA,"ES0000001","42.226977","-8.899162",NA,"2023","05","19",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Cirsium sp.",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL834","93_4life_36"
+"Bombus",NA,"terrestris",NA,"Spain",NA,NA,"42.226977","-8.899162",NA,"2023","05","19",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Cirsium sp.",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -331,8 +331,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island, seaside","LIFE4POLL848","93_4life_37"
-"Bombus",NA,"pascuorum",NA,"Spain",NA,"ES0000254|ES1140004","42.375887","-8.935792",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Galactites tomentosus",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL848","93_4life_37"
+"Bombus",NA,"pascuorum",NA,"Spain",NA,NA,"42.375887","-8.935792",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Galactites tomentosus",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -340,8 +340,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island","LIFE4POLL901","93_4life_38"
-"Andrena",NA,"nigroaenea",NA,"Spain",NA,"ES0000001","42.231425","-8.90341",NA,"2023","05","19",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Cistus salviifolius",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL901","93_4life_38"
+"Andrena",NA,"nigroaenea",NA,"Spain",NA,NA,"42.231425","-8.90341",NA,"2023","05","19",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Cistus salviifolius",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -349,8 +349,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island, seaside","LIFE4POLL946","93_4life_39"
-"Halictus",NA,"scabiosae",NA,"Spain",NA,"ES0000254|ES1140004","42.373859","-8.935436",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Cistus inflatus",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL946","93_4life_39"
+"Halictus",NA,"scabiosae",NA,"Spain",NA,NA,"42.373859","-8.935436",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Cistus inflatus",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -358,8 +358,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island, seaside","LIFE4POLL980","93_4life_40"
-"Bombus",NA,"terrestris",NA,"Spain",NA,"ES0000254|ES1140004","42.374049","-8.936799",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Echium vulgare",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL980","93_4life_40"
+"Bombus",NA,"terrestris",NA,"Spain",NA,NA,"42.374049","-8.936799",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Echium vulgare",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -367,8 +367,8 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island","LIFE4POLL987","93_4life_41"
-"Bombus",NA,"pascuorum",NA,"Spain",NA,"ES0000254|ES1140004","42.372401","-8.93961",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Cirsium filipendulum",NA,"Barberis, M.; 
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL987","93_4life_41"
+"Bombus",NA,"pascuorum",NA,"Spain",NA,NA,"42.372401","-8.93961",NA,"2023","05","20",NA,NA,NA,NA,0,0,0,1,"https://doi.org/10.26786/1920-7603(2025)872","Cirsium filipendulum",NA,"Barberis, M.; 
 Bitonto, F. F.; Costantino, R.; 
 Bianco, L.; Birtele, D.; Bonifacino, M.; 
 Cangelmi, G.; Cap?, M.; Chroni, A.; D'Agostino, M.;
@@ -376,4 +376,4 @@ Dal Cin, M.; Devalez, J.; Bortolotti, L.; Flaminio, S.;
 Giac?, A.; Lenzi, L.; Magagnoli, S.; Minici, A.; Nakas, G.; 
 Navarro, L.; Samuele, G.; S?nchez, J. M.; Petanidou, T.; 
 Quaranta, M.; Ranalli, R.; Rossini, M.; Ruzzier, E.; Sgolastra, F.; 
-Traveset, A.; Zenga, E. L.; Galloni, M.","island, seaside","LIFE4POLL994","93_4life_42"
+Traveset, A.; Zenga, E. L.; Galloni, M.",NA,"LIFE4POLL994","93_4life_42"
